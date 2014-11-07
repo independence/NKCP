@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A9D7597-3412-4D7E-970B-DA6C70D084E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BussinessLogic</RootNamespace>
+    <AssemblyName>BussinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TeamNet.Data.FileExport">
+      <HintPath>..\Library\Packet\TeamNet.Data.FileExport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllowancesBO.cs" />
+    <Compile Include="AlternateMissionsBO.cs" />
+    <Compile Include="AuditHistories.cs" />
+    <Compile Include="BookingHallsBO.cs" />
+    <Compile Include="BookingHalls_ServicesBO.cs" />
+    <Compile Include="BookingHsBO.cs" />
+    <Compile Include="BookingRoomsBO.cs" />
+    <Compile Include="BookingRoomsMembersBO.cs" />
+    <Compile Include="BookingRooms_ServicesBO.cs" />
+    <Compile Include="BookingRsBO.cs" />
+    <Compile Include="BookingRs_BookingHsBO.cs" />
+    <Compile Include="CalculatorSalariesBO.cs" />
+    <Compile Include="CertificatesBO.cs" />
+    <Compile Include="CheckPointBO.cs" />
+    <Compile Include="CompaniesBO.cs" />
+    <Compile Include="ConfigsBO.cs" />
+    <Compile Include="ContractsBO.cs" />
+    <Compile Include="Contracts_AllowancesBO.cs" />
+    <Compile Include="CustomerGroupsBO.cs" />
+    <Compile Include="CustomerGroups_CustomersBO.cs" />
+    <Compile Include="CustomersBO.cs" />
+    <Compile Include="DivisionsBO.cs" />
+    <Compile Include="DocumentSystemUsersBO.cs" />
+    <Compile Include="ExtraCostBO.cs" />
+    <Compile Include="FamilyMembersBO.cs" />
+    <Compile Include="FoodsBO.cs" />
+    <Compile Include="GroupTableSalariesBO.cs" />
+    <Compile Include="GuestsBO.cs" />
+    <Compile Include="HallsBO.cs" />
+    <Compile Include="HelperClass.cs" />
+    <Compile Include="MenusBO.cs" />
+    <Compile Include="Menus_FoodsBO.cs" />
+    <Compile Include="PaymentBO.cs" />
+    <Compile Include="PermitDetailsBO.cs" />
+    <Compile Include="PermitsBO.cs" />
+    <Compile Include="ReceptionTaskBO.cs" />
+    <Compile Include="ReportTaskBO.cs" />
+    <Compile Include="RewardAndPunishmentsBO.cs" />
+    <Compile Include="RoomsBO.cs" />
+    <Compile Include="ServiceGroupsBO.cs" />
+    <Compile Include="ServicesBO.cs" />
+    <Compile Include="SystemUserExtsBO.cs" />
+    <Compile Include="SystemUsersBO.cs" />
+    <Compile Include="SystemUsers_CertificatesBO.cs" />
+    <Compile Include="SystemUsers_DivisionsBO.cs" />
+    <Compile Include="TableSalariesBO.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{8fe058fb-6e9b-43ca-9d47-668cb4b971ae}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{4fab3d0a-0241-4fa2-bcc4-852b6e609722}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{0c350ad9-aa46-4c93-9ca9-72c78ed16f94}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

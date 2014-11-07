@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C350AD9-AA46-4C93-9CA9-72C78ED16F94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library</RootNamespace>
+    <AssemblyName>Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Library.XML</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Library\ConstantsXML.cs" />
+    <Compile Include="Library\CustomType.cs" />
+    <Compile Include="Library\LunarCalendar.cs" />
+    <Compile Include="Library\ProcessDBF.cs" />
+    <Compile Include="Library\StringUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Packet\DevExpress.BonusSkins.v13.1.dll" />
+    <Content Include="Packet\DevExpress.Data.v13.1.dll" />
+    <Content Include="Packet\DevExpress.Office.v13.1.Core.dll" />
+    <Content Include="Packet\DevExpress.Printing.v13.1.Core.dll" />
+    <Content Include="Packet\DevExpress.RichEdit.v13.1.Core.dll" />
+    <Content Include="Packet\DevExpress.Utils.v13.1.dll" />
+    <Content Include="Packet\DevExpress.Xpo.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraBars.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraEditors.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraGrid.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraLayout.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraNavBar.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraPrinting.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraReports.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraRichEdit.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraScheduler.v13.1.Core.dll" />
+    <Content Include="Packet\DevExpress.XtraScheduler.v13.1.dll" />
+    <Content Include="Packet\DevExpress.XtraScheduler.v13.1.Extensions.dll" />
+    <Content Include="Packet\DevExpress.XtraScheduler.v13.1.Reporting.Extensions.dll" />
+    <Content Include="Packet\EntityFramework.dll" />
+    <Content Include="Packet\EntityFramework.SqlServer.dll" />
+    <Content Include="Packet\Microsoft.VisualBasic.PowerPacks.Vs.dll" />
+    <Content Include="Packet\Newtonsoft.Json.dll" />
+    <Content Include="Packet\TeamNet.Data.FileExport.dll" />
+    <Content Include="Packet\XtraSchedulerInstaller.dll" />
+    <Content Include="XML\BookingType.xml" />
+    <Content Include="XML\CertificatesTypes.xml" />
+    <Content Include="XML\Citizens.xml" />
+    <Content Include="XML\ContractTypes.xml" />
+    <Content Include="XML\Countries.xml" />
+    <Content Include="XML\CustomerTypes.xml" />
+    <Content Include="XML\Email.xml" />
+    <Content Include="XML\ExtraCosts.xml" />
+    <Content Include="XML\Genders.xml" />
+    <Content Include="XML\HallTypes.xml" />
+    <Content Include="XML\Levels.xml" />
+    <Content Include="XML\Organization.xml" />
+    <Content Include="XML\PayMethods.xml" />
+    <Content Include="XML\RelationTypes.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\RoomTypes.xml" />
+    <Content Include="XML\ServiceTypes.xml" />
+    <Content Include="XML\Status.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SystemUsers_Certificates_Level.xml" />
+    <Content Include="XML\TrainingTypes.xml" />
+    <Content Include="XML\Type.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Packet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

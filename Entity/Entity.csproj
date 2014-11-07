@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FAB3D0A-0241-4FA2-BCC4-852B6E609722}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllBookingEN.cs" />
+    <Compile Include="AllowancesEN.cs" />
+    <Compile Include="AlternateMissionsExtEN.cs" />
+    <Compile Include="BookingEN.cs" />
+    <Compile Include="BookingHallDetailEN.cs" />
+    <Compile Include="BookingHallsEN.cs" />
+    <Compile Include="BookingHallUsedEN.cs" />
+    <Compile Include="BookingHall_ServiceEN.cs" />
+    <Compile Include="BookingHEN.cs" />
+    <Compile Include="BookingRoomEN.cs" />
+    <Compile Include="BookingRoomUsedEN.cs" />
+    <Compile Include="BookingRsEN.cs" />
+    <Compile Include="BookingRStatusPayViewEN.cs" />
+    <Compile Include="CalculatorSalaryEN.cs" />
+    <Compile Include="CertificateExtInfoEN.cs" />
+    <Compile Include="CheckInEN.cs" />
+    <Compile Include="CheckInRoomBookingEN.cs" />
+    <Compile Include="CheckPointEN.cs" />
+    <Compile Include="ContractsEN.cs" />
+    <Compile Include="Contracts_AllowancesEN.cs" />
+    <Compile Include="CustomerEN.cs" />
+    <Compile Include="ExtraCostRooms.cs" />
+    <Compile Include="HallExtStatusEN.cs" />
+    <Compile Include="DivisionsEN.cs" />
+    <Compile Include="FamilyMembersExtEN.cs" />
+    <Compile Include="HallsEN.cs" />
+    <Compile Include="IndexSubSplitBillEN.cs" />
+    <Compile Include="InfoDetailPaymentEN.cs" />
+    <Compile Include="InfoDetailPaymentHallsEN.cs" />
+    <Compile Include="InfoSystemUserLiftSalaryEN.cs" />
+    <Compile Include="MenusEN.cs" />
+    <Compile Include="MOBSystemUsersEN.cs" />
+    <Compile Include="NewPaymentEN.cs" />
+    <Compile Include="PaymentEN.cs" />
+    <Compile Include="PaymentHallsEN.cs" />
+    <Compile Include="RevenueEN.cs" />
+    <Compile Include="CustomerInfoEN.cs" />
+    <Compile Include="EfficiencyEN.cs" />
+    <Compile Include="OverNightCustomerEN.cs" />
+    <Compile Include="PermitViewAllEN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomExtStatusEN.cs" />
+    <Compile Include="RoomMemberEN.cs" />
+    <Compile Include="RoomsEN.cs" />
+    <Compile Include="RoomServiceInfoEN.cs" />
+    <Compile Include="RptRoomStatus .cs" />
+    <Compile Include="SalaryEN.cs" />
+    <Compile Include="ServiceGroupEN.cs" />
+    <Compile Include="ServicesEN.cs" />
+    <Compile Include="ServicesHallsEN.cs" />
+    <Compile Include="ServiceUsedEN.cs" />
+    <Compile Include="SystemUsersEN.cs" />
+    <Compile Include="SystemUsers_CertificatesEN.cs" />
+    <Compile Include="SystemUsers_DivisionsEN.cs" />
+    <Compile Include="UserInfomationEN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{8fe058fb-6e9b-43ca-9d47-668cb4b971ae}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

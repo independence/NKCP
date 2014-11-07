@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FE058FB-6E9B-43CA-9D47-668CB4B971AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraReports.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Packet\DevExpress.XtraReports.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="XtraSchedulerInstaller">
+      <HintPath>..\Library\Packet\XtraSchedulerInstaller.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allowances.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AlternateMissions.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHistories.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingHalls.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingHalls_Services.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingHs.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRooms.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRoomsMembers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRooms_Services.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRs.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRs_BookingHs.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CalculatorSalaries.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Certificates.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPoints.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Companies.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Configs.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts_Allowances.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGroups.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGroups_Customers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Designations.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Divisions.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentSystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraCosts.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyMembers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Foods.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_Status_Room_In_Date_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupTableSalaries.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Guests.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Halls.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menus_Foods.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermitDetails.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permits.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permits_SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permits_SystemUsers1.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RewardAndPunishments.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceGroups.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingExt_GetAllBooking_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRooms_CheckConflict_CheckTimeError_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRooms_CheckConflict_Status678Now_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRooms_CheckConflict_StatusError_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRooms_Select_ByTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_BookingRs_CheckConflict_Level_CustomerType_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Contracts_GetCurrentHaveNotAllowances_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Get_Status_ListRooms_In_Month_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_HallExt_GetStatusBookingHalls_ByRankTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_RoomsExt_CalculationEfficiency_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_RoomsExt_CalculationRevenue_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Rooms_GetAvailable_ByTime_ByLang_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_SystemUsers_GetCurrentInDivision_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_SystemUsers_GetCurrentNotInDivision_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUserExts.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUserExts1.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUsers_Certificates.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUsers_Divisions.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableSalaries.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__CertificatesInfo__SystemUsers_Certificates.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__ContractsInfo__SystemUsers_Contracts_Allowances.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__PaymentInfo__BookingRs_BookingRooms_Customers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__PermitInfo__SystemUsers_Permits_PermitDetails.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__SearchCustomer__Companies_CustomerGroups_Customers.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__ServicesInfo__Services_ServiceGroups.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__SystemUsersInfo__SystemUsers_Divisions.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="DatabaseDA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.Config" />
+    <EntityDeploy Include="DatabaseDA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseDA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DatabaseDA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+      <LastGenOutput>DatabaseDA.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DatabaseDA.edmx.diagram">
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+    </None>
+    <None Include="DatabaseDA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseDA.edmx</DependentUpon>
+      <LastGenOutput>DatabaseDA.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
