@@ -15,6 +15,7 @@ namespace Entity
         public decimal? TotalMoney { get; set; }
         public decimal? MoneyHallBeforeTax { get; set; }
         public decimal? MoneyHall { get; set; }
+
         public Nullable<int> IndexSubPayment { get; set; }
         public bool IsPaid { get; set; }
         public decimal? GetOnlyMoneyHall()
