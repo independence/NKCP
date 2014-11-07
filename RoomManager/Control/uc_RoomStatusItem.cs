@@ -42,10 +42,10 @@ namespace RoomManager
            
             if (Datasource.RoomStatus == 0)
             {
-                this.rectangleShape_BackColor = System.Drawing.Color.Gray;
+                this.rectangleShape_BackColor = System.Drawing.Color.Gainsboro;
                 this.rectangleShape_BorderColor = System.Drawing.Color.WhiteSmoke;
 
-                this.lblSku_BackColor = System.Drawing.Color.Gray;
+                this.lblSku_BackColor = System.Drawing.Color.Gainsboro;
                 this.lblSku_ForeColor = System.Drawing.Color.WhiteSmoke;
             }
 
