@@ -163,7 +163,7 @@ namespace BussinessLogic
 
 
         //Author: LinhTing
-        //Function : Tính hiệu suất phòng       
+        //Function : Lấy danh sách bookingroom có trạng thái Status và phạm vi thời gian bao quanh Now     
         public List<BookingRooms> Select_ByStatus_ByTime(DateTime Now, int Status)
         {
             try
@@ -202,6 +202,18 @@ namespace BussinessLogic
                 throw new Exception("BookingRoomsBO.SelectNewBookingRoom_ByStatus_ByTime:" + ex.ToString());
             }
         }
+        public List<BookingRooms> Select_ByStatus(int Status)
+        {
+            try
+            {
+                return aDatabaseDA.BookingRooms.Where(a => a.Status == Status).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BookingRoomsBO.Select_ByStatus:" + ex.ToString());
+            }
+        }
+        
 
         //-----------------Add New ---------------------------------
 

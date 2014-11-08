@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_RoomStatusItem));
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.lblSku = new DevExpress.XtraEditors.LabelControl();
@@ -80,25 +74,10 @@
             this.lblSku.Location = new System.Drawing.Point(40, 17);
             this.lblSku.Name = "lblSku";
             this.lblSku.Size = new System.Drawing.Size(45, 32);
-            toolTipTitleItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipTitleItem3.Appearance.Options.UseImage = true;
-            toolTipTitleItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem3.Image")));
-            toolTipTitleItem3.Text = "Cảnh báo";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Phòng quá thời hạn checkIn dự kiến";
-            toolTipTitleItem4.LeftIndent = 6;
-            toolTipTitleItem4.Text = "Cảnh báo";
-            superToolTip2.Items.Add(toolTipTitleItem3);
-            superToolTip2.Items.Add(toolTipItem2);
-            superToolTip2.Items.Add(toolTipSeparatorItem2);
-            superToolTip2.Items.Add(toolTipTitleItem4);
-            this.lblSku.SuperTip = superToolTip2;
             this.lblSku.TabIndex = 4;
             this.lblSku.Text = "101";
             this.lblSku.ToolTipController = this.toolTip;
+            this.lblSku.Click += new System.EventHandler(this.lblSku_Click_1);
             // 
             // toolTip
             // 
@@ -122,6 +101,7 @@
             this.lbWarning.TabIndex = 5;
             this.lbWarning.Text = "Mai trả phòng";
             this.lbWarning.Visible = false;
+            this.lbWarning.Click += new System.EventHandler(this.lbWarning_Click);
             // 
             // uc_RoomStatusItem
             // 
@@ -136,6 +116,7 @@
             this.Name = "uc_RoomStatusItem";
             this.Size = new System.Drawing.Size(122, 124);
             this.Load += new System.EventHandler(this.uc_RoomStatusItem_Load);
+            this.Click += new System.EventHandler(this.uc_RoomStatusItem_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

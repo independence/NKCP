@@ -16,7 +16,7 @@ namespace RoomManager
 {
     public partial class frmTsk_Payment_Step2 : DevExpress.XtraEditors.XtraForm
     {
-
+        public bool IsLockForm = false;
         public frmTsk_Payment_Step1 afrmTsk_Payment_Step1 = null;
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
         private PaymentEN aPaymentEN = new PaymentEN();
@@ -591,6 +591,8 @@ namespace RoomManager
             lblNameCustomer.Text = this.aNewPaymentEN.NameCustomer;
             txtAddressR.Text = this.aNewPaymentEN.AddressCompany;
             txtTaxNumberCodeR.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
+
+
             // Trang thai, hinh thuc thanh toan
             lueBookingR_Paymethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
             lueBookingR_Paymethod.Properties.DisplayMember = "Name";
@@ -1717,7 +1719,63 @@ namespace RoomManager
 
         }
 
-     
+        private void LockForm()
+        {
+            txtAddressH.Properties.ReadOnly = true;
+            txtAddressR.Properties.ReadOnly = true;
+            txtAddTimeEnd.Properties.ReadOnly = true;
+            txtAddTimeStart.Properties.ReadOnly = true;
+            txtBookingHallsCost.Properties.ReadOnly = true;
+            txtBookingHMoney.Properties.ReadOnly = true;
+            txtBookingRMoney.Properties.ReadOnly = true;
+            txtBookingRoomsCost.Properties.ReadOnly = true;
+            txtInvoiceNumber.Properties.ReadOnly = true;
+            txtInvoiceNumberH.Properties.ReadOnly = true;
+            txtNumberDate.Properties.ReadOnly = true;
+            txtPercentTax_Hall.Properties.ReadOnly = true;
+            txtPercentTax_Room.Properties.ReadOnly = true;
+            txtPercentTaxService.ReadOnly = true;
+            txtQuantity.ReadOnly = true;
+            txtServiceCost.ReadOnly = true;
+            txtTaxNumberCodeH.Properties.ReadOnly = true;
+            txtTaxNumberCodeR.Properties.ReadOnly = true;
+            cbbPriceType.Properties.ReadOnly = true;
+
+            dtpAcceptDate.Properties.ReadOnly = true;
+            dtpAcceptDateH.Properties.ReadOnly = true;
+            dtpCheckInActual.Properties.ReadOnly = true;
+            dtpCheckOutActual.Properties.ReadOnly = true;
+            dtpInvoiceDate.Properties.ReadOnly = true;
+            dtpInvoiceDateH.Properties.ReadOnly = true;
+
+            chkCheckIn.Properties.ReadOnly = true;
+            chkCheckOut.Properties.ReadOnly = true;
+
+            lueBookingH_PayMethod.Properties.ReadOnly = true;
+            lueBookingR_Paymethod.Properties.ReadOnly = true;
+            lueMenus.Properties.ReadOnly = true;
+
+            btnAddService.Enabled = false;
+            btnAddServicesForHalls.Enabled = false;
+            btnCaculateTimeUsed.Enabled = false;
+            btnDownPayment.Enabled = false;
+            btnPayment.Enabled = false;
+            btnPaymentHall.Enabled = false;
+
+
+
+
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void simpleButton1_Click_2(object sender, EventArgs e)
+        {
+            LockForm();
+        }
 
     }
 }

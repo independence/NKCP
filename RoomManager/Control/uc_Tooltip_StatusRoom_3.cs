@@ -83,7 +83,7 @@ namespace RoomManager
 
         }
 
-        public void Show1()
+        public void Show()
         {
             if (this.StatusButtonPopup == 0) // Mac dinh
             {

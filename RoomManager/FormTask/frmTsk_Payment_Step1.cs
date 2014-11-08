@@ -46,7 +46,15 @@ namespace RoomManager
             this.CheckOutPlan = CheckOutPlan;
 
         }
+        
+        // NgocBM
+        // Form thanh toán được load tất cả các phòng chưa thanh toán bất kể loại nào
+        public frmTsk_Payment_Step1(frmMain afrmMain)
+        {
+            InitializeComponent();
+            this.afrmMain = afrmMain;
 
+        }
         //Hiennv
         public void LoadDataListUnPayBookingR()
         {
@@ -231,6 +239,11 @@ namespace RoomManager
             {
                 MessageBox.Show("frmTsk_Payment_Step1.viewOwePay_RowClick \n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

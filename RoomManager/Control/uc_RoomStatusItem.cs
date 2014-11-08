@@ -191,17 +191,22 @@ namespace RoomManager
                 else if (this.Datasource.RoomStatus == 3)
                 {
                     frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
-                    uc_Tooltip_StatusRoom_3 aToolTip_3 = new uc_Tooltip_StatusRoom_3(afrmMain);
+                    
                     if (this.lbWarning.Text != this.Mess_Qua_han)
                     {
+                        uc_Tooltip_StatusRoom_3 aToolTip_3 = new uc_Tooltip_StatusRoom_3(afrmMain);
                         aToolTip_3.Datasource = this.Datasource;
                         aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
                         aToolTip_3.DataBind();
-                        aToolTip_3.Show1();
+                        aToolTip_3.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Quá hạn trả phòng");
+                        uc_Tooltip_StatusRoom_3_OutOfDate aToolTip_3 = new uc_Tooltip_StatusRoom_3_OutOfDate(afrmMain);
+                        aToolTip_3.Datasource = this.Datasource;
+                        aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
+                        aToolTip_3.DataBind();
+                        aToolTip_3.Show();
                     }
                 }
                 else if (this.Datasource.RoomStatus == 5)
@@ -249,6 +254,21 @@ namespace RoomManager
             rectangleShape1.BackColor = rectangleShape_BackColor;
             rectangleShape1.BorderWidth = 5;
             rectangleShape1.Refresh();
+        }
+
+        private void lbWarning_Click(object sender, EventArgs e)
+        {
+            this.OpenPopup();
+        }
+
+        private void lblSku_Click_1(object sender, EventArgs e)
+        {
+            this.OpenPopup();
+        }
+
+        private void uc_RoomStatusItem_Click(object sender, EventArgs e)
+        {
+            this.OpenPopup();
         }
 
     }

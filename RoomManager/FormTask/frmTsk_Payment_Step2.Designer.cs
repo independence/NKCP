@@ -89,6 +89,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.btnAddService = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.lueBookingR_Paymethod = new DevExpress.XtraEditors.LookUpEdit();
@@ -510,6 +511,7 @@
             "G1",
             "G2",
             "G3"});
+            this.cbbPriceType.Properties.ReadOnly = true;
             this.cbbPriceType.Size = new System.Drawing.Size(104, 20);
             this.cbbPriceType.TabIndex = 3;
             this.cbbPriceType.EditValueChanged += new System.EventHandler(this.cbbPriceType_EditValueChanged);
@@ -672,7 +674,9 @@
             this.dtpCheckInActual.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCheckInActual.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpCheckInActual.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCheckInActual.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpCheckInActual.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpCheckInActual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckInActual.Size = new System.Drawing.Size(115, 20);
             this.dtpCheckInActual.TabIndex = 22;
             // 
@@ -728,7 +732,9 @@
             this.dtpCheckOutActual.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCheckOutActual.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpCheckOutActual.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCheckOutActual.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpCheckOutActual.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpCheckOutActual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckOutActual.Size = new System.Drawing.Size(115, 20);
             this.dtpCheckOutActual.TabIndex = 22;
             this.dtpCheckOutActual.Leave += new System.EventHandler(this.dtpCheckOutActual_Leave);
@@ -1169,6 +1175,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.labelControl10, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddService, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.simpleButton1, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -1202,6 +1209,15 @@
             this.btnAddService.TabIndex = 2;
             this.btnAddService.Text = "Thêm dịch vụ";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(215, 3);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_2);
             // 
             // tableLayoutPanel6
             // 
@@ -3864,6 +3880,7 @@
         private DevExpress.XtraEditors.DateEdit dtpAcceptDateH;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
 
     }
 }
