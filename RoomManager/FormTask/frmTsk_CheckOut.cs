@@ -57,7 +57,8 @@ namespace RoomManager
             if (aIDBookingRoom_Old == -1)
             {
                 aListTemp.Clear();
-                aListTemp = aBookingRoomsBO.Select_ByStatus_ByTime(DateTime.Now, Status);
+               // aListTemp = aBookingRoomsBO.Select_ByStatus_ByTime(DateTime.Now, Status);
+                aListTemp = aBookingRoomsBO.Select_ByStatus(Status);
             }
             else
             {
