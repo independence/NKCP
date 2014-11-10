@@ -438,7 +438,9 @@
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.BeepOnError = true;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(118, 20);
             this.dtpTo.TabIndex = 50;
             // 
@@ -458,7 +460,9 @@
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.BeepOnError = true;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(118, 20);
             this.dtpFrom.TabIndex = 49;
             // 

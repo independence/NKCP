@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_UpdBooking));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -305,7 +305,7 @@
             // 
             this.btnUnSelect.AutoHeight = false;
             this.btnUnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnUnSelect.Name = "btnUnSelect";
             this.btnUnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelect_ButtonClick);
@@ -375,7 +375,7 @@
             // 
             this.cbbTablePerson.AutoHeight = false;
             this.cbbTablePerson.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.cbbTablePerson.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.cbbTablePerson.HideSelection = false;
             this.cbbTablePerson.Items.AddRange(new object[] {
@@ -477,7 +477,8 @@
             this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(163, 20);
             this.dtpFrom.TabIndex = 51;
             // 
@@ -604,7 +605,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelect_ButtonClick);
@@ -1003,7 +1004,7 @@
             this.tableLayoutPanel12.ColumnCount = 3;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.0641F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.935898F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel12.Controls.Add(this.btnSearchCustomerGroup, 2, 0);
             this.tableLayoutPanel12.Controls.Add(this.btnAddCustomerGroup, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.lueCustomerGroup, 0, 0);
@@ -1021,7 +1022,7 @@
             this.btnSearchCustomerGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchCustomerGroup.Appearance.Options.UseFont = true;
             this.btnSearchCustomerGroup.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchCustomerGroup.Image")));
-            this.btnSearchCustomerGroup.Location = new System.Drawing.Point(302, 5);
+            this.btnSearchCustomerGroup.Location = new System.Drawing.Point(301, 5);
             this.btnSearchCustomerGroup.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnSearchCustomerGroup.Name = "btnSearchCustomerGroup";
             this.btnSearchCustomerGroup.Size = new System.Drawing.Size(24, 21);
@@ -1034,7 +1035,7 @@
             this.btnAddCustomerGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomerGroup.Appearance.Options.UseFont = true;
             this.btnAddCustomerGroup.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomerGroup.Image")));
-            this.btnAddCustomerGroup.Location = new System.Drawing.Point(262, 5);
+            this.btnAddCustomerGroup.Location = new System.Drawing.Point(261, 5);
             this.btnAddCustomerGroup.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnAddCustomerGroup.Name = "btnAddCustomerGroup";
             this.btnAddCustomerGroup.Size = new System.Drawing.Size(21, 21);
@@ -1051,7 +1052,7 @@
             this.lueCustomerGroup.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueCustomerGroup.Properties.NullText = "";
-            this.lueCustomerGroup.Size = new System.Drawing.Size(252, 20);
+            this.lueCustomerGroup.Size = new System.Drawing.Size(251, 20);
             this.lueCustomerGroup.TabIndex = 1;
             this.lueCustomerGroup.EditValueChanged += new System.EventHandler(this.lueCustomerGroup_EditValueChanged);
             // 
@@ -1060,7 +1061,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.09585F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.904154F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel9.Controls.Add(this.lueGuest, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnSearchGuest, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnAddGuest, 1, 0);
@@ -1091,7 +1092,7 @@
             this.btnSearchGuest.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchGuest.Appearance.Options.UseFont = true;
             this.btnSearchGuest.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchGuest.Image")));
-            this.btnSearchGuest.Location = new System.Drawing.Point(312, 5);
+            this.btnSearchGuest.Location = new System.Drawing.Point(311, 5);
             this.btnSearchGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnSearchGuest.Name = "btnSearchGuest";
             this.btnSearchGuest.Size = new System.Drawing.Size(24, 21);
@@ -1104,7 +1105,7 @@
             this.btnAddGuest.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddGuest.Appearance.Options.UseFont = true;
             this.btnAddGuest.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGuest.Image")));
-            this.btnAddGuest.Location = new System.Drawing.Point(280, 5);
+            this.btnAddGuest.Location = new System.Drawing.Point(279, 5);
             this.btnAddGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnAddGuest.Name = "btnAddGuest";
             this.btnAddGuest.Size = new System.Drawing.Size(23, 21);
@@ -1138,7 +1139,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.83607F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.16393F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel7.Controls.Add(this.btnSearchCompany, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.btnAddCompany, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.lueCompany, 0, 0);
@@ -1156,7 +1157,7 @@
             this.btnSearchCompany.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchCompany.Appearance.Options.UseFont = true;
             this.btnSearchCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchCompany.Image")));
-            this.btnSearchCompany.Location = new System.Drawing.Point(303, 5);
+            this.btnSearchCompany.Location = new System.Drawing.Point(302, 5);
             this.btnSearchCompany.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnSearchCompany.Name = "btnSearchCompany";
             this.btnSearchCompany.Size = new System.Drawing.Size(24, 21);
@@ -1169,7 +1170,7 @@
             this.btnAddCompany.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCompany.Appearance.Options.UseFont = true;
             this.btnAddCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCompany.Image")));
-            this.btnAddCompany.Location = new System.Drawing.Point(263, 5);
+            this.btnAddCompany.Location = new System.Drawing.Point(262, 5);
             this.btnAddCompany.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(22, 21);
@@ -1186,7 +1187,7 @@
             this.lueCompany.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueCompany.Properties.NullText = "";
-            this.lueCompany.Size = new System.Drawing.Size(253, 20);
+            this.lueCompany.Size = new System.Drawing.Size(252, 20);
             this.lueCompany.TabIndex = 0;
             this.lueCompany.EditValueChanged += new System.EventHandler(this.lueCompany_EditValueChanged);
             // 

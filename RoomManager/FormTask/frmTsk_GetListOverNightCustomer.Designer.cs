@@ -143,7 +143,8 @@
             this.dtpCheckPoint.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCheckPoint.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpCheckPoint.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCheckPoint.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpCheckPoint.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpCheckPoint.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckPoint.Size = new System.Drawing.Size(167, 20);
             this.dtpCheckPoint.TabIndex = 3;
             // 

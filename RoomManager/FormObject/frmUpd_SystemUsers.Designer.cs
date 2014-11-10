@@ -192,7 +192,8 @@
             this.txtBirthday.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtBirthday.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.txtBirthday.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtBirthday.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.txtBirthday.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.txtBirthday.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtBirthday.Properties.Mask.PlaceHolder = '/';
             this.txtBirthday.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtBirthday.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;

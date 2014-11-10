@@ -603,7 +603,8 @@
             this.dtpDateEnterCountry.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpDateEnterCountry.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpDateEnterCountry.Properties.Mask.BeepOnError = true;
-            this.dtpDateEnterCountry.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpDateEnterCountry.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpDateEnterCountry.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpDateEnterCountry.Size = new System.Drawing.Size(205, 20);
             this.dtpDateEnterCountry.TabIndex = 15;
             this.dtpDateEnterCountry.Leave += new System.EventHandler(this.dtpDateEnterCountry_Leave);
@@ -625,7 +626,8 @@
             this.dtpTemporaryResidenceDate.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpTemporaryResidenceDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTemporaryResidenceDate.Properties.Mask.BeepOnError = true;
-            this.dtpTemporaryResidenceDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpTemporaryResidenceDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpTemporaryResidenceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTemporaryResidenceDate.Size = new System.Drawing.Size(205, 20);
             this.dtpTemporaryResidenceDate.TabIndex = 15;
             this.dtpTemporaryResidenceDate.Leave += new System.EventHandler(this.dtpTemporaryResidenceDate_Leave);
@@ -647,7 +649,8 @@
             this.dtpLeaveDate.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpLeaveDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpLeaveDate.Properties.Mask.BeepOnError = true;
-            this.dtpLeaveDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpLeaveDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpLeaveDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpLeaveDate.Size = new System.Drawing.Size(205, 20);
             this.dtpLeaveDate.TabIndex = 15;
             this.dtpLeaveDate.Leave += new System.EventHandler(this.dtpLeaveDate_Leave);
@@ -669,7 +672,8 @@
             this.dtpLimitDateEnterCountry.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpLimitDateEnterCountry.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpLimitDateEnterCountry.Properties.Mask.BeepOnError = true;
-            this.dtpLimitDateEnterCountry.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpLimitDateEnterCountry.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpLimitDateEnterCountry.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpLimitDateEnterCountry.Size = new System.Drawing.Size(205, 20);
             this.dtpLimitDateEnterCountry.TabIndex = 15;
             this.dtpLimitDateEnterCountry.Leave += new System.EventHandler(this.dtpLimitDateEnterCountry_Leave);
