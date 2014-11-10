@@ -264,7 +264,7 @@
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(99, 27);
             this.btnAddNew.TabIndex = 0;
-            this.btnAddNew.Text = "Cập nhật";
+            this.btnAddNew.Text = "Thêm";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // frmIns_ExtraCostRooms

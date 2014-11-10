@@ -75,7 +75,7 @@
             this.sbCreate.Name = "sbCreate";
             this.sbCreate.Size = new System.Drawing.Size(101, 25);
             this.sbCreate.TabIndex = 4;
-            this.sbCreate.Text = "Cập nhật";
+            this.sbCreate.Text = "Thêm";
             this.sbCreate.Click += new System.EventHandler(this.sbCreate_Click);
             // 
             // tableLayoutPanel2

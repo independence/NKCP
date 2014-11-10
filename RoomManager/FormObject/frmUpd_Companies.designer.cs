@@ -63,7 +63,7 @@
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(102, 8);
+            this.btnUpdate.Location = new System.Drawing.Point(121, 8);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 0;
@@ -147,9 +147,9 @@
             this.labelControl8.Location = new System.Drawing.Point(3, 213);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.labelControl8.Size = new System.Drawing.Size(61, 16);
+            this.labelControl8.Size = new System.Drawing.Size(47, 16);
             this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Disable";
+            this.labelControl8.Text = "Khóa";
             // 
             // cboDisable
             // 
@@ -272,8 +272,8 @@
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.75758F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.24242F));
             this.tableLayoutPanel3.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 264);

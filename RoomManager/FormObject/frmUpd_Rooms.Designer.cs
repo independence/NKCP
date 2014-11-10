@@ -203,12 +203,12 @@
             // 
             this.lblImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblImage.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(47, 185);
+            this.lblImage.Location = new System.Drawing.Point(53, 185);
             this.lblImage.Name = "lblImage";
             this.lblImage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblImage.Size = new System.Drawing.Size(50, 16);
+            this.lblImage.Size = new System.Drawing.Size(38, 17);
             this.lblImage.TabIndex = 3;
-            this.lblImage.Text = "Image";
+            this.lblImage.Text = "Ảnh";
             // 
             // lblType
             // 
@@ -298,12 +298,12 @@
             // 
             this.lblDisable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDisable.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisable.Location = new System.Drawing.Point(375, 55);
+            this.lblDisable.Location = new System.Drawing.Point(382, 55);
             this.lblDisable.Name = "lblDisable";
             this.lblDisable.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblDisable.Size = new System.Drawing.Size(56, 16);
+            this.lblDisable.Size = new System.Drawing.Size(42, 16);
             this.lblDisable.TabIndex = 6;
-            this.lblDisable.Text = "Disable";
+            this.lblDisable.Text = "Khóa";
             // 
             // cbbDisable
             // 

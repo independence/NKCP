@@ -110,9 +110,9 @@
             this.labelControl8.Location = new System.Drawing.Point(12, 240);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl8.Size = new System.Drawing.Size(56, 16);
+            this.labelControl8.Size = new System.Drawing.Size(42, 16);
             this.labelControl8.TabIndex = 15;
-            this.labelControl8.Text = "Disable";
+            this.labelControl8.Text = "Khóa";
             // 
             // cboDisable
             // 

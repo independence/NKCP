@@ -89,9 +89,9 @@
             this.labelControl8.Location = new System.Drawing.Point(11, 213);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl8.Size = new System.Drawing.Size(56, 16);
+            this.labelControl8.Size = new System.Drawing.Size(42, 16);
             this.labelControl8.TabIndex = 13;
-            this.labelControl8.Text = "Disable";
+            this.labelControl8.Text = "Khóa";
             // 
             // cboDisable
             // 
@@ -257,7 +257,7 @@
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(103, 28);
             this.btnAddNew.TabIndex = 8;
-            this.btnAddNew.Text = "Cập nhật";
+            this.btnAddNew.Text = "Thêm";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // frmIns_CustomerGroups

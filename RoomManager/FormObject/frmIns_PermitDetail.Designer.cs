@@ -284,7 +284,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 28);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Cập nhật";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmIns_PermitDetail

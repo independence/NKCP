@@ -340,8 +340,8 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.85375F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.14625F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.txaInfo, 1, 7);
             this.tableLayoutPanel3.Controls.Add(this.txtAddress, 1, 4);
@@ -377,7 +377,7 @@
             // txaInfo
             // 
             this.txaInfo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txaInfo.Location = new System.Drawing.Point(139, 299);
+            this.txaInfo.Location = new System.Drawing.Point(148, 299);
             this.txaInfo.Name = "txaInfo";
             this.txaInfo.Properties.MaxLength = 250;
             this.txaInfo.Properties.NullValuePrompt = "Tối đa 250 ký tự.";
@@ -389,23 +389,23 @@
             // txtAddress
             // 
             this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddress.Location = new System.Drawing.Point(139, 174);
+            this.txtAddress.Location = new System.Drawing.Point(148, 174);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.MaxLength = 200;
             this.txtAddress.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtAddress.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtAddress.Size = new System.Drawing.Size(364, 20);
+            this.txtAddress.Size = new System.Drawing.Size(355, 20);
             this.txtAddress.TabIndex = 4;
             // 
             // txtIdentifier3
             // 
             this.txtIdentifier3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtIdentifier3.Location = new System.Drawing.Point(139, 92);
+            this.txtIdentifier3.Location = new System.Drawing.Point(148, 92);
             this.txtIdentifier3.Name = "txtIdentifier3";
             this.txtIdentifier3.Properties.MaxLength = 50;
             this.txtIdentifier3.Properties.NullValuePrompt = "Nhập tối đa 50 ký tự.";
             this.txtIdentifier3.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtIdentifier3.Size = new System.Drawing.Size(364, 20);
+            this.txtIdentifier3.Size = new System.Drawing.Size(355, 20);
             this.txtIdentifier3.TabIndex = 4;
             // 
             // labelControl18
@@ -429,12 +429,12 @@
             this.tableLayoutPanel6.Controls.Add(this.labelControl16, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.txtIdentifier2, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(136, 41);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(145, 41);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(370, 41);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(361, 41);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // txtIdentifier1
@@ -452,7 +452,7 @@
             // 
             this.labelControl16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(154, 9);
+            this.labelControl16.Location = new System.Drawing.Point(150, 9);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(3);
             this.labelControl16.Size = new System.Drawing.Size(69, 23);
@@ -462,12 +462,12 @@
             // txtIdentifier2
             // 
             this.txtIdentifier2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtIdentifier2.Location = new System.Drawing.Point(228, 10);
+            this.txtIdentifier2.Location = new System.Drawing.Point(223, 10);
             this.txtIdentifier2.Name = "txtIdentifier2";
             this.txtIdentifier2.Properties.MaxLength = 50;
             this.txtIdentifier2.Properties.NullValuePrompt = "Tối đa 50 ký tự.";
             this.txtIdentifier2.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtIdentifier2.Size = new System.Drawing.Size(139, 20);
+            this.txtIdentifier2.Size = new System.Drawing.Size(135, 20);
             this.txtIdentifier2.TabIndex = 4;
             // 
             // labelControl1
@@ -495,12 +495,12 @@
             // txtNames
             // 
             this.txtNames.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNames.Location = new System.Drawing.Point(139, 10);
+            this.txtNames.Location = new System.Drawing.Point(148, 10);
             this.txtNames.Name = "txtNames";
             this.txtNames.Properties.MaxLength = 50;
             this.txtNames.Properties.NullValuePrompt = "Nhập tối đa 50 ký tự.";
             this.txtNames.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtNames.Size = new System.Drawing.Size(364, 20);
+            this.txtNames.Size = new System.Drawing.Size(355, 20);
             this.txtNames.TabIndex = 4;
             // 
             // labelControl4
@@ -546,19 +546,19 @@
             this.tableLayoutPanel5.Controls.Add(this.lueGender, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.dtpBirthday, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(136, 123);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(145, 123);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(370, 41);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(361, 41);
             this.tableLayoutPanel5.TabIndex = 23;
             // 
             // lblGender
             // 
             this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblGender.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(154, 9);
+            this.lblGender.Location = new System.Drawing.Point(150, 9);
             this.lblGender.Name = "lblGender";
             this.lblGender.Padding = new System.Windows.Forms.Padding(3);
             this.lblGender.Size = new System.Drawing.Size(62, 23);
@@ -568,7 +568,7 @@
             // lueGender
             // 
             this.lueGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueGender.Location = new System.Drawing.Point(227, 10);
+            this.lueGender.Location = new System.Drawing.Point(222, 10);
             this.lueGender.Name = "lueGender";
             this.lueGender.Properties.Appearance.Options.UseTextOptions = true;
             this.lueGender.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -580,7 +580,7 @@
             this.lueGender.Properties.NullValuePrompt = "Chọn giới tính";
             this.lueGender.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueGender.Size = new System.Drawing.Size(140, 20);
+            this.lueGender.Size = new System.Drawing.Size(136, 20);
             this.lueGender.TabIndex = 25;
             // 
             // dtpBirthday
@@ -605,24 +605,24 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.91892F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.27027F));
             this.tableLayoutPanel7.Controls.Add(this.lueCitizen, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.lblCitizen, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.lueNationality, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(136, 205);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(145, 205);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(370, 41);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(361, 41);
             this.tableLayoutPanel7.TabIndex = 24;
             // 
             // lueCitizen
             // 
             this.lueCitizen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueCitizen.Location = new System.Drawing.Point(220, 10);
+            this.lueCitizen.Location = new System.Drawing.Point(218, 10);
             this.lueCitizen.Name = "lueCitizen";
             this.lueCitizen.Properties.Appearance.Options.UseTextOptions = true;
             this.lueCitizen.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -634,19 +634,19 @@
             this.lueCitizen.Properties.NullValuePrompt = "Chọn tỉnh thành";
             this.lueCitizen.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCitizen.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueCitizen.Size = new System.Drawing.Size(147, 20);
+            this.lueCitizen.Size = new System.Drawing.Size(140, 20);
             this.lueCitizen.TabIndex = 23;
             // 
             // lblCitizen
             // 
             this.lblCitizen.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCitizen.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitizen.Location = new System.Drawing.Point(154, 9);
+            this.lblCitizen.Location = new System.Drawing.Point(150, 9);
             this.lblCitizen.Name = "lblCitizen";
             this.lblCitizen.Padding = new System.Windows.Forms.Padding(3);
-            this.lblCitizen.Size = new System.Drawing.Size(49, 22);
+            this.lblCitizen.Size = new System.Drawing.Size(66, 22);
             this.lblCitizen.TabIndex = 19;
-            this.lblCitizen.Text = "Citizen";
+            this.lblCitizen.Text = "Công dân";
             // 
             // lueNationality
             // 
@@ -687,12 +687,12 @@
             this.tableLayoutPanel8.Controls.Add(this.labelControl8, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtEmail, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(136, 246);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(145, 246);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(370, 41);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(361, 41);
             this.tableLayoutPanel8.TabIndex = 25;
             // 
             // txtTel
@@ -712,7 +712,7 @@
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(161, 9);
+            this.labelControl8.Location = new System.Drawing.Point(158, 9);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(3);
@@ -723,12 +723,12 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtEmail.Location = new System.Drawing.Point(220, 10);
+            this.txtEmail.Location = new System.Drawing.Point(215, 10);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Properties.NullValuePrompt = "Nhập tối đa 50 ký tự.";
             this.txtEmail.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtEmail.Size = new System.Drawing.Size(147, 20);
+            this.txtEmail.Size = new System.Drawing.Size(143, 20);
             this.txtEmail.TabIndex = 4;
             // 
             // labelControl10

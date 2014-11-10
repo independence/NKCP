@@ -217,9 +217,9 @@
             this.labelControl7.Location = new System.Drawing.Point(20, 263);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(46, 16);
+            this.labelControl7.Size = new System.Drawing.Size(32, 16);
             this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Disable";
+            this.labelControl7.Text = "Khóa";
             // 
             // tetFrom
             // 

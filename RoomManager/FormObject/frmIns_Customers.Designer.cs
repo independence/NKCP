@@ -126,7 +126,7 @@
             this.btCreateNew.Name = "btCreateNew";
             this.btCreateNew.Size = new System.Drawing.Size(116, 28);
             this.btCreateNew.TabIndex = 0;
-            this.btCreateNew.Text = "Cập nhật";
+            this.btCreateNew.Text = "Thêm";
             this.btCreateNew.Click += new System.EventHandler(this.btCreateNew_Click);
             // 
             // tableLayoutPanel2
@@ -471,9 +471,9 @@
             this.lblCitizen.Location = new System.Drawing.Point(134, 9);
             this.lblCitizen.Name = "lblCitizen";
             this.lblCitizen.Padding = new System.Windows.Forms.Padding(3);
-            this.lblCitizen.Size = new System.Drawing.Size(49, 22);
+            this.lblCitizen.Size = new System.Drawing.Size(66, 22);
             this.lblCitizen.TabIndex = 19;
-            this.lblCitizen.Text = "Citizen";
+            this.lblCitizen.Text = "Công dân";
             // 
             // lueNationality
             // 
@@ -688,9 +688,9 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(3);
-            this.labelControl2.Size = new System.Drawing.Size(52, 22);
+            this.labelControl2.Size = new System.Drawing.Size(38, 22);
             this.labelControl2.TabIndex = 27;
-            this.labelControl2.Text = "Disable";
+            this.labelControl2.Text = "Khóa";
             // 
             // labelControl5
             // 

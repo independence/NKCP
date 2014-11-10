@@ -221,12 +221,12 @@
             // 
             this.lblImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblImage.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(48, 170);
+            this.lblImage.Location = new System.Drawing.Point(54, 170);
             this.lblImage.Name = "lblImage";
             this.lblImage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblImage.Size = new System.Drawing.Size(50, 16);
+            this.lblImage.Size = new System.Drawing.Size(38, 17);
             this.lblImage.TabIndex = 3;
-            this.lblImage.Text = "Image";
+            this.lblImage.Text = "Ảnh";
             // 
             // lblType
             // 
@@ -377,7 +377,7 @@
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(100, 28);
             this.btnAddRoom.TabIndex = 0;
-            this.btnAddRoom.Text = "Cập nhật";
+            this.btnAddRoom.Text = "Thêm";
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // xtraTabControl1

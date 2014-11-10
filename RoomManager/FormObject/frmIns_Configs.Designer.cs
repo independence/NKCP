@@ -260,7 +260,7 @@
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(110, 28);
             this.btnAddNew.TabIndex = 0;
-            this.btnAddNew.Text = "Cập nhật";
+            this.btnAddNew.Text = "Thêm";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // errorProvider1

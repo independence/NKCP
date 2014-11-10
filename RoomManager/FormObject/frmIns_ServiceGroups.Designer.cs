@@ -119,7 +119,7 @@
             this.bnEdit.Name = "bnEdit";
             this.bnEdit.Size = new System.Drawing.Size(90, 23);
             this.bnEdit.TabIndex = 10;
-            this.bnEdit.Text = "Lưu lại";
+            this.bnEdit.Text = "Cập nhật";
             this.bnEdit.Click += new System.EventHandler(this.bnEdit_Click);
             // 
             // bnAdd
@@ -131,7 +131,7 @@
             this.bnAdd.Name = "bnAdd";
             this.bnAdd.Size = new System.Drawing.Size(98, 23);
             this.bnAdd.TabIndex = 7;
-            this.bnAdd.Text = "Cập nhật";
+            this.bnAdd.Text = "Thêm";
             this.bnAdd.Click += new System.EventHandler(this.bnAdd_Click);
             // 
             // labelControl3
@@ -307,7 +307,7 @@
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn6.Caption = "Disable";
+            this.gridColumn6.Caption = "Khóa";
             this.gridColumn6.FieldName = "Disable";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;

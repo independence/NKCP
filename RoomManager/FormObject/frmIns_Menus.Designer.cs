@@ -383,7 +383,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 35);
             this.btnSave.TabIndex = 54;
-            this.btnSave.Text = "Cập nhật";
+            this.btnSave.Text = "Thêm";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel3

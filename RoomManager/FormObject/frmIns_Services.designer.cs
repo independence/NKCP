@@ -110,7 +110,7 @@
             this.bnAdd.Name = "bnAdd";
             this.bnAdd.Size = new System.Drawing.Size(97, 28);
             this.bnAdd.TabIndex = 21;
-            this.bnAdd.Text = "Cập nhật";
+            this.bnAdd.Text = "Thêm";
             this.bnAdd.Click += new System.EventHandler(this.bnAdd_Click);
             // 
             // tableLayoutPanel2

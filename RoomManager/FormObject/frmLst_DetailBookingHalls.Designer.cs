@@ -936,10 +936,10 @@
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(169, 0);
+            this.btnPrint.Location = new System.Drawing.Point(187, 0);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 0, 8, 3);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(90, 25);
+            this.btnPrint.Size = new System.Drawing.Size(72, 25);
             this.btnPrint.TabIndex = 7;
             this.btnPrint.Text = "In";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);

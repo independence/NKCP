@@ -117,7 +117,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 34);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Cập nhật";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tableLayoutPanel2
@@ -214,9 +214,9 @@
             this.labelControl7.Location = new System.Drawing.Point(11, 322);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 17);
+            this.labelControl7.Size = new System.Drawing.Size(36, 17);
             this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Disable";
+            this.labelControl7.Text = "Khóa";
             // 
             // tetFrom
             // 
