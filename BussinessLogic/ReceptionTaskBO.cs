@@ -77,6 +77,7 @@ namespace BussinessLogic
                     aBookingRooms.BookingStatus = 1;
                     aBookingRooms.Type = 1; //Tính CheckIn sớm và CheckOut muộn
                     aBookingRooms.Status = aCheckInEN.Status;
+                    aBookingRooms.PriceType = "G1";
 
 
                     //add new bookingRoom
