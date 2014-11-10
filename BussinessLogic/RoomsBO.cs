@@ -51,7 +51,20 @@ namespace BussinessLogic
                 throw new Exception(string.Format("RoomBO.Sel_ByID :" + ex.Message.ToString()));
             }
         }
-
+        public Rooms Select_ByIDBookingRoom(int IDBookingRoom)
+        {
+            try
+            {
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                BookingRooms aTemp = aBookingRoomsBO.Select_ByID(IDBookingRoom);
+                Rooms aRooms = this.Select_ByCodeRoom(aTemp.CodeRoom, 1);
+                return aRooms;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("RoomBO.Select_ByIDBookingRoom :" + ex.Message.ToString()));
+            }
+        }
 
         //=======================================================
         //Author: LinhTing

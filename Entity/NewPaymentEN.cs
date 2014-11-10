@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataAccess;
 using System.Data.Entity.Migrations;
 
+
 namespace Entity
 {
    public class NewPaymentEN
@@ -505,6 +506,7 @@ namespace Entity
            BookingRoomUsedEN aTemp = this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0];
            return aTemp.Cost;
        }
+      
        public List<ServiceUsedEN> GetAllServiceUsedInRoom()
        {
            List<ServiceUsedEN> aListServiceUsed = new List<ServiceUsedEN>();

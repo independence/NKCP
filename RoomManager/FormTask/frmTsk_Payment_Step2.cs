@@ -1181,11 +1181,12 @@ namespace RoomManager
             CustomersBO aCustomersBO = new CustomersBO();
             BookingRsBO aBookingRsBO = new BookingRsBO();
             ExtraCostBO aExtraCostBO = new ExtraCostBO();
+            RoomsBO aRoomsBO = new RoomsBO();
             
             
             List<Customers> aListCustomers = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
-            int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();            
-            decimal? CostRoom = this.aNewPaymentEN.GetCostRoom(this.CurrentIDBookingRoom) - this.ExtraMoneyRoom;
+            int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();
+            decimal? CostRoom = aRoomsBO.Select_ByIDBookingRoom(this.CurrentIDBookingRoom).CostRef;
             this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(lblSkuRooms.Text,cbbPriceType.Text,aListCustomers.Count).ExtraValue);
                 
             txtBookingRoomsCost.Text = Convert.ToString(CostRoom + this.ExtraMoneyRoom);
@@ -1712,10 +1713,7 @@ namespace RoomManager
             MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void cbbPriceType_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
      
 
