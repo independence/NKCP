@@ -78,10 +78,10 @@
     <Reference Include="DevExpress.XtraScheduler.v13.1.Core, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v13.1.Extensions, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
-      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -100,7 +100,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TeamNet.Data.FileExport">
-      <HintPath>..\Library\Packet\TeamNet.Data.FileExport.dll</HintPath>
+      <HintPath>C:\Users\Linhting\Downloads\Compressed\TeamNetDataFileExport-0.2\Bin\TeamNet.Data.FileExport.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
