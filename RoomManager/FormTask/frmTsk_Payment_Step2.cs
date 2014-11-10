@@ -1160,9 +1160,12 @@ namespace RoomManager
                 }
                 txtAddTimeStart.Text = aReceptionTaskBO.GetAddTimeStart(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckInActual.DateTime).ToString();
                 txtAddTimeEnd.Text = aReceptionTaskBO.GetAddTimeEnd(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime).ToString();
-  
-                txtNumberDate.Text = (aReceptionTaskBO.GetTimeInUsed(this.CurrentIDBookingRoom,dtpCheckInActual.DateTime,dtpCheckOutActual.DateTime)).ToString();
+                  txtNumberDate.Text = (aReceptionTaskBO.GetTimeInUsed(this.CurrentIDBookingRoom,dtpCheckInActual.DateTime,dtpCheckOutActual.DateTime)).ToString();
+                
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = dtpCheckInActual.DateTime;
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+
                 BookingRoomUsedEN aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0];
                 if (aTemp.Status != 7 || aTemp.Status != 8)
                 {
