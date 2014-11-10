@@ -413,7 +413,8 @@
             this.dtpBirthday.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpBirthday.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpBirthday.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpBirthday.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpBirthday.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpBirthday.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpBirthday.Size = new System.Drawing.Size(125, 20);
             this.dtpBirthday.TabIndex = 26;
             // 

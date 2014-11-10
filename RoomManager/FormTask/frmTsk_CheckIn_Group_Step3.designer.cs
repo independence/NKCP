@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_CheckIn_Group_Step3));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvAvailableCustomer = new DevExpress.XtraGrid.GridControl();
             this.viewAvailableCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -226,7 +226,7 @@
             // 
             this.btnSelectCustomer.AutoHeight = false;
             this.btnSelectCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnSelectCustomer.Name = "btnSelectCustomer";
             this.btnSelectCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectCustomer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectCustomer_ButtonClick);
@@ -443,7 +443,8 @@
             this.dtpDateEnterCountry.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpDateEnterCountry.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpDateEnterCountry.Properties.Mask.BeepOnError = true;
-            this.dtpDateEnterCountry.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpDateEnterCountry.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpDateEnterCountry.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpDateEnterCountry.Size = new System.Drawing.Size(220, 20);
             this.dtpDateEnterCountry.TabIndex = 17;
             this.dtpDateEnterCountry.Leave += new System.EventHandler(this.dtpDateEnterCountry_Leave);
@@ -465,7 +466,8 @@
             this.dtpTemporaryResidenceDate.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpTemporaryResidenceDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTemporaryResidenceDate.Properties.Mask.BeepOnError = true;
-            this.dtpTemporaryResidenceDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpTemporaryResidenceDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpTemporaryResidenceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTemporaryResidenceDate.Size = new System.Drawing.Size(220, 20);
             this.dtpTemporaryResidenceDate.TabIndex = 18;
             this.dtpTemporaryResidenceDate.Leave += new System.EventHandler(this.dtpTemporaryResidenceDate_Leave);
@@ -487,7 +489,8 @@
             this.dtpLeaveDate.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpLeaveDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpLeaveDate.Properties.Mask.BeepOnError = true;
-            this.dtpLeaveDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpLeaveDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpLeaveDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpLeaveDate.Size = new System.Drawing.Size(220, 20);
             this.dtpLeaveDate.TabIndex = 19;
             this.dtpLeaveDate.Leave += new System.EventHandler(this.dtpLeaveDate_Leave);
@@ -509,7 +512,8 @@
             this.dtpLimitDateEnterCountry.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpLimitDateEnterCountry.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpLimitDateEnterCountry.Properties.Mask.BeepOnError = true;
-            this.dtpLimitDateEnterCountry.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpLimitDateEnterCountry.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpLimitDateEnterCountry.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpLimitDateEnterCountry.Size = new System.Drawing.Size(220, 20);
             this.dtpLimitDateEnterCountry.TabIndex = 20;
             this.dtpLimitDateEnterCountry.Leave += new System.EventHandler(this.dtpLimitDateEnterCountry_Leave);
@@ -597,7 +601,7 @@
             // 
             this.btnRemoveCustomer.AutoHeight = false;
             this.btnRemoveCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnRemoveCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnRemoveCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnRemoveCustomer.Name = "btnRemoveCustomer";
             this.btnRemoveCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnRemoveCustomer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnRemoveCustomer_ButtonClick);

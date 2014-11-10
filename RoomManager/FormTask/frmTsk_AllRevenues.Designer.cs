@@ -96,7 +96,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.14286F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.85714F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 2, 0);
@@ -119,7 +119,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(175, 57);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(174, 57);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // dtpTo
@@ -136,8 +136,10 @@
             this.dtpTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
-            this.dtpTo.Size = new System.Drawing.Size(169, 20);
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dtpTo.Size = new System.Drawing.Size(168, 20);
             this.dtpTo.TabIndex = 22;
             // 
             // dtpFrom
@@ -154,8 +156,10 @@
             this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
-            this.dtpFrom.Size = new System.Drawing.Size(169, 20);
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dtpFrom.Size = new System.Drawing.Size(168, 20);
             this.dtpFrom.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -203,7 +207,7 @@
             this.btnSearch.Appearance.Options.UseTextOptions = true;
             this.btnSearch.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(297, 20);
+            this.btnSearch.Location = new System.Drawing.Point(296, 20);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(74, 23);

@@ -356,10 +356,10 @@
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(6, 13);
+            this.labelControl5.Location = new System.Drawing.Point(6, 11);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl5.Size = new System.Drawing.Size(69, 13);
+            this.labelControl5.Size = new System.Drawing.Size(85, 17);
             this.labelControl5.TabIndex = 19;
             this.labelControl5.Text = "Chọn ngày";
             // 
@@ -371,7 +371,7 @@
             this.btnSearch.Appearance.Options.UseTextOptions = true;
             this.btnSearch.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(217, 8);
+            this.btnSearch.Location = new System.Drawing.Point(233, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(3);
             this.btnSearch.Size = new System.Drawing.Size(90, 23);
@@ -383,7 +383,7 @@
             // 
             this.dtpCreateDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpCreateDate.EditValue = null;
-            this.dtpCreateDate.Location = new System.Drawing.Point(81, 10);
+            this.dtpCreateDate.Location = new System.Drawing.Point(97, 10);
             this.dtpCreateDate.Name = "dtpCreateDate";
             this.dtpCreateDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -393,7 +393,9 @@
             this.dtpCreateDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCreateDate.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpCreateDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCreateDate.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpCreateDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpCreateDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCreateDate.Size = new System.Drawing.Size(130, 20);
             this.dtpCreateDate.TabIndex = 1;
             // 

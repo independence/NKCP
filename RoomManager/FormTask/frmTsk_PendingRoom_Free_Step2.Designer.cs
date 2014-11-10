@@ -273,7 +273,8 @@
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.BeepOnError = true;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(209, 20);
             this.dtpTo.TabIndex = 51;
             // 
