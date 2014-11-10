@@ -44,10 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -64,7 +64,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TeamNet.Data.FileExport">
-      <HintPath>..\Library\Packet\TeamNet.Data.FileExport.dll</HintPath>
+      <HintPath>C:\Users\Linhting\Downloads\Compressed\TeamNetDataFileExport-0.2\Bin\TeamNet.Data.FileExport.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

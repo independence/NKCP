@@ -48,11 +48,10 @@
       <HintPath>..\Library\Packet\DevExpress.XtraReports.v13.1.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>E:\WORKING\Root\C#\WebBasic\ReBuild\ver 11-06-2014\Library\DLLs\EntityFramework.dll</HintPath>
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
