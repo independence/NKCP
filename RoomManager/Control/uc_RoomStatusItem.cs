@@ -202,11 +202,11 @@ namespace RoomManager
                     }
                     else
                     {
-                        uc_Tooltip_StatusRoom_3_OutOfDate aToolTip_3 = new uc_Tooltip_StatusRoom_3_OutOfDate(afrmMain);
-                        aToolTip_3.Datasource = this.Datasource;
-                        aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
-                        aToolTip_3.DataBind();
-                        aToolTip_3.Show();
+                        //uc_Tooltip_StatusRoom_3_OutOfDate aToolTip_3 = new uc_Tooltip_StatusRoom_3_OutOfDate(afrmMain);
+                        //aToolTip_3.Datasource = this.Datasource;
+                        //aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
+                        //aToolTip_3.DataBind();
+                        //aToolTip_3.Show();
                     }
                 }
                 else if (this.Datasource.RoomStatus == 5)
