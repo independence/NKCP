@@ -895,6 +895,12 @@ namespace RoomManager
             afrmTsk_AllRevenues.ShowDialog();
         }
 
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmTsk_ViewAllPayment aFrm = new frmTsk_ViewAllPayment();
+            aFrm.Show();
+        }
+
 
 
 

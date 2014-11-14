@@ -162,6 +162,7 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
@@ -265,9 +266,10 @@
             this.btnListCustomersCurrentInRooms,
             this.barButtonItem5,
             this.btnPerformanceRooms_New,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.barButtonItem7});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 203;
+            this.ribbon.MaxItemId = 210;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribPagCatBusiness,
@@ -972,6 +974,7 @@
             this.ribbonPageGroup16.ItemLinks.Add(this.btnCheckoutExpire);
             this.ribbonPageGroup16.ItemLinks.Add(this.btnListCustomersCurrentInRooms);
             this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
             this.ribbonPageGroup16.Text = "Nghiệp vụ khác";
             // 
@@ -1540,6 +1543,16 @@
             this.timer1.Interval = 60000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Thông tin thanh toán";
+            this.barButtonItem7.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
+            this.barButtonItem7.Id = 209;
+            this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -1738,5 +1751,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnPerformanceRooms_New;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

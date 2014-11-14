@@ -64,6 +64,10 @@
         <EntityTypeShape EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" Width="1.5" PointX="4.4460360521665008" PointY="22.972491707174335" />
+        <EntityTypeShape EntityType="Model.vw_QueryDataPayment" Width="1.5" PointX="8.9618777395048532" PointY="18.041398474034573" />
+        <EntityTypeShape EntityType="Model.vw_Support1_DataPayment" Width="1.5" PointX="3.671367876078639" PointY="4.9254657500076418" />
+        <EntityTypeShape EntityType="Model.vw_Support2_DataPayment" Width="1.5" PointX="5.5588881157147174" PointY="3.4972608850790472" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

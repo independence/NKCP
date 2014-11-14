@@ -115,17 +115,17 @@ namespace RoomManager
             {
                 if (this.Datasource.CheckOutPlan.Day == DateTime.Now.Day)
                 {
-                    this.lbWarning.Text = this.Mess_Tra_phong + this.Datasource.CheckOutPlan;
+                    this.lbWarning.Text = this.Mess_Tra_phong + this.Datasource.CheckOutPlan.TimeOfDay.Hours + ":" + this.Datasource.CheckOutPlan.TimeOfDay.Minutes;
                     this.lbWarning.Visible = true;
                     this.lbWarning.BackColor = rectangleShape1.BackColor;
                 }
-                if (this.Datasource.CheckOutPlan.Day < DateTime.Now.Day)
+                if (this.Datasource.CheckOutPlan.Day > DateTime.Now.Day)
                 {
-                    this.lbWarning.Text = this.Mess_Mai_tra_phong;
+                    this.lbWarning.Text = this.Mess_Mai_tra_phong + this.Datasource.CheckOutPlan.TimeOfDay.Hours + ":" + this.Datasource.CheckOutPlan.TimeOfDay.Minutes;
                     this.lbWarning.Visible = true;
                     this.lbWarning.BackColor = this.rectangleShape1.BackColor;
                 }
-                if (this.Datasource.CheckOutPlan.Day > DateTime.Now.Day)
+                if (this.Datasource.CheckOutPlan.Day < DateTime.Now.Day)
                 {
                     this.lbWarning.Text = this.Mess_Qua_han;
                     this.lbWarning.Visible = true;
@@ -166,7 +166,7 @@ namespace RoomManager
 
         private void OpenPopup()
         {
-            if (this.Datasource.RoomStatus >0 )
+            if (this.Datasource.RoomStatus >=0 )
             {
 
                 if (this.Datasource.RoomStatus == 1 )
