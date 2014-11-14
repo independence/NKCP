@@ -181,11 +181,19 @@ namespace RoomManager
                     ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
                     if (this.aListRooms.Count > 0)
                     {
-                        aReceptionTaskBO.SplitPaymentForBookingR(this.aNewPaymentEN, this.aListRooms, this.aListServicesR);
+                        aReceptionTaskBO.SplitPaymentRoom(this.aNewPaymentEN, this.aListRooms);
                     }
                     else if (this.aListHalls.Count > 0)
                     {
-                        aReceptionTaskBO.SplitPaymentForBookingH(this.aNewPaymentEN, this.aListHalls, this.aListServicesH);
+                        aReceptionTaskBO.SplitPaymentHall(this.aNewPaymentEN, this.aListHalls);
+                    }
+                    else if (this.aListServicesR.Count > 0)
+                    {
+                        aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesR, 1); //1 - trạng thái thanh toán set cho dịch vụ phòng
+                    }
+                    else if (this.aListServicesH.Count > 0)
+                    {
+                        aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesH, 2); //2 - trạng thái thanh toán set cho dịch vụ phòng
                     }
                     if (this.afrmTsk_SplitBill_Step1.afrmTsk_Payment_Step2.afrmTsk_Payment_Step1 != null)
                     {

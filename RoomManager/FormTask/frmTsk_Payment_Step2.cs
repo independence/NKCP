@@ -18,6 +18,7 @@ namespace RoomManager
     {
         public bool IsLockForm = false;
         public frmTsk_Payment_Step1 afrmTsk_Payment_Step1 = null;
+        public frmMain afrmMain = null;
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
         private PaymentEN aPaymentEN = new PaymentEN();
         private int IDBookingR = 0;
@@ -45,6 +46,11 @@ namespace RoomManager
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
             xtraTabControl1.SelectedTabPageIndex = 2;
+        }
+        public frmTsk_Payment_Step2(frmMain afrmMain)
+        {
+            InitializeComponent();
+            this.afrmMain = afrmMain;
         }
         #region Payment Hiển
        
@@ -552,6 +558,16 @@ namespace RoomManager
         {
             try
             {
+                dtpCheckInActual.Enabled = false;
+                dtpCheckOutActual.Enabled = false;
+                txtAddTimeEnd.Enabled = false;
+                txtAddTimeStart.Enabled = false;
+                txtNumberDate.Enabled = false;
+                txtPercentTax_Room.Enabled = false;
+                txtBookingHallsCost.Enabled = false;
+
+                txtBookingRoomsCost.Enabled = false;
+                txtPercentTax_Hall.Enabled = false;
                 this.InitData(this.IDBookingR, this.IDBookingH);
                 this.LoadData();
 
@@ -591,7 +607,7 @@ namespace RoomManager
             lblNameCustomer.Text = this.aNewPaymentEN.NameCustomer;
             txtAddressR.Text = this.aNewPaymentEN.AddressCompany;
             txtTaxNumberCodeR.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
-
+           
 
             // Trang thai, hinh thuc thanh toan
             lueBookingR_Paymethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
@@ -776,6 +792,7 @@ namespace RoomManager
                 btnPaymentHall.Enabled = false;
                 btnPrintBookingH.Enabled = false;
                 txtTaxNumberCodeH.Enabled = false;
+                txtAddressH.Enabled = false;
             }
             // Thông tin tổng tiền
             lblTotalBookingRAndBookingHBeforeTax.Text = String.Format("{0:0,0} (VND)", this.aNewPaymentEN.GetTotalMoneyBeforeTax());
@@ -926,8 +943,16 @@ namespace RoomManager
         {
             try
             {
+                dtpCheckInActual.Enabled = true;
+                dtpCheckOutActual.Enabled = true;
+                txtAddTimeEnd.Enabled = true;
+                txtAddTimeStart.Enabled = true;
+                txtNumberDate.Enabled = true;
+                txtPercentTax_Room.Enabled = true;
+                txtBookingRoomsCost.Enabled = true;
+               
                 cbbPriceType.Properties.ReadOnly = false;
-                this.ExtraMoneyRoom = 0;
+                this.ExtraMoneyRoom = 0;               
                 //cbbPriceType.SelectedIndex = 0;
                 this.CurrentIDBookingRoom = Convert.ToInt32(viewRooms.GetFocusedRowCellValue("ID"));
                 this.CodeRoom = viewRooms.GetFocusedRowCellValue("CodeRoom").ToString();
@@ -1119,7 +1144,7 @@ namespace RoomManager
                     }
                     else
                     {
-                        dtpCheckOutActual.Focus();
+                        
                         MessageBox.Show("Vui lòng nhập ngày giờ CheckIn phải nhỏ hơn ngày giờ CheckOut", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -1217,6 +1242,8 @@ namespace RoomManager
         {
             try
             {
+                txtBookingRoomsCost.Enabled = true;
+                txtPercentTax_Hall.Enabled = true;
                 this.CurrentIDBookingHall = Convert.ToInt32(viewHalls.GetFocusedRowCellValue("ID"));
                 this.LoadData();
             }
@@ -1468,9 +1495,14 @@ namespace RoomManager
                             this.afrmTsk_Payment_Step1.afrmMain.ReloadData();
                         }
                     }
-                    //this.aPaymentEN = new PaymentEN();
-                    //this.InitDataBookingR(this.IDBookingR, this.aPaymentEN);
+                    else if (this.afrmMain != null)
+                    {
+                        this.afrmMain.ReloadData();
+                    }
+                    
+                  
                     MessageBox.Show("Thanh toán tiền phòng thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -1523,6 +1555,7 @@ namespace RoomManager
                 if (result == DialogResult.Yes)
                 {
                     this.aNewPaymentEN.PaymentHall();
+                  
                     MessageBox.Show("Thanh toán tiền hội trường thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -1582,9 +1615,15 @@ namespace RoomManager
                         {
                             this.afrmTsk_Payment_Step1.afrmMain.ReloadData();
                         }
-                    }
-                    MessageBox.Show("Thanh toán tiền thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }
+                    else if (this.afrmMain != null)
+                    {
+                        this.afrmMain.ReloadData();
+                    }
+                                    
+                    MessageBox.Show("Thanh toán tiền thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
 
                 }
             }

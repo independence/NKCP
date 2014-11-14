@@ -3023,6 +3023,71 @@ namespace BussinessLogic
             }
         }
 
+        //Linhting : Thanh toán lẻ phòng + tiệc + dịch vụ
+        public void SplitPaymentRoom(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms)
+        {
+            try
+            {
+                foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
+                {
+
+                    aBookingRoomUsedEN.Status = 8;//da thanh toan
+                    aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
+                    aBookingRoomUsedEN.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentRoom \n" + ex.ToString());
+            }
+        }
+
+        public void SplitPaymentHall(NewPaymentEN aNewPaymentEN, List<BookingHallUsedEN> aListHalls)
+        {
+            try
+            {
+                foreach (BookingHallUsedEN aBookingHallUsedEN in aListHalls)
+                {
+
+                    aBookingHallUsedEN.Status = 8;//da thanh toan                
+                    aBookingHallUsedEN.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentHall \n" + ex.ToString());
+            }
+        }
+
+        public void SplitPaymentService(NewPaymentEN aNewPaymentEN, List<ServiceUsedEN> aListServices, int Status)
+        {
+            try
+            {
+                if (Status == 1)
+                {
+                    foreach (ServiceUsedEN aServicesEN in aListServices)
+                    {
+
+                        aServicesEN.StatusPay = 8;
+                        aServicesEN.Save(1);
+                    }
+                }
+                else if (Status == 2)
+                {
+                    foreach (ServiceUsedEN aServicesEN in aListServices)
+                    {
+
+                        aServicesEN.StatusPay = 8;
+                        aServicesEN.Save(2);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentService \n" + ex.ToString());
+            }
+        }
+
         //Hiennv        31/08/2014           Thanh toan le cho phong
         public void SplitPaymentForBookingR(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms, List<ServiceUsedEN> aListServicesR)
         {

@@ -153,6 +153,12 @@
     <Compile Include="Control\uc_Tooltip_StatusRoom_3.Designer.cs">
       <DependentUpon>uc_Tooltip_StatusRoom_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\uc_Tooltip_StatusRoom_3_OutOfDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\uc_Tooltip_StatusRoom_3_OutOfDate.Designer.cs">
+      <DependentUpon>uc_Tooltip_StatusRoom_3_OutOfDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\uc_Tooltip_StatusRoom_5.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -916,6 +922,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uc_Tooltip_StatusRoom_3.resx">
       <DependentUpon>uc_Tooltip_StatusRoom_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\uc_Tooltip_StatusRoom_3_OutOfDate.resx">
+      <DependentUpon>uc_Tooltip_StatusRoom_3_OutOfDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uc_Tooltip_StatusRoom_5.resx">
       <DependentUpon>uc_Tooltip_StatusRoom_5.cs</DependentUpon>

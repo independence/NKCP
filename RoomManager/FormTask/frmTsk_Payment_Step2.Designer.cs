@@ -532,9 +532,9 @@
             this.lblSkuRooms.Location = new System.Drawing.Point(73, 8);
             this.lblSkuRooms.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.lblSkuRooms.Name = "lblSkuRooms";
-            this.lblSkuRooms.Size = new System.Drawing.Size(6, 13);
+            this.lblSkuRooms.Size = new System.Drawing.Size(12, 13);
             this.lblSkuRooms.TabIndex = 1;
-            this.lblSkuRooms.Text = "0";
+            this.lblSkuRooms.Text = "---";
             // 
             // labelControl9
             // 
