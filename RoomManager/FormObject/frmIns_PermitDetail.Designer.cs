@@ -110,7 +110,7 @@
             this.labelControl5.Location = new System.Drawing.Point(13, 15);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(60, 16);
-            this.labelControl5.TabIndex = 5;
+            this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "ID Permit";
             // 
             // labelControl1
@@ -120,7 +120,7 @@
             this.labelControl1.Location = new System.Drawing.Point(13, 62);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(35, 16);
-            this.labelControl1.TabIndex = 6;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Name";
             // 
             // labelControl2
@@ -130,7 +130,7 @@
             this.labelControl2.Location = new System.Drawing.Point(13, 109);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 16);
-            this.labelControl2.TabIndex = 7;
+            this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "PageURL";
             // 
             // labelControl3
@@ -150,7 +150,7 @@
             this.labelControl4.Location = new System.Drawing.Point(13, 203);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(43, 16);
-            this.labelControl4.TabIndex = 9;
+            this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Status";
             // 
             // labelControl6
@@ -160,7 +160,7 @@
             this.labelControl6.Location = new System.Drawing.Point(13, 253);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(46, 16);
-            this.labelControl6.TabIndex = 10;
+            this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "Disable";
             // 
             // lueIDPermit
@@ -176,7 +176,7 @@
             this.lueIDPermit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueIDPermit.Size = new System.Drawing.Size(200, 20);
-            this.lueIDPermit.TabIndex = 18;
+            this.lueIDPermit.TabIndex = 3;
             // 
             // txtName
             // 
@@ -188,7 +188,7 @@
             this.txtName.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 19;
+            this.txtName.TabIndex = 5;
             // 
             // txtPageURL
             // 
@@ -200,7 +200,7 @@
             this.txtPageURL.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtPageURL.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPageURL.Size = new System.Drawing.Size(200, 20);
-            this.txtPageURL.TabIndex = 20;
+            this.txtPageURL.TabIndex = 7;
             // 
             // cbbType
             // 
@@ -219,7 +219,7 @@
             "3",
             "4"});
             this.cbbType.Size = new System.Drawing.Size(200, 20);
-            this.cbbType.TabIndex = 21;
+            this.cbbType.TabIndex = 9;
             // 
             // cbbStatus
             // 
@@ -238,7 +238,7 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(200, 20);
-            this.cbbStatus.TabIndex = 22;
+            this.cbbStatus.TabIndex = 11;
             // 
             // cbbDisable
             // 
@@ -255,7 +255,7 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(200, 20);
-            this.cbbDisable.TabIndex = 23;
+            this.cbbDisable.TabIndex = 13;
             // 
             // tableLayoutPanel4
             // 
@@ -271,7 +271,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(312, 44);
-            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.TabIndex = 14;
             // 
             // btnAdd
             // 
@@ -283,8 +283,8 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 28);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Cập nhật";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmIns_PermitDetail

@@ -95,6 +95,7 @@
             this.viewMenus.Name = "viewMenus";
             this.viewMenus.OptionsFind.AlwaysVisible = true;
             this.viewMenus.OptionsView.EnableAppearanceOddRow = true;
+            this.viewMenus.OptionsView.ShowGroupPanel = false;
             this.viewMenus.OptionsView.ShowIndicator = false;
             this.viewMenus.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
             this.viewMenus.RowHeight = 25;

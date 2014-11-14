@@ -146,7 +146,7 @@
             this.tabBookingHalls.Name = "tabBookingHalls";
             this.tabBookingHalls.SelectedTabPage = this.tabHaveMenus;
             this.tabBookingHalls.Size = new System.Drawing.Size(1023, 485);
-            this.tabBookingHalls.TabIndex = 12;
+            this.tabBookingHalls.TabIndex = 6;
             this.tabBookingHalls.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabHaveNotMenus,
             this.tabHaveMenus,
@@ -177,7 +177,7 @@
             this.btnDetail_HaveMenus,
             this.btnSelectMenu});
             this.dgvBookingHalls_HaveMenus.Size = new System.Drawing.Size(1017, 453);
-            this.dgvBookingHalls_HaveMenus.TabIndex = 13;
+            this.dgvBookingHalls_HaveMenus.TabIndex = 8;
             this.dgvBookingHalls_HaveMenus.UseEmbeddedNavigator = true;
             this.dgvBookingHalls_HaveMenus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingHalls_HaveMenus,
@@ -497,7 +497,7 @@
             this.btnDetailBookingHaveNotMenus,
             this.btnCreateMenu});
             this.dgvHaveNotMenus.Size = new System.Drawing.Size(1017, 453);
-            this.dgvHaveNotMenus.TabIndex = 14;
+            this.dgvHaveNotMenus.TabIndex = 7;
             this.dgvHaveNotMenus.UseEmbeddedNavigator = true;
             this.dgvHaveNotMenus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvHaveNotMenus,
@@ -817,7 +817,7 @@
             this.dgvBookingHalls_Selected.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail_Selected});
             this.dgvBookingHalls_Selected.Size = new System.Drawing.Size(1017, 453);
-            this.dgvBookingHalls_Selected.TabIndex = 13;
+            this.dgvBookingHalls_Selected.TabIndex = 9;
             this.dgvBookingHalls_Selected.UseEmbeddedNavigator = true;
             this.dgvBookingHalls_Selected.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingHalls_Selected,
@@ -1094,7 +1094,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1023, 38);
-            this.tableLayoutPanel2.TabIndex = 11;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // dtpFrom
             // 
@@ -1113,7 +1113,7 @@
             this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(182, 20);
-            this.dtpFrom.TabIndex = 4;
+            this.dtpFrom.TabIndex = 3;
             this.dtpFrom.EditValueChanged += new System.EventHandler(this.dtpFrom_EditValueChanged);
             // 
             // dtpTo
@@ -1133,7 +1133,7 @@
             this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(173, 20);
-            this.dtpTo.TabIndex = 4;
+            this.dtpTo.TabIndex = 5;
             // 
             // labelControl1
             // 
@@ -1142,7 +1142,7 @@
             this.labelControl1.Location = new System.Drawing.Point(263, 10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(28, 17);
-            this.labelControl1.TabIndex = 5;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Đến";
             // 
             // labelControl2
@@ -1153,7 +1153,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(19, 17);
-            this.labelControl2.TabIndex = 5;
+            this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Từ";
             // 
             // frmTsk_CheckMenus

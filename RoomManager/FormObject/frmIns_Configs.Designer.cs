@@ -64,7 +64,7 @@
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl16.Size = new System.Drawing.Size(81, 17);
-            this.labelControl16.TabIndex = 0;
+            this.labelControl16.TabIndex = 6;
             this.labelControl16.Text = "Trạng thái";
             // 
             // cboStatus
@@ -83,7 +83,7 @@
             "3",
             "4"});
             this.cboStatus.Size = new System.Drawing.Size(185, 20);
-            this.cboStatus.TabIndex = 8;
+            this.cboStatus.TabIndex = 7;
             // 
             // labelControl8
             // 
@@ -93,7 +93,7 @@
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl8.Size = new System.Drawing.Size(43, 17);
-            this.labelControl8.TabIndex = 0;
+            this.labelControl8.TabIndex = 8;
             this.labelControl8.Text = "Loại";
             // 
             // cboType
@@ -112,7 +112,7 @@
             "3",
             "4"});
             this.cboType.Size = new System.Drawing.Size(185, 20);
-            this.cboType.TabIndex = 8;
+            this.cboType.TabIndex = 9;
             // 
             // txtValue
             // 
@@ -123,7 +123,7 @@
             this.txtValue.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtValue.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtValue.Size = new System.Drawing.Size(185, 20);
-            this.txtValue.TabIndex = 4;
+            this.txtValue.TabIndex = 5;
             // 
             // tableLayoutPanel4
             // 
@@ -151,7 +151,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(318, 246);
-            this.tableLayoutPanel4.TabIndex = 10;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelControl13
             // 
@@ -161,7 +161,7 @@
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl13.Size = new System.Drawing.Size(55, 17);
-            this.labelControl13.TabIndex = 0;
+            this.labelControl13.TabIndex = 4;
             this.labelControl13.Text = "Giá trị";
             // 
             // labelControl1
@@ -172,7 +172,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(80, 16);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "AccessKey";
             // 
             // txtAccessKey
@@ -184,7 +184,7 @@
             this.txtAccessKey.Properties.NullValuePrompt = "Nhập tối đa 100 ký tự.";
             this.txtAccessKey.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtAccessKey.Size = new System.Drawing.Size(185, 20);
-            this.txtAccessKey.TabIndex = 4;
+            this.txtAccessKey.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -194,7 +194,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl2.Size = new System.Drawing.Size(50, 16);
-            this.labelControl2.TabIndex = 0;
+            this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "Nhóm";
             // 
             // cboGroup
@@ -213,7 +213,7 @@
             "3",
             "4"});
             this.cboGroup.Size = new System.Drawing.Size(185, 20);
-            this.cboGroup.TabIndex = 8;
+            this.cboGroup.TabIndex = 11;
             // 
             // tableLayoutPanel1
             // 
@@ -230,7 +230,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(324, 312);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -246,7 +246,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(324, 39);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.tableLayoutPanel3.TabIndex = 12;
             // 
             // btnAddNew
             // 
@@ -259,8 +259,8 @@
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(110, 28);
-            this.btnAddNew.TabIndex = 0;
-            this.btnAddNew.Text = "Thêm";
+            this.btnAddNew.TabIndex = 13;
+            this.btnAddNew.Text = "Cập nhật";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // errorProvider1

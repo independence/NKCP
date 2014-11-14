@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_CheckOutExpire));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dgvbookingcheckout = new DevExpress.XtraGrid.GridControl();
             this.viewBookingcheckout = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,9 +54,7 @@
             // 
             // dgvbookingcheckout
             // 
-            this.dgvbookingcheckout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvbookingcheckout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvbookingcheckout.Font = new System.Drawing.Font("Tahoma", 10F);
             this.dgvbookingcheckout.Location = new System.Drawing.Point(3, 44);
             this.dgvbookingcheckout.MainView = this.viewBookingcheckout;
@@ -64,7 +62,8 @@
             this.dgvbookingcheckout.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnViewdetail});
             this.dgvbookingcheckout.Size = new System.Drawing.Size(778, 365);
-            this.dgvbookingcheckout.TabIndex = 0;
+            this.dgvbookingcheckout.TabIndex = 5;
+            this.dgvbookingcheckout.UseEmbeddedNavigator = true;
             this.dgvbookingcheckout.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewBookingcheckout});
             // 
@@ -79,6 +78,7 @@
             this.gridColumn6});
             this.viewBookingcheckout.GridControl = this.dgvbookingcheckout;
             this.viewBookingcheckout.Name = "viewBookingcheckout";
+            this.viewBookingcheckout.OptionsFind.AlwaysVisible = true;
             this.viewBookingcheckout.OptionsView.EnableAppearanceEvenRow = true;
             this.viewBookingcheckout.OptionsView.ShowGroupPanel = false;
             this.viewBookingcheckout.RowHeight = 25;
@@ -180,7 +180,7 @@
             this.btnViewdetail.Appearance.Options.UseImage = true;
             this.btnViewdetail.AutoHeight = false;
             this.btnViewdetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnViewdetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnViewdetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnViewdetail.Name = "btnViewdetail";
             this.btnViewdetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnViewdetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnViewdetail_ButtonClick);
@@ -204,7 +204,7 @@
     "):[0-5]\\d";
             this.dtpCheckTime.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckTime.Size = new System.Drawing.Size(194, 20);
-            this.dtpCheckTime.TabIndex = 1;
+            this.dtpCheckTime.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -220,11 +220,10 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 412);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -233,12 +232,13 @@
             this.tableLayoutPanel2.Controls.Add(this.dtpCheckTime, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(778, 35);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnSearch
             // 
@@ -249,7 +249,7 @@
             this.btnSearch.Location = new System.Drawing.Point(482, 6);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(90, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -260,7 +260,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(249, 22);
-            this.labelControl1.TabIndex = 4;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Kiểm tra phòng chuẩn bị checkout : ";
             // 
             // frmTsk_CheckOutExpire

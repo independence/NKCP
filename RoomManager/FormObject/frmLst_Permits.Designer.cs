@@ -101,6 +101,8 @@
             this.gridColumn9});
             this.grvPermits.GridControl = this.dgvPermits;
             this.grvPermits.Name = "grvPermits";
+            this.grvPermits.OptionsFind.AlwaysVisible = true;
+            this.grvPermits.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 

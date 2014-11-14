@@ -141,23 +141,6 @@ namespace RoomManager
                                     MessageBox.Show("Mã phòng này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 break;
-                            case 3:
-                                Rooms a3 = aListRoomTemp.Find(p => p.Sku == txtSku.Text & p.IDLang == 3);
-                                if (a3 == null)
-                                {
-                                    aRoom.CostRef = String.IsNullOrEmpty(txtCostRef1.Text) == true ? 0 : Decimal.Parse(txtCostRef1.Text);
-                                    aRoom.CostUnit = txtCostUnit3.Text;
-                                    aRoom.IDLang = 3;
-                                    aRoom.Info = txtInfo3.Text;
-                                    aRoom.Intro = txtIntro3.Text;
-                                    aRoom.Code = b;
-                                    aRoomsBO.Insert(aRoom);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Mã phòng này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                break;
 
                         }
 

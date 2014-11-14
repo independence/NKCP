@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 512);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -109,7 +109,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1178, 388);
-            this.tableLayoutPanel2.TabIndex = 52;
+            this.tableLayoutPanel2.TabIndex = 10;
             // 
             // dgvAvailableFoods
             // 
@@ -120,7 +120,7 @@
             this.dgvAvailableFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectFoods});
             this.dgvAvailableFoods.Size = new System.Drawing.Size(571, 382);
-            this.dgvAvailableFoods.TabIndex = 1;
+            this.dgvAvailableFoods.TabIndex = 11;
             this.dgvAvailableFoods.UseEmbeddedNavigator = true;
             this.dgvAvailableFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAvailableFoods});
@@ -251,7 +251,7 @@
             this.dgvSelectFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelectFoods});
             this.dgvSelectFoods.Size = new System.Drawing.Size(572, 382);
-            this.dgvSelectFoods.TabIndex = 0;
+            this.dgvSelectFoods.TabIndex = 12;
             this.dgvSelectFoods.UseEmbeddedNavigator = true;
             this.dgvSelectFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewSelectFoods});
@@ -382,8 +382,8 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 35);
-            this.btnSave.TabIndex = 54;
-            this.btnSave.Text = "Thêm";
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel3
@@ -399,7 +399,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1178, 70);
-            this.tableLayoutPanel3.TabIndex = 55;
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
@@ -415,7 +415,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(583, 64);
-            this.tableLayoutPanel5.TabIndex = 1;
+            this.tableLayoutPanel5.TabIndex = 7;
             // 
             // labelControl3
             // 
@@ -425,7 +425,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(186, 17);
-            this.labelControl3.TabIndex = 1;
+            this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Danh sách thực đơn có sẵn";
             // 
             // lueAvailableMenus
@@ -440,7 +440,7 @@
             this.lueAvailableMenus.Properties.NullText = "";
             this.lueAvailableMenus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lueAvailableMenus.Size = new System.Drawing.Size(357, 20);
-            this.lueAvailableMenus.TabIndex = 2;
+            this.lueAvailableMenus.TabIndex = 9;
             this.lueAvailableMenus.EditValueChanged += new System.EventHandler(this.lueAvailableMenus_EditValueChanged);
             // 
             // tableLayoutPanel4
@@ -459,7 +459,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(583, 64);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.TabIndex = 2;
             // 
             // txtInfo
             // 
@@ -468,7 +468,7 @@
             this.txtInfo.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Size = new System.Drawing.Size(449, 20);
-            this.txtInfo.TabIndex = 3;
+            this.txtInfo.TabIndex = 6;
             // 
             // labelControl1
             // 
@@ -478,7 +478,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(93, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Tên thực đơn";
             // 
             // labelControl2
@@ -489,7 +489,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 16);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Thông tin";
             // 
             // txtMenusName
@@ -499,7 +499,7 @@
             this.txtMenusName.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtMenusName.Name = "txtMenusName";
             this.txtMenusName.Size = new System.Drawing.Size(449, 20);
-            this.txtMenusName.TabIndex = 2;
+            this.txtMenusName.TabIndex = 4;
             // 
             // gridColumn10
             // 

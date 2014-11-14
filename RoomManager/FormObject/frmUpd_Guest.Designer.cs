@@ -66,7 +66,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(313, 319);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // sbCreate
             // 
@@ -79,7 +79,7 @@
             this.sbCreate.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.sbCreate.Name = "sbCreate";
             this.sbCreate.Size = new System.Drawing.Size(100, 25);
-            this.sbCreate.TabIndex = 4;
+            this.sbCreate.TabIndex = 14;
             this.sbCreate.Text = "Cập nhật";
             this.sbCreate.Click += new System.EventHandler(this.sbCreate_Click);
             // 
@@ -112,7 +112,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(307, 271);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblID
             // 
@@ -122,7 +122,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(55, 3, 3, 3);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 16);
-            this.lblID.TabIndex = 11;
+            this.lblID.TabIndex = 3;
             this.lblID.Text = "---";
             // 
             // txtGroupName
@@ -134,7 +134,7 @@
             this.txtGroupName.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGroupName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtGroupName.Size = new System.Drawing.Size(191, 20);
-            this.txtGroupName.TabIndex = 8;
+            this.txtGroupName.TabIndex = 11;
             // 
             // labelControl5
             // 
@@ -144,7 +144,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(28, 17);
-            this.labelControl5.TabIndex = 4;
+            this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "Loại";
             // 
             // labelControl3
@@ -155,7 +155,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 17);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Quốc tịch";
             // 
             // labelControl1
@@ -166,7 +166,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(23, 16);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Tên";
             // 
             // labelControl4
@@ -177,7 +177,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(62, 16);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Tên nhóm";
             // 
             // labelControl2
@@ -188,7 +188,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 16);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Thông tin";
             // 
             // txtName
@@ -216,7 +216,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Quốc gia")});
             this.lueNationality.Properties.NullText = "";
             this.lueNationality.Size = new System.Drawing.Size(191, 20);
-            this.lueNationality.TabIndex = 6;
+            this.lueNationality.TabIndex = 7;
             // 
             // cbbType
             // 
@@ -235,7 +235,7 @@
             "3",
             "4"});
             this.cbbType.Size = new System.Drawing.Size(191, 20);
-            this.cbbType.TabIndex = 7;
+            this.cbbType.TabIndex = 9;
             // 
             // txtInfo
             // 
@@ -243,7 +243,7 @@
             this.txtInfo.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Size = new System.Drawing.Size(191, 40);
-            this.txtInfo.TabIndex = 9;
+            this.txtInfo.TabIndex = 13;
             this.txtInfo.UseOptimizedRendering = true;
             // 
             // labelControl6
@@ -254,7 +254,7 @@
             this.labelControl6.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(91, 17);
-            this.labelControl6.TabIndex = 10;
+            this.labelControl6.TabIndex = 2;
             this.labelControl6.Text = "ID khách mời";
             // 
             // frmUpd_Guests

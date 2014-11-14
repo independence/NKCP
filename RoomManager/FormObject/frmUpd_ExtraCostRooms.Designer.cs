@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(336, 271);
-            this.tableLayoutPanel1.TabIndex = 4;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
@@ -97,7 +97,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(336, 214);
-            this.tableLayoutPanel4.TabIndex = 10;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelControl13
             // 
@@ -107,7 +107,7 @@
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl13.Size = new System.Drawing.Size(77, 16);
-            this.labelControl13.TabIndex = 0;
+            this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "Tên phòng";
             // 
             // txtSku
@@ -119,7 +119,7 @@
             this.txtSku.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSku.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSku.Size = new System.Drawing.Size(155, 20);
-            this.txtSku.TabIndex = 4;
+            this.txtSku.TabIndex = 3;
             // 
             // labelControl8
             // 
@@ -129,7 +129,7 @@
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl8.Size = new System.Drawing.Size(67, 17);
-            this.labelControl8.TabIndex = 0;
+            this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "Số tiền ";
             // 
             // labelControl1
@@ -140,7 +140,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(90, 17);
-            this.labelControl1.TabIndex = 9;
+            this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Số người ở";
             // 
             // labelControl16
@@ -151,7 +151,7 @@
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl16.Size = new System.Drawing.Size(83, 17);
-            this.labelControl16.TabIndex = 0;
+            this.labelControl16.TabIndex = 6;
             this.labelControl16.Text = "Loại khách";
             // 
             // txtExtraCost
@@ -170,7 +170,7 @@
             this.txtExtraCost.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtExtraCost.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtExtraCost.Size = new System.Drawing.Size(155, 20);
-            this.txtExtraCost.TabIndex = 25;
+            this.txtExtraCost.TabIndex = 11;
             // 
             // txtNumberPepole
             // 
@@ -184,7 +184,7 @@
             this.txtNumberPepole.Properties.NullValuePrompt = "Chỉ nhập số .";
             this.txtNumberPepole.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtNumberPepole.Size = new System.Drawing.Size(155, 20);
-            this.txtNumberPepole.TabIndex = 4;
+            this.txtNumberPepole.TabIndex = 9;
             // 
             // lueCustomerType
             // 
@@ -202,7 +202,7 @@
             this.lueCustomerType.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCustomerType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lueCustomerType.Size = new System.Drawing.Size(155, 20);
-            this.lueCustomerType.TabIndex = 24;
+            this.lueCustomerType.TabIndex = 7;
             // 
             // labelControl2
             // 
@@ -212,7 +212,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl2.Size = new System.Drawing.Size(111, 17);
-            this.labelControl2.TabIndex = 26;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Loại giá phòng";
             // 
             // cbbPriceType
@@ -229,7 +229,7 @@
             "G2",
             "G3"});
             this.cbbPriceType.Size = new System.Drawing.Size(155, 20);
-            this.cbbPriceType.TabIndex = 27;
+            this.cbbPriceType.TabIndex = 5;
             // 
             // tableLayoutPanel3
             // 
@@ -245,7 +245,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(336, 39);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.tableLayoutPanel3.TabIndex = 12;
             // 
             // btnSave
             // 
@@ -257,7 +257,7 @@
             this.btnSave.Location = new System.Drawing.Point(137, 6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 27);
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
