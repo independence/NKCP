@@ -87,6 +87,10 @@ namespace DataAccess
         public DbSet<vw__SearchCustomer__Companies_CustomerGroups_Customers> vw__SearchCustomer__Companies_CustomerGroups_Customers { get; set; }
         public DbSet<vw__ServicesInfo__Services_ServiceGroups> vw__ServicesInfo__Services_ServiceGroups { get; set; }
         public DbSet<vw__SystemUsersInfo__SystemUsers_Divisions> vw__SystemUsersInfo__SystemUsers_Divisions { get; set; }
+        public DbSet<vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups> vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups { get; set; }
+        public DbSet<vw_QueryDataPayment> vw_QueryDataPayment { get; set; }
+        public DbSet<vw_Support1_DataPayment> vw_Support1_DataPayment { get; set; }
+        public DbSet<vw_Support2_DataPayment> vw_Support2_DataPayment { get; set; }
     
         [EdmFunction("DatabaseDA", "Get_Status_Room_In_Date")]
         public virtual IQueryable<Get_Status_Room_In_Date_Result> Get_Status_Room_In_Date(Nullable<System.DateTime> checkDate)
@@ -302,6 +306,11 @@ namespace DataAccess
                 new ObjectParameter("IDDivision", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SystemUsers_GetCurrentNotInDivision_Result>("sp_SystemUsers_GetCurrentNotInDivision", iDDivisionParameter);
+        }
+    
+        public virtual ObjectResult<sp_PaymentExt_GetAllData_Result> sp_PaymentExt_GetAllData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_Result>("sp_PaymentExt_GetAllData");
         }
     }
 }

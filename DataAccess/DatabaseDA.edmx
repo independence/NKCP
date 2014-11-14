@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Companies" EntityType="Model.Store.Companies" store:Type="Tables" Schema="com" />
           <EntitySet Name="Configs" EntityType="Model.Store.Configs" store:Type="Tables" Schema="com" />
@@ -53,6 +53,38 @@
           <EntitySet Name="ExtraCosts" EntityType="Model.Store.ExtraCosts" store:Type="Tables" Schema="rom" />
           <EntitySet Name="Payment" EntityType="Model.Store.Payment" store:Type="Tables" Schema="rom" />
           <EntitySet Name="Rooms" EntityType="Model.Store.Rooms" store:Type="Tables" Schema="rom" />
+          <EntitySet Name="vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups" EntityType="Model.Store.vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups" store:Type="Views" store:Schema="dbo" store:Name="vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups">
+            <DefiningQuery>SELECT 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_IDBookingH] AS [BookingHalls_IDBookingH], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_IDBookingHall] AS [BookingHalls_Services_IDBookingHall], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[ServiceGroups_ID] AS [ServiceGroups_ID], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_ID] AS [Services_ID], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_ID] AS [BookingHalls_Services_ID], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_Name] AS [Services_Name], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_CostRef] AS [Services_CostRef], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_Unit] AS [Services_Unit], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_Status] AS [Services_Status], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_Type] AS [Services_Type], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[Services_Disable] AS [Services_Disable], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[ServiceGroups_Name] AS [ServiceGroups_Name], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[ServiceGroups_Type] AS [ServiceGroups_Type], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[ServiceGroups_Disable] AS [ServiceGroups_Disable], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Info] AS [BookingHalls_Services_Info], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Type] AS [BookingHalls_Services_Type], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Status] AS [BookingHalls_Services_Status], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Disable] AS [BookingHalls_Services_Disable], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Cost] AS [BookingHalls_Services_Cost], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Date] AS [BookingHalls_Services_Date], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_PercentTax] AS [BookingHalls_Services_PercentTax], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Quantity] AS [BookingHalls_Services_Quantity], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_CostRef_Services] AS [BookingHalls_Services_CostRef_Services], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_CodeHall] AS [BookingHalls_CodeHall], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_IndexSubPayment] AS [BookingHalls_Services_IndexSubPayment], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_InvoiceDate] AS [BookingHalls_Services_InvoiceDate], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_InvoiceNumber] AS [BookingHalls_Services_InvoiceNumber], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_AcceptDate] AS [BookingHalls_Services_AcceptDate]
+      FROM [dbo].[vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups] AS [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers" EntityType="Model.Store.vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers" store:Type="Views" store:Schema="dbo" store:Name="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers">
             <DefiningQuery>SELECT 
       [vw_[BookingHInfo]]_BookingHs_Customers_Companies_SystemUsers].[BookingHs_ID] AS [BookingHs_ID], 
@@ -244,7 +276,11 @@
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_PercentTax] AS [BookingRooms_Services_PercentTax], 
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_Quantity] AS [BookingRooms_Services_Quantity], 
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_CostRef_Services] AS [BookingRooms_Services_CostRef_Services], 
-      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_CodeRoom] AS [BookingRooms_CodeRoom]
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_CodeRoom] AS [BookingRooms_CodeRoom], 
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_IndexSubPayment] AS [BookingRooms_Services_IndexSubPayment], 
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_InvoiceDate] AS [BookingRooms_Services_InvoiceDate], 
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_InvoiceNumber] AS [BookingRooms_Services_InvoiceNumber], 
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_AcceptDate] AS [BookingRooms_Services_AcceptDate]
       FROM [dbo].[vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups] AS [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_[CertificatesInfo]_SystemUsers_Certificates" EntityType="Model.Store.vw_[CertificatesInfo]_SystemUsers_Certificates" store:Type="Views" store:Schema="dbo" store:Name="vw_[CertificatesInfo]_SystemUsers_Certificates">
@@ -497,6 +533,192 @@
       [vw_[SystemUsersInfo]]_SystemUsers_Divisions].[SystemUsers_PlaceOfIssue3] AS [SystemUsers_PlaceOfIssue3], 
       [vw_[SystemUsersInfo]]_SystemUsers_Divisions].[SystemUsers_Phone] AS [SystemUsers_Phone]
       FROM [dbo].[vw_[SystemUsersInfo]]_SystemUsers_Divisions] AS [vw_[SystemUsersInfo]]_SystemUsers_Divisions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_QueryDataPayment" EntityType="Model.Store.vw_QueryDataPayment" store:Type="Views" store:Schema="dbo" store:Name="vw_QueryDataPayment">
+            <DefiningQuery>SELECT 
+      [vw_QueryDataPayment].[BookingRs_ID] AS [BookingRs_ID], 
+      [vw_QueryDataPayment].[BookingRooms_ID] AS [BookingRooms_ID], 
+      [vw_QueryDataPayment].[BookingHalls_ID] AS [BookingHalls_ID], 
+      [vw_QueryDataPayment].[BookingHs_ID] AS [BookingHs_ID], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Status] AS [BookingRooms_Services_Status], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Status] AS [BookingHalls_Services_Status], 
+      [vw_QueryDataPayment].[BookingRooms_Services_IDService] AS [BookingRooms_Services_IDService], 
+      [vw_QueryDataPayment].[Services_Name_Room] AS [Services_Name_Room], 
+      [vw_QueryDataPayment].[BookingHalls_Services_IDService] AS [BookingHalls_Services_IDService], 
+      [vw_QueryDataPayment].[Services_Name_Hall] AS [Services_Name_Hall], 
+      [vw_QueryDataPayment].[BookingHs_CreatedDate] AS [BookingHs_CreatedDate], 
+      [vw_QueryDataPayment].[BookingRs_CreatedDate] AS [BookingRs_CreatedDate], 
+      [vw_QueryDataPayment].[Services_IDServiceGroups_Room] AS [Services_IDServiceGroups_Room], 
+      [vw_QueryDataPayment].[Services_Type_Room] AS [Services_Type_Room], 
+      [vw_QueryDataPayment].[Services_Type_Hall] AS [Services_Type_Hall], 
+      [vw_QueryDataPayment].[Services_IDServiceGroups_Hall] AS [Services_IDServiceGroups_Hall], 
+      [vw_QueryDataPayment].[Rooms_Sku] AS [Rooms_Sku], 
+      [vw_QueryDataPayment].[Rooms_IDLang] AS [Rooms_IDLang], 
+      [vw_QueryDataPayment].[Halls_IDLang] AS [Halls_IDLang], 
+      [vw_QueryDataPayment].[Halls_Sku] AS [Halls_Sku], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Cost] AS [BookingRooms_Services_Cost], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Date] AS [BookingRooms_Services_Date], 
+      [vw_QueryDataPayment].[BookingRooms_Services_PercentTax] AS [BookingRooms_Services_PercentTax], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Quantity] AS [BookingRooms_Services_Quantity], 
+      [vw_QueryDataPayment].[BookingRooms_Services_IndexSubPayment] AS [BookingRooms_Services_IndexSubPayment], 
+      [vw_QueryDataPayment].[BookingRooms_Services_InvoiceDate] AS [BookingRooms_Services_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingRooms_Services_InvoiceNumber] AS [BookingRooms_Services_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingRooms_Services_AcceptDate] AS [BookingRooms_Services_AcceptDate], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Disable] AS [BookingRooms_Services_Disable], 
+      [vw_QueryDataPayment].[BookingHalls_Services_InvoiceDate] AS [BookingHalls_Services_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingHalls_Services_AcceptDate] AS [BookingHalls_Services_AcceptDate], 
+      [vw_QueryDataPayment].[BookingHalls_Services_InvoiceNumber] AS [BookingHalls_Services_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingHalls_Services_IndexSubPayment] AS [BookingHalls_Services_IndexSubPayment], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Quantity] AS [BookingHalls_Services_Quantity], 
+      [vw_QueryDataPayment].[BookingHalls_Services_PercentTax] AS [BookingHalls_Services_PercentTax], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Date] AS [BookingHalls_Services_Date], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Cost] AS [BookingHalls_Services_Cost], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Disable] AS [BookingHalls_Services_Disable], 
+      [vw_QueryDataPayment].[BookingHalls_Services_Type] AS [BookingHalls_Services_Type], 
+      [vw_QueryDataPayment].[BookingHalls_Services_ID] AS [BookingHalls_Services_ID], 
+      [vw_QueryDataPayment].[BookingRooms_AcceptDate] AS [BookingRooms_AcceptDate], 
+      [vw_QueryDataPayment].[BookingRooms_InvoiceNumber] AS [BookingRooms_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingRooms_Services_Type] AS [BookingRooms_Services_Type], 
+      [vw_QueryDataPayment].[BookingRooms_InvoiceDate] AS [BookingRooms_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingHalls_Status] AS [BookingHalls_Status], 
+      [vw_QueryDataPayment].[BookingHalls_InvoiceDate] AS [BookingHalls_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingHalls_InvoiceNumber] AS [BookingHalls_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingHalls_AcceptDate] AS [BookingHalls_AcceptDate], 
+      [vw_QueryDataPayment].[BookingHalls_IndexSubPayment] AS [BookingHalls_IndexSubPayment], 
+      [vw_QueryDataPayment].[BookingRs_IDCustomer] AS [BookingRs_IDCustomer], 
+      [vw_QueryDataPayment].[BookingRs_InvoiceNumber] AS [BookingRs_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingRs_InvoiceDate] AS [BookingRs_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingRs_AcceptDate] AS [BookingRs_AcceptDate], 
+      [vw_QueryDataPayment].[BookingRooms_CheckInActual] AS [BookingRooms_CheckInActual], 
+      [vw_QueryDataPayment].[BookingRooms_CheckOutActual] AS [BookingRooms_CheckOutActual], 
+      [vw_QueryDataPayment].[BookingRooms_Status] AS [BookingRooms_Status], 
+      [vw_QueryDataPayment].[BookingRooms_IndexSubPayment] AS [BookingRooms_IndexSubPayment], 
+      [vw_QueryDataPayment].[BookingHs_InvoiceNumber] AS [BookingHs_InvoiceNumber], 
+      [vw_QueryDataPayment].[BookingHs_InvoiceDate] AS [BookingHs_InvoiceDate], 
+      [vw_QueryDataPayment].[BookingHs_AcceptDate] AS [BookingHs_AcceptDate], 
+      [vw_QueryDataPayment].[BookingRs_Status] AS [BookingRs_Status], 
+      [vw_QueryDataPayment].[BookingHs_Status] AS [BookingHs_Status], 
+      [vw_QueryDataPayment].[BookingRs_PayMenthod] AS [BookingRs_PayMenthod], 
+      [vw_QueryDataPayment].[BookingHalls_Date] AS [BookingHalls_Date], 
+      [vw_QueryDataPayment].[BookingHalls_LunarDate] AS [BookingHalls_LunarDate]
+      FROM [dbo].[vw_QueryDataPayment] AS [vw_QueryDataPayment]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_Support1_DataPayment" EntityType="Model.Store.vw_Support1_DataPayment" store:Type="Views" store:Schema="dbo" store:Name="vw_Support1_DataPayment">
+            <DefiningQuery>SELECT 
+      [vw_Support1_DataPayment].[BookingRs_ID] AS [BookingRs_ID], 
+      [vw_Support1_DataPayment].[BookingRooms_ID] AS [BookingRooms_ID], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_IDService] AS [BookingRooms_Services_IDService], 
+      [vw_Support1_DataPayment].[BookingRs_CreatedDate] AS [BookingRs_CreatedDate], 
+      [vw_Support1_DataPayment].[BookingRs_CustomerType] AS [BookingRs_CustomerType], 
+      [vw_Support1_DataPayment].[BookingRs_BookingType] AS [BookingRs_BookingType], 
+      [vw_Support1_DataPayment].[BookingRs_IDCustomer] AS [BookingRs_IDCustomer], 
+      [vw_Support1_DataPayment].[BookingRs_IDSystemUser] AS [BookingRs_IDSystemUser], 
+      [vw_Support1_DataPayment].[BookingRs_PayMenthod] AS [BookingRs_PayMenthod], 
+      [vw_Support1_DataPayment].[BookingRs_StatusPay] AS [BookingRs_StatusPay], 
+      [vw_Support1_DataPayment].[BookingRs_BookingMoney] AS [BookingRs_BookingMoney], 
+      [vw_Support1_DataPayment].[BookingRs_Status] AS [BookingRs_Status], 
+      [vw_Support1_DataPayment].[BookingRs_Type] AS [BookingRs_Type], 
+      [vw_Support1_DataPayment].[BookingRs_Disable] AS [BookingRs_Disable], 
+      [vw_Support1_DataPayment].[BookingRs_Level] AS [BookingRs_Level], 
+      [vw_Support1_DataPayment].[BookingRs_Subject] AS [BookingRs_Subject], 
+      [vw_Support1_DataPayment].[BookingRs_DatePay] AS [BookingRs_DatePay], 
+      [vw_Support1_DataPayment].[BookingRs_DateEdit] AS [BookingRs_DateEdit], 
+      [vw_Support1_DataPayment].[BookingRs_IDCustomerGroup] AS [BookingRs_IDCustomerGroup], 
+      [vw_Support1_DataPayment].[BookingRs_InvoiceNumber] AS [BookingRs_InvoiceNumber], 
+      [vw_Support1_DataPayment].[BookingRs_InvoiceDate] AS [BookingRs_InvoiceDate], 
+      [vw_Support1_DataPayment].[BookingRs_AcceptDate] AS [BookingRs_AcceptDate], 
+      [vw_Support1_DataPayment].[BookingRooms_CodeRoom] AS [BookingRooms_CodeRoom], 
+      [vw_Support1_DataPayment].[BookingRooms_Cost] AS [BookingRooms_Cost], 
+      [vw_Support1_DataPayment].[BookingRooms_PercentTax] AS [BookingRooms_PercentTax], 
+      [vw_Support1_DataPayment].[BookingRooms_CheckInPlan] AS [BookingRooms_CheckInPlan], 
+      [vw_Support1_DataPayment].[BookingRooms_CheckInActual] AS [BookingRooms_CheckInActual], 
+      [vw_Support1_DataPayment].[BookingRooms_CheckOutPlan] AS [BookingRooms_CheckOutPlan], 
+      [vw_Support1_DataPayment].[BookingRooms_CheckOutActual] AS [BookingRooms_CheckOutActual], 
+      [vw_Support1_DataPayment].[BookingRooms_BookingStatus] AS [BookingRooms_BookingStatus], 
+      [vw_Support1_DataPayment].[BookingRooms_Status] AS [BookingRooms_Status], 
+      [vw_Support1_DataPayment].[BookingRooms_CostPendingRoom] AS [BookingRooms_CostPendingRoom], 
+      [vw_Support1_DataPayment].[BookingRooms_TimeInUse] AS [BookingRooms_TimeInUse], 
+      [vw_Support1_DataPayment].[BookingRooms_Type] AS [BookingRooms_Type], 
+      [vw_Support1_DataPayment].[BookingRooms_Disable] AS [BookingRooms_Disable], 
+      [vw_Support1_DataPayment].[BookingRooms_IndexSubPayment] AS [BookingRooms_IndexSubPayment], 
+      [vw_Support1_DataPayment].[BookingRooms_PriceType] AS [BookingRooms_PriceType], 
+      [vw_Support1_DataPayment].[BookingRooms_AddTimeStart] AS [BookingRooms_AddTimeStart], 
+      [vw_Support1_DataPayment].[BookingRooms_AddTimeEnd] AS [BookingRooms_AddTimeEnd], 
+      [vw_Support1_DataPayment].[BookingRooms_AcceptDate] AS [BookingRooms_AcceptDate], 
+      [vw_Support1_DataPayment].[BookingRooms_InvoiceNumber] AS [BookingRooms_InvoiceNumber], 
+      [vw_Support1_DataPayment].[BookingRooms_InvoiceDate] AS [BookingRooms_InvoiceDate], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Type] AS [BookingRooms_Services_Type], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Status] AS [BookingRooms_Services_Status], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Disable] AS [BookingRooms_Services_Disable], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Cost] AS [BookingRooms_Services_Cost], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Date] AS [BookingRooms_Services_Date], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_PercentTax] AS [BookingRooms_Services_PercentTax], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Quantity] AS [BookingRooms_Services_Quantity], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_IndexSubPayment] AS [BookingRooms_Services_IndexSubPayment], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_InvoiceDate] AS [BookingRooms_Services_InvoiceDate], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_InvoiceNumber] AS [BookingRooms_Services_InvoiceNumber], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_AcceptDate] AS [BookingRooms_Services_AcceptDate], 
+      [vw_Support1_DataPayment].[Services_Name_Room] AS [Services_Name_Room], 
+      [vw_Support1_DataPayment].[Services_IDServiceGroups_Room] AS [Services_IDServiceGroups_Room], 
+      [vw_Support1_DataPayment].[Services_Type_Room] AS [Services_Type_Room], 
+      [vw_Support1_DataPayment].[Rooms_IDLang] AS [Rooms_IDLang], 
+      [vw_Support1_DataPayment].[Rooms_Sku] AS [Rooms_Sku]
+      FROM [dbo].[vw_Support1_DataPayment] AS [vw_Support1_DataPayment]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_Support2_DataPayment" EntityType="Model.Store.vw_Support2_DataPayment" store:Type="Views" store:Schema="dbo" store:Name="vw_Support2_DataPayment">
+            <DefiningQuery>SELECT 
+      [vw_Support2_DataPayment].[BookingHs_ID] AS [BookingHs_ID], 
+      [vw_Support2_DataPayment].[BookingHs_CreatedDate] AS [BookingHs_CreatedDate], 
+      [vw_Support2_DataPayment].[BookingHs_CustomerType] AS [BookingHs_CustomerType], 
+      [vw_Support2_DataPayment].[BookingHs_BookingType] AS [BookingHs_BookingType], 
+      [vw_Support2_DataPayment].[BookingHs_PayMenthod] AS [BookingHs_PayMenthod], 
+      [vw_Support2_DataPayment].[BookingHs_StatusPay] AS [BookingHs_StatusPay], 
+      [vw_Support2_DataPayment].[BookingHs_BookingMoney] AS [BookingHs_BookingMoney], 
+      [vw_Support2_DataPayment].[BookingHs_Status] AS [BookingHs_Status], 
+      [vw_Support2_DataPayment].[BookingHs_Type] AS [BookingHs_Type], 
+      [vw_Support2_DataPayment].[BookingHs_Disable] AS [BookingHs_Disable], 
+      [vw_Support2_DataPayment].[BookingHs_Level] AS [BookingHs_Level], 
+      [vw_Support2_DataPayment].[BookingHs_Subject] AS [BookingHs_Subject], 
+      [vw_Support2_DataPayment].[BookingHs_IDCustomer] AS [BookingHs_IDCustomer], 
+      [vw_Support2_DataPayment].[BookingHs_IDCustomerGroup] AS [BookingHs_IDCustomerGroup], 
+      [vw_Support2_DataPayment].[BookingHs_DatePay] AS [BookingHs_DatePay], 
+      [vw_Support2_DataPayment].[BookingHs_InvoiceNumber] AS [BookingHs_InvoiceNumber], 
+      [vw_Support2_DataPayment].[BookingHs_InvoiceDate] AS [BookingHs_InvoiceDate], 
+      [vw_Support2_DataPayment].[BookingHs_AcceptDate] AS [BookingHs_AcceptDate], 
+      [vw_Support2_DataPayment].[BookingHalls_ID] AS [BookingHalls_ID], 
+      [vw_Support2_DataPayment].[BookingHalls_CodeHall] AS [BookingHalls_CodeHall], 
+      [vw_Support2_DataPayment].[BookingHalls_Cost] AS [BookingHalls_Cost], 
+      [vw_Support2_DataPayment].[BookingHalls_PercentTax] AS [BookingHalls_PercentTax], 
+      [vw_Support2_DataPayment].[BookingHalls_Date] AS [BookingHalls_Date], 
+      [vw_Support2_DataPayment].[BookingHalls_LunarDate] AS [BookingHalls_LunarDate], 
+      [vw_Support2_DataPayment].[BookingHalls_BookingStatus] AS [BookingHalls_BookingStatus], 
+      [vw_Support2_DataPayment].[BookingHalls_StartTime] AS [BookingHalls_StartTime], 
+      [vw_Support2_DataPayment].[BookingHalls_EndTime] AS [BookingHalls_EndTime], 
+      [vw_Support2_DataPayment].[BookingHalls_IndexSubPayment] AS [BookingHalls_IndexSubPayment], 
+      [vw_Support2_DataPayment].[BookingHalls_InvoiceDate] AS [BookingHalls_InvoiceDate], 
+      [vw_Support2_DataPayment].[BookingHalls_InvoiceNumber] AS [BookingHalls_InvoiceNumber], 
+      [vw_Support2_DataPayment].[BookingHalls_AcceptDate] AS [BookingHalls_AcceptDate], 
+      [vw_Support2_DataPayment].[BookingHalls_Status] AS [BookingHalls_Status], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_ID] AS [BookingHalls_Services_ID], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Type] AS [BookingHalls_Services_Type], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Status] AS [BookingHalls_Services_Status], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Disable] AS [BookingHalls_Services_Disable], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_IDService] AS [BookingHalls_Services_IDService], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Cost] AS [BookingHalls_Services_Cost], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Date] AS [BookingHalls_Services_Date], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_PercentTax] AS [BookingHalls_Services_PercentTax], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Quantity] AS [BookingHalls_Services_Quantity], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_IndexSubPayment] AS [BookingHalls_Services_IndexSubPayment], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_AcceptDate] AS [BookingHalls_Services_AcceptDate], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_InvoiceNumber] AS [BookingHalls_Services_InvoiceNumber], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_InvoiceDate] AS [BookingHalls_Services_InvoiceDate], 
+      [vw_Support2_DataPayment].[Services_Name_Hall] AS [Services_Name_Hall], 
+      [vw_Support2_DataPayment].[Services_Status_Hall] AS [Services_Status_Hall], 
+      [vw_Support2_DataPayment].[Services_Type_Hall] AS [Services_Type_Hall], 
+      [vw_Support2_DataPayment].[Services_IDServiceGroups_Hall] AS [Services_IDServiceGroups_Hall], 
+      [vw_Support2_DataPayment].[Halls_Sku] AS [Halls_Sku], 
+      [vw_Support2_DataPayment].[Halls_IDLang] AS [Halls_IDLang]
+      FROM [dbo].[vw_Support2_DataPayment] AS [vw_Support2_DataPayment]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
         <EntityType Name="Companies">
@@ -1369,6 +1591,46 @@
           <Property Name="IDLang" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
+      warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups">
+          <Key>
+            <PropertyRef Name="BookingHalls_IDBookingH" />
+            <PropertyRef Name="BookingHalls_Services_IDBookingHall" />
+            <PropertyRef Name="ServiceGroups_ID" />
+            <PropertyRef Name="Services_ID" />
+            <PropertyRef Name="BookingHalls_Services_ID" />
+          </Key>
+          <Property Name="BookingHalls_IDBookingH" Type="int" Nullable="false" />
+          <Property Name="BookingHalls_Services_IDBookingHall" Type="int" Nullable="false" />
+          <Property Name="ServiceGroups_ID" Type="int" Nullable="false" />
+          <Property Name="Services_ID" Type="int" Nullable="false" />
+          <Property Name="BookingHalls_Services_ID" Type="int" Nullable="false" />
+          <Property Name="Services_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Services_CostRef" Type="money" />
+          <Property Name="Services_Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Services_Status" Type="int" />
+          <Property Name="Services_Type" Type="int" />
+          <Property Name="Services_Disable" Type="bit" />
+          <Property Name="ServiceGroups_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="ServiceGroups_Type" Type="int" />
+          <Property Name="ServiceGroups_Disable" Type="bit" />
+          <Property Name="BookingHalls_Services_Info" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingHalls_Services_Type" Type="int" />
+          <Property Name="BookingHalls_Services_Status" Type="int" />
+          <Property Name="BookingHalls_Services_Disable" Type="bit" />
+          <Property Name="BookingHalls_Services_Cost" Type="money" />
+          <Property Name="BookingHalls_Services_Date" Type="datetime" />
+          <Property Name="BookingHalls_Services_PercentTax" Type="float" />
+          <Property Name="BookingHalls_Services_Quantity" Type="float" />
+          <Property Name="BookingHalls_Services_CostRef_Services" Type="money" />
+          <Property Name="BookingHalls_CodeHall" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingHalls_Services_InvoiceDate" Type="datetime" />
+          <Property Name="BookingHalls_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_Services_AcceptDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers">
@@ -1613,6 +1875,10 @@
           <Property Name="BookingRooms_Services_Quantity" Type="float" />
           <Property Name="BookingRooms_Services_CostRef_Services" Type="money" />
           <Property Name="BookingRooms_CodeRoom" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingRooms_Services_InvoiceDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_AcceptDate" Type="datetime" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[CertificatesInfo]_SystemUsers_Certificates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1921,6 +2187,222 @@
           <Property Name="SystemUsers_PlaceOfIssue3" Type="nvarchar" MaxLength="50" />
           <Property Name="SystemUsers_Phone" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_QueryDataPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_QueryDataPayment">
+          <Key>
+            <PropertyRef Name="BookingRs_ID" />
+            <PropertyRef Name="BookingRooms_ID" />
+            <PropertyRef Name="BookingRs_IDCustomer" />
+            <PropertyRef Name="BookingRooms_CheckInActual" />
+            <PropertyRef Name="BookingRooms_CheckOutActual" />
+          </Key>
+          <Property Name="BookingRs_ID" Type="int" Nullable="false" />
+          <Property Name="BookingRooms_ID" Type="int" Nullable="false" />
+          <Property Name="BookingHalls_ID" Type="int" />
+          <Property Name="BookingHs_ID" Type="int" />
+          <Property Name="BookingRooms_Services_Status" Type="int" />
+          <Property Name="BookingHalls_Services_Status" Type="int" />
+          <Property Name="BookingRooms_Services_IDService" Type="int" />
+          <Property Name="Services_Name_Room" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingHalls_Services_IDService" Type="int" />
+          <Property Name="Services_Name_Hall" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingHs_CreatedDate" Type="datetime" />
+          <Property Name="BookingRs_CreatedDate" Type="datetime" />
+          <Property Name="Services_IDServiceGroups_Room" Type="int" />
+          <Property Name="Services_Type_Room" Type="int" />
+          <Property Name="Services_Type_Hall" Type="int" />
+          <Property Name="Services_IDServiceGroups_Hall" Type="int" />
+          <Property Name="Rooms_Sku" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rooms_IDLang" Type="int" />
+          <Property Name="Halls_IDLang" Type="int" />
+          <Property Name="Halls_Sku" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_Cost" Type="money" />
+          <Property Name="BookingRooms_Services_Date" Type="datetime" />
+          <Property Name="BookingRooms_Services_PercentTax" Type="float" />
+          <Property Name="BookingRooms_Services_Quantity" Type="float" />
+          <Property Name="BookingRooms_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingRooms_Services_InvoiceDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_Disable" Type="bit" />
+          <Property Name="BookingHalls_Services_InvoiceDate" Type="datetime" />
+          <Property Name="BookingHalls_Services_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingHalls_Services_Quantity" Type="float" />
+          <Property Name="BookingHalls_Services_PercentTax" Type="float" />
+          <Property Name="BookingHalls_Services_Date" Type="datetime" />
+          <Property Name="BookingHalls_Services_Cost" Type="money" />
+          <Property Name="BookingHalls_Services_Disable" Type="bit" />
+          <Property Name="BookingHalls_Services_Type" Type="int" />
+          <Property Name="BookingHalls_Services_ID" Type="int" />
+          <Property Name="BookingRooms_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_Type" Type="int" />
+          <Property Name="BookingRooms_InvoiceDate" Type="datetime" />
+          <Property Name="BookingHalls_Status" Type="int" />
+          <Property Name="BookingHalls_InvoiceDate" Type="datetime" />
+          <Property Name="BookingHalls_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_IndexSubPayment" Type="int" />
+          <Property Name="BookingRs_IDCustomer" Type="int" Nullable="false" />
+          <Property Name="BookingRs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRs_InvoiceDate" Type="date" />
+          <Property Name="BookingRs_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_CheckInActual" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_CheckOutActual" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_Status" Type="int" />
+          <Property Name="BookingRooms_IndexSubPayment" Type="int" />
+          <Property Name="BookingHs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHs_InvoiceDate" Type="date" />
+          <Property Name="BookingHs_AcceptDate" Type="datetime" />
+          <Property Name="BookingRs_Status" Type="int" />
+          <Property Name="BookingHs_Status" Type="int" />
+          <Property Name="BookingRs_PayMenthod" Type="int" />
+          <Property Name="BookingHalls_Date" Type="date" />
+          <Property Name="BookingHalls_LunarDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_Support1_DataPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_Support1_DataPayment">
+          <Key>
+            <PropertyRef Name="BookingRs_ID" />
+            <PropertyRef Name="BookingRooms_ID" />
+            <PropertyRef Name="BookingRs_IDCustomer" />
+            <PropertyRef Name="BookingRs_IDSystemUser" />
+            <PropertyRef Name="BookingRs_Level" />
+            <PropertyRef Name="BookingRs_DatePay" />
+            <PropertyRef Name="BookingRs_DateEdit" />
+            <PropertyRef Name="BookingRs_IDCustomerGroup" />
+            <PropertyRef Name="BookingRooms_CheckInPlan" />
+            <PropertyRef Name="BookingRooms_CheckInActual" />
+            <PropertyRef Name="BookingRooms_CheckOutPlan" />
+            <PropertyRef Name="BookingRooms_CheckOutActual" />
+          </Key>
+          <Property Name="BookingRs_ID" Type="int" Nullable="false" />
+          <Property Name="BookingRooms_ID" Type="int" Nullable="false" />
+          <Property Name="BookingRooms_Services_IDService" Type="int" />
+          <Property Name="BookingRs_CreatedDate" Type="datetime" />
+          <Property Name="BookingRs_CustomerType" Type="int" />
+          <Property Name="BookingRs_BookingType" Type="int" />
+          <Property Name="BookingRs_IDCustomer" Type="int" Nullable="false" />
+          <Property Name="BookingRs_IDSystemUser" Type="int" Nullable="false" />
+          <Property Name="BookingRs_PayMenthod" Type="int" />
+          <Property Name="BookingRs_StatusPay" Type="int" />
+          <Property Name="BookingRs_BookingMoney" Type="money" />
+          <Property Name="BookingRs_Status" Type="int" />
+          <Property Name="BookingRs_Type" Type="int" />
+          <Property Name="BookingRs_Disable" Type="bit" />
+          <Property Name="BookingRs_Level" Type="int" Nullable="false" />
+          <Property Name="BookingRs_Subject" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingRs_DatePay" Type="datetime" Nullable="false" />
+          <Property Name="BookingRs_DateEdit" Type="datetime" Nullable="false" />
+          <Property Name="BookingRs_IDCustomerGroup" Type="int" Nullable="false" />
+          <Property Name="BookingRs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRs_InvoiceDate" Type="date" />
+          <Property Name="BookingRs_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_CodeRoom" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Cost" Type="money" />
+          <Property Name="BookingRooms_PercentTax" Type="float" />
+          <Property Name="BookingRooms_CheckInPlan" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_CheckInActual" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_CheckOutPlan" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_CheckOutActual" Type="datetime" Nullable="false" />
+          <Property Name="BookingRooms_BookingStatus" Type="int" />
+          <Property Name="BookingRooms_Status" Type="int" />
+          <Property Name="BookingRooms_CostPendingRoom" Type="float" />
+          <Property Name="BookingRooms_TimeInUse" Type="decimal" />
+          <Property Name="BookingRooms_Type" Type="int" />
+          <Property Name="BookingRooms_Disable" Type="bit" />
+          <Property Name="BookingRooms_IndexSubPayment" Type="int" />
+          <Property Name="BookingRooms_PriceType" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_AddTimeStart" Type="decimal" />
+          <Property Name="BookingRooms_AddTimeEnd" Type="decimal" />
+          <Property Name="BookingRooms_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_InvoiceDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_Type" Type="int" />
+          <Property Name="BookingRooms_Services_Status" Type="int" />
+          <Property Name="BookingRooms_Services_Disable" Type="bit" />
+          <Property Name="BookingRooms_Services_Cost" Type="money" />
+          <Property Name="BookingRooms_Services_Date" Type="datetime" />
+          <Property Name="BookingRooms_Services_PercentTax" Type="float" />
+          <Property Name="BookingRooms_Services_Quantity" Type="float" />
+          <Property Name="BookingRooms_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingRooms_Services_InvoiceDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRooms_Services_AcceptDate" Type="datetime" />
+          <Property Name="Services_Name_Room" Type="nvarchar" MaxLength="255" />
+          <Property Name="Services_IDServiceGroups_Room" Type="int" />
+          <Property Name="Services_Type_Room" Type="int" />
+          <Property Name="Rooms_IDLang" Type="int" />
+          <Property Name="Rooms_Sku" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_Support2_DataPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_Support2_DataPayment">
+          <Key>
+            <PropertyRef Name="BookingHs_ID" />
+            <PropertyRef Name="BookingHs_IDCustomer" />
+            <PropertyRef Name="BookingHs_IDCustomerGroup" />
+            <PropertyRef Name="BookingHalls_ID" />
+          </Key>
+          <Property Name="BookingHs_ID" Type="int" Nullable="false" />
+          <Property Name="BookingHs_CreatedDate" Type="datetime" />
+          <Property Name="BookingHs_CustomerType" Type="int" />
+          <Property Name="BookingHs_BookingType" Type="int" />
+          <Property Name="BookingHs_PayMenthod" Type="int" />
+          <Property Name="BookingHs_StatusPay" Type="int" />
+          <Property Name="BookingHs_BookingMoney" Type="money" />
+          <Property Name="BookingHs_Status" Type="int" />
+          <Property Name="BookingHs_Type" Type="int" />
+          <Property Name="BookingHs_Disable" Type="bit" />
+          <Property Name="BookingHs_Level" Type="int" />
+          <Property Name="BookingHs_Subject" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingHs_IDCustomer" Type="int" Nullable="false" />
+          <Property Name="BookingHs_IDCustomerGroup" Type="int" Nullable="false" />
+          <Property Name="BookingHs_DatePay" Type="date" />
+          <Property Name="BookingHs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHs_InvoiceDate" Type="date" />
+          <Property Name="BookingHs_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_ID" Type="int" Nullable="false" />
+          <Property Name="BookingHalls_CodeHall" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_Cost" Type="money" />
+          <Property Name="BookingHalls_PercentTax" Type="float" />
+          <Property Name="BookingHalls_Date" Type="date" />
+          <Property Name="BookingHalls_LunarDate" Type="date" />
+          <Property Name="BookingHalls_BookingStatus" Type="int" />
+          <Property Name="BookingHalls_StartTime" Type="time" />
+          <Property Name="BookingHalls_EndTime" Type="time" />
+          <Property Name="BookingHalls_IndexSubPayment" Type="int" />
+          <Property Name="BookingHalls_InvoiceDate" Type="datetime" />
+          <Property Name="BookingHalls_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_Status" Type="int" />
+          <Property Name="BookingHalls_Services_ID" Type="int" />
+          <Property Name="BookingHalls_Services_Type" Type="int" />
+          <Property Name="BookingHalls_Services_Status" Type="int" />
+          <Property Name="BookingHalls_Services_Disable" Type="bit" />
+          <Property Name="BookingHalls_Services_IDService" Type="int" />
+          <Property Name="BookingHalls_Services_Cost" Type="money" />
+          <Property Name="BookingHalls_Services_Date" Type="datetime" />
+          <Property Name="BookingHalls_Services_PercentTax" Type="float" />
+          <Property Name="BookingHalls_Services_Quantity" Type="float" />
+          <Property Name="BookingHalls_Services_IndexSubPayment" Type="int" />
+          <Property Name="BookingHalls_Services_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingHalls_Services_InvoiceDate" Type="datetime" />
+          <Property Name="Services_Name_Hall" Type="nvarchar" MaxLength="255" />
+          <Property Name="Services_Status_Hall" Type="int" />
+          <Property Name="Services_Type_Hall" Type="int" />
+          <Property Name="Services_IDServiceGroups_Hall" Type="int" />
+          <Property Name="Halls_Sku" Type="nvarchar" MaxLength="50" />
+          <Property Name="Halls_IDLang" Type="int" />
+        </EntityType>
         <Function Name="Get_Invoice_Halls_NotTax_ByIDBookingH" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDBookingH" Type="int" Mode="In" />
         </Function>
@@ -2017,6 +2499,7 @@
           <Parameter Name="To" Type="date" Mode="In" />
           <Parameter Name="IsLunarDate" Type="bit" Mode="In" />
         </Function>
+        <Function Name="sp_PaymentExt_GetAllData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDRoom" Type="int" Mode="In" />
           <Parameter Name="Now" Type="datetime" Mode="In" />
@@ -2042,8 +2525,7 @@
         <Function Name="sp_SystemUsers_GetCurrentNotInDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDDivision" Type="int" Mode="In" />
         </Function>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2108,7 +2590,7 @@
           <EntitySet Name="vw__ServicesInfo__Services_ServiceGroups" EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" />
           <EntitySet Name="vw__SystemUsersInfo__SystemUsers_Divisions" EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" />
           <FunctionImport Name="Get_Status_Room_In_Date" ReturnType="Collection(Model.Get_Status_Room_In_Date_Result)" IsComposable="true">
-            <Parameter Name="CheckDate" Type="DateTime" />
+          <Parameter Name="CheckDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_BookingExt_GetAllBooking" ReturnType="Collection(Model.sp_BookingExt_GetAllBooking_Result)">
             <Parameter Name="From" Mode="In" Type="DateTime" />
@@ -2116,11 +2598,11 @@
           </FunctionImport>
           <FunctionImport Name="sp_BookingRooms_CheckConflict_CheckTimeError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_CheckTimeError_Result)" />
           <FunctionImport Name="sp_BookingRooms_CheckConflict_Status678Now" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_Status678Now_Result)">
-            <Parameter Name="Now" Mode="In" Type="DateTime" />
+          <Parameter Name="Now" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_BookingRooms_CheckConflict_StatusError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_StatusError_Result)" />
           <FunctionImport Name="sp_BookingRooms_Select_ByTime" ReturnType="Collection(Model.sp_BookingRooms_Select_ByTime_Result)">
-            <Parameter Name="Time" Mode="In" Type="DateTime" />
+          <Parameter Name="Time" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result)" />
           <FunctionImport Name="sp_BookingRs_CheckConflict_Level_CustomerType" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_Level_CustomerType_Result)" />
@@ -2131,10 +2613,10 @@
             <Parameter Name="ListStatus" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Contracts_GetCurrentHaveNotAllowances" ReturnType="Collection(Model.sp_Contracts_GetCurrentHaveNotAllowances_Result)">
-            <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
+          <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Get_Status_ListRooms_In_Month" ReturnType="Collection(Model.sp_Get_Status_ListRooms_In_Month_Result)">
-            <Parameter Name="checkpoint" Mode="In" Type="DateTime" />
+          <Parameter Name="checkpoint" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime" ReturnType="Collection(Model.sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result)">
             <Parameter Name="IDHall" Mode="In" Type="Int32" />
@@ -2166,11 +2648,16 @@
             <Parameter Name="EndTime" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentInDivision_Result)">
-            <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+          <Parameter Name="IDDivision" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentNotInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentNotInDivision_Result)">
-            <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+          <Parameter Name="IDDivision" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" />
+          <EntitySet Name="vw_QueryDataPayment" EntityType="Model.vw_QueryDataPayment" />
+          <EntitySet Name="vw_Support1_DataPayment" EntityType="Model.vw_Support1_DataPayment" />
+          <EntitySet Name="vw_Support2_DataPayment" EntityType="Model.vw_Support2_DataPayment" />
+          <FunctionImport Name="sp_PaymentExt_GetAllData" ReturnType="Collection(Model.sp_PaymentExt_GetAllData_Result)" />
         </EntityContainer>
         <ComplexType Name="Get_Status_Room_In_Date_Result">
           <Property Name="DayIndex" Type="Int32" />
@@ -3293,6 +3780,10 @@
           <Property Name="BookingRooms_Services_Quantity" Type="Double" />
           <Property Name="BookingRooms_Services_CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="BookingRooms_CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="BookingRooms_Services_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingRooms_Services_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRooms_Services_AcceptDate" Precision="3" />
         </EntityType>
         <EntityType Name="vw__CertificatesInfo__SystemUsers_Certificates">
           <Key>
@@ -3938,6 +4429,270 @@
           <Property Type="String" Name="PlaceOfIssue2" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="PlaceOfIssue3" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+          <Key>
+            <PropertyRef Name="BookingHalls_IDBookingH" />
+            <PropertyRef Name="BookingHalls_Services_IDBookingHall" />
+            <PropertyRef Name="ServiceGroups_ID" />
+            <PropertyRef Name="Services_ID" />
+            <PropertyRef Name="BookingHalls_Services_ID" />
+          </Key>
+          <Property Type="Int32" Name="BookingHalls_IDBookingH" Nullable="false" />
+          <Property Type="Int32" Name="BookingHalls_Services_IDBookingHall" Nullable="false" />
+          <Property Type="Int32" Name="ServiceGroups_ID" Nullable="false" />
+          <Property Type="Int32" Name="Services_ID" Nullable="false" />
+          <Property Type="Int32" Name="BookingHalls_Services_ID" Nullable="false" />
+          <Property Type="String" Name="Services_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Services_CostRef" Precision="19" Scale="4" />
+          <Property Type="String" Name="Services_Unit" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Services_Status" />
+          <Property Type="Int32" Name="Services_Type" />
+          <Property Type="Boolean" Name="Services_Disable" />
+          <Property Type="String" Name="ServiceGroups_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ServiceGroups_Type" />
+          <Property Type="Boolean" Name="ServiceGroups_Disable" />
+          <Property Type="String" Name="BookingHalls_Services_Info" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingHalls_Services_Type" />
+          <Property Type="Int32" Name="BookingHalls_Services_Status" />
+          <Property Type="Boolean" Name="BookingHalls_Services_Disable" />
+          <Property Type="Decimal" Name="BookingHalls_Services_Cost" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="BookingHalls_Services_Date" Precision="3" />
+          <Property Type="Double" Name="BookingHalls_Services_PercentTax" />
+          <Property Type="Double" Name="BookingHalls_Services_Quantity" />
+          <Property Type="Decimal" Name="BookingHalls_Services_CostRef_Services" Precision="19" Scale="4" />
+          <Property Type="String" Name="BookingHalls_CodeHall" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingHalls_Services_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingHalls_Services_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingHalls_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHalls_Services_AcceptDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="vw_QueryDataPayment">
+          <Key>
+            <PropertyRef Name="BookingRs_ID" />
+            <PropertyRef Name="BookingRooms_ID" />
+            <PropertyRef Name="BookingRs_IDCustomer" />
+            <PropertyRef Name="BookingRooms_CheckInActual" />
+            <PropertyRef Name="BookingRooms_CheckOutActual" />
+          </Key>
+          <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+          <Property Type="Int32" Name="BookingRooms_ID" Nullable="false" />
+          <Property Type="Int32" Name="BookingHalls_ID" />
+          <Property Type="Int32" Name="BookingHs_ID" />
+          <Property Type="Int32" Name="BookingRooms_Services_Status" />
+          <Property Type="Int32" Name="BookingHalls_Services_Status" />
+          <Property Type="Int32" Name="BookingRooms_Services_IDService" />
+          <Property Type="String" Name="Services_Name_Room" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingHalls_Services_IDService" />
+          <Property Type="String" Name="Services_Name_Hall" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHs_CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="BookingRs_CreatedDate" Precision="3" />
+          <Property Type="Int32" Name="Services_IDServiceGroups_Room" />
+          <Property Type="Int32" Name="Services_Type_Room" />
+          <Property Type="Int32" Name="Services_Type_Hall" />
+          <Property Type="Int32" Name="Services_IDServiceGroups_Hall" />
+          <Property Type="String" Name="Rooms_Sku" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Rooms_IDLang" />
+          <Property Type="Int32" Name="Halls_IDLang" />
+          <Property Type="String" Name="Halls_Sku" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BookingRooms_Services_Cost" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="BookingRooms_Services_Date" Precision="3" />
+          <Property Type="Double" Name="BookingRooms_Services_PercentTax" />
+          <Property Type="Double" Name="BookingRooms_Services_Quantity" />
+          <Property Type="Int32" Name="BookingRooms_Services_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingRooms_Services_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRooms_Services_AcceptDate" Precision="3" />
+          <Property Type="Boolean" Name="BookingRooms_Services_Disable" />
+          <Property Type="DateTime" Name="BookingHalls_Services_InvoiceDate" Precision="3" />
+          <Property Type="DateTime" Name="BookingHalls_Services_AcceptDate" Precision="3" />
+          <Property Type="String" Name="BookingHalls_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingHalls_Services_IndexSubPayment" />
+          <Property Type="Double" Name="BookingHalls_Services_Quantity" />
+          <Property Type="Double" Name="BookingHalls_Services_PercentTax" />
+          <Property Type="DateTime" Name="BookingHalls_Services_Date" Precision="3" />
+          <Property Type="Decimal" Name="BookingHalls_Services_Cost" Precision="19" Scale="4" />
+          <Property Type="Boolean" Name="BookingHalls_Services_Disable" />
+          <Property Type="Int32" Name="BookingHalls_Services_Type" />
+          <Property Type="Int32" Name="BookingHalls_Services_ID" />
+          <Property Type="DateTime" Name="BookingRooms_AcceptDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingRooms_Services_Type" />
+          <Property Type="DateTime" Name="BookingRooms_InvoiceDate" Precision="3" />
+          <Property Type="Int32" Name="BookingHalls_Status" />
+          <Property Type="DateTime" Name="BookingHalls_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingHalls_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHalls_AcceptDate" Precision="3" />
+          <Property Type="Int32" Name="BookingHalls_IndexSubPayment" />
+          <Property Type="Int32" Name="BookingRs_IDCustomer" Nullable="false" />
+          <Property Type="String" Name="BookingRs_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRs_InvoiceDate" Precision="0" />
+          <Property Type="DateTime" Name="BookingRs_AcceptDate" Precision="3" />
+          <Property Type="DateTime" Name="BookingRooms_CheckInActual" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BookingRooms_CheckOutActual" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="BookingRooms_Status" />
+          <Property Type="Int32" Name="BookingRooms_IndexSubPayment" />
+          <Property Type="String" Name="BookingHs_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHs_InvoiceDate" Precision="0" />
+          <Property Type="DateTime" Name="BookingHs_AcceptDate" Precision="3" />
+          <Property Type="Int32" Name="BookingRs_Status" />
+          <Property Type="Int32" Name="BookingHs_Status" />
+          <Property Type="Int32" Name="BookingRs_PayMenthod" />
+          <Property Type="DateTime" Name="BookingHalls_Date" Precision="0" />
+          <Property Type="DateTime" Name="BookingHalls_LunarDate" Precision="0" />
+        </EntityType>
+        <EntityType Name="vw_Support1_DataPayment">
+          <Key>
+            <PropertyRef Name="BookingRs_ID" />
+            <PropertyRef Name="BookingRooms_ID" />
+            <PropertyRef Name="BookingRs_IDCustomer" />
+            <PropertyRef Name="BookingRs_IDSystemUser" />
+            <PropertyRef Name="BookingRs_Level" />
+            <PropertyRef Name="BookingRs_DatePay" />
+            <PropertyRef Name="BookingRs_DateEdit" />
+            <PropertyRef Name="BookingRs_IDCustomerGroup" />
+            <PropertyRef Name="BookingRooms_CheckInPlan" />
+            <PropertyRef Name="BookingRooms_CheckInActual" />
+            <PropertyRef Name="BookingRooms_CheckOutPlan" />
+            <PropertyRef Name="BookingRooms_CheckOutActual" />
+          </Key>
+          <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+          <Property Type="Int32" Name="BookingRooms_ID" Nullable="false" />
+          <Property Type="Int32" Name="BookingRooms_Services_IDService" />
+          <Property Type="DateTime" Name="BookingRs_CreatedDate" Precision="3" />
+          <Property Type="Int32" Name="BookingRs_CustomerType" />
+          <Property Type="Int32" Name="BookingRs_BookingType" />
+          <Property Type="Int32" Name="BookingRs_IDCustomer" Nullable="false" />
+          <Property Type="Int32" Name="BookingRs_IDSystemUser" Nullable="false" />
+          <Property Type="Int32" Name="BookingRs_PayMenthod" />
+          <Property Type="Int32" Name="BookingRs_StatusPay" />
+          <Property Type="Decimal" Name="BookingRs_BookingMoney" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="BookingRs_Status" />
+          <Property Type="Int32" Name="BookingRs_Type" />
+          <Property Type="Boolean" Name="BookingRs_Disable" />
+          <Property Type="Int32" Name="BookingRs_Level" Nullable="false" />
+          <Property Type="String" Name="BookingRs_Subject" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRs_DatePay" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BookingRs_DateEdit" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="BookingRs_IDCustomerGroup" Nullable="false" />
+          <Property Type="String" Name="BookingRs_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRs_InvoiceDate" Precision="0" />
+          <Property Type="DateTime" Name="BookingRs_AcceptDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_CodeRoom" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BookingRooms_Cost" Precision="19" Scale="4" />
+          <Property Type="Double" Name="BookingRooms_PercentTax" />
+          <Property Type="DateTime" Name="BookingRooms_CheckInPlan" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BookingRooms_CheckInActual" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BookingRooms_CheckOutPlan" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="BookingRooms_CheckOutActual" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="BookingRooms_BookingStatus" />
+          <Property Type="Int32" Name="BookingRooms_Status" />
+          <Property Type="Double" Name="BookingRooms_CostPendingRoom" />
+          <Property Type="Decimal" Name="BookingRooms_TimeInUse" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="BookingRooms_Type" />
+          <Property Type="Boolean" Name="BookingRooms_Disable" />
+          <Property Type="Int32" Name="BookingRooms_IndexSubPayment" />
+          <Property Type="String" Name="BookingRooms_PriceType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BookingRooms_AddTimeStart" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="BookingRooms_AddTimeEnd" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="BookingRooms_AcceptDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRooms_InvoiceDate" Precision="3" />
+          <Property Type="Int32" Name="BookingRooms_Services_Type" />
+          <Property Type="Int32" Name="BookingRooms_Services_Status" />
+          <Property Type="Boolean" Name="BookingRooms_Services_Disable" />
+          <Property Type="Decimal" Name="BookingRooms_Services_Cost" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="BookingRooms_Services_Date" Precision="3" />
+          <Property Type="Double" Name="BookingRooms_Services_PercentTax" />
+          <Property Type="Double" Name="BookingRooms_Services_Quantity" />
+          <Property Type="Int32" Name="BookingRooms_Services_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingRooms_Services_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingRooms_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingRooms_Services_AcceptDate" Precision="3" />
+          <Property Type="String" Name="Services_Name_Room" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Services_IDServiceGroups_Room" />
+          <Property Type="Int32" Name="Services_Type_Room" />
+          <Property Type="Int32" Name="Rooms_IDLang" />
+          <Property Type="String" Name="Rooms_Sku" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_Support2_DataPayment">
+          <Key>
+            <PropertyRef Name="BookingHs_ID" />
+            <PropertyRef Name="BookingHs_IDCustomer" />
+            <PropertyRef Name="BookingHs_IDCustomerGroup" />
+            <PropertyRef Name="BookingHalls_ID" />
+          </Key>
+          <Property Type="Int32" Name="BookingHs_ID" Nullable="false" />
+          <Property Type="DateTime" Name="BookingHs_CreatedDate" Precision="3" />
+          <Property Type="Int32" Name="BookingHs_CustomerType" />
+          <Property Type="Int32" Name="BookingHs_BookingType" />
+          <Property Type="Int32" Name="BookingHs_PayMenthod" />
+          <Property Type="Int32" Name="BookingHs_StatusPay" />
+          <Property Type="Decimal" Name="BookingHs_BookingMoney" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="BookingHs_Status" />
+          <Property Type="Int32" Name="BookingHs_Type" />
+          <Property Type="Boolean" Name="BookingHs_Disable" />
+          <Property Type="Int32" Name="BookingHs_Level" />
+          <Property Type="String" Name="BookingHs_Subject" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BookingHs_IDCustomer" Nullable="false" />
+          <Property Type="Int32" Name="BookingHs_IDCustomerGroup" Nullable="false" />
+          <Property Type="DateTime" Name="BookingHs_DatePay" Precision="0" />
+          <Property Type="String" Name="BookingHs_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHs_InvoiceDate" Precision="0" />
+          <Property Type="DateTime" Name="BookingHs_AcceptDate" Precision="3" />
+          <Property Type="Int32" Name="BookingHalls_ID" Nullable="false" />
+          <Property Type="String" Name="BookingHalls_CodeHall" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BookingHalls_Cost" Precision="19" Scale="4" />
+          <Property Type="Double" Name="BookingHalls_PercentTax" />
+          <Property Type="DateTime" Name="BookingHalls_Date" Precision="0" />
+          <Property Type="DateTime" Name="BookingHalls_LunarDate" Precision="0" />
+          <Property Type="Int32" Name="BookingHalls_BookingStatus" />
+          <Property Type="Time" Name="BookingHalls_StartTime" Precision="7" />
+          <Property Type="Time" Name="BookingHalls_EndTime" Precision="7" />
+          <Property Type="Int32" Name="BookingHalls_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingHalls_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="BookingHalls_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHalls_AcceptDate" Precision="3" />
+          <Property Type="Int32" Name="BookingHalls_Status" />
+          <Property Type="Int32" Name="BookingHalls_Services_ID" />
+          <Property Type="Int32" Name="BookingHalls_Services_Type" />
+          <Property Type="Int32" Name="BookingHalls_Services_Status" />
+          <Property Type="Boolean" Name="BookingHalls_Services_Disable" />
+          <Property Type="Int32" Name="BookingHalls_Services_IDService" />
+          <Property Type="Decimal" Name="BookingHalls_Services_Cost" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="BookingHalls_Services_Date" Precision="3" />
+          <Property Type="Double" Name="BookingHalls_Services_PercentTax" />
+          <Property Type="Double" Name="BookingHalls_Services_Quantity" />
+          <Property Type="Int32" Name="BookingHalls_Services_IndexSubPayment" />
+          <Property Type="DateTime" Name="BookingHalls_Services_AcceptDate" Precision="3" />
+          <Property Type="String" Name="BookingHalls_Services_InvoiceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookingHalls_Services_InvoiceDate" Precision="3" />
+          <Property Type="String" Name="Services_Name_Hall" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Services_Status_Hall" />
+          <Property Type="Int32" Name="Services_Type_Hall" />
+          <Property Type="Int32" Name="Services_IDServiceGroups_Hall" />
+          <Property Type="String" Name="Halls_Sku" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Halls_IDLang" />
+        </EntityType>
+        <ComplexType Name="sp_PaymentExt_GetAllData_Result">
+          <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+          <Property Type="String" Name="ObjectType" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="SkuObject" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="IDService" Nullable="true" />
+          <Property Type="String" Name="Services_Name" Nullable="true" MaxLength="255" />
+          <Property Type="Double" Name="QualityServices" Nullable="true" />
+          <Property Type="Decimal" Name="Services_Cost" Nullable="true" Precision="19" />
+          <Property Type="Double" Name="Services_PercentTax" Nullable="true" />
+          <Property Type="DateTime" Name="Service_DateUse" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Service_PaymentStatus" Nullable="true" />
+          <Property Type="Int32" Name="Object_PaymentStatus" Nullable="true" />
+          <Property Type="Int32" Name="BillH_PaymentStatus" Nullable="true" />
+          <Property Type="Int32" Name="BillR_PaymentStatus" Nullable="true" />
+          <Property Type="Int32" Name="Services_SubPayment" Nullable="true" />
+          <Property Type="Int32" Name="Object_SubPayment" Nullable="true" />
+          <Property Type="Int32" Name="Bill_SubPayment" Nullable="true" />
+          <Property Type="DateTime" Name="Time1" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Time2" Nullable="true" Precision="23" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5038,6 +5793,10 @@
           <EntitySetMapping Name="vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups">
             <EntityTypeMapping TypeName="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups">
               <MappingFragment StoreEntitySet="vw_[BookingRooms_ServicesInfo]_BookingRooms_BookingRoomsServices_Services_ServiceGroups">
+                <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
                 <ScalarProperty Name="BookingRooms_IDBookingR" ColumnName="BookingRooms_IDBookingR" />
                 <ScalarProperty Name="BookingRooms_Services_IDBookingRoom" ColumnName="BookingRooms_Services_IDBookingRoom" />
                 <ScalarProperty Name="ServiceGroups_ID" ColumnName="ServiceGroups_ID" />
@@ -5784,6 +6543,256 @@
                 <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
                 <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+            <EntityTypeMapping TypeName="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+              <MappingFragment StoreEntitySet="vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups">
+                <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+                <ScalarProperty Name="BookingHalls_CodeHall" ColumnName="BookingHalls_CodeHall" />
+                <ScalarProperty Name="BookingHalls_Services_CostRef_Services" ColumnName="BookingHalls_Services_CostRef_Services" />
+                <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+                <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+                <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+                <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+                <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+                <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+                <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+                <ScalarProperty Name="BookingHalls_Services_Info" ColumnName="BookingHalls_Services_Info" />
+                <ScalarProperty Name="ServiceGroups_Disable" ColumnName="ServiceGroups_Disable" />
+                <ScalarProperty Name="ServiceGroups_Type" ColumnName="ServiceGroups_Type" />
+                <ScalarProperty Name="ServiceGroups_Name" ColumnName="ServiceGroups_Name" />
+                <ScalarProperty Name="Services_Disable" ColumnName="Services_Disable" />
+                <ScalarProperty Name="Services_Type" ColumnName="Services_Type" />
+                <ScalarProperty Name="Services_Status" ColumnName="Services_Status" />
+                <ScalarProperty Name="Services_Unit" ColumnName="Services_Unit" />
+                <ScalarProperty Name="Services_CostRef" ColumnName="Services_CostRef" />
+                <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+                <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+                <ScalarProperty Name="Services_ID" ColumnName="Services_ID" />
+                <ScalarProperty Name="ServiceGroups_ID" ColumnName="ServiceGroups_ID" />
+                <ScalarProperty Name="BookingHalls_Services_IDBookingHall" ColumnName="BookingHalls_Services_IDBookingHall" />
+                <ScalarProperty Name="BookingHalls_IDBookingH" ColumnName="BookingHalls_IDBookingH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_QueryDataPayment">
+            <EntityTypeMapping TypeName="Model.vw_QueryDataPayment">
+              <MappingFragment StoreEntitySet="vw_QueryDataPayment">
+                <ScalarProperty Name="BookingHalls_LunarDate" ColumnName="BookingHalls_LunarDate" />
+                <ScalarProperty Name="BookingHalls_Date" ColumnName="BookingHalls_Date" />
+                <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+                <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+                <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+                <ScalarProperty Name="BookingHs_AcceptDate" ColumnName="BookingHs_AcceptDate" />
+                <ScalarProperty Name="BookingHs_InvoiceDate" ColumnName="BookingHs_InvoiceDate" />
+                <ScalarProperty Name="BookingHs_InvoiceNumber" ColumnName="BookingHs_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_IndexSubPayment" ColumnName="BookingRooms_IndexSubPayment" />
+                <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+                <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+                <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+                <ScalarProperty Name="BookingRs_AcceptDate" ColumnName="BookingRs_AcceptDate" />
+                <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+                <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+                <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+                <ScalarProperty Name="BookingHalls_IndexSubPayment" ColumnName="BookingHalls_IndexSubPayment" />
+                <ScalarProperty Name="BookingHalls_AcceptDate" ColumnName="BookingHalls_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_InvoiceNumber" ColumnName="BookingHalls_InvoiceNumber" />
+                <ScalarProperty Name="BookingHalls_InvoiceDate" ColumnName="BookingHalls_InvoiceDate" />
+                <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+                <ScalarProperty Name="BookingRooms_InvoiceDate" ColumnName="BookingRooms_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_Services_Type" ColumnName="BookingRooms_Services_Type" />
+                <ScalarProperty Name="BookingRooms_InvoiceNumber" ColumnName="BookingRooms_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_AcceptDate" ColumnName="BookingRooms_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+                <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+                <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+                <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+                <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+                <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+                <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+                <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_Services_Disable" ColumnName="BookingRooms_Services_Disable" />
+                <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
+                <ScalarProperty Name="BookingRooms_Services_Quantity" ColumnName="BookingRooms_Services_Quantity" />
+                <ScalarProperty Name="BookingRooms_Services_PercentTax" ColumnName="BookingRooms_Services_PercentTax" />
+                <ScalarProperty Name="BookingRooms_Services_Date" ColumnName="BookingRooms_Services_Date" />
+                <ScalarProperty Name="BookingRooms_Services_Cost" ColumnName="BookingRooms_Services_Cost" />
+                <ScalarProperty Name="Halls_Sku" ColumnName="Halls_Sku" />
+                <ScalarProperty Name="Halls_IDLang" ColumnName="Halls_IDLang" />
+                <ScalarProperty Name="Rooms_IDLang" ColumnName="Rooms_IDLang" />
+                <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+                <ScalarProperty Name="Services_IDServiceGroups_Hall" ColumnName="Services_IDServiceGroups_Hall" />
+                <ScalarProperty Name="Services_Type_Hall" ColumnName="Services_Type_Hall" />
+                <ScalarProperty Name="Services_Type_Room" ColumnName="Services_Type_Room" />
+                <ScalarProperty Name="Services_IDServiceGroups_Room" ColumnName="Services_IDServiceGroups_Room" />
+                <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+                <ScalarProperty Name="BookingHs_CreatedDate" ColumnName="BookingHs_CreatedDate" />
+                <ScalarProperty Name="Services_Name_Hall" ColumnName="Services_Name_Hall" />
+                <ScalarProperty Name="BookingHalls_Services_IDService" ColumnName="BookingHalls_Services_IDService" />
+                <ScalarProperty Name="Services_Name_Room" ColumnName="Services_Name_Room" />
+                <ScalarProperty Name="BookingRooms_Services_IDService" ColumnName="BookingRooms_Services_IDService" />
+                <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+                <ScalarProperty Name="BookingRooms_Services_Status" ColumnName="BookingRooms_Services_Status" />
+                <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+                <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+                <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+                <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_Support1_DataPayment">
+            <EntityTypeMapping TypeName="Model.vw_Support1_DataPayment">
+              <MappingFragment StoreEntitySet="vw_Support1_DataPayment">
+                <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+                <ScalarProperty Name="Rooms_IDLang" ColumnName="Rooms_IDLang" />
+                <ScalarProperty Name="Services_Type_Room" ColumnName="Services_Type_Room" />
+                <ScalarProperty Name="Services_IDServiceGroups_Room" ColumnName="Services_IDServiceGroups_Room" />
+                <ScalarProperty Name="Services_Name_Room" ColumnName="Services_Name_Room" />
+                <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
+                <ScalarProperty Name="BookingRooms_Services_Quantity" ColumnName="BookingRooms_Services_Quantity" />
+                <ScalarProperty Name="BookingRooms_Services_PercentTax" ColumnName="BookingRooms_Services_PercentTax" />
+                <ScalarProperty Name="BookingRooms_Services_Date" ColumnName="BookingRooms_Services_Date" />
+                <ScalarProperty Name="BookingRooms_Services_Cost" ColumnName="BookingRooms_Services_Cost" />
+                <ScalarProperty Name="BookingRooms_Services_Disable" ColumnName="BookingRooms_Services_Disable" />
+                <ScalarProperty Name="BookingRooms_Services_Status" ColumnName="BookingRooms_Services_Status" />
+                <ScalarProperty Name="BookingRooms_Services_Type" ColumnName="BookingRooms_Services_Type" />
+                <ScalarProperty Name="BookingRooms_InvoiceDate" ColumnName="BookingRooms_InvoiceDate" />
+                <ScalarProperty Name="BookingRooms_InvoiceNumber" ColumnName="BookingRooms_InvoiceNumber" />
+                <ScalarProperty Name="BookingRooms_AcceptDate" ColumnName="BookingRooms_AcceptDate" />
+                <ScalarProperty Name="BookingRooms_AddTimeEnd" ColumnName="BookingRooms_AddTimeEnd" />
+                <ScalarProperty Name="BookingRooms_AddTimeStart" ColumnName="BookingRooms_AddTimeStart" />
+                <ScalarProperty Name="BookingRooms_PriceType" ColumnName="BookingRooms_PriceType" />
+                <ScalarProperty Name="BookingRooms_IndexSubPayment" ColumnName="BookingRooms_IndexSubPayment" />
+                <ScalarProperty Name="BookingRooms_Disable" ColumnName="BookingRooms_Disable" />
+                <ScalarProperty Name="BookingRooms_Type" ColumnName="BookingRooms_Type" />
+                <ScalarProperty Name="BookingRooms_TimeInUse" ColumnName="BookingRooms_TimeInUse" />
+                <ScalarProperty Name="BookingRooms_CostPendingRoom" ColumnName="BookingRooms_CostPendingRoom" />
+                <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+                <ScalarProperty Name="BookingRooms_BookingStatus" ColumnName="BookingRooms_BookingStatus" />
+                <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+                <ScalarProperty Name="BookingRooms_CheckOutPlan" ColumnName="BookingRooms_CheckOutPlan" />
+                <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+                <ScalarProperty Name="BookingRooms_CheckInPlan" ColumnName="BookingRooms_CheckInPlan" />
+                <ScalarProperty Name="BookingRooms_PercentTax" ColumnName="BookingRooms_PercentTax" />
+                <ScalarProperty Name="BookingRooms_Cost" ColumnName="BookingRooms_Cost" />
+                <ScalarProperty Name="BookingRooms_CodeRoom" ColumnName="BookingRooms_CodeRoom" />
+                <ScalarProperty Name="BookingRs_AcceptDate" ColumnName="BookingRs_AcceptDate" />
+                <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+                <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+                <ScalarProperty Name="BookingRs_IDCustomerGroup" ColumnName="BookingRs_IDCustomerGroup" />
+                <ScalarProperty Name="BookingRs_DateEdit" ColumnName="BookingRs_DateEdit" />
+                <ScalarProperty Name="BookingRs_DatePay" ColumnName="BookingRs_DatePay" />
+                <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+                <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+                <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+                <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+                <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+                <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+                <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+                <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+                <ScalarProperty Name="BookingRs_IDSystemUser" ColumnName="BookingRs_IDSystemUser" />
+                <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+                <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+                <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+                <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+                <ScalarProperty Name="BookingRooms_Services_IDService" ColumnName="BookingRooms_Services_IDService" />
+                <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+                <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_Support2_DataPayment">
+            <EntityTypeMapping TypeName="Model.vw_Support2_DataPayment">
+              <MappingFragment StoreEntitySet="vw_Support2_DataPayment">
+                <ScalarProperty Name="Halls_IDLang" ColumnName="Halls_IDLang" />
+                <ScalarProperty Name="Halls_Sku" ColumnName="Halls_Sku" />
+                <ScalarProperty Name="Services_IDServiceGroups_Hall" ColumnName="Services_IDServiceGroups_Hall" />
+                <ScalarProperty Name="Services_Type_Hall" ColumnName="Services_Type_Hall" />
+                <ScalarProperty Name="Services_Status_Hall" ColumnName="Services_Status_Hall" />
+                <ScalarProperty Name="Services_Name_Hall" ColumnName="Services_Name_Hall" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+                <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+                <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+                <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+                <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+                <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+                <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+                <ScalarProperty Name="BookingHalls_Services_IDService" ColumnName="BookingHalls_Services_IDService" />
+                <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+                <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+                <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+                <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+                <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+                <ScalarProperty Name="BookingHalls_AcceptDate" ColumnName="BookingHalls_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_InvoiceNumber" ColumnName="BookingHalls_InvoiceNumber" />
+                <ScalarProperty Name="BookingHalls_InvoiceDate" ColumnName="BookingHalls_InvoiceDate" />
+                <ScalarProperty Name="BookingHalls_IndexSubPayment" ColumnName="BookingHalls_IndexSubPayment" />
+                <ScalarProperty Name="BookingHalls_EndTime" ColumnName="BookingHalls_EndTime" />
+                <ScalarProperty Name="BookingHalls_StartTime" ColumnName="BookingHalls_StartTime" />
+                <ScalarProperty Name="BookingHalls_BookingStatus" ColumnName="BookingHalls_BookingStatus" />
+                <ScalarProperty Name="BookingHalls_LunarDate" ColumnName="BookingHalls_LunarDate" />
+                <ScalarProperty Name="BookingHalls_Date" ColumnName="BookingHalls_Date" />
+                <ScalarProperty Name="BookingHalls_PercentTax" ColumnName="BookingHalls_PercentTax" />
+                <ScalarProperty Name="BookingHalls_Cost" ColumnName="BookingHalls_Cost" />
+                <ScalarProperty Name="BookingHalls_CodeHall" ColumnName="BookingHalls_CodeHall" />
+                <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+                <ScalarProperty Name="BookingHs_AcceptDate" ColumnName="BookingHs_AcceptDate" />
+                <ScalarProperty Name="BookingHs_InvoiceDate" ColumnName="BookingHs_InvoiceDate" />
+                <ScalarProperty Name="BookingHs_InvoiceNumber" ColumnName="BookingHs_InvoiceNumber" />
+                <ScalarProperty Name="BookingHs_DatePay" ColumnName="BookingHs_DatePay" />
+                <ScalarProperty Name="BookingHs_IDCustomerGroup" ColumnName="BookingHs_IDCustomerGroup" />
+                <ScalarProperty Name="BookingHs_IDCustomer" ColumnName="BookingHs_IDCustomer" />
+                <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+                <ScalarProperty Name="BookingHs_Level" ColumnName="BookingHs_Level" />
+                <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
+                <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
+                <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+                <ScalarProperty Name="BookingHs_BookingMoney" ColumnName="BookingHs_BookingMoney" />
+                <ScalarProperty Name="BookingHs_StatusPay" ColumnName="BookingHs_StatusPay" />
+                <ScalarProperty Name="BookingHs_PayMenthod" ColumnName="BookingHs_PayMenthod" />
+                <ScalarProperty Name="BookingHs_BookingType" ColumnName="BookingHs_BookingType" />
+                <ScalarProperty Name="BookingHs_CustomerType" ColumnName="BookingHs_CustomerType" />
+                <ScalarProperty Name="BookingHs_CreatedDate" ColumnName="BookingHs_CreatedDate" />
+                <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_PaymentExt_GetAllData" FunctionName="Model.Store.sp_PaymentExt_GetAllData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_PaymentExt_GetAllData_Result">
+                <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+                <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+                <ScalarProperty Name="SkuObject" ColumnName="SkuObject" />
+                <ScalarProperty Name="IDService" ColumnName="IDService" />
+                <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+                <ScalarProperty Name="QualityServices" ColumnName="QualityServices" />
+                <ScalarProperty Name="Services_Cost" ColumnName="Services_Cost" />
+                <ScalarProperty Name="Services_PercentTax" ColumnName="Services_PercentTax" />
+                <ScalarProperty Name="Service_DateUse" ColumnName="Service_DateUse" />
+                <ScalarProperty Name="Service_PaymentStatus" ColumnName="Service_PaymentStatus" />
+                <ScalarProperty Name="Object_PaymentStatus" ColumnName="Object_PaymentStatus" />
+                <ScalarProperty Name="BillH_PaymentStatus" ColumnName="BillH_PaymentStatus" />
+                <ScalarProperty Name="BillR_PaymentStatus" ColumnName="BillR_PaymentStatus" />
+                <ScalarProperty Name="Services_SubPayment" ColumnName="Services_SubPayment" />
+                <ScalarProperty Name="Object_SubPayment" ColumnName="Object_SubPayment" />
+                <ScalarProperty Name="Bill_SubPayment" ColumnName="Bill_SubPayment" />
+                <ScalarProperty Name="Time1" ColumnName="Time1" />
+                <ScalarProperty Name="Time2" ColumnName="Time2" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

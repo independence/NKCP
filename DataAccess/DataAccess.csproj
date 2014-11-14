@@ -241,6 +241,9 @@
     <Compile Include="sp_HallExt_GetStatusBookingHalls_ByRankTime_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_PaymentExt_GetAllData_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
@@ -275,6 +278,18 @@
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
     <Compile Include="TableSalaries.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_QueryDataPayment.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Support1_DataPayment.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Support2_DataPayment.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
     <Compile Include="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers.cs">
