@@ -754,6 +754,12 @@
     <Compile Include="FormTask\frmTsk_ListBookingRs.Designer.cs">
       <DependentUpon>frmTsk_ListBookingRs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingR_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingR_New.Designer.cs">
+      <DependentUpon>frmTsk_ListBookingR_New.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_ListCustomersCurrentInRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1223,6 +1229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_ListBookingRs.resx">
       <DependentUpon>frmTsk_ListBookingRs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ListBookingR_New.resx">
+      <DependentUpon>frmTsk_ListBookingR_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_ListCustomersCurrentInRoom.resx">
       <DependentUpon>frmTsk_ListCustomersCurrentInRoom.cs</DependentUpon>
