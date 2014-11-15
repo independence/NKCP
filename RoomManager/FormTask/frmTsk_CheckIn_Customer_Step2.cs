@@ -157,6 +157,9 @@ namespace RoomManager
         {
             try
             {
+                this.txtSubject.Text = "[" + DateTime.Now.ToString() + "]" + "[Khách lẻ]";
+                this.lueIDCustomerGroup.Text = "[" + DateTime.Now.ToString() + "]" + "[Khách lẻ]";
+                this.lueIDCustomerGroup.EditValue = 0;
                 this.LoadCompany();
             }
             catch (Exception ex)

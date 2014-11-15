@@ -121,7 +121,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(869, 412);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(890, 412);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // tableLayoutPanel9
@@ -132,7 +132,7 @@
             this.tableLayoutPanel9.Controls.Add(this.btnNext, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnBack, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(341, 373);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(362, 373);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -146,7 +146,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 340);
+            this.groupBox1.Size = new System.Drawing.Size(353, 340);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -169,7 +169,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 317);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 317);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // labelControl11
@@ -186,7 +186,7 @@
             // txtSubject
             // 
             this.txtSubject.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSubject.Location = new System.Drawing.Point(92, 12);
+            this.txtSubject.Location = new System.Drawing.Point(98, 12);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Properties.MaxLength = 250;
             this.txtSubject.Properties.NullValuePrompt = "Nhập tối đa 250 ký tự.";
@@ -219,7 +219,7 @@
             // txaDescription
             // 
             this.txaDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txaDescription.Location = new System.Drawing.Point(92, 52);
+            this.txaDescription.Location = new System.Drawing.Point(98, 52);
             this.txaDescription.Name = "txaDescription";
             this.txaDescription.Properties.MaxLength = 250;
             this.txaDescription.Properties.NullValuePrompt = "Tối đa 250 ký tự.";
@@ -231,7 +231,7 @@
             // txaNote
             // 
             this.txaNote.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txaNote.Location = new System.Drawing.Point(92, 188);
+            this.txaNote.Location = new System.Drawing.Point(98, 188);
             this.txaNote.Name = "txaNote";
             this.txaNote.Properties.MaxLength = 250;
             this.txaNote.Properties.NullValuePrompt = "Tối đa 250 ký tự.";
@@ -247,7 +247,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(341, 27);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(362, 27);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -306,7 +306,7 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tableLayoutPanel8.Controls.Add(this.btnAddCustomerGroup, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.lueIDCustomerGroup, 0, 0);
@@ -325,7 +325,7 @@
             this.btnAddCustomerGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomerGroup.Appearance.Options.UseFont = true;
             this.btnAddCustomerGroup.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomerGroup.Image")));
-            this.btnAddCustomerGroup.Location = new System.Drawing.Point(198, 3);
+            this.btnAddCustomerGroup.Location = new System.Drawing.Point(195, 3);
             this.btnAddCustomerGroup.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnAddCustomerGroup.Name = "btnAddCustomerGroup";
             this.btnAddCustomerGroup.Size = new System.Drawing.Size(68, 23);
@@ -369,7 +369,7 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
             this.tableLayoutPanel7.Controls.Add(this.lueIDCompany, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(139, 3);
@@ -413,7 +413,7 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel4.Controls.Add(this.btnSearchCustomer, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.lueIDCustomer, 0, 0);
@@ -463,7 +463,7 @@
             this.btnAddCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.Appearance.Options.UseFont = true;
             this.btnAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.Image")));
-            this.btnAddCustomer.Location = new System.Drawing.Point(197, 3);
+            this.btnAddCustomer.Location = new System.Drawing.Point(196, 3);
             this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(69, 23);
@@ -515,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 412);
+            this.ClientSize = new System.Drawing.Size(890, 412);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
