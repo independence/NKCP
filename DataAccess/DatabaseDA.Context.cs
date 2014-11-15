@@ -75,6 +75,7 @@ namespace DataAccess
         public DbSet<ExtraCosts> ExtraCosts { get; set; }
         public DbSet<Payment> Payment { get; set; }
         public DbSet<Rooms> Rooms { get; set; }
+        public DbSet<vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups> vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups { get; set; }
         public DbSet<vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers> vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers { get; set; }
         public DbSet<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups { get; set; }
         public DbSet<vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers> vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers { get; set; }
@@ -87,7 +88,6 @@ namespace DataAccess
         public DbSet<vw__SearchCustomer__Companies_CustomerGroups_Customers> vw__SearchCustomer__Companies_CustomerGroups_Customers { get; set; }
         public DbSet<vw__ServicesInfo__Services_ServiceGroups> vw__ServicesInfo__Services_ServiceGroups { get; set; }
         public DbSet<vw__SystemUsersInfo__SystemUsers_Divisions> vw__SystemUsersInfo__SystemUsers_Divisions { get; set; }
-        public DbSet<vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups> vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups { get; set; }
         public DbSet<vw_QueryDataPayment> vw_QueryDataPayment { get; set; }
         public DbSet<vw_Support1_DataPayment> vw_Support1_DataPayment { get; set; }
         public DbSet<vw_Support2_DataPayment> vw_Support2_DataPayment { get; set; }
@@ -226,6 +226,11 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_HallExt_GetStatusBookingHalls_ByRankTime_Result>("sp_HallExt_GetStatusBookingHalls_ByRankTime", fromParameter, toParameter, isLunarDateParameter);
         }
     
+        public virtual ObjectResult<sp_PaymentExt_GetAllData_Result> sp_PaymentExt_GetAllData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_Result>("sp_PaymentExt_GetAllData");
+        }
+    
         public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime(Nullable<int> iDRoom, Nullable<System.DateTime> now)
         {
             var iDRoomParameter = iDRoom.HasValue ?
@@ -306,11 +311,6 @@ namespace DataAccess
                 new ObjectParameter("IDDivision", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SystemUsers_GetCurrentNotInDivision_Result>("sp_SystemUsers_GetCurrentNotInDivision", iDDivisionParameter);
-        }
-    
-        public virtual ObjectResult<sp_PaymentExt_GetAllData_Result> sp_PaymentExt_GetAllData()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_Result>("sp_PaymentExt_GetAllData");
         }
     }
 }

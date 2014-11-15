@@ -115,7 +115,7 @@
             this.groupControl2.Location = new System.Drawing.Point(950, 3);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(302, 456);
-            this.groupControl2.TabIndex = 0;
+            this.groupControl2.TabIndex = 13;
             this.groupControl2.Text = "Danh sách dịch vụ trong hội trường";
             // 
             // dgvServiceInBookingHall
@@ -125,7 +125,7 @@
             this.dgvServiceInBookingHall.MainView = this.grvServiceInBookingHall;
             this.dgvServiceInBookingHall.Name = "dgvServiceInBookingHall";
             this.dgvServiceInBookingHall.Size = new System.Drawing.Size(298, 430);
-            this.dgvServiceInBookingHall.TabIndex = 3;
+            this.dgvServiceInBookingHall.TabIndex = 14;
             this.dgvServiceInBookingHall.UseEmbeddedNavigator = true;
             this.dgvServiceInBookingHall.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvServiceInBookingHall});
@@ -207,7 +207,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(577, 456);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -222,7 +222,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(571, 62);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -240,7 +240,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(262, 56);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.TabIndex = 3;
             // 
             // labelControl1
             // 
@@ -250,7 +250,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(57, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Từ ngày";
             // 
             // labelControl2
@@ -261,7 +261,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Đến ngày";
             // 
             // dtpTo
@@ -282,7 +282,7 @@
     "):[0-5]\\d";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(169, 20);
-            this.dtpTo.TabIndex = 2;
+            this.dtpTo.TabIndex = 7;
             // 
             // dtpFrom
             // 
@@ -302,7 +302,7 @@
     "):[0-5]\\d";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(169, 20);
-            this.dtpFrom.TabIndex = 3;
+            this.dtpFrom.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -313,7 +313,7 @@
             this.btnSearch.Location = new System.Drawing.Point(271, 13);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 35);
-            this.btnSearch.TabIndex = 1;
+            this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -326,7 +326,7 @@
             this.groupControl1.Location = new System.Drawing.Point(3, 71);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(571, 382);
-            this.groupControl1.TabIndex = 1;
+            this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Danh sách tiệc đã đặt";
             // 
             // dgvBookingRs
@@ -338,7 +338,7 @@
             this.dgvBookingRs.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDone});
             this.dgvBookingRs.Size = new System.Drawing.Size(567, 356);
-            this.dgvBookingRs.TabIndex = 2;
+            this.dgvBookingRs.TabIndex = 10;
             this.dgvBookingRs.UseEmbeddedNavigator = true;
             this.dgvBookingRs.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingRs});
@@ -481,7 +481,7 @@
             this.groupControl3.Location = new System.Drawing.Point(586, 3);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(358, 456);
-            this.groupControl3.TabIndex = 1;
+            this.groupControl3.TabIndex = 11;
             this.groupControl3.Text = "Danh sách hội trường đã đặt";
             // 
             // dgvListBookingHalls
@@ -493,7 +493,7 @@
             this.dgvListBookingHalls.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnAdd});
             this.dgvListBookingHalls.Size = new System.Drawing.Size(354, 430);
-            this.dgvListBookingHalls.TabIndex = 3;
+            this.dgvListBookingHalls.TabIndex = 12;
             this.dgvListBookingHalls.UseEmbeddedNavigator = true;
             this.dgvListBookingHalls.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvListBookingHalls});

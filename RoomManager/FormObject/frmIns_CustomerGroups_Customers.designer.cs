@@ -94,7 +94,7 @@
             this.btnApply.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(102, 28);
-            this.btnApply.TabIndex = 0;
+            this.btnApply.TabIndex = 19;
             this.btnApply.Text = "Cập nhật";
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -108,7 +108,7 @@
             this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(144, 26);
-            this.btnAddCustomer.TabIndex = 0;
+            this.btnAddCustomer.TabIndex = 16;
             this.btnAddCustomer.Text = "Thêm mới khách";
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
@@ -124,7 +124,7 @@
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(447, 32);
-            this.tableLayoutPanel11.TabIndex = 0;
+            this.tableLayoutPanel11.TabIndex = 15;
             // 
             // tableLayoutPanel6
             // 
@@ -140,7 +140,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.17647F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(453, 442);
-            this.tableLayoutPanel6.TabIndex = 1;
+            this.tableLayoutPanel6.TabIndex = 14;
             // 
             // dgvAvailableCustomers
             // 
@@ -152,7 +152,7 @@
             this.btnSelectCustomers,
             this.btnEditCustomers});
             this.dgvAvailableCustomers.Size = new System.Drawing.Size(447, 398);
-            this.dgvAvailableCustomers.TabIndex = 13;
+            this.dgvAvailableCustomers.TabIndex = 17;
             this.dgvAvailableCustomers.UseEmbeddedNavigator = true;
             this.dgvAvailableCustomers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAvailableCustomers});
@@ -299,7 +299,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(795, 39);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.TabIndex = 18;
             // 
             // tableLayoutPanel4
             // 
@@ -315,7 +315,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(789, 448);
-            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
@@ -332,7 +332,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(316, 442);
-            this.tableLayoutPanel5.TabIndex = 0;
+            this.tableLayoutPanel5.TabIndex = 2;
             // 
             // dgvSelectCustomers
             // 
@@ -446,7 +446,7 @@
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(310, 38);
-            this.tableLayoutPanel10.TabIndex = 0;
+            this.tableLayoutPanel10.TabIndex = 8;
             // 
             // btnAddCustomerGroup
             // 
@@ -457,7 +457,7 @@
             this.btnAddCustomerGroup.Location = new System.Drawing.Point(250, 8);
             this.btnAddCustomerGroup.Name = "btnAddCustomerGroup";
             this.btnAddCustomerGroup.Size = new System.Drawing.Size(25, 22);
-            this.btnAddCustomerGroup.TabIndex = 13;
+            this.btnAddCustomerGroup.TabIndex = 11;
             this.btnAddCustomerGroup.Click += new System.EventHandler(this.btnAddCustomerGroup_Click);
             // 
             // labelControl1
@@ -467,7 +467,7 @@
             this.labelControl1.Location = new System.Drawing.Point(3, 11);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(35, 16);
-            this.labelControl1.TabIndex = 2;
+            this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "Nhóm";
             // 
             // btnSearchCustomerGroup
@@ -479,7 +479,7 @@
             this.btnSearchCustomerGroup.Location = new System.Drawing.Point(281, 8);
             this.btnSearchCustomerGroup.Name = "btnSearchCustomerGroup";
             this.btnSearchCustomerGroup.Size = new System.Drawing.Size(25, 22);
-            this.btnSearchCustomerGroup.TabIndex = 14;
+            this.btnSearchCustomerGroup.TabIndex = 12;
             this.btnSearchCustomerGroup.Click += new System.EventHandler(this.btnSearchCustomerGroup_Click);
             // 
             // lueCustomerGroup
@@ -495,7 +495,7 @@
             this.lueCustomerGroup.Properties.NullValuePrompt = "Chọn nhóm";
             this.lueCustomerGroup.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCustomerGroup.Size = new System.Drawing.Size(174, 20);
-            this.lueCustomerGroup.TabIndex = 15;
+            this.lueCustomerGroup.TabIndex = 10;
             this.lueCustomerGroup.EditValueChanged += new System.EventHandler(this.lueCustomerGroup_EditValueChanged);
             // 
             // tableLayoutPanel9
@@ -515,7 +515,7 @@
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(310, 38);
-            this.tableLayoutPanel9.TabIndex = 0;
+            this.tableLayoutPanel9.TabIndex = 3;
             // 
             // btnAddCompanies
             // 
@@ -526,7 +526,7 @@
             this.btnAddCompanies.Location = new System.Drawing.Point(250, 8);
             this.btnAddCompanies.Name = "btnAddCompanies";
             this.btnAddCompanies.Size = new System.Drawing.Size(25, 22);
-            this.btnAddCompanies.TabIndex = 12;
+            this.btnAddCompanies.TabIndex = 6;
             this.btnAddCompanies.Click += new System.EventHandler(this.btnAddCompanies_Click);
             // 
             // labelControl2
@@ -536,7 +536,7 @@
             this.labelControl2.Location = new System.Drawing.Point(3, 11);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(50, 16);
-            this.labelControl2.TabIndex = 2;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Công ty";
             // 
             // btnSearchCompany
@@ -548,7 +548,7 @@
             this.btnSearchCompany.Location = new System.Drawing.Point(281, 8);
             this.btnSearchCompany.Name = "btnSearchCompany";
             this.btnSearchCompany.Size = new System.Drawing.Size(25, 22);
-            this.btnSearchCompany.TabIndex = 13;
+            this.btnSearchCompany.TabIndex = 7;
             this.btnSearchCompany.Click += new System.EventHandler(this.btnSearchCompany_Click);
             // 
             // lueCompany
@@ -564,7 +564,7 @@
             this.lueCompany.Properties.NullValuePrompt = "Chọn công ty";
             this.lueCompany.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCompany.Size = new System.Drawing.Size(174, 20);
-            this.lueCompany.TabIndex = 1;
+            this.lueCompany.TabIndex = 5;
             this.lueCompany.EditValueChanged += new System.EventHandler(this.lueCompany_EditValueChanged);
             // 
             // tableLayoutPanel1
@@ -583,7 +583,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.617188F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(795, 512);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // frmIns_CustomerGroups_Customers
             // 

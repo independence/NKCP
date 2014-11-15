@@ -880,12 +880,6 @@
     <Compile Include="Control\uc_StatusRooms.Designer.cs">
       <DependentUpon>uc_StatusRooms.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTask\frmTsk_ViewAllPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTask\frmTsk_ViewAllPayment.Designer.cs">
-      <DependentUpon>frmTsk_ViewAllPayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1294,9 +1288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uc_StatusRooms.resx">
       <DependentUpon>uc_StatusRooms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTask\frmTsk_ViewAllPayment.resx">
-      <DependentUpon>frmTsk_ViewAllPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

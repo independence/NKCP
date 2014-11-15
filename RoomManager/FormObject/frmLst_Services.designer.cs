@@ -99,7 +99,7 @@
             // 
             // grvService
             // 
-            this.grvService.ColumnPanelRowHeight = 40;
+            this.grvService.ColumnPanelRowHeight = 30;
             this.grvService.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
@@ -112,7 +112,10 @@
             this.grvService.GridControl = this.dgvServices;
             this.grvService.Name = "grvService";
             this.grvService.OptionsFind.AlwaysVisible = true;
+            this.grvService.OptionsView.EnableAppearanceEvenRow = true;
             this.grvService.OptionsView.ShowFooter = true;
+            this.grvService.OptionsView.ShowGroupPanel = false;
+            this.grvService.RowHeight = 25;
             // 
             // gridColumn1
             // 

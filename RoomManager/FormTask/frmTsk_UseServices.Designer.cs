@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_UseServices));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.bnAddService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.txtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtPercenTax = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.dgvRooms = new DevExpress.XtraGrid.GridControl();
             this.viewRooms = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CodeRoom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SkuColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomerColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CompanyColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bnListService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -52,58 +52,83 @@
             this.Date = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ServiceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.Unit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CostRef = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Cost = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.VAT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.Sum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.dtpDate = new DevExpress.XtraEditors.DateEdit();
+            this.lbCurrentRoom = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lbCurrentRoom = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.dgvServices = new DevExpress.XtraGrid.GridControl();
             this.viewServices = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bnAddService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.NameService = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPercenTax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRooms)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnListService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom_Services)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRoom_Services)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.SuspendLayout();
+            // 
+            // repositoryItemTextEdit3
+            // 
+            this.repositoryItemTextEdit3.AutoHeight = false;
+            this.repositoryItemTextEdit3.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit3.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit3.MaxLength = 7;
+            this.repositoryItemTextEdit3.Name = "repositoryItemTextEdit3";
+            // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit2.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit2.MaxLength = 10;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoHeight = false;
+            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // bnAddService
+            // 
+            this.bnAddService.AutoHeight = false;
+            this.bnAddService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.bnAddService.Name = "bnAddService";
+            this.bnAddService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // txtQuantity
             // 
@@ -129,32 +154,6 @@
             this.txtPercenTax.MaxLength = 3;
             this.txtPercenTax.Name = "txtPercenTax";
             // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.panelControl2);
-            this.splitContainerControl1.Panel1.Controls.Add(this.panelControl1);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.panelControl4);
-            this.splitContainerControl1.Panel2.Controls.Add(this.panelControl3);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(947, 517);
-            this.splitContainerControl1.SplitterPosition = 295;
-            this.splitContainerControl1.TabIndex = 0;
-            this.splitContainerControl1.Text = "splitContainerControl1";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.dgvRooms);
-            this.panelControl2.Cursor = System.Windows.Forms.Cursors.No;
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 36);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(295, 481);
-            this.panelControl2.TabIndex = 3;
-            // 
             // dgvRooms
             // 
             this.dgvRooms.Cursor = System.Windows.Forms.Cursors.Default;
@@ -162,10 +161,8 @@
             this.dgvRooms.Location = new System.Drawing.Point(2, 2);
             this.dgvRooms.MainView = this.viewRooms;
             this.dgvRooms.Name = "dgvRooms";
-            this.dgvRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.bnListService});
-            this.dgvRooms.Size = new System.Drawing.Size(291, 477);
-            this.dgvRooms.TabIndex = 0;
+            this.dgvRooms.Size = new System.Drawing.Size(302, 466);
+            this.dgvRooms.TabIndex = 14;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRooms});
             // 
@@ -242,38 +239,31 @@
             this.CompanyColumn.VisibleIndex = 2;
             this.CompanyColumn.Width = 90;
             // 
-            // bnListService
-            // 
-            this.bnListService.AutoHeight = false;
-            this.bnListService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnListService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.bnListService.Name = "bnListService";
-            this.bnListService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // panelControl1
             // 
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(3, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(295, 36);
-            this.panelControl1.TabIndex = 2;
+            this.panelControl1.Size = new System.Drawing.Size(306, 35);
+            this.panelControl1.TabIndex = 12;
             // 
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.labelControl4);
             this.panelControl4.Controls.Add(this.btnSave);
             this.panelControl4.Controls.Add(this.dgvRoom_Services);
-            this.panelControl4.Location = new System.Drawing.Point(0, 36);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl4.Location = new System.Drawing.Point(315, 44);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(664, 481);
-            this.panelControl4.TabIndex = 1;
+            this.panelControl4.Size = new System.Drawing.Size(681, 470);
+            this.panelControl4.TabIndex = 5;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(350, 458);
+            this.labelControl4.Location = new System.Drawing.Point(349, 448);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(110, 13);
-            this.labelControl4.TabIndex = 2;
+            this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "Tổng Tiền các dịch vụ :";
             // 
             // btnSave
@@ -281,25 +271,21 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(5, 454);
+            this.btnSave.Location = new System.Drawing.Point(5, 442);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 23);
-            this.btnSave.TabIndex = 1;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvRoom_Services
             // 
-            this.dgvRoom_Services.Location = new System.Drawing.Point(-1, -1);
+            this.dgvRoom_Services.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRoom_Services.Location = new System.Drawing.Point(2, 2);
             this.dgvRoom_Services.MainView = this.viewRoom_Services;
             this.dgvRoom_Services.Name = "dgvRoom_Services";
-            this.dgvRoom_Services.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemTextEdit1,
-            this.repositoryItemTextEdit2,
-            this.repositoryItemTextEdit3,
-            this.btnDelete});
-            this.dgvRoom_Services.Size = new System.Drawing.Size(642, 477);
-            this.dgvRoom_Services.TabIndex = 0;
+            this.dgvRoom_Services.Size = new System.Drawing.Size(677, 466);
+            this.dgvRoom_Services.TabIndex = 6;
             this.dgvRoom_Services.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRoom_Services});
             // 
@@ -385,14 +371,6 @@
             this.Quantity.VisibleIndex = 1;
             this.Quantity.Width = 63;
             // 
-            // repositoryItemTextEdit3
-            // 
-            this.repositoryItemTextEdit3.AutoHeight = false;
-            this.repositoryItemTextEdit3.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit3.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit3.MaxLength = 7;
-            this.repositoryItemTextEdit3.Name = "repositoryItemTextEdit3";
-            // 
             // Unit
             // 
             this.Unit.AppearanceCell.Options.UseTextOptions = true;
@@ -446,17 +424,7 @@
             this.Cost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.Cost.FieldName = "Cost";
             this.Cost.Name = "Cost";
-            this.Cost.Visible = true;
-            this.Cost.VisibleIndex = 4;
             this.Cost.Width = 94;
-            // 
-            // repositoryItemTextEdit2
-            // 
-            this.repositoryItemTextEdit2.AutoHeight = false;
-            this.repositoryItemTextEdit2.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit2.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit2.MaxLength = 10;
-            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
             // VAT
             // 
@@ -468,21 +436,13 @@
             this.VAT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.VAT.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.VAT.Caption = "VAT";
-            this.VAT.ColumnEdit = this.repositoryItemTextEdit1;
+            this.VAT.ColumnEdit = this.repositoryItemTextEdit3;
             this.VAT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.VAT.FieldName = "PercentTax";
             this.VAT.Name = "VAT";
             this.VAT.Visible = true;
-            this.VAT.VisibleIndex = 5;
+            this.VAT.VisibleIndex = 4;
             this.VAT.Width = 41;
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit1.MaxLength = 3;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // Sum
             // 
@@ -505,7 +465,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Sum", "{0:0,0}")});
             this.Sum.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.Sum.Visible = true;
-            this.Sum.VisibleIndex = 6;
+            this.Sum.VisibleIndex = 5;
             this.Sum.Width = 126;
             // 
             // gridColumn1
@@ -521,35 +481,26 @@
             this.gridColumn1.ColumnEdit = this.btnDelete;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 7;
+            this.gridColumn1.VisibleIndex = 6;
             this.gridColumn1.Width = 47;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoHeight = false;
-            this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);
             // 
             // panelControl3
             // 
             this.panelControl3.Controls.Add(this.dtpDate);
+            this.panelControl3.Controls.Add(this.lbCurrentRoom);
             this.panelControl3.Controls.Add(this.labelControl3);
             this.panelControl3.Controls.Add(this.labelControl1);
-            this.panelControl3.Controls.Add(this.lbCurrentRoom);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(0, 0);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(315, 3);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(647, 36);
-            this.panelControl3.TabIndex = 0;
+            this.panelControl3.Size = new System.Drawing.Size(681, 35);
+            this.panelControl3.TabIndex = 1;
             // 
             // dtpDate
             // 
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDate.EditValue = null;
-            this.dtpDate.Location = new System.Drawing.Point(431, 5);
+            this.dtpDate.Location = new System.Drawing.Point(538, 7);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -564,7 +515,16 @@
             this.dtpDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpDate.Size = new System.Drawing.Size(138, 20);
-            this.dtpDate.TabIndex = 50;
+            this.dtpDate.TabIndex = 4;
+            // 
+            // lbCurrentRoom
+            // 
+            this.lbCurrentRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lbCurrentRoom.Location = new System.Drawing.Point(90, 9);
+            this.lbCurrentRoom.Name = "lbCurrentRoom";
+            this.lbCurrentRoom.Size = new System.Drawing.Size(74, 17);
+            this.lbCurrentRoom.TabIndex = 2;
+            this.lbCurrentRoom.Text = "Phòng số :";
             // 
             // labelControl3
             // 
@@ -576,38 +536,20 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(291, 6);
+            this.labelControl1.Location = new System.Drawing.Point(398, 8);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(134, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Ngày dùng dịch vụ:";
-            // 
-            // lbCurrentRoom
-            // 
-            this.lbCurrentRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lbCurrentRoom.Location = new System.Drawing.Point(49, 6);
-            this.lbCurrentRoom.Name = "lbCurrentRoom";
-            this.lbCurrentRoom.Size = new System.Drawing.Size(74, 17);
-            this.lbCurrentRoom.TabIndex = 0;
-            this.lbCurrentRoom.Text = "Phòng số :";
-            // 
-            // panelControl5
-            // 
-            this.panelControl5.Controls.Add(this.panelControl7);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(953, 0);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(297, 517);
-            this.panelControl5.TabIndex = 2;
             // 
             // panelControl7
             // 
             this.panelControl7.Controls.Add(this.dgvServices);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl7.Location = new System.Drawing.Point(2, 2);
+            this.panelControl7.Location = new System.Drawing.Point(1002, 44);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(293, 513);
-            this.panelControl7.TabIndex = 1;
+            this.panelControl7.Size = new System.Drawing.Size(245, 470);
+            this.panelControl7.TabIndex = 9;
             // 
             // dgvServices
             // 
@@ -615,10 +557,8 @@
             this.dgvServices.Location = new System.Drawing.Point(2, 2);
             this.dgvServices.MainView = this.viewServices;
             this.dgvServices.Name = "dgvServices";
-            this.dgvServices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.bnAddService});
-            this.dgvServices.Size = new System.Drawing.Size(289, 509);
-            this.dgvServices.TabIndex = 0;
+            this.dgvServices.Size = new System.Drawing.Size(241, 466);
+            this.dgvServices.TabIndex = 10;
             this.dgvServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServices});
             // 
@@ -652,15 +592,6 @@
             this.gridColumn10.VisibleIndex = 0;
             this.gridColumn10.Width = 54;
             // 
-            // bnAddService
-            // 
-            this.bnAddService.AutoHeight = false;
-            this.bnAddService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.bnAddService.Name = "bnAddService";
-            this.bnAddService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.bnAddService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAddService_ButtonClick);
-            // 
             // NameService
             // 
             this.NameService.AppearanceCell.Options.UseTextOptions = true;
@@ -678,13 +609,51 @@
             this.NameService.VisibleIndex = 1;
             this.NameService.Width = 195;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panelControl4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelControl6, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelControl7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelControl3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelControl2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelControl1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1250, 517);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.dgvRooms);
+            this.panelControl2.Cursor = System.Windows.Forms.Cursors.No;
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(3, 44);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(306, 470);
+            this.panelControl2.TabIndex = 13;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl6.Location = new System.Drawing.Point(1002, 3);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(245, 35);
+            this.panelControl6.TabIndex = 11;
+            // 
             // frmTsk_UseServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 517);
-            this.Controls.Add(this.panelControl5);
-            this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -693,45 +662,40 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sử Dụng Dịch Vụ";
             this.Load += new System.EventHandler(this.frmTsk_UseServices_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPercenTax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRooms)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnListService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom_Services)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewRoom_Services)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
+        //private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.GridControl dgvRoom_Services;
@@ -746,18 +710,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn Unit;
         private DevExpress.XtraGrid.Columns.GridColumn CostRef;
         private DevExpress.XtraGrid.Columns.GridColumn Cost;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraGrid.Columns.GridColumn VAT;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraGrid.GridControl dgvServices;
         private DevExpress.XtraGrid.Views.Grid.GridView viewServices;
         private DevExpress.XtraGrid.Columns.GridColumn NameService;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnAddService;
         private DevExpress.XtraGrid.GridControl dgvRooms;
         private DevExpress.XtraGrid.Views.Grid.GridView viewRooms;
         private DevExpress.XtraGrid.Columns.GridColumn SkuColumn;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnListService;
         private DevExpress.XtraGrid.Columns.GridColumn Sum;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerColumn;
@@ -765,13 +726,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn CodeRoom;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtQuantity;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtPercenTax;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraEditors.DateEdit dtpDate;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnAddService;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
 
     }
 }

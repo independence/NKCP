@@ -35,10 +35,9 @@
             this.lblResult = new DevExpress.XtraEditors.LabelControl();
             this.btnPrintPerformance = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnCaculate = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dtpTo = new DevExpress.XtraEditors.DateEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dgvEfficiency = new DevExpress.XtraGrid.GridControl();
@@ -50,7 +49,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEfficiency)).BeginInit();
@@ -60,22 +58,21 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 545F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 3);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dgvEfficiency, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.dgvEfficiency, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(545, 679);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
@@ -88,33 +85,31 @@
             this.tableLayoutPanel4.Controls.Add(this.lblResult, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnPrintPerformance, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 628);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 614);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(539, 47);
-            this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(539, 61);
+            this.tableLayoutPanel4.TabIndex = 8;
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(61, 15);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(61, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(58, 22);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(192, 17);
-            this.labelControl1.TabIndex = 1;
+            this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "Hiệu Suất Nhà Khách (%) : ";
             // 
             // lblResult
             // 
             this.lblResult.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblResult.Location = new System.Drawing.Point(276, 17);
-            this.lblResult.Margin = new System.Windows.Forms.Padding(23, 4, 3, 4);
+            this.lblResult.Location = new System.Drawing.Point(256, 24);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(17, 13);
-            this.lblResult.TabIndex = 2;
+            this.lblResult.TabIndex = 10;
             this.lblResult.Text = "Null";
             // 
             // btnPrintPerformance
@@ -123,42 +118,34 @@
             this.btnPrintPerformance.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintPerformance.Appearance.Options.UseFont = true;
             this.btnPrintPerformance.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPerformance.Image")));
-            this.btnPrintPerformance.Location = new System.Drawing.Point(441, 7);
-            this.btnPrintPerformance.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
+            this.btnPrintPerformance.Location = new System.Drawing.Point(432, 15);
             this.btnPrintPerformance.Name = "btnPrintPerformance";
-            this.btnPrintPerformance.Size = new System.Drawing.Size(87, 32);
-            this.btnPrintPerformance.TabIndex = 5;
+            this.btnPrintPerformance.Size = new System.Drawing.Size(85, 30);
+            this.btnPrintPerformance.TabIndex = 11;
             this.btnPrintPerformance.Text = "In";
             this.btnPrintPerformance.Click += new System.EventHandler(this.btnPrintPerformance_Click);
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.95011F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.92408F));
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Controls.Add(this.btnCaculate, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelControl3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCaculate, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpFrom, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dtpTo, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelControl2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 46);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(29, 14);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(29, 4, 3, 4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(57, 17);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Từ ngày";
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 59);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // btnCaculate
             // 
@@ -166,19 +153,28 @@
             this.btnCaculate.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaculate.Appearance.Options.UseFont = true;
             this.btnCaculate.Image = ((System.Drawing.Image)(resources.GetObject("btnCaculate.Image")));
-            this.btnCaculate.Location = new System.Drawing.Point(367, 7);
-            this.btnCaculate.Margin = new System.Windows.Forms.Padding(17, 4, 3, 4);
+            this.btnCaculate.Location = new System.Drawing.Point(377, 14);
             this.btnCaculate.Name = "btnCaculate";
-            this.btnCaculate.Size = new System.Drawing.Size(128, 32);
-            this.btnCaculate.TabIndex = 5;
+            this.btnCaculate.Size = new System.Drawing.Size(150, 30);
+            this.btnCaculate.TabIndex = 6;
             this.btnCaculate.Text = "Tính hiệu suất";
             this.btnCaculate.Click += new System.EventHandler(this.btnCaculate_Click);
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(11, 21);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(57, 17);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "Từ ngày";
+            // 
             // dtpFrom
             // 
-            this.dtpFrom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(122, 13);
+            this.dtpFrom.Location = new System.Drawing.Point(83, 19);
             this.dtpFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -191,31 +187,14 @@
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpFrom.Size = new System.Drawing.Size(212, 20);
-            this.dtpFrom.TabIndex = 5;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel2.Controls.Add(this.dtpTo, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl2, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 58);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(539, 46);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.dtpFrom.Size = new System.Drawing.Size(100, 20);
+            this.dtpFrom.TabIndex = 3;
             // 
             // dtpTo
             // 
-            this.dtpTo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(122, 13);
+            this.dtpTo.Location = new System.Drawing.Point(270, 19);
             this.dtpTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -228,30 +207,29 @@
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpTo.Size = new System.Drawing.Size(212, 20);
-            this.dtpTo.TabIndex = 6;
+            this.dtpTo.Size = new System.Drawing.Size(100, 20);
+            this.dtpTo.TabIndex = 5;
             // 
             // labelControl2
             // 
-            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(29, 14);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(29, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(194, 21);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Đến ngày";
             // 
             // dgvEfficiency
             // 
             this.dgvEfficiency.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEfficiency.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvEfficiency.Location = new System.Drawing.Point(3, 112);
+            this.dgvEfficiency.Location = new System.Drawing.Point(3, 71);
             this.dgvEfficiency.MainView = this.grvEfficiency;
             this.dgvEfficiency.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEfficiency.Name = "dgvEfficiency";
-            this.dgvEfficiency.Size = new System.Drawing.Size(539, 508);
-            this.dgvEfficiency.TabIndex = 0;
+            this.dgvEfficiency.Size = new System.Drawing.Size(539, 535);
+            this.dgvEfficiency.TabIndex = 7;
             this.dgvEfficiency.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvEfficiency});
             // 
@@ -328,8 +306,6 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEfficiency)).EndInit();
@@ -349,7 +325,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.SimpleButton btnCaculate;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblResult;

@@ -68,7 +68,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
-            this.btnAdd.TabIndex = 1;
+            this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Cập nhật";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -79,7 +79,7 @@
             this.labelControl6.Location = new System.Drawing.Point(12, 257);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(46, 16);
-            this.labelControl6.TabIndex = 10;
+            this.labelControl6.TabIndex = 14;
             this.labelControl6.Text = "Disable";
             // 
             // cbbDisable
@@ -96,7 +96,7 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(171, 20);
-            this.cbbDisable.TabIndex = 23;
+            this.cbbDisable.TabIndex = 15;
             // 
             // cbbStatus
             // 
@@ -114,7 +114,7 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(171, 20);
-            this.cbbStatus.TabIndex = 22;
+            this.cbbStatus.TabIndex = 13;
             // 
             // labelControl4
             // 
@@ -123,7 +123,7 @@
             this.labelControl4.Location = new System.Drawing.Point(12, 214);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(71, 17);
-            this.labelControl4.TabIndex = 9;
+            this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Trạng thái";
             // 
             // labelControl3
@@ -133,7 +133,7 @@
             this.labelControl3.Location = new System.Drawing.Point(12, 173);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(28, 17);
-            this.labelControl3.TabIndex = 8;
+            this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Loại";
             // 
             // cbbType
@@ -152,7 +152,7 @@
             "3",
             "4"});
             this.cbbType.Size = new System.Drawing.Size(171, 20);
-            this.cbbType.TabIndex = 21;
+            this.cbbType.TabIndex = 11;
             // 
             // txtPageURL
             // 
@@ -160,7 +160,7 @@
             this.txtPageURL.Location = new System.Drawing.Point(92, 130);
             this.txtPageURL.Name = "txtPageURL";
             this.txtPageURL.Size = new System.Drawing.Size(171, 20);
-            this.txtPageURL.TabIndex = 20;
+            this.txtPageURL.TabIndex = 9;
             // 
             // labelControl2
             // 
@@ -169,7 +169,7 @@
             this.labelControl2.Location = new System.Drawing.Point(12, 132);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 16);
-            this.labelControl2.TabIndex = 7;
+            this.labelControl2.TabIndex = 8;
             this.labelControl2.Text = "PageURL";
             // 
             // labelControl1
@@ -188,7 +188,7 @@
             this.txtName.Location = new System.Drawing.Point(92, 90);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(171, 20);
-            this.txtName.TabIndex = 19;
+            this.txtName.TabIndex = 7;
             // 
             // lueIDPermit
             // 
@@ -202,7 +202,7 @@
             this.lueIDPermit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueIDPermit.Size = new System.Drawing.Size(171, 20);
-            this.lueIDPermit.TabIndex = 18;
+            this.lueIDPermit.TabIndex = 5;
             // 
             // labelControl5
             // 
@@ -211,7 +211,7 @@
             this.labelControl5.Location = new System.Drawing.Point(12, 52);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(60, 16);
-            this.labelControl5.TabIndex = 5;
+            this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "ID Permit";
             // 
             // labelControl7
@@ -221,7 +221,7 @@
             this.labelControl7.Location = new System.Drawing.Point(12, 12);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(14, 16);
-            this.labelControl7.TabIndex = 24;
+            this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "ID";
             // 
             // lblIDPermitDetail
@@ -232,7 +232,7 @@
             this.lblIDPermitDetail.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
             this.lblIDPermitDetail.Name = "lblIDPermitDetail";
             this.lblIDPermitDetail.Size = new System.Drawing.Size(22, 16);
-            this.lblIDPermitDetail.TabIndex = 25;
+            this.lblIDPermitDetail.TabIndex = 3;
             this.lblIDPermitDetail.Text = "Null";
             // 
             // tableLayoutPanel4
@@ -249,7 +249,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(296, 39);
-            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.TabIndex = 16;
             // 
             // tableLayoutPanel6
             // 
@@ -300,7 +300,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(296, 362);
-            this.tableLayoutPanel7.TabIndex = 2;
+            this.tableLayoutPanel7.TabIndex = 0;
             // 
             // frmUpd_PermitDetail
             // 

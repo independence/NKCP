@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.06667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(970, 375);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvCustomer
             // 
@@ -93,8 +93,10 @@
             this.gridColumn9});
             this.grvCustomer.GridControl = this.dgvCustomer;
             this.grvCustomer.Name = "grvCustomer";
+            this.grvCustomer.OptionsFind.AlwaysVisible = true;
             this.grvCustomer.OptionsView.EnableAppearanceOddRow = true;
             this.grvCustomer.OptionsView.ShowFooter = true;
+            this.grvCustomer.OptionsView.ShowGroupPanel = false;
             this.grvCustomer.RowHeight = 25;
             // 
             // gridColumn1
@@ -253,31 +255,30 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.97925F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.83402F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.97925F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.Controls.Add(this.btnShowForeign, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSendMail, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 328);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(964, 44);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnShowForeign
             // 
-            this.btnShowForeign.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnShowForeign.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnShowForeign.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowForeign.Appearance.Options.UseFont = true;
             this.btnShowForeign.Image = ((System.Drawing.Image)(resources.GetObject("btnShowForeign.Image")));
-            this.btnShowForeign.Location = new System.Drawing.Point(542, 10);
-            this.btnShowForeign.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
+            this.btnShowForeign.Location = new System.Drawing.Point(695, 8);
             this.btnShowForeign.Name = "btnShowForeign";
-            this.btnShowForeign.Size = new System.Drawing.Size(116, 23);
-            this.btnShowForeign.TabIndex = 9;
+            this.btnShowForeign.Size = new System.Drawing.Size(120, 28);
+            this.btnShowForeign.TabIndex = 3;
             this.btnShowForeign.Text = "Xuất file DBF";
             this.btnShowForeign.Click += new System.EventHandler(this.btnShowForeign_Click);
             // 
@@ -287,11 +288,10 @@
             this.btnSendMail.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendMail.Appearance.Options.UseFont = true;
             this.btnSendMail.Image = ((System.Drawing.Image)(resources.GetObject("btnSendMail.Image")));
-            this.btnSendMail.Location = new System.Drawing.Point(685, 10);
-            this.btnSendMail.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
+            this.btnSendMail.Location = new System.Drawing.Point(821, 8);
             this.btnSendMail.Name = "btnSendMail";
-            this.btnSendMail.Size = new System.Drawing.Size(92, 23);
-            this.btnSendMail.TabIndex = 10;
+            this.btnSendMail.Size = new System.Drawing.Size(120, 28);
+            this.btnSendMail.TabIndex = 4;
             this.btnSendMail.Text = "Gửi Email";
             this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
             // 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_SplitBill_Step2));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgvRooms = new DevExpress.XtraGrid.GridControl();
@@ -184,7 +184,7 @@
             this.chkDisable,
             this.txtChooseRooms});
             this.dgvRooms.Size = new System.Drawing.Size(912, 197);
-            this.dgvRooms.TabIndex = 3;
+            this.dgvRooms.TabIndex = 11;
             this.dgvRooms.UseEmbeddedNavigator = true;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRooms});
@@ -327,7 +327,7 @@
             // 
             this.btnEditRoom.AutoHeight = false;
             this.btnEditRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnEditRoom.Name = "btnEditRoom";
             this.btnEditRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -335,7 +335,7 @@
             // 
             this.btnDeleteRoom.AutoHeight = false;
             this.btnDeleteRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -381,7 +381,7 @@
             this.dgvServicesR.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtChooseService});
             this.dgvServicesR.Size = new System.Drawing.Size(912, 198);
-            this.dgvServicesR.TabIndex = 15;
+            this.dgvServicesR.TabIndex = 12;
             this.dgvServicesR.UseEmbeddedNavigator = true;
             this.dgvServicesR.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServices,
@@ -557,7 +557,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(934, 612);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -606,7 +606,7 @@
             this.labelControl1.Location = new System.Drawing.Point(9, 9);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(160, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Chọn phiếu thanh toán";
             // 
             // lueIndexSub
@@ -621,7 +621,7 @@
             this.lueIndexSub.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueIndexSub.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lueIndexSub.Size = new System.Drawing.Size(62, 20);
-            this.lueIndexSub.TabIndex = 1;
+            this.lueIndexSub.TabIndex = 3;
             this.lueIndexSub.EditValueChanged += new System.EventHandler(this.lueIndexSub_EditValueChanged);
             // 
             // labelControl2
@@ -631,7 +631,7 @@
             this.labelControl2.Location = new System.Drawing.Point(349, 9);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(79, 17);
-            this.labelControl2.TabIndex = 2;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Số hóa đơn";
             // 
             // labelControl4
@@ -641,7 +641,7 @@
             this.labelControl4.Location = new System.Drawing.Point(316, 46);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(144, 17);
-            this.labelControl4.TabIndex = 4;
+            this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "Ngày ghi nhận h.đơn";
             // 
             // labelControl3
@@ -651,7 +651,7 @@
             this.labelControl3.Location = new System.Drawing.Point(45, 47);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(88, 16);
-            this.labelControl3.TabIndex = 3;
+            this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Ngày hóa đơn";
             // 
             // txtInvoiceNumber
@@ -676,25 +676,24 @@
             this.dtpAcceptDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpAcceptDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpAcceptDate.Size = new System.Drawing.Size(123, 20);
-            this.dtpAcceptDate.TabIndex = 6;
+            this.dtpAcceptDate.TabIndex = 9;
             this.dtpAcceptDate.EditValueChanged += new System.EventHandler(this.dtpAcceptDate_EditValueChanged);
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.btnPrintSplitBill, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnPayment, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(661, 577);
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.Controls.Add(this.btnPrintSplitBill, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPayment, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 576);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(270, 30);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(928, 33);
+            this.tableLayoutPanel3.TabIndex = 15;
             // 
             // btnPrintSplitBill
             // 
@@ -702,10 +701,10 @@
             this.btnPrintSplitBill.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnPrintSplitBill.Appearance.Options.UseFont = true;
             this.btnPrintSplitBill.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintSplitBill.Image")));
-            this.btnPrintSplitBill.Location = new System.Drawing.Point(132, 3);
+            this.btnPrintSplitBill.Location = new System.Drawing.Point(798, 4);
             this.btnPrintSplitBill.Name = "btnPrintSplitBill";
-            this.btnPrintSplitBill.Size = new System.Drawing.Size(114, 24);
-            this.btnPrintSplitBill.TabIndex = 0;
+            this.btnPrintSplitBill.Size = new System.Drawing.Size(120, 25);
+            this.btnPrintSplitBill.TabIndex = 17;
             this.btnPrintSplitBill.Text = "In phiếu";
             this.btnPrintSplitBill.Click += new System.EventHandler(this.btnPrintSplitBill_Click);
             // 
@@ -715,10 +714,10 @@
             this.btnPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnPayment.Appearance.Options.UseFont = true;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
-            this.btnPayment.Location = new System.Drawing.Point(3, 3);
+            this.btnPayment.Location = new System.Drawing.Point(658, 4);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(103, 23);
-            this.btnPayment.TabIndex = 0;
+            this.btnPayment.Size = new System.Drawing.Size(120, 25);
+            this.btnPayment.TabIndex = 16;
             this.btnPayment.Text = "Thanh toán";
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
@@ -729,7 +728,7 @@
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(928, 487);
-            this.xtraTabControl1.TabIndex = 3;
+            this.xtraTabControl1.TabIndex = 10;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
@@ -802,7 +801,7 @@
             this.dgvServicesHall.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtAddToSubPaymentServicesH});
             this.dgvServicesHall.Size = new System.Drawing.Size(912, 198);
-            this.dgvServicesHall.TabIndex = 16;
+            this.dgvServicesHall.TabIndex = 14;
             this.dgvServicesHall.UseEmbeddedNavigator = true;
             this.dgvServicesHall.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServicesHall,
@@ -1000,7 +999,7 @@
             this.dgvHalls.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtAddSubPaymentH});
             this.dgvHalls.Size = new System.Drawing.Size(912, 197);
-            this.dgvHalls.TabIndex = 5;
+            this.dgvHalls.TabIndex = 13;
             this.dgvHalls.UseEmbeddedNavigator = true;
             this.dgvHalls.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewHalls});

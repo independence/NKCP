@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9afbcddcaacf4c7d88890f197efc35c7" Name="Diagram1">
+      <Diagram DiagramId="ad2e38264d6c4acd9aadb2d578fe78d7" Name="Diagram1">
         <EntityTypeShape EntityType="Model.Companies" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Configs" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.CustomerGroups" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -52,22 +52,22 @@
         <EntityTypeShape EntityType="Model.ExtraCosts" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Rooms" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" Width="1.5" PointX="22.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__CertificatesInfo__SystemUsers_Certificates" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__CertificatesInfo__SystemUsers_Certificates" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__PaymentInfo__BookingRs_BookingRooms_Customers" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__PermitInfo__SystemUsers_Permits_PermitDetails" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" Width="1.5" PointX="4.4460360521665008" PointY="22.972491707174335" />
-        <EntityTypeShape EntityType="Model.vw_QueryDataPayment" Width="1.5" PointX="8.9618777395048532" PointY="18.041398474034573" />
-        <EntityTypeShape EntityType="Model.vw_Support1_DataPayment" Width="1.5" PointX="3.671367876078639" PointY="4.9254657500076418" />
-        <EntityTypeShape EntityType="Model.vw_Support2_DataPayment" Width="1.5" PointX="5.5588881157147174" PointY="3.4972608850790472" />
+        <EntityTypeShape EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_QueryDataPayment" Width="1.5" PointX="26.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_Support1_DataPayment" Width="1.5" PointX="26.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_Support2_DataPayment" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(313, 281);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // sbCreate
             // 
@@ -74,8 +74,8 @@
             this.sbCreate.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.sbCreate.Name = "sbCreate";
             this.sbCreate.Size = new System.Drawing.Size(101, 25);
-            this.sbCreate.TabIndex = 4;
-            this.sbCreate.Text = "Thêm";
+            this.sbCreate.TabIndex = 10;
+            this.sbCreate.Text = "Cập nhật";
             this.sbCreate.Click += new System.EventHandler(this.sbCreate_Click);
             // 
             // tableLayoutPanel2
@@ -102,7 +102,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(307, 238);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelControl5
             // 
@@ -112,7 +112,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(28, 17);
-            this.labelControl5.TabIndex = 4;
+            this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Loại";
             // 
             // labelControl3
@@ -123,7 +123,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 17);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Quốc tịch";
             // 
             // labelControl1
@@ -134,7 +134,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(23, 16);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Tên";
             // 
             // labelControl2
@@ -145,7 +145,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 16);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 8;
             this.labelControl2.Text = "Thông tin";
             // 
             // txtName
@@ -157,7 +157,7 @@
             this.txtName.Properties.Appearance.Options.UseTextOptions = true;
             this.txtName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtName.Size = new System.Drawing.Size(202, 20);
-            this.txtName.TabIndex = 5;
+            this.txtName.TabIndex = 3;
             // 
             // lueNationality
             // 
@@ -173,7 +173,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Quốc gia")});
             this.lueNationality.Properties.NullText = "";
             this.lueNationality.Size = new System.Drawing.Size(202, 20);
-            this.lueNationality.TabIndex = 6;
+            this.lueNationality.TabIndex = 5;
             // 
             // cbbType
             // 

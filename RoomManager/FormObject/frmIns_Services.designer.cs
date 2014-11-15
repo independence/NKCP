@@ -40,7 +40,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtCost = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cboType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtUnit = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -53,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueIDServiceGroup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCost.Properties)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +79,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 363);
-            this.tableLayoutPanel1.TabIndex = 26;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel5
             // 
@@ -97,7 +95,7 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(362, 44);
-            this.tableLayoutPanel5.TabIndex = 4;
+            this.tableLayoutPanel5.TabIndex = 12;
             // 
             // bnAdd
             // 
@@ -109,8 +107,8 @@
             this.bnAdd.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.bnAdd.Name = "bnAdd";
             this.bnAdd.Size = new System.Drawing.Size(97, 28);
-            this.bnAdd.TabIndex = 21;
-            this.bnAdd.Text = "Thêm";
+            this.bnAdd.TabIndex = 13;
+            this.bnAdd.Text = "Cập nhật";
             this.bnAdd.Click += new System.EventHandler(this.bnAdd_Click);
             // 
             // tableLayoutPanel2
@@ -119,13 +117,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.773585F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.61798F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.73034F));
+            this.tableLayoutPanel2.Controls.Add(this.cboType, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lueIDServiceGroup, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtName, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.labelControl2, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtCost, 2, 3);
             this.tableLayoutPanel2.Controls.Add(this.labelControl3, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtUnit, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelControl7, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl5, 1, 0);
@@ -139,7 +137,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(356, 288);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lueIDServiceGroup
             // 
@@ -163,7 +161,7 @@
             this.labelControl1.Location = new System.Drawing.Point(16, 134);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(86, 17);
-            this.labelControl1.TabIndex = 7;
+            this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Tên Dịch Vụ ";
             // 
             // txtName
@@ -177,7 +175,7 @@
             this.txtName.Properties.NullValuePrompt = "Nhập tối đa 250 ký tự.";
             this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 14;
+            this.txtName.TabIndex = 7;
             // 
             // labelControl2
             // 
@@ -206,7 +204,7 @@
             this.txtCost.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtCost.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCost.Size = new System.Drawing.Size(200, 20);
-            this.txtCost.TabIndex = 17;
+            this.txtCost.TabIndex = 9;
             // 
             // labelControl3
             // 
@@ -215,27 +213,14 @@
             this.labelControl3.Location = new System.Drawing.Point(16, 249);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(84, 17);
-            this.labelControl3.TabIndex = 9;
+            this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Đơn Vị Tính ";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel3.Controls.Add(this.cboType, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(124, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(229, 51);
-            this.tableLayoutPanel3.TabIndex = 21;
             // 
             // cboType
             // 
             this.cboType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboType.EditValue = "Phòng";
-            this.cboType.Location = new System.Drawing.Point(3, 15);
+            this.cboType.Location = new System.Drawing.Point(124, 18);
             this.cboType.Name = "cboType";
             this.cboType.Properties.Appearance.Options.UseTextOptions = true;
             this.cboType.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -245,7 +230,7 @@
             "Tiệc",
             "Phòng"});
             this.cboType.Size = new System.Drawing.Size(194, 20);
-            this.cboType.TabIndex = 16;
+            this.cboType.TabIndex = 3;
             // 
             // txtUnit
             // 
@@ -258,7 +243,7 @@
             this.txtUnit.Properties.NullValuePrompt = "Nhập tối đa 50 ký tự.";
             this.txtUnit.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtUnit.Size = new System.Drawing.Size(200, 20);
-            this.txtUnit.TabIndex = 14;
+            this.txtUnit.TabIndex = 11;
             // 
             // labelControl7
             // 
@@ -267,7 +252,7 @@
             this.labelControl7.Location = new System.Drawing.Point(16, 77);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(102, 17);
-            this.labelControl7.TabIndex = 13;
+            this.labelControl7.TabIndex = 4;
             this.labelControl7.Text = "Nhóm Dịch Vụ ";
             // 
             // labelControl5
@@ -277,7 +262,7 @@
             this.labelControl5.Location = new System.Drawing.Point(16, 20);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(88, 17);
-            this.labelControl5.TabIndex = 11;
+            this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "Loại Dịch Vụ ";
             // 
             // frmIns_Services
@@ -303,7 +288,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueIDServiceGroup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCost.Properties)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cboType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -326,7 +310,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private DevExpress.XtraEditors.LookUpEdit lueIDServiceGroup;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private DevExpress.XtraEditors.TextEdit txtUnit;
     }
 }
