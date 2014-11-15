@@ -47,10 +47,13 @@ namespace RoomManager
             this.IDBookingH = IDBookingH;
             xtraTabControl1.SelectedTabPageIndex = 2;
         }
-        public frmTsk_Payment_Step2(frmMain afrmMain)
+        public frmTsk_Payment_Step2(frmMain afrmMain, int IDBookingR, int IDBookingH)
         {
             InitializeComponent();
             this.afrmMain = afrmMain;
+            this.IDBookingR = IDBookingR;
+            this.IDBookingH = IDBookingH;
+            xtraTabControl1.SelectedTabPageIndex = 2;
         }
         #region Payment Hiển
        
@@ -558,6 +561,7 @@ namespace RoomManager
         {
             try
             {
+                // Khóa các chức năng phòng khi chưa chọn
                 dtpCheckInActual.Enabled = false;
                 dtpCheckOutActual.Enabled = false;
                 txtAddTimeEnd.Enabled = false;
@@ -565,9 +569,15 @@ namespace RoomManager
                 txtNumberDate.Enabled = false;
                 txtPercentTax_Room.Enabled = false;
                 txtBookingHallsCost.Enabled = false;
+                chkCheckIn.Enabled = false;
+                chkCheckOut.Enabled = false;
+                btnAddService.Enabled = false;
+               
 
                 txtBookingRoomsCost.Enabled = false;
                 txtPercentTax_Hall.Enabled = false;
+                btnAddServicesForHalls.Enabled = false;
+                lueMenus.Enabled = false;
                 this.InitData(this.IDBookingR, this.IDBookingH);
                 this.LoadData();
 
@@ -950,6 +960,9 @@ namespace RoomManager
                 txtNumberDate.Enabled = true;
                 txtPercentTax_Room.Enabled = true;
                 txtBookingRoomsCost.Enabled = true;
+                chkCheckIn.Enabled = true;
+                chkCheckOut.Enabled = true;
+                btnAddService.Enabled = true;
                
                 cbbPriceType.Properties.ReadOnly = false;
                 this.ExtraMoneyRoom = 0;               
@@ -1192,6 +1205,7 @@ namespace RoomManager
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = dtpCheckInActual.DateTime;
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+                this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, chkCheckIn.Checked, chkCheckOut.Checked);
 
                 BookingRoomUsedEN aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0];
                 if (aTemp.Status != 7 || aTemp.Status != 8)
@@ -1244,6 +1258,8 @@ namespace RoomManager
             {
                 txtBookingRoomsCost.Enabled = true;
                 txtPercentTax_Hall.Enabled = true;
+                btnAddServicesForHalls.Enabled = true;
+                lueMenus.Enabled = true;
                 this.CurrentIDBookingHall = Convert.ToInt32(viewHalls.GetFocusedRowCellValue("ID"));
                 this.LoadData();
             }
@@ -1753,8 +1769,10 @@ namespace RoomManager
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.aNewPaymentEN.Save();
+            this.aNewPaymentEN.Save();           
             MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            this.afrmMain.ReloadData();
         }
 
 
@@ -1806,16 +1824,8 @@ namespace RoomManager
 
 
         }
-
-        private void simpleButton1_Click_1(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void simpleButton1_Click_2(object sender, EventArgs e)
-        {
-            LockForm();
-        }
+       
+       
 
     }
 }

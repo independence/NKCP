@@ -75,7 +75,7 @@ namespace BussinessLogic
                     aBookingRooms.StartTime = aCheckInEN.CheckInActual;
                     aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
                     aBookingRooms.BookingStatus = 1;
-                    aBookingRooms.Type = 1; //Tính CheckIn sớm và CheckOut muộn
+                    aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
                     aBookingRooms.Status = aCheckInEN.Status;
                     aBookingRooms.PriceType = "G1";
 
