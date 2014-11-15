@@ -74,26 +74,26 @@ namespace RoomManager
                 List<CustomerGroups> aListCustomerGroups = aCustomerGroupsBO.Select_ByIDCompany(IDCompany);
                 lueIDCustomerGroup.Properties.DataSource = aListCustomerGroups;
                 lueIDCustomerGroup.Properties.DisplayMember = "Name";
-                lueIDCustomerGroup.Properties.ValueMember = "ID";
-                lueIDCustomerGroup.Enabled = false;
+                lueIDCustomerGroup.Properties.ValueMember = "ID";               
 
                 if (aListCustomerGroups.Count > 0)
                 {
-                    if (aListCustomerGroups.Where(a => a.Name == lueIDCompany.Text + " " + DateTime.Now.ToShortDateString() + "" + txtSubject.Text).ToList().Count > 0)
-                    {
-                        lueIDCustomerGroup.EditValue = aListCustomerGroups.Where(a => a.Name == lueIDCompany.Text + "" + DateTime.Now.ToShortDateString() + "" + txtSubject.Text).ToList()[0].ID;
-                    }
-                    else
-                    {
-                        CustomerGroups aTemp = new CustomerGroups();
-                        aTemp.IDCompany = IDCompany;
-                        aTemp.Name = lueIDCompany.Text + "" + DateTime.Now.ToShortDateString() + "" + txtSubject.Text;
-                        aTemp.Status = 1;
-                        aTemp.Type = 1;
-                        aTemp.Disable = false;                        
-                        int IDaTemp= aCustomerGroupsBO.Insert(aTemp);
-                        lueIDCustomerGroup.EditValue = IDaTemp;
-                    }
+                    lueIDCustomerGroup.EditValue = aListCustomerGroups.ToList()[0].ID;
+                    //if (aListCustomerGroups.Where(a => a.Name == lueIDCompany.Text + " " + DateTime.Now.ToShortDateString() + "" + txtSubject.Text).ToList().Count > 0)
+                    //{
+                    //    lueIDCustomerGroup.EditValue = aListCustomerGroups.Where(a => a.Name == lueIDCompany.Text + "" + DateTime.Now.ToShortDateString() + "" + txtSubject.Text).ToList()[0].ID;
+                    //}
+                    //else
+                    //{
+                    //    CustomerGroups aTemp = new CustomerGroups();
+                    //    aTemp.IDCompany = IDCompany;
+                    //    aTemp.Name = lueIDCompany.Text + "" + DateTime.Now.ToShortDateString() + "" + txtSubject.Text;
+                    //    aTemp.Status = 1;
+                    //    aTemp.Type = 1;
+                    //    aTemp.Disable = false;                        
+                    //    int IDaTemp= aCustomerGroupsBO.Insert(aTemp);
+                    //    lueIDCustomerGroup.EditValue = IDaTemp;
+                    //}
                 }
                 else
                 {
