@@ -227,7 +227,7 @@ namespace BussinessLogic
             }
         }
 
-        public List<BookingRStatusPayViewEN> GetListUnPayBookingR(DateTime From, DateTime To, int CustomerType, int StatusPay)
+        public List<BookingRStatusPayViewEN> GetListUnPayBookingR(DateTime From, DateTime To, int CustomerType, string StatusPay)
         {
             BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
             try
@@ -865,7 +865,7 @@ namespace BussinessLogic
         }
 
         //Hiennv
-        public List<BookingRStatusPayViewEN> GetListBookingRUnPayment(DateTime? From, DateTime? To, int? CustomerType, int? StatusPay)
+        public List<BookingRStatusPayViewEN> GetListBookingRUnPayment(DateTime? From, DateTime? To, int? CustomerType, string StatusPay)
         {
             List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> aListTemp = new List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result>();
 
@@ -886,6 +886,7 @@ namespace BussinessLogic
                 aBookingRStatusPayViewEN.IDCustomerGroup = aListTemp[i].CustomerGroups_ID;
                 aBookingRStatusPayViewEN.BookingRs_Status = aListTemp[i].BookingRs_Status;
 
+
                 int IDCompany = !String.IsNullOrEmpty(aListTemp[i].Companies_ID.ToString()) ? Convert.ToInt32(aListTemp[i].Companies_ID) : 0;
 
                 Companies aCompanies = aCompaniesBO.Select_ByID(IDCompany);
@@ -894,8 +895,9 @@ namespace BussinessLogic
                 aBookingRStatusPayViewEN.StatusPay = aListTemp[i].BookingRs_StatusPay;
                 aBookingRStatusPayViewEN.BookingMoney = aListTemp[i].BookingRs_BookingMoney;
                 
+                
                 //aBookingRStatusPayViewEN.IDBookingRoom = aListTemp[i].BookingRooms_ID;
-                //aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
+                aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
                 //aBookingRStatusPayViewEN.BookingStatus = aListTemp[i].BookingRooms_Status;
                 //aBookingRStatusPayViewEN.BookingRooms_CodeRoom = aListTemp[i].BookingRooms_CodeRoom;
 
@@ -937,6 +939,21 @@ namespace BussinessLogic
                         break;
                     default:
                         aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Chưa xác định";
+                        break;
+                }
+                 switch (aListTemp[i].BookingRs_CustomerType)
+                {
+                    case 1:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Nhà nước";
+                        break;
+                    case 2:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách đoàn";
+                        break;
+                    case 3:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách lẻ";
+                        break;
+                    default:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Chưa xác định";
                         break;
                 }
                 aListReturn.Add(aBookingRStatusPayViewEN);

@@ -60,12 +60,21 @@ namespace RoomManager
         {
             try
             {
+                string StatusPay;
                 DateTime From = dtpFrom.DateTime;
                 DateTime To = dtpTo.DateTime;
-                int StatusPay = Convert.ToInt32(lueStatusPay.EditValue);
+                if (Convert.ToInt32(lueStatusPay.EditValue) == 4)
+                {
+                    StatusPay = "1,2,3";
+                }
+                else
+                {
+                    StatusPay = lueStatusPay.EditValue.ToString();
+                }
+                
                 int CustomerType = Convert.ToInt32(lueCustomerType.EditValue);
 
-                if (StatusPay == 1 || StatusPay == 2)
+                if (StatusPay == "1" || StatusPay == "2")
                 {
                     colCodeRoom.VisibleIndex = 0;
                     colCreatedDate.VisibleIndex = 1;
@@ -79,7 +88,7 @@ namespace RoomManager
                     colChekOut.Visible = true;
                     colPrintBookingRs.Visible = false;
                 }
-                else if (StatusPay == 3)
+                else if (StatusPay == "3")
                 {
                     colCodeRoom.VisibleIndex = 0;
                     colCreatedDate.VisibleIndex = 1;
@@ -92,6 +101,7 @@ namespace RoomManager
                     colSku.VisibleIndex = 6;
                     colBookingRoom_Status.VisibleIndex = 7;
                 }
+                
                 if (this.IDBookingR == 0)
                 {
                     if (From > To)
@@ -231,7 +241,7 @@ namespace RoomManager
                 int IDBookigH = Convert.ToInt32(viewOwePay.GetFocusedRowCellValue("IDBookingH"));
 
 
-                frmTsk_Payment_Step2 afrmTsk_Payment_Goverment_Step2 = new frmTsk_Payment_Step2(this, IDBookigR, IDBookigH);
+                frmTsk_Payment_Step2 afrmTsk_Payment_Goverment_Step2 = new frmTsk_Payment_Step2(this, IDBookigR, IDBookigH,3);
                 afrmTsk_Payment_Goverment_Step2.ShowDialog();
 
             }
@@ -241,10 +251,7 @@ namespace RoomManager
             }
         }
 
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
     }
 }

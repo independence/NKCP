@@ -92,6 +92,20 @@ namespace DataAccess
         public DbSet<vw_Support1_DataPayment> vw_Support1_DataPayment { get; set; }
         public DbSet<vw_Support2_DataPayment> vw_Support2_DataPayment { get; set; }
     
+        [EdmFunction("DatabaseDA", "f_split")]
+        public virtual IQueryable<f_split_Result> f_split(string param, string delimiter)
+        {
+            var paramParameter = param != null ?
+                new ObjectParameter("param", param) :
+                new ObjectParameter("param", typeof(string));
+    
+            var delimiterParameter = delimiter != null ?
+                new ObjectParameter("delimiter", delimiter) :
+                new ObjectParameter("delimiter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<f_split_Result>("[DatabaseDA].[f_split](@param, @delimiter)", paramParameter, delimiterParameter);
+        }
+    
         [EdmFunction("DatabaseDA", "Get_Status_Room_In_Date")]
         public virtual IQueryable<Get_Status_Room_In_Date_Result> Get_Status_Room_In_Date(Nullable<System.DateTime> checkDate)
         {
@@ -153,7 +167,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_BookingRs_CheckConflict_Level_CustomerType_Result>("sp_BookingRs_CheckConflict_Level_CustomerType");
         }
     
-        public virtual ObjectResult<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(Nullable<System.DateTime> from, Nullable<System.DateTime> to, Nullable<int> customerType, Nullable<int> listStatus)
+        public virtual ObjectResult<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(Nullable<System.DateTime> from, Nullable<System.DateTime> to, Nullable<int> customerType, string listStatus)
         {
             var fromParameter = from.HasValue ?
                 new ObjectParameter("From", from) :
@@ -167,9 +181,9 @@ namespace DataAccess
                 new ObjectParameter("CustomerType", customerType) :
                 new ObjectParameter("CustomerType", typeof(int));
     
-            var listStatusParameter = listStatus.HasValue ?
+            var listStatusParameter = listStatus != null ?
                 new ObjectParameter("ListStatus", listStatus) :
-                new ObjectParameter("ListStatus", typeof(int));
+                new ObjectParameter("ListStatus", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result>("sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay", fromParameter, toParameter, customerTypeParameter, listStatusParameter);
         }

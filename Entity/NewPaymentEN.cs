@@ -551,6 +551,8 @@ namespace Entity
                        aTemp.AcceptDate = this.AcceptDate;
                        aTemp.InvoiceDate = this.InvoiceDate;                      
                        aTemp.BookingMoney = this.BookingRMoney;
+                       aTemp.PayMenthod = this.PayMenthod;
+
                        aDatabaseDA.BookingRs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
                    }
@@ -571,7 +573,8 @@ namespace Entity
                        aTemp.BookingMoney = this.BookingHMoney;
                        aTemp.InvoiceNumber = this.InvoiceNumber;
                        aTemp.AcceptDate = this.AcceptDate;
-                       aTemp.InvoiceDate = this.InvoiceDate;  
+                       aTemp.InvoiceDate = this.InvoiceDate;
+                       aTemp.PayMenthod = this.PayMenthod;
                        aDatabaseDA.BookingHs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
                    }
@@ -615,6 +618,7 @@ namespace Entity
        }
        public void ChangeInvoiceDate(DateTime InvoiceDate)
        {
+           this.InvoiceDate = InvoiceDate;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -659,6 +663,7 @@ namespace Entity
        }
        public void ChangeInvoiceNumber(string InvoiNumber)
        {
+           this.InvoiceNumber = InvoiNumber;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -702,6 +707,7 @@ namespace Entity
        }
        public void ChangeAcceptDate(DateTime AcceptDate)
        {
+           this.AcceptDate = AcceptDate;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -770,6 +776,15 @@ namespace Entity
            
            }
        }
+       public void ChangePriceType(int IDBookingRoom, string PriceType)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].PriceType = PriceType;
+
+           }
+       }
+
     }
 
 }

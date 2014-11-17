@@ -10,6 +10,8 @@ namespace Entity
     {
         public string NameCompany { get; set; }
         public string BookingRStatusPayDisplay { get; set; }
+        public string CustomerTypeDisplay { get; set; }
+
         public int IDBookingR { get; set; }
         public string Subject { get; set; }
         public Nullable<DateTime> CreatedDate { get; set; }
@@ -33,6 +35,9 @@ namespace Entity
         public Nullable<int> BookingHs_Type { get; set; }
         public Nullable<bool> BookingHs_Disable { get; set; }
         public string BookingHs_Subject { get; set; }
+        public Nullable<DateTime> CheckInActual { get; set; }
+        public Nullable<DateTime> CheckOut { get; set; }
+
     }
 
 

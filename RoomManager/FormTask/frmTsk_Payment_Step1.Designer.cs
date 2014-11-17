@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_Payment_Step1));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnGetIDBookingRAndIDCustomer = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSelect = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,6 +64,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.lueCustomerType = new DevExpress.XtraEditors.LookUpEdit();
             this.lueStatusPay = new DevExpress.XtraEditors.LookUpEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnGetIDBookingRAndIDCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSelect)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -86,7 +87,7 @@
             // 
             this.btnGetIDBookingRAndIDCustomer.AutoHeight = false;
             this.btnGetIDBookingRAndIDCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGetIDBookingRAndIDCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGetIDBookingRAndIDCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnGetIDBookingRAndIDCustomer.Name = "btnGetIDBookingRAndIDCustomer";
             this.btnGetIDBookingRAndIDCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -94,7 +95,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -135,7 +136,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1105, 40);
             this.tableLayoutPanel3.TabIndex = 6;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // labelControl2
             // 
@@ -236,6 +236,7 @@
             this.viewOwePay.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCodeRoom,
             this.colCreatedDate,
+            this.gridColumn1,
             this.colCustomer_Name,
             this.colBookingMoney,
             this.colPaymentBookingRs,
@@ -273,7 +274,7 @@
             this.colCodeRoom.OptionsColumn.ReadOnly = true;
             this.colCodeRoom.Visible = true;
             this.colCodeRoom.VisibleIndex = 0;
-            this.colCodeRoom.Width = 77;
+            this.colCodeRoom.Width = 72;
             // 
             // colCreatedDate
             // 
@@ -293,8 +294,8 @@
             this.colCreatedDate.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.colCreatedDate.OptionsColumn.ReadOnly = true;
             this.colCreatedDate.Visible = true;
-            this.colCreatedDate.VisibleIndex = 1;
-            this.colCreatedDate.Width = 93;
+            this.colCreatedDate.VisibleIndex = 3;
+            this.colCreatedDate.Width = 84;
             // 
             // colCustomer_Name
             // 
@@ -313,8 +314,8 @@
             this.colCustomer_Name.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.colCustomer_Name.OptionsColumn.ReadOnly = true;
             this.colCustomer_Name.Visible = true;
-            this.colCustomer_Name.VisibleIndex = 2;
-            this.colCustomer_Name.Width = 150;
+            this.colCustomer_Name.VisibleIndex = 4;
+            this.colCustomer_Name.Width = 135;
             // 
             // colBookingMoney
             // 
@@ -334,8 +335,8 @@
             this.colBookingMoney.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.colBookingMoney.OptionsColumn.ReadOnly = true;
             this.colBookingMoney.Visible = true;
-            this.colBookingMoney.VisibleIndex = 3;
-            this.colBookingMoney.Width = 113;
+            this.colBookingMoney.VisibleIndex = 5;
+            this.colBookingMoney.Width = 100;
             // 
             // colPaymentBookingRs
             // 
@@ -350,14 +351,14 @@
             this.colPaymentBookingRs.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.colPaymentBookingRs.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colPaymentBookingRs.Visible = true;
-            this.colPaymentBookingRs.VisibleIndex = 4;
-            this.colPaymentBookingRs.Width = 101;
+            this.colPaymentBookingRs.VisibleIndex = 6;
+            this.colPaymentBookingRs.Width = 91;
             // 
             // btnGetIDBookingRsAndIDCustomer
             // 
             this.btnGetIDBookingRsAndIDCustomer.AutoHeight = false;
             this.btnGetIDBookingRsAndIDCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGetIDBookingRsAndIDCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGetIDBookingRsAndIDCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnGetIDBookingRsAndIDCustomer.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.btnGetIDBookingRsAndIDCustomer.Name = "btnGetIDBookingRsAndIDCustomer";
             this.btnGetIDBookingRsAndIDCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -378,14 +379,14 @@
             this.colPrintBookingRs.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.colPrintBookingRs.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colPrintBookingRs.Visible = true;
-            this.colPrintBookingRs.VisibleIndex = 5;
-            this.colPrintBookingRs.Width = 95;
+            this.colPrintBookingRs.VisibleIndex = 7;
+            this.colPrintBookingRs.Width = 85;
             // 
             // btnPrintBookingRs
             // 
             this.btnPrintBookingRs.AutoHeight = false;
             this.btnPrintBookingRs.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPrintBookingRs.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPrintBookingRs.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btnPrintBookingRs.Name = "btnPrintBookingRs";
             this.btnPrintBookingRs.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnPrintBookingRs.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPrintBookingRs_ButtonClick);
@@ -406,8 +407,8 @@
             this.colSku.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.colSku.OptionsColumn.ReadOnly = true;
             this.colSku.Visible = true;
-            this.colSku.VisibleIndex = 6;
-            this.colSku.Width = 67;
+            this.colSku.VisibleIndex = 1;
+            this.colSku.Width = 62;
             // 
             // colBookingRoom_Status
             // 
@@ -425,24 +426,24 @@
             this.colBookingRoom_Status.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.colBookingRoom_Status.OptionsColumn.ReadOnly = true;
             this.colBookingRoom_Status.Visible = true;
-            this.colBookingRoom_Status.VisibleIndex = 7;
-            this.colBookingRoom_Status.Width = 79;
+            this.colBookingRoom_Status.VisibleIndex = 8;
+            this.colBookingRoom_Status.Width = 70;
             // 
             // colCheckInActual
             // 
             this.colCheckInActual.Caption = "CheckIn";
             this.colCheckInActual.Name = "colCheckInActual";
             this.colCheckInActual.Visible = true;
-            this.colCheckInActual.VisibleIndex = 8;
-            this.colCheckInActual.Width = 91;
+            this.colCheckInActual.VisibleIndex = 9;
+            this.colCheckInActual.Width = 82;
             // 
             // colCheckOutPlan
             // 
             this.colCheckOutPlan.Caption = "CO dự kiến";
             this.colCheckOutPlan.Name = "colCheckOutPlan";
             this.colCheckOutPlan.Visible = true;
-            this.colCheckOutPlan.VisibleIndex = 9;
-            this.colCheckOutPlan.Width = 91;
+            this.colCheckOutPlan.VisibleIndex = 10;
+            this.colCheckOutPlan.Width = 82;
             // 
             // colChekOut
             // 
@@ -457,14 +458,14 @@
             this.colChekOut.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.colChekOut.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colChekOut.Visible = true;
-            this.colChekOut.VisibleIndex = 10;
-            this.colChekOut.Width = 146;
+            this.colChekOut.VisibleIndex = 11;
+            this.colChekOut.Width = 143;
             // 
             // btnCheckOut
             // 
             this.btnCheckOut.AutoHeight = false;
             this.btnCheckOut.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCheckOut.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCheckOut_ButtonClick);
@@ -543,6 +544,23 @@
             this.lueStatusPay.Size = new System.Drawing.Size(123, 20);
             this.lueStatusPay.TabIndex = 5;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn1.Caption = "Loại khách hàng";
+            this.gridColumn1.FieldName = "CustomerTypeDisplay";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.Width = 97;
+            // 
             // frmTsk_Payment_Step1
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -609,5 +627,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPrintBookingRs;
         private DevExpress.XtraGrid.Columns.GridColumn colCheckInActual;
         private DevExpress.XtraGrid.Columns.GridColumn colCheckOutPlan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

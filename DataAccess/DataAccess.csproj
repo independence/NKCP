@@ -160,6 +160,9 @@
     <Compile Include="Foods.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
+    <Compile Include="f_split_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Get_Status_Room_In_Date_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>

@@ -235,7 +235,10 @@
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_StatusPay] AS [BookingHs_StatusPay], 
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_Type] AS [BookingHs_Type], 
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_Disable] AS [BookingHs_Disable], 
-      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_Subject] AS [BookingHs_Subject]
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_Subject] AS [BookingHs_Subject], 
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingRs_InvoiceNumber] AS [BookingRs_InvoiceNumber], 
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingRs_InvoiceDate] AS [BookingRs_InvoiceDate], 
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[Rooms_Sku] AS [Rooms_Sku]
       FROM [dbo].[vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers] AS [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms" EntityType="Model.Store.vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms" store:Type="Views" store:Schema="dbo" store:Name="vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms">
@@ -1818,6 +1821,9 @@
           <Property Name="BookingHs_Type" Type="int" />
           <Property Name="BookingHs_Disable" Type="bit" />
           <Property Name="BookingHs_Subject" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingRs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="BookingRs_InvoiceDate" Type="date" />
+          <Property Name="Rooms_Sku" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -2403,6 +2409,18 @@
           <Property Name="Halls_Sku" Type="nvarchar" MaxLength="50" />
           <Property Name="Halls_IDLang" Type="int" />
         </EntityType>
+        <Function Name="f_split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="param" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="delimiter" Type="char" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="val" Type="nvarchar(max)" />
+                <Property Name="seq" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="Get_Invoice_Halls_NotTax_ByIDBookingH" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDBookingH" Type="int" Mode="In" />
         </Function>
@@ -2481,7 +2499,7 @@
           <Parameter Name="From" Type="date" Mode="In" />
           <Parameter Name="To" Type="date" Mode="In" />
           <Parameter Name="CustomerType" Type="int" Mode="In" />
-          <Parameter Name="ListStatus" Type="int" Mode="In" />
+          <Parameter Name="ListStatus" Type="text" Mode="In" />
         </Function>
         <Function Name="sp_Contracts_GetCurrentHaveNotAllowances" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDAllowance" Type="int" Mode="In" />
@@ -2594,6 +2612,10 @@
           <EntitySet Name="vw_QueryDataPayment" EntityType="Model.vw_QueryDataPayment" />
           <EntitySet Name="vw_Support1_DataPayment" EntityType="Model.vw_Support1_DataPayment" />
           <EntitySet Name="vw_Support2_DataPayment" EntityType="Model.vw_Support2_DataPayment" />
+          <FunctionImport Name="f_split" ReturnType="Collection(Model.f_split_Result)" IsComposable="true">
+            <Parameter Name="param" Type="String" />
+            <Parameter Name="delimiter" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="Get_Status_Room_In_Date" ReturnType="Collection(Model.Get_Status_Room_In_Date_Result)" IsComposable="true">
             <Parameter Name="CheckDate" Type="DateTime" />
           </FunctionImport>
@@ -2615,7 +2637,7 @@
             <Parameter Name="From" Mode="In" Type="DateTime" />
             <Parameter Name="To" Mode="In" Type="DateTime" />
             <Parameter Name="CustomerType" Mode="In" Type="Int32" />
-            <Parameter Name="ListStatus" Mode="In" Type="Int32" />
+            <Parameter Name="ListStatus" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Contracts_GetCurrentHaveNotAllowances" ReturnType="Collection(Model.sp_Contracts_GetCurrentHaveNotAllowances_Result)">
             <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
@@ -2660,6 +2682,10 @@
             <Parameter Name="IDDivision" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="f_split_Result">
+          <Property Name="val" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="seq" Type="Int32" />
+        </ComplexType>
         <ComplexType Name="Get_Status_Room_In_Date_Result">
           <Property Name="DayIndex" Type="Int32" />
           <Property Name="BookingRs_ID" Type="Int32" />
@@ -3767,6 +3793,9 @@
           <Property Name="BookingHs_Type" Type="Int32" />
           <Property Name="BookingHs_Disable" Type="Boolean" />
           <Property Name="BookingHs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="BookingRs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BookingRs_InvoiceDate" Type="DateTime" Precision="0" />
+          <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms">
           <Key>
@@ -4445,6 +4474,9 @@
           <Property Type="Int32" Name="BookingHs_Type" Nullable="true" />
           <Property Type="Boolean" Name="BookingHs_Disable" Nullable="true" />
           <Property Type="String" Name="BookingHs_Subject" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="BookingRs_InvoiceNumber" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BookingRs_InvoiceDate" Nullable="true" />
+          <Property Type="String" Name="Rooms_Sku" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="sp_Contracts_GetCurrentHaveNotAllowances_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -5807,6 +5839,9 @@
                 <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
                 <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
                 <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+                <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+                <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+                <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6316,6 +6351,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionName="Model.Store.f_split" FunctionImportName="f_split">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.f_split_Result">
+                <ScalarProperty Name="val" ColumnName="val" />
+                <ScalarProperty Name="seq" ColumnName="seq" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionName="Model.Store.Get_Status_Room_In_Date" FunctionImportName="Get_Status_Room_In_Date">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model.Get_Status_Room_In_Date_Result">
@@ -6501,6 +6544,9 @@
                 <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
                 <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
                 <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+                <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+                <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+                <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
