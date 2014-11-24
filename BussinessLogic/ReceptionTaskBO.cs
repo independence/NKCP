@@ -3281,6 +3281,93 @@ namespace BussinessLogic
             }
             return aListMenus;
         }
+
+        //Linhting - Book hội trường mới
+        public int NewBookHall(NewBookingHEN aNewBookingHEN)
+        {
+            try
+            {
+                BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
+                
+
+                //Tạo BookingH mới
+                BookingHs aBookingHs = new BookingHs();
+
+                aBookingHs.CreatedDate = aNewBookingHEN.CreatedDate;
+                aBookingHs.CustomerType = aNewBookingHEN.CustomerType;
+                aBookingHs.BookingType = aNewBookingHEN.BookingType;
+                aBookingHs.Note = aNewBookingHEN.Note;
+                aBookingHs.IDGuest = 0;
+                aBookingHs.StatusPay = aNewBookingHEN.StatusPay;
+                aBookingHs.BookingMoney = aNewBookingHEN.BookingMoney;
+                aBookingHs.Status = aNewBookingHEN.Status;
+                aBookingHs.Type = aNewBookingHEN.Type;
+                aBookingHs.Disable = aNewBookingHEN.Disable;
+                aBookingHs.Level = aNewBookingHEN.Level;
+                aBookingHs.Subject = aNewBookingHEN.Subject;
+                aBookingHs.IDCustomerGroup = aNewBookingHEN.IDCustomerGroup;
+                aBookingHs.IDCustomer = aNewBookingHEN.IDCustomer;
+                aBookingHs.IDSystemUser = aNewBookingHEN.IDSystemUser;
+                aBookingHs.Description = aNewBookingHEN.Description;
+
+                //Tạo BookingHall mới
+                BookingHsBO aBookingHsBO = new BookingHsBO();
+                int IDBookingH = aBookingHsBO.InsertUnSync(aBookingHs);
+
+
+
+                BookingHallsBO aBookingHallsBO = new BookingHallsBO();
+                BookingHalls aBookingHall;
+                for (int i = 0; i < aNewBookingHEN.aListBookingHallUsed.Count; i++)
+                {
+                    aBookingHall = new BookingHalls();
+                    aBookingHall.IDBookingH = IDBookingH;
+                    aBookingHall.CodeHall = aNewBookingHEN.aListBookingHallUsed[i].CodeHall;
+                    aBookingHall.Cost = aNewBookingHEN.aListBookingHallUsed[i].Cost;
+                    aBookingHall.PercentTax = aNewBookingHEN.aListBookingHallUsed[i].PercentTax;
+                    aBookingHall.CostRef_Halls = aNewBookingHEN.aListBookingHallUsed[i].CostRef_Halls;
+                    aBookingHall.Date = aNewBookingHEN.aListBookingHallUsed[i].Date;
+                    aBookingHall.LunarDate = aNewBookingHEN.aListBookingHallUsed[i].LunarDate;
+                    aBookingHall.BookingStatus = aNewBookingHEN.aListBookingHallUsed[i].BookingStatus;
+                    aBookingHall.Unit = aNewBookingHEN.aListBookingHallUsed[i].Unit;
+                    aBookingHall.TableOrPerson = aNewBookingHEN.aListBookingHallUsed[i].TableOrPerson;
+                    aBookingHall.Note = aNewBookingHEN.aListBookingHallUsed[i].Note;
+                    aBookingHall.Status = aNewBookingHEN.aListBookingHallUsed[i].Status;
+                    aBookingHall.StartTime = aNewBookingHEN.aListBookingHallUsed[i].StartTime;
+                    aBookingHall.EndTime = aNewBookingHEN.aListBookingHallUsed[i].EndTime;
+                    aBookingHall.Location = aNewBookingHEN.aListBookingHallUsed[i].Location;
+                    aBookingHall.Color = aNewBookingHEN.aListBookingHallUsed[i].Color;
+
+                    aBookingHallsBO.InsertUnSync(aBookingHall);
+                    // Thêm dịch vụ đã chọn vào hội trường
+                    foreach (ServiceUsedEN aTemp in aNewBookingHEN.aListBookingHallUsed[i].aListServiceUsed)
+                    {
+                        BookingHalls_Services aBookingHalls_Services = new BookingHalls_Services();
+                        aBookingHalls_Services.Info = "";
+                        aBookingHalls_Services.Type = 1;
+                        aBookingHalls_Services.Status = 1;
+                        aBookingHalls_Services.Disable = false;
+                        aBookingHalls_Services.IDBookingHall = aBookingHall.ID;
+                        aBookingHalls_Services.IDService = aTemp.IDService;
+                        aBookingHalls_Services.Cost = aTemp.Cost;
+                        aBookingHalls_Services.Date = DateTime.Now;
+                        aBookingHalls_Services.CostRef_Services = aTemp.CostRef_Service;
+                        aBookingHalls_Services.PercentTax = 10;// de mac dinh
+                        aBookingHalls_Services.Quantity = aTemp.Quantity;
+                        aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
+                        
+                    }
+                }
+
+                return IDBookingH;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("ReceptionTaskBO.NewBookHall\n" + ex.ToString());
+            }
+        }
     }
 }
 

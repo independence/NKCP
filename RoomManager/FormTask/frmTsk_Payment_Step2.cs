@@ -642,8 +642,8 @@ namespace RoomManager
            
             // Thông tin hóa đơn
             txtInvoiceNumber.Text = this.aNewPaymentEN.InvoiceNumber;
-            dtpAcceptDate.DateTime = Convert.ToDateTime(this.aNewPaymentEN.AcceptDate);
-            dtpInvoiceDate.DateTime = Convert.ToDateTime(this.aNewPaymentEN.InvoiceDate);
+            dtpAcceptDate.DateTime = this.aNewPaymentEN.AcceptDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
+            dtpInvoiceDate.DateTime = this.aNewPaymentEN.InvoiceDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
             // Trang thai, hinh thuc thanh toan
             lueBookingR_Paymethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
             lueBookingR_Paymethod.Properties.DisplayMember = "Name";
@@ -1223,24 +1223,30 @@ namespace RoomManager
                     txtAddTimeStart.Enabled = true;
                     txtAddTimeEnd.Enabled = false;
                 }
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = Convert.ToDateTime(dtpCheckInActual.Text);
+                if (this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].Status == 7 || this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].Status == 8)
+                {
+                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutActual = dtpCheckOutActual.DateTime;
+
+                }
+                else
+                {
+                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutPlan = Convert.ToDateTime(dtpCheckOutActual.Text);
+
+                }
                 txtAddTimeStart.Text = aReceptionTaskBO.GetAddTimeStart(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckInActual.DateTime).ToString();
                 txtAddTimeEnd.Text = aReceptionTaskBO.GetAddTimeEnd(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime).ToString();
                   txtNumberDate.Text = (aReceptionTaskBO.GetTimeInUsed(this.CurrentIDBookingRoom,dtpCheckInActual.DateTime,dtpCheckOutActual.DateTime)).ToString();
                 
-                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = dtpCheckInActual.DateTime;
+                
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].DateUsed = Convert.ToDouble(txtNumberDate.Text);
+
                 this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, chkCheckIn.Checked, chkCheckOut.Checked);
 
                 BookingRoomUsedEN aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0];
-                if (aTemp.Status != 7 || aTemp.Status != 8)
-                {
-                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutPlan = dtpCheckOutActual.DateTime;
-                }
-                else 
-                {
-                   this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutActual = dtpCheckOutActual.DateTime;
-               }
+                
                // this.LoadData();
             }
         }
@@ -1798,7 +1804,10 @@ namespace RoomManager
             this.aNewPaymentEN.Save();           
             MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-            this.afrmMain.ReloadData();
+            if (this.afrmMain != null)
+            {
+                this.afrmMain.ReloadData();
+            }
         }
 
         private void LockForm()
@@ -1893,7 +1902,7 @@ namespace RoomManager
             this.aNewPaymentEN.PayMenthod = Convert.ToInt32(lueBookingR_Paymethod.EditValue);
         }
 
-       
+    
        
        
 

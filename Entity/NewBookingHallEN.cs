@@ -8,7 +8,7 @@ using System.Data.Entity.Migrations;
 
 namespace Entity
 {
-    public class BookingHallUsedEN :BookingHallsEN
+    public class NewBookingHallEN : BookingHallsEN
     {
         public List<MenusEN> aListMenuEN = new List<MenusEN>();
         public List<ServiceUsedEN> aListServiceUsed = new List<ServiceUsedEN>();
@@ -42,7 +42,7 @@ namespace Entity
             return Sum;
         }
         public decimal? GetOnlyMoneyHallBeforeTax()
-        {           
+        {
             decimal? HallCost;
             if (this.Cost == null)
             {
@@ -85,10 +85,10 @@ namespace Entity
         }
         public void SetCostServiceUsed(int IDBookingHallService, decimal Cost)
         {
-            if(this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList().Count > 0)
+            if (this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList().Count > 0)
             {
-            this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].Cost = Cost;
-            this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].TotalMoney = this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].GetMoneyService();
+                this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].Cost = Cost;
+                this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].TotalMoney = this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].GetMoneyService();
             }
         }
         public void SetQuantityServiceUsed(int IDBookingHallService, double Quantity)
@@ -192,8 +192,8 @@ namespace Entity
                     aTemp.IDBookingH = this.IDBookingH;
                     aTemp.IndexSubPayment = this.IndexSubPayment;
                     aTemp.AcceptDate = this.AcceptDate;
-                    aTemp.InvoiceDate = this.InvoiceDate ;
-                    aTemp.InvoiceNumber = this.InvoiceNumber; 
+                    aTemp.InvoiceDate = this.InvoiceDate;
+                    aTemp.InvoiceNumber = this.InvoiceNumber;
 
                     foreach (ServiceUsedEN item in this.aListServiceUsed)
                     {
@@ -244,7 +244,68 @@ namespace Entity
             this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].IndexSubPayment = Index;
 
         }
-       
+        public int InsertService(ServiceUsedEN aServiceUsedEN)
+        {
+            try
+            {
+                this.aListServiceUsed.Add(aServiceUsedEN);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("BookingHallUsedEN.InsertService :" + ex.Message.ToString()));
+
+            }
+        }
+        public int UpdateService(int IDService, ServiceUsedEN aServiceUsedEN)
+        {
+            try
+            {
+                if (this.aListServiceUsed.Where(a => a.IDService == IDService).ToList().Count > 0)
+                {
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].NameService = aServiceUsedEN.NameService;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].ServiceGroupName = aServiceUsedEN.ServiceGroupName;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].DateUsed = aServiceUsedEN.DateUsed;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].Quantity = aServiceUsedEN.Quantity;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].Unit = aServiceUsedEN.Unit;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].Cost = aServiceUsedEN.Cost;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].CostRef_Service = aServiceUsedEN.CostRef_Service;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].Tax = aServiceUsedEN.Tax;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].IndexSubPayment = aServiceUsedEN.StatusPay;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].InvoiceNumber = aServiceUsedEN.InvoiceNumber;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].InvoiceDate = aServiceUsedEN.InvoiceDate;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].AcceptDate = aServiceUsedEN.AcceptDate;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].TotalMoney = aServiceUsedEN.TotalMoney;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].TotalMoneyBeforeTax = aServiceUsedEN.TotalMoneyBeforeTax;
+                    this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0].IsPaid = aServiceUsedEN.IsPaid;
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("BookingHallUsedEN.UpdateService :" + ex.Message.ToString()));
+
+            }
+        }
+        public int RemoveService(int IDService)
+        {
+            try
+            {
+                if (this.aListServiceUsed.Where(a => a.IDService == IDService).ToList().Count > 0)
+                {
+                    this.aListServiceUsed.Remove(this.aListServiceUsed.Where(a => a.IDService == IDService).ToList()[0]);
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("BookingHallUsedEN.UpdateService :" + ex.Message.ToString()));
+
+            }
+        }
 
 
 

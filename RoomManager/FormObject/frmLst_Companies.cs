@@ -25,6 +25,7 @@ namespace RoomManager
 
         private frmTsk_Booking_Step2 afrmTsk_Booking_Step2 = null;
         private frmIns_CustomerGroups_Customers afrmIns_CustomerGroups_Customers_Old = null;
+        frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
         private int Type = 0;
 
         public frmLst_Companies(frmIns_CustomerGroups_Customers afrmIns_CustomerGroups_Customers)
@@ -36,6 +37,12 @@ namespace RoomManager
         {
             InitializeComponent();
             this.afrmTsk_CheckIn_Goverment_Step2 = afrmTsk_CheckIn_Goverment_Step2;
+            this.Type = Type;
+        }
+        public frmLst_Companies(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New, int Type)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
             this.Type = Type;
         }
         //hiennv
@@ -111,6 +118,10 @@ namespace RoomManager
                 {
                     this.afrmTsk_UpdBooking.CallBackIDCompany(id);
                 }
+                if (this.afrmTsk_BookingHall_Customer_New != null)
+                {
+                    this.afrmTsk_BookingHall_Customer_New.CallBackIDCompany(id);
+                }
                 this.Close();
             }
             catch (Exception ex)
@@ -159,11 +170,17 @@ namespace RoomManager
                     aListCompanies = aCompaniesBO.Select_All();
                     btnAdd.Visible = false;
                 }
+                else if (afrmTsk_BookingHall_Customer_New != null)
+                {
+                    aListCompanies = aCompaniesBO.Select_ByType(Type);
+                    btnAdd.Visible = false;
+                }
                 else
                 {
                     aListCompanies = aCompaniesBO.Select_All();
                     btnAdd.Visible = true;
                 }
+               
 
                 dgvAvailableCompanies.DataSource = aListCompanies;
             }

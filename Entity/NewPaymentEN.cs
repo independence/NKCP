@@ -548,8 +548,8 @@ namespace Entity
                        aTemp.ID = Convert.ToInt32(this.IDBookingR);
                        aTemp.Status = this.Status_BookingR;                      
                        aTemp.InvoiceNumber = this.InvoiceNumber;
-                       aTemp.AcceptDate = this.AcceptDate;
-                       aTemp.InvoiceDate = this.InvoiceDate;                      
+                       aTemp.AcceptDate = this.AcceptDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
+                       aTemp.InvoiceDate = this.InvoiceDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));                      
                        aTemp.BookingMoney = this.BookingRMoney;
                        aTemp.PayMenthod = this.PayMenthod;
 

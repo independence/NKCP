@@ -901,6 +901,12 @@ namespace RoomManager
             //aFrm.Show();
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            frmTsk_BookingHall_Customer_New aTemp = new frmTsk_BookingHall_Customer_New(this);
+            aTemp.Show();
+        }
+
 
 
 

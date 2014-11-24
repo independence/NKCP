@@ -125,5 +125,30 @@ namespace BussinessLogic
                 throw new Exception("CustomerGroups_CustomersBO.Delete:" + ex.ToString());
             }
         } 
+        //Linhting - Tự động thêm khách vào nhóm
+        public int AutoInsertCustomerToGroup(int IDCustomer, int IDCustomerGroup, DateTime From)
+        {
+            try
+            {
+                if (this.Select_ByIDCustomer_ByIDCustomerGroup(IDCustomer, IDCustomerGroup).Count > 0)
+                {
+                    return this.Select_ByIDCustomer_ByIDCustomerGroup(IDCustomer, IDCustomerGroup)[0].ID;
+                }
+                else
+                {
+                    CustomerGroups_Customers aCustomerGroups_Customers = new CustomerGroups_Customers();
+                    aCustomerGroups_Customers.IDCustomer = IDCustomer;
+                    aCustomerGroups_Customers.IDCustomerGroup = IDCustomerGroup;
+                    aCustomerGroups_Customers.FromDate = From;
+                    aCustomerGroups_Customers.Disable = false;
+                    return this.Insert(aCustomerGroups_Customers);
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception("CustomersBO.AutoInsertCustomer:" + ex.ToString());
+            }
+        }
     }
 }

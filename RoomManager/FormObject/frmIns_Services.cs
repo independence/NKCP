@@ -11,6 +11,7 @@ namespace RoomManager
     {
         #region Room
         private frmLst_Services afrmLst_Services = null;
+        private frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
 
         public frmIns_Services()
         {
@@ -20,6 +21,11 @@ namespace RoomManager
         {
             InitializeComponent();
             this.afrmLst_Services = afrmLst_Services;
+        }
+        public frmIns_Services(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
         }
         public void ReloadData()
         {
@@ -110,7 +116,10 @@ namespace RoomManager
                     {
                         this.afrmLst_Services.ReloadData();
                     }
-
+                    if (this.afrmTsk_BookingHall_Customer_New != null)
+                    {
+                        this.afrmTsk_BookingHall_Customer_New.CallBackService(aService);
+                    }
                     this.Close();
                 }
             }

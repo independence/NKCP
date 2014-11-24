@@ -562,6 +562,12 @@
     <Compile Include="FormTask\frmTsk_BookingHall_Customer.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_BookingHall_Customer_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingHall_Customer_New.Designer.cs">
+      <DependentUpon>frmTsk_BookingHall_Customer_New.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_BookingHall_Goverment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1127,6 +1133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Customer.resx">
       <DependentUpon>frmTsk_BookingHall_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Customer_New.resx">
+      <DependentUpon>frmTsk_BookingHall_Customer_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Goverment.resx">
       <DependentUpon>frmTsk_BookingHall_Goverment.cs</DependentUpon>

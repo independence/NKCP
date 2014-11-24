@@ -166,9 +166,6 @@ namespace RoomManager
             }
         }
 
-
-
-
         //Load IDCustomers 
         public void LoadCustomers()
         {
@@ -651,6 +648,8 @@ namespace RoomManager
                 lueStatusPay.EditValue = 2;// tam ung
             }
         }
+
+      
 
         
     }

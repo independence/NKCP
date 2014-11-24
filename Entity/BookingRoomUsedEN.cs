@@ -268,6 +268,7 @@ namespace Entity
                aTemp.TimeInUse = this.TimeInUse;
                aTemp.AddTimeStart = this.AddTimeStart;
                aTemp.AddTimeEnd = this.AddTimeEnd;
+               
                aTemp.Type = this.Type;
                //aTemp.Type = this.SetBookingRoomType(this.IsCheckInEarly, this.IsCheckOutLate);
 
