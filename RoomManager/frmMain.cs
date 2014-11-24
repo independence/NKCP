@@ -902,11 +902,7 @@ namespace RoomManager
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
 {
-//frmTsk_ViewAllPayment aFrm = new frmTsk_ViewAllPayment();
-Temporary merge branch 1
 
-// aFrm.Show();
-Temporary merge branch 2
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
