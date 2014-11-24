@@ -10,6 +10,7 @@ using DataAccess;
 using DevExpress.XtraRichEdit.API.Word;
 using System.Linq;
 using Library;
+using System.Globalization;
 
 
 namespace RoomManager
@@ -136,7 +137,6 @@ namespace RoomManager
 
                 //danh sach dich vu
                 this.DetailReport2.DataSource = aListServicesGroupEN;
-                colNameSku.DataBindings.Add("Text", this.DetailReport2.DataSource, "Sku");
                 colNamService.DataBindings.Add("Text", this.DetailReport2.DataSource, "ServiceGroupName");
                 colTotalMoneyBeforeTax.DataBindings.Add("Text", this.DetailReport2.DataSource, "TotalMoneyBeforeTax", "{0:0,0}");
                 colPercentTaxService.DataBindings.Add("Text", this.DetailReport2.DataSource, "DisplayMoneyTax", "{0:0,0}");
@@ -177,17 +177,18 @@ namespace RoomManager
 
 
                 //tong tien thanh toan truoc thue
-                lblTotalMoneyBookingRBeforeTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()));
+                lblTotalMoneyBookingRBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()));
                 //tien thue
                 lblTotalMoneyTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()), 10)));
                 //tong tien thanh toan sau thue
-                lblTotalMoneyBookingRBehindTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms()));
+                lblTotalMoneyBookingRBehindTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms()));
                 //So tien ung truoc
-                lblBookingMoney_BookingR.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
+                lblBookingMoney_BookingR.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
                 //so tien con lai can thanh toan
-                lblTotalMoney_BookingR.Text = String.Format("{0:0,0} (VND)", (Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
-                lblTotalMoney_BookingRString.Text = "(" + StringUtility.ConvertDecimalToString((Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney)) + ")";
+                lblTotalMoney_BookingR.Text = String.Format("{0:0,0}", (Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
+                string TotalMoney_BookingRString = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(StringUtility.ConvertDecimalToString((Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney)));
 
+                lblTotalMoney_BookingRString.Text = "(" + TotalMoney_BookingRString + ")";
 
             }
             catch (Exception ex)

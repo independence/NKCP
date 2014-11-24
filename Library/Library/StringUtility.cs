@@ -84,7 +84,8 @@ namespace Library
             string str = " ";
             bool booAm = false;
             decimal decS = 0;
-            //Tung addnew
+           
+
             try
             {
                 decS = Convert.ToDecimal(s.ToString());
