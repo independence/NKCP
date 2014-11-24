@@ -77,7 +77,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.BookingRoomsMembers.Add(bookingRoomsMembers);
-                return aDatabaseDA.SaveChanges();
+                aDatabaseDA.SaveChanges();
+                return bookingRoomsMembers.ID;
             }
             catch (Exception ex)
             {

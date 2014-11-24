@@ -87,7 +87,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.CustomerGroups_Customers.Add(customerGroups_Customers);
-                return aDatabaseDA.SaveChanges();
+                aDatabaseDA.SaveChanges();
+                return customerGroups_Customers.ID;
             }
             catch (Exception ex)
             {
