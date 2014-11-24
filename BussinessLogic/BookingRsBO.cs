@@ -94,7 +94,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.BookingRs.Add(bookingRs);
-                return aDatabaseDA.SaveChanges();
+                aDatabaseDA.SaveChanges();
+                return bookingRs.ID;
 
             }
             catch (Exception ex)

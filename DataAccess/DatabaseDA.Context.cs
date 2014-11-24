@@ -40,6 +40,7 @@ namespace DataAccess
         public DbSet<Services> Services { get; set; }
         public DbSet<SystemUsers> SystemUsers { get; set; }
         public DbSet<Permits_SystemUsers1> Permits_SystemUsers1 { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<SystemUserExts> SystemUserExts { get; set; }
         public DbSet<BookingHalls> BookingHalls { get; set; }
         public DbSet<BookingHalls_Services> BookingHalls_Services { get; set; }
@@ -114,6 +115,27 @@ namespace DataAccess
                 new ObjectParameter("CheckDate", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Get_Status_Room_In_Date_Result>("[DatabaseDA].[Get_Status_Room_In_Date](@CheckDate)", checkDateParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
         }
     
         public virtual ObjectResult<sp_BookingExt_GetAllBooking_Result> sp_BookingExt_GetAllBooking(Nullable<System.DateTime> from, Nullable<System.DateTime> to)
@@ -197,6 +219,40 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Contracts_GetCurrentHaveNotAllowances_Result>("sp_Contracts_GetCurrentHaveNotAllowances", iDAllowanceParameter);
         }
     
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
         public virtual ObjectResult<sp_Get_Status_ListRooms_In_Month_Result> sp_Get_Status_ListRooms_In_Month(Nullable<System.DateTime> checkpoint)
         {
             var checkpointParameter = checkpoint.HasValue ?
@@ -240,9 +296,57 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_HallExt_GetStatusBookingHalls_ByRankTime_Result>("sp_HallExt_GetStatusBookingHalls_ByRankTime", fromParameter, toParameter, isLunarDateParameter);
         }
     
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
         public virtual ObjectResult<sp_PaymentExt_GetAllData_Result> sp_PaymentExt_GetAllData()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_Result>("sp_PaymentExt_GetAllData");
+        }
+    
+        public virtual ObjectResult<sp_PaymentExt_GetAllData_1_Result> sp_PaymentExt_GetAllData_1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_1_Result>("sp_PaymentExt_GetAllData_1");
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
         }
     
         public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime(Nullable<int> iDRoom, Nullable<System.DateTime> now)
@@ -325,6 +429,11 @@ namespace DataAccess
                 new ObjectParameter("IDDivision", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SystemUsers_GetCurrentNotInDivision_Result>("sp_SystemUsers_GetCurrentNotInDivision", iDDivisionParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     }
 }

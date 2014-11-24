@@ -240,8 +240,10 @@ namespace RoomManager
         {
             try
             {
-                frmTsk_CheckIn_Goverment_Step1 afrmTsk_CheckIn_Goverment_Step1 = new frmTsk_CheckIn_Goverment_Step1(this);
-                afrmTsk_CheckIn_Goverment_Step1.Show();
+                frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this, 1);
+                afrmTsk_CheckIn.Show();
+                //frmTsk_CheckIn_Goverment_Step1 afrmTsk_CheckIn_Goverment_Step1 = new frmTsk_CheckIn_Goverment_Step1(this);
+                //afrmTsk_CheckIn_Goverment_Step1.Show();
             }
             catch (Exception ex)
             {
@@ -253,8 +255,10 @@ namespace RoomManager
             try
             {
 
-                frmTsk_CheckIn_Group_Step1 afrmTsk_CheckIn_Group_Step1 = new frmTsk_CheckIn_Group_Step1(this);
-                afrmTsk_CheckIn_Group_Step1.Show();
+                frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this,2);
+                afrmTsk_CheckIn.Show();
+                //frmTsk_CheckIn_Group_Step1 afrmTsk_CheckIn_Group_Step1 = new frmTsk_CheckIn_Group_Step1(this);
+                //afrmTsk_CheckIn_Group_Step1.Show();
             }
             catch (Exception ex)
             {
@@ -266,9 +270,10 @@ namespace RoomManager
         {
             try
             {
-
-                frmTsk_CheckIn_Customer_Step1 afrmTsk_CheckIn_Customer_Step1 = new frmTsk_CheckIn_Customer_Step1(this);
-                afrmTsk_CheckIn_Customer_Step1.Show();
+                frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this, 3);
+                afrmTsk_CheckIn.Show();
+                //frmTsk_CheckIn_Customer_Step1 afrmTsk_CheckIn_Customer_Step1 = new frmTsk_CheckIn_Customer_Step1(this);
+                //afrmTsk_CheckIn_Customer_Step1.Show();
 
             }
             catch (Exception ex)

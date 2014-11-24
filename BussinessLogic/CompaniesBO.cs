@@ -219,7 +219,8 @@ namespace BussinessLogic
            try
            {
                aDatabaseDA.Companies.Add(Companies);
-               return aDatabaseDA.SaveChanges();
+               aDatabaseDA.SaveChanges();
+               return Companies.ID;
            }
            catch (Exception ex)
            {

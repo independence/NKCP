@@ -244,6 +244,15 @@
     <Compile Include="sp_HallExt_GetStatusBookingHalls_ByRankTime_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_PaymentExt_GetAllData_1_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_PaymentExt_GetAllData_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
@@ -263,6 +272,9 @@
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_SystemUsers_GetCurrentNotInDivision_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
     <Compile Include="SystemUserExts.cs">

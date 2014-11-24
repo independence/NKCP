@@ -580,6 +580,12 @@
     <Compile Include="FormTask\frmTsk_BookingHall_Group.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1142,6 +1148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Group.resx">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn.resx">
+      <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step1.resx">
       <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step1.cs</DependentUpon>

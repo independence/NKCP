@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="62e31b85e2e44aa68494bc0ae18f91ca" Name="Diagram1">
+      <Diagram DiagramId="fb72eb7a901b45b8bdeb4b09ff411c22" Name="Diagram1">
         <EntityTypeShape EntityType="Model.Companies" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Configs" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.CustomerGroups" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -17,57 +17,58 @@
         <EntityTypeShape EntityType="Model.Services" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SystemUsers" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Permits_SystemUsers1" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SystemUserExts" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingHalls" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingHalls_Services" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingHs" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Foods" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Guests" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Halls" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Menus" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Menus_Foods" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Allowances" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AlternateMissions" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AuditHistories" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.CalculatorSalaries" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Certificates" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SystemUserExts" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingHalls" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingHalls_Services" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingHs" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Foods" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Guests" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Halls" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Menus" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Menus_Foods" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Allowances" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AlternateMissions" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AuditHistories" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CalculatorSalaries" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Certificates" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Contracts" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Contracts_Allowances" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Designations" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Divisions" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DocumentSystemUsers" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.FamilyMembers" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GroupTableSalaries" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.RewardAndPunishments" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SystemUserExts1" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SystemUsers_Certificates" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SystemUsers_Divisions" Width="1.5" PointX="2.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.TableSalaries" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingRooms" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingRooms_Services" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingRoomsMembers" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingRs" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.BookingRs_BookingHs" Width="1.5" PointX="20.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.CheckPoints" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.ExtraCosts" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Rooms" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__CertificatesInfo__SystemUsers_Certificates" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DocumentSystemUsers" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FamilyMembers" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GroupTableSalaries" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RewardAndPunishments" Width="1.5" PointX="2.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SystemUserExts1" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SystemUsers_Certificates" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SystemUsers_Divisions" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TableSalaries" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingRooms" Width="1.5" PointX="6.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingRooms_Services" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingRoomsMembers" Width="1.5" PointX="14.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingRs" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.BookingRs_BookingHs" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CheckPoints" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ExtraCosts" Width="1.5" PointX="20.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Rooms" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" Width="1.5" PointX="16.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__CertificatesInfo__SystemUsers_Certificates" Width="1.5" PointX="22.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__PaymentInfo__BookingRs_BookingRooms_Customers" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.vw__PermitInfo__SystemUsers_Permits_PermitDetails" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw_QueryDataPayment" Width="1.5" PointX="26.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw_Support1_DataPayment" Width="1.5" PointX="26.75" PointY="25.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vw_Support2_DataPayment" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" Width="1.5" PointX="24.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_QueryDataPayment" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_Support1_DataPayment" Width="1.5" PointX="26.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vw_Support2_DataPayment" Width="1.5" PointX="4.75" PointY="27.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
