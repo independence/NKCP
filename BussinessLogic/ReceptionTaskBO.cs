@@ -3636,6 +3636,200 @@ namespace BussinessLogic
             }
         }
 
+
+        //Hiennv     25/11/2014     Viet lai phuong thuc BookingRoom
+        public bool NewBookingRoom(NewBookingEN aNewBookingEN)
+        {
+            try
+            {
+                int IDBookingR = 0;
+                int IDCompany = 0;
+                int IDCustomerGroup = 0;
+                int IDCustomer = 0;
+
+
+                string customerType = string.Empty;
+                if (aNewBookingEN.CustomerType == 0)
+                {
+                    customerType = "Tất cả loại khác";
+                }
+                else if (aNewBookingEN.CustomerType == 1)
+                {
+                    customerType = "Khách nhà nước";
+                }
+                else if (aNewBookingEN.CustomerType == 2)
+                {
+                    customerType = "Khách đoàn";
+                }
+                else if (aNewBookingEN.CustomerType == 3)
+                {
+                    customerType = "Khách lẻ";
+                }
+                else if (aNewBookingEN.CustomerType == 4)
+                {
+                    customerType = "Khách vãng lai";
+                }
+                else if (aNewBookingEN.CustomerType == 5)
+                {
+                    customerType = "Khách bộ ngoại giao";
+                }
+                else
+                {
+                    customerType = string.Empty;
+                }
+
+                #region Them moi khach hang khi khach hang chua co
+                if (aNewBookingEN.IDCustomer > 0)
+                {
+                    IDCustomer = aNewBookingEN.IDCustomer;
+                }
+                else
+                {
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    Customers aCustomers = new Customers();
+                    if (aNewBookingEN.NameCustomer.Length > 50)
+                    {
+                        aCustomers.Name = aNewBookingEN.NameCustomer.Substring(0, 50);
+                    }
+                    else
+                    {
+                        aCustomers.Name = aNewBookingEN.NameCustomer;
+                    }
+                    IDCustomer = aCustomersBO.Insert(aCustomers);
+                }
+                #endregion
+
+                #region Them moi cong ty khi cong ty chua co
+                if (aNewBookingEN.IDCompany > 0)
+                {
+                    IDCompany = aNewBookingEN.IDCompany;
+                }
+                else
+                {
+                    CompaniesBO aCompaniesBO = new CompaniesBO();
+                    Companies aCompanies = new Companies();
+                    if (aNewBookingEN.NameCompany.Length > 250)
+                    {
+                        aCompanies.Name = aNewBookingEN.NameCompany.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCompanies.Name = aNewBookingEN.NameCompany;
+                    }
+
+                    aCompanies.TaxNumberCode = string.Empty;
+                    aCompanies.Address = string.Empty;
+                    aCompanies.Type = aNewBookingEN.CustomerType;
+                    aCompanies.Status = 1;
+                    aCompanies.Disable = false;
+                    IDCompany = aCompaniesBO.Insert(aCompanies);
+                }
+                #endregion
+
+                #region Them moi nhom vao trong cong ty
+                if (IDCompany > 0)
+                {
+                    CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                    CustomerGroups aCustomerGroups = new CustomerGroups();
+
+                    string nameGroup = "[" + customerType + "][" + aNewBookingEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+                    aCustomerGroups.IDCompany = IDCompany;
+                    if (nameGroup.Length > 250)
+                    {
+                        aCustomerGroups.Name = nameGroup.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCustomerGroups.Name = nameGroup;
+                    }
+
+                    aCustomerGroups.Type = 1;
+                    aCustomerGroups.Status = 1;
+                    aCustomerGroups.Disable = false;
+                    IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
+                }
+                #endregion
+
+                #region Them moi bookingRs
+                if (IDCustomer > 0 && IDCustomerGroup > 0)
+                {
+                    string subject = "[" + customerType + "][" + aNewBookingEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+
+                    BookingRs aBookingRs = new BookingRs();
+
+                    aBookingRs.CreatedDate = DateTime.Now;
+                    aBookingRs.CustomerType = aNewBookingEN.CustomerType;
+                    aBookingRs.BookingType = aNewBookingEN.BookingType;
+                    if (subject.Length > 250)
+                    {
+                        aBookingRs.Subject = subject.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aBookingRs.Subject = subject;
+                    }
+                    aBookingRs.IDCustomerGroup = IDCustomerGroup;
+                    aBookingRs.IDCustomer = IDCustomer;
+                    aBookingRs.IDSystemUser = aNewBookingEN.IDSystemUser;
+                    aBookingRs.PayMenthod = aNewBookingEN.PayMenthod;
+                    aBookingRs.StatusPay = aNewBookingEN.StatusPay;
+                    aBookingRs.BookingMoney = aNewBookingEN.BookingMoney;
+                    aBookingRs.ExchangeRate = aNewBookingEN.ExchangeRate;
+                    aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
+                    aBookingRs.Note = string.Empty;
+                    aBookingRs.Description = string.Empty;
+                    aBookingRs.DatePay = aNewBookingEN.CheckOutPlan;
+                    aBookingRs.DateEdit = aNewBookingEN.CheckInActual;
+                    aBookingRs.Status = aNewBookingEN.Status;
+                    aBookingRs.Type = aNewBookingEN.Type;
+                    aBookingRs.Disable = aNewBookingEN.Disable;
+
+                    //add new bookingRs
+                    BookingRsBO aBookingRsBO = new BookingRsBO();
+                    IDBookingR = aBookingRsBO.Insert(aBookingRs);
+                }
+                #endregion
+
+                #region them moi bookingRoom
+                if(IDBookingR > 0)
+                {
+                    BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                    BookingRooms aBookingRooms;
+                    for (int i = 0; i < aNewBookingEN.aListNewRoomMembers.Count; i++)
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms.IDBookingR = IDBookingR;
+                        aBookingRooms.CodeRoom = aNewBookingEN.aListNewRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aNewBookingEN.aListNewRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aNewBookingEN.aListNewRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aNewBookingEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aNewBookingEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aNewBookingEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aNewBookingEN.CheckOutActual;
+                        aBookingRooms.StartTime = aNewBookingEN.CheckInActual;
+                        aBookingRooms.EndTime = aNewBookingEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aNewBookingEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        //add new bookingRoom
+                        aBookingRoomsBO.Insert(aBookingRooms);
+
+                    }
+                }
+                #endregion
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+
     }
 }
 

@@ -199,9 +199,11 @@ namespace RoomManager
         {
             try
             {
-                frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 1);// CustomerType =1 : Nha nuoc
+                //frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 1);// CustomerType =1 : Nha nuoc
+                //afrmTsk_Booking_Step1.Show();
 
-                afrmTsk_Booking_Step1.Show();
+                frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this, 1);
+                afrmTsk_BookingForRoom.Show();
 
             }
             catch (Exception ex)
@@ -214,8 +216,10 @@ namespace RoomManager
         {
             try
             {
-                frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 2);// CustomerType =2 : Khach doan
-                afrmTsk_Booking_Step1.Show();
+                //frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 2);// CustomerType =2 : Khach doan
+                //afrmTsk_Booking_Step1.Show();
+                frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this,2);
+                afrmTsk_BookingForRoom.Show();
             }
             catch (Exception ex)
             {
@@ -227,8 +231,11 @@ namespace RoomManager
         {
             try
             {
-                frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 3);// CustomerType =3 : Khach le
-                afrmTsk_Booking_Step1.Show();
+                //frmTsk_Booking_Step1 afrmTsk_Booking_Step1 = new frmTsk_Booking_Step1(this, 3);// CustomerType =3 : Khach le
+                //afrmTsk_Booking_Step1.Show();
+
+                frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this,3);
+                afrmTsk_BookingForRoom.Show();
             }
             catch (Exception ex)
             {
