@@ -47,12 +47,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\Packet\DevExpress.XtraReports.v13.1.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

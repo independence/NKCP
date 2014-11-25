@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
+      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

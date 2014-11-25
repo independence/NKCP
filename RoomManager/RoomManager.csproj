@@ -79,10 +79,10 @@
     <Reference Include="DevExpress.XtraScheduler.v13.1.Extensions, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.dll</HintPath>
+      <HintPath>..\Library\Packet\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\RoomManager17-6\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\Library\Packet\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -101,7 +101,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TeamNet.Data.FileExport">
-      <HintPath>C:\Users\Linhting\Downloads\Compressed\TeamNetDataFileExport-0.2\Bin\TeamNet.Data.FileExport.dll</HintPath>
+      <HintPath>..\Library\Packet\TeamNet.Data.FileExport.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -580,9 +580,7 @@
     <Compile Include="FormTask\frmTsk_BookingHall_Group.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTask\frmTsk_CheckIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn.cs" />
     <Compile Include="FormTask\frmTsk_CheckIn.Designer.cs">
       <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
     </Compile>
