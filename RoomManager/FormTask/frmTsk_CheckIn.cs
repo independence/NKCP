@@ -28,12 +28,22 @@ namespace RoomManager
 
         private int customerType = 0;
 
+        //Hiennv  18/11/2014
         public frmTsk_CheckIn(frmMain afrmMain, int customerType)
         {
             InitializeComponent();
             this.afrmMain = afrmMain;
             this.customerType = customerType;
         }
+        //Hiennv  25/11/2014
+        public frmTsk_CheckIn(frmMain afrmMain,string codeRoom,int customerType)
+        {
+            InitializeComponent();
+            this.afrmMain = afrmMain;
+            this.aCurrent_CodeRoom = codeRoom;
+            this.customerType = customerType;
+        }
+
 
         //Hiennv  tạo mới   18/11/2014
         private void frmTsk_CheckIn_Load(object sender, EventArgs e)
@@ -65,6 +75,11 @@ namespace RoomManager
 
                 dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(dtpFrom.DateTime, dtpTo.DateTime);
                 dgvAvailableRooms.RefreshDataSource();
+
+                dgvSelectedRooms.DataSource = this.LoadListSelectRooms(dtpFrom.DateTime, dtpTo.DateTime);
+                dgvSelectedRooms.RefreshDataSource();
+                
+                
                 this.LoadAllListCustomers();
 
                 lueIDCompanies.Properties.DataSource = this.LoadListCompaniesByType(this.customerType);
@@ -168,6 +183,42 @@ namespace RoomManager
                 return null;
             }
         }
+        //Hiennv   25/11/2014   load ra danh sach cac phong da duoc chon
+        public List<RoomMemberEN> LoadListSelectRooms(DateTime fromDate, DateTime toDate)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
+                {
+                    
+                    List<RoomMemberEN> aListRoomMemberEN = this.aListAvaiableRooms.Where(p => p.RoomCode == this.aCurrent_CodeRoom).ToList();
+                    if (aListRoomMemberEN.Count > 0)
+                    {
+                        this.aListAvaiableRooms.Remove(aListRoomMemberEN[0]);
+
+                        dgvAvailableRooms.DataSource = this.aListAvaiableRooms;
+                        dgvAvailableRooms.RefreshDataSource();
+
+                        RoomMemberEN aRoomMemberEN = new RoomMemberEN();
+                        aRoomMemberEN.RoomSku = aListRoomMemberEN[0].RoomSku;
+                        aRoomMemberEN.RoomCode = aListRoomMemberEN[0].RoomCode;
+                        aRoomMemberEN.RoomTypeDisplay = aListRoomMemberEN[0].RoomTypeDisplay;
+                        aRoomMemberEN.RoomBed1 = aListRoomMemberEN[0].RoomBed1;
+                        aRoomMemberEN.RoomBed2 = aListRoomMemberEN[0].RoomBed2;
+                        aRoomMemberEN.RoomCostRef = aListRoomMemberEN[0].RoomCostRef;
+                        this.aCheckInEN.InsertRoom(aRoomMemberEN);
+                    }
+                    return this.aCheckInEN.aListRoomMembers;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_CheckIn.LoadListSelectRooms()\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         //Hiennv    Tạo mới     18/11/2014   Tim ra toàn bộ danh sách phòng còn trống trong khoảng thời gian tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -483,7 +534,7 @@ namespace RoomManager
                 txtNames.EditValue = string.Empty;
                 txtIdentifier1.EditValue = string.Empty;
                 dtpBirthday.EditValue = null;
-                lueGender.EditValue = null;
+                lueGender.EditValue = CORE.CONSTANTS.SelectedGender(1).ID;
                 txtTel.EditValue = string.Empty;
                 lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
 

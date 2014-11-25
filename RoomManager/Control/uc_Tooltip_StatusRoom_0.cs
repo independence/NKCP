@@ -113,23 +113,34 @@ namespace RoomManager
         //hiennv
         private void btnCheckIn_Gov_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Goverment_Step1 afrm = new frmTsk_CheckIn_Goverment_Step1(this.afrmMain, this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Goverment_Step1 afrm = new frmTsk_CheckIn_Goverment_Step1(this.afrmMain, this.Datasource.Code);
+            //afrm.Show();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,1);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
         //hiennv
         private void btnCheckIn_Group_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Group_Step1 afrm = new frmTsk_CheckIn_Group_Step1(this.afrmMain, this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Group_Step1 afrm = new frmTsk_CheckIn_Group_Step1(this.afrmMain, this.Datasource.Code);
+            //afrm.Show();
+            //this.Parent.Dispose();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,2);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
 
         //hiennv
         private void btnCheckIn_Customer_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Customer_Step1 afrm = new frmTsk_CheckIn_Customer_Step1(this.afrmMain,this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Customer_Step1 afrm = new frmTsk_CheckIn_Customer_Step1(this.afrmMain,this.Datasource.Code);
+            //afrm.Show();
+            //this.Parent.Dispose();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,3);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
 

@@ -115,8 +115,9 @@ namespace BussinessLogic
             }
             catch (Exception ex)
             {
-
+                return 0;
                 throw new Exception("BookingRsBO.Update:" + ex.ToString());
+                
             }
         }
         //----------------- Delete Customers  ------------------------------

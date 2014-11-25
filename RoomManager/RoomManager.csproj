@@ -580,7 +580,9 @@
     <Compile Include="FormTask\frmTsk_BookingHall_Group.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTask\frmTsk_CheckIn.cs" />
+    <Compile Include="FormTask\frmTsk_CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTask\frmTsk_CheckIn.Designer.cs">
       <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
     </Compile>

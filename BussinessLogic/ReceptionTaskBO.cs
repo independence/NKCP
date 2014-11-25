@@ -275,11 +275,11 @@ namespace BussinessLogic
             }
         }
 
-        public double CaculateBooking(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime StartTime, DateTime EndTime)
+        public double CaculateBooking(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime StartTime, DateTime EndTime)
         {
             try
             {
-                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)           
+                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
                 {
                     TimeSpan dis = EndTime.Subtract(StartTime);
                     double a = (dis.TotalHours) / 24;
@@ -298,7 +298,7 @@ namespace BussinessLogic
                     DateTime CheckIn = DateTime.Parse(StartTime.ToString("HH:mm"));
                     DateTime CheckOut = DateTime.Parse(EndTime.ToString("HH:mm"));
 
-                    if (aNewPayment.aListBookingRoomUsed.Where(b=> b.ID == IDBookingRoom).ToList()[0].Type == 3)//Tính checkin sớm và Checkout muộn
+                    if (aNewPayment.aListBookingRoomUsed.Where(b => b.ID == IDBookingRoom).ToList()[0].Type == 3)//Tính checkin sớm và Checkout muộn
                     {
                         CheckPointBO aCheckPointBO = new CheckPointBO();
                         List<CheckPoints> aListCheckPoint = aCheckPointBO.Select_All();
@@ -370,7 +370,7 @@ namespace BussinessLogic
                             }
 
                         }
-                                              
+
                         return a1 + addtimeEnd;
                     }
 
@@ -482,7 +482,7 @@ namespace BussinessLogic
 
                         }
 
-                        return a1 +addtimeEnd;
+                        return a1 + addtimeEnd;
                     }
 
                 }
@@ -504,7 +504,7 @@ namespace BussinessLogic
                 double addtimeStart = 0;
                 if (aBookingRooms != null)
                 {
-                                       
+
                     DateTime CheckIn = DateTime.Parse(StartTime.ToString("HH:mm"));
 
                     if (aBookingRooms.Type == 3)//Tính checkin sớm và Checkout muộn
@@ -519,7 +519,7 @@ namespace BussinessLogic
                                 {
                                     addtimeStart = aListCheckPoint[i].AddTime;
                                 }
-                            }                        
+                            }
 
                         }
                     }
@@ -542,10 +542,10 @@ namespace BussinessLogic
                             }
                         }
 
-                        return addtimeStart;                        
-                    }               
+                        return addtimeStart;
+                    }
                 }
-                return addtimeStart;  
+                return addtimeStart;
             }
             catch (Exception ex)
             {
@@ -561,8 +561,8 @@ namespace BussinessLogic
                 BookingRooms aBookingRooms = aBookingRoomsBO.Select_ByID(IDBookingRoom);
                 double addtimeEnd = 0;
                 if (aBookingRooms != null)
-                {                  
-                    
+                {
+
                     DateTime CheckOut = DateTime.Parse(EndTime.ToString("HH:mm"));
 
                     if (aBookingRooms.Type == 3)//Tính checkin sớm và Checkout muộn
@@ -570,7 +570,7 @@ namespace BussinessLogic
                         CheckPointBO aCheckPointBO = new CheckPointBO();
                         List<CheckPoints> aListCheckPoint = aCheckPointBO.Select_All();
                         for (int i = 0; i < aListCheckPoint.Count; i++)
-                        {                        
+                        {
                             if (aListCheckPoint[i].Type == 2) // CheckOut muon
                             {
                                 if (aListCheckPoint[i].From <= CheckOut.TimeOfDay && CheckOut.TimeOfDay <= aListCheckPoint[i].To)
@@ -583,12 +583,12 @@ namespace BussinessLogic
 
 
                         return addtimeEnd;
-                       
+
                     }
                     else if (aBookingRooms.Type == 0) //Không tính checkIn sớm và checkout muộn.
                     {
                         return addtimeEnd;
-                    }                  
+                    }
                     else if (aBookingRooms.Type == 1) //Không tính checkin sớm ,tính checkout muộn
                     {
                         CheckPointBO aCheckPointBO = new CheckPointBO();
@@ -627,7 +627,7 @@ namespace BussinessLogic
                 {
                     TimeSpan dis = EndTime.Subtract(StartTime);
                     double a = (dis.TotalHours) / 24;
-                    
+
                     if (a < 1)
                     {
                         a1 = Math.Floor(a);
@@ -636,7 +636,7 @@ namespace BussinessLogic
                     {
                         a1 = Math.Round(a);
                     }
-                    
+
                 }
                 return a1;
             }
@@ -646,12 +646,11 @@ namespace BussinessLogic
             }
         }
 
-        public double GetAddTimeStart(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime StartTime)
+        public double GetAddTimeStart(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime StartTime)
         {
             try
             {
-                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)          
-                
+                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
                 {
 
                     double addtimeStart = 0;
@@ -706,7 +705,7 @@ namespace BussinessLogic
             }
         }
 
-        public double GetAddTimeEnd(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime EndTime)
+        public double GetAddTimeEnd(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime EndTime)
         {
             try
             {
@@ -770,7 +769,7 @@ namespace BussinessLogic
             }
         }
 
-    
+
         //List service
         public List<ServicesEN> GetListService_ByIDBookingRoom(int IDBookingRoom)
         {
@@ -827,7 +826,7 @@ namespace BussinessLogic
                 List<ServicesEN> aListReturn = new List<ServicesEN>();
                 ServicesEN aServicesEN;
                 RoomsBO aRoomsBO = new RoomsBO();
-                
+
                 for (int i = 0; i < aListTemp.Count; i++)
                 {
                     aServicesEN = new ServicesEN();
@@ -894,8 +893,8 @@ namespace BussinessLogic
                 aBookingRStatusPayViewEN.CustomerGroups_Name = aListTemp[i].CustomerGroups_Name;
                 aBookingRStatusPayViewEN.StatusPay = aListTemp[i].BookingRs_StatusPay;
                 aBookingRStatusPayViewEN.BookingMoney = aListTemp[i].BookingRs_BookingMoney;
-                
-                
+
+
                 //aBookingRStatusPayViewEN.IDBookingRoom = aListTemp[i].BookingRooms_ID;
                 aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
                 //aBookingRStatusPayViewEN.BookingStatus = aListTemp[i].BookingRooms_Status;
@@ -941,7 +940,7 @@ namespace BussinessLogic
                         aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Chưa xác định";
                         break;
                 }
-                 switch (aListTemp[i].BookingRs_CustomerType)
+                switch (aListTemp[i].BookingRs_CustomerType)
                 {
                     case 1:
                         aBookingRStatusPayViewEN.CustomerTypeDisplay = "Nhà nước";
@@ -2166,7 +2165,7 @@ namespace BussinessLogic
                                         select new BookingHallDetailEN()
                                         {
 
-                                            IDBookingH = aBookingHs.ID,                                           
+                                            IDBookingH = aBookingHs.ID,
                                             CustomerType = aBookingHs.CustomerType,
                                             ID = aBookingHalls.ID,
                                             NameCustomerGroup = aCustomerGroups.Name,
@@ -2795,7 +2794,7 @@ namespace BussinessLogic
                                         where aBookingHalls.ID == IDBookingHall
                                         select new ServicesHallsEN()
                                         {
-                                            IDBookingHallService=aBookingHalls_Services.ID,
+                                            IDBookingHallService = aBookingHalls_Services.ID,
                                             IDBookingHall = aBookingHalls.ID,
                                             CodeHall = aBookingHalls.CodeHall,
                                             SkuHall = aHalls.Sku,
@@ -3004,7 +3003,7 @@ namespace BussinessLogic
                 {
                     aTemp = new AllBookingEN();
                     aTemp.SetValue(item);
-                   
+
                     switch (aTemp.StatusPay)
                     {
                         case 1:
@@ -3019,7 +3018,7 @@ namespace BussinessLogic
                         case 4:
                             aTemp.StatusPayDisplay = "Bao cấp";
                             break;
-                        default :
+                        default:
                             aTemp.StatusPayDisplay = "Tiền mặt";
                             break;
                     }
@@ -3108,38 +3107,38 @@ namespace BussinessLogic
         //Hiennv        31/08/2014           Thanh toan le cho phong
         public void SplitPaymentForBookingR(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms, List<ServiceUsedEN> aListServicesR)
         {
-            try 
+            try
             {
-                    
-                    foreach (ServiceUsedEN aServicesEN in aListServicesR)
-                    {
 
-                        aServicesEN.StatusPay = 8;
-                        aServicesEN.Save(1);                        
-                    }
-                    BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
-                    foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
-                    {
-                       
-                            aBookingRoomUsedEN.Status = 8;//da thanh toan
-                            aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
-                            aBookingRoomUsedEN.Save();
-                    }
-                    BookingRsBO aBookingRsBO = new BookingRsBO();
-                    BookingRs aBookingRs = aBookingRsBO.Select_ByID(Convert.ToInt32(aNewPaymentEN.IDBookingR));
-                    List<BookingRooms> aListBookingRooms = aBookingRoomsBO.Select_ByIDBookingR_ByStatus(Convert.ToInt32(aNewPaymentEN.IDBookingR), 8);
-                    if (aListBookingRooms.Count < 1)
-                    {
-                        aBookingRs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingR);
-                        aBookingRs.PayMenthod = aNewPaymentEN.PayMenthod;
-                        aBookingRs.StatusPay = 3;
-                        aBookingRs.Status = 8;
-                        aBookingRs.DatePay = DateTime.Now;
-                    }
-                    aBookingRs.BookingMoney = aNewPaymentEN.BookingRMoney;
-                    aBookingRsBO.Update(aBookingRs);
+                foreach (ServiceUsedEN aServicesEN in aListServicesR)
+                {
+
+                    aServicesEN.StatusPay = 8;
+                    aServicesEN.Save(1);
+                }
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
+                {
+
+                    aBookingRoomUsedEN.Status = 8;//da thanh toan
+                    aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
+                    aBookingRoomUsedEN.Save();
+                }
+                BookingRsBO aBookingRsBO = new BookingRsBO();
+                BookingRs aBookingRs = aBookingRsBO.Select_ByID(Convert.ToInt32(aNewPaymentEN.IDBookingR));
+                List<BookingRooms> aListBookingRooms = aBookingRoomsBO.Select_ByIDBookingR_ByStatus(Convert.ToInt32(aNewPaymentEN.IDBookingR), 8);
+                if (aListBookingRooms.Count < 1)
+                {
+                    aBookingRs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingR);
+                    aBookingRs.PayMenthod = aNewPaymentEN.PayMenthod;
+                    aBookingRs.StatusPay = 3;
+                    aBookingRs.Status = 8;
+                    aBookingRs.DatePay = DateTime.Now;
+                }
+                aBookingRs.BookingMoney = aNewPaymentEN.BookingRMoney;
+                aBookingRsBO.Update(aBookingRs);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("ReceptionTaskBO.SplitPaymentForBookingR \n" + ex.ToString());
             }
@@ -3182,7 +3181,7 @@ namespace BussinessLogic
                 throw new Exception("ReceptionTaskBO.SplitPaymentForBookingH \n" + ex.ToString());
             }
         }
-    
+
         // Linhting - Lay du lieu cho NewPayment
         public List<ServiceUsedEN> GetListServiceUsedInRoom_ByIDBookingRoom(int IDBookingRoom)
         {
@@ -3202,7 +3201,7 @@ namespace BussinessLogic
                     aServiceUsedEN.ServiceGroupName = aListTemp[i].ServiceGroups_Name;
                     aServiceUsedEN.IDService = aListTemp[i].Services_ID;
                     aServiceUsedEN.DateUsed = aListTemp[i].BookingRooms_Services_Date;
-                    
+
 
                     Rooms aRooms = aRoomsBO.Select_ByCodeRoom(aListTemp[i].BookingRooms_CodeRoom, 1);
                     if (aRooms != null)
@@ -3235,27 +3234,27 @@ namespace BussinessLogic
             {
                 List<ServiceUsedEN> aListServiceUsedEN = new List<ServiceUsedEN>();
                 aListServiceUsedEN = (from aBookingHalls in aDatabaseDA.BookingHalls
-                                        join aBookingHalls_Services in aDatabaseDA.BookingHalls_Services on aBookingHalls.ID equals aBookingHalls_Services.IDBookingHall
-                                        join aServices in aDatabaseDA.Services on aBookingHalls_Services.IDService equals aServices.ID
-                                        join aServicesGroup in aDatabaseDA.ServiceGroups on aServices.IDServiceGroups equals aServicesGroup.ID
-                                        join aHalls in aDatabaseDA.Halls on aBookingHalls.CodeHall equals aHalls.Code
-                                        where aBookingHalls.ID == IDBookingHall
-                                        select new ServiceUsedEN()
-                                        {
-                                            IDBookingService = aBookingHalls_Services.ID,                                           
-                                            Sku = aHalls.Sku,
-                                            IDService = aServices.ID,
-                                            NameService = aServices.Name,
-                                            IDServiceGroup = aServicesGroup.ID,
-                                            ServiceGroupName = aServicesGroup.Name,                                            
-                                            DateUsed = aBookingHalls_Services.Date,
-                                            Quantity = aBookingHalls_Services.Quantity,
-                                            Cost = aBookingHalls_Services.Cost,
-                                            CostRef_Service = aBookingHalls_Services.CostRef_Services,
-                                            Tax = aBookingHalls_Services.PercentTax,
-                                        }
+                                      join aBookingHalls_Services in aDatabaseDA.BookingHalls_Services on aBookingHalls.ID equals aBookingHalls_Services.IDBookingHall
+                                      join aServices in aDatabaseDA.Services on aBookingHalls_Services.IDService equals aServices.ID
+                                      join aServicesGroup in aDatabaseDA.ServiceGroups on aServices.IDServiceGroups equals aServicesGroup.ID
+                                      join aHalls in aDatabaseDA.Halls on aBookingHalls.CodeHall equals aHalls.Code
+                                      where aBookingHalls.ID == IDBookingHall
+                                      select new ServiceUsedEN()
+                                      {
+                                          IDBookingService = aBookingHalls_Services.ID,
+                                          Sku = aHalls.Sku,
+                                          IDService = aServices.ID,
+                                          NameService = aServices.Name,
+                                          IDServiceGroup = aServicesGroup.ID,
+                                          ServiceGroupName = aServicesGroup.Name,
+                                          DateUsed = aBookingHalls_Services.Date,
+                                          Quantity = aBookingHalls_Services.Quantity,
+                                          Cost = aBookingHalls_Services.Cost,
+                                          CostRef_Service = aBookingHalls_Services.CostRef_Services,
+                                          Tax = aBookingHalls_Services.PercentTax,
+                                      }
 
-                    ).Distinct().ToList();               
+                    ).Distinct().ToList();
 
                 return aListServiceUsedEN;
             }
@@ -3288,7 +3287,7 @@ namespace BussinessLogic
             try
             {
                 BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
-                
+
 
                 //Tạo BookingH mới
                 BookingHs aBookingHs = new BookingHs();
@@ -3355,7 +3354,7 @@ namespace BussinessLogic
                         aBookingHalls_Services.PercentTax = 10;// de mac dinh
                         aBookingHalls_Services.Quantity = aTemp.Quantity;
                         aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
-                        
+
                     }
                 }
 
@@ -3379,7 +3378,11 @@ namespace BussinessLogic
                 int IDCompany = 0;
                 int IDCustomerGroup = 0;
                 int IDCustomer = 0;
+                int Result = 0;
+
                 string customerType = string.Empty;
+
+
                 if (aCheckInEN.CustomerType == 0)
                 {
                     customerType = "Tất cả loại khác";
@@ -3599,7 +3602,7 @@ namespace BussinessLogic
                             if (aBookingRs != null)
                             {
                                 aBookingRs.IDCustomer = IDCustomer;
-                                aBookingRsBO.Update(aBookingRs);
+                                Result = aBookingRsBO.Update(aBookingRs);
                             }
 
                         }
@@ -3607,13 +3610,16 @@ namespace BussinessLogic
                         {
                             if (ii == (aCheckInEN.aListRoomMembers[i].ListCustomer.Count - 1))
                             {
-                                aBookingRsBO = new BookingRsBO();
-                                aBookingRs = new BookingRs();
-                                aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
-                                if (aBookingRs != null)
+                                if (Result == 0)
                                 {
-                                    aBookingRs.IDCustomer = IDCustomer;
-                                    aBookingRsBO.Update(aBookingRs);
+                                    aBookingRsBO = new BookingRsBO();
+                                    aBookingRs = new BookingRs();
+                                    aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
+                                    if (aBookingRs != null)
+                                    {
+                                        aBookingRs.IDCustomer = IDCustomer;
+                                        aBookingRsBO.Update(aBookingRs);
+                                    }
                                 }
                             }
                         }
