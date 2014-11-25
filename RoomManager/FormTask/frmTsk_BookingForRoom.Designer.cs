@@ -121,7 +121,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(878, 437);
-            this.tableLayoutPanel4.TabIndex = 7;
+            this.tableLayoutPanel4.TabIndex = 8;
             // 
             // tableLayoutPanel5
             // 
@@ -143,7 +143,7 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(696, 37);
-            this.tableLayoutPanel5.TabIndex = 8;
+            this.tableLayoutPanel5.TabIndex = 9;
             // 
             // dtpFrom
             // 
@@ -163,7 +163,7 @@
     "):[0-5]\\d";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(126, 20);
-            this.dtpFrom.TabIndex = 10;
+            this.dtpFrom.TabIndex = 11;
             // 
             // labelControl1
             // 
@@ -172,7 +172,7 @@
             this.labelControl1.Location = new System.Drawing.Point(262, 10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 17);
-            this.labelControl1.TabIndex = 11;
+            this.labelControl1.TabIndex = 12;
             this.labelControl1.Text = "Đến ngày";
             // 
             // labelControl5
@@ -182,7 +182,7 @@
             this.labelControl5.Location = new System.Drawing.Point(23, 10);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(57, 17);
-            this.labelControl5.TabIndex = 9;
+            this.labelControl5.TabIndex = 10;
             this.labelControl5.Text = "Từ ngày";
             // 
             // btnSearch
@@ -196,7 +196,7 @@
             this.btnSearch.Location = new System.Drawing.Point(489, 7);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 23);
-            this.btnSearch.TabIndex = 13;
+            this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Tìm phòng";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -218,7 +218,7 @@
     "):[0-5]\\d";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(123, 20);
-            this.dtpTo.TabIndex = 12;
+            this.dtpTo.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -228,7 +228,7 @@
             this.groupBox2.Location = new System.Drawing.Point(3, 46);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(696, 388);
-            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "   Phòng trống   ";
             // 
@@ -242,7 +242,7 @@
             this.dgvAvailableRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelect});
             this.dgvAvailableRooms.Size = new System.Drawing.Size(690, 365);
-            this.dgvAvailableRooms.TabIndex = 15;
+            this.dgvAvailableRooms.TabIndex = 16;
             this.dgvAvailableRooms.UseEmbeddedNavigator = true;
             this.dgvAvailableRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAvailableRooms});
@@ -389,7 +389,7 @@
             this.groupBox1.Location = new System.Drawing.Point(705, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(170, 388);
-            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "    Phòng chọn   ";
             // 
@@ -403,7 +403,7 @@
             this.dgvSelectedRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelect});
             this.dgvSelectedRooms.Size = new System.Drawing.Size(164, 365);
-            this.dgvSelectedRooms.TabIndex = 17;
+            this.dgvSelectedRooms.TabIndex = 18;
             this.dgvSelectedRooms.UseEmbeddedNavigator = true;
             this.dgvSelectedRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewSelectedRooms});
@@ -475,11 +475,11 @@
             this.btnBookingRoom.Appearance.Options.UseTextOptions = true;
             this.btnBookingRoom.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnBookingRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnBookingRoom.Image")));
-            this.btnBookingRoom.Location = new System.Drawing.Point(775, 529);
+            this.btnBookingRoom.Location = new System.Drawing.Point(775, 527);
             this.btnBookingRoom.Margin = new System.Windows.Forms.Padding(3, 3, 9, 3);
             this.btnBookingRoom.Name = "btnBookingRoom";
-            this.btnBookingRoom.Size = new System.Drawing.Size(100, 25);
-            this.btnBookingRoom.TabIndex = 59;
+            this.btnBookingRoom.Size = new System.Drawing.Size(100, 28);
+            this.btnBookingRoom.TabIndex = 19;
             this.btnBookingRoom.Text = "Cập nhật";
             this.btnBookingRoom.Click += new System.EventHandler(this.btnBookingRoom_Click);
             // 
@@ -558,7 +558,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(878, 33);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.tableLayoutPanel2.TabIndex = 5;
             // 
             // txtNameCustomer
             // 
@@ -569,7 +569,7 @@
             this.txtNameCustomer.Properties.NullValuePrompt = "Thêm mới người đại diện";
             this.txtNameCustomer.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtNameCustomer.Size = new System.Drawing.Size(264, 20);
-            this.txtNameCustomer.TabIndex = 3;
+            this.txtNameCustomer.TabIndex = 7;
             this.txtNameCustomer.EditValueChanged += new System.EventHandler(this.txtNameCustomer_EditValueChanged);
             // 
             // lueIDCustomer
@@ -590,7 +590,7 @@
             this.lueIDCustomer.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueIDCustomer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lueIDCustomer.Size = new System.Drawing.Size(260, 20);
-            this.lueIDCustomer.TabIndex = 2;
+            this.lueIDCustomer.TabIndex = 6;
             // 
             // frmTsk_BookingForRoom
             // 
