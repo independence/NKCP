@@ -456,9 +456,6 @@ namespace RoomManager
                 dgvSelectedRooms.DataSource = this.LoadListSelectRooms(dtpFrom.DateTime, dtpTo.DateTime);
                 dgvSelectedRooms.RefreshDataSource();
 
-
-
-
                 lueIDCompanies.Properties.DataSource = this.LoadListCompaniesByType(this.customerType);
                 lueIDCompanies.Properties.ValueMember = "ID";
                 lueIDCompanies.Properties.DisplayMember = "Name";
@@ -466,7 +463,6 @@ namespace RoomManager
                 lueIDCustomer.Properties.DataSource = this.LoadAllListCustomers();
                 lueIDCustomer.Properties.ValueMember = "ID";
                 lueIDCustomer.Properties.DisplayMember = "Name";
-
 
 
             }
