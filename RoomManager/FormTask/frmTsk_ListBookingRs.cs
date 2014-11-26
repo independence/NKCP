@@ -93,55 +93,66 @@ namespace RoomManager
 
         private void btnCheckIn_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-                if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 1) //Khach nha nuoc
-                {
-                    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+                //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 1) //Khach nha nuoc
+                //{
+                //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+                //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
 
-                    frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this, IDBookingRs,CheckOutPlan);
-                    afrmTsk_CheckInGoverment_ForRoomBooking_Step1.ShowDialog();
-                }
-                if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 2) //Khach doan
-                {
-                    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
-                    frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
-                    afrmTsk_CheckInGroup_ForRoomBooking_Step1.ShowDialog();
-                }
-                if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 3) //Khach le
-                {
-                    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
-                    frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
-                    afrmTsk_CheckInCustomer_ForRoomBooking_Step1.ShowDialog();
-                }
-            
+                //    frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this, IDBookingRs,CheckOutPlan);
+                //    afrmTsk_CheckInGoverment_ForRoomBooking_Step1.ShowDialog();
+                //}
+                //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 2) //Khach doan
+                //{
+                //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+                //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+                //    frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
+                //    afrmTsk_CheckInGroup_ForRoomBooking_Step1.ShowDialog();
+                //}
+                //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 3) //Khach le
+                //{
+                //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+                //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+                //    frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
+                //    afrmTsk_CheckInCustomer_ForRoomBooking_Step1.ShowDialog();
+                //}
+
+            int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+            DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+            frmTsk_CheckInForRoomBooking afrmTsk_CheckInForRoomBooking = new frmTsk_CheckInForRoomBooking(this, IDBookingRs, CheckOutPlan);
+            afrmTsk_CheckInForRoomBooking.Show();
+
+
         }
 
         private void grvBookingRs_RowClick(object sender, RowClickEventArgs e)
         {
-            if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 1) //Khach nha nuoc
-            {
-                int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+            //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 1) //Khach nha nuoc
+            //{
+            //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+            //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
 
-                frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
-                afrmTsk_CheckInGoverment_ForRoomBooking_Step1.ShowDialog();
-            }
-            if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 2) //Khach doan
-            {
-                int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
-                frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
-                afrmTsk_CheckInGroup_ForRoomBooking_Step1.ShowDialog();
-            }
-            if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 3) //Khach le
-            {
-                int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
-                DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
-                frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
-                afrmTsk_CheckInCustomer_ForRoomBooking_Step1.ShowDialog();
-            }
+            //    frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
+            //    afrmTsk_CheckInGoverment_ForRoomBooking_Step1.ShowDialog();
+            //}
+            //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 2) //Khach doan
+            //{
+            //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+            //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+            //    frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
+            //    afrmTsk_CheckInGroup_ForRoomBooking_Step1.ShowDialog();
+            //}
+            //if (CORE.CONSTANTS.SelectedCustomerType(this.customerType).ID == 3) //Khach le
+            //{
+            //    int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+            //    DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+            //    frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this, IDBookingRs, CheckOutPlan);
+            //    afrmTsk_CheckInCustomer_ForRoomBooking_Step1.ShowDialog();
+            //}
+
+            int IDBookingRs = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("BookingRs_ID"));
+            DateTime CheckOutPlan = Convert.ToDateTime(grvBookingRs.GetFocusedRowCellValue("BookingRooms_CheckOutPlan"));
+            frmTsk_CheckInForRoomBooking afrmTsk_CheckInForRoomBooking = new frmTsk_CheckInForRoomBooking(this, IDBookingRs, CheckOutPlan);
+            afrmTsk_CheckInForRoomBooking.Show();
         }
     }
 }

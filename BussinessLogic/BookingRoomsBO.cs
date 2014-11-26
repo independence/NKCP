@@ -90,24 +90,24 @@ namespace BussinessLogic
 
         ////Hiennv
 
-        //public List<BookingRooms> Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
-        //{
-        //    try
-        //    {
-        //        return aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
-        //    }
-        //}
-        //Hiennv   26/11/2014 
-        public BookingRooms Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
+        public List<BookingRooms> Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
         {
             try
             {
-                List<BookingRooms> aListTemp = aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
+                return aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
+            }
+        }
+        //Hiennv   26/11/2014 
+        public BookingRooms Select_ByIDBookingRsAndIDBookingRoom(int IDBookingRs, int IDBookingRoom)
+        {
+            try
+            {
+                List<BookingRooms> aListTemp = aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.ID == IDBookingRoom).ToList();
                 if(aListTemp.Count > 0)
                 {
                     return aListTemp[0];
@@ -116,7 +116,7 @@ namespace BussinessLogic
             }
             catch (Exception ex)
             {
-                throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
+                throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndIDBookingRoom:" + ex.ToString());
             }
         }
 
@@ -286,12 +286,16 @@ namespace BussinessLogic
         {
             try
             {
-                aDatabaseDA.BookingRooms.RemoveRange(aListBookingRoom);
-                return aDatabaseDA.SaveChanges();
+                for (int i = 0; i < aListBookingRoom.Count;i++)
+                {
+                    this.Delete(aListBookingRoom[i].ID);
+                }
+                return 1;
             }
             catch (Exception ex)
             {
-                throw new Exception("BookingRooms.Delete:" + ex.ToString());
+                throw new Exception("BookingRooms.Remove:" + ex.ToString());
+                return 0;
             }
         }
 

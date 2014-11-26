@@ -11,9 +11,11 @@ namespace Entity
         public DateTime CheckInActual = DateTime.Parse("01/01/1900");
         public DateTime CheckOutPlan = DateTime.Parse("01/01/1900");
         public DateTime CheckOutActual = DateTime.Parse("01/01/1900");  // thoi diem nhan phong gan tam CheckoutActual = CheckOutPlan
+
         public List<RoomMemberEN> aListRoomMembers = new List<RoomMemberEN>();
 
         //============== FORM 2 =========
+        public int IDBookingR;
         public DateTime CreateDate = DateTime.Now;
         public int CustomerType;
         public int BookingType;

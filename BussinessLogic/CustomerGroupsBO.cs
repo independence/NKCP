@@ -46,6 +46,32 @@ namespace BussinessLogic
             }
         }
 
+        //=======================================================
+        //Author: Hiennv  26/11/2014
+        //Function : Select_ByIDCompanyAndIDCustomerGroup
+        //=======================================================
+        public CustomerGroups Select_ByIDCompanyAndIDCustomerGroup(int IDCompany,int IDCustomerGroup)
+        {
+            try
+            {
+                List<CustomerGroups> aListCustoemrGroup = aDatabaseDA.CustomerGroups.Where(cg => cg.IDCompany == IDCompany && cg.ID == IDCustomerGroup ).OrderByDescending(cg => cg.ID).ToList();
+                if (aListCustoemrGroup.Count > 0)
+                {
+                    return aListCustoemrGroup[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("CustomerGroupBO.Select_ByIDCompanyAndIDCustomerGroup :" + ex.Message.ToString()));
+                return null;
+            }
+        }
+
+
 
        //=======================================================
         //Author: Hiennv

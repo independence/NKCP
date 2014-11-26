@@ -3837,8 +3837,10 @@ namespace BussinessLogic
                 CustomersBO aCustomersBO = new CustomersBO();
                 List<Customers> aListCustomersTemp = aCustomersBO.Select_All();
 
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                List<BookingRooms> aListBookingRoomTemp = aBookingRoomsBO.Select_All();
 
-                int IDBookingR = 0;
+                int IDBookingRooms = 0;
                 int IDCompany = 0;
                 int IDCustomerGroup = 0;
                 int IDCustomer = 0;
@@ -3881,7 +3883,6 @@ namespace BussinessLogic
                 if (aCheckInEN.IDCompany > 0)
                 {
                     IDCompany = aCheckInEN.IDCompany;
-                    IDCustomerGroup = aCheckInEN.IDCustomerGroup;
                 }
                 else
                 {
@@ -3902,98 +3903,131 @@ namespace BussinessLogic
                     aCompanies.Status = 1;
                     aCompanies.Disable = false;
                     IDCompany = aCompaniesBO.Insert(aCompanies);
-
-
-                    #region Them moi nhom vao trong cong ty
-                    if (IDCompany > 0)
-                    {
-                        CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
-                        CustomerGroups aCustomerGroups = new CustomerGroups();
-
-                        string nameGroup = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
-                        aCustomerGroups.IDCompany = IDCompany;
-                        if (nameGroup.Length > 250)
-                        {
-                            aCustomerGroups.Name = nameGroup.Substring(0, 250);
-                        }
-                        else
-                        {
-                            aCustomerGroups.Name = nameGroup;
-                        }
-
-                        aCustomerGroups.Type = 1;
-                        aCustomerGroups.Status = 1;
-                        aCustomerGroups.Disable = false;
-                        IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
-                    }
-                    #endregion
-
                 }
                 #endregion
+
+                #region Them moi nhom vao trong cong ty
+                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                CustomerGroups aCustomerGroups;
+                aCustomerGroups = aCustomerGroupsBO.Select_ByIDCompanyAndIDCustomerGroup(IDCompany, aCheckInEN.IDCustomerGroup);
+
+                if (aCustomerGroups == null)
+                {
+
+                    aCustomerGroups = new CustomerGroups();
+
+                    string nameGroup = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+                    aCustomerGroups.IDCompany = IDCompany;
+                    if (nameGroup.Length > 250)
+                    {
+                        aCustomerGroups.Name = nameGroup.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCustomerGroups.Name = nameGroup;
+                    }
+
+                    aCustomerGroups.Type = 1;
+                    aCustomerGroups.Status = 1;
+                    aCustomerGroups.Disable = false;
+                    IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
+                }
+                else
+                {
+                    IDCustomerGroup = aCheckInEN.IDCustomerGroup;
+                }
+                #endregion
+
                 
 
                 string subject = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
 
-                BookingRs aBookingRs = new BookingRs();
-                aBookingRs.CreatedDate = DateTime.Now;
-                aBookingRs.CustomerType = aCheckInEN.CustomerType;
-                aBookingRs.BookingType = aCheckInEN.BookingType;
-                if (subject.Length > 250)
-                {
-                    aBookingRs.Subject = subject.Substring(0, 250);
-                }
-                else
-                {
-                    aBookingRs.Subject = subject;
-                }
-
-                aBookingRs.IDCustomerGroup = IDCustomerGroup;
-                aBookingRs.IDCustomer = aCheckInEN.IDCustomer;
-                aBookingRs.IDSystemUser = aCheckInEN.IDSystemUser;
-                aBookingRs.PayMenthod = aCheckInEN.PayMenthod;
-                aBookingRs.StatusPay = aCheckInEN.StatusPay;
-                aBookingRs.BookingMoney = aCheckInEN.BookingMoney;
-                aBookingRs.ExchangeRate = aCheckInEN.ExchangeRate;
-                aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
-                aBookingRs.Note = string.Empty;
-                aBookingRs.Description = string.Empty;
-                aBookingRs.DatePay = aCheckInEN.CheckOutPlan;
-                aBookingRs.DateEdit = aCheckInEN.CheckInActual;
-                aBookingRs.Status = aCheckInEN.Status;
-                aBookingRs.Type = aCheckInEN.Type;
-                aBookingRs.Disable = aCheckInEN.Disable;
-
-                //add new bookingRs
                 BookingRsBO aBookingRsBO = new BookingRsBO();
-                IDBookingR = aBookingRsBO.Insert(aBookingRs);
+                BookingRs aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
+                if (aBookingRs !=null)
+                {
+                    aBookingRs.CreatedDate = DateTime.Now;
+                    aBookingRs.CustomerType = aCheckInEN.CustomerType;
+                    aBookingRs.BookingType = aCheckInEN.BookingType;
+                    if (subject.Length > 250)
+                    {
+                        aBookingRs.Subject = subject.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aBookingRs.Subject = subject;
+                    }
 
-
+                    aBookingRs.IDCustomerGroup = IDCustomerGroup;
+                    aBookingRs.IDCustomer = aCheckInEN.IDCustomer;
+                    aBookingRs.IDSystemUser = aCheckInEN.IDSystemUser;
+                    aBookingRs.PayMenthod = aCheckInEN.PayMenthod;
+                    aBookingRs.StatusPay = aCheckInEN.StatusPay;
+                    aBookingRs.BookingMoney = aCheckInEN.BookingMoney;
+                    aBookingRs.ExchangeRate = aCheckInEN.ExchangeRate;
+                    aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
+                    aBookingRs.Note = string.Empty;
+                    aBookingRs.Description = string.Empty;
+                    aBookingRs.DatePay = aCheckInEN.CheckOutPlan;
+                    aBookingRs.DateEdit = aCheckInEN.CheckInActual;
+                    aBookingRs.Status = aCheckInEN.Status;
+                    aBookingRs.Type = aCheckInEN.Type;
+                    aBookingRs.Disable = aCheckInEN.Disable;
+                    aBookingRsBO.Update(aBookingRs);
+                }
+                
                 //==========================================================
-                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
                 BookingRooms aBookingRooms;
                 BookingRoomsMembers aBookingRoomsMembers;
 
                 for (int i = 0; i < aCheckInEN.aListRoomMembers.Count; i++)
                 {
-                    aBookingRooms = new BookingRooms();
-                    aBookingRooms.IDBookingR = IDBookingR;
-                    aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
-                    aBookingRooms.PercentTax = 10;
-                    aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
-                    aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
-                    aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
-                    aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
-                    aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
-                    aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
-                    aBookingRooms.StartTime = aCheckInEN.CheckInActual;
-                    aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
-                    aBookingRooms.BookingStatus = 1;
-                    aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
-                    aBookingRooms.Status = aCheckInEN.Status;
-                    aBookingRooms.PriceType = "G1";
 
-                    //add new bookingRoom
-                    int IDBookingRooms = aBookingRoomsBO.Insert(aBookingRooms);
+                    List<BookingRooms> aListBookingRoom = aListBookingRoomTemp.Where(r=>r.ID == aCheckInEN.aListRoomMembers[i].IDBookingRooms).ToList();
+                    if (aListBookingRoom.Count > 0)
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms = aListBookingRoom[0];
+                        aBookingRooms.IDBookingR = aCheckInEN.IDBookingR;
+                        aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
+                        aBookingRooms.StartTime = aCheckInEN.CheckInActual;
+                        aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aCheckInEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        aBookingRoomsBO.Update(aBookingRooms);
+
+                        IDBookingRooms = aCheckInEN.aListRoomMembers[i].IDBookingRooms;
+                    }
+                    else
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms.IDBookingR = aCheckInEN.IDBookingR;
+                        aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
+                        aBookingRooms.StartTime = aCheckInEN.CheckInActual;
+                        aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aCheckInEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        //add new bookingRoom
+                        IDBookingRooms = aBookingRoomsBO.Insert(aBookingRooms);
+                    }
 
                     //-----------------------------------------------------------
                     aBookingRoomsMembers = new BookingRoomsMembers();
@@ -4064,7 +4098,7 @@ namespace BussinessLogic
                         {
                             aBookingRsBO = new BookingRsBO();
                             aBookingRs = new BookingRs();
-                            aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
+                            aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
                             if (aBookingRs != null)
                             {
                                 aBookingRs.IDCustomer = IDCustomer;
@@ -4080,7 +4114,7 @@ namespace BussinessLogic
                                 {
                                     aBookingRsBO = new BookingRsBO();
                                     aBookingRs = new BookingRs();
-                                    aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
+                                    aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
                                     if (aBookingRs != null)
                                     {
                                         aBookingRs.IDCustomer = IDCustomer;

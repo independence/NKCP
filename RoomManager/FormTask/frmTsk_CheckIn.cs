@@ -304,10 +304,13 @@ namespace RoomManager
                 dgvAvailableRooms.DataSource = aListAvaiableRooms;
                 dgvAvailableRooms.RefreshDataSource();
 
-                RoomMemberEN Temps = aCheckInEN.aListRoomMembers.Where(p => p.RoomSku == viewSelectedRooms.GetFocusedRowCellValue("RoomSku").ToString()).ToList()[0];
-                this.aCheckInEN.RemoveRoom(Temps);
-                dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
-                dgvSelectedRooms.RefreshDataSource();
+                RoomMemberEN Temps = aCheckInEN.IsCodeRoomExistInRoom(viewSelectedRooms.GetFocusedRowCellValue("RoomCode").ToString());
+                if (Temps != null)
+                {
+                    this.aCheckInEN.RemoveRoom(Temps);
+                    dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
+                    dgvSelectedRooms.RefreshDataSource();
+                }
 
                 if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
                 {

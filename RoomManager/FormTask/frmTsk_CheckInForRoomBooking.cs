@@ -22,6 +22,7 @@ namespace RoomManager
         private List<Customers> aListAvailableCustomers = new List<Customers>();
         private CheckInEN aCheckInEN = new CheckInEN();
         private frmMain afrmMain = null;
+        private frmTsk_ListBookingRs afrmTsk_ListBookingRs = null;
         private int IDBookingR = 0;
         private DateTime CheckoutPlan = DateTime.Now;
         private string aCurrent_CodeRoom = string.Empty;
@@ -29,8 +30,6 @@ namespace RoomManager
 
         //List này dùng để chứa các bookingRoom bị xóa
         private List<BookingRooms> aListRemoveBookingRooms = new List<BookingRooms>();
-
-
 
         //Hiennv  26/11/2014
         public frmTsk_CheckInForRoomBooking(frmMain afrmMain, int IDBookingR,DateTime CheckoutPlan)
@@ -41,6 +40,18 @@ namespace RoomManager
             this.CheckoutPlan = CheckoutPlan;
             this.aCheckInEN = this.InitData(this.IDBookingR);
         }
+
+        //Hiennv  26/11/2014
+        public frmTsk_CheckInForRoomBooking(frmTsk_ListBookingRs afrmTsk_ListBookingRs, int IDBookingR, DateTime CheckoutPlan)
+        {
+            InitializeComponent();
+            this.afrmTsk_ListBookingRs = afrmTsk_ListBookingRs;
+            this.IDBookingR = IDBookingR;
+            this.CheckoutPlan = CheckoutPlan;
+            this.aCheckInEN = this.InitData(this.IDBookingR);
+        }
+
+
         //Hiennv     26/11/2014       ham dung de load toan bo du lieu theo IDBookingR
         public CheckInEN InitData(int IDBookingR)
         {
@@ -52,6 +63,7 @@ namespace RoomManager
                 aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
                 if(aBookingRs != null)
                 {
+                    aCheckInEN.IDBookingR = aBookingRs.ID;
                     aCheckInEN.CustomerType = aBookingRs.CustomerType.GetValueOrDefault();
                     aCheckInEN.BookingType = aBookingRs.BookingType.GetValueOrDefault();
                     aCheckInEN.Note = aBookingRs.Note;
@@ -77,11 +89,12 @@ namespace RoomManager
                     {
                         aCheckInEN.IDCompany = aCustomerGroups.IDCompany;
                     }
+
+
                 }
                 RoomsBO aRoomsBO = new RoomsBO();
                 List<Rooms> aListRooms = new List<Rooms>();
                 aListRooms = aRoomsBO.Select_All();
-
 
                 BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
                 List<BookingRooms> aListBookingRooms = new List<BookingRooms>();
@@ -140,12 +153,13 @@ namespace RoomManager
                 dtpTo.DateTime = this.CheckoutPlan;
 
 
+                dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
+                dgvSelectedRooms.RefreshDataSource();
+
                 dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(dtpFrom.DateTime, dtpTo.DateTime);
                 dgvAvailableRooms.RefreshDataSource();
 
-                dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
-                dgvSelectedRooms.RefreshDataSource();
-                
+
                 this.LoadAllListCustomers();
 
                 lueIDCompanies.Properties.DataSource = this.LoadListCompaniesByType(this.aCheckInEN.CustomerType);
@@ -226,7 +240,6 @@ namespace RoomManager
                 ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
                 if (this.CheckData() == true)
                 {
-                    aCheckInEN.aListRoomMembers.Clear();
                     List<Rooms> aListRooms = aReceptionTaskBO.GetListAvailableRooms(fromDate, toDate, 1).OrderBy(r => r.Sku).ToList(); // 1=IDLang
                     RoomMemberEN aRoomMemberEN;
                     for (int i = 0; i < aListRooms.Count; i++)
@@ -263,25 +276,9 @@ namespace RoomManager
                     dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(From, To);
                     dgvAvailableRooms.RefreshDataSource();
 
-
-                    if (this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom) != null)
-                    {
-                        this.aListAvaiableRooms.Remove(this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom));
-                        dgvAvailableRooms.DataSource = this.aListAvaiableRooms;
-                        dgvAvailableRooms.RefreshDataSource();
-
-                        RoomMemberEN aRoomMemberEN = new RoomMemberEN();
-                        aRoomMemberEN.RoomSku = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomSku;
-                        aRoomMemberEN.RoomCode = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCode;
-                        aRoomMemberEN.RoomTypeDisplay = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomTypeDisplay;
-                        aRoomMemberEN.RoomBed1 = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed1;
-                        aRoomMemberEN.RoomBed2 = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed2;
-                        aRoomMemberEN.RoomCostRef = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCostRef;
-
-                        this.aCheckInEN.InsertRoom(aRoomMemberEN);
-                        dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
-                        dgvSelectedRooms.RefreshDataSource();
-                    }
+                    this.aCheckInEN.aListRoomMembers.Clear();
+                    dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
+                    dgvSelectedRooms.RefreshDataSource();
                 }
             }
             catch (Exception ex)
@@ -295,6 +292,7 @@ namespace RoomManager
             try
             {
                 RoomMemberEN aRoomMemberEN = new RoomMemberEN();
+                aRoomMemberEN.IDBookingRooms = 0;
                 aRoomMemberEN.RoomSku = viewAvailableRooms.GetFocusedRowCellValue("RoomSku").ToString();
                 aRoomMemberEN.RoomCode = viewAvailableRooms.GetFocusedRowCellValue("RoomCode").ToString();
                 aRoomMemberEN.RoomTypeDisplay = viewAvailableRooms.GetFocusedRowCellValue("RoomTypeDisplay").ToString();
@@ -325,6 +323,7 @@ namespace RoomManager
             try
             {
                 RoomMemberEN aRoomMemberEN = new RoomMemberEN();
+                aRoomMemberEN.IDBookingRooms = 0;
                 aRoomMemberEN.RoomCode = viewSelectedRooms.GetFocusedRowCellValue("RoomCode").ToString();
                 aRoomMemberEN.RoomSku = viewSelectedRooms.GetFocusedRowCellValue("RoomSku").ToString();
                 aRoomMemberEN.RoomTypeDisplay = viewSelectedRooms.GetFocusedRowCellValue("RoomTypeDisplay").ToString();
@@ -336,20 +335,20 @@ namespace RoomManager
                 dgvAvailableRooms.DataSource = aListAvaiableRooms;
                 dgvAvailableRooms.RefreshDataSource();
 
-                RoomMemberEN Temps = aCheckInEN.IsCodeRoomExistInRoom(viewSelectedRooms.GetFocusedRowCellValue("RoomSku").ToString());
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                BookingRooms aBookingRooms = new BookingRooms();
+                aBookingRooms = aBookingRoomsBO.Select_ByIDBookingRsAndIDBookingRoom(this.IDBookingR, Convert.ToInt32(viewSelectedRooms.GetFocusedRowCellValue("IDBookingRooms")));
+                if (aBookingRooms != null)
+                {
+                    this.aListRemoveBookingRooms.Add(aBookingRooms);
+                }
+
+                RoomMemberEN Temps = aCheckInEN.IsCodeRoomExistInRoom(viewSelectedRooms.GetFocusedRowCellValue("RoomCode").ToString());
                 if(Temps !=null)
                 {
                     this.aCheckInEN.RemoveRoom(Temps);
                     dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
                     dgvSelectedRooms.RefreshDataSource();
-                }
-
-                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
-                BookingRooms aBookingRooms = new BookingRooms();
-                aBookingRooms = aBookingRoomsBO.Select_ByIDBookingRsAndCodeRoom(this.IDBookingR,Convert.ToString(viewSelectedRooms.GetFocusedRowCellValue("RoomCode")));
-                if (aBookingRooms !=null)
-                {
-                    this.aListRemoveBookingRooms.Add(aBookingRooms);
                 }
 
                 if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
@@ -877,6 +876,15 @@ namespace RoomManager
                         {
                             this.afrmMain.ReloadData();
                             this.Close();
+                        }
+                        if(this.afrmTsk_ListBookingRs !=null)
+                        {
+                            this.afrmTsk_ListBookingRs.Reload();
+                            if(afrmTsk_ListBookingRs.afrmMain !=null)
+                            {
+                                this.afrmTsk_ListBookingRs.afrmMain.ReloadData();
+                                this.Close();
+                            }
                         }
                         MessageBox.Show("Thực hiện checkIn cho phòng đã đặt thành công .", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
