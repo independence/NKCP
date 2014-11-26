@@ -187,21 +187,24 @@ namespace RoomManager
 
         private void btnCheckIn_2_Click(object sender, EventArgs e)
         {
-            if (this.Datasource.BookingRs_CustomerType == 1) // checkin cho khach nha nuoc
-            {
-                frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
-                afrmTsk_CheckInGoverment_ForRoomBooking_Step1.Show();
-            }
-            else if (this.Datasource.BookingRs_CustomerType == 2)//checkin cho khach doan
-            {
-                frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
-                afrmTsk_CheckInGroup_ForRoomBooking_Step1.Show();
-            }
-            else if (this.Datasource.BookingRs_CustomerType == 3) // CheckIn cho khach le
-            {
-                frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
-                afrmTsk_CheckInCustomer_ForRoomBooking_Step1.Show();
-            }
+            //if (this.Datasource.BookingRs_CustomerType == 1) // checkin cho khach nha nuoc
+            //{
+            //    frmTsk_CheckInGoverment_ForRoomBooking_Step1 afrmTsk_CheckInGoverment_ForRoomBooking_Step1 = new frmTsk_CheckInGoverment_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
+            //    afrmTsk_CheckInGoverment_ForRoomBooking_Step1.Show();
+            //}
+            //else if (this.Datasource.BookingRs_CustomerType == 2)//checkin cho khach doan
+            //{
+            //    frmTsk_CheckInGroup_ForRoomBooking_Step1 afrmTsk_CheckInGroup_ForRoomBooking_Step1 = new frmTsk_CheckInGroup_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
+            //    afrmTsk_CheckInGroup_ForRoomBooking_Step1.Show();
+            //}
+            //else if (this.Datasource.BookingRs_CustomerType == 3) // CheckIn cho khach le
+            //{
+            //    frmTsk_CheckInCustomer_ForRoomBooking_Step1 afrmTsk_CheckInCustomer_ForRoomBooking_Step1 = new frmTsk_CheckInCustomer_ForRoomBooking_Step1(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
+            //    afrmTsk_CheckInCustomer_ForRoomBooking_Step1.Show();
+            //}
+
+            frmTsk_CheckInForRoomBooking afrmTsk_CheckInForRoomBooking = new frmTsk_CheckInForRoomBooking(this.afrmMain,this.Datasource.BookingRs_ID.GetValueOrDefault(),this.Datasource.CheckOutPlan);
+            afrmTsk_CheckInForRoomBooking.Show();
             this.Parent.Dispose();
 
         }

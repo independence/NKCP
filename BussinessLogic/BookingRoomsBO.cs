@@ -88,20 +88,40 @@ namespace BussinessLogic
         }
 
 
-        //Hiennv
+        ////Hiennv
 
-        public List<BookingRooms> Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
+        //public List<BookingRooms> Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
+        //{
+        //    try
+        //    {
+        //        return aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
+        //    }
+        //}
+        //Hiennv   26/11/2014 
+        public BookingRooms Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
         {
             try
             {
-                return aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
+                List<BookingRooms> aListTemp = aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.CodeRoom == codeRoom).ToList();
+                if(aListTemp.Count > 0)
+                {
+                    return aListTemp[0];
+                }
+                return null;
             }
             catch (Exception ex)
             {
-
                 throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
             }
         }
+
+
+
 
         //Author: Hiennv    
         public List<BookingRooms> Select_ByIDBookingR_ByStatus_ByTime(int IDBookingR, DateTime Now, int Status)
@@ -261,6 +281,21 @@ namespace BussinessLogic
                 throw new Exception("BookingRooms.Delete:" + ex.ToString());
             }
         }
+        //Hiennv  26/11/2014   xoa bookingRoom theo 1 list cac bookingRoom
+        public int Remove(List<BookingRooms> aListBookingRoom)
+        {
+            try
+            {
+                aDatabaseDA.BookingRooms.RemoveRange(aListBookingRoom);
+                return aDatabaseDA.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BookingRooms.Delete:" + ex.ToString());
+            }
+        }
+
+
         //Hiennv
         public List<BookingRooms> Select_ByIDBookingR_ByStatus(int IDBookingR,int Status)
         {

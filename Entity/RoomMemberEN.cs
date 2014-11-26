@@ -18,17 +18,4 @@ namespace Entity
         public List<CustomerInfoEN> ListCustomer = new List<CustomerInfoEN>();
 
     }
-
-    //public class RoomInfoEN
-    //{
-    //    public int ID {get;set;}
-    //    public int? Bed1{get;set;}
-    //    public int? Bed2{get;set;}
-    //    public decimal? CostRef{get;set;}
-    //    public string Sku{get;set;}
-    //    public int? type{get;set;}
-    //    public int BookingStatus{get;set;}
-        
-
-    //}
 }

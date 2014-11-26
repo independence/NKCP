@@ -164,6 +164,10 @@ namespace RoomManager
         {
             frmTsk_ListBookingRs afrm = new frmTsk_ListBookingRs(Convert.ToInt32(this.Datasource.BookingRooms_ID), Convert.ToInt32(this.Datasource.BookingRs_CustomerType));
             afrm.ShowDialog();
+
+            //frmTsk_CheckInForRoomBooking afrmTsk_CheckInForRoomBooking = new frmTsk_CheckInForRoomBooking(this.afrmMain, this.Datasource.BookingRs_ID.GetValueOrDefault(), this.Datasource.CheckOutPlan);
+            //afrmTsk_CheckInForRoomBooking.Show();
+
             this.Parent.Dispose();
         }
 

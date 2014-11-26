@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace Entity
@@ -181,7 +182,25 @@ namespace Entity
             }
 
         }
-
+        //Hienv      25/11/2014   lay ra thong tin cua room
+        public Rooms GetInfoRooms(List<Rooms> aListRooms, string codeRoom)
+        {
+            try
+            {
+                List<Rooms> aListTemp = aListRooms.Where(r => r.Code == codeRoom && r.IDLang == 1).ToList();
+                if (aListRooms.Count > 0)
+                {
+                    return aListTemp[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 
 
