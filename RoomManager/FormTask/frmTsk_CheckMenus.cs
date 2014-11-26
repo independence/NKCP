@@ -176,7 +176,7 @@ namespace RoomManager
 
         private void btnDetail_HaveMenus_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int IDBookingHall = Convert.ToInt32(grvBookingHalls_HaveMenus.GetFocusedRowCellValue("IDBookingHall"));
+            int IDBookingHall = Convert.ToInt32(grvBookingHalls_HaveMenus.GetFocusedRowCellValue("ID"));
             frmLst_DetailBookingHalls afrmLst_DetailBookingHalls = new frmLst_DetailBookingHalls(this, IDBookingHall);
             afrmLst_DetailBookingHalls.ShowDialog();
         }
