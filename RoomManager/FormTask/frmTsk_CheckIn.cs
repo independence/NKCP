@@ -228,24 +228,29 @@ namespace RoomManager
                 {
                     DateTime From = dtpFrom.DateTime;
                     DateTime To = dtpTo.DateTime;
+
                     this.aListAvaiableRooms.Clear();
                     dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(From, To);
                     dgvAvailableRooms.RefreshDataSource();
 
+                    this.aCheckInEN.aListRoomMembers.Clear();
+                    dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
+                    dgvSelectedRooms.RefreshDataSource();
 
-                    if (this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom) != null)
+                    List<RoomMemberEN> aListRoomMemberEN = this.aListAvaiableRooms.Where(p => p.RoomCode == this.aCurrent_CodeRoom).ToList();
+                    if (aListRoomMemberEN.Count > 0)
                     {
-                        this.aListAvaiableRooms.Remove(this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom));
+                        this.aListAvaiableRooms.Remove(aListRoomMemberEN[0]);
                         dgvAvailableRooms.DataSource = this.aListAvaiableRooms;
                         dgvAvailableRooms.RefreshDataSource();
 
                         RoomMemberEN aRoomMemberEN = new RoomMemberEN();
-                        aRoomMemberEN.RoomSku = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomSku;
-                        aRoomMemberEN.RoomCode = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCode;
-                        aRoomMemberEN.RoomTypeDisplay = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomTypeDisplay;
-                        aRoomMemberEN.RoomBed1 = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed1;
-                        aRoomMemberEN.RoomBed2 = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed2;
-                        aRoomMemberEN.RoomCostRef = this.aCheckInEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCostRef;
+                        aRoomMemberEN.RoomSku = aListRoomMemberEN[0].RoomSku;
+                        aRoomMemberEN.RoomCode = aListRoomMemberEN[0].RoomCode;
+                        aRoomMemberEN.RoomTypeDisplay = aListRoomMemberEN[0].RoomTypeDisplay;
+                        aRoomMemberEN.RoomBed1 = aListRoomMemberEN[0].RoomBed1;
+                        aRoomMemberEN.RoomBed2 = aListRoomMemberEN[0].RoomBed2;
+                        aRoomMemberEN.RoomCostRef = aListRoomMemberEN[0].RoomCostRef;
 
                         this.aCheckInEN.InsertRoom(aRoomMemberEN);
                         dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
@@ -449,7 +454,7 @@ namespace RoomManager
             try
             {
                 RoomsBO aRoomsBO = new RoomsBO();
-                this.aCurrent_CodeRoom = viewSelectedRooms.GetFocusedRowCellValue("RoomCode").ToString();
+                this.aCurrent_CodeRoom = Convert.ToString(viewSelectedRooms.GetFocusedRowCellValue("RoomCode"));
                 lblRoomSku.Text = "Phòng số :" + aRoomsBO.Select_ByCodeRoom(this.aCurrent_CodeRoom, 1).Sku;
 
                 dgvSelectedCustomer.DataSource = null;

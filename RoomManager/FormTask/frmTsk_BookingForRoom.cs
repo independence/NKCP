@@ -184,20 +184,24 @@ namespace RoomManager
                     dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(From, To);
                     dgvAvailableRooms.RefreshDataSource();
 
+                    this.aNewBookingEN.aListNewRoomMembers.Clear();
+                    dgvSelectedRooms.DataSource = this.aNewBookingEN.aListNewRoomMembers;
+                    dgvSelectedRooms.RefreshDataSource();
 
-                    if (this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom) != null)
+                    List<NewRoomMemberEN> aListNewRoomMemberEN = this.aListAvaiableRooms.Where(p => p.RoomCode == this.aCurrent_CodeRoom).ToList();
+                    if (aListNewRoomMemberEN.Count > 0)
                     {
-                        this.aListAvaiableRooms.Remove(this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom));
+                        this.aListAvaiableRooms.Remove(aListNewRoomMemberEN[0]);
                         dgvAvailableRooms.DataSource = this.aListAvaiableRooms;
                         dgvAvailableRooms.RefreshDataSource();
 
                         NewRoomMemberEN aNewRoomMemberEN = new NewRoomMemberEN();
-                        aNewRoomMemberEN.RoomSku = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomSku;
-                        aNewRoomMemberEN.RoomCode = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCode;
-                        aNewRoomMemberEN.RoomTypeDisplay = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomTypeDisplay;
-                        aNewRoomMemberEN.RoomBed1 = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed1;
-                        aNewRoomMemberEN.RoomBed2 = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomBed2;
-                        aNewRoomMemberEN.RoomCostRef = this.aNewBookingEN.IsCodeRoomExistInRoom(this.aCurrent_CodeRoom).RoomCostRef;
+                        aNewRoomMemberEN.RoomSku = aListNewRoomMemberEN[0].RoomSku;
+                        aNewRoomMemberEN.RoomCode = aListNewRoomMemberEN[0].RoomCode;
+                        aNewRoomMemberEN.RoomTypeDisplay = aListNewRoomMemberEN[0].RoomTypeDisplay;
+                        aNewRoomMemberEN.RoomBed1 = aListNewRoomMemberEN[0].RoomBed1;
+                        aNewRoomMemberEN.RoomBed2 = aListNewRoomMemberEN[0].RoomBed2;
+                        aNewRoomMemberEN.RoomCostRef = aListNewRoomMemberEN[0].RoomCostRef;
 
                         this.aNewBookingEN.InsertRoom(aNewRoomMemberEN);
                         dgvSelectedRooms.DataSource = this.aNewBookingEN.aListNewRoomMembers;

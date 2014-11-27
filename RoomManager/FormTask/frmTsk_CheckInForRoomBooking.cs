@@ -276,6 +276,22 @@ namespace RoomManager
                     dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(From, To);
                     dgvAvailableRooms.RefreshDataSource();
 
+                    foreach(RoomMemberEN aRoomMemberEN in this.aCheckInEN.aListRoomMembers)
+                    {
+                        BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                        BookingRooms aBookingRooms = new BookingRooms();
+                        aBookingRooms = aBookingRoomsBO.Select_ByIDBookingRsAndIDBookingRoom(this.IDBookingR,aRoomMemberEN.IDBookingRooms);
+                        if (aBookingRooms != null)
+                        {
+                            if (this.aListRemoveBookingRooms.Where(r=>r.ID == aRoomMemberEN.IDBookingRooms).ToList().Count <= 0)
+                            {
+                                this.aListRemoveBookingRooms.Add(aBookingRooms);
+                            }
+                        }
+                    }
+                    
+
+
                     this.aCheckInEN.aListRoomMembers.Clear();
                     dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
                     dgvSelectedRooms.RefreshDataSource();
