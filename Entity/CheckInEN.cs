@@ -117,6 +117,17 @@ namespace Entity
             }
             return null;
         }
+        //Hiennv  27/11/2014
+        public List<CustomerInfoEN> ClearAllListCustomer()
+        {
+            for (int i = 0; i < this.aListRoomMembers.Count; i++)
+            {
+                this.aListRoomMembers[i].ListCustomer.Clear();
+            }
+            return null;
+        }
+
+
         //Hiennv  19/11/2014
         public CustomerInfoEN GetCustomerInfoByRoomCodeAndIDCustomer(string RoomCode, int IDCustomer)
         {

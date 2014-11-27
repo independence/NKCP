@@ -179,7 +179,7 @@ namespace RoomManager
                 //tong tien thanh toan truoc thue
                 lblTotalMoneyBookingRBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()));
                 //tien thue
-                lblTotalMoneyTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()), 10)));
+                lblTotalMoneyTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()), 10)));
                 //tong tien thanh toan sau thue
                 lblTotalMoneyBookingRBehindTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms()));
                 //So tien ung truoc

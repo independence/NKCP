@@ -2420,6 +2420,18 @@
           <Property Name="Halls_Sku" Type="nvarchar" MaxLength="50" />
           <Property Name="Halls_IDLang" Type="int" />
         </EntityType>
+        <Function Name="checkStatusBookingHs" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDBookingH" Type="int" Mode="In" />
+        </Function>
+        <Function Name="checkStatusPayBookingHalls" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDBookingH" Type="int" Mode="In" />
+        </Function>
+        <Function Name="checkStatusPayBookingHalls_Service" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="checkStatusPayBookingInRoom" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="checkStatusPayBookingRooms" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDBookingR" Type="int" Mode="In" />
+        </Function>
+        <Function Name="checkStatusPayBookingServiceInHall" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="f_split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="param" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="delimiter" Type="char" Mode="In" />
@@ -2578,6 +2590,24 @@
           <Parameter Name="CodeRoom" Type="nvarchar" Mode="In" />
           <Parameter Name="StartTime" Type="datetime" Mode="In" />
           <Parameter Name="EndTime" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_save_serviceroom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="Info" Type="nvarchar" Mode="In" />
+          <Parameter Name="Type" Type="int" Mode="In" />
+          <Parameter Name="Status" Type="int" Mode="In" />
+          <Parameter Name="Disable" Type="bit" Mode="In" />
+          <Parameter Name="IDBookingRoom" Type="int" Mode="In" />
+          <Parameter Name="IDService" Type="int" Mode="In" />
+          <Parameter Name="Cost" Type="money" Mode="In" />
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="PercentTax" Type="float" Mode="In" />
+          <Parameter Name="CostRef_Services" Type="money" Mode="In" />
+          <Parameter Name="Quantity" Type="float" Mode="In" />
+          <Parameter Name="IndexSubPayment" Type="int" Mode="In" />
+          <Parameter Name="InvoiceDate" Type="datetime" Mode="In" />
+          <Parameter Name="InvoiceNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="AcceptDate" Type="datetime" Mode="In" />
         </Function>
         <Function Name="sp_SystemUsers_GetCurrentInDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDDivision" Type="int" Mode="In" />
@@ -2748,6 +2778,24 @@
             <Parameter Name="CodeRoom" Mode="In" Type="String" />
             <Parameter Name="StartTime" Mode="In" Type="DateTime" />
             <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_save_serviceroom" ReturnType="Collection(Boolean)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Info" Mode="In" Type="String" />
+            <Parameter Name="Type" Mode="In" Type="Int32" />
+            <Parameter Name="Status" Mode="In" Type="Int32" />
+            <Parameter Name="Disable" Mode="In" Type="Boolean" />
+            <Parameter Name="IDBookingRoom" Mode="In" Type="Int32" />
+            <Parameter Name="IDService" Mode="In" Type="Int32" />
+            <Parameter Name="Cost" Mode="In" Type="Decimal" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="PercentTax" Mode="In" Type="Double" />
+            <Parameter Name="CostRef_Services" Mode="In" Type="Decimal" />
+            <Parameter Name="Quantity" Mode="In" Type="Double" />
+            <Parameter Name="IndexSubPayment" Mode="In" Type="Int32" />
+            <Parameter Name="InvoiceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="InvoiceNumber" Mode="In" Type="String" />
+            <Parameter Name="AcceptDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentInDivision_Result)">
             <Parameter Name="IDDivision" Mode="In" Type="Int32" />
@@ -6957,6 +7005,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_save_serviceroom" FunctionName="Model.Store.sp_save_serviceroom" />
           <FunctionImportMapping FunctionImportName="sp_SystemUsers_GetCurrentInDivision" FunctionName="Model.Store.sp_SystemUsers_GetCurrentInDivision">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model.sp_SystemUsers_GetCurrentInDivision_Result">

@@ -413,6 +413,75 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomsExt_CalculationRevenue_Result>("sp_RoomsExt_CalculationRevenue", codeRoomParameter, startTimeParameter, endTimeParameter);
         }
     
+        public virtual ObjectResult<Nullable<bool>> sp_save_serviceroom(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate)
+        {
+            var iDParameter = iD.HasValue ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(int));
+    
+            var infoParameter = info != null ?
+                new ObjectParameter("Info", info) :
+                new ObjectParameter("Info", typeof(string));
+    
+            var typeParameter = type.HasValue ?
+                new ObjectParameter("Type", type) :
+                new ObjectParameter("Type", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            var disableParameter = disable.HasValue ?
+                new ObjectParameter("Disable", disable) :
+                new ObjectParameter("Disable", typeof(bool));
+    
+            var iDBookingRoomParameter = iDBookingRoom.HasValue ?
+                new ObjectParameter("IDBookingRoom", iDBookingRoom) :
+                new ObjectParameter("IDBookingRoom", typeof(int));
+    
+            var iDServiceParameter = iDService.HasValue ?
+                new ObjectParameter("IDService", iDService) :
+                new ObjectParameter("IDService", typeof(int));
+    
+            var costParameter = cost.HasValue ?
+                new ObjectParameter("Cost", cost) :
+                new ObjectParameter("Cost", typeof(decimal));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            var percentTaxParameter = percentTax.HasValue ?
+                new ObjectParameter("PercentTax", percentTax) :
+                new ObjectParameter("PercentTax", typeof(double));
+    
+            var costRef_ServicesParameter = costRef_Services.HasValue ?
+                new ObjectParameter("CostRef_Services", costRef_Services) :
+                new ObjectParameter("CostRef_Services", typeof(decimal));
+    
+            var quantityParameter = quantity.HasValue ?
+                new ObjectParameter("Quantity", quantity) :
+                new ObjectParameter("Quantity", typeof(double));
+    
+            var indexSubPaymentParameter = indexSubPayment.HasValue ?
+                new ObjectParameter("IndexSubPayment", indexSubPayment) :
+                new ObjectParameter("IndexSubPayment", typeof(int));
+    
+            var invoiceDateParameter = invoiceDate.HasValue ?
+                new ObjectParameter("InvoiceDate", invoiceDate) :
+                new ObjectParameter("InvoiceDate", typeof(System.DateTime));
+    
+            var invoiceNumberParameter = invoiceNumber != null ?
+                new ObjectParameter("InvoiceNumber", invoiceNumber) :
+                new ObjectParameter("InvoiceNumber", typeof(string));
+    
+            var acceptDateParameter = acceptDate.HasValue ?
+                new ObjectParameter("AcceptDate", acceptDate) :
+                new ObjectParameter("AcceptDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_save_serviceroom", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
+        }
+    
         public virtual ObjectResult<sp_SystemUsers_GetCurrentInDivision_Result> sp_SystemUsers_GetCurrentInDivision(Nullable<int> iDDivision)
         {
             var iDDivisionParameter = iDDivision.HasValue ?

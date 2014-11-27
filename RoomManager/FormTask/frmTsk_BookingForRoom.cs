@@ -180,6 +180,9 @@ namespace RoomManager
                 {
                     DateTime From = dtpFrom.DateTime;
                     DateTime To = dtpTo.DateTime;
+
+                    this.aCurrent_CodeRoom = string.Empty;
+
                     this.aListAvaiableRooms.Clear();
                     dgvAvailableRooms.DataSource = this.LoadListAvailableRooms(From, To);
                     dgvAvailableRooms.RefreshDataSource();
@@ -463,6 +466,13 @@ namespace RoomManager
                 lueIDCompanies.Properties.DataSource = this.LoadListCompaniesByType(this.customerType);
                 lueIDCompanies.Properties.ValueMember = "ID";
                 lueIDCompanies.Properties.DisplayMember = "Name";
+                if (this.customerType == 3) // khach le
+                {
+                    if (this.LoadListCompaniesByType(this.customerType).Count > 0)
+                    {
+                        lueIDCompanies.EditValue = this.LoadListCompaniesByType(this.customerType)[0].ID;
+                    }
+                }
 
                 lueIDCustomer.Properties.DataSource = this.LoadAllListCustomers();
                 lueIDCustomer.Properties.ValueMember = "ID";

@@ -166,6 +166,13 @@ namespace RoomManager
                 lueIDCompanies.Properties.ValueMember = "ID";
                 lueIDCompanies.Properties.DisplayMember = "Name";
                 lueIDCompanies.EditValue = this.aCheckInEN.IDCompany;
+                if (this.aCheckInEN.CustomerType == 3) // khach le
+                {
+                    if (this.LoadListCompaniesByType(this.aCheckInEN.CustomerType).Count > 0)
+                    {
+                        lueIDCompanies.EditValue = this.LoadListCompaniesByType(this.aCheckInEN.CustomerType)[0].ID;
+                    }
+                }
 
                 lueGender.Properties.DataSource = CORE.CONSTANTS.ListGenders;//Load Gioi tinh
                 lueGender.Properties.DisplayMember = "Name";
@@ -295,6 +302,15 @@ namespace RoomManager
                     this.aCheckInEN.aListRoomMembers.Clear();
                     dgvSelectedRooms.DataSource = this.aCheckInEN.aListRoomMembers;
                     dgvSelectedRooms.RefreshDataSource();
+
+
+                    this.aCurrent_CodeRoom = string.Empty;
+                    lblRoomSku.Text = "Phòng số :000";
+                    this.aCheckInEN.ClearAllListCustomer();
+                    dgvSelectedCustomer.DataSource = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom);
+                    dgvSelectedCustomer.RefreshDataSource();
+                    this.ResetValueAddNew();
+
                 }
             }
             catch (Exception ex)
@@ -583,6 +599,7 @@ namespace RoomManager
         {
             try
             {
+                this.aCurrent_IDCustomer =0;
                 lblIDCustomer.Text = "000";
                 txtNames.EditValue = string.Empty;
                 txtIdentifier1.EditValue = string.Empty;

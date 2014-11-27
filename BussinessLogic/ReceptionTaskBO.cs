@@ -3193,6 +3193,9 @@ namespace BussinessLogic
                 ServiceUsedEN aServiceUsedEN;
                 RoomsBO aRoomsBO = new RoomsBO();
 
+                List<Rooms> aListRoomTemp = aRoomsBO.Select_ByIDLang(1);
+
+
                 for (int i = 0; i < aListTemp.Count; i++)
                 {
                     aServiceUsedEN = new ServiceUsedEN();
@@ -3201,12 +3204,9 @@ namespace BussinessLogic
                     aServiceUsedEN.ServiceGroupName = aListTemp[i].ServiceGroups_Name;
                     aServiceUsedEN.IDService = aListTemp[i].Services_ID;
                     aServiceUsedEN.DateUsed = aListTemp[i].BookingRooms_Services_Date;
-
-
-                    Rooms aRooms = aRoomsBO.Select_ByCodeRoom(aListTemp[i].BookingRooms_CodeRoom, 1);
-                    if (aRooms != null)
+                    if (aListRoomTemp.Where(r => r.Code == aListTemp[i].BookingRooms_CodeRoom).ToList().Count > 0)
                     {
-                        aServiceUsedEN.Sku = aRooms.Sku;
+                        aServiceUsedEN.Sku = aListRoomTemp.Where(r => r.Code == aListTemp[i].BookingRooms_CodeRoom).ToList()[0].Sku;
                     }
                     aServiceUsedEN.NameService = aListTemp[i].Services_Name;
                     aServiceUsedEN.Quantity = aListTemp[i].BookingRooms_Services_Quantity;

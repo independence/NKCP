@@ -209,8 +209,7 @@
             // 
             // chkCustomerType
             // 
-            this.chkCustomerType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkCustomerType.Location = new System.Drawing.Point(548, 6);
+            this.chkCustomerType.Location = new System.Drawing.Point(548, 3);
             this.chkCustomerType.Name = "chkCustomerType";
             this.chkCustomerType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.chkCustomerType.Properties.Appearance.Options.UseFont = true;
@@ -221,8 +220,7 @@
             // 
             // txtNameCompany
             // 
-            this.txtNameCompany.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNameCompany.Location = new System.Drawing.Point(278, 5);
+            this.txtNameCompany.Location = new System.Drawing.Point(278, 3);
             this.txtNameCompany.Name = "txtNameCompany";
             this.txtNameCompany.Properties.MaxLength = 250;
             this.txtNameCompany.Properties.NullValuePrompt = "Thêm mới công ty khi công ty chưa tồn tại";
@@ -233,8 +231,7 @@
             // 
             // lueIDCompanies
             // 
-            this.lueIDCompanies.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lueIDCompanies.Location = new System.Drawing.Point(12, 5);
+            this.lueIDCompanies.Location = new System.Drawing.Point(12, 3);
             this.lueIDCompanies.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.lueIDCompanies.Name = "lueIDCompanies";
             this.lueIDCompanies.Properties.Appearance.Options.UseTextOptions = true;
@@ -306,11 +303,10 @@
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31F));
             this.tableLayoutPanel5.Controls.Add(this.dtpFrom, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.labelControl1, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.labelControl5, 0, 0);
@@ -326,9 +322,8 @@
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(81, 5);
+            this.dtpFrom.Location = new System.Drawing.Point(73, 3);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -341,14 +336,13 @@
             this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpFrom.Size = new System.Drawing.Size(110, 20);
+            this.dtpFrom.Size = new System.Drawing.Size(115, 20);
             this.dtpFrom.TabIndex = 10;
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(201, 6);
+            this.labelControl1.Location = new System.Drawing.Point(194, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 17);
             this.labelControl1.TabIndex = 11;
@@ -356,9 +350,8 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(10, 6);
+            this.labelControl5.Location = new System.Drawing.Point(3, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(57, 17);
             this.labelControl5.TabIndex = 9;
@@ -366,9 +359,8 @@
             // 
             // dtpTo
             // 
-            this.dtpTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(277, 5);
+            this.dtpTo.Location = new System.Drawing.Point(272, 3);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -381,7 +373,7 @@
             this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpTo.Size = new System.Drawing.Size(110, 20);
+            this.dtpTo.Size = new System.Drawing.Size(115, 20);
             this.dtpTo.TabIndex = 12;
             // 
             // groupBox2
@@ -634,15 +626,14 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Appearance.Options.UseTextOptions = true;
             this.btnSearch.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(408, 3);
+            this.btnSearch.Location = new System.Drawing.Point(394, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 23);
+            this.btnSearch.Size = new System.Drawing.Size(120, 23);
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "Tìm phòng";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);

@@ -574,6 +574,7 @@ namespace RoomManager
         {
             try
             {
+
                 if (StatusPay == 0) // Load khi chưa thanh toán 
                 {
                     // Khóa các chức năng phòng khi chưa chọn
@@ -613,7 +614,7 @@ namespace RoomManager
 
         public void Reload(NewPaymentEN aNewPayment)
         {
-            this.aNewPaymentEN = aNewPaymentEN;
+            this.aNewPaymentEN = aNewPayment;
             this.LoadData();
         }
       

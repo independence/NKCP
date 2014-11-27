@@ -38,5 +38,9 @@ namespace DataAccess
         public Nullable<double> BookingRooms_Services_Quantity { get; set; }
         public Nullable<decimal> BookingRooms_Services_CostRef_Services { get; set; }
         public string BookingRooms_CodeRoom { get; set; }
+        public Nullable<int> BookingRooms_Services_IndexSubPayment { get; set; }
+        public Nullable<System.DateTime> BookingRooms_Services_InvoiceDate { get; set; }
+        public string BookingRooms_Services_InvoiceNumber { get; set; }
+        public Nullable<System.DateTime> BookingRooms_Services_AcceptDate { get; set; }
     }
 }
