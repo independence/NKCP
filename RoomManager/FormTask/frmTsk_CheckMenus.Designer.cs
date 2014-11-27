@@ -245,7 +245,7 @@
             this.gridColumn48.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn48.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gridColumn48.Caption = "Hội trường";
-            this.gridColumn48.FieldName = "SkuHall";
+            this.gridColumn48.FieldName = "HallSku";
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.OptionsColumn.AllowEdit = false;
             this.gridColumn48.OptionsColumn.AllowFocus = false;

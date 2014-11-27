@@ -3338,6 +3338,7 @@ namespace BussinessLogic
                     aBookingHall.Color = aNewBookingHEN.aListBookingHallUsed[i].Color;
 
                     aBookingHallsBO.InsertUnSync(aBookingHall);
+                    int IDBookingHall = aBookingHall.ID;
                     // Thêm dịch vụ đã chọn vào hội trường
                     foreach (ServiceUsedEN aTemp in aNewBookingHEN.aListBookingHallUsed[i].aListServiceUsed)
                     {
@@ -3352,10 +3353,22 @@ namespace BussinessLogic
                         aBookingHalls_Services.Date = DateTime.Now;
                         aBookingHalls_Services.CostRef_Services = aTemp.CostRef_Service;
                         aBookingHalls_Services.PercentTax = 10;// de mac dinh
-                        aBookingHalls_Services.Quantity = aTemp.Quantity;
+                        aBookingHalls_Services.Quantity = aTemp.Quantity;                        
                         aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
 
                     }
+                    // Thêm thực đơn vào hội trường
+                    foreach (MenusEN aMenuEN in aNewBookingHEN.aListBookingHallUsed[i].aListMenuEN)
+                    {
+                        aMenuEN.IDBookingHall = IDBookingHall;
+                        aMenuEN.Type = 1; // type =1 ; thuc don mau ; Type 2: thuc don moi
+                        aMenuEN.Status = 1; // de tam
+                        aMenuEN.Disable = false; // de tam                        
+                        aMenuEN.IDSystemUser = 1;//Khi kinh doanh thêm thực đơn mặc định trạng thái là 0 - đã xác nhận thực đơn
+                        this.CreateMenus(aMenuEN);
+                    }
+
+
                 }
 
                 return IDBookingH;

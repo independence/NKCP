@@ -13,6 +13,7 @@ using BussinessLogic;
 using Entity;
 using CORESYSTEM;
 using Library;
+using System.IO;
 
 namespace RoomManager
 {
@@ -33,6 +34,9 @@ namespace RoomManager
         private int IDCompany = 0;
         private int IDCustomer = 0;
         private int IDBookingH,IDBookingR = 0;
+        // Khởi tạo cho chọn Menus
+        private List<Foods> aListFoods = new List<Foods>();
+        private MenusEN aMenusEN = new MenusEN();
         
         public frmTsk_BookingHall_Customer_New(frmMain afrmMain)
         {
@@ -93,6 +97,13 @@ namespace RoomManager
             {
                 lueCustomer.EditValue = 0;
             }
+           
+            // Load khách mời
+            GuestsBO aGuestsBO = new GuestsBO();
+            lueGuest.Properties.DataSource = aGuestsBO.Select_All();
+            lueGuest.Properties.DisplayMember = "Name";
+            lueGuest.Properties.ValueMember = "ID";
+            LoadDataListFoods();
         }
 
         public void LoadService()
@@ -100,7 +111,7 @@ namespace RoomManager
             try
             {
                 ServicesBO aServicesBO = new ServicesBO();
-                dgvService.DataSource = aServicesBO.Select_All();
+                dgvService.DataSource = aServicesBO.Select_ServiceForHalls();
                 dgvService.RefreshDataSource();
             }
             catch (Exception ex)
@@ -109,7 +120,7 @@ namespace RoomManager
 
             }
            
-        }
+        }       
 
         //Call Back data IDCustomer
         public void CallBackIDCustomer(int IDCustomer)
@@ -135,6 +146,21 @@ namespace RoomManager
             catch (Exception ex)
             {
                 MessageBox.Show("frmTsk_BookingHall_Customer_New.CallBackIDCompany\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void CallBackGuest(int IDGuest)
+        {
+            try
+            {
+                GuestsBO aGuestsBO = new GuestsBO();
+                lueGuest.Properties.DataSource = aGuestsBO.Select_All();
+                lueGuest.Properties.DisplayMember = "Name";
+                lueGuest.Properties.ValueMember = "ID";
+                lueGuest.EditValue = IDGuest;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_BookingHall_Customer_New.CallBackGuest\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // truyền lại Service vừa thêm vào 2 List
@@ -198,6 +224,11 @@ namespace RoomManager
             if (ID != 0)
             {
                 txtPhoneNumber.Text = aCustomersBO.Select_ByID(ID).Tel;
+                txtCustomerName.Enabled = false;
+            }
+            else
+            {
+                txtCustomerName.Enabled = true;
             }
 
         }
@@ -257,10 +288,16 @@ namespace RoomManager
                 dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
                 dgvSelectedHalls.RefreshDataSource();
 
+                lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
+                lueHalls.Properties.DisplayMember = "HallSku";
+                lueHalls.Properties.ValueMember = "CodeHall";
+                lueHalls.RefreshEditValue();
+
                 HallExtStatusEN aTemp = aListAvailableHall.Where(a => a.Code == grvAvailableHalls.GetFocusedRowCellValue("Code").ToString()).ToList()[0];
                 aListAvailableHall.Remove(aTemp);
                 dgvAvailableHalls.DataSource = aListAvailableHall;
                 dgvAvailableHalls.RefreshDataSource();
+
             }
             catch (Exception ex)
             {
@@ -283,9 +320,14 @@ namespace RoomManager
                 dgvAvailableHalls.DataSource = aListAvailableHall;
                 dgvAvailableHalls.RefreshDataSource();
 
-                NewBookingHallEN aTemp = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == grvSelectedHalls.GetFocusedRowCellValue("Code").ToString()).ToList()[0];
+                NewBookingHallEN aTemp = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == grvSelectedHalls.GetFocusedRowCellValue("CodeHall").ToString()).ToList()[0];
                 this.aNewBookingHEN.aListBookingHallUsed.Remove(aTemp);
                 dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
+                
+                lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
+                lueHalls.Properties.DisplayMember = "HallType";
+                lueHalls.Properties.ValueMember = "CodeHall";
+                lueHalls.RefreshEditValue();
                 dgvSelectedHalls.RefreshDataSource();
             }
             catch (Exception ex)
@@ -305,6 +347,7 @@ namespace RoomManager
                 NewBookingHallEN aTemp = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0];
             dgvServiceInHall.DataSource = aTemp.aListServiceUsed;
             dgvServiceInHall.RefreshDataSource();
+           
             }
         }
 
@@ -459,6 +502,11 @@ namespace RoomManager
                 MessageBox.Show("Vui lòng chọn hội trường.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
+            else if (Convert.ToInt32(lueHalls.EditValue) !=0 && txtMenusName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên thực đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;      
+            }
             return true;
         }
         private void btnBook_Click(object sender, EventArgs e)
@@ -573,8 +621,237 @@ namespace RoomManager
             int IDBookingH = aBookingHsBO.InsertUnSync(aBookingHs);
         }
 
+        private void lueCompany_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(lueCompany.EditValue) == 0)
+            {
+                txtCompanyName.Enabled = true;
+            }
+            else
+            {
+                txtCompanyName.Enabled = false;
+            }
+        }
+
+
+        private void btnAddGuest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmIns_Guest afrmIns_Guest = new frmIns_Guest(this);
+                afrmIns_Guest.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_BookingHall_Customer_New.btnAddGuest_Click\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSearchGuest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLst_Guests afrmLst_Guests = new frmLst_Guests(this);
+                afrmLst_Guests.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_BookingHall_Customer_New.btnSearchGuest_Click\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lueGuest_EditValueChanged(object sender, EventArgs e)
+        {
+            int IDGuest = Convert.ToInt32(lueGuest.EditValue);
+        }
+        #region Menus
+        public Image ConvertByteArrayToImage(byte[] byteArrayIn)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream(byteArrayIn);
+                Image returnImage = Image.FromStream(ms);
+                return returnImage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmIns_Menus.ConvertByteArrayToImage\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+  
+        public byte[] ConvertImageToByteArray(Image imageIn)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                return ms.ToArray();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmIns_Menus.ConvertimageToByteArray\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        // Load data cho bảng món ăn 
+        public void LoadDataListFoods()
+        {
+            try
+            {
+                this.aListFoods.Clear();
+                FoodsBO aFoodsBO = new FoodsBO();
+                MenusBO aMenusBO = new MenusBO();
+                List<Foods> aListFoods = aFoodsBO.Select_All();
+                List<int> ListID = new List<int>();
+                for (int i = 0; i < aListFoods.Count; i++)
+                {
+                    ListID.Add(aListFoods[i].ID);
+                }
+                List<Foods> aListTemp = aFoodsBO.Select_ByListID(ListID);
+                foreach (Foods item in aListFoods)
+                {
+                    Foods aFoods = aListTemp.Where(p => p.ID == item.ID).ToList()[0];
+                    if (aFoods.Image1 != null)
+                    {
+                        if (aFoods.Image1.Length <= 0)
+                        {
+                            Image image = RoomManager.Properties.Resources.logo_nkcp_small;
+                            image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
+                            Byte[] aImageByte = this.ConvertImageToByteArray(image);
+                            aFoods.Image1 = aImageByte;
+                        }
+                    }
+                    else
+                    {
+                        Image image = RoomManager.Properties.Resources.logo_nkcp_small;
+                        image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
+                        Byte[] aImageByte = this.ConvertImageToByteArray(image);
+                        aFoods.Image1 = aImageByte;
+                    }
+
+                    this.aListFoods.Add(aFoods);
+                }
+                dgvAvailableFoods.DataSource = this.aListFoods;
+                dgvAvailableFoods.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_BookingHall_Customer_New.LoadDataListFoods\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // Chọn món ăn vào Menus trong hội trường
+        private void btnSelectFoods_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name == "")
+                {
+                    this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name = txtMenusName.Text;
+                }
+                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList().Count() > 0)
+                {
+                    MessageBox.Show("Món ăn này đã có trong thực đơn vui lòng chọn món ăn khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    Foods aFoods = new Foods();
+                    aFoods.ID = Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"));
+                    aFoods.Name = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name"));
+                    aFoods.Name1 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name1"));
+                    aFoods.Name2 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name2"));
+                    aFoods.Name3 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name3"));
+                    aFoods.Image1 = (byte[])viewAvailableFoods.GetFocusedRowCellValue("Image1");
+
+                    this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Add(aFoods);
+                    dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
+                    dgvSelectFoods.RefreshDataSource();
+
+                    Foods aFoodsTemp = this.aListFoods.Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList()[0];
+                    this.aListFoods.Remove(aFoodsTemp);
+                    dgvAvailableFoods.DataSource = this.aListFoods;
+                    dgvAvailableFoods.RefreshDataSource();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmIns_Menus.btnSelectFoods_ButtonClick\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnUnSelectFoods_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                if (this.aListFoods.Where(f => f.ID == Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"))).ToList().Count() == 0)
+                {
+                    Foods aFoods = new Foods();
+                    aFoods.ID = Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"));
+                    aFoods.Name = Convert.ToString(viewSelectFoods.GetFocusedRowCellValue("Name"));
+                    aFoods.Name1 = Convert.ToString(viewSelectFoods.GetFocusedRowCellValue("Name1"));
+                    aFoods.Name2 = Convert.ToString(viewSelectFoods.GetFocusedRowCellValue("Name2"));
+                    aFoods.Name3 = Convert.ToString(viewSelectFoods.GetFocusedRowCellValue("Name3"));
+                    aFoods.Image1 = (byte[])viewSelectFoods.GetFocusedRowCellValue("Image1");
+
+                    this.aListFoods.Insert(0, aFoods);
+                    dgvAvailableFoods.DataSource = this.aListFoods;
+                    dgvAvailableFoods.RefreshDataSource();
+
+                }
+                Foods aFoodTemp = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Where(f => f.ID == Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"))).ToList()[0];
+                this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Remove(aFoodTemp);
+                dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
+                dgvSelectFoods.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmIns_Menus.btnUnSelectFoods_ButtonClick\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lueHalls_EditValueChanged(object sender, EventArgs e)
+        {
+            this.CurrentCodeHall = lueHalls.EditValue.ToString();
+            if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList().Count > 0)
+            {
+                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN.Count > 0)
+                {
+                    dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
+                    dgvServiceInHall.RefreshDataSource();
+                }
+                else
+                {
+                    MenusEN aMenusEN = new MenusEN();
+                    aMenusEN.Name = txtMenusName.Text;
+                    this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].InsertMenu(aMenusEN);
+                }
+            }
+        }
+        #endregion      
+
+        
+
+
+        
+
       
 
-    
+       
+       
+
+       
+
+        
+
+      
+
+        
+
+       
+
+
+
     }
 }

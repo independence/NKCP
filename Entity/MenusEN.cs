@@ -14,5 +14,37 @@ namespace Entity
         public decimal? PriceMenu { get; set;}
 
         public List<Foods> aListFoods = new List<Foods>();
+        public int InsertFood(Foods aFood)
+        {
+            try
+            {
+                this.aListFoods.Add(aFood);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("MenusEN.InsertFood :" + ex.Message.ToString()));
+
+            }
+        }
+        public int RemoveFood(Foods aFood)
+        {
+            try
+            {
+                int ID = aFood.ID;
+                if (this.aListFoods.Where(a => a.ID == ID).ToList().Count > 0)
+                {
+                    this.aListFoods.Remove(this.aListFoods.Where(a => a.ID == ID).ToList()[0]);
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("MenusEN.UpdateService :" + ex.Message.ToString()));
+
+            }
+        }
     }
 }

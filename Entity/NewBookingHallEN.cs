@@ -307,7 +307,20 @@ namespace Entity
             }
         }
 
+        public int InsertMenu(MenusEN aMenusEN)
+        {
+            try
+            {
+                this.aListMenuEN.Add(aMenusEN);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception(string.Format("BookingHallUsedEN.InsertMenu :" + ex.Message.ToString()));
 
+            }
+        }
 
     }
 }

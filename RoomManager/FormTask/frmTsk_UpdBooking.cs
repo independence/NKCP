@@ -121,8 +121,8 @@ namespace RoomManager
             txtNote.Text = aBookingHs.Note;
             //Fill data for BookingHall
             dtpFrom.DateTime = Convert.ToDateTime(aListBookingHalls[0].Date);
-            tedEnd.Time = DateTime.Parse( aListBookingHalls[0].EndTime.ToString());
-            tedStart.Time = DateTime.Parse(aListBookingHalls[0].StartTime.ToString());
+           //tedEnd.Time = DateTime.Parse( aListBookingHalls[0].EndTime.ToString());
+            //tedStart.Time = DateTime.Parse(aListBookingHalls[0].StartTime.ToString());
 
             for (int i = 0; i < aListBookingHalls.Count; i++)
             {
