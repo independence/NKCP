@@ -118,6 +118,7 @@ namespace RoomManager
                     }
                     if (afrmTsk_BookingHall_Customer_New != null)
                     {
+                        this.afrmTsk_BookingHall_Customer_New.LoadGuest();
                         this.afrmTsk_BookingHall_Customer_New.CallBackGuest(ID);
                     }
                     if (afrmTsk_UpdBooking != null)
