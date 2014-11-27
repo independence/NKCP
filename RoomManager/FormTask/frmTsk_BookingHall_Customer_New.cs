@@ -120,7 +120,23 @@ namespace RoomManager
 
             }
            
-        }       
+        }
+
+        public void LoadGuest()
+        {
+            try
+            {
+                GuestsBO aGuestsBO = new GuestsBO();
+                lueGuest.Properties.DataSource = aGuestsBO.Select_All();
+                lueGuest.Properties.DisplayMember = "Name";
+                lueGuest.Properties.ValueMember = "ID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_BookingHall_Customer_New.LoadService\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
 
         //Call Back data IDCustomer
         public void CallBackIDCustomer(int IDCustomer)
@@ -288,10 +304,11 @@ namespace RoomManager
                 dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
                 dgvSelectedHalls.RefreshDataSource();
 
+                lueHalls.Reset();
                 lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
                 lueHalls.Properties.DisplayMember = "HallSku";
                 lueHalls.Properties.ValueMember = "CodeHall";
-                lueHalls.RefreshEditValue();
+               
 
                 HallExtStatusEN aTemp = aListAvailableHall.Where(a => a.Code == grvAvailableHalls.GetFocusedRowCellValue("Code").ToString()).ToList()[0];
                 aListAvailableHall.Remove(aTemp);
@@ -323,11 +340,12 @@ namespace RoomManager
                 NewBookingHallEN aTemp = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == grvSelectedHalls.GetFocusedRowCellValue("CodeHall").ToString()).ToList()[0];
                 this.aNewBookingHEN.aListBookingHallUsed.Remove(aTemp);
                 dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
-                
+
+                lueHalls.Reset();
                 lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
-                lueHalls.Properties.DisplayMember = "HallType";
+                lueHalls.Properties.DisplayMember = "HallSku";
                 lueHalls.Properties.ValueMember = "CodeHall";
-                lueHalls.RefreshEditValue();
+                
                 dgvSelectedHalls.RefreshDataSource();
             }
             catch (Exception ex)
@@ -539,7 +557,7 @@ namespace RoomManager
                     
                      this.aNewBookingHEN.Disable = false;
                      this.aNewBookingHEN.Description = "";
-                     if (lueCompany.EditValue == null)
+                     if (Convert.ToInt32(lueCompany.EditValue) == 0)
                      {
                          this.IDCompany = this.aCompaniesBO.AutoInsertCompany(lueCompany.Text, 3);// 3 : Loại khách lẻ
                          string CustomerGroupName = "[Khách lẻ][" + lueCompany.Text + "][" + DateTime.Now.ToShortDateString() + "]";
@@ -551,7 +569,7 @@ namespace RoomManager
                          string CustomerGroupName = "[Khách lẻ][" + lueCompany.Text + "][" + DateTime.Now.ToShortDateString() + "]";
                          this.IDCustomerGroup = this.aCustomerGroupsBO.AutoInsertCustomerGroup(CustomerGroupName, Convert.ToInt32(lueCompany.EditValue));
                      }
-                     if (lueCustomer.EditValue == null)
+                     if (Convert.ToInt32(lueCustomer.EditValue) == 0)
                      {
                          this.IDCustomer = this.aCustomersBO.AutoInsertCustomer(lueCustomer.Text, this.IDCustomerGroup, txtPhoneNumber.Text, DateTime.Now);
                      }
@@ -818,6 +836,7 @@ namespace RoomManager
             {
                 if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN.Count > 0)
                 {
+                    txtMenusName.Text = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name;
                     dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
                     dgvServiceInHall.RefreshDataSource();
                 }
@@ -826,10 +845,18 @@ namespace RoomManager
                     MenusEN aMenusEN = new MenusEN();
                     aMenusEN.Name = txtMenusName.Text;
                     this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].InsertMenu(aMenusEN);
+                    dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
+                    dgvServiceInHall.RefreshDataSource();
                 }
             }
+            
         }
         #endregion      
+
+        private void txtMenusName_Leave(object sender, EventArgs e)
+        {
+            this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name = txtMenusName.Text;
+        }
 
         
 
