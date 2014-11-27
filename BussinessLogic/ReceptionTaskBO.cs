@@ -867,12 +867,13 @@ namespace BussinessLogic
         public List<BookingRStatusPayViewEN> GetListBookingRUnPayment(DateTime? From, DateTime? To, int? CustomerType, string StatusPay)
         {
             List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> aListTemp = new List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result>();
-
             aListTemp = aDatabaseDA.sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(From, To, CustomerType, StatusPay).ToList();
 
             List<BookingRStatusPayViewEN> aListReturn = new List<BookingRStatusPayViewEN>();
             BookingRStatusPayViewEN aBookingRStatusPayViewEN;
             CompaniesBO aCompaniesBO = new CompaniesBO();
+            List<Companies> aListCompaniesTemp = aCompaniesBO.Select_All();
+
             for (int i = 0; i < aListTemp.Count; i++)
             {
                 aBookingRStatusPayViewEN = new BookingRStatusPayViewEN();
@@ -884,22 +885,22 @@ namespace BussinessLogic
                 aBookingRStatusPayViewEN.IDCustomer = aListTemp[i].Customers_ID;
                 aBookingRStatusPayViewEN.IDCustomerGroup = aListTemp[i].CustomerGroups_ID;
                 aBookingRStatusPayViewEN.BookingRs_Status = aListTemp[i].BookingRs_Status;
+                aBookingRStatusPayViewEN.CustomerGroups_Name = aListTemp[i].CustomerGroups_Name;
 
 
                 int IDCompany = !String.IsNullOrEmpty(aListTemp[i].Companies_ID.ToString()) ? Convert.ToInt32(aListTemp[i].Companies_ID) : 0;
+                if (aListCompaniesTemp.Where(c => c.ID == IDCompany).ToList().Count > 0)
+                {
+                    aBookingRStatusPayViewEN.NameCompany = aListCompaniesTemp.Where(c => c.ID == IDCompany).ToList()[0].Name;
+                }
+                else
+                {
+                    aBookingRStatusPayViewEN.NameCompany = string.Empty;
+                }
 
-                Companies aCompanies = aCompaniesBO.Select_ByID(IDCompany);
-                aBookingRStatusPayViewEN.NameCompany = aCompanies.Name;
-                aBookingRStatusPayViewEN.CustomerGroups_Name = aListTemp[i].CustomerGroups_Name;
                 aBookingRStatusPayViewEN.StatusPay = aListTemp[i].BookingRs_StatusPay;
                 aBookingRStatusPayViewEN.BookingMoney = aListTemp[i].BookingRs_BookingMoney;
-
-
-                //aBookingRStatusPayViewEN.IDBookingRoom = aListTemp[i].BookingRooms_ID;
                 aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
-                //aBookingRStatusPayViewEN.BookingStatus = aListTemp[i].BookingRooms_Status;
-                //aBookingRStatusPayViewEN.BookingRooms_CodeRoom = aListTemp[i].BookingRooms_CodeRoom;
-
                 aBookingRStatusPayViewEN.IDBookingH = aListTemp[i].BookingRs_BookingHs_IDBookingH;
                 aBookingRStatusPayViewEN.BookingHs_Status = aListTemp[i].BookingHs_Status;
                 aBookingRStatusPayViewEN.BookingHs_StatusPay = aListTemp[i].BookingHs_StatusPay;

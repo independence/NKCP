@@ -39,6 +39,8 @@ namespace RoomManager
             InitializeComponent();
             this.Datasource = Datasource;
 
+            string a =Datasource.Sku;
+            string b = Datasource.Code;
            
             if (Datasource.RoomStatus == 0)
             {
