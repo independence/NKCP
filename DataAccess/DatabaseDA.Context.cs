@@ -413,7 +413,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomsExt_CalculationRevenue_Result>("sp_RoomsExt_CalculationRevenue", codeRoomParameter, startTimeParameter, endTimeParameter);
         }
     
-        public virtual ObjectResult<Nullable<bool>> sp_save_serviceroom(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate)
+        public virtual ObjectResult<Nullable<bool>> sp_Save_bookingroom_service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<int> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate)
         {
             var iDParameter = iD.HasValue ?
                 new ObjectParameter("ID", iD) :
@@ -433,7 +433,7 @@ namespace DataAccess
     
             var disableParameter = disable.HasValue ?
                 new ObjectParameter("Disable", disable) :
-                new ObjectParameter("Disable", typeof(bool));
+                new ObjectParameter("Disable", typeof(int));
     
             var iDBookingRoomParameter = iDBookingRoom.HasValue ?
                 new ObjectParameter("IDBookingRoom", iDBookingRoom) :
@@ -479,7 +479,7 @@ namespace DataAccess
                 new ObjectParameter("AcceptDate", acceptDate) :
                 new ObjectParameter("AcceptDate", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_save_serviceroom", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Save_bookingroom_service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
         }
     
         public virtual ObjectResult<sp_SystemUsers_GetCurrentInDivision_Result> sp_SystemUsers_GetCurrentInDivision(Nullable<int> iDDivision)

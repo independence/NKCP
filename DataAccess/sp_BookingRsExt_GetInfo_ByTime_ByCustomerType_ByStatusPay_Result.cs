@@ -59,5 +59,6 @@ namespace DataAccess
         public string BookingRs_InvoiceNumber { get; set; }
         public Nullable<System.DateTime> BookingRs_InvoiceDate { get; set; }
         public string Rooms_Sku { get; set; }
+        public string Rooms_Code { get; set; }
     }
 }

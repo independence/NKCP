@@ -84,7 +84,11 @@ namespace RoomManager
                     colPaymentBookingRs.Visible = true;
                     colSku.VisibleIndex = 5;
                     colBookingRoom_Status.VisibleIndex = 6;
-                    colChekOut.VisibleIndex = 7;
+                    colCheckInActual.VisibleIndex = 7;
+                    colCheckOutPlan.VisibleIndex = 8;
+                    
+
+                    colChekOut.VisibleIndex = 9;
                     colChekOut.Visible = true;
                     colPrintBookingRs.Visible = false;
                 }
@@ -100,6 +104,8 @@ namespace RoomManager
                     colPrintBookingRs.Visible = true;
                     colSku.VisibleIndex = 6;
                     colBookingRoom_Status.VisibleIndex = 7;
+                    colCheckInActual.VisibleIndex = 8;
+                    colCheckOutPlan.VisibleIndex = 9;
                 }
                 
                 if (this.IDBookingR == 0)

@@ -239,7 +239,8 @@
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingHs_Subject] AS [BookingHs_Subject], 
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingRs_InvoiceNumber] AS [BookingRs_InvoiceNumber], 
       [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[BookingRs_InvoiceDate] AS [BookingRs_InvoiceDate], 
-      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[Rooms_Sku] AS [Rooms_Sku]
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[Rooms_Sku] AS [Rooms_Sku], 
+      [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers].[Rooms_Code] AS [Rooms_Code]
       FROM [dbo].[vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers] AS [vw_[BookingRInfo]]_BookingRs_Customers_Companies_SystemUsers]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms" EntityType="Model.Store.vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms" store:Type="Views" store:Schema="dbo" store:Name="vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms">
@@ -1821,7 +1822,7 @@
           <Property Name="Companies_Type" Type="int" />
           <Property Name="Companies_Status" Type="int" />
           <Property Name="CustomerGroups_ID" Type="int" />
-          <Property Name="CustomerGroups_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerGroups_Name" Type="nvarchar" MaxLength="255" />
           <Property Name="CustomerGroups_Type" Type="int" />
           <Property Name="CustomerGroups_Status" Type="int" />
           <Property Name="Customers_Gender" Type="nvarchar" MaxLength="10" />
@@ -1835,6 +1836,7 @@
           <Property Name="BookingRs_InvoiceNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="BookingRs_InvoiceDate" Type="date" />
           <Property Name="Rooms_Sku" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rooms_Code" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -2427,6 +2429,9 @@
           <Parameter Name="IDBookingH" Type="int" Mode="In" />
         </Function>
         <Function Name="checkStatusPayBookingHalls_Service" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="checkStatusPayBookingHs" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDBookingH" Type="int" Mode="In" />
+        </Function>
         <Function Name="checkStatusPayBookingInRoom" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="checkStatusPayBookingRooms" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDBookingR" Type="int" Mode="In" />
@@ -2591,12 +2596,12 @@
           <Parameter Name="StartTime" Type="datetime" Mode="In" />
           <Parameter Name="EndTime" Type="datetime" Mode="In" />
         </Function>
-        <Function Name="sp_save_serviceroom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_Save_bookingroom_service" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
           <Parameter Name="Info" Type="nvarchar" Mode="In" />
           <Parameter Name="Type" Type="int" Mode="In" />
           <Parameter Name="Status" Type="int" Mode="In" />
-          <Parameter Name="Disable" Type="bit" Mode="In" />
+          <Parameter Name="Disable" Type="int" Mode="In" />
           <Parameter Name="IDBookingRoom" Type="int" Mode="In" />
           <Parameter Name="IDService" Type="int" Mode="In" />
           <Parameter Name="Cost" Type="money" Mode="In" />
@@ -2779,12 +2784,12 @@
             <Parameter Name="StartTime" Mode="In" Type="DateTime" />
             <Parameter Name="EndTime" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <FunctionImport Name="sp_save_serviceroom" ReturnType="Collection(Boolean)">
+          <FunctionImport Name="sp_Save_bookingroom_service" ReturnType="Collection(Boolean)">
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="Info" Mode="In" Type="String" />
             <Parameter Name="Type" Mode="In" Type="Int32" />
             <Parameter Name="Status" Mode="In" Type="Int32" />
-            <Parameter Name="Disable" Mode="In" Type="Boolean" />
+            <Parameter Name="Disable" Mode="In" Type="Int32" />
             <Parameter Name="IDBookingRoom" Mode="In" Type="Int32" />
             <Parameter Name="IDService" Mode="In" Type="Int32" />
             <Parameter Name="Cost" Mode="In" Type="Decimal" />
@@ -3915,7 +3920,7 @@
           <Property Name="Companies_Type" Type="Int32" />
           <Property Name="Companies_Status" Type="Int32" />
           <Property Name="CustomerGroups_ID" Type="Int32" />
-          <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerGroups_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="CustomerGroups_Type" Type="Int32" />
           <Property Name="CustomerGroups_Status" Type="Int32" />
           <Property Name="Customers_Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
@@ -3929,6 +3934,7 @@
           <Property Name="BookingRs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BookingRs_InvoiceDate" Type="DateTime" Precision="0" />
           <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rooms_Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms">
           <Key>
@@ -4610,6 +4616,7 @@
           <Property Type="String" Name="BookingRs_InvoiceNumber" Nullable="true" MaxLength="50" />
           <Property Type="DateTime" Name="BookingRs_InvoiceDate" Nullable="true" />
           <Property Type="String" Name="Rooms_Sku" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Rooms_Code" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="sp_Contracts_GetCurrentHaveNotAllowances_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -6017,6 +6024,7 @@
                 <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
                 <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
                 <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+                <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6723,6 +6731,7 @@
                 <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
                 <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
                 <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+                <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -7005,7 +7014,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_save_serviceroom" FunctionName="Model.Store.sp_save_serviceroom" />
+          <FunctionImportMapping FunctionImportName="sp_Save_bookingroom_service" FunctionName="Model.Store.sp_Save_bookingroom_service" />
           <FunctionImportMapping FunctionImportName="sp_SystemUsers_GetCurrentInDivision" FunctionName="Model.Store.sp_SystemUsers_GetCurrentInDivision">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model.sp_SystemUsers_GetCurrentInDivision_Result">
