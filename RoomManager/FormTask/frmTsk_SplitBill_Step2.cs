@@ -113,6 +113,9 @@ namespace RoomManager
         {
             try
             {
+                dtpAcceptDate.Reset();
+                dtpInvoiceDate.Reset();
+                txtInvoiceNumber.ResetText();
                 int indexSub = Convert.ToInt32(lueIndexSub.Text);
 
                 this.LoadListRooms_ByIndexSubPayment(this.aNewPaymentEN, indexSub);

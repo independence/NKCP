@@ -124,7 +124,7 @@ namespace Entity
                         aTemp.IndexSubPayment = this.IndexSubPayment;
                         aTemp.AcceptDate = this.AcceptDate;
                         aTemp.InvoiceDate = this.InvoiceDate;
-                        aTemp.InvoiceNumber = this.InvoiceNumber.ToString();
+                        aTemp.InvoiceNumber = this.InvoiceNumber;
                         aDatabaseDA.BookingRooms_Services.AddOrUpdate(aTemp);
                         aDatabaseDA.SaveChanges();
                     }
@@ -144,7 +144,7 @@ namespace Entity
                         aTemp.IndexSubPayment = this.IndexSubPayment;
                         aTemp.AcceptDate = this.AcceptDate;
                         aTemp.InvoiceDate = this.InvoiceDate;
-                        aTemp.InvoiceNumber = this.InvoiceNumber.ToString();
+                        aTemp.InvoiceNumber = this.InvoiceNumber;
                         aDatabaseDA.BookingHalls_Services.AddOrUpdate(aTemp);
                         aDatabaseDA.SaveChanges();
                     }

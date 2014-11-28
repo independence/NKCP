@@ -39,6 +39,11 @@ namespace RoomManager
             this.afrmTsk_Payment_Step1 = afrmTsk_Payment_Step1;
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
+            if (this.IDBookingH != 0)
+            {
+                xtraTabControl1.SelectedTabPageIndex = 2;
+            }
+           
         }
         public frmTsk_Payment_Step2(frmTsk_Payment_Step1 afrmTsk_Payment_Step1, int IDBookingR, int IDBookingH, int StatusPay)
         {
@@ -47,6 +52,11 @@ namespace RoomManager
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
             this.StatusPay = StatusPay;
+            if (this.IDBookingH != 0)
+            {
+                xtraTabControl1.SelectedTabPageIndex = 2;
+            }
+           
         }
         //Hiennv
         public frmTsk_Payment_Step2(int IDBookingR, int IDBookingH)
@@ -54,7 +64,11 @@ namespace RoomManager
             InitializeComponent();
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
-            xtraTabControl1.SelectedTabPageIndex = 2;
+            if (this.IDBookingH != 0)
+            {
+                xtraTabControl1.SelectedTabPageIndex = 2;
+            }
+           
         }
         public frmTsk_Payment_Step2(frmMain afrmMain, int IDBookingR, int IDBookingH)
         {
@@ -62,7 +76,12 @@ namespace RoomManager
             this.afrmMain = afrmMain;
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
-            xtraTabControl1.SelectedTabPageIndex = 2;
+            if (this.IDBookingH != 0)
+            {
+                xtraTabControl1.SelectedTabPageIndex = 2;
+            }
+           
+
         }
 
         #region Payment Hiển
@@ -418,7 +437,7 @@ namespace RoomManager
             HallsBO aHallsBO = new HallsBO();
             BookingHallsBO aBookingHallsBO = new BookingHallsBO();
             FoodsBO aFoodsBO = new FoodsBO();
-
+            ExtraCostBO aExtraCostBO = new ExtraCostBO();
 
             BookingRs aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
             BookingHs aBookingHs = aBookingHsBO.Select_ByID(IDBookingH);
@@ -510,7 +529,8 @@ namespace RoomManager
                         }
                         aBookingRoomUsedEN.ListServiceUsed = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(item.ID);
                         aBookingRoomUsedEN.ListCustomer = aCustomersBO.SelectListCustomer_ByIDBookingRoom(item.ID);
-                        aBookingRoomUsedEN.Cost = cost + this.ExtraMoney(aRooms.Sku, aBookingRoomUsedEN.ListCustomer.Count, Convert.ToInt32(aBookingRs.CustomerType), "G1");
+                        aBookingRoomUsedEN.Cost = cost + Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(aRooms.Sku, aBookingRoomUsedEN.PriceType, aBookingRoomUsedEN.ListCustomer.Count).ExtraValue);
+                
                         aBookingRoomUsedEN.TotalMoney = aBookingRoomUsedEN.GetMoneyRoom();
                         aBookingRoomUsedEN.MoneyRoomBeforeTax = aBookingRoomUsedEN.GetOnlyMoneyRoomBeforeTax();
                         //Hiennv 
@@ -846,18 +866,7 @@ namespace RoomManager
             }
         }   
 
-        private decimal ExtraMoney(string sku, int numberPepole, int customerType, string PriceType)
-        {
-            try
-            {
-                return CORE.CONSTANTS.SelectedExtraCost(sku, numberPepole, customerType, PriceType);
-            }
-            catch (Exception ex)
-            {
-                return 0;
-                MessageBox.Show("frmTsk_PaymentStep2.ExtraMoney\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
         // Các hàm thay đổi thông tin trong PaymentEN
         private void txtTaxNumberCodeR_Leave(object sender, EventArgs e)
         {

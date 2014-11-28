@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_BookingHall_Customer_New));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -123,11 +123,11 @@
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueHalls = new DevExpress.XtraEditors.LookUpEdit();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.lueGuest = new DevExpress.XtraEditors.LookUpEdit();
             this.btnSearchGuest = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddGuest = new DevExpress.XtraEditors.SimpleButton();
-            this.lueHalls = new DevExpress.XtraEditors.LookUpEdit();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.txtMenusName = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -183,9 +183,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectFoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewSelectFoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUnSelectFoods)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueHalls.Properties)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueGuest.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueHalls.Properties)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenusName.Properties)).BeginInit();
             this.SuspendLayout();
@@ -599,7 +599,7 @@
             // 
             this.btnUnSelect.AutoHeight = false;
             this.btnUnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject22, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnUnSelect.Name = "btnUnSelect";
             this.btnUnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelect_ButtonClick);
@@ -721,7 +721,7 @@
             // 
             this.cbbTablePerson.AutoHeight = false;
             this.cbbTablePerson.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject23, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.cbbTablePerson.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.cbbTablePerson.HideSelection = false;
             this.cbbTablePerson.Items.AddRange(new object[] {
@@ -851,7 +851,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject24, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelect_ButtonClick);
@@ -964,7 +964,7 @@
             // 
             this.btnSelectService.AutoHeight = false;
             this.btnSelectService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSelectService.Name = "btnSelectService";
             this.btnSelectService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectService_ButtonClick);
@@ -1160,7 +1160,7 @@
             // 
             this.btnCancel.AutoHeight = false;
             this.btnCancel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject26, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCancel.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCancel_ButtonClick);
@@ -1348,7 +1348,7 @@
             // 
             this.btnSelectFoods.AutoHeight = false;
             this.btnSelectFoods.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject27, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnSelectFoods.Name = "btnSelectFoods";
             this.btnSelectFoods.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectFoods.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectFoods_ButtonClick);
@@ -1401,7 +1401,7 @@
             // 
             this.btnUnSelectFoods.AutoHeight = false;
             this.btnUnSelectFoods.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject28, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btnUnSelectFoods.Name = "btnUnSelectFoods";
             this.btnUnSelectFoods.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelectFoods.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelectFoods_ButtonClick);
@@ -1483,6 +1483,23 @@
             this.gridColumn31.VisibleIndex = 5;
             this.gridColumn31.Width = 118;
             // 
+            // lueHalls
+            // 
+            this.lueHalls.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lueHalls.Location = new System.Drawing.Point(9, 38);
+            this.lueHalls.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.lueHalls.Name = "lueHalls";
+            this.lueHalls.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueHalls.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HallSku", "Mã hội trường")});
+            this.lueHalls.Properties.NullText = "";
+            this.lueHalls.Properties.NullValuePrompt = "Danh sách hội trường đã đặt";
+            this.lueHalls.Properties.NullValuePromptShowForEmptyValue = true;
+            this.lueHalls.Size = new System.Drawing.Size(287, 20);
+            this.lueHalls.TabIndex = 20;
+            this.lueHalls.EditValueChanged += new System.EventHandler(this.lueHalls_EditValueChanged);
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 3;
@@ -1543,23 +1560,6 @@
             this.btnAddGuest.Size = new System.Drawing.Size(25, 19);
             this.btnAddGuest.TabIndex = 20;
             this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
-            // 
-            // lueHalls
-            // 
-            this.lueHalls.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueHalls.Location = new System.Drawing.Point(9, 38);
-            this.lueHalls.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
-            this.lueHalls.Name = "lueHalls";
-            this.lueHalls.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueHalls.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HallSku", "Mã hội trường")});
-            this.lueHalls.Properties.NullText = "";
-            this.lueHalls.Properties.NullValuePrompt = "Danh sách hội trường đã đặt";
-            this.lueHalls.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lueHalls.Size = new System.Drawing.Size(287, 20);
-            this.lueHalls.TabIndex = 20;
-            this.lueHalls.EditValueChanged += new System.EventHandler(this.lueHalls_EditValueChanged);
             // 
             // tableLayoutPanel15
             // 
@@ -1653,9 +1653,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectFoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewSelectFoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUnSelectFoods)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueHalls.Properties)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lueGuest.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueHalls.Properties)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtMenusName.Properties)).EndInit();
             this.ResumeLayout(false);
