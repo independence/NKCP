@@ -277,44 +277,51 @@ namespace RoomManager
         {
             try
             {
-                NewBookingHallEN aNewBookingHallEN = new NewBookingHallEN();
-                aNewBookingHallEN.CodeHall = grvAvailableHalls.GetFocusedRowCellValue("Code").ToString();
-                aNewBookingHallEN.HallSku = grvAvailableHalls.GetFocusedRowCellValue("Sku").ToString();
-                aNewBookingHallEN.CostRef_Halls = Convert.ToDecimal(grvAvailableHalls.GetFocusedRowCellValue("CostRef"));
-                aNewBookingHallEN.HallType = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("Type"));
-                aNewBookingHallEN.DisplayHallType = CORE.CONSTANTS.SelectedHallType(Convert.ToInt32(aNewBookingHallEN.HallType)).Name;
-                aNewBookingHallEN.TableOrPerson = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("TableOrPerson"));
-                IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
-                DateTime Lunardate = DateTime.ParseExact(Convert.ToString(LunarDateExt.ToLunarDate(DateTime.Now, 7)), "d/M/yyyy", theCultureInfo);
-                aNewBookingHallEN.LunarDate = Lunardate;
-                aNewBookingHallEN.Date = DateTime.Now;
-                aNewBookingHallEN.BookingStatus = null;
-
-                if (aNewBookingHallEN.TableOrPerson == 1)
+                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == grvAvailableHalls.GetFocusedRowCellValue("Code").ToString()).ToList().Count > 0)
                 {
-                    aNewBookingHallEN.DisplayTableOrPerson = "Người";
+                    MessageBox.Show("Hội trường này đã được chọn vui lòng chọn hội trường khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
-                if (aNewBookingHallEN.TableOrPerson == 2)
+                else
                 {
-                    aNewBookingHallEN.DisplayTableOrPerson = "Bàn";
+                    NewBookingHallEN aNewBookingHallEN = new NewBookingHallEN();
+                    aNewBookingHallEN.CodeHall = grvAvailableHalls.GetFocusedRowCellValue("Code").ToString();
+                    aNewBookingHallEN.HallSku = grvAvailableHalls.GetFocusedRowCellValue("Sku").ToString();
+                    aNewBookingHallEN.CostRef_Halls = Convert.ToDecimal(grvAvailableHalls.GetFocusedRowCellValue("CostRef"));
+                    aNewBookingHallEN.HallType = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("Type"));
+                    aNewBookingHallEN.DisplayHallType = CORE.CONSTANTS.SelectedHallType(Convert.ToInt32(aNewBookingHallEN.HallType)).Name;
+                    aNewBookingHallEN.TableOrPerson = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("TableOrPerson"));
+                    IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
+                    DateTime Lunardate = DateTime.ParseExact(Convert.ToString(LunarDateExt.ToLunarDate(DateTime.Now, 7)), "d/M/yyyy", theCultureInfo);
+                    aNewBookingHallEN.LunarDate = Lunardate;
+                    aNewBookingHallEN.Date = DateTime.Now;
+                    aNewBookingHallEN.BookingStatus = null;
+
+                    if (aNewBookingHallEN.TableOrPerson == 1)
+                    {
+                        aNewBookingHallEN.DisplayTableOrPerson = "Người";
+                    }
+                    if (aNewBookingHallEN.TableOrPerson == 2)
+                    {
+                        aNewBookingHallEN.DisplayTableOrPerson = "Bàn";
+                    }
+
+                    this.aNewBookingHEN.aListBookingHallUsed.Add(aNewBookingHallEN);
+
+                    dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
+                    dgvSelectedHalls.RefreshDataSource();
+
+                    lueHalls.Reset();
+                    lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
+                    lueHalls.Properties.DisplayMember = "HallSku";
+                    lueHalls.Properties.ValueMember = "CodeHall";
+
+
+                    HallExtStatusEN aTemp = aListAvailableHall.Where(a => a.Code == grvAvailableHalls.GetFocusedRowCellValue("Code").ToString()).ToList()[0];
+                    aListAvailableHall.Remove(aTemp);
+                    dgvAvailableHalls.DataSource = aListAvailableHall;
+                    dgvAvailableHalls.RefreshDataSource();
                 }
-
-                this.aNewBookingHEN.aListBookingHallUsed.Add(aNewBookingHallEN);
-
-                dgvSelectedHalls.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
-                dgvSelectedHalls.RefreshDataSource();
-
-                lueHalls.Reset();
-                lueHalls.Properties.DataSource = this.aNewBookingHEN.aListBookingHallUsed;
-                lueHalls.Properties.DisplayMember = "HallSku";
-                lueHalls.Properties.ValueMember = "CodeHall";
-               
-
-                HallExtStatusEN aTemp = aListAvailableHall.Where(a => a.Code == grvAvailableHalls.GetFocusedRowCellValue("Code").ToString()).ToList()[0];
-                aListAvailableHall.Remove(aTemp);
-                dgvAvailableHalls.DataSource = aListAvailableHall;
-                dgvAvailableHalls.RefreshDataSource();
-
             }
             catch (Exception ex)
             {
@@ -559,8 +566,8 @@ namespace RoomManager
                      this.aNewBookingHEN.Description = "";
                      if (Convert.ToInt32(lueCompany.EditValue) == 0)
                      {
-                         this.IDCompany = this.aCompaniesBO.AutoInsertCompany(lueCompany.Text, 3);// 3 : Loại khách lẻ
-                         string CustomerGroupName = "[Khách lẻ][" + lueCompany.Text + "][" + DateTime.Now.ToShortDateString() + "]";
+                         this.IDCompany = this.aCompaniesBO.AutoInsertCompany(txtCompanyName.Text, 3);// 3 : Loại khách lẻ
+                         string CustomerGroupName = "[Khách lẻ][" + txtCompanyName.Text + "][" + DateTime.Now.ToShortDateString() + "]";
                          this.IDCustomerGroup = this.aCustomerGroupsBO.AutoInsertCustomerGroup(CustomerGroupName, IDCompany);
                      }
                      else
@@ -571,7 +578,7 @@ namespace RoomManager
                      }
                      if (Convert.ToInt32(lueCustomer.EditValue) == 0)
                      {
-                         this.IDCustomer = this.aCustomersBO.AutoInsertCustomer(lueCustomer.Text, this.IDCustomerGroup, txtPhoneNumber.Text, DateTime.Now);
+                         this.IDCustomer = this.aCustomersBO.AutoInsertCustomer(txtCustomerName.Text, this.IDCustomerGroup, txtPhoneNumber.Text, DateTime.Now);
                      }
                      else
                      {
