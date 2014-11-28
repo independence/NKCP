@@ -630,7 +630,7 @@ namespace BussinessLogic
 
                     if (a < 1)
                     {
-                        a1 = Math.Floor(a);
+                        a1 = 1;
                     }
                     else
                     {
