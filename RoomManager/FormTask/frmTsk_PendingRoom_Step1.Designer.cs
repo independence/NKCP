@@ -38,7 +38,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.txtSku = new DevExpress.XtraEditors.TextEdit();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvBookingRooms = new DevExpress.XtraGrid.GridControl();
             this.viewBookingRooms = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -50,6 +49,7 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnUnCharge = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveSeclectedRooms)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -83,7 +83,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(834, 46);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -107,11 +107,11 @@
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(3, 16);
+            this.labelControl5.Location = new System.Drawing.Point(3, 15);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.labelControl5.Size = new System.Drawing.Size(79, 13);
-            this.labelControl5.TabIndex = 19;
+            this.labelControl5.Size = new System.Drawing.Size(87, 16);
+            this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "Tên phòng";
             // 
             // btnSearch
@@ -120,36 +120,20 @@
             this.btnSearch.Appearance.Options.UseTextOptions = true;
             this.btnSearch.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(245, 11);
+            this.btnSearch.Location = new System.Drawing.Point(250, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(85, 23);
-            this.btnSearch.TabIndex = 0;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSku
             // 
             this.txtSku.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSku.Location = new System.Drawing.Point(88, 13);
+            this.txtSku.Location = new System.Drawing.Point(96, 13);
             this.txtSku.Name = "txtSku";
             this.txtSku.Size = new System.Drawing.Size(148, 20);
-            this.txtSku.TabIndex = 20;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 415);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(834, 47);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.txtSku.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -168,7 +152,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 462);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvBookingRooms
             // 
@@ -181,7 +165,7 @@
             this.btnCharge,
             this.btnUnCharge});
             this.dgvBookingRooms.Size = new System.Drawing.Size(828, 346);
-            this.dgvBookingRooms.TabIndex = 15;
+            this.dgvBookingRooms.TabIndex = 5;
             this.dgvBookingRooms.UseEmbeddedNavigator = true;
             this.dgvBookingRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewBookingRooms});
@@ -198,6 +182,7 @@
             this.gridColumn3});
             this.viewBookingRooms.GridControl = this.dgvBookingRooms;
             this.viewBookingRooms.Name = "viewBookingRooms";
+            this.viewBookingRooms.OptionsFind.AlwaysVisible = true;
             this.viewBookingRooms.OptionsView.EnableAppearanceEvenRow = true;
             this.viewBookingRooms.OptionsView.ShowFooter = true;
             this.viewBookingRooms.OptionsView.ShowGroupPanel = false;
@@ -333,6 +318,22 @@
             this.btnUnCharge.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnCharge.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnCharge_ButtonClick);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 415);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(834, 47);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
             // frmTsk_PendingRoom_Step1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,7 +362,6 @@
 
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnRemoveSeclectedRooms;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraGrid.GridControl dgvBookingRooms;
         private DevExpress.XtraGrid.Views.Grid.GridView viewBookingRooms;
@@ -377,5 +377,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.TextEdit txtSku;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

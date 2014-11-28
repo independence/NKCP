@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 307);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -109,7 +109,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(677, 254);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -137,7 +137,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(410, 248);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel7
             // 
@@ -154,7 +154,7 @@
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(297, 43);
-            this.tableLayoutPanel7.TabIndex = 9;
+            this.tableLayoutPanel7.TabIndex = 4;
             // 
             // lblID
             // 
@@ -164,7 +164,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 16);
-            this.lblID.TabIndex = 8;
+            this.lblID.TabIndex = 4;
             this.lblID.Text = "---";
             // 
             // labelControl1
@@ -175,7 +175,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(98, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Mã hội trường";
             // 
             // txtSku
@@ -187,7 +187,7 @@
             this.txtSku.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSku.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSku.Size = new System.Drawing.Size(70, 20);
-            this.txtSku.TabIndex = 7;
+            this.txtSku.TabIndex = 6;
             // 
             // labelControl12
             // 
@@ -197,15 +197,16 @@
             this.labelControl12.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(95, 17);
-            this.labelControl12.TabIndex = 2;
+            this.labelControl12.TabIndex = 3;
             this.labelControl12.Text = "ID hội trường";
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(110, 150);
+            this.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtInfo.Location = new System.Drawing.Point(110, 153);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Size = new System.Drawing.Size(297, 37);
-            this.txtInfo.TabIndex = 8;
+            this.txtInfo.TabIndex = 15;
             this.txtInfo.UseOptimizedRendering = true;
             // 
             // labelControl5
@@ -216,7 +217,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(60, 16);
-            this.labelControl5.TabIndex = 4;
+            this.labelControl5.TabIndex = 14;
             this.labelControl5.Text = "Thông tin";
             // 
             // labelControl2
@@ -227,7 +228,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Số bàn ";
             // 
             // tableLayoutPanel4
@@ -245,7 +246,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(297, 43);
-            this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel4.TabIndex = 8;
             // 
             // txtNumTableMax
             // 
@@ -258,7 +259,7 @@
             this.txtNumTableMax.Properties.Mask.EditMask = "d";
             this.txtNumTableMax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtNumTableMax.Size = new System.Drawing.Size(69, 20);
-            this.txtNumTableMax.TabIndex = 9;
+            this.txtNumTableMax.TabIndex = 11;
             // 
             // txtNumTableStandard
             // 
@@ -271,7 +272,7 @@
             this.txtNumTableStandard.Properties.Mask.EditMask = "d";
             this.txtNumTableStandard.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtNumTableStandard.Size = new System.Drawing.Size(74, 20);
-            this.txtNumTableStandard.TabIndex = 8;
+            this.txtNumTableStandard.TabIndex = 9;
             // 
             // labelControl3
             // 
@@ -281,15 +282,16 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(91, 17);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Số bàn tối đa";
             // 
             // txtIntro
             // 
-            this.txtIntro.Location = new System.Drawing.Point(110, 101);
+            this.txtIntro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtIntro.Location = new System.Drawing.Point(110, 104);
             this.txtIntro.Name = "txtIntro";
             this.txtIntro.Size = new System.Drawing.Size(297, 37);
-            this.txtIntro.TabIndex = 7;
+            this.txtIntro.TabIndex = 13;
             this.txtIntro.UseOptimizedRendering = true;
             // 
             // labelControl4
@@ -300,7 +302,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(64, 17);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Giới thiệu";
             // 
             // tableLayoutPanel5
@@ -312,17 +314,18 @@
             this.tableLayoutPanel5.Controls.Add(this.txtCostRef, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labelControl6, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.cbbCostUnit, 2, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(110, 199);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(297, 38);
-            this.tableLayoutPanel5.TabIndex = 5;
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(297, 46);
+            this.tableLayoutPanel5.TabIndex = 17;
             // 
             // txtCostRef
             // 
             this.txtCostRef.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCostRef.Location = new System.Drawing.Point(5, 9);
+            this.txtCostRef.Location = new System.Drawing.Point(5, 13);
             this.txtCostRef.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.txtCostRef.Name = "txtCostRef";
             this.txtCostRef.Properties.Appearance.Options.UseTextOptions = true;
@@ -330,24 +333,24 @@
             this.txtCostRef.Properties.Mask.EditMask = "n0";
             this.txtCostRef.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCostRef.Size = new System.Drawing.Size(127, 20);
-            this.txtCostRef.TabIndex = 10;
+            this.txtCostRef.TabIndex = 18;
             // 
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(161, 10);
+            this.labelControl6.Location = new System.Drawing.Point(161, 14);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(44, 17);
-            this.labelControl6.TabIndex = 2;
+            this.labelControl6.TabIndex = 19;
             this.labelControl6.Text = "Đơn vị";
             // 
             // cbbCostUnit
             // 
             this.cbbCostUnit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbCostUnit.EditValue = "VND";
-            this.cbbCostUnit.Location = new System.Drawing.Point(225, 9);
+            this.cbbCostUnit.Location = new System.Drawing.Point(225, 13);
             this.cbbCostUnit.Name = "cbbCostUnit";
             this.cbbCostUnit.Properties.Appearance.Options.UseTextOptions = true;
             this.cbbCostUnit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -357,7 +360,7 @@
             "VND",
             "USD"});
             this.cbbCostUnit.Size = new System.Drawing.Size(69, 20);
-            this.cbbCostUnit.TabIndex = 11;
+            this.cbbCostUnit.TabIndex = 20;
             // 
             // labelControl7
             // 
@@ -367,7 +370,7 @@
             this.labelControl7.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(99, 17);
-            this.labelControl7.TabIndex = 6;
+            this.labelControl7.TabIndex = 16;
             this.labelControl7.Text = "Giá tham khảo";
             // 
             // tableLayoutPanel6
@@ -392,7 +395,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(255, 248);
-            this.tableLayoutPanel6.TabIndex = 1;
+            this.tableLayoutPanel6.TabIndex = 21;
             // 
             // cbbStatus
             // 
@@ -410,7 +413,7 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(145, 20);
-            this.cbbStatus.TabIndex = 14;
+            this.cbbStatus.TabIndex = 25;
             // 
             // labelControl11
             // 
@@ -420,7 +423,7 @@
             this.labelControl11.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(32, 16);
-            this.labelControl11.TabIndex = 6;
+            this.labelControl11.TabIndex = 28;
             this.labelControl11.Text = "Khóa";
             // 
             // labelControl8
@@ -431,7 +434,7 @@
             this.labelControl8.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(28, 17);
-            this.labelControl8.TabIndex = 3;
+            this.labelControl8.TabIndex = 22;
             this.labelControl8.Text = "Ảnh";
             // 
             // labelControl9
@@ -442,7 +445,7 @@
             this.labelControl9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(71, 17);
-            this.labelControl9.TabIndex = 4;
+            this.labelControl9.TabIndex = 24;
             this.labelControl9.Text = "Trạng thái";
             // 
             // labelControl10
@@ -453,15 +456,16 @@
             this.labelControl10.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(28, 17);
-            this.labelControl10.TabIndex = 5;
+            this.labelControl10.TabIndex = 26;
             this.labelControl10.Text = "Loại";
             // 
             // pbxImage
             // 
-            this.pbxImage.Location = new System.Drawing.Point(86, 3);
+            this.pbxImage.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pbxImage.Location = new System.Drawing.Point(86, 7);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(148, 143);
-            this.pbxImage.TabIndex = 7;
+            this.pbxImage.TabIndex = 23;
             this.pbxImage.DoubleClick += new System.EventHandler(this.pbxImage_DoubleClick);
             // 
             // cbbDisable
@@ -478,7 +482,7 @@
             "False",
             "True"});
             this.cbbDisable.Size = new System.Drawing.Size(145, 20);
-            this.cbbDisable.TabIndex = 12;
+            this.cbbDisable.TabIndex = 29;
             // 
             // lueHallType
             // 
@@ -491,7 +495,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Loại")});
             this.lueHallType.Properties.NullText = "";
             this.lueHallType.Size = new System.Drawing.Size(145, 20);
-            this.lueHallType.TabIndex = 13;
+            this.lueHallType.TabIndex = 27;
             // 
             // btnEdit
             // 
@@ -503,7 +507,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 25);
-            this.btnEdit.TabIndex = 1;
+            this.btnEdit.TabIndex = 30;
             this.btnEdit.Text = "Cập nhật";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -514,6 +518,7 @@
             this.ClientSize = new System.Drawing.Size(683, 307);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUpd_Halls";

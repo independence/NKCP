@@ -178,7 +178,10 @@ namespace BussinessLogic
         {
             try
             {
+              //  bookingHs.ID = null;
+                
                 aDatabaseDA.BookingHs.Add(bookingHs);
+              
                 aDatabaseDA.SaveChanges();
                 return bookingHs.ID;
 

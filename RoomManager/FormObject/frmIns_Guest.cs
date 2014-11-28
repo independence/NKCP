@@ -21,6 +21,7 @@ namespace RoomManager
         frmTsk_BookingHall_Group afrmTsk_BookingHall_Group = null;
         frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = null;
         frmTsk_UpdBooking afrmTsk_UpdBooking = null;
+        frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
 
         public frmIns_Guest()
         {
@@ -45,6 +46,11 @@ namespace RoomManager
         {
             InitializeComponent();
             this.afrmTsk_BookingHall_Customer = afrmTsk_BookingHall_Customer;
+        }
+        public frmIns_Guest(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
         }
         public frmIns_Guest(frmTsk_UpdBooking afrmTsk_UpdBooking)
         {
@@ -109,6 +115,11 @@ namespace RoomManager
                     {
                         this.afrmTsk_BookingHall_Customer.ReloadData();
                         this.afrmTsk_BookingHall_Customer.CallBackGuest(ID);
+                    }
+                    if (afrmTsk_BookingHall_Customer_New != null)
+                    {
+                        this.afrmTsk_BookingHall_Customer_New.LoadGuest();
+                        this.afrmTsk_BookingHall_Customer_New.CallBackGuest(ID);
                     }
                     if (afrmTsk_UpdBooking != null)
                     {

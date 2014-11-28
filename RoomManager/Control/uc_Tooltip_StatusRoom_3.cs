@@ -83,7 +83,7 @@ namespace RoomManager
 
         }
 
-        public void Show1()
+        public void Show()
         {
             if (this.StatusButtonPopup == 0) // Mac dinh
             {
@@ -209,7 +209,7 @@ namespace RoomManager
                 {
                     IDBookingH = Convert.ToInt32(aBookingRs_BookingHs.IDBookingH);
                 }
-                frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(Convert.ToInt32(this.Datasource.BookingRs_ID),IDBookingH);
+                frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(this.afrmMain,Convert.ToInt32(this.Datasource.BookingRs_ID),IDBookingH);
                 afrmTsk_Payment_Step2.Show();
                 this.Parent.Dispose();
 

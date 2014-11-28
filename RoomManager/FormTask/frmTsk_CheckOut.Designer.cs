@@ -69,7 +69,7 @@
             this.dgvBookingRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCheckOut});
             this.dgvBookingRooms.Size = new System.Drawing.Size(909, 338);
-            this.dgvBookingRooms.TabIndex = 0;
+            this.dgvBookingRooms.TabIndex = 1;
             this.dgvBookingRooms.UseEmbeddedNavigator = true;
             this.dgvBookingRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingRoom});

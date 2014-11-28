@@ -19,6 +19,7 @@ namespace Entity
         public string NameService { get; set; }
         public DateTime? DateUsed { get; set; }
         public double? Quantity { get; set; }
+        public string Unit { get; set; }
         public decimal? Cost { get; set; }
         public decimal? CostRef_Service { get; set; }
         public double? Tax { get; set; }

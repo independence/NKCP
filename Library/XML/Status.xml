@@ -31,6 +31,7 @@
     <Status Code="CHUA THANH TOAN" ID="1">Chưa thanh toán</Status>
     <Status Code="TAM UNG" ID="2">Tạm ứng</Status>
     <Status Code="DA THANH TOAN" ID="3">Đã thanh toán</Status>
+    <Status Code="TAT CA" ID="4">Tất cả</Status>
   </StatusPays>
 
   <CustomerStatus>

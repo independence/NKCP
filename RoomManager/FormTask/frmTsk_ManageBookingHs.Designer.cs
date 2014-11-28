@@ -126,11 +126,12 @@
             this.tableLayoutPanel3.Controls.Add(this.labelControl3, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.lueStatus, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSearch, 6, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1038, 36);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1364, 36);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // labelControl1
@@ -141,7 +142,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(57, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Từ ngày";
             // 
             // dtpFrom
@@ -158,7 +159,8 @@
             this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(130, 20);
             this.dtpFrom.TabIndex = 3;
             // 
@@ -170,7 +172,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Đến ngày";
             // 
             // dtpTo
@@ -187,9 +189,10 @@
             this.dtpTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(130, 20);
-            this.dtpTo.TabIndex = 2;
+            this.dtpTo.TabIndex = 5;
             // 
             // labelControl3
             // 
@@ -199,7 +202,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(71, 17);
-            this.labelControl3.TabIndex = 5;
+            this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Trạng thái";
             // 
             // lueStatus
@@ -215,7 +218,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Trạng thái")});
             this.lueStatus.Properties.NullText = "";
             this.lueStatus.Size = new System.Drawing.Size(130, 20);
-            this.lueStatus.TabIndex = 4;
+            this.lueStatus.TabIndex = 7;
             // 
             // btnSearch
             // 
@@ -227,7 +230,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(101, 30);
-            this.btnSearch.TabIndex = 1;
+            this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -248,7 +251,8 @@
             this.btnDelay,
             this.btnContinue});
             this.dgvBookingHs.Size = new System.Drawing.Size(1364, 377);
-            this.dgvBookingHs.TabIndex = 2;
+            this.dgvBookingHs.TabIndex = 9;
+            this.dgvBookingHs.UseEmbeddedNavigator = true;
             this.dgvBookingHs.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingHs});
             // 
@@ -273,6 +277,8 @@
             this.gridColumn13});
             this.grvBookingHs.GridControl = this.dgvBookingHs;
             this.grvBookingHs.Name = "grvBookingHs";
+            this.grvBookingHs.OptionsFind.AlwaysVisible = true;
+            this.grvBookingHs.OptionsView.EnableAppearanceEvenRow = true;
             this.grvBookingHs.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1

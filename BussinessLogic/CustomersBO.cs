@@ -77,7 +77,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.Customers.Add(customer);
-                return  aDatabaseDA.SaveChanges();
+                aDatabaseDA.SaveChanges();
+                return customer.ID;
             }
             catch (Exception ex)
             {
@@ -328,7 +329,26 @@ namespace BussinessLogic
                 throw new Exception("CustomersBO.GetListCustomers_ByIDCustomerGroup_ByNameCustomer\n" + ex.ToString());
             }
         }
+        //Lingting - Tự động thêm khách hàng và đưa vào nhóm
+        public int AutoInsertCustomer(string Name, int IDCustomerGroup, string Tel,DateTime FromDate)
+        {
+            try
+            {
+                Customers aCustomer = new Customers();
+                aCustomer.Name = Name;
+                aCustomer.Tel = Tel;
+                aCustomer.Disable = false;
+                this.Insert(aCustomer);
 
-
+                CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                aCustomerGroups_CustomersBO.AutoInsertCustomerToGroup(aCustomer.ID, IDCustomerGroup, FromDate);
+                return aCustomer.ID;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                throw new Exception("CustomersBO.AutoInsertCustomer:" + ex.ToString());
+            }
+        }
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIns_CheckPoint));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -48,7 +47,6 @@
             this.cbbDisable = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tetFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tetTo.Properties)).BeginInit();
@@ -81,7 +79,7 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.38012F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.61988F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 401);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -89,22 +87,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(322, 45);
-            this.tableLayoutPanel4.TabIndex = 2;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.Controls.Add(this.btnAdd, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(116, 1);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(176, 43);
-            this.tableLayoutPanel5.TabIndex = 0;
+            this.tableLayoutPanel4.TabIndex = 14;
             // 
             // btnAdd
             // 
@@ -112,11 +95,11 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(11, 4);
+            this.btnAdd.Location = new System.Drawing.Point(124, 5);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 34);
-            this.btnAdd.TabIndex = 1;
+            this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Cập nhật";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -150,7 +133,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(316, 362);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -160,7 +143,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(19, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Từ";
             // 
             // labelControl5
@@ -182,7 +165,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(61, 17);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "AddTime";
             // 
             // labelControl3
@@ -193,7 +176,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(28, 17);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Loại";
             // 
             // labelControl2
@@ -204,7 +187,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(74, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "Trạng Thái";
             // 
             // labelControl7
@@ -214,9 +197,9 @@
             this.labelControl7.Location = new System.Drawing.Point(11, 322);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(11, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 17);
-            this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Disable";
+            this.labelControl7.Size = new System.Drawing.Size(36, 17);
+            this.labelControl7.TabIndex = 12;
+            this.labelControl7.Text = "Khóa";
             // 
             // tetFrom
             // 
@@ -232,7 +215,7 @@
             this.tetFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tetFrom.Size = new System.Drawing.Size(202, 24);
-            this.tetFrom.TabIndex = 7;
+            this.tetFrom.TabIndex = 3;
             // 
             // tetTo
             // 
@@ -248,7 +231,7 @@
             this.tetTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tetTo.Size = new System.Drawing.Size(202, 24);
-            this.tetTo.TabIndex = 8;
+            this.tetTo.TabIndex = 5;
             // 
             // cbbAddTime
             // 
@@ -267,7 +250,7 @@
             "Một ngày",
             "Nửa ngày"});
             this.cbbAddTime.Size = new System.Drawing.Size(202, 24);
-            this.cbbAddTime.TabIndex = 9;
+            this.cbbAddTime.TabIndex = 7;
             // 
             // cbbType
             // 
@@ -286,7 +269,7 @@
             "Check In Sớm",
             "Check Out Muộn"});
             this.cbbType.Size = new System.Drawing.Size(202, 24);
-            this.cbbType.TabIndex = 10;
+            this.cbbType.TabIndex = 9;
             // 
             // cbbStatus
             // 
@@ -326,7 +309,7 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(202, 24);
-            this.cbbDisable.TabIndex = 12;
+            this.cbbDisable.TabIndex = 13;
             // 
             // frmIns_CheckPoint
             // 
@@ -347,7 +330,6 @@
             this.Text = "Thêm Check Point";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tetFrom.Properties)).EndInit();
@@ -378,7 +360,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbDisable;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
     }
 }

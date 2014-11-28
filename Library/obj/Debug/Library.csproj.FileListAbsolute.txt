@@ -2,7 +2,6 @@ D:\Picker_28_11_2014_ProjectGoverment\Library\bin\Debug\Library.XML
 D:\Picker_28_11_2014_ProjectGoverment\Library\bin\Debug\Library.dll
 D:\Picker_28_11_2014_ProjectGoverment\Library\bin\Debug\Library.pdb
 D:\Picker_28_11_2014_ProjectGoverment\Library\bin\Debug\Newtonsoft.Json.dll
-D:\Picker_28_11_2014_ProjectGoverment\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
 D:\Picker_28_11_2014_ProjectGoverment\Library\obj\Debug\Library.Properties.Resources.resources
 D:\Picker_28_11_2014_ProjectGoverment\Library\obj\Debug\Library.csproj.GenerateResource.Cache
 D:\Picker_28_11_2014_ProjectGoverment\Library\obj\Debug\Library.dll

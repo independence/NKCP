@@ -99,7 +99,7 @@
             // 
             // grvService
             // 
-            this.grvService.ColumnPanelRowHeight = 40;
+            this.grvService.ColumnPanelRowHeight = 30;
             this.grvService.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
@@ -112,7 +112,10 @@
             this.grvService.GridControl = this.dgvServices;
             this.grvService.Name = "grvService";
             this.grvService.OptionsFind.AlwaysVisible = true;
+            this.grvService.OptionsView.EnableAppearanceEvenRow = true;
             this.grvService.OptionsView.ShowFooter = true;
+            this.grvService.OptionsView.ShowGroupPanel = false;
+            this.grvService.RowHeight = 25;
             // 
             // gridColumn1
             // 
@@ -260,7 +263,7 @@
             this.gridColumn9.AppearanceHeader.Options.UseFont = true;
             this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn9.Caption = "Disable";
+            this.gridColumn9.Caption = "Khóa";
             this.gridColumn9.FieldName = "Disable";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;

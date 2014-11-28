@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CustomerTypes>
+  <CustomerType Code="ALL" ID="0">[Tất cả loại khách]</CustomerType>
   <CustomerType Code="KHACH NGOAI" ID="1">Nhà nước</CustomerType>
   <CustomerType Code="CTY NGOAI" ID="2">Công ty ngoài</CustomerType>
   <CustomerType Code="KHACH LE" ID="3">Khách lẻ</CustomerType>

@@ -64,14 +64,14 @@
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl16.Size = new System.Drawing.Size(81, 17);
-            this.labelControl16.TabIndex = 0;
+            this.labelControl16.TabIndex = 10;
             this.labelControl16.Text = "Trạng thái";
             // 
             // cboStatus
             // 
             this.cboStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboStatus.EditValue = "1";
-            this.cboStatus.Location = new System.Drawing.Point(102, 168);
+            this.cboStatus.Location = new System.Drawing.Point(101, 168);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Properties.Appearance.Options.UseTextOptions = true;
             this.cboStatus.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -83,24 +83,24 @@
             "3",
             "4"});
             this.cboStatus.Size = new System.Drawing.Size(216, 20);
-            this.cboStatus.TabIndex = 8;
+            this.cboStatus.TabIndex = 11;
             // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.Location = new System.Drawing.Point(102, 9);
+            this.txtName.Location = new System.Drawing.Point(101, 9);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 200;
             this.txtName.Properties.NullValuePrompt = "Nhập tối đa 200  ký tự.";
             this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(216, 20);
-            this.txtName.TabIndex = 4;
+            this.txtName.TabIndex = 3;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.69697F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.30303F));
             this.tableLayoutPanel4.Controls.Add(this.labelControl13, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtName, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelControl8, 0, 5);
@@ -125,7 +125,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(330, 243);
-            this.tableLayoutPanel4.TabIndex = 10;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelControl13
             // 
@@ -135,7 +135,7 @@
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl13.Size = new System.Drawing.Size(86, 16);
-            this.labelControl13.TabIndex = 0;
+            this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "Tên công ty";
             // 
             // labelControl8
@@ -146,14 +146,14 @@
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl8.Size = new System.Drawing.Size(61, 16);
-            this.labelControl8.TabIndex = 0;
+            this.labelControl8.TabIndex = 12;
             this.labelControl8.Text = "Disable";
             // 
             // cboDisable
             // 
             this.cboDisable.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboDisable.EditValue = "False";
-            this.cboDisable.Location = new System.Drawing.Point(102, 211);
+            this.cboDisable.Location = new System.Drawing.Point(101, 211);
             this.cboDisable.Name = "cboDisable";
             this.cboDisable.Properties.Appearance.Options.UseTextOptions = true;
             this.cboDisable.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -163,7 +163,7 @@
             "True",
             "False"});
             this.cboDisable.Size = new System.Drawing.Size(216, 20);
-            this.cboDisable.TabIndex = 8;
+            this.cboDisable.TabIndex = 13;
             // 
             // labelControl1
             // 
@@ -173,13 +173,13 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(43, 17);
-            this.labelControl1.TabIndex = 9;
+            this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Loại";
             // 
             // lueCustomerType
             // 
             this.lueCustomerType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueCustomerType.Location = new System.Drawing.Point(102, 127);
+            this.lueCustomerType.Location = new System.Drawing.Point(101, 127);
             this.lueCustomerType.Name = "lueCustomerType";
             this.lueCustomerType.Properties.Appearance.Options.UseTextOptions = true;
             this.lueCustomerType.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -191,7 +191,7 @@
             this.lueCustomerType.Properties.NullValuePrompt = "Chọn loại";
             this.lueCustomerType.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCustomerType.Size = new System.Drawing.Size(216, 20);
-            this.lueCustomerType.TabIndex = 24;
+            this.lueCustomerType.TabIndex = 9;
             // 
             // labelControl2
             // 
@@ -201,7 +201,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl2.Size = new System.Drawing.Size(90, 17);
-            this.labelControl2.TabIndex = 0;
+            this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Mã số thuế ";
             // 
             // labelControl3
@@ -212,30 +212,30 @@
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl3.Size = new System.Drawing.Size(55, 17);
-            this.labelControl3.TabIndex = 0;
+            this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Địa chỉ";
             // 
             // txtTaxNumberCode
             // 
             this.txtTaxNumberCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTaxNumberCode.Location = new System.Drawing.Point(102, 47);
+            this.txtTaxNumberCode.Location = new System.Drawing.Point(101, 47);
             this.txtTaxNumberCode.Name = "txtTaxNumberCode";
             this.txtTaxNumberCode.Properties.MaxLength = 100;
             this.txtTaxNumberCode.Properties.NullValuePrompt = "Nhập tối đa 100  ký tự.";
             this.txtTaxNumberCode.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTaxNumberCode.Size = new System.Drawing.Size(216, 20);
-            this.txtTaxNumberCode.TabIndex = 4;
+            this.txtTaxNumberCode.TabIndex = 5;
             // 
             // txtAddress
             // 
             this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddress.Location = new System.Drawing.Point(102, 86);
+            this.txtAddress.Location = new System.Drawing.Point(101, 86);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.MaxLength = 250;
             this.txtAddress.Properties.NullValuePrompt = "Nhập tối đa 250  ký tự.";
             this.txtAddress.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtAddress.Size = new System.Drawing.Size(216, 20);
-            this.txtAddress.TabIndex = 4;
+            this.txtAddress.TabIndex = 7;
             // 
             // tableLayoutPanel1
             // 
@@ -252,14 +252,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(330, 308);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.84848F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.15151F));
             this.tableLayoutPanel3.Controls.Add(this.btnAddNew, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 264);
@@ -268,7 +268,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(330, 44);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.tableLayoutPanel3.TabIndex = 14;
             // 
             // btnAddNew
             // 
@@ -277,10 +277,10 @@
             this.btnAddNew.Appearance.Options.UseFont = true;
             this.btnAddNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
-            this.btnAddNew.Location = new System.Drawing.Point(102, 8);
+            this.btnAddNew.Location = new System.Drawing.Point(117, 8);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(125, 28);
-            this.btnAddNew.TabIndex = 0;
+            this.btnAddNew.Size = new System.Drawing.Size(105, 28);
+            this.btnAddNew.TabIndex = 15;
             this.btnAddNew.Text = "Cập nhật";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 

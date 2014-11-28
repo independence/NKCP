@@ -1,3 +1,17 @@
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\BussinessLogic.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\BussinessLogic.pdb
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\DataAccess.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\Entity.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\EntityFramework.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\Library.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\TeamNet.Data.FileExport.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\DataAccess.pdb
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\Entity.pdb
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\Library.pdb
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\bin\Debug\Library.xml
 D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache
 D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.Properties.Resources.resources
 D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.csproj.GenerateResource.Cache
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.dll
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.pdb

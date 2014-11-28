@@ -84,7 +84,8 @@ namespace Library
             string str = " ";
             bool booAm = false;
             decimal decS = 0;
-            //Tung addnew
+           
+
             try
             {
                 decS = Convert.ToDecimal(s.ToString());
@@ -149,6 +150,12 @@ namespace Library
             }
             if (booAm) str = "Âm " + str;
             return str + "đồng chẵn";
+        }
+        //Hiennv  19/11/2014  ham dung de sinh ma id tu dong
+        public static int AutoCreateCode()
+        {
+            int code = Convert.ToInt32(DateTime.Now.Day.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Millisecond.ToString());
+            return -code;
         }
     }
 }

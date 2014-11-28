@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(306, 362);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
@@ -90,7 +90,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 37);
-            this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel4.TabIndex = 16;
             // 
             // tableLayoutPanel5
             // 
@@ -117,7 +117,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 28);
-            this.btnEdit.TabIndex = 1;
+            this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Cập nhật";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
@@ -153,7 +153,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(300, 294);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -163,7 +163,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(19, 17);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Từ";
             // 
             // labelControl5
@@ -174,7 +174,7 @@
             this.labelControl5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(28, 17);
-            this.labelControl5.TabIndex = 4;
+            this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Đến";
             // 
             // labelControl4
@@ -185,7 +185,7 @@
             this.labelControl4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(55, 16);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "AddTime";
             // 
             // labelControl3
@@ -196,7 +196,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(28, 17);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Loại";
             // 
             // labelControl2
@@ -207,7 +207,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(74, 17);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Trạng Thái";
             // 
             // labelControl7
@@ -217,9 +217,9 @@
             this.labelControl7.Location = new System.Drawing.Point(20, 263);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(46, 16);
-            this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Disable";
+            this.labelControl7.Size = new System.Drawing.Size(32, 16);
+            this.labelControl7.TabIndex = 14;
+            this.labelControl7.Text = "Khóa";
             // 
             // tetFrom
             // 
@@ -232,7 +232,7 @@
             this.tetFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tetFrom.Size = new System.Drawing.Size(177, 20);
-            this.tetFrom.TabIndex = 7;
+            this.tetFrom.TabIndex = 5;
             // 
             // tetTo
             // 
@@ -245,7 +245,7 @@
             this.tetTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tetTo.Size = new System.Drawing.Size(177, 20);
-            this.tetTo.TabIndex = 8;
+            this.tetTo.TabIndex = 7;
             // 
             // cbbAddTime
             // 
@@ -277,7 +277,7 @@
             "Check In Sớm",
             "Check Out Muộn"});
             this.cbbType.Size = new System.Drawing.Size(177, 20);
-            this.cbbType.TabIndex = 10;
+            this.cbbType.TabIndex = 11;
             // 
             // cbbStatus
             // 
@@ -295,7 +295,7 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(177, 20);
-            this.cbbStatus.TabIndex = 11;
+            this.cbbStatus.TabIndex = 13;
             // 
             // cbbDisable
             // 
@@ -311,7 +311,7 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(177, 20);
-            this.cbbDisable.TabIndex = 12;
+            this.cbbDisable.TabIndex = 15;
             // 
             // labelControl6
             // 
@@ -321,7 +321,7 @@
             this.labelControl6.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(14, 16);
-            this.labelControl6.TabIndex = 13;
+            this.labelControl6.TabIndex = 2;
             this.labelControl6.Text = "ID";
             // 
             // lblID
@@ -332,7 +332,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 16);
-            this.lblID.TabIndex = 14;
+            this.lblID.TabIndex = 3;
             this.lblID.Text = "---";
             // 
             // frmUpd_CheckPoint

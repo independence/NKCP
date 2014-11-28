@@ -244,6 +244,9 @@ namespace Entity
             this.aListServiceUsed.Where(a => a.IDBookingService == IDBookingHallService).ToList()[0].IndexSubPayment = Index;
 
         }
+       
+
+
 
     }
 }

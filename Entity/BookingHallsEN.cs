@@ -19,7 +19,10 @@ namespace Entity
         public Nullable<int> LevelBookingH { get; set; }
         public string DisplayLevel { get; set; }
         public string HallSku { get; set; }
+        public Nullable<int> HallType { get; set; }
+        public string DisplayHallType { get; set; }
         public string HasMenu { get; set; }
+        public string DisplayTableOrPerson { get; set; }
         
     }
 }

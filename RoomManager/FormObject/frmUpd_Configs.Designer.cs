@@ -61,7 +61,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(80, 16);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "AccessKey";
             // 
             // txtAccessKey
@@ -70,7 +70,7 @@
             this.txtAccessKey.Location = new System.Drawing.Point(100, 14);
             this.txtAccessKey.Name = "txtAccessKey";
             this.txtAccessKey.Size = new System.Drawing.Size(145, 20);
-            this.txtAccessKey.TabIndex = 4;
+            this.txtAccessKey.TabIndex = 3;
             // 
             // cboGroup
             // 
@@ -88,7 +88,7 @@
             "3",
             "4"});
             this.cboGroup.Size = new System.Drawing.Size(145, 20);
-            this.cboGroup.TabIndex = 8;
+            this.cboGroup.TabIndex = 11;
             // 
             // btnSave
             // 
@@ -101,7 +101,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -131,7 +131,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(267, 241);
-            this.tableLayoutPanel4.TabIndex = 10;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelControl13
             // 
@@ -141,7 +141,7 @@
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl13.Size = new System.Drawing.Size(50, 17);
-            this.labelControl13.TabIndex = 0;
+            this.labelControl13.TabIndex = 4;
             this.labelControl13.Text = "Giá trị";
             // 
             // labelControl16
@@ -152,7 +152,7 @@
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl16.Size = new System.Drawing.Size(81, 17);
-            this.labelControl16.TabIndex = 0;
+            this.labelControl16.TabIndex = 6;
             this.labelControl16.Text = "Trạng thái";
             // 
             // cboStatus
@@ -171,7 +171,7 @@
             "3",
             "4"});
             this.cboStatus.Size = new System.Drawing.Size(145, 20);
-            this.cboStatus.TabIndex = 8;
+            this.cboStatus.TabIndex = 7;
             // 
             // labelControl8
             // 
@@ -181,7 +181,7 @@
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl8.Size = new System.Drawing.Size(40, 17);
-            this.labelControl8.TabIndex = 0;
+            this.labelControl8.TabIndex = 8;
             this.labelControl8.Text = "Kiểu";
             // 
             // cboType
@@ -200,7 +200,7 @@
             "3",
             "4"});
             this.cboType.Size = new System.Drawing.Size(145, 20);
-            this.cboType.TabIndex = 8;
+            this.cboType.TabIndex = 9;
             // 
             // txtValue
             // 
@@ -208,7 +208,7 @@
             this.txtValue.Location = new System.Drawing.Point(100, 62);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(145, 20);
-            this.txtValue.TabIndex = 4;
+            this.txtValue.TabIndex = 5;
             // 
             // labelControl2
             // 
@@ -218,7 +218,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl2.Size = new System.Drawing.Size(45, 16);
-            this.labelControl2.TabIndex = 0;
+            this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "Nhóm";
             // 
             // tableLayoutPanel3
@@ -234,7 +234,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(267, 42);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.tableLayoutPanel3.TabIndex = 12;
             // 
             // tableLayoutPanel1
             // 
@@ -250,7 +250,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 313);
-            this.tableLayoutPanel1.TabIndex = 4;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // frmUpd_Configs
             // 

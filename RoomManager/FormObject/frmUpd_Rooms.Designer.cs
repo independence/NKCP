@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpd_Rooms));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEditRoom = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblSku = new DevExpress.XtraEditors.LabelControl();
@@ -62,7 +61,6 @@
             this.lblCostUnit = new DevExpress.XtraEditors.LabelControl();
             this.txtCostUnit1 = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSku.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBed1.Properties)).BeginInit();
@@ -82,7 +80,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnEditRoom, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -95,32 +93,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(647, 504);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.22309F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.77691F));
-            this.tableLayoutPanel7.Controls.Add(this.btnEditRoom, 1, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 471);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(641, 30);
-            this.tableLayoutPanel7.TabIndex = 6;
-            // 
             // btnEditRoom
             // 
-            this.btnEditRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnEditRoom.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditRoom.Appearance.Options.UseFont = true;
             this.btnEditRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnEditRoom.Image")));
-            this.btnEditRoom.Location = new System.Drawing.Point(501, 3);
+            this.btnEditRoom.Location = new System.Drawing.Point(517, 473);
             this.btnEditRoom.LookAndFeel.SkinName = "Office 2010 Silver";
-            this.btnEditRoom.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.btnEditRoom.Margin = new System.Windows.Forms.Padding(6, 3, 30, 3);
             this.btnEditRoom.Name = "btnEditRoom";
-            this.btnEditRoom.Size = new System.Drawing.Size(100, 24);
-            this.btnEditRoom.TabIndex = 0;
+            this.btnEditRoom.Size = new System.Drawing.Size(100, 25);
+            this.btnEditRoom.TabIndex = 30;
             this.btnEditRoom.Text = "Cập nhật";
             this.btnEditRoom.Click += new System.EventHandler(this.btnEditRoom_Click);
             // 
@@ -172,7 +156,7 @@
             this.lblSku.Name = "lblSku";
             this.lblSku.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblSku.Size = new System.Drawing.Size(73, 16);
-            this.lblSku.TabIndex = 1;
+            this.lblSku.TabIndex = 6;
             this.lblSku.Text = "Mã Phòng";
             // 
             // txtSku
@@ -182,7 +166,7 @@
             this.txtSku.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtSku.Name = "txtSku";
             this.txtSku.Size = new System.Drawing.Size(125, 20);
-            this.txtSku.TabIndex = 13;
+            this.txtSku.TabIndex = 7;
             // 
             // btnSelectImage
             // 
@@ -195,7 +179,7 @@
             this.btnSelectImage.LookAndFeel.SkinName = "Office 2010 Silver";
             this.btnSelectImage.Name = "btnSelectImage";
             this.btnSelectImage.Size = new System.Drawing.Size(67, 26);
-            this.btnSelectImage.TabIndex = 25;
+            this.btnSelectImage.TabIndex = 18;
             this.btnSelectImage.Text = "Chọn";
             this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
@@ -203,12 +187,12 @@
             // 
             this.lblImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblImage.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(47, 185);
+            this.lblImage.Location = new System.Drawing.Point(53, 185);
             this.lblImage.Name = "lblImage";
             this.lblImage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblImage.Size = new System.Drawing.Size(50, 16);
-            this.lblImage.TabIndex = 3;
-            this.lblImage.Text = "Image";
+            this.lblImage.Size = new System.Drawing.Size(38, 17);
+            this.lblImage.TabIndex = 16;
+            this.lblImage.Text = "Ảnh";
             // 
             // lblType
             // 
@@ -218,7 +202,7 @@
             this.lblType.Name = "lblType";
             this.lblType.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblType.Size = new System.Drawing.Size(87, 17);
-            this.lblType.TabIndex = 4;
+            this.lblType.TabIndex = 10;
             this.lblType.Text = "Loại Phòng";
             // 
             // lblBed1
@@ -229,7 +213,7 @@
             this.lblBed1.Name = "lblBed1";
             this.lblBed1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblBed1.Size = new System.Drawing.Size(93, 17);
-            this.lblBed1.TabIndex = 12;
+            this.lblBed1.TabIndex = 14;
             this.lblBed1.Text = "Giường Đơn";
             // 
             // txtBed1
@@ -244,7 +228,7 @@
             this.txtBed1.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBed1.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBed1.Size = new System.Drawing.Size(125, 20);
-            this.txtBed1.TabIndex = 16;
+            this.txtBed1.TabIndex = 15;
             // 
             // pbxImage
             // 
@@ -252,7 +236,7 @@
             this.pbxImage.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(125, 99);
-            this.pbxImage.TabIndex = 26;
+            this.pbxImage.TabIndex = 17;
             // 
             // lueRoomType
             // 
@@ -267,7 +251,7 @@
             this.lueRoomType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name17", "RoomType")});
             this.lueRoomType.Size = new System.Drawing.Size(125, 20);
-            this.lueRoomType.TabIndex = 27;
+            this.lueRoomType.TabIndex = 11;
             // 
             // lblBed2
             // 
@@ -277,7 +261,7 @@
             this.lblBed2.Name = "lblBed2";
             this.lblBed2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblBed2.Size = new System.Drawing.Size(87, 17);
-            this.lblBed2.TabIndex = 7;
+            this.lblBed2.TabIndex = 4;
             this.lblBed2.Text = "Giường Đôi";
             // 
             // txtBed2
@@ -292,18 +276,18 @@
             this.txtBed2.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBed2.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBed2.Size = new System.Drawing.Size(172, 20);
-            this.txtBed2.TabIndex = 20;
+            this.txtBed2.TabIndex = 5;
             // 
             // lblDisable
             // 
             this.lblDisable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDisable.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisable.Location = new System.Drawing.Point(375, 55);
+            this.lblDisable.Location = new System.Drawing.Point(382, 55);
             this.lblDisable.Name = "lblDisable";
             this.lblDisable.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblDisable.Size = new System.Drawing.Size(56, 16);
-            this.lblDisable.TabIndex = 6;
-            this.lblDisable.Text = "Disable";
+            this.lblDisable.Size = new System.Drawing.Size(42, 16);
+            this.lblDisable.TabIndex = 8;
+            this.lblDisable.Text = "Khóa";
             // 
             // cbbDisable
             // 
@@ -321,7 +305,7 @@
             "False"});
             this.cbbDisable.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbbDisable.Size = new System.Drawing.Size(172, 20);
-            this.cbbDisable.TabIndex = 23;
+            this.cbbDisable.TabIndex = 9;
             // 
             // lblStatus
             // 
@@ -331,7 +315,7 @@
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblStatus.Size = new System.Drawing.Size(84, 17);
-            this.lblStatus.TabIndex = 11;
+            this.lblStatus.TabIndex = 12;
             this.lblStatus.Text = "Trạng Thái";
             // 
             // cbbStatus
@@ -353,7 +337,7 @@
             "4"});
             this.cbbStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbbStatus.Size = new System.Drawing.Size(172, 20);
-            this.cbbStatus.TabIndex = 24;
+            this.cbbStatus.TabIndex = 13;
             // 
             // labelControl7
             // 
@@ -363,7 +347,7 @@
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl7.Size = new System.Drawing.Size(28, 16);
-            this.labelControl7.TabIndex = 28;
+            this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "ID ";
             // 
             // lblIDRoom
@@ -374,7 +358,7 @@
             this.lblIDRoom.Name = "lblIDRoom";
             this.lblIDRoom.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblIDRoom.Size = new System.Drawing.Size(32, 16);
-            this.lblIDRoom.TabIndex = 29;
+            this.lblIDRoom.TabIndex = 3;
             this.lblIDRoom.Text = "Null";
             // 
             // tableLayoutPanel3
@@ -390,7 +374,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(641, 210);
-            this.tableLayoutPanel3.TabIndex = 7;
+            this.tableLayoutPanel3.TabIndex = 19;
             // 
             // tableLayoutPanel5
             // 
@@ -411,7 +395,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(635, 162);
-            this.tableLayoutPanel5.TabIndex = 2;
+            this.tableLayoutPanel5.TabIndex = 25;
             // 
             // labelControl1
             // 
@@ -421,7 +405,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(77, 17);
-            this.labelControl1.TabIndex = 6;
+            this.labelControl1.TabIndex = 26;
             this.labelControl1.Text = "Giới Thiệu";
             // 
             // txtIntro1
@@ -432,7 +416,7 @@
             this.txtIntro1.Options.Fields.UseCurrentCultureDateTimeFormat = false;
             this.txtIntro1.Options.MailMerge.KeepLastParagraph = false;
             this.txtIntro1.Size = new System.Drawing.Size(486, 66);
-            this.txtIntro1.TabIndex = 8;
+            this.txtIntro1.TabIndex = 27;
             // 
             // labelControl2
             // 
@@ -442,7 +426,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl2.Size = new System.Drawing.Size(115, 16);
-            this.labelControl2.TabIndex = 7;
+            this.labelControl2.TabIndex = 28;
             this.labelControl2.Text = "Thông Tin Phòng";
             // 
             // txtInfo1
@@ -453,7 +437,7 @@
             this.txtInfo1.Options.Fields.UseCurrentCultureDateTimeFormat = false;
             this.txtInfo1.Options.MailMerge.KeepLastParagraph = false;
             this.txtInfo1.Size = new System.Drawing.Size(486, 61);
-            this.txtInfo1.TabIndex = 9;
+            this.txtInfo1.TabIndex = 29;
             // 
             // tableLayoutPanel4
             // 
@@ -469,13 +453,14 @@
             this.tableLayoutPanel4.Controls.Add(this.txtCostRef1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.lblCostUnit, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtCostUnit1, 5, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(635, 36);
-            this.tableLayoutPanel4.TabIndex = 1;
+            this.tableLayoutPanel4.TabIndex = 20;
             // 
             // lblCostRef
             // 
@@ -485,7 +470,7 @@
             this.lblCostRef.Name = "lblCostRef";
             this.lblCostRef.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblCostRef.Size = new System.Drawing.Size(114, 17);
-            this.lblCostRef.TabIndex = 5;
+            this.lblCostRef.TabIndex = 21;
             this.lblCostRef.Text = "Giá Tham Khảo";
             // 
             // txtCostRef1
@@ -503,7 +488,7 @@
             this.txtCostRef1.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtCostRef1.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCostRef1.Size = new System.Drawing.Size(166, 20);
-            this.txtCostRef1.TabIndex = 17;
+            this.txtCostRef1.TabIndex = 22;
             // 
             // lblCostUnit
             // 
@@ -513,7 +498,7 @@
             this.lblCostUnit.Name = "lblCostUnit";
             this.lblCostUnit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblCostUnit.Size = new System.Drawing.Size(85, 17);
-            this.lblCostUnit.TabIndex = 8;
+            this.lblCostUnit.TabIndex = 23;
             this.lblCostUnit.Text = "Giá Đơn Vị ";
             // 
             // txtCostUnit1
@@ -530,7 +515,7 @@
             this.txtCostUnit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCostUnit1.Properties.ReadOnly = true;
             this.txtCostUnit1.Size = new System.Drawing.Size(177, 22);
-            this.txtCostUnit1.TabIndex = 18;
+            this.txtCostUnit1.TabIndex = 24;
             // 
             // frmUpd_Rooms
             // 
@@ -547,7 +532,6 @@
             this.Text = "Sửa phòng";
             this.Load += new System.EventHandler(this.frmUpd_Rooms_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSku.Properties)).EndInit();
@@ -587,7 +571,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbDisable;
         private DevExpress.XtraEditors.PictureEdit pbxImage;
         private DevExpress.XtraEditors.LookUpEdit lueRoomType;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private DevExpress.XtraEditors.SimpleButton btnEditRoom;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl lblIDRoom;

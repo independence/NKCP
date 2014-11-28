@@ -80,7 +80,11 @@
     <Compile Include="InfoSystemUserLiftSalaryEN.cs" />
     <Compile Include="MenusEN.cs" />
     <Compile Include="MOBSystemUsersEN.cs" />
+    <Compile Include="NewBookingEN.cs" />
+    <Compile Include="NewBookingHallEN.cs" />
+    <Compile Include="NewBookingHEN.cs" />
     <Compile Include="NewPaymentEN.cs" />
+    <Compile Include="NewRoomMemberEN.cs" />
     <Compile Include="PaymentEN.cs" />
     <Compile Include="PaymentHallsEN.cs" />
     <Compile Include="RevenueEN.cs" />

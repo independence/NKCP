@@ -39,13 +39,15 @@ namespace RoomManager
             InitializeComponent();
             this.Datasource = Datasource;
 
+            string a =Datasource.Sku;
+            string b = Datasource.Code;
            
             if (Datasource.RoomStatus == 0)
             {
-                this.rectangleShape_BackColor = System.Drawing.Color.Gray;
+                this.rectangleShape_BackColor = System.Drawing.Color.Gainsboro;
                 this.rectangleShape_BorderColor = System.Drawing.Color.WhiteSmoke;
 
-                this.lblSku_BackColor = System.Drawing.Color.Gray;
+                this.lblSku_BackColor = System.Drawing.Color.Gainsboro;
                 this.lblSku_ForeColor = System.Drawing.Color.WhiteSmoke;
             }
 
@@ -115,17 +117,17 @@ namespace RoomManager
             {
                 if (this.Datasource.CheckOutPlan.Day == DateTime.Now.Day)
                 {
-                    this.lbWarning.Text = this.Mess_Tra_phong + this.Datasource.CheckOutPlan;
+                    this.lbWarning.Text = this.Mess_Tra_phong + this.Datasource.CheckOutPlan.TimeOfDay.Hours + ":" + this.Datasource.CheckOutPlan.TimeOfDay.Minutes;
                     this.lbWarning.Visible = true;
                     this.lbWarning.BackColor = rectangleShape1.BackColor;
                 }
-                if (this.Datasource.CheckOutPlan.Day < DateTime.Now.Day)
+                if (this.Datasource.CheckOutPlan.Day > DateTime.Now.Day)
                 {
-                    this.lbWarning.Text = this.Mess_Mai_tra_phong;
+                    this.lbWarning.Text = this.Mess_Mai_tra_phong + this.Datasource.CheckOutPlan.TimeOfDay.Hours + ":" + this.Datasource.CheckOutPlan.TimeOfDay.Minutes;
                     this.lbWarning.Visible = true;
                     this.lbWarning.BackColor = this.rectangleShape1.BackColor;
                 }
-                if (this.Datasource.CheckOutPlan.Day > DateTime.Now.Day)
+                if (this.Datasource.CheckOutPlan.Day < DateTime.Now.Day)
                 {
                     this.lbWarning.Text = this.Mess_Qua_han;
                     this.lbWarning.Visible = true;
@@ -166,7 +168,7 @@ namespace RoomManager
 
         private void OpenPopup()
         {
-            if (this.Datasource.RoomStatus >0 )
+            if (this.Datasource.RoomStatus >=0 )
             {
 
                 if (this.Datasource.RoomStatus == 1 )
@@ -191,17 +193,22 @@ namespace RoomManager
                 else if (this.Datasource.RoomStatus == 3)
                 {
                     frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
-                    uc_Tooltip_StatusRoom_3 aToolTip_3 = new uc_Tooltip_StatusRoom_3(afrmMain);
+                    
                     if (this.lbWarning.Text != this.Mess_Qua_han)
                     {
+                        uc_Tooltip_StatusRoom_3 aToolTip_3 = new uc_Tooltip_StatusRoom_3(afrmMain);
                         aToolTip_3.Datasource = this.Datasource;
                         aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
                         aToolTip_3.DataBind();
-                        aToolTip_3.Show1();
+                        aToolTip_3.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Quá hạn trả phòng");
+                        uc_Tooltip_StatusRoom_3_OutOfDate aToolTip_3 = new uc_Tooltip_StatusRoom_3_OutOfDate(afrmMain);
+                        aToolTip_3.Datasource = this.Datasource;
+                        aToolTip_3.StatusButtonPopup = this.StatusButtonPopup;
+                        aToolTip_3.DataBind();
+                        aToolTip_3.Show();
                     }
                 }
                 else if (this.Datasource.RoomStatus == 5)
@@ -249,6 +256,21 @@ namespace RoomManager
             rectangleShape1.BackColor = rectangleShape_BackColor;
             rectangleShape1.BorderWidth = 5;
             rectangleShape1.Refresh();
+        }
+
+        private void lbWarning_Click(object sender, EventArgs e)
+        {
+            this.OpenPopup();
+        }
+
+        private void lblSku_Click_1(object sender, EventArgs e)
+        {
+            this.OpenPopup();
+        }
+
+        private void uc_RoomStatusItem_Click(object sender, EventArgs e)
+        {
+            this.OpenPopup();
         }
 
     }

@@ -90,7 +90,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(784, 462);
-            this.tableLayoutPanel2.TabIndex = 4;
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btNext
             // 
@@ -100,11 +100,11 @@
             this.btNext.Appearance.Options.UseTextOptions = true;
             this.btNext.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btNext.Image = ((System.Drawing.Image)(resources.GetObject("btNext.Image")));
-            this.btNext.Location = new System.Drawing.Point(674, 430);
+            this.btNext.Location = new System.Drawing.Point(664, 430);
             this.btNext.Margin = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.btNext.Name = "btNext";
-            this.btNext.Size = new System.Drawing.Size(90, 30);
-            this.btNext.TabIndex = 0;
+            this.btNext.Size = new System.Drawing.Size(100, 30);
+            this.btNext.TabIndex = 12;
             this.btNext.Text = "Tiếp theo";
             this.btNext.Click += new System.EventHandler(this.btNext_Click);
             // 
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(778, 377);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -132,7 +132,7 @@
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(561, 371);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phòng trống";
             // 
@@ -145,7 +145,7 @@
             this.dgvAvailableRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelect});
             this.dgvAvailableRooms.Size = new System.Drawing.Size(555, 348);
-            this.dgvAvailableRooms.TabIndex = 0;
+            this.dgvAvailableRooms.TabIndex = 9;
             this.dgvAvailableRooms.UseEmbeddedNavigator = true;
             this.dgvAvailableRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvAvaiableRooms});
@@ -287,7 +287,7 @@
             this.groupBox2.Location = new System.Drawing.Point(585, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(190, 371);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phòng chọn";
             // 
@@ -300,7 +300,7 @@
             this.dgvSelectedRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelect});
             this.dgvSelectedRooms.Size = new System.Drawing.Size(184, 348);
-            this.dgvSelectedRooms.TabIndex = 1;
+            this.dgvSelectedRooms.TabIndex = 11;
             this.dgvSelectedRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvSelectedRooms});
             // 
@@ -377,34 +377,33 @@
             this.tableLayoutPanel4.Controls.Add(this.dtpTo, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.dtpFrom, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 10);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(10, 10, 10, 5);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(764, 31);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(778, 40);
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(200, 7);
+            this.labelControl1.Location = new System.Drawing.Point(200, 11);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl1.Size = new System.Drawing.Size(76, 17);
-            this.labelControl1.TabIndex = 20;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Đến ngày";
             // 
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(3, 7);
+            this.labelControl5.Location = new System.Drawing.Point(3, 11);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.labelControl5.Size = new System.Drawing.Size(67, 17);
-            this.labelControl5.TabIndex = 19;
+            this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "Từ ngày";
             // 
             // btnSearch
@@ -415,10 +414,10 @@
             this.btnSearch.Appearance.Options.UseTextOptions = true;
             this.btnSearch.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(406, 4);
+            this.btnSearch.Location = new System.Drawing.Point(406, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 23);
-            this.btnSearch.TabIndex = 0;
+            this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Tìm phòng";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -426,7 +425,7 @@
             // 
             this.dtpTo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(282, 5);
+            this.dtpTo.Location = new System.Drawing.Point(282, 10);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -438,15 +437,17 @@
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.BeepOnError = true;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(118, 20);
-            this.dtpTo.TabIndex = 50;
+            this.dtpTo.TabIndex = 5;
             // 
             // dtpFrom
             // 
             this.dtpFrom.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(76, 5);
+            this.dtpFrom.Location = new System.Drawing.Point(76, 10);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -458,9 +459,11 @@
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.BeepOnError = true;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(118, 20);
-            this.dtpFrom.TabIndex = 49;
+            this.dtpFrom.TabIndex = 3;
             // 
             // frmTsk_CheckIn_Customer_Step1
             // 

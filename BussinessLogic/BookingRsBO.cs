@@ -94,7 +94,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.BookingRs.Add(bookingRs);
-                return aDatabaseDA.SaveChanges();
+                aDatabaseDA.SaveChanges();
+                return bookingRs.ID;
 
             }
             catch (Exception ex)
@@ -114,8 +115,9 @@ namespace BussinessLogic
             }
             catch (Exception ex)
             {
-
+                return 0;
                 throw new Exception("BookingRsBO.Update:" + ex.ToString());
+                
             }
         }
         //----------------- Delete Customers  ------------------------------

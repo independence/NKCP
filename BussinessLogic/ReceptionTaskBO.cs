@@ -75,8 +75,9 @@ namespace BussinessLogic
                     aBookingRooms.StartTime = aCheckInEN.CheckInActual;
                     aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
                     aBookingRooms.BookingStatus = 1;
-                    aBookingRooms.Type = 1; //Tính CheckIn sớm và CheckOut muộn
+                    aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
                     aBookingRooms.Status = aCheckInEN.Status;
+                    aBookingRooms.PriceType = "G1";
 
 
                     //add new bookingRoom
@@ -226,7 +227,7 @@ namespace BussinessLogic
             }
         }
 
-        public List<BookingRStatusPayViewEN> GetListUnPayBookingR(DateTime From, DateTime To, int CustomerType, int StatusPay)
+        public List<BookingRStatusPayViewEN> GetListUnPayBookingR(DateTime From, DateTime To, int CustomerType, string StatusPay)
         {
             BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
             try
@@ -274,11 +275,11 @@ namespace BussinessLogic
             }
         }
 
-        public double CaculateBooking(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime StartTime, DateTime EndTime)
+        public double CaculateBooking(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime StartTime, DateTime EndTime)
         {
             try
             {
-                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)           
+                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
                 {
                     TimeSpan dis = EndTime.Subtract(StartTime);
                     double a = (dis.TotalHours) / 24;
@@ -297,7 +298,7 @@ namespace BussinessLogic
                     DateTime CheckIn = DateTime.Parse(StartTime.ToString("HH:mm"));
                     DateTime CheckOut = DateTime.Parse(EndTime.ToString("HH:mm"));
 
-                    if (aNewPayment.aListBookingRoomUsed.Where(b=> b.ID == IDBookingRoom).ToList()[0].Type == 3)//Tính checkin sớm và Checkout muộn
+                    if (aNewPayment.aListBookingRoomUsed.Where(b => b.ID == IDBookingRoom).ToList()[0].Type == 3)//Tính checkin sớm và Checkout muộn
                     {
                         CheckPointBO aCheckPointBO = new CheckPointBO();
                         List<CheckPoints> aListCheckPoint = aCheckPointBO.Select_All();
@@ -369,7 +370,7 @@ namespace BussinessLogic
                             }
 
                         }
-                                              
+
                         return a1 + addtimeEnd;
                     }
 
@@ -481,7 +482,7 @@ namespace BussinessLogic
 
                         }
 
-                        return a1 +addtimeEnd;
+                        return a1 + addtimeEnd;
                     }
 
                 }
@@ -503,7 +504,7 @@ namespace BussinessLogic
                 double addtimeStart = 0;
                 if (aBookingRooms != null)
                 {
-                                       
+
                     DateTime CheckIn = DateTime.Parse(StartTime.ToString("HH:mm"));
 
                     if (aBookingRooms.Type == 3)//Tính checkin sớm và Checkout muộn
@@ -518,7 +519,7 @@ namespace BussinessLogic
                                 {
                                     addtimeStart = aListCheckPoint[i].AddTime;
                                 }
-                            }                        
+                            }
 
                         }
                     }
@@ -541,10 +542,10 @@ namespace BussinessLogic
                             }
                         }
 
-                        return addtimeStart;                        
-                    }               
+                        return addtimeStart;
+                    }
                 }
-                return addtimeStart;  
+                return addtimeStart;
             }
             catch (Exception ex)
             {
@@ -560,8 +561,8 @@ namespace BussinessLogic
                 BookingRooms aBookingRooms = aBookingRoomsBO.Select_ByID(IDBookingRoom);
                 double addtimeEnd = 0;
                 if (aBookingRooms != null)
-                {                  
-                    
+                {
+
                     DateTime CheckOut = DateTime.Parse(EndTime.ToString("HH:mm"));
 
                     if (aBookingRooms.Type == 3)//Tính checkin sớm và Checkout muộn
@@ -569,7 +570,7 @@ namespace BussinessLogic
                         CheckPointBO aCheckPointBO = new CheckPointBO();
                         List<CheckPoints> aListCheckPoint = aCheckPointBO.Select_All();
                         for (int i = 0; i < aListCheckPoint.Count; i++)
-                        {                        
+                        {
                             if (aListCheckPoint[i].Type == 2) // CheckOut muon
                             {
                                 if (aListCheckPoint[i].From <= CheckOut.TimeOfDay && CheckOut.TimeOfDay <= aListCheckPoint[i].To)
@@ -582,12 +583,12 @@ namespace BussinessLogic
 
 
                         return addtimeEnd;
-                       
+
                     }
                     else if (aBookingRooms.Type == 0) //Không tính checkIn sớm và checkout muộn.
                     {
                         return addtimeEnd;
-                    }                  
+                    }
                     else if (aBookingRooms.Type == 1) //Không tính checkin sớm ,tính checkout muộn
                     {
                         CheckPointBO aCheckPointBO = new CheckPointBO();
@@ -626,7 +627,7 @@ namespace BussinessLogic
                 {
                     TimeSpan dis = EndTime.Subtract(StartTime);
                     double a = (dis.TotalHours) / 24;
-                    
+
                     if (a < 1)
                     {
                         a1 = Math.Floor(a);
@@ -635,7 +636,7 @@ namespace BussinessLogic
                     {
                         a1 = Math.Round(a);
                     }
-                    
+
                 }
                 return a1;
             }
@@ -645,12 +646,11 @@ namespace BussinessLogic
             }
         }
 
-        public double GetAddTimeStart(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime StartTime)
+        public double GetAddTimeStart(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime StartTime)
         {
             try
             {
-                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)          
-                
+                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
                 {
 
                     double addtimeStart = 0;
@@ -705,7 +705,7 @@ namespace BussinessLogic
             }
         }
 
-        public double GetAddTimeEnd(NewPaymentEN aNewPayment,int IDBookingRoom, DateTime EndTime)
+        public double GetAddTimeEnd(NewPaymentEN aNewPayment, int IDBookingRoom, DateTime EndTime)
         {
             try
             {
@@ -769,7 +769,7 @@ namespace BussinessLogic
             }
         }
 
-    
+
         //List service
         public List<ServicesEN> GetListService_ByIDBookingRoom(int IDBookingRoom)
         {
@@ -826,7 +826,7 @@ namespace BussinessLogic
                 List<ServicesEN> aListReturn = new List<ServicesEN>();
                 ServicesEN aServicesEN;
                 RoomsBO aRoomsBO = new RoomsBO();
-                
+
                 for (int i = 0; i < aListTemp.Count; i++)
                 {
                     aServicesEN = new ServicesEN();
@@ -863,20 +863,24 @@ namespace BussinessLogic
             }
         }
 
-        //Hiennv
-        public List<BookingRStatusPayViewEN> GetListBookingRUnPayment(DateTime? From, DateTime? To, int? CustomerType, int? StatusPay)
+        //Hiennv     sua lai    28/11/2014   sua lai de lay them  thong tin cua bang bookingroom
+        public List<BookingRStatusPayViewEN> GetListBookingRUnPayment(DateTime? From, DateTime? To, int? CustomerType, string StatusPay)
         {
             List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> aListTemp = new List<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result>();
-
             aListTemp = aDatabaseDA.sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(From, To, CustomerType, StatusPay).ToList();
 
             List<BookingRStatusPayViewEN> aListReturn = new List<BookingRStatusPayViewEN>();
             BookingRStatusPayViewEN aBookingRStatusPayViewEN;
             CompaniesBO aCompaniesBO = new CompaniesBO();
+            List<Companies> aListCompaniesTemp = aCompaniesBO.Select_All();
+
+            BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+            List<BookingRooms> aListBookingRoomTemp = aBookingRoomsBO.Select_All();
+
+
             for (int i = 0; i < aListTemp.Count; i++)
             {
                 aBookingRStatusPayViewEN = new BookingRStatusPayViewEN();
-
                 aBookingRStatusPayViewEN.IDBookingR = aListTemp[i].BookingRs_ID;
                 aBookingRStatusPayViewEN.CreatedDate = aListTemp[i].BookingRs_CreatedDate;
                 aBookingRStatusPayViewEN.Customer_Name = aListTemp[i].Customers_Name;
@@ -884,26 +888,59 @@ namespace BussinessLogic
                 aBookingRStatusPayViewEN.IDCustomer = aListTemp[i].Customers_ID;
                 aBookingRStatusPayViewEN.IDCustomerGroup = aListTemp[i].CustomerGroups_ID;
                 aBookingRStatusPayViewEN.BookingRs_Status = aListTemp[i].BookingRs_Status;
-
-                int IDCompany = !String.IsNullOrEmpty(aListTemp[i].Companies_ID.ToString()) ? Convert.ToInt32(aListTemp[i].Companies_ID) : 0;
-
-                Companies aCompanies = aCompaniesBO.Select_ByID(IDCompany);
-                aBookingRStatusPayViewEN.NameCompany = aCompanies.Name;
                 aBookingRStatusPayViewEN.CustomerGroups_Name = aListTemp[i].CustomerGroups_Name;
+                int IDCompany = !String.IsNullOrEmpty(aListTemp[i].Companies_ID.ToString()) ? Convert.ToInt32(aListTemp[i].Companies_ID) : 0;
+                if (aListCompaniesTemp.Where(c => c.ID == IDCompany).ToList().Count > 0)
+                {
+                    aBookingRStatusPayViewEN.NameCompany = aListCompaniesTemp.Where(c => c.ID == IDCompany).ToList()[0].Name;
+                }
+                else
+                {
+                    aBookingRStatusPayViewEN.NameCompany = string.Empty;
+                }
                 aBookingRStatusPayViewEN.StatusPay = aListTemp[i].BookingRs_StatusPay;
                 aBookingRStatusPayViewEN.BookingMoney = aListTemp[i].BookingRs_BookingMoney;
-                
-                //aBookingRStatusPayViewEN.IDBookingRoom = aListTemp[i].BookingRooms_ID;
-                //aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
-                //aBookingRStatusPayViewEN.BookingStatus = aListTemp[i].BookingRooms_Status;
-                //aBookingRStatusPayViewEN.BookingRooms_CodeRoom = aListTemp[i].BookingRooms_CodeRoom;
-
+                aBookingRStatusPayViewEN.Sku = aListTemp[i].Rooms_Sku;
                 aBookingRStatusPayViewEN.IDBookingH = aListTemp[i].BookingRs_BookingHs_IDBookingH;
                 aBookingRStatusPayViewEN.BookingHs_Status = aListTemp[i].BookingHs_Status;
                 aBookingRStatusPayViewEN.BookingHs_StatusPay = aListTemp[i].BookingHs_StatusPay;
                 aBookingRStatusPayViewEN.BookingHs_Type = aListTemp[i].BookingHs_Type;
                 aBookingRStatusPayViewEN.BookingHs_Disable = aListTemp[i].BookingHs_Disable;
                 aBookingRStatusPayViewEN.BookingHs_Subject = aListTemp[i].BookingHs_Subject;
+
+
+                List<BookingRooms> aListBookingRooms = aListBookingRoomTemp.Where(br => br.IDBookingR == aListTemp[i].BookingRs_ID && br.CodeRoom == aListTemp[i].Rooms_Code).ToList();
+                if (aListBookingRooms.Count > 0)
+                {
+                    DateTime checkOut = DateTime.Now;
+                    switch (aListBookingRooms[0].Status)
+                    {
+                        case 3:
+                            aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check in";
+                            checkOut = aListBookingRooms[0].CheckOutPlan;
+                            break;
+                        case 5:
+                            aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Pending";
+                            checkOut = aListBookingRooms[0].CheckOutActual;
+                            break;
+                        case 7:
+                            aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check out nhưng chưa thanh toán";
+                            checkOut = aListBookingRooms[0].CheckOutActual;
+                            break;
+                        case 8:
+                            aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã thanh toán";
+                            checkOut = aListBookingRooms[0].CheckOutActual;
+                            break;
+                        default:
+                            aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Chưa xác định";
+                            checkOut = aListBookingRooms[0].CheckOutPlan;
+                            break;
+                    }
+                    aBookingRStatusPayViewEN.IDBookingRoom = aListBookingRooms[0].ID;
+                    aBookingRStatusPayViewEN.BookingRooms_CodeRoom = aListBookingRooms[0].CodeRoom;
+                    aBookingRStatusPayViewEN.CheckInActual = aListBookingRooms[0].CheckInActual;
+                    aBookingRStatusPayViewEN.CheckOut = checkOut;
+                }
 
                 switch (aBookingRStatusPayViewEN.StatusPay)
                 {
@@ -920,22 +957,25 @@ namespace BussinessLogic
                         aBookingRStatusPayViewEN.BookingRStatusPayDisplay = "Chưa xác định";
                         break;
                 }
-                switch (aBookingRStatusPayViewEN.BookingStatus)
+                switch (aListTemp[i].BookingRs_CustomerType)
                 {
+                    case 1:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Nhà nước";
+                        break;
+                    case 2:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách đoàn";
+                        break;
                     case 3:
-                        aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check in";
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách lẻ";
+                        break;
+                    case 4:
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách vãng lai";
                         break;
                     case 5:
-                        aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Pending";
-                        break;
-                    case 7:
-                        aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check out nhưng chưa thanh toán";
-                        break;
-                    case 8:
-                        aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã thanh toán";
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách bộ ngoại giao";
                         break;
                     default:
-                        aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Chưa xác định";
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Chưa xác định";
                         break;
                 }
                 aListReturn.Add(aBookingRStatusPayViewEN);
@@ -2148,7 +2188,7 @@ namespace BussinessLogic
                                         select new BookingHallDetailEN()
                                         {
 
-                                            IDBookingH = aBookingHs.ID,                                           
+                                            IDBookingH = aBookingHs.ID,
                                             CustomerType = aBookingHs.CustomerType,
                                             ID = aBookingHalls.ID,
                                             NameCustomerGroup = aCustomerGroups.Name,
@@ -2777,7 +2817,7 @@ namespace BussinessLogic
                                         where aBookingHalls.ID == IDBookingHall
                                         select new ServicesHallsEN()
                                         {
-                                            IDBookingHallService=aBookingHalls_Services.ID,
+                                            IDBookingHallService = aBookingHalls_Services.ID,
                                             IDBookingHall = aBookingHalls.ID,
                                             CodeHall = aBookingHalls.CodeHall,
                                             SkuHall = aHalls.Sku,
@@ -2986,7 +3026,7 @@ namespace BussinessLogic
                 {
                     aTemp = new AllBookingEN();
                     aTemp.SetValue(item);
-                   
+
                     switch (aTemp.StatusPay)
                     {
                         case 1:
@@ -3001,7 +3041,7 @@ namespace BussinessLogic
                         case 4:
                             aTemp.StatusPayDisplay = "Bao cấp";
                             break;
-                        default :
+                        default:
                             aTemp.StatusPayDisplay = "Tiền mặt";
                             break;
                     }
@@ -3022,41 +3062,106 @@ namespace BussinessLogic
             }
         }
 
-        //Hiennv        31/08/2014           Thanh toan le cho phong
-        public void SplitPaymentForBookingR(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms, List<ServiceUsedEN> aListServicesR)
+        //Linhting : Thanh toán lẻ phòng + tiệc + dịch vụ
+        public void SplitPaymentRoom(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms)
         {
-            try 
+            try
             {
-                    
-                    foreach (ServiceUsedEN aServicesEN in aListServicesR)
+                foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
+                {
+
+                    aBookingRoomUsedEN.Status = 8;//da thanh toan
+                    aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
+                    aBookingRoomUsedEN.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentRoom \n" + ex.ToString());
+            }
+        }
+
+        public void SplitPaymentHall(NewPaymentEN aNewPaymentEN, List<BookingHallUsedEN> aListHalls)
+        {
+            try
+            {
+                foreach (BookingHallUsedEN aBookingHallUsedEN in aListHalls)
+                {
+
+                    aBookingHallUsedEN.Status = 8;//da thanh toan                
+                    aBookingHallUsedEN.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentHall \n" + ex.ToString());
+            }
+        }
+
+        public void SplitPaymentService(NewPaymentEN aNewPaymentEN, List<ServiceUsedEN> aListServices, int Status)
+        {
+            try
+            {
+                if (Status == 1)
+                {
+                    foreach (ServiceUsedEN aServicesEN in aListServices)
                     {
 
                         aServicesEN.StatusPay = 8;
-                        aServicesEN.Save(1);                        
+                        aServicesEN.Save(1);
                     }
-                    BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
-                    foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
+                }
+                else if (Status == 2)
+                {
+                    foreach (ServiceUsedEN aServicesEN in aListServices)
                     {
-                       
-                            aBookingRoomUsedEN.Status = 8;//da thanh toan
-                            aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
-                            aBookingRoomUsedEN.Save();
+
+                        aServicesEN.StatusPay = 8;
+                        aServicesEN.Save(2);
                     }
-                    BookingRsBO aBookingRsBO = new BookingRsBO();
-                    BookingRs aBookingRs = aBookingRsBO.Select_ByID(Convert.ToInt32(aNewPaymentEN.IDBookingR));
-                    List<BookingRooms> aListBookingRooms = aBookingRoomsBO.Select_ByIDBookingR_ByStatus(Convert.ToInt32(aNewPaymentEN.IDBookingR), 8);
-                    if (aListBookingRooms.Count < 1)
-                    {
-                        aBookingRs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingR);
-                        aBookingRs.PayMenthod = aNewPaymentEN.PayMenthod;
-                        aBookingRs.StatusPay = 3;
-                        aBookingRs.Status = 8;
-                        aBookingRs.DatePay = DateTime.Now;
-                    }
-                    aBookingRs.BookingMoney = aNewPaymentEN.BookingRMoney;
-                    aBookingRsBO.Update(aBookingRs);
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                throw new Exception("ReceptionTaskBO.SplitPaymentService \n" + ex.ToString());
+            }
+        }
+
+        //Hiennv        31/08/2014           Thanh toan le cho phong
+        public void SplitPaymentForBookingR(NewPaymentEN aNewPaymentEN, List<BookingRoomUsedEN> aListRooms, List<ServiceUsedEN> aListServicesR)
+        {
+            try
+            {
+
+                foreach (ServiceUsedEN aServicesEN in aListServicesR)
+                {
+
+                    aServicesEN.StatusPay = 8;
+                    aServicesEN.Save(1);
+                }
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                foreach (BookingRoomUsedEN aBookingRoomUsedEN in aListRooms)
+                {
+
+                    aBookingRoomUsedEN.Status = 8;//da thanh toan
+                    aBookingRoomUsedEN.CheckOutActual = DateTime.Now;
+                    aBookingRoomUsedEN.Save();
+                }
+                BookingRsBO aBookingRsBO = new BookingRsBO();
+                BookingRs aBookingRs = aBookingRsBO.Select_ByID(Convert.ToInt32(aNewPaymentEN.IDBookingR));
+                List<BookingRooms> aListBookingRooms = aBookingRoomsBO.Select_ByIDBookingR_ByStatus(Convert.ToInt32(aNewPaymentEN.IDBookingR), 8);
+                if (aListBookingRooms.Count < 1)
+                {
+                    aBookingRs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingR);
+                    aBookingRs.PayMenthod = aNewPaymentEN.PayMenthod;
+                    aBookingRs.StatusPay = 3;
+                    aBookingRs.Status = 8;
+                    aBookingRs.DatePay = DateTime.Now;
+                }
+                aBookingRs.BookingMoney = aNewPaymentEN.BookingRMoney;
+                aBookingRsBO.Update(aBookingRs);
+            }
+            catch (Exception ex)
             {
                 throw new Exception("ReceptionTaskBO.SplitPaymentForBookingR \n" + ex.ToString());
             }
@@ -3099,7 +3204,7 @@ namespace BussinessLogic
                 throw new Exception("ReceptionTaskBO.SplitPaymentForBookingH \n" + ex.ToString());
             }
         }
-    
+
         // Linhting - Lay du lieu cho NewPayment
         public List<ServiceUsedEN> GetListServiceUsedInRoom_ByIDBookingRoom(int IDBookingRoom)
         {
@@ -3111,6 +3216,9 @@ namespace BussinessLogic
                 ServiceUsedEN aServiceUsedEN;
                 RoomsBO aRoomsBO = new RoomsBO();
 
+                List<Rooms> aListRoomTemp = aRoomsBO.Select_ByIDLang(1);
+
+
                 for (int i = 0; i < aListTemp.Count; i++)
                 {
                     aServiceUsedEN = new ServiceUsedEN();
@@ -3119,12 +3227,9 @@ namespace BussinessLogic
                     aServiceUsedEN.ServiceGroupName = aListTemp[i].ServiceGroups_Name;
                     aServiceUsedEN.IDService = aListTemp[i].Services_ID;
                     aServiceUsedEN.DateUsed = aListTemp[i].BookingRooms_Services_Date;
-                    
-
-                    Rooms aRooms = aRoomsBO.Select_ByCodeRoom(aListTemp[i].BookingRooms_CodeRoom, 1);
-                    if (aRooms != null)
+                    if (aListRoomTemp.Where(r => r.Code == aListTemp[i].BookingRooms_CodeRoom).ToList().Count > 0)
                     {
-                        aServiceUsedEN.Sku = aRooms.Sku;
+                        aServiceUsedEN.Sku = aListRoomTemp.Where(r => r.Code == aListTemp[i].BookingRooms_CodeRoom).ToList()[0].Sku;
                     }
                     aServiceUsedEN.NameService = aListTemp[i].Services_Name;
                     aServiceUsedEN.Quantity = aListTemp[i].BookingRooms_Services_Quantity;
@@ -3152,27 +3257,27 @@ namespace BussinessLogic
             {
                 List<ServiceUsedEN> aListServiceUsedEN = new List<ServiceUsedEN>();
                 aListServiceUsedEN = (from aBookingHalls in aDatabaseDA.BookingHalls
-                                        join aBookingHalls_Services in aDatabaseDA.BookingHalls_Services on aBookingHalls.ID equals aBookingHalls_Services.IDBookingHall
-                                        join aServices in aDatabaseDA.Services on aBookingHalls_Services.IDService equals aServices.ID
-                                        join aServicesGroup in aDatabaseDA.ServiceGroups on aServices.IDServiceGroups equals aServicesGroup.ID
-                                        join aHalls in aDatabaseDA.Halls on aBookingHalls.CodeHall equals aHalls.Code
-                                        where aBookingHalls.ID == IDBookingHall
-                                        select new ServiceUsedEN()
-                                        {
-                                            IDBookingService = aBookingHalls_Services.ID,                                           
-                                            Sku = aHalls.Sku,
-                                            IDService = aServices.ID,
-                                            NameService = aServices.Name,
-                                            IDServiceGroup = aServicesGroup.ID,
-                                            ServiceGroupName = aServicesGroup.Name,                                            
-                                            DateUsed = aBookingHalls_Services.Date,
-                                            Quantity = aBookingHalls_Services.Quantity,
-                                            Cost = aBookingHalls_Services.Cost,
-                                            CostRef_Service = aBookingHalls_Services.CostRef_Services,
-                                            Tax = aBookingHalls_Services.PercentTax,
-                                        }
+                                      join aBookingHalls_Services in aDatabaseDA.BookingHalls_Services on aBookingHalls.ID equals aBookingHalls_Services.IDBookingHall
+                                      join aServices in aDatabaseDA.Services on aBookingHalls_Services.IDService equals aServices.ID
+                                      join aServicesGroup in aDatabaseDA.ServiceGroups on aServices.IDServiceGroups equals aServicesGroup.ID
+                                      join aHalls in aDatabaseDA.Halls on aBookingHalls.CodeHall equals aHalls.Code
+                                      where aBookingHalls.ID == IDBookingHall
+                                      select new ServiceUsedEN()
+                                      {
+                                          IDBookingService = aBookingHalls_Services.ID,
+                                          Sku = aHalls.Sku,
+                                          IDService = aServices.ID,
+                                          NameService = aServices.Name,
+                                          IDServiceGroup = aServicesGroup.ID,
+                                          ServiceGroupName = aServicesGroup.Name,
+                                          DateUsed = aBookingHalls_Services.Date,
+                                          Quantity = aBookingHalls_Services.Quantity,
+                                          Cost = aBookingHalls_Services.Cost,
+                                          CostRef_Service = aBookingHalls_Services.CostRef_Services,
+                                          Tax = aBookingHalls_Services.PercentTax,
+                                      }
 
-                    ).Distinct().ToList();               
+                    ).Distinct().ToList();
 
                 return aListServiceUsedEN;
             }
@@ -3198,6 +3303,875 @@ namespace BussinessLogic
             }
             return aListMenus;
         }
+
+        //Linhting - Book hội trường mới
+        public int NewBookHall(NewBookingHEN aNewBookingHEN)
+        {
+            try
+            {
+                BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
+
+
+                //Tạo BookingH mới
+                BookingHs aBookingHs = new BookingHs();
+
+                aBookingHs.CreatedDate = aNewBookingHEN.CreatedDate;
+                aBookingHs.CustomerType = aNewBookingHEN.CustomerType;
+                aBookingHs.BookingType = aNewBookingHEN.BookingType;
+                aBookingHs.Note = aNewBookingHEN.Note;
+                aBookingHs.IDGuest = 0;
+                aBookingHs.StatusPay = aNewBookingHEN.StatusPay;
+                aBookingHs.BookingMoney = aNewBookingHEN.BookingMoney;
+                aBookingHs.Status = aNewBookingHEN.Status;
+                aBookingHs.Type = aNewBookingHEN.Type;
+                aBookingHs.Disable = aNewBookingHEN.Disable;
+                aBookingHs.Level = aNewBookingHEN.Level;
+                aBookingHs.Subject = aNewBookingHEN.Subject;
+                aBookingHs.IDCustomerGroup = aNewBookingHEN.IDCustomerGroup;
+                aBookingHs.IDCustomer = aNewBookingHEN.IDCustomer;
+                aBookingHs.IDSystemUser = aNewBookingHEN.IDSystemUser;
+                aBookingHs.Description = aNewBookingHEN.Description;
+
+                //Tạo BookingHall mới
+                BookingHsBO aBookingHsBO = new BookingHsBO();
+                int IDBookingH = aBookingHsBO.InsertUnSync(aBookingHs);
+
+
+
+                BookingHallsBO aBookingHallsBO = new BookingHallsBO();
+                BookingHalls aBookingHall;
+                for (int i = 0; i < aNewBookingHEN.aListBookingHallUsed.Count; i++)
+                {
+                    aBookingHall = new BookingHalls();
+                    aBookingHall.IDBookingH = IDBookingH;
+                    aBookingHall.CodeHall = aNewBookingHEN.aListBookingHallUsed[i].CodeHall;
+                    aBookingHall.Cost = aNewBookingHEN.aListBookingHallUsed[i].Cost;
+                    aBookingHall.PercentTax = aNewBookingHEN.aListBookingHallUsed[i].PercentTax;
+                    aBookingHall.CostRef_Halls = aNewBookingHEN.aListBookingHallUsed[i].CostRef_Halls;
+                    aBookingHall.Date = aNewBookingHEN.aListBookingHallUsed[i].Date;
+                    aBookingHall.LunarDate = aNewBookingHEN.aListBookingHallUsed[i].LunarDate;
+                    aBookingHall.BookingStatus = aNewBookingHEN.aListBookingHallUsed[i].BookingStatus;
+                    aBookingHall.Unit = aNewBookingHEN.aListBookingHallUsed[i].Unit;
+                    aBookingHall.TableOrPerson = aNewBookingHEN.aListBookingHallUsed[i].TableOrPerson;
+                    aBookingHall.Note = aNewBookingHEN.aListBookingHallUsed[i].Note;
+                    aBookingHall.Status = aNewBookingHEN.aListBookingHallUsed[i].Status;
+                    aBookingHall.StartTime = aNewBookingHEN.aListBookingHallUsed[i].StartTime;
+                    aBookingHall.EndTime = aNewBookingHEN.aListBookingHallUsed[i].EndTime;
+                    aBookingHall.Location = aNewBookingHEN.aListBookingHallUsed[i].Location;
+                    aBookingHall.Color = aNewBookingHEN.aListBookingHallUsed[i].Color;
+
+                    aBookingHallsBO.InsertUnSync(aBookingHall);
+                    int IDBookingHall = aBookingHall.ID;
+                    // Thêm dịch vụ đã chọn vào hội trường
+                    foreach (ServiceUsedEN aTemp in aNewBookingHEN.aListBookingHallUsed[i].aListServiceUsed)
+                    {
+                        BookingHalls_Services aBookingHalls_Services = new BookingHalls_Services();
+                        aBookingHalls_Services.Info = "";
+                        aBookingHalls_Services.Type = 1;
+                        aBookingHalls_Services.Status = 1;
+                        aBookingHalls_Services.Disable = false;
+                        aBookingHalls_Services.IDBookingHall = aBookingHall.ID;
+                        aBookingHalls_Services.IDService = aTemp.IDService;
+                        aBookingHalls_Services.Cost = aTemp.Cost;
+                        aBookingHalls_Services.Date = DateTime.Now;
+                        aBookingHalls_Services.CostRef_Services = aTemp.CostRef_Service;
+                        aBookingHalls_Services.PercentTax = 10;// de mac dinh
+                        aBookingHalls_Services.Quantity = aTemp.Quantity;
+                        aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
+
+                    }
+                    // Thêm thực đơn vào hội trường
+                    foreach (MenusEN aMenuEN in aNewBookingHEN.aListBookingHallUsed[i].aListMenuEN)
+                    {
+                        aMenuEN.IDBookingHall = IDBookingHall;
+                        aMenuEN.Type = 1; // type =1 ; thuc don mau ; Type 2: thuc don moi
+                        aMenuEN.Status = 1; // de tam
+                        aMenuEN.Disable = false; // de tam                        
+                        aMenuEN.IDSystemUser = 1;//Khi kinh doanh thêm thực đơn mặc định trạng thái là 0 - đã xác nhận thực đơn
+                        this.CreateMenus(aMenuEN);
+                    }
+
+
+                }
+
+                return IDBookingH;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("ReceptionTaskBO.NewBookHall\n" + ex.ToString());
+            }
+        }
+
+
+        //Hiennv     20/11/2014     Viet lai phuong thuc checkIn
+        public bool NewCheckIn(CheckInEN aCheckInEN)
+        {
+            try
+            {
+                CustomersBO aCustomersBO = new CustomersBO();
+                List<Customers> aListCustomersTemp = aCustomersBO.Select_All();
+
+                int IDBookingR = 0;
+                int IDCompany = 0;
+                int IDCustomerGroup = 0;
+                int IDCustomer = 0;
+                int Result = 0;
+
+                string customerType = string.Empty;
+
+
+                if (aCheckInEN.CustomerType == 0)
+                {
+                    customerType = "Tất cả loại khác";
+                }
+                else if (aCheckInEN.CustomerType == 1)
+                {
+                    customerType = "Khách nhà nước";
+                }
+                else if (aCheckInEN.CustomerType == 2)
+                {
+                    customerType = "Khách đoàn";
+                }
+                else if (aCheckInEN.CustomerType == 3)
+                {
+                    customerType = "Khách lẻ";
+                }
+                else if (aCheckInEN.CustomerType == 4)
+                {
+                    customerType = "Khách vãng lai";
+                }
+                else if (aCheckInEN.CustomerType == 5)
+                {
+                    customerType = "Khách bộ ngoại giao";
+                }
+                else
+                {
+                    customerType = string.Empty;
+                }
+
+
+                #region Them moi cong ty khi cong ty chua co
+                if (aCheckInEN.IDCompany > 0)
+                {
+                    IDCompany = aCheckInEN.IDCompany;
+                }
+                else
+                {
+                    CompaniesBO aCompaniesBO = new CompaniesBO();
+                    Companies aCompanies = new Companies();
+                    if (aCheckInEN.NameCompany.Length > 250)
+                    {
+                        aCompanies.Name = aCheckInEN.NameCompany.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCompanies.Name = aCheckInEN.NameCompany;
+                    }
+
+                    aCompanies.TaxNumberCode = string.Empty;
+                    aCompanies.Address = string.Empty;
+                    aCompanies.Type = aCheckInEN.CustomerType;
+                    aCompanies.Status = 1;
+                    aCompanies.Disable = false;
+                    IDCompany = aCompaniesBO.Insert(aCompanies);
+                }
+                #endregion
+                #region Them moi nhom vao trong cong ty
+                if (IDCompany > 0)
+                {
+                    CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                    CustomerGroups aCustomerGroups = new CustomerGroups();
+
+                    string nameGroup = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+                    aCustomerGroups.IDCompany = IDCompany;
+                    if (nameGroup.Length > 250)
+                    {
+                        aCustomerGroups.Name = nameGroup.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCustomerGroups.Name = nameGroup;
+                    }
+
+                    aCustomerGroups.Type = 1;
+                    aCustomerGroups.Status = 1;
+                    aCustomerGroups.Disable = false;
+                    IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
+                }
+                #endregion
+
+
+                string subject = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+
+                BookingRs aBookingRs = new BookingRs();
+
+                aBookingRs.CreatedDate = DateTime.Now;
+                aBookingRs.CustomerType = aCheckInEN.CustomerType;
+                aBookingRs.BookingType = aCheckInEN.BookingType;
+                if (subject.Length > 250)
+                {
+                    aBookingRs.Subject = subject.Substring(0, 250);
+                }
+                else
+                {
+                    aBookingRs.Subject = subject;
+                }
+
+                aBookingRs.IDCustomerGroup = IDCustomerGroup;
+                aBookingRs.IDCustomer = aCheckInEN.IDCustomer;
+                aBookingRs.IDSystemUser = aCheckInEN.IDSystemUser;
+                aBookingRs.PayMenthod = aCheckInEN.PayMenthod;
+                aBookingRs.StatusPay = aCheckInEN.StatusPay;
+                aBookingRs.BookingMoney = aCheckInEN.BookingMoney;
+                aBookingRs.ExchangeRate = aCheckInEN.ExchangeRate;
+                aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
+                aBookingRs.Note = string.Empty;
+                aBookingRs.Description = string.Empty;
+                aBookingRs.DatePay = aCheckInEN.CheckOutPlan;
+                aBookingRs.DateEdit = aCheckInEN.CheckInActual;
+                aBookingRs.Status = aCheckInEN.Status;
+                aBookingRs.Type = aCheckInEN.Type;
+                aBookingRs.Disable = aCheckInEN.Disable;
+
+                //add new bookingRs
+                BookingRsBO aBookingRsBO = new BookingRsBO();
+                IDBookingR = aBookingRsBO.Insert(aBookingRs);
+
+
+                //==========================================================
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                BookingRooms aBookingRooms;
+                BookingRoomsMembers aBookingRoomsMembers;
+
+                for (int i = 0; i < aCheckInEN.aListRoomMembers.Count; i++)
+                {
+                    aBookingRooms = new BookingRooms();
+                    aBookingRooms.IDBookingR = IDBookingR;
+                    aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
+                    aBookingRooms.PercentTax = 10;
+                    aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                    aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                    aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
+                    aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
+                    aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
+                    aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
+                    aBookingRooms.StartTime = aCheckInEN.CheckInActual;
+                    aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
+                    aBookingRooms.BookingStatus = 1;
+                    aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                    aBookingRooms.Status = aCheckInEN.Status;
+                    aBookingRooms.PriceType = "G1";
+
+                    //add new bookingRoom
+                    int IDBookingRooms = aBookingRoomsBO.Insert(aBookingRooms);
+
+                    //-----------------------------------------------------------
+                    aBookingRoomsMembers = new BookingRoomsMembers();
+                    aBookingRoomsMembers.IDBookingRoom = IDBookingRooms;
+
+                    BookingRoomsMembersBO aBookingRoomsMembersBO = new BookingRoomsMembersBO();
+                    for (int ii = 0; ii < aCheckInEN.aListRoomMembers[i].ListCustomer.Count; ii++)
+                    {
+                        Customers aCustomers;
+                        List<Customers> aListCustomers = aListCustomersTemp.Where(c => c.ID == aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID).ToList();
+                        if (aListCustomers.Count > 0)
+                        {
+                            IDCustomer = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID;
+                        }
+                        else
+                        {
+                            aCustomers = new Customers();
+                            aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
+                            aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
+                            aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
+                            aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
+                            aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+
+                            //Them moi khach hang
+                            IDCustomer = aCustomersBO.Insert(aCustomers);
+                        }
+                        aBookingRoomsMembers.IDCustomer = IDCustomer;
+                        aBookingRoomsMembers.PurposeComeVietnam = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PurposeComeVietnam;
+                        aBookingRoomsMembers.DateEnterCountry = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].DateEnterCountry;
+                        aBookingRoomsMembers.EnterGate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].EnterGate;
+                        aBookingRoomsMembers.TemporaryResidenceDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].TemporaryResidenceDate;
+                        aBookingRoomsMembers.LimitDateEnterCountry = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].LimitDateEnterCountry;
+                        aBookingRoomsMembers.Organization = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Organization;
+                        aBookingRoomsMembers.LeaveDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].LeaveDate;
+
+                        //add new bookingRoomMember
+                        aBookingRoomsMembersBO.Insert(aBookingRoomsMembers);
+
+                        #region  them nguoi vao trong customergroup_customer
+
+                        string nameCustomerGroup_customer = "[" + customerType + "][" + aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name + "]";
+
+                        CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                        CustomerGroups_Customers aCustomerGroups_Customers = new CustomerGroups_Customers();
+                        if (nameCustomerGroup_customer.Length > 150)
+                        {
+                            aCustomerGroups_Customers.Name = nameCustomerGroup_customer.Substring(0, 150);
+                        }
+                        else
+                        {
+                            aCustomerGroups_Customers.Name = nameCustomerGroup_customer;
+                        }
+
+                        aCustomerGroups_Customers.Type = 1;
+                        aCustomerGroups_Customers.Status = 1;
+                        aCustomerGroups_Customers.Disable = false;
+                        aCustomerGroups_Customers.FromDate = DateTime.Now;
+                        aCustomerGroups_Customers.ToDate = DateTime.Now;
+                        aCustomerGroups_Customers.IDCustomer = IDCustomer;
+                        aCustomerGroups_Customers.IDCustomerGroup = IDCustomerGroup;
+                        aCustomerGroups_CustomersBO.Insert(aCustomerGroups_Customers);
+                        #endregion
+
+
+                        // dung de cap nhap lai nguoi dai dien khi dat phong
+                        if (aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PepoleRepresentative == true)
+                        {
+                            aBookingRsBO = new BookingRsBO();
+                            aBookingRs = new BookingRs();
+                            aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
+                            if (aBookingRs != null)
+                            {
+                                aBookingRs.IDCustomer = IDCustomer;
+                                Result = aBookingRsBO.Update(aBookingRs);
+                            }
+
+                        }
+                        else
+                        {
+                            if (ii == (aCheckInEN.aListRoomMembers[i].ListCustomer.Count - 1))
+                            {
+                                if (Result == 0)
+                                {
+                                    aBookingRsBO = new BookingRsBO();
+                                    aBookingRs = new BookingRs();
+                                    aBookingRs = aBookingRsBO.Select_ByID(IDBookingR);
+                                    if (aBookingRs != null)
+                                    {
+                                        aBookingRs.IDCustomer = IDCustomer;
+                                        aBookingRsBO.Update(aBookingRs);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+        //Hiennv     25/11/2014     Viet lai phuong thuc BookingRoom
+        public bool NewBookingRoom(NewBookingEN aNewBookingEN)
+        {
+            try
+            {
+                int IDBookingR = 0;
+                int IDCompany = 0;
+                int IDCustomerGroup = 0;
+                int IDCustomer = 0;
+
+
+                string customerType = string.Empty;
+                if (aNewBookingEN.CustomerType == 0)
+                {
+                    customerType = "Tất cả loại khác";
+                }
+                else if (aNewBookingEN.CustomerType == 1)
+                {
+                    customerType = "Khách nhà nước";
+                }
+                else if (aNewBookingEN.CustomerType == 2)
+                {
+                    customerType = "Khách đoàn";
+                }
+                else if (aNewBookingEN.CustomerType == 3)
+                {
+                    customerType = "Khách lẻ";
+                }
+                else if (aNewBookingEN.CustomerType == 4)
+                {
+                    customerType = "Khách vãng lai";
+                }
+                else if (aNewBookingEN.CustomerType == 5)
+                {
+                    customerType = "Khách bộ ngoại giao";
+                }
+                else
+                {
+                    customerType = string.Empty;
+                }
+
+                #region Them moi khach hang khi khach hang chua co
+                if (aNewBookingEN.IDCustomer > 0)
+                {
+                    IDCustomer = aNewBookingEN.IDCustomer;
+                }
+                else
+                {
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    Customers aCustomers = new Customers();
+                    if (aNewBookingEN.NameCustomer.Length > 50)
+                    {
+                        aCustomers.Name = aNewBookingEN.NameCustomer.Substring(0, 50);
+                    }
+                    else
+                    {
+                        aCustomers.Name = aNewBookingEN.NameCustomer;
+                    }
+                    IDCustomer = aCustomersBO.Insert(aCustomers);
+                }
+                #endregion
+
+                #region Them moi cong ty khi cong ty chua co
+                if (aNewBookingEN.IDCompany > 0)
+                {
+                    IDCompany = aNewBookingEN.IDCompany;
+                }
+                else
+                {
+                    CompaniesBO aCompaniesBO = new CompaniesBO();
+                    Companies aCompanies = new Companies();
+                    if (aNewBookingEN.NameCompany.Length > 250)
+                    {
+                        aCompanies.Name = aNewBookingEN.NameCompany.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCompanies.Name = aNewBookingEN.NameCompany;
+                    }
+
+                    aCompanies.TaxNumberCode = string.Empty;
+                    aCompanies.Address = string.Empty;
+                    aCompanies.Type = aNewBookingEN.CustomerType;
+                    aCompanies.Status = 1;
+                    aCompanies.Disable = false;
+                    IDCompany = aCompaniesBO.Insert(aCompanies);
+                }
+                #endregion
+
+                #region Them moi nhom vao trong cong ty
+                if (IDCompany > 0)
+                {
+                    CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                    CustomerGroups aCustomerGroups = new CustomerGroups();
+
+                    string nameGroup = "[" + customerType + "][" + aNewBookingEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+                    aCustomerGroups.IDCompany = IDCompany;
+                    if (nameGroup.Length > 250)
+                    {
+                        aCustomerGroups.Name = nameGroup.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCustomerGroups.Name = nameGroup;
+                    }
+
+                    aCustomerGroups.Type = 1;
+                    aCustomerGroups.Status = 1;
+                    aCustomerGroups.Disable = false;
+                    IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
+                }
+                #endregion
+
+                #region Them moi bookingRs
+                if (IDCustomer > 0 && IDCustomerGroup > 0)
+                {
+                    string subject = "[" + customerType + "][" + aNewBookingEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+
+                    BookingRs aBookingRs = new BookingRs();
+
+                    aBookingRs.CreatedDate = DateTime.Now;
+                    aBookingRs.CustomerType = aNewBookingEN.CustomerType;
+                    aBookingRs.BookingType = aNewBookingEN.BookingType;
+                    if (subject.Length > 250)
+                    {
+                        aBookingRs.Subject = subject.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aBookingRs.Subject = subject;
+                    }
+                    aBookingRs.IDCustomerGroup = IDCustomerGroup;
+                    aBookingRs.IDCustomer = IDCustomer;
+                    aBookingRs.IDSystemUser = aNewBookingEN.IDSystemUser;
+                    aBookingRs.PayMenthod = aNewBookingEN.PayMenthod;
+                    aBookingRs.StatusPay = aNewBookingEN.StatusPay;
+                    aBookingRs.BookingMoney = aNewBookingEN.BookingMoney;
+                    aBookingRs.ExchangeRate = aNewBookingEN.ExchangeRate;
+                    aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
+                    aBookingRs.Note = string.Empty;
+                    aBookingRs.Description = string.Empty;
+                    aBookingRs.DatePay = aNewBookingEN.CheckOutPlan;
+                    aBookingRs.DateEdit = aNewBookingEN.CheckInActual;
+                    aBookingRs.Status = aNewBookingEN.Status;
+                    aBookingRs.Type = aNewBookingEN.Type;
+                    aBookingRs.Disable = aNewBookingEN.Disable;
+
+                    //add new bookingRs
+                    BookingRsBO aBookingRsBO = new BookingRsBO();
+                    IDBookingR = aBookingRsBO.Insert(aBookingRs);
+                }
+                #endregion
+
+                #region them moi bookingRoom
+                if (IDBookingR > 0)
+                {
+                    BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                    BookingRooms aBookingRooms;
+                    for (int i = 0; i < aNewBookingEN.aListNewRoomMembers.Count; i++)
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms.IDBookingR = IDBookingR;
+                        aBookingRooms.CodeRoom = aNewBookingEN.aListNewRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aNewBookingEN.aListNewRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aNewBookingEN.aListNewRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aNewBookingEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aNewBookingEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aNewBookingEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aNewBookingEN.CheckOutActual;
+                        aBookingRooms.StartTime = aNewBookingEN.CheckInActual;
+                        aBookingRooms.EndTime = aNewBookingEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aNewBookingEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        //add new bookingRoom
+                        aBookingRoomsBO.Insert(aBookingRooms);
+
+                    }
+                }
+                #endregion
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        //Hiennv     26/11/2014     Viet lai phuong thuc checkInForRoomBooking
+        public bool NewCheckInForRoomBooking(CheckInEN aCheckInEN)
+        {
+            try
+            {
+                CustomersBO aCustomersBO = new CustomersBO();
+                List<Customers> aListCustomersTemp = aCustomersBO.Select_All();
+
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                List<BookingRooms> aListBookingRoomTemp = aBookingRoomsBO.Select_All();
+
+                int IDBookingRooms = 0;
+                int IDCompany = 0;
+                int IDCustomerGroup = 0;
+                int IDCustomer = 0;
+                int Result = 0;
+
+                string customerType = string.Empty;
+
+
+                if (aCheckInEN.CustomerType == 0)
+                {
+                    customerType = "Tất cả loại khác";
+                }
+                else if (aCheckInEN.CustomerType == 1)
+                {
+                    customerType = "Khách nhà nước";
+                }
+                else if (aCheckInEN.CustomerType == 2)
+                {
+                    customerType = "Khách đoàn";
+                }
+                else if (aCheckInEN.CustomerType == 3)
+                {
+                    customerType = "Khách lẻ";
+                }
+                else if (aCheckInEN.CustomerType == 4)
+                {
+                    customerType = "Khách vãng lai";
+                }
+                else if (aCheckInEN.CustomerType == 5)
+                {
+                    customerType = "Khách bộ ngoại giao";
+                }
+                else
+                {
+                    customerType = string.Empty;
+                }
+
+
+                #region Them moi cong ty khi cong ty chua co
+                if (aCheckInEN.IDCompany > 0)
+                {
+                    IDCompany = aCheckInEN.IDCompany;
+                }
+                else
+                {
+                    CompaniesBO aCompaniesBO = new CompaniesBO();
+                    Companies aCompanies = new Companies();
+                    if (aCheckInEN.NameCompany.Length > 250)
+                    {
+                        aCompanies.Name = aCheckInEN.NameCompany.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCompanies.Name = aCheckInEN.NameCompany;
+                    }
+
+                    aCompanies.TaxNumberCode = string.Empty;
+                    aCompanies.Address = string.Empty;
+                    aCompanies.Type = aCheckInEN.CustomerType;
+                    aCompanies.Status = 1;
+                    aCompanies.Disable = false;
+                    IDCompany = aCompaniesBO.Insert(aCompanies);
+                }
+                #endregion
+
+                #region Them moi nhom vao trong cong ty
+                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                CustomerGroups aCustomerGroups;
+                aCustomerGroups = aCustomerGroupsBO.Select_ByIDCompanyAndIDCustomerGroup(IDCompany, aCheckInEN.IDCustomerGroup);
+
+                if (aCustomerGroups == null)
+                {
+
+                    aCustomerGroups = new CustomerGroups();
+
+                    string nameGroup = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+                    aCustomerGroups.IDCompany = IDCompany;
+                    if (nameGroup.Length > 250)
+                    {
+                        aCustomerGroups.Name = nameGroup.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aCustomerGroups.Name = nameGroup;
+                    }
+
+                    aCustomerGroups.Type = 1;
+                    aCustomerGroups.Status = 1;
+                    aCustomerGroups.Disable = false;
+                    IDCustomerGroup = aCustomerGroupsBO.Insert(aCustomerGroups);
+                }
+                else
+                {
+                    IDCustomerGroup = aCheckInEN.IDCustomerGroup;
+                }
+                #endregion
+
+
+
+                string subject = "[" + customerType + "][" + aCheckInEN.NameCompany + "][" + DateTime.Now.ToString() + "]";
+
+                BookingRsBO aBookingRsBO = new BookingRsBO();
+                BookingRs aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
+                if (aBookingRs != null)
+                {
+                    aBookingRs.CreatedDate = DateTime.Now;
+                    aBookingRs.CustomerType = aCheckInEN.CustomerType;
+                    aBookingRs.BookingType = aCheckInEN.BookingType;
+                    if (subject.Length > 250)
+                    {
+                        aBookingRs.Subject = subject.Substring(0, 250);
+                    }
+                    else
+                    {
+                        aBookingRs.Subject = subject;
+                    }
+
+                    aBookingRs.IDCustomerGroup = IDCustomerGroup;
+                    aBookingRs.IDCustomer = aCheckInEN.IDCustomer;
+                    aBookingRs.IDSystemUser = aCheckInEN.IDSystemUser;
+                    aBookingRs.PayMenthod = aCheckInEN.PayMenthod;
+                    aBookingRs.StatusPay = aCheckInEN.StatusPay;
+                    aBookingRs.BookingMoney = aCheckInEN.BookingMoney;
+                    aBookingRs.ExchangeRate = aCheckInEN.ExchangeRate;
+                    aBookingRs.Level = 0;// de mac dinh hien tai chua dung den
+                    aBookingRs.Note = string.Empty;
+                    aBookingRs.Description = string.Empty;
+                    aBookingRs.DatePay = aCheckInEN.CheckOutPlan;
+                    aBookingRs.DateEdit = aCheckInEN.CheckInActual;
+                    aBookingRs.Status = aCheckInEN.Status;
+                    aBookingRs.Type = aCheckInEN.Type;
+                    aBookingRs.Disable = aCheckInEN.Disable;
+                    aBookingRsBO.Update(aBookingRs);
+                }
+
+                //==========================================================
+                BookingRooms aBookingRooms;
+                BookingRoomsMembers aBookingRoomsMembers;
+
+                for (int i = 0; i < aCheckInEN.aListRoomMembers.Count; i++)
+                {
+
+                    List<BookingRooms> aListBookingRoom = aListBookingRoomTemp.Where(r => r.ID == aCheckInEN.aListRoomMembers[i].IDBookingRooms).ToList();
+                    if (aListBookingRoom.Count > 0)
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms = aListBookingRoom[0];
+                        aBookingRooms.IDBookingR = aCheckInEN.IDBookingR;
+                        aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
+                        aBookingRooms.StartTime = aCheckInEN.CheckInActual;
+                        aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aCheckInEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        aBookingRoomsBO.Update(aBookingRooms);
+
+                        IDBookingRooms = aCheckInEN.aListRoomMembers[i].IDBookingRooms;
+                    }
+                    else
+                    {
+                        aBookingRooms = new BookingRooms();
+                        aBookingRooms.IDBookingR = aCheckInEN.IDBookingR;
+                        aBookingRooms.CodeRoom = aCheckInEN.aListRoomMembers[i].RoomCode;
+                        aBookingRooms.PercentTax = 10;
+                        aBookingRooms.CostRef_Rooms = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.Cost = aCheckInEN.aListRoomMembers[i].RoomCostRef;
+                        aBookingRooms.CheckInPlan = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckInActual = aCheckInEN.CheckInActual;
+                        aBookingRooms.CheckOutPlan = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.CheckOutActual = aCheckInEN.CheckOutActual;
+                        aBookingRooms.StartTime = aCheckInEN.CheckInActual;
+                        aBookingRooms.EndTime = aCheckInEN.CheckOutPlan;
+                        aBookingRooms.BookingStatus = 1;
+                        aBookingRooms.Type = 3; //Tính CheckIn sớm và CheckOut muộn
+                        aBookingRooms.Status = aCheckInEN.Status;
+                        aBookingRooms.PriceType = "G1";
+                        //add new bookingRoom
+                        IDBookingRooms = aBookingRoomsBO.Insert(aBookingRooms);
+                    }
+
+                    //-----------------------------------------------------------
+                    aBookingRoomsMembers = new BookingRoomsMembers();
+                    aBookingRoomsMembers.IDBookingRoom = IDBookingRooms;
+
+                    BookingRoomsMembersBO aBookingRoomsMembersBO = new BookingRoomsMembersBO();
+                    for (int ii = 0; ii < aCheckInEN.aListRoomMembers[i].ListCustomer.Count; ii++)
+                    {
+                        Customers aCustomers;
+                        List<Customers> aListCustomers = aListCustomersTemp.Where(c => c.ID == aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID).ToList();
+                        if (aListCustomers.Count > 0)
+                        {
+                            IDCustomer = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID;
+                        }
+                        else
+                        {
+                            aCustomers = new Customers();
+                            aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
+                            aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
+                            aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
+                            aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
+                            aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+
+                            //Them moi khach hang
+                            IDCustomer = aCustomersBO.Insert(aCustomers);
+                        }
+                        aBookingRoomsMembers.IDCustomer = IDCustomer;
+                        aBookingRoomsMembers.PurposeComeVietnam = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PurposeComeVietnam;
+                        aBookingRoomsMembers.DateEnterCountry = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].DateEnterCountry;
+                        aBookingRoomsMembers.EnterGate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].EnterGate;
+                        aBookingRoomsMembers.TemporaryResidenceDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].TemporaryResidenceDate;
+                        aBookingRoomsMembers.LimitDateEnterCountry = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].LimitDateEnterCountry;
+                        aBookingRoomsMembers.Organization = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Organization;
+                        aBookingRoomsMembers.LeaveDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].LeaveDate;
+
+                        //add new bookingRoomMember
+                        aBookingRoomsMembersBO.Insert(aBookingRoomsMembers);
+
+                        #region  them nguoi vao trong customergroup_customer
+
+                        string nameCustomerGroup_customer = "[" + customerType + "][" + aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name + "]";
+
+                        CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                        CustomerGroups_Customers aCustomerGroups_Customers = new CustomerGroups_Customers();
+                        if (nameCustomerGroup_customer.Length > 150)
+                        {
+                            aCustomerGroups_Customers.Name = nameCustomerGroup_customer.Substring(0, 150);
+                        }
+                        else
+                        {
+                            aCustomerGroups_Customers.Name = nameCustomerGroup_customer;
+                        }
+
+                        aCustomerGroups_Customers.Type = 1;
+                        aCustomerGroups_Customers.Status = 1;
+                        aCustomerGroups_Customers.Disable = false;
+                        aCustomerGroups_Customers.FromDate = DateTime.Now;
+                        aCustomerGroups_Customers.ToDate = DateTime.Now;
+                        aCustomerGroups_Customers.IDCustomer = IDCustomer;
+                        aCustomerGroups_Customers.IDCustomerGroup = IDCustomerGroup;
+                        aCustomerGroups_CustomersBO.Insert(aCustomerGroups_Customers);
+                        #endregion
+
+
+                        // dung de cap nhap lai nguoi dai dien khi dat phong
+                        if (aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PepoleRepresentative == true)
+                        {
+                            aBookingRsBO = new BookingRsBO();
+                            aBookingRs = new BookingRs();
+                            aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
+                            if (aBookingRs != null)
+                            {
+                                aBookingRs.IDCustomer = IDCustomer;
+                                Result = aBookingRsBO.Update(aBookingRs);
+                            }
+
+                        }
+                        else
+                        {
+                            if (ii == (aCheckInEN.aListRoomMembers[i].ListCustomer.Count - 1))
+                            {
+                                if (Result == 0)
+                                {
+                                    aBookingRsBO = new BookingRsBO();
+                                    aBookingRs = new BookingRs();
+                                    aBookingRs = aBookingRsBO.Select_ByID(aCheckInEN.IDBookingR);
+                                    if (aBookingRs != null)
+                                    {
+                                        aBookingRs.IDCustomer = IDCustomer;
+                                        aBookingRsBO.Update(aBookingRs);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
     }
 }
 

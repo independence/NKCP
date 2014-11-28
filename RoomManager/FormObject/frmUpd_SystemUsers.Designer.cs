@@ -116,7 +116,7 @@
             this.bnComfirm.Location = new System.Drawing.Point(660, 464);
             this.bnComfirm.Name = "bnComfirm";
             this.bnComfirm.Size = new System.Drawing.Size(104, 28);
-            this.bnComfirm.TabIndex = 16;
+            this.bnComfirm.TabIndex = 37;
             this.bnComfirm.Text = "Cập nhật";
             this.bnComfirm.Click += new System.EventHandler(this.bnComfirm_Click);
             // 
@@ -147,15 +147,15 @@
             this.panelControl2.Controls.Add(this.labelControl8);
             this.panelControl2.Location = new System.Drawing.Point(12, 12);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(752, 271);
-            this.panelControl2.TabIndex = 14;
+            this.panelControl2.Size = new System.Drawing.Size(759, 271);
+            this.panelControl2.TabIndex = 1;
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(116, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtUsername.TabIndex = 28;
+            this.txtUsername.TabIndex = 3;
             // 
             // cbxSysUserGroup
             // 
@@ -168,14 +168,14 @@
             "1",
             "2"});
             this.cbxSysUserGroup.Size = new System.Drawing.Size(100, 20);
-            this.cbxSysUserGroup.TabIndex = 27;
+            this.cbxSysUserGroup.TabIndex = 5;
             // 
             // labelControl15
             // 
             this.labelControl15.Location = new System.Drawing.Point(54, 8);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(55, 13);
-            this.labelControl15.TabIndex = 25;
+            this.labelControl15.TabIndex = 2;
             this.labelControl15.Text = "Username :";
             // 
             // txtBirthday
@@ -192,12 +192,13 @@
             this.txtBirthday.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtBirthday.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.txtBirthday.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtBirthday.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.txtBirthday.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.txtBirthday.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtBirthday.Properties.Mask.PlaceHolder = '/';
             this.txtBirthday.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtBirthday.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
             this.txtBirthday.Size = new System.Drawing.Size(138, 20);
-            this.txtBirthday.TabIndex = 24;
+            this.txtBirthday.TabIndex = 13;
             // 
             // txtImage
             // 
@@ -206,7 +207,7 @@
             this.txtImage.Properties.NullValuePrompt = "Chưa chọn ảnh";
             this.txtImage.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtImage.Size = new System.Drawing.Size(221, 20);
-            this.txtImage.TabIndex = 23;
+            this.txtImage.TabIndex = 21;
             // 
             // txtTen
             // 
@@ -215,12 +216,12 @@
             this.txtTen.Properties.NullValuePrompt = "Tên";
             this.txtTen.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTen.Size = new System.Drawing.Size(157, 20);
-            this.txtTen.TabIndex = 19;
+            this.txtTen.TabIndex = 8;
             // 
             // cbxEmail
             // 
             this.cbxEmail.EditValue = "@yahoo.com";
-            this.cbxEmail.Location = new System.Drawing.Point(616, 34);
+            this.cbxEmail.Location = new System.Drawing.Point(611, 61);
             this.cbxEmail.Name = "cbxEmail";
             this.cbxEmail.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -228,21 +229,21 @@
             "@yahoo.com",
             "@gmail.com"});
             this.cbxEmail.Size = new System.Drawing.Size(100, 20);
-            this.cbxEmail.TabIndex = 18;
+            this.cbxEmail.TabIndex = 11;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(448, 34);
+            this.txtEmail.Location = new System.Drawing.Point(443, 61);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(162, 20);
-            this.txtEmail.TabIndex = 17;
+            this.txtEmail.TabIndex = 10;
             // 
             // txtNoiSinh
             // 
-            this.txtNoiSinh.Location = new System.Drawing.Point(448, 63);
+            this.txtNoiSinh.Location = new System.Drawing.Point(328, 88);
             this.txtNoiSinh.Name = "txtNoiSinh";
             this.txtNoiSinh.Size = new System.Drawing.Size(162, 20);
-            this.txtNoiSinh.TabIndex = 16;
+            this.txtNoiSinh.TabIndex = 15;
             // 
             // cbxQue
             // 
@@ -314,14 +315,14 @@
             this.cbxQue.Properties.NullValuePrompt = "--Tỉnh/Thành--";
             this.cbxQue.Properties.NullValuePromptShowForEmptyValue = true;
             this.cbxQue.Size = new System.Drawing.Size(138, 20);
-            this.cbxQue.TabIndex = 14;
+            this.cbxQue.TabIndex = 17;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(116, 148);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(263, 20);
-            this.txtDiaChi.TabIndex = 13;
+            this.txtDiaChi.TabIndex = 19;
             // 
             // txtHo
             // 
@@ -330,32 +331,32 @@
             this.txtHo.Properties.NullValuePrompt = "Họ";
             this.txtHo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtHo.Size = new System.Drawing.Size(100, 20);
-            this.txtHo.TabIndex = 11;
+            this.txtHo.TabIndex = 7;
             // 
             // bnUpload
             // 
             this.bnUpload.Location = new System.Drawing.Point(345, 196);
             this.bnUpload.Name = "bnUpload";
             this.bnUpload.Size = new System.Drawing.Size(71, 23);
-            this.bnUpload.TabIndex = 9;
+            this.bnUpload.TabIndex = 22;
             this.bnUpload.Text = "Chọn ảnh ...";
             this.bnUpload.Click += new System.EventHandler(this.bnUpload_Click);
             // 
             // pictureNV
             // 
-            this.pictureNV.Location = new System.Drawing.Point(448, 99);
+            this.pictureNV.Location = new System.Drawing.Point(507, 87);
             this.pictureNV.Name = "pictureNV";
             this.pictureNV.Properties.ShowMenu = false;
             this.pictureNV.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureNV.Size = new System.Drawing.Size(162, 164);
-            this.pictureNV.TabIndex = 8;
+            this.pictureNV.Size = new System.Drawing.Size(204, 176);
+            this.pictureNV.TabIndex = 23;
             // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(25, 41);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(84, 13);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Nhóm nhân viên :";
             // 
             // labelControl2
@@ -363,15 +364,15 @@
             this.labelControl2.Location = new System.Drawing.Point(70, 69);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(39, 13);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Họ tên :";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(411, 42);
+            this.labelControl3.Location = new System.Drawing.Point(406, 64);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(31, 13);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "Email :";
             // 
             // labelControl4
@@ -379,15 +380,15 @@
             this.labelControl4.Location = new System.Drawing.Point(55, 97);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(54, 13);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Ngày sinh :";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(398, 69);
+            this.labelControl5.Location = new System.Drawing.Point(278, 94);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(44, 13);
-            this.labelControl5.TabIndex = 4;
+            this.labelControl5.TabIndex = 14;
             this.labelControl5.Text = "Nơi sinh :";
             // 
             // labelControl6
@@ -395,7 +396,7 @@
             this.labelControl6.Location = new System.Drawing.Point(56, 126);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(54, 13);
-            this.labelControl6.TabIndex = 5;
+            this.labelControl6.TabIndex = 16;
             this.labelControl6.Text = "Quê quán :";
             // 
             // labelControl7
@@ -403,7 +404,7 @@
             this.labelControl7.Location = new System.Drawing.Point(67, 155);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(42, 13);
-            this.labelControl7.TabIndex = 6;
+            this.labelControl7.TabIndex = 18;
             this.labelControl7.Text = "Địa chỉ  :";
             // 
             // labelControl8
@@ -411,7 +412,7 @@
             this.labelControl8.Location = new System.Drawing.Point(44, 206);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(66, 13);
-            this.labelControl8.TabIndex = 7;
+            this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "Ảnh đại diện :";
             // 
             // panelControl3
@@ -430,8 +431,8 @@
             this.panelControl3.Controls.Add(this.labelControl11);
             this.panelControl3.Location = new System.Drawing.Point(12, 289);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(752, 161);
-            this.panelControl3.TabIndex = 15;
+            this.panelControl3.Size = new System.Drawing.Size(759, 161);
+            this.panelControl3.TabIndex = 24;
             // 
             // cbxStatus
             // 
@@ -446,7 +447,7 @@
             "2",
             "3"});
             this.cbxStatus.Size = new System.Drawing.Size(100, 20);
-            this.cbxStatus.TabIndex = 21;
+            this.cbxStatus.TabIndex = 36;
             // 
             // cbxType
             // 
@@ -461,7 +462,7 @@
             "2",
             "3"});
             this.cbxType.Size = new System.Drawing.Size(100, 20);
-            this.cbxType.TabIndex = 20;
+            this.cbxType.TabIndex = 34;
             // 
             // txtBacLuong
             // 
@@ -469,21 +470,21 @@
             this.txtBacLuong.Name = "txtBacLuong";
             this.txtBacLuong.Properties.Mask.EditMask = "n0";
             this.txtBacLuong.Size = new System.Drawing.Size(100, 20);
-            this.txtBacLuong.TabIndex = 19;
+            this.txtBacLuong.TabIndex = 32;
             // 
             // txtNamCtac
             // 
             this.txtNamCtac.Location = new System.Drawing.Point(116, 54);
             this.txtNamCtac.Name = "txtNamCtac";
             this.txtNamCtac.Size = new System.Drawing.Size(100, 20);
-            this.txtNamCtac.TabIndex = 18;
+            this.txtNamCtac.TabIndex = 30;
             // 
             // txtNam
             // 
             this.txtNam.Location = new System.Drawing.Point(448, 22);
             this.txtNam.Name = "txtNam";
             this.txtNam.Size = new System.Drawing.Size(100, 20);
-            this.txtNam.TabIndex = 15;
+            this.txtNam.TabIndex = 28;
             // 
             // txtMaBH
             // 
@@ -494,14 +495,14 @@
             this.txtMaBH.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtMaBH.Properties.Mask.PlaceHolder = '-';
             this.txtMaBH.Size = new System.Drawing.Size(186, 20);
-            this.txtMaBH.TabIndex = 14;
+            this.txtMaBH.TabIndex = 26;
             // 
             // labelControl12
             // 
             this.labelControl12.Location = new System.Drawing.Point(341, 28);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(101, 13);
-            this.labelControl12.TabIndex = 11;
+            this.labelControl12.TabIndex = 27;
             this.labelControl12.Text = "Năm đóng bảo hiểm :";
             // 
             // labelControl9
@@ -509,7 +510,7 @@
             this.labelControl9.Location = new System.Drawing.Point(25, 29);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(81, 13);
-            this.labelControl9.TabIndex = 8;
+            this.labelControl9.TabIndex = 25;
             this.labelControl9.Text = "Mã số bảo hiểm :";
             // 
             // labelControl14
@@ -517,7 +518,7 @@
             this.labelControl14.Location = new System.Drawing.Point(50, 124);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(56, 13);
-            this.labelControl14.TabIndex = 13;
+            this.labelControl14.TabIndex = 35;
             this.labelControl14.Text = "Trạng thái :";
             // 
             // labelControl10
@@ -525,7 +526,7 @@
             this.labelControl10.Location = new System.Drawing.Point(34, 61);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(72, 13);
-            this.labelControl10.TabIndex = 9;
+            this.labelControl10.TabIndex = 29;
             this.labelControl10.Text = "Năm công tác :";
             // 
             // labelControl13
@@ -533,7 +534,7 @@
             this.labelControl13.Location = new System.Drawing.Point(80, 93);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(26, 13);
-            this.labelControl13.TabIndex = 12;
+            this.labelControl13.TabIndex = 33;
             this.labelControl13.Text = "Loại :";
             // 
             // labelControl11
@@ -541,7 +542,7 @@
             this.labelControl11.Location = new System.Drawing.Point(388, 61);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(54, 13);
-            this.labelControl11.TabIndex = 10;
+            this.labelControl11.TabIndex = 31;
             this.labelControl11.Text = "Bậc lương :";
             // 
             // UploadImage

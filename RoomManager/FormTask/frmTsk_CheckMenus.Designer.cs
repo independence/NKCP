@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_CheckMenus));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabBookingHalls = new DevExpress.XtraTab.XtraTabControl();
             this.tabHaveMenus = new DevExpress.XtraTab.XtraTabPage();
@@ -146,7 +146,7 @@
             this.tabBookingHalls.Name = "tabBookingHalls";
             this.tabBookingHalls.SelectedTabPage = this.tabHaveMenus;
             this.tabBookingHalls.Size = new System.Drawing.Size(1023, 485);
-            this.tabBookingHalls.TabIndex = 12;
+            this.tabBookingHalls.TabIndex = 6;
             this.tabBookingHalls.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabHaveNotMenus,
             this.tabHaveMenus,
@@ -177,7 +177,7 @@
             this.btnDetail_HaveMenus,
             this.btnSelectMenu});
             this.dgvBookingHalls_HaveMenus.Size = new System.Drawing.Size(1017, 453);
-            this.dgvBookingHalls_HaveMenus.TabIndex = 13;
+            this.dgvBookingHalls_HaveMenus.TabIndex = 8;
             this.dgvBookingHalls_HaveMenus.UseEmbeddedNavigator = true;
             this.dgvBookingHalls_HaveMenus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingHalls_HaveMenus,
@@ -230,7 +230,7 @@
             // 
             this.btnDetail_HaveMenus.AutoHeight = false;
             this.btnDetail_HaveMenus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetail_HaveMenus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetail_HaveMenus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnDetail_HaveMenus.Name = "btnDetail_HaveMenus";
             this.btnDetail_HaveMenus.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetail_HaveMenus.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetail_HaveMenus_ButtonClick);
@@ -245,7 +245,7 @@
             this.gridColumn48.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn48.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gridColumn48.Caption = "Hội trường";
-            this.gridColumn48.FieldName = "SkuHall";
+            this.gridColumn48.FieldName = "HallSku";
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.OptionsColumn.AllowEdit = false;
             this.gridColumn48.OptionsColumn.AllowFocus = false;
@@ -463,7 +463,7 @@
             // 
             this.btnSelectMenu.AutoHeight = false;
             this.btnSelectMenu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectMenu.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectMenu.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btnSelectMenu.Name = "btnSelectMenu";
             this.btnSelectMenu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectMenu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectMenu_ButtonClick);
@@ -497,7 +497,7 @@
             this.btnDetailBookingHaveNotMenus,
             this.btnCreateMenu});
             this.dgvHaveNotMenus.Size = new System.Drawing.Size(1017, 453);
-            this.dgvHaveNotMenus.TabIndex = 14;
+            this.dgvHaveNotMenus.TabIndex = 7;
             this.dgvHaveNotMenus.UseEmbeddedNavigator = true;
             this.dgvHaveNotMenus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvHaveNotMenus,
@@ -550,7 +550,7 @@
             // 
             this.btnDetailBookingHaveNotMenus.AutoHeight = false;
             this.btnDetailBookingHaveNotMenus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailBookingHaveNotMenus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailBookingHaveNotMenus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnDetailBookingHaveNotMenus.Name = "btnDetailBookingHaveNotMenus";
             this.btnDetailBookingHaveNotMenus.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetailBookingHaveNotMenus.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetailBookingHaveNotMenus_ButtonClick);
@@ -783,7 +783,7 @@
             // 
             this.btnCreateMenu.AutoHeight = false;
             this.btnCreateMenu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCreateMenu.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCreateMenu.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btnCreateMenu.Name = "btnCreateMenu";
             this.btnCreateMenu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCreateMenu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCreateMenu_ButtonClick);
@@ -817,7 +817,7 @@
             this.dgvBookingHalls_Selected.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail_Selected});
             this.dgvBookingHalls_Selected.Size = new System.Drawing.Size(1017, 453);
-            this.dgvBookingHalls_Selected.TabIndex = 13;
+            this.dgvBookingHalls_Selected.TabIndex = 9;
             this.dgvBookingHalls_Selected.UseEmbeddedNavigator = true;
             this.dgvBookingHalls_Selected.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvBookingHalls_Selected,
@@ -869,7 +869,7 @@
             // 
             this.btnDetail_Selected.AutoHeight = false;
             this.btnDetail_Selected.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetail_Selected.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetail_Selected.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnDetail_Selected.Name = "btnDetail_Selected";
             this.btnDetail_Selected.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetail_Selected.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetail_Selected_ButtonClick);
@@ -1094,7 +1094,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1023, 38);
-            this.tableLayoutPanel2.TabIndex = 11;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // dtpFrom
             // 
@@ -1110,9 +1110,10 @@
             this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpFrom.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpFrom.Size = new System.Drawing.Size(182, 20);
-            this.dtpFrom.TabIndex = 4;
+            this.dtpFrom.TabIndex = 3;
             this.dtpFrom.EditValueChanged += new System.EventHandler(this.dtpFrom_EditValueChanged);
             // 
             // dtpTo
@@ -1129,9 +1130,10 @@
             this.dtpTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtpTo.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtpTo.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dtpTo.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpTo.Size = new System.Drawing.Size(173, 20);
-            this.dtpTo.TabIndex = 4;
+            this.dtpTo.TabIndex = 5;
             // 
             // labelControl1
             // 
@@ -1140,7 +1142,7 @@
             this.labelControl1.Location = new System.Drawing.Point(263, 10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(28, 17);
-            this.labelControl1.TabIndex = 5;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Đến";
             // 
             // labelControl2
@@ -1151,7 +1153,7 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(19, 17);
-            this.labelControl2.TabIndex = 5;
+            this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Từ";
             // 
             // frmTsk_CheckMenus

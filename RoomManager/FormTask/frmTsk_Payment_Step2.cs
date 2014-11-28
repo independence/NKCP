@@ -16,13 +16,15 @@ namespace RoomManager
 {
     public partial class frmTsk_Payment_Step2 : DevExpress.XtraEditors.XtraForm
     {
-
+        public bool IsLockForm = false;
         public frmTsk_Payment_Step1 afrmTsk_Payment_Step1 = null;
+        public frmMain afrmMain = null;
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
         private PaymentEN aPaymentEN = new PaymentEN();
         private int IDBookingR = 0;
         private int CurrentIDBookingRoom = 0;
         private int CurrentIDBookingHall = 0;
+        private int StatusPay = 0;
 
         private PaymentHallsEN aPaymentHallsEN = new PaymentHallsEN();
         private int IDBookingH = 0;
@@ -38,6 +40,14 @@ namespace RoomManager
             this.IDBookingR = IDBookingR;
             this.IDBookingH = IDBookingH;
         }
+        public frmTsk_Payment_Step2(frmTsk_Payment_Step1 afrmTsk_Payment_Step1, int IDBookingR, int IDBookingH, int StatusPay)
+        {
+            InitializeComponent();
+            this.afrmTsk_Payment_Step1 = afrmTsk_Payment_Step1;
+            this.IDBookingR = IDBookingR;
+            this.IDBookingH = IDBookingH;
+            this.StatusPay = StatusPay;
+        }
         //Hiennv
         public frmTsk_Payment_Step2(int IDBookingR, int IDBookingH)
         {
@@ -46,6 +56,15 @@ namespace RoomManager
             this.IDBookingH = IDBookingH;
             xtraTabControl1.SelectedTabPageIndex = 2;
         }
+        public frmTsk_Payment_Step2(frmMain afrmMain, int IDBookingR, int IDBookingH)
+        {
+            InitializeComponent();
+            this.afrmMain = afrmMain;
+            this.IDBookingR = IDBookingR;
+            this.IDBookingH = IDBookingH;
+            xtraTabControl1.SelectedTabPageIndex = 2;
+        }
+
         #region Payment Hiển
        
         //Hiennv
@@ -441,6 +460,9 @@ namespace RoomManager
                 aNewPaymentEN.StatusPay = aBookingRs.StatusPay;
                 aNewPaymentEN.BookingRMoney = aBookingRs.BookingMoney;
                 aNewPaymentEN.Status_BookingR = aBookingRs.Status;
+                aNewPaymentEN.AcceptDate = aBookingRs.AcceptDate;
+                aNewPaymentEN.InvoiceDate = aBookingRs.InvoiceDate;
+                aNewPaymentEN.InvoiceNumber = aBookingRs.InvoiceNumber;
 
                 // Truyen du lieu cho List BookingRoom cua NewPayment
                 List<BookingRooms> aListBookingRooms = aBookingRoomBO.Select_ByIDBookingRs(this.IDBookingR);
@@ -552,8 +574,35 @@ namespace RoomManager
         {
             try
             {
-                this.InitData(this.IDBookingR, this.IDBookingH);
-                this.LoadData();
+
+                if (StatusPay == 0) // Load khi chưa thanh toán 
+                {
+                    // Khóa các chức năng phòng khi chưa chọn
+                    dtpCheckInActual.Enabled = false;
+                    dtpCheckOutActual.Enabled = false;
+                    txtAddTimeEnd.Enabled = false;
+                    txtAddTimeStart.Enabled = false;
+                    txtNumberDate.Enabled = false;
+                    txtPercentTax_Room.Enabled = false;
+                    txtBookingHallsCost.Enabled = false;
+                    chkCheckIn.Enabled = false;
+                    chkCheckOut.Enabled = false;
+                    btnAddService.Enabled = false;
+
+
+                    txtBookingRoomsCost.Enabled = false;
+                    txtPercentTax_Hall.Enabled = false;
+                    btnAddServicesForHalls.Enabled = false;
+                    lueMenus.Enabled = false;
+                    this.InitData(this.IDBookingR, this.IDBookingH);
+                    this.LoadData();
+                }
+                else if (StatusPay != 0) // Load hóa đơn đã thanh toán
+                {
+                    this.InitData(this.IDBookingR, this.IDBookingH);
+                    this.LoadData();
+                    this.LockForm();
+                }
 
             }
             catch (Exception ex)
@@ -565,7 +614,7 @@ namespace RoomManager
 
         public void Reload(NewPaymentEN aNewPayment)
         {
-            this.aNewPaymentEN = aNewPaymentEN;
+            this.aNewPaymentEN = aNewPayment;
             this.LoadData();
         }
       
@@ -591,6 +640,11 @@ namespace RoomManager
             lblNameCustomer.Text = this.aNewPaymentEN.NameCustomer;
             txtAddressR.Text = this.aNewPaymentEN.AddressCompany;
             txtTaxNumberCodeR.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
+           
+            // Thông tin hóa đơn
+            txtInvoiceNumber.Text = this.aNewPaymentEN.InvoiceNumber;
+            dtpAcceptDate.DateTime = this.aNewPaymentEN.AcceptDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
+            dtpInvoiceDate.DateTime = this.aNewPaymentEN.InvoiceDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
             // Trang thai, hinh thuc thanh toan
             lueBookingR_Paymethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
             lueBookingR_Paymethod.Properties.DisplayMember = "Name";
@@ -774,6 +828,7 @@ namespace RoomManager
                 btnPaymentHall.Enabled = false;
                 btnPrintBookingH.Enabled = false;
                 txtTaxNumberCodeH.Enabled = false;
+                txtAddressH.Enabled = false;
             }
             // Thông tin tổng tiền
             lblTotalBookingRAndBookingHBeforeTax.Text = String.Format("{0:0,0} (VND)", this.aNewPaymentEN.GetTotalMoneyBeforeTax());
@@ -924,8 +979,19 @@ namespace RoomManager
         {
             try
             {
+                dtpCheckInActual.Enabled = true;
+                dtpCheckOutActual.Enabled = true;
+                txtAddTimeEnd.Enabled = true;
+                txtAddTimeStart.Enabled = true;
+                txtNumberDate.Enabled = true;
+                txtPercentTax_Room.Enabled = true;
+                txtBookingRoomsCost.Enabled = true;
+                chkCheckIn.Enabled = true;
+                chkCheckOut.Enabled = true;
+                btnAddService.Enabled = true;
+               
                 cbbPriceType.Properties.ReadOnly = false;
-                this.ExtraMoneyRoom = 0;
+                this.ExtraMoneyRoom = 0;               
                 //cbbPriceType.SelectedIndex = 0;
                 this.CurrentIDBookingRoom = Convert.ToInt32(viewRooms.GetFocusedRowCellValue("ID"));
                 this.CodeRoom = viewRooms.GetFocusedRowCellValue("CodeRoom").ToString();
@@ -1117,7 +1183,7 @@ namespace RoomManager
                     }
                     else
                     {
-                        dtpCheckOutActual.Focus();
+                        
                         MessageBox.Show("Vui lòng nhập ngày giờ CheckIn phải nhỏ hơn ngày giờ CheckOut", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -1158,20 +1224,30 @@ namespace RoomManager
                     txtAddTimeStart.Enabled = true;
                     txtAddTimeEnd.Enabled = false;
                 }
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = Convert.ToDateTime(dtpCheckInActual.Text);
+                if (this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].Status == 7 || this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].Status == 8)
+                {
+                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutActual = dtpCheckOutActual.DateTime;
+
+                }
+                else
+                {
+                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutPlan = Convert.ToDateTime(dtpCheckOutActual.Text);
+
+                }
                 txtAddTimeStart.Text = aReceptionTaskBO.GetAddTimeStart(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckInActual.DateTime).ToString();
                 txtAddTimeEnd.Text = aReceptionTaskBO.GetAddTimeEnd(this.aNewPaymentEN, this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime).ToString();
-  
-                txtNumberDate.Text = (aReceptionTaskBO.GetTimeInUsed(this.CurrentIDBookingRoom,dtpCheckInActual.DateTime,dtpCheckOutActual.DateTime)).ToString();
-                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckInActual = dtpCheckInActual.DateTime;
+                  txtNumberDate.Text = (aReceptionTaskBO.GetTimeInUsed(this.CurrentIDBookingRoom,dtpCheckInActual.DateTime,dtpCheckOutActual.DateTime)).ToString();
+                
+                
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = Convert.ToDecimal(txtAddTimeStart.Text);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].DateUsed = Convert.ToDouble(txtNumberDate.Text);
+
+                this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, chkCheckIn.Checked, chkCheckOut.Checked);
+
                 BookingRoomUsedEN aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0];
-                if (aTemp.Status != 7 || aTemp.Status != 8)
-                {
-                    this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutPlan = dtpCheckOutActual.DateTime;
-                }
-                else 
-                {
-                   this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].CheckOutActual = dtpCheckOutActual.DateTime;
-               }
+                
                // this.LoadData();
             }
         }
@@ -1181,14 +1257,16 @@ namespace RoomManager
             CustomersBO aCustomersBO = new CustomersBO();
             BookingRsBO aBookingRsBO = new BookingRsBO();
             ExtraCostBO aExtraCostBO = new ExtraCostBO();
+            RoomsBO aRoomsBO = new RoomsBO();
             
             
             List<Customers> aListCustomers = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
-            int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();            
-            decimal? CostRoom = this.aNewPaymentEN.GetCostRoom(this.CurrentIDBookingRoom) - this.ExtraMoneyRoom;
+            int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();
+            decimal? CostRoom = aRoomsBO.Select_ByIDBookingRoom(this.CurrentIDBookingRoom).CostRef;
             this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(lblSkuRooms.Text,cbbPriceType.Text,aListCustomers.Count).ExtraValue);
                 
             txtBookingRoomsCost.Text = Convert.ToString(CostRoom + this.ExtraMoneyRoom);
+            this.aNewPaymentEN.ChangePriceType(this.CurrentIDBookingRoom, cbbPriceType.Text);
             
         }
 
@@ -1211,6 +1289,10 @@ namespace RoomManager
         {
             try
             {
+                txtBookingRoomsCost.Enabled = true;
+                txtPercentTax_Hall.Enabled = true;
+                btnAddServicesForHalls.Enabled = true;
+                lueMenus.Enabled = true;
                 this.CurrentIDBookingHall = Convert.ToInt32(viewHalls.GetFocusedRowCellValue("ID"));
                 this.LoadData();
             }
@@ -1462,9 +1544,14 @@ namespace RoomManager
                             this.afrmTsk_Payment_Step1.afrmMain.ReloadData();
                         }
                     }
-                    //this.aPaymentEN = new PaymentEN();
-                    //this.InitDataBookingR(this.IDBookingR, this.aPaymentEN);
+                    else if (this.afrmMain != null)
+                    {
+                        this.afrmMain.ReloadData();
+                    }
+                    
+                  
                     MessageBox.Show("Thanh toán tiền phòng thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -1517,6 +1604,7 @@ namespace RoomManager
                 if (result == DialogResult.Yes)
                 {
                     this.aNewPaymentEN.PaymentHall();
+                  
                     MessageBox.Show("Thanh toán tiền hội trường thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -1576,9 +1664,15 @@ namespace RoomManager
                         {
                             this.afrmTsk_Payment_Step1.afrmMain.ReloadData();
                         }
-                    }
-                    MessageBox.Show("Thanh toán tiền thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }
+                    else if (this.afrmMain != null)
+                    {
+                        this.afrmMain.ReloadData();
+                    }
+                                    
+                    MessageBox.Show("Thanh toán tiền thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
 
                 }
             }
@@ -1708,16 +1802,110 @@ namespace RoomManager
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.aNewPaymentEN.Save();
+            this.aNewPaymentEN.Save();           
             MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            if (this.afrmMain != null)
+            {
+                this.afrmMain.ReloadData();
+            }
         }
 
-        private void cbbPriceType_SelectedIndexChanged(object sender, EventArgs e)
+        private void LockForm()
         {
+            txtAddressH.Properties.ReadOnly = true;
+            txtAddressR.Properties.ReadOnly = true;
+            txtAddTimeEnd.Properties.ReadOnly = true;
+            txtAddTimeStart.Properties.ReadOnly = true;
+            txtBookingHallsCost.Properties.ReadOnly = true;
+            txtBookingHMoney.Properties.ReadOnly = true;
+            txtBookingRMoney.Properties.ReadOnly = true;
+            txtBookingRoomsCost.Properties.ReadOnly = true;
+            txtInvoiceNumber.Properties.ReadOnly = true;
+            txtInvoiceNumberH.Properties.ReadOnly = true;
+            txtNumberDate.Properties.ReadOnly = true;
+            txtPercentTax_Hall.Properties.ReadOnly = true;
+            txtPercentTax_Room.Properties.ReadOnly = true;
+            txtPercentTaxService.ReadOnly = true;
+            txtQuantity.ReadOnly = true;
+            txtServiceCost.ReadOnly = true;
+            txtTaxNumberCodeH.Properties.ReadOnly = true;
+            txtTaxNumberCodeR.Properties.ReadOnly = true;
+            cbbPriceType.Properties.ReadOnly = true;
 
+            dtpAcceptDate.Properties.ReadOnly = true;
+            dtpAcceptDateH.Properties.ReadOnly = true;
+            dtpCheckInActual.Properties.ReadOnly = true;
+            dtpCheckOutActual.Properties.ReadOnly = true;
+            dtpInvoiceDate.Properties.ReadOnly = true;
+            dtpInvoiceDateH.Properties.ReadOnly = true;
+
+            chkCheckIn.Properties.ReadOnly = true;
+            chkCheckOut.Properties.ReadOnly = true;
+
+            lueBookingH_PayMethod.Properties.ReadOnly = true;
+            lueBookingR_Paymethod.Properties.ReadOnly = true;
+            lueMenus.Properties.ReadOnly = true;
+
+            btnAddService.Enabled = false;
+            btnAddServicesForHalls.Enabled = false;
+            btnCaculateTimeUsed.Enabled = false;          
+            btnPayment.Enabled = false;
+            btnPaymentHall.Enabled = false;
         }
 
-     
+        private void btnEnableEdit_Click(object sender, EventArgs e)
+        {
+            txtAddressH.Properties.ReadOnly = false;
+            txtAddressR.Properties.ReadOnly = false;
+            txtAddTimeEnd.Properties.ReadOnly = false;
+            txtAddTimeStart.Properties.ReadOnly = false;
+            txtBookingHallsCost.Properties.ReadOnly = false;
+            txtBookingHMoney.Properties.ReadOnly = false;
+            txtBookingRMoney.Properties.ReadOnly = false;
+            txtBookingRoomsCost.Properties.ReadOnly = false;
+            txtInvoiceNumber.Properties.ReadOnly = false;
+            txtInvoiceNumberH.Properties.ReadOnly = false;
+            txtNumberDate.Properties.ReadOnly = false;
+            txtPercentTax_Hall.Properties.ReadOnly = false;
+            txtPercentTax_Room.Properties.ReadOnly = false;
+            txtPercentTaxService.ReadOnly = false;
+            txtQuantity.ReadOnly = false;
+            txtServiceCost.ReadOnly = false;
+            txtTaxNumberCodeH.Properties.ReadOnly = false;
+            txtTaxNumberCodeR.Properties.ReadOnly = false;
+            cbbPriceType.Properties.ReadOnly = false;
+
+            dtpAcceptDate.Properties.ReadOnly = false;
+            dtpAcceptDateH.Properties.ReadOnly = false;
+            dtpCheckInActual.Properties.ReadOnly = false;
+            dtpCheckOutActual.Properties.ReadOnly = false;
+            dtpInvoiceDate.Properties.ReadOnly = false;
+            dtpInvoiceDateH.Properties.ReadOnly = false;
+
+            chkCheckIn.Properties.ReadOnly = false;
+            chkCheckOut.Properties.ReadOnly = false;
+
+            lueBookingH_PayMethod.Properties.ReadOnly = false;
+            lueBookingR_Paymethod.Properties.ReadOnly = false;
+            lueMenus.Properties.ReadOnly = false;
+
+            btnAddService.Enabled = true;
+            btnAddServicesForHalls.Enabled = true;
+            btnCaculateTimeUsed.Enabled = true;          
+            btnPayment.Enabled = true;
+            btnPaymentHall.Enabled = true;
+        }
+
+        private void lueBookingR_Paymethod_EditValueChanged(object sender, EventArgs e)
+        {
+            lueBookingH_PayMethod.EditValue = lueBookingR_Paymethod.EditValue;
+            this.aNewPaymentEN.PayMenthod = Convert.ToInt32(lueBookingR_Paymethod.EditValue);
+        }
+
+    
+       
+       
 
     }
 }

@@ -266,8 +266,11 @@ namespace Entity
                aTemp.AdditionalColumn1 = this.AdditionalColumn1;
                aTemp.CostPendingRoom = this.CostPendingRoom;
                aTemp.TimeInUse = this.TimeInUse;
-
-               aTemp.Type = this.SetBookingRoomType(this.IsCheckInEarly, this.IsCheckOutLate);
+               aTemp.AddTimeStart = this.AddTimeStart;
+               aTemp.AddTimeEnd = this.AddTimeEnd;
+               
+               aTemp.Type = this.Type;
+               //aTemp.Type = this.SetBookingRoomType(this.IsCheckInEarly, this.IsCheckOutLate);
 
                aTemp.Disable = this.Disable;
                aTemp.IndexSubPayment = this.IndexSubPayment;

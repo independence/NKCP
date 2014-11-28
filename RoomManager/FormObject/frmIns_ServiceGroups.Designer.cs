@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIns_ServiceGroups));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lueType = new DevExpress.XtraEditors.LookUpEdit();
             this.lblID = new DevExpress.XtraEditors.LabelControl();
@@ -90,14 +90,14 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueType.Properties.NullText = "";
             this.lueType.Size = new System.Drawing.Size(141, 20);
-            this.lueType.TabIndex = 11;
+            this.lueType.TabIndex = 5;
             // 
             // lblID
             // 
             this.lblID.Location = new System.Drawing.Point(83, 12);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(12, 13);
-            this.lblID.TabIndex = 5;
+            this.lblID.TabIndex = 1;
             this.lblID.Text = "---";
             // 
             // labelControl4
@@ -106,7 +106,7 @@
             this.labelControl4.Location = new System.Drawing.Point(12, 12);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(27, 16);
-            this.labelControl4.TabIndex = 4;
+            this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "ID : ";
             // 
             // bnEdit
@@ -115,11 +115,11 @@
             this.bnEdit.Appearance.Options.UseFont = true;
             this.bnEdit.Enabled = false;
             this.bnEdit.Image = ((System.Drawing.Image)(resources.GetObject("bnEdit.Image")));
-            this.bnEdit.Location = new System.Drawing.Point(336, 82);
+            this.bnEdit.Location = new System.Drawing.Point(375, 70);
             this.bnEdit.Name = "bnEdit";
             this.bnEdit.Size = new System.Drawing.Size(90, 23);
             this.bnEdit.TabIndex = 10;
-            this.bnEdit.Text = "Lưu lại";
+            this.bnEdit.Text = "Cập nhật";
             this.bnEdit.Click += new System.EventHandler(this.bnEdit_Click);
             // 
             // bnAdd
@@ -127,11 +127,11 @@
             this.bnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnAdd.Appearance.Options.UseFont = true;
             this.bnAdd.Image = ((System.Drawing.Image)(resources.GetObject("bnAdd.Image")));
-            this.bnAdd.Location = new System.Drawing.Point(228, 82);
+            this.bnAdd.Location = new System.Drawing.Point(267, 70);
             this.bnAdd.Name = "bnAdd";
             this.bnAdd.Size = new System.Drawing.Size(98, 23);
-            this.bnAdd.TabIndex = 7;
-            this.bnAdd.Text = "Cập nhật";
+            this.bnAdd.TabIndex = 9;
+            this.bnAdd.Text = "Lưu lại";
             this.bnAdd.Click += new System.EventHandler(this.bnAdd_Click);
             // 
             // labelControl3
@@ -140,7 +140,7 @@
             this.labelControl3.Location = new System.Drawing.Point(271, 40);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 16);
-            this.labelControl3.TabIndex = 5;
+            this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Disable :";
             // 
             // labelControl2
@@ -159,7 +159,7 @@
             this.labelControl1.Location = new System.Drawing.Point(12, 40);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(71, 16);
-            this.labelControl1.TabIndex = 3;
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Tên Nhóm :";
             // 
             // cbxDisable
@@ -173,7 +173,7 @@
             "False",
             "True"});
             this.cbxDisable.Size = new System.Drawing.Size(73, 20);
-            this.cbxDisable.TabIndex = 2;
+            this.cbxDisable.TabIndex = 7;
             // 
             // txtName
             // 
@@ -183,7 +183,7 @@
             this.txtName.Properties.NullValuePrompt = "Tối đa 250 ký tự.";
             this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(141, 20);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 3;
             // 
             // panelControl2
             // 
@@ -203,7 +203,7 @@
             this.dgvSerGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.bnDelete});
             this.dgvSerGroup.Size = new System.Drawing.Size(466, 342);
-            this.dgvSerGroup.TabIndex = 0;
+            this.dgvSerGroup.TabIndex = 8;
             this.dgvSerGroup.UseEmbeddedNavigator = true;
             this.dgvSerGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -220,6 +220,7 @@
             this.gridColumn6});
             this.gridView1.GridControl = this.dgvSerGroup;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.RowHeight = 25;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
@@ -245,7 +246,7 @@
             // 
             this.bnDelete.AutoHeight = false;
             this.bnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.bnDelete.Name = "bnDelete";
             this.bnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.bnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bnDelete_ButtonClick);
@@ -307,7 +308,7 @@
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn6.Caption = "Disable";
+            this.gridColumn6.Caption = "Khóa";
             this.gridColumn6.FieldName = "Disable";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;

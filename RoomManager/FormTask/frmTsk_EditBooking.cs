@@ -321,21 +321,25 @@ namespace RoomManager
                 int updateType = 0;
                 int insertType = 0;
 
-                if (aBookingRoomsUpdate.Type == 1)//Tính checkin sớm và Checkout muộn
-                {
-                    updateType = 3;
-                }
-                else if (aBookingRoomsUpdate.Type == 2)//Không tính checkIn sớm và checkout muộn.
-                {
-                    updateType = 4;
-                }
-                else if (aBookingRoomsUpdate.Type == 3)//Tính checkin sớm ,không tính checkout muộn.
-                {
-                    updateType = 4;
-                }
-                else if (aBookingRoomsUpdate.Type == 4)//Không tính checkin sớm ,tính checkout muộn
+                if (aBookingRoomsUpdate.Type == 3)//Tính checkin sớm và Checkout muộn
                 {
                     updateType = 2;
+                    insertType = 1;
+                }
+                else if (aBookingRoomsUpdate.Type == 0)//Không tính checkIn sớm và checkout muộn.
+                {
+                    updateType = 0;
+                    insertType = 0;
+                }
+                else if (aBookingRoomsUpdate.Type == 2)//Tính checkin sớm ,không tính checkout muộn.
+                {
+                    updateType = 2;
+                    insertType = 0;
+                }
+                else if (aBookingRoomsUpdate.Type == 1)//Không tính checkin sớm ,tính checkout muộn
+                {
+                    updateType = 0;
+                    insertType = 1;
                 }
                 aBookingRoomsUpdate.Type = updateType;
                 aBookingRoomsUpdate.Status = 7;//da checkout nhung chua thanh toan
@@ -357,24 +361,7 @@ namespace RoomManager
                     aBookingRoomsAddNew.CheckOutPlan = aBookingRooms.CheckOutPlan;
                     aBookingRoomsAddNew.CheckOutActual = aBookingRooms.CheckOutPlan;
                     aBookingRoomsAddNew.BookingStatus = aBookingRooms.BookingStatus;
-                    aBookingRoomsAddNew.Status = 3;// 3 = Da CheckIn
-
-                    if (aBookingRoomsUpdate.Type == 1)//Tính checkin sớm và Checkout muộn
-                    {
-                        insertType = 3;
-                    }
-                    else if (aBookingRoomsUpdate.Type == 2)//Không tính checkIn sớm và checkout muộn.
-                    {
-                        insertType = 4;
-                    }
-                    else if (aBookingRoomsUpdate.Type == 3)//Tính checkin sớm ,không tính checkout muộn.
-                    {
-                        insertType = 4;
-                    }
-                    else if (aBookingRoomsUpdate.Type == 4)//Không tính checkin sớm ,tính checkout muộn
-                    {
-                        insertType = 2;
-                    }
+                    aBookingRoomsAddNew.Status = 3;// 3 = Da CheckIn                  
                     aBookingRoomsAddNew.Type = insertType;
                     aBookingRoomsAddNew.StartTime = aBookingRooms.StartTime;
                     aBookingRoomsAddNew.EndTime = aBookingRooms.EndTime;

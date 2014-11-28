@@ -10,7 +10,7 @@ namespace RoomManager
     public partial class frmIns_CustomerGroups_Customers : DevExpress.XtraEditors.XtraForm
     {
         #region Room
-        CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+        
 
         private List<Customers> aListAvailableCustomers = new List<Customers>();
         private List<Customers> aListSelectCustomers = new List<Customers>();
@@ -474,7 +474,7 @@ namespace RoomManager
         {
             try
             {
-
+                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
                 int IDCompany = Convert.ToInt32(lueCompany.EditValue.ToString());
                 List<CustomerGroups> aListCustomerGroups = aCustomerGroupsBO.Select_ByIDCompany(IDCompany);
                 lueCustomerGroup.Properties.DataSource = aListCustomerGroups;

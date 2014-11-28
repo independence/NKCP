@@ -46,6 +46,32 @@ namespace BussinessLogic
             }
         }
 
+        //=======================================================
+        //Author: Hiennv  26/11/2014
+        //Function : Select_ByIDCompanyAndIDCustomerGroup
+        //=======================================================
+        public CustomerGroups Select_ByIDCompanyAndIDCustomerGroup(int IDCompany,int IDCustomerGroup)
+        {
+            try
+            {
+                List<CustomerGroups> aListCustoemrGroup = aDatabaseDA.CustomerGroups.Where(cg => cg.IDCompany == IDCompany && cg.ID == IDCustomerGroup ).OrderByDescending(cg => cg.ID).ToList();
+                if (aListCustoemrGroup.Count > 0)
+                {
+                    return aListCustoemrGroup[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("CustomerGroupBO.Select_ByIDCompanyAndIDCustomerGroup :" + ex.Message.ToString()));
+                return null;
+            }
+        }
+
+
 
        //=======================================================
         //Author: Hiennv
@@ -211,6 +237,31 @@ namespace BussinessLogic
             catch (Exception ex)
             {
                 throw new Exception(string.Format("CustomerGroupBO.Select_ByListID :" + ex.Message.ToString()));
+            }
+        }
+       //Linhting - Tự động tạo nhóm
+        public int AutoInsertCustomerGroup(string Name, int IDCompany)
+        {
+            try
+            {
+                if (this.Select_All().Where(a => a.Name == Name).ToList().Count > 0)
+                {
+                    return this.Select_All().Where(a => a.Name == Name).ToList()[0].ID;
+                }
+                else
+                {
+                    CustomerGroups CustomerGroups = new CustomerGroups();
+                    CustomerGroups.IDCompany = IDCompany;
+                    CustomerGroups.Name = Name;
+                    CustomerGroups.Status = 1;
+                    CustomerGroups.Disable = false;
+                    this.Insert(CustomerGroups);
+                    return CustomerGroups.ID;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("CustomerGroupBO.AutoInsertCustomerGroup :" + ex.Message.ToString()));
             }
         }
     }

@@ -64,8 +64,8 @@ namespace BussinessLogic
             try
             {
                 aDatabaseDA.Services.Add(aServices);
-                int ret = aDatabaseDA.SaveChanges();
-                return ret;
+                aDatabaseDA.SaveChanges();
+                return aServices.ID;
             }
             catch (Exception ex)
             {

@@ -46,18 +46,35 @@ namespace RoomManager
             this.CheckOutPlan = CheckOutPlan;
 
         }
+        
+        // NgocBM
+        // Form thanh toán được load tất cả các phòng chưa thanh toán bất kể loại nào
+        public frmTsk_Payment_Step1(frmMain afrmMain)
+        {
+            InitializeComponent();
+            this.afrmMain = afrmMain;
 
+        }
         //Hiennv
         public void LoadDataListUnPayBookingR()
         {
             try
             {
+                string StatusPay;
                 DateTime From = dtpFrom.DateTime;
                 DateTime To = dtpTo.DateTime;
-                int StatusPay = Convert.ToInt32(lueStatusPay.EditValue);
+                if (Convert.ToInt32(lueStatusPay.EditValue) == 4)
+                {
+                    StatusPay = "1,2,3";
+                }
+                else
+                {
+                    StatusPay = lueStatusPay.EditValue.ToString();
+                }
+                
                 int CustomerType = Convert.ToInt32(lueCustomerType.EditValue);
 
-                if (StatusPay == 1 || StatusPay == 2)
+                if (StatusPay == "1" || StatusPay == "2")
                 {
                     colCodeRoom.VisibleIndex = 0;
                     colCreatedDate.VisibleIndex = 1;
@@ -67,11 +84,15 @@ namespace RoomManager
                     colPaymentBookingRs.Visible = true;
                     colSku.VisibleIndex = 5;
                     colBookingRoom_Status.VisibleIndex = 6;
-                    colChekOut.VisibleIndex = 7;
+                    colCheckInActual.VisibleIndex = 7;
+                    colCheckOutPlan.VisibleIndex = 8;
+                    
+
+                    colChekOut.VisibleIndex = 9;
                     colChekOut.Visible = true;
                     colPrintBookingRs.Visible = false;
                 }
-                else if (StatusPay == 3)
+                else if (StatusPay == "3")
                 {
                     colCodeRoom.VisibleIndex = 0;
                     colCreatedDate.VisibleIndex = 1;
@@ -83,7 +104,10 @@ namespace RoomManager
                     colPrintBookingRs.Visible = true;
                     colSku.VisibleIndex = 6;
                     colBookingRoom_Status.VisibleIndex = 7;
+                    colCheckInActual.VisibleIndex = 8;
+                    colCheckOutPlan.VisibleIndex = 9;
                 }
+                
                 if (this.IDBookingR == 0)
                 {
                     if (From > To)
@@ -223,7 +247,7 @@ namespace RoomManager
                 int IDBookigH = Convert.ToInt32(viewOwePay.GetFocusedRowCellValue("IDBookingH"));
 
 
-                frmTsk_Payment_Step2 afrmTsk_Payment_Goverment_Step2 = new frmTsk_Payment_Step2(this, IDBookigR, IDBookigH);
+                frmTsk_Payment_Step2 afrmTsk_Payment_Goverment_Step2 = new frmTsk_Payment_Step2(this, IDBookigR, IDBookigH,3);
                 afrmTsk_Payment_Goverment_Step2.ShowDialog();
 
             }
@@ -232,6 +256,8 @@ namespace RoomManager
                 MessageBox.Show("frmTsk_Payment_Step1.viewOwePay_RowClick \n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
 
     }
 }

@@ -90,30 +90,30 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.91045F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.46269F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.52239F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.47761F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.dtpCheckPoint, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(536, 34);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1006, 35);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(30, 8);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(14, 9);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(61, 17);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Từ ngày ";
+            this.labelControl1.Size = new System.Drawing.Size(83, 17);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "Chọn  ngày ";
             // 
             // btnSearch
             // 
@@ -121,11 +121,10 @@
             this.btnSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(288, 5);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.btnSearch.Location = new System.Drawing.Point(304, 6);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(86, 23);
-            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Size = new System.Drawing.Size(100, 23);
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Kiểm tra";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -133,7 +132,7 @@
             // 
             this.dtpCheckPoint.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpCheckPoint.EditValue = null;
-            this.dtpCheckPoint.Location = new System.Drawing.Point(98, 7);
+            this.dtpCheckPoint.Location = new System.Drawing.Point(103, 7);
             this.dtpCheckPoint.Name = "dtpCheckPoint";
             this.dtpCheckPoint.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -143,8 +142,9 @@
             this.dtpCheckPoint.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCheckPoint.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dtpCheckPoint.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCheckPoint.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dtpCheckPoint.Size = new System.Drawing.Size(167, 20);
+            this.dtpCheckPoint.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpCheckPoint.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dtpCheckPoint.Size = new System.Drawing.Size(195, 20);
             this.dtpCheckPoint.TabIndex = 3;
             // 
             // dgvCustomer
@@ -154,7 +154,7 @@
             this.dgvCustomer.MainView = this.grvCustomer;
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.Size = new System.Drawing.Size(1006, 282);
-            this.dgvCustomer.TabIndex = 1;
+            this.dgvCustomer.TabIndex = 5;
             this.dgvCustomer.UseEmbeddedNavigator = true;
             this.dgvCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvCustomer});
@@ -174,8 +174,10 @@
             this.gridColumn9});
             this.grvCustomer.GridControl = this.dgvCustomer;
             this.grvCustomer.Name = "grvCustomer";
+            this.grvCustomer.OptionsFind.AlwaysVisible = true;
             this.grvCustomer.OptionsView.EnableAppearanceOddRow = true;
             this.grvCustomer.OptionsView.ShowFooter = true;
+            this.grvCustomer.OptionsView.ShowGroupPanel = false;
             this.grvCustomer.RowHeight = 25;
             // 
             // gridColumn1
@@ -352,7 +354,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1006, 77);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.TabIndex = 6;
             // 
             // lblSumCustomers
             // 
@@ -362,7 +364,7 @@
             this.lblSumCustomers.Location = new System.Drawing.Point(352, 11);
             this.lblSumCustomers.Name = "lblSumCustomers";
             this.lblSumCustomers.Size = new System.Drawing.Size(24, 16);
-            this.lblSumCustomers.TabIndex = 4;
+            this.lblSumCustomers.TabIndex = 8;
             this.lblSumCustomers.Text = "......";
             // 
             // labelControl4
@@ -372,7 +374,7 @@
             this.labelControl4.Location = new System.Drawing.Point(528, 12);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(174, 14);
-            this.labelControl4.TabIndex = 2;
+            this.labelControl4.TabIndex = 9;
             this.labelControl4.Text = "Tổng số khách nước ngoài : ";
             // 
             // labelControl3
@@ -383,7 +385,7 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(180, 14);
-            this.labelControl3.TabIndex = 1;
+            this.labelControl3.TabIndex = 13;
             this.labelControl3.Text = "Tổng số khách đăng ký mới : ";
             // 
             // lblSumNewCustomers
@@ -394,7 +396,7 @@
             this.lblSumNewCustomers.Location = new System.Drawing.Point(352, 49);
             this.lblSumNewCustomers.Name = "lblSumNewCustomers";
             this.lblSumNewCustomers.Size = new System.Drawing.Size(24, 16);
-            this.lblSumNewCustomers.TabIndex = 3;
+            this.lblSumNewCustomers.TabIndex = 14;
             this.lblSumNewCustomers.Text = "......";
             // 
             // tableLayoutPanel4
@@ -410,7 +412,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(248, 32);
-            this.tableLayoutPanel4.TabIndex = 6;
+            this.tableLayoutPanel4.TabIndex = 10;
             // 
             // lblSumForeignCustomers
             // 
@@ -420,19 +422,18 @@
             this.lblSumForeignCustomers.Location = new System.Drawing.Point(33, 8);
             this.lblSumForeignCustomers.Name = "lblSumForeignCustomers";
             this.lblSumForeignCustomers.Size = new System.Drawing.Size(24, 16);
-            this.lblSumForeignCustomers.TabIndex = 5;
+            this.lblSumForeignCustomers.TabIndex = 11;
             this.lblSumForeignCustomers.Text = "......";
             // 
             // btnShowForeign
             // 
-            this.btnShowForeign.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnShowForeign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowForeign.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowForeign.Appearance.Options.UseFont = true;
-            this.btnShowForeign.Location = new System.Drawing.Point(102, 4);
-            this.btnShowForeign.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
+            this.btnShowForeign.Location = new System.Drawing.Point(97, 4);
             this.btnShowForeign.Name = "btnShowForeign";
             this.btnShowForeign.Size = new System.Drawing.Size(143, 23);
-            this.btnShowForeign.TabIndex = 8;
+            this.btnShowForeign.TabIndex = 12;
             this.btnShowForeign.Text = "Khách nước ngoài";
             this.btnShowForeign.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
@@ -444,22 +445,23 @@
             this.labelControl2.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(151, 14);
-            this.labelControl2.TabIndex = 0;
+            this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Tổng số khách hiện tại : ";
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.89362F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.btnPrintTotalP1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnPrintAlone, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(481, 41);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(235, 32);
-            this.tableLayoutPanel5.TabIndex = 9;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(268, 33);
+            this.tableLayoutPanel5.TabIndex = 15;
             // 
             // btnPrintTotalP1
             // 
@@ -467,11 +469,10 @@
             this.btnPrintTotalP1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintTotalP1.Appearance.Options.UseFont = true;
             this.btnPrintTotalP1.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintTotalP1.Image")));
-            this.btnPrintTotalP1.Location = new System.Drawing.Point(20, 4);
-            this.btnPrintTotalP1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.btnPrintTotalP1.Location = new System.Drawing.Point(11, 5);
             this.btnPrintTotalP1.Name = "btnPrintTotalP1";
-            this.btnPrintTotalP1.Size = new System.Drawing.Size(107, 23);
-            this.btnPrintTotalP1.TabIndex = 8;
+            this.btnPrintTotalP1.Size = new System.Drawing.Size(120, 23);
+            this.btnPrintTotalP1.TabIndex = 16;
             this.btnPrintTotalP1.Text = "In danh sách";
             this.btnPrintTotalP1.Click += new System.EventHandler(this.btnPrintList_Click);
             // 
@@ -481,11 +482,10 @@
             this.btnPrintAlone.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintAlone.Appearance.Options.UseFont = true;
             this.btnPrintAlone.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintAlone.Image")));
-            this.btnPrintAlone.Location = new System.Drawing.Point(142, 4);
-            this.btnPrintAlone.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
+            this.btnPrintAlone.Location = new System.Drawing.Point(137, 5);
             this.btnPrintAlone.Name = "btnPrintAlone";
-            this.btnPrintAlone.Size = new System.Drawing.Size(67, 23);
-            this.btnPrintAlone.TabIndex = 7;
+            this.btnPrintAlone.Size = new System.Drawing.Size(120, 23);
+            this.btnPrintAlone.TabIndex = 17;
             this.btnPrintAlone.Text = "In lẻ";
             this.btnPrintAlone.Click += new System.EventHandler(this.simpleButton1_Click);
             // 

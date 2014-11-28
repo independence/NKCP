@@ -141,7 +141,7 @@
             this.btnSplit.Location = new System.Drawing.Point(791, 580);
             this.btnSplit.Name = "btnSplit";
             this.btnSplit.Size = new System.Drawing.Size(140, 25);
-            this.btnSplit.TabIndex = 1;
+            this.btnSplit.TabIndex = 6;
             this.btnSplit.Text = "Tách hóa đơn";
             this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
             // 
@@ -152,7 +152,7 @@
             this.xtraTab.Name = "xtraTab";
             this.xtraTab.SelectedTabPage = this.xtraTabPage1;
             this.xtraTab.Size = new System.Drawing.Size(928, 539);
-            this.xtraTab.TabIndex = 2;
+            this.xtraTab.TabIndex = 1;
             this.xtraTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
@@ -198,7 +198,7 @@
             this.dgvServicesRoom.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtAddToSubPaymentServicesR});
             this.dgvServicesRoom.Size = new System.Drawing.Size(912, 227);
-            this.dgvServicesRoom.TabIndex = 15;
+            this.dgvServicesRoom.TabIndex = 3;
             this.dgvServicesRoom.UseEmbeddedNavigator = true;
             this.dgvServicesRoom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServicesRoom,
@@ -408,7 +408,7 @@
             this.dgvRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtAddToSubPaymentR});
             this.dgvRooms.Size = new System.Drawing.Size(912, 226);
-            this.dgvRooms.TabIndex = 3;
+            this.dgvRooms.TabIndex = 2;
             this.dgvRooms.UseEmbeddedNavigator = true;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRooms});
@@ -630,7 +630,7 @@
             this.dgvServicesHall.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtChooseService});
             this.dgvServicesHall.Size = new System.Drawing.Size(912, 227);
-            this.dgvServicesHall.TabIndex = 16;
+            this.dgvServicesHall.TabIndex = 5;
             this.dgvServicesHall.UseEmbeddedNavigator = true;
             this.dgvServicesHall.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServicesHall,

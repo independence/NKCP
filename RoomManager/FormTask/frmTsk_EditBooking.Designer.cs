@@ -779,7 +779,9 @@
             this.dtpCheckOut.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpCheckOut.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpCheckOut.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpCheckOut.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.dtpCheckOut.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.dtpCheckOut.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckOut.Size = new System.Drawing.Size(140, 20);
             this.dtpCheckOut.TabIndex = 22;
             // 

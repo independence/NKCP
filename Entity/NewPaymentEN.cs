@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataAccess;
 using System.Data.Entity.Migrations;
 
+
 namespace Entity
 {
    public class NewPaymentEN
@@ -505,6 +506,7 @@ namespace Entity
            BookingRoomUsedEN aTemp = this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0];
            return aTemp.Cost;
        }
+      
        public List<ServiceUsedEN> GetAllServiceUsedInRoom()
        {
            List<ServiceUsedEN> aListServiceUsed = new List<ServiceUsedEN>();
@@ -546,9 +548,11 @@ namespace Entity
                        aTemp.ID = Convert.ToInt32(this.IDBookingR);
                        aTemp.Status = this.Status_BookingR;                      
                        aTemp.InvoiceNumber = this.InvoiceNumber;
-                       aTemp.AcceptDate = this.AcceptDate;
-                       aTemp.InvoiceDate = this.InvoiceDate;                      
+                       aTemp.AcceptDate = this.AcceptDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
+                       aTemp.InvoiceDate = this.InvoiceDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));                      
                        aTemp.BookingMoney = this.BookingRMoney;
+                       aTemp.PayMenthod = this.PayMenthod;
+
                        aDatabaseDA.BookingRs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
                    }
@@ -569,7 +573,8 @@ namespace Entity
                        aTemp.BookingMoney = this.BookingHMoney;
                        aTemp.InvoiceNumber = this.InvoiceNumber;
                        aTemp.AcceptDate = this.AcceptDate;
-                       aTemp.InvoiceDate = this.InvoiceDate;  
+                       aTemp.InvoiceDate = this.InvoiceDate;
+                       aTemp.PayMenthod = this.PayMenthod;
                        aDatabaseDA.BookingHs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
                    }
@@ -613,6 +618,7 @@ namespace Entity
        }
        public void ChangeInvoiceDate(DateTime InvoiceDate)
        {
+           this.InvoiceDate = InvoiceDate;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -657,6 +663,7 @@ namespace Entity
        }
        public void ChangeInvoiceNumber(string InvoiNumber)
        {
+           this.InvoiceNumber = InvoiNumber;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -700,6 +707,7 @@ namespace Entity
        }
        public void ChangeAcceptDate(DateTime AcceptDate)
        {
+           this.AcceptDate = AcceptDate;
            if (this.aListBookingRoomUsed.Count > 0)
            {
                foreach (BookingRoomUsedEN aBookingRoom in this.aListBookingRoomUsed)
@@ -768,6 +776,15 @@ namespace Entity
            
            }
        }
+       public void ChangePriceType(int IDBookingRoom, string PriceType)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].PriceType = PriceType;
+
+           }
+       }
+
     }
 
 }

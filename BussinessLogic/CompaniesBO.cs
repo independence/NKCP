@@ -219,7 +219,8 @@ namespace BussinessLogic
            try
            {
                aDatabaseDA.Companies.Add(Companies);
-               return aDatabaseDA.SaveChanges();
+               aDatabaseDA.SaveChanges();
+               return Companies.ID;
            }
            catch (Exception ex)
            {
@@ -261,5 +262,26 @@ namespace BussinessLogic
                throw new Exception(string.Format("CompaniesBO.Update :"+ ex.Message.ToString()));
            }
        }
+       // Linhting - Tạo công ty tự động
+       public int AutoInsertCompany(string NameCompany,int Type)
+       {
+           try
+           {
+
+               Companies Companies = new Companies();
+               Companies.Name = NameCompany;
+               Companies.Status = 1;
+               Companies.Disable = false;
+               Companies.Type = Type;
+               this.Insert(Companies);
+               return Companies.ID;
+           }
+           catch (Exception ex)
+           {
+               throw new Exception(string.Format("CompaniesBO.AutoInsertCompany :" + ex.Message.ToString()));
+           }
+       }
+       
+
     }
 }

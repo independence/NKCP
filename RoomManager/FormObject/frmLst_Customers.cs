@@ -21,6 +21,7 @@ namespace RoomManager
         private frmTsk_CheckInGroup_ForRoomBooking_Step2 afrmTsk_CheckInGroup_ForRoomBooking_Step2 = null;
         private frmTsk_CheckInCustomer_ForRoomBooking_Step2 afrmTsk_CheckInCustomer_ForRoomBooking_Step2 = null;
 
+        private frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
         private frmTsk_Booking_Step2 afrmTsk_Booking_Step2 = null;
         private frmMain afrmMain = null;
         private int IDCustomerGroup;
@@ -86,7 +87,13 @@ namespace RoomManager
             InitializeComponent();
             this.afrmMain = afrmMain;
             colChoose.Visible = false;
-        }       
+        }
+        public frmLst_Customers(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
+            
+        }
 
         private void btnSelectIDCustomers_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -120,6 +127,10 @@ namespace RoomManager
                 else if (this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2 != null)
                 {
                     this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2.CallBackIDCustomer(id);
+                }
+                else if (this.afrmTsk_BookingHall_Customer_New != null)
+                {
+                    this.afrmTsk_BookingHall_Customer_New.CallBackIDCustomer(id);
                 }
 
                 this.Close();
@@ -205,8 +216,14 @@ namespace RoomManager
                     aListCustomers = aCustomersBO.Select_All();
                     btnAddCustomer.Visible = true;
                     colChoose.Visible = false;
-                }  
-             
+                }
+                else if (this.afrmTsk_BookingHall_Customer_New != null)
+                {
+                    aListCustomers.Clear();
+                    aListCustomers = aCustomersBO.Select_All();
+                    btnAddCustomer.Visible = true;                  
+                }
+
                 CustomerEN aCus;
                 for (int i = 0; i < aListCustomers.Count; i++)
                 {

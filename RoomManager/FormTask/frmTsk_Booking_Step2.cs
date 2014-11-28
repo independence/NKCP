@@ -258,15 +258,15 @@ namespace RoomManager
         private bool ValidateData()
         {
 
-            if (recDescription.Text.Length > 250)
+            if (txaDescription.Text.Length > 250)
             {
-                recDescription.Focus();
+                txaDescription.Focus();
                 MessageBox.Show("Mô tả chỉ được phép nhập tối đa là 250 ký tự.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            else if (recNote.Text.Length > 250)
+            else if (txaNote.Text.Length > 250)
             {
-                recNote.Focus();
+                txaNote.Focus();
                 MessageBox.Show("Ghi chú chỉ được phép nhập tối đa là 250 ký tự.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
@@ -299,8 +299,8 @@ namespace RoomManager
                 {
                     aBookingEN.Subject = txtSubject.Text;
                     aBookingEN.Level = Convert.ToInt32(lueLevel.EditValue);
-                    aBookingEN.Description = recDescription.Text;
-                    aBookingEN.Note = recNote.Text;
+                    aBookingEN.Description = txaDescription.Text;
+                    aBookingEN.Note = txaNote.Text;
                     aBookingEN.IDCustomerGroup = Convert.ToInt32(lueIDCustomerGroups.EditValue.ToString());
                     aBookingEN.IDCustomer = Convert.ToInt32(lueIDCustomers.EditValue.ToString());
 

@@ -113,44 +113,65 @@ namespace RoomManager
         //hiennv
         private void btnCheckIn_Gov_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Goverment_Step1 afrm = new frmTsk_CheckIn_Goverment_Step1(this.afrmMain, this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Goverment_Step1 afrm = new frmTsk_CheckIn_Goverment_Step1(this.afrmMain, this.Datasource.Code);
+            //afrm.Show();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,1);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
         //hiennv
         private void btnCheckIn_Group_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Group_Step1 afrm = new frmTsk_CheckIn_Group_Step1(this.afrmMain, this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Group_Step1 afrm = new frmTsk_CheckIn_Group_Step1(this.afrmMain, this.Datasource.Code);
+            //afrm.Show();
+            //this.Parent.Dispose();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,2);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
 
         //hiennv
         private void btnCheckIn_Customer_0_Click(object sender, EventArgs e)
         {
-            frmTsk_CheckIn_Customer_Step1 afrm = new frmTsk_CheckIn_Customer_Step1(this.afrmMain,this.Datasource.Code);
-            afrm.Show();
+            //frmTsk_CheckIn_Customer_Step1 afrm = new frmTsk_CheckIn_Customer_Step1(this.afrmMain,this.Datasource.Code);
+            //afrm.Show();
+            //this.Parent.Dispose();
+
+            frmTsk_CheckIn afrmTsk_CheckIn = new frmTsk_CheckIn(this.afrmMain, this.Datasource.Code,3);
+            afrmTsk_CheckIn.Show();
             this.Parent.Dispose();
         }
 
         private void btnBooking_Customer_0_Click(object sender, EventArgs e)
         {
-            frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,3);
-            afrm.Show();
+            //frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,3);
+            //afrm.Show();
+            //this.Parent.Dispose();
+
+            frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this.afrmMain, this.Datasource.Code,3);
+            afrmTsk_BookingForRoom.Show();
             this.Parent.Dispose();
         }
 
         private void btnBooking_Group_0_Click(object sender, EventArgs e)
         {
-            frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,2);
-            afrm.Show();
+            //frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,2);
+            //afrm.Show();
+            //this.Parent.Dispose();
+            frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this.afrmMain, this.Datasource.Code,2);
+            afrmTsk_BookingForRoom.Show();
             this.Parent.Dispose();
         }
 
         private void btnBooking_Gov_0_Click(object sender, EventArgs e)
         {
-            frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,1);
-            afrm.Show();
+            //frmTsk_Booking_Step1 afrm = new frmTsk_Booking_Step1(this.afrmMain, this.Datasource.Code,1);
+            //afrm.Show();
+
+            frmTsk_BookingForRoom afrmTsk_BookingForRoom = new frmTsk_BookingForRoom(this.afrmMain, this.Datasource.Code, 1);
+            afrmTsk_BookingForRoom.Show();
             this.Parent.Dispose();
         }
 

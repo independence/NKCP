@@ -88,7 +88,7 @@ namespace BussinessLogic
         }
 
 
-        //Hiennv
+        ////Hiennv
 
         public List<BookingRooms> Select_ByIDBookingRsAndCodeRoom(int IDBookingRs, string codeRoom)
         {
@@ -102,6 +102,26 @@ namespace BussinessLogic
                 throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndCodeRoom:" + ex.ToString());
             }
         }
+        //Hiennv   26/11/2014 
+        public BookingRooms Select_ByIDBookingRsAndIDBookingRoom(int IDBookingRs, int IDBookingRoom)
+        {
+            try
+            {
+                List<BookingRooms> aListTemp = aDatabaseDA.BookingRooms.Where(b => b.IDBookingR == IDBookingRs && b.ID == IDBookingRoom).ToList();
+                if(aListTemp.Count > 0)
+                {
+                    return aListTemp[0];
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BookingRoomsBO.Select_ByIDBookingRsAndIDBookingRoom:" + ex.ToString());
+            }
+        }
+
+
+
 
         //Author: Hiennv    
         public List<BookingRooms> Select_ByIDBookingR_ByStatus_ByTime(int IDBookingR, DateTime Now, int Status)
@@ -163,7 +183,7 @@ namespace BussinessLogic
 
 
         //Author: LinhTing
-        //Function : Tính hiệu suất phòng       
+        //Function : Lấy danh sách bookingroom có trạng thái Status và phạm vi thời gian bao quanh Now     
         public List<BookingRooms> Select_ByStatus_ByTime(DateTime Now, int Status)
         {
             try
@@ -202,6 +222,18 @@ namespace BussinessLogic
                 throw new Exception("BookingRoomsBO.SelectNewBookingRoom_ByStatus_ByTime:" + ex.ToString());
             }
         }
+        public List<BookingRooms> Select_ByStatus(int Status)
+        {
+            try
+            {
+                return aDatabaseDA.BookingRooms.Where(a => a.Status == Status).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BookingRoomsBO.Select_ByStatus:" + ex.ToString());
+            }
+        }
+        
 
         //-----------------Add New ---------------------------------
 
@@ -249,6 +281,25 @@ namespace BussinessLogic
                 throw new Exception("BookingRooms.Delete:" + ex.ToString());
             }
         }
+        //Hiennv  26/11/2014   xoa bookingRoom theo 1 list cac bookingRoom
+        public int Remove(List<BookingRooms> aListBookingRoom)
+        {
+            try
+            {
+                for (int i = 0; i < aListBookingRoom.Count;i++)
+                {
+                    this.Delete(aListBookingRoom[i].ID);
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BookingRooms.Remove:" + ex.ToString());
+                return 0;
+            }
+        }
+
+
         //Hiennv
         public List<BookingRooms> Select_ByIDBookingR_ByStatus(int IDBookingR,int Status)
         {
