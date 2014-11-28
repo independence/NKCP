@@ -1,0 +1,2275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DatabaseDA" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Model.Companies" />
+    <EntitySet Name="Configs" EntityType="Model.Configs" />
+    <EntitySet Name="CustomerGroups" EntityType="Model.CustomerGroups" />
+    <EntitySet Name="CustomerGroups_Customers" EntityType="Model.CustomerGroups_Customers" />
+    <EntitySet Name="Customers" EntityType="Model.Customers" />
+    <EntitySet Name="PermitDetails" EntityType="Model.PermitDetails" />
+    <EntitySet Name="Permits" EntityType="Model.Permits" />
+    <EntitySet Name="Permits_SystemUsers" EntityType="Model.Permits_SystemUsers" />
+    <EntitySet Name="ServiceGroups" EntityType="Model.ServiceGroups" />
+    <EntitySet Name="Services" EntityType="Model.Services" />
+    <EntitySet Name="SystemUsers" EntityType="Model.SystemUsers" />
+    <EntitySet Name="Permits_SystemUsers1" EntityType="Model.Permits_SystemUsers1" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+    <EntitySet Name="SystemUserExts" EntityType="Model.SystemUserExts" />
+    <EntitySet Name="BookingHalls" EntityType="Model.BookingHalls" />
+    <EntitySet Name="BookingHalls_Services" EntityType="Model.BookingHalls_Services" />
+    <EntitySet Name="BookingHs" EntityType="Model.BookingHs" />
+    <EntitySet Name="Foods" EntityType="Model.Foods" />
+    <EntitySet Name="Guests" EntityType="Model.Guests" />
+    <EntitySet Name="Halls" EntityType="Model.Halls" />
+    <EntitySet Name="Menus" EntityType="Model.Menus" />
+    <EntitySet Name="Menus_Foods" EntityType="Model.Menus_Foods" />
+    <EntitySet Name="Allowances" EntityType="Model.Allowances" />
+    <EntitySet Name="AlternateMissions" EntityType="Model.AlternateMissions" />
+    <EntitySet Name="AuditHistories" EntityType="Model.AuditHistories" />
+    <EntitySet Name="CalculatorSalaries" EntityType="Model.CalculatorSalaries" />
+    <EntitySet Name="Certificates" EntityType="Model.Certificates" />
+    <EntitySet Name="Contracts" EntityType="Model.Contracts" />
+    <EntitySet Name="Contracts_Allowances" EntityType="Model.Contracts_Allowances" />
+    <EntitySet Name="Designations" EntityType="Model.Designations" />
+    <EntitySet Name="Divisions" EntityType="Model.Divisions" />
+    <EntitySet Name="DocumentSystemUsers" EntityType="Model.DocumentSystemUsers" />
+    <EntitySet Name="FamilyMembers" EntityType="Model.FamilyMembers" />
+    <EntitySet Name="GroupTableSalaries" EntityType="Model.GroupTableSalaries" />
+    <EntitySet Name="RewardAndPunishments" EntityType="Model.RewardAndPunishments" />
+    <EntitySet Name="SystemUserExts1" EntityType="Model.SystemUserExts1" />
+    <EntitySet Name="SystemUsers_Certificates" EntityType="Model.SystemUsers_Certificates" />
+    <EntitySet Name="SystemUsers_Divisions" EntityType="Model.SystemUsers_Divisions" />
+    <EntitySet Name="TableSalaries" EntityType="Model.TableSalaries" />
+    <EntitySet Name="BookingRooms" EntityType="Model.BookingRooms" />
+    <EntitySet Name="BookingRooms_Services" EntityType="Model.BookingRooms_Services" />
+    <EntitySet Name="BookingRoomsMembers" EntityType="Model.BookingRoomsMembers" />
+    <EntitySet Name="BookingRs" EntityType="Model.BookingRs" />
+    <EntitySet Name="BookingRs_BookingHs" EntityType="Model.BookingRs_BookingHs" />
+    <EntitySet Name="CheckPoints" EntityType="Model.CheckPoints" />
+    <EntitySet Name="ExtraCosts" EntityType="Model.ExtraCosts" />
+    <EntitySet Name="Payment" EntityType="Model.Payment" />
+    <EntitySet Name="Rooms" EntityType="Model.Rooms" />
+    <EntitySet Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" EntityType="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups" />
+    <EntitySet Name="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" EntityType="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers" />
+    <EntitySet Name="vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" EntityType="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups" />
+    <EntitySet Name="vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" EntityType="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers" />
+    <EntitySet Name="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" EntityType="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms" />
+    <EntitySet Name="vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" EntityType="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups" />
+    <EntitySet Name="vw__CertificatesInfo__SystemUsers_Certificates" EntityType="Model.vw__CertificatesInfo__SystemUsers_Certificates" />
+    <EntitySet Name="vw__ContractsInfo__SystemUsers_Contracts_Allowances" EntityType="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances" />
+    <EntitySet Name="vw__PaymentInfo__BookingRs_BookingRooms_Customers" EntityType="Model.vw__PaymentInfo__BookingRs_BookingRooms_Customers" />
+    <EntitySet Name="vw__PermitInfo__SystemUsers_Permits_PermitDetails" EntityType="Model.vw__PermitInfo__SystemUsers_Permits_PermitDetails" />
+    <EntitySet Name="vw__SearchCustomer__Companies_CustomerGroups_Customers" EntityType="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers" />
+    <EntitySet Name="vw__ServicesInfo__Services_ServiceGroups" EntityType="Model.vw__ServicesInfo__Services_ServiceGroups" />
+    <EntitySet Name="vw__SystemUsersInfo__SystemUsers_Divisions" EntityType="Model.vw__SystemUsersInfo__SystemUsers_Divisions" />
+    <EntitySet Name="vw_QueryDataPayment" EntityType="Model.vw_QueryDataPayment" />
+    <EntitySet Name="vw_Support1_DataPayment" EntityType="Model.vw_Support1_DataPayment" />
+    <EntitySet Name="vw_Support2_DataPayment" EntityType="Model.vw_Support2_DataPayment" />
+    <FunctionImport Name="f_split" ReturnType="Collection(Model.f_split_Result)" IsComposable="true">
+      <Parameter Name="param" Type="String" />
+      <Parameter Name="delimiter" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Get_Status_Room_In_Date" ReturnType="Collection(Model.Get_Status_Room_In_Date_Result)" IsComposable="true">
+      <Parameter Name="CheckDate" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_BookingExt_GetAllBooking" ReturnType="Collection(Model.sp_BookingExt_GetAllBooking_Result)">
+      <Parameter Name="From" Mode="In" Type="DateTime" />
+      <Parameter Name="To" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_BookingRooms_CheckConflict_CheckTimeError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_CheckTimeError_Result)" />
+    <FunctionImport Name="sp_BookingRooms_CheckConflict_Status678Now" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_Status678Now_Result)">
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_BookingRooms_CheckConflict_StatusError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_StatusError_Result)" />
+    <FunctionImport Name="sp_BookingRooms_Select_ByTime" ReturnType="Collection(Model.sp_BookingRooms_Select_ByTime_Result)">
+      <Parameter Name="Time" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result)" />
+    <FunctionImport Name="sp_BookingRs_CheckConflict_Level_CustomerType" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_Level_CustomerType_Result)" />
+    <FunctionImport Name="sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay" ReturnType="Collection(Model.sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result)">
+      <Parameter Name="From" Mode="In" Type="DateTime" />
+      <Parameter Name="To" Mode="In" Type="DateTime" />
+      <Parameter Name="CustomerType" Mode="In" Type="Int32" />
+      <Parameter Name="ListStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Contracts_GetCurrentHaveNotAllowances" ReturnType="Collection(Model.sp_Contracts_GetCurrentHaveNotAllowances_Result)">
+      <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Get_Status_ListRooms_In_Month" ReturnType="Collection(Model.sp_Get_Status_ListRooms_In_Month_Result)">
+      <Parameter Name="checkpoint" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime" ReturnType="Collection(Model.sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result)">
+      <Parameter Name="IDHall" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="IsLunarDate" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HallExt_GetStatusBookingHalls_ByRankTime" ReturnType="Collection(Model.sp_HallExt_GetStatusBookingHalls_ByRankTime_Result)">
+      <Parameter Name="From" Mode="In" Type="DateTime" />
+      <Parameter Name="To" Mode="In" Type="DateTime" />
+      <Parameter Name="IsLunarDate" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_PaymentExt_GetAllData" ReturnType="Collection(Model.sp_PaymentExt_GetAllData_Result)" />
+    <FunctionImport Name="sp_PaymentExt_GetAllData_1" ReturnType="Collection(Model.sp_PaymentExt_GetAllData_1_Result)" />
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime" ReturnType="Collection(Model.sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result)">
+      <Parameter Name="IDRoom" Mode="In" Type="Int32" />
+      <Parameter Name="Now" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Rooms_GetAvailable_ByTime_ByLang" ReturnType="Collection(Model.sp_Rooms_GetAvailable_ByTime_ByLang_Result)">
+      <Parameter Name="Start" Mode="In" Type="DateTime" />
+      <Parameter Name="End" Mode="In" Type="DateTime" />
+      <Parameter Name="IDLang" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RoomsExt_CalculationEfficiency" ReturnType="Collection(Model.sp_RoomsExt_CalculationEfficiency_Result)">
+      <Parameter Name="CodeRoom" Mode="In" Type="String" />
+      <Parameter Name="StartTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RoomsExt_CalculationRevenue" ReturnType="Collection(Model.sp_RoomsExt_CalculationRevenue_Result)">
+      <Parameter Name="CodeRoom" Mode="In" Type="String" />
+      <Parameter Name="StartTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Save_bookingroom_service" ReturnType="Collection(Boolean)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="Info" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+      <Parameter Name="Disable" Mode="In" Type="Int32" />
+      <Parameter Name="IDBookingRoom" Mode="In" Type="Int32" />
+      <Parameter Name="IDService" Mode="In" Type="Int32" />
+      <Parameter Name="Cost" Mode="In" Type="Decimal" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="PercentTax" Mode="In" Type="Double" />
+      <Parameter Name="CostRef_Services" Mode="In" Type="Decimal" />
+      <Parameter Name="Quantity" Mode="In" Type="Double" />
+      <Parameter Name="IndexSubPayment" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceDate" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceNumber" Mode="In" Type="String" />
+      <Parameter Name="AcceptDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_SystemUsers_GetCurrentInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentInDivision_Result)">
+      <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_SystemUsers_GetCurrentNotInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentNotInDivision_Result)">
+      <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="f_split_Result">
+    <Property Name="val" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="seq" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="Get_Status_Room_In_Date_Result">
+    <Property Name="DayIndex" Type="Int32" />
+    <Property Name="BookingRs_ID" Type="Int32" />
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_PayMethod" Type="Int32" />
+    <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rooms_Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_ID" Type="Int32" />
+    <Property Name="BookingRooms_CheckInActual" Type="DateTime" />
+    <Property Name="BookingRooms_CheckOutActual" Type="DateTime" />
+    <Property Name="BookingRooms_Type" Type="Int32" />
+    <Property Name="BookingRooms_Status" Type="Int32" />
+    <Property Name="BookingRooms_AddTimeStart" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookingRooms_AddTimeEnd" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Company_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Company_Type" Type="Int32" />
+    <Property Name="Company_ID" Type="Int32" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NumberCustomer" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="TaxNumberCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Configs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AccessKey" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Group" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="CustomerGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCompany" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CustomerGroups_Customers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="IDCustomer" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Citizen" Type="Int32" />
+    <Property Name="Identifier1CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier2CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier3CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfIssue1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PlaceOfIssue2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PlaceOfIssue3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PermitDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermit" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PageURL" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Permits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="IsContent" Type="Boolean" />
+    <Property Name="IsPartner" Type="Boolean" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="SystemKey" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Permits_SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermit" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="IsView" Type="Boolean" />
+    <Property Name="IsUpdate" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IsSpecial" Type="Boolean" />
+    <Property Name="IsInsert" Type="Boolean" />
+    <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Logs" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ServiceGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CostRef" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Unit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDServiceGroups" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserGroup" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="IDRefMailSystem" Type="Int32" />
+    <Property Name="IDRefAnotherSystem" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Identifier1CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier2CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier3CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfIssue1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PlaceOfIssue2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PlaceOfIssue3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Permits_SystemUsers1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermit" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="IsView" Type="Boolean" />
+    <Property Name="IsUpdate" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IsSpecial" Type="Boolean" />
+    <Property Name="IsInsert" Type="Boolean" />
+    <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Logs" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SystemUserExts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="BirthPlace" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Hometown" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="InsuranceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YearJob" Type="DateTime" Precision="0" />
+    <Property Name="YearDepartment" Type="DateTime" Precision="0" />
+    <Property Name="YearPayroll" Type="DateTime" Precision="0" />
+    <Property Name="YearUnemploymentInsurance" Type="DateTime" Precision="0" />
+    <Property Name="DifferenceContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDSystemUser" Type="Int32" />
+    <Property Name="Recruitment" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PermanentResidence" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CommunistPartyDate" Type="DateTime" Precision="0" />
+    <Property Name="YouthUnionDate" Type="DateTime" Precision="0" />
+    <Property Name="EnlistmentDate" Type="DateTime" Precision="0" />
+    <Property Name="DemobilizedDate" Type="DateTime" Precision="0" />
+    <Property Name="MartyrsFamily" Type="Boolean" />
+    <Property Name="WoundedFamily" Type="Boolean" />
+    <Property Name="LaborFamily" Type="Boolean" />
+    <Property Name="HightestAppellation" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="BookingHalls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeHall" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PercentTax" Type="Double" />
+    <Property Name="CostRef_Halls" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="LunarDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingStatus" Type="Int32" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="TableOrPerson" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="StartTime" Type="Time" Precision="7" />
+    <Property Name="EndTime" Type="Time" Precision="7" />
+    <Property Name="IsAllDayEvent" Type="Boolean" />
+    <Property Name="Color" Type="Boolean" />
+    <Property Name="IsRecurring" Type="Boolean" />
+    <Property Name="IsEditable" Type="Boolean" />
+    <Property Name="AdditionalColumn1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDBookingH" Type="Int32" Nullable="false" />
+    <Property Name="IndexSubPayment" Type="Int32" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingHalls_Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDBookingHall" Type="Int32" Nullable="false" />
+    <Property Name="IDService" Type="Int32" Nullable="false" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="PercentTax" Type="Double" />
+    <Property Name="CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="IndexSubPayment" Type="Int32" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingHs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerType" Type="Int32" />
+    <Property Name="BookingType" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDGuest" Type="Int32" Nullable="false" />
+    <Property Name="PayMenthod" Type="Int32" />
+    <Property Name="StatusPay" Type="Int32" />
+    <Property Name="BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="DatePay" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Foods">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Name1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Name2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Name3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Note" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Tag" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Guests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GroupName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Halls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="NumTableStandard" Type="Int32" />
+    <Property Name="NumTableMax" Type="Int32" />
+    <Property Name="Intro" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CostRef" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CostUnit" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDLang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Issue" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDBookingHall" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menus_Foods">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDFood" Type="Int32" Nullable="false" />
+    <Property Name="IDMenu" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Allowances">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractType" Type="Int32" />
+    <Property Name="SalaryPlus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AlternateMissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DecisionDate" Type="DateTime" Precision="3" />
+    <Property Name="NumberDecision" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DecisionLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Precision="0" />
+    <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AuditHistories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="From" Type="DateTime" Precision="0" />
+    <Property Name="To" Type="DateTime" Precision="0" />
+    <Property Name="Note" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CalculatorSalaries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SkuTableSalary" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Coefficent" Type="Double" />
+    <Property Name="SalaryNet" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalaryCross" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Certificate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Organization" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Level" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractDate" Type="DateTime" Precision="3" />
+    <Property Name="NumberContract" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="NumberTemplateContract" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StatutoryRepresent" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StatutoryRepresentGender" Type="Int32" />
+    <Property Name="StatutoryRepresentIdentifier" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="ContractType" Type="Int32" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Precision="0" />
+    <Property Name="SkuTableSalary" Type="Int32" />
+    <Property Name="Coefficent" Type="Double" />
+    <Property Name="SalaryNet" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalaryCross" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Contracts_Allowances">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RealSalaryPlus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ApplyDate" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDAllowance" Type="Int32" Nullable="false" />
+    <Property Name="IDContract" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Designations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SignedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DesignationsCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SignedDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="0" />
+    <Property Name="Note" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="FileData" Type="Binary" MaxLength="100" FixedLength="true" />
+    <Property Name="FileType" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Divisions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DocumentSystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FileData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="IDSystemUser" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FamilyMembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationType" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Info" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupTableSalaries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="RewardAndPunishments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DecisionDate" Type="DateTime" Precision="3" />
+    <Property Name="NumberDecision" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DecisionLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemUserExts1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="BirthPlace" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Hometown" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="InsuranceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YearJob" Type="DateTime" Precision="0" />
+    <Property Name="YearDepartment" Type="DateTime" Precision="0" />
+    <Property Name="YearPayroll" Type="DateTime" Precision="0" />
+    <Property Name="YearUnemploymentInsurance" Type="DateTime" Precision="0" />
+    <Property Name="DifferenceContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDSystemUser" Type="Int32" />
+    <Property Name="Recruitment" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PermanentResidence" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CommunistPartyDate" Type="DateTime" Precision="0" />
+    <Property Name="YouthUnionDate" Type="DateTime" Precision="0" />
+    <Property Name="EnlistmentDate" Type="DateTime" Precision="0" />
+    <Property Name="DemobilizedDate" Type="DateTime" Precision="0" />
+    <Property Name="MartyrsFamily" Type="Boolean" />
+    <Property Name="WoundedFamily" Type="Boolean" />
+    <Property Name="LaborFamily" Type="Boolean" />
+    <Property Name="HightestAppellation" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SystemUsers_Certificates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Level" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+    <Property Name="Organization" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="IDCertificate" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="TrainingType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SystemUsers_Divisions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AvaiableDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="IDDivision" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Disable" Type="Boolean" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TableSalaries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDGroupTableSalary" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NumCoefficents" Type="Int32" />
+    <Property Name="Coe1" Type="Double" />
+    <Property Name="Jump1" Type="Int32" />
+    <Property Name="Coe2" Type="Double" />
+    <Property Name="Jump2" Type="Int32" />
+    <Property Name="Coe3" Type="Double" />
+    <Property Name="Jump3" Type="Int32" />
+    <Property Name="Coe4" Type="Double" />
+    <Property Name="Jump4" Type="Int32" />
+    <Property Name="Coe5" Type="Double" />
+    <Property Name="Jump5" Type="Int32" />
+    <Property Name="Coe6" Type="Double" />
+    <Property Name="Jump6" Type="Int32" />
+    <Property Name="Coe7" Type="Double" />
+    <Property Name="Jump7" Type="Int32" />
+    <Property Name="Coe8" Type="Double" />
+    <Property Name="Jump8" Type="Int32" />
+    <Property Name="Coe9" Type="Double" />
+    <Property Name="Jump9" Type="Int32" />
+    <Property Name="Coe10" Type="Double" />
+    <Property Name="Jump10" Type="Int32" />
+    <Property Name="Coe11" Type="Double" />
+    <Property Name="Jump11" Type="Int32" />
+    <Property Name="Coe12" Type="Double" />
+    <Property Name="Jump12" Type="Int32" />
+    <Property Name="Coe13" Type="Double" />
+    <Property Name="Jump13" Type="Int32" />
+    <Property Name="Coe14" Type="Double" />
+    <Property Name="Jump14" Type="Int32" />
+    <Property Name="Coe15" Type="Double" />
+    <Property Name="Jump15" Type="Int32" />
+    <Property Name="Coe16" Type="Double" />
+    <Property Name="Jump16" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BookingRooms">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBookingR" Type="Int32" Nullable="false" />
+    <Property Name="CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PercentTax" Type="Double" />
+    <Property Name="CostRef_Rooms" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CheckInPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CheckInActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CheckOutPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CheckOutActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingStatus" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="IsAllDayEvent" Type="Boolean" />
+    <Property Name="Color" Type="Boolean" />
+    <Property Name="IsRecurring" Type="Boolean" />
+    <Property Name="IsEditable" Type="Boolean" />
+    <Property Name="AdditionalColumn1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CostPendingRoom" Type="Double" />
+    <Property Name="TimeInUse" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IndexSubPayment" Type="Int32" />
+    <Property Name="PriceType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddTimeStart" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AddTimeEnd" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingRooms_Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDBookingRoom" Type="Int32" Nullable="false" />
+    <Property Name="IDService" Type="Int32" Nullable="false" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="PercentTax" Type="Double" />
+    <Property Name="CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="IndexSubPayment" Type="Int32" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingRoomsMembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBookingRoom" Type="Int32" Nullable="false" />
+    <Property Name="IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="PurposeComeVietnam" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="DateEnterCountry" Type="DateTime" Precision="3" />
+    <Property Name="EnterGate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TemporaryResidenceDate" Type="DateTime" Precision="3" />
+    <Property Name="LeaveDate" Type="DateTime" Precision="3" />
+    <Property Name="Organization" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LimitDateEnterCountry" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingRs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerType" Type="Int32" />
+    <Property Name="BookingType" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="PayMenthod" Type="Int32" />
+    <Property Name="StatusPay" Type="Int32" />
+    <Property Name="BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="DatePay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEdit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BookingRs_BookingHs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBookingR" Type="Int32" />
+    <Property Name="IDBookingH" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Status" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Extension1" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Extension2" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Extension3" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="CheckPoints">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="From" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="To" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="AddTime" Type="Double" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExtraCosts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PriceType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NumberPeople" Type="Int32" />
+    <Property Name="CustomerType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ExtraValue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBookingR" Type="Int32" />
+    <Property Name="IDBookingRoom" Type="Int32" />
+    <Property Name="IDCustomer" Type="Int32" />
+    <Property Name="NameCustomer" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDSystemUser" Type="Int32" />
+    <Property Name="NameSystemUser" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDCustomerGroup" Type="Int32" />
+    <Property Name="NameCustomerGroup" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDCompany" Type="Int32" />
+    <Property Name="NameCompany" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="IDService" Type="Int32" />
+    <Property Name="NameService" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate_BookingR" Type="DateTime" Precision="3" />
+    <Property Name="CustomerType" Type="Int32" />
+    <Property Name="BookingType" Type="Int32" />
+    <Property Name="PayMenthod" Type="Int32" />
+    <Property Name="StatusPay" Type="Int32" />
+    <Property Name="BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status_BookingR" Type="Int32" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="Cost_BookingRoom" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PercentTax_BookingRoom" Type="Double" />
+    <Property Name="CostRef_Rooms" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CheckInActual" Type="DateTime" Precision="3" />
+    <Property Name="CheckOutActual" Type="DateTime" Precision="3" />
+    <Property Name="Status_BookingRoom" Type="Int32" />
+    <Property Name="TimeInUse" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CostTotal_BookingRoom" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Cost_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DateUseServices" Type="DateTime" Precision="3" />
+    <Property Name="PercentTax_Services" Type="Double" />
+    <Property Name="CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantity_Services" Type="Double" />
+    <Property Name="Status_Services" Type="Int32" />
+    <Property Name="CostTotal_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IndexSubRooms" Type="Int32" />
+    <Property Name="IndexSubServices" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Sku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Bed1" Type="Int32" />
+    <Property Name="Bed2" Type="Int32" />
+    <Property Name="Intro" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CostRef" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CostUnit" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IDLang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+    <Key>
+      <PropertyRef Name="BookingHalls_IDBookingH" />
+      <PropertyRef Name="BookingHalls_Services_IDBookingHall" />
+      <PropertyRef Name="ServiceGroups_ID" />
+      <PropertyRef Name="Services_ID" />
+      <PropertyRef Name="BookingHalls_Services_ID" />
+    </Key>
+    <Property Name="BookingHalls_IDBookingH" Type="Int32" Nullable="false" />
+    <Property Name="BookingHalls_Services_IDBookingHall" Type="Int32" Nullable="false" />
+    <Property Name="ServiceGroups_ID" Type="Int32" Nullable="false" />
+    <Property Name="Services_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingHalls_Services_ID" Type="Int32" Nullable="false" />
+    <Property Name="Services_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Services_CostRef" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Services_Unit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Services_Status" Type="Int32" />
+    <Property Name="Services_Type" Type="Int32" />
+    <Property Name="Services_Disable" Type="Boolean" />
+    <Property Name="ServiceGroups_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceGroups_Type" Type="Int32" />
+    <Property Name="ServiceGroups_Disable" Type="Boolean" />
+    <Property Name="BookingHalls_Services_Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_Type" Type="Int32" />
+    <Property Name="BookingHalls_Services_Status" Type="Int32" />
+    <Property Name="BookingHalls_Services_Disable" Type="Boolean" />
+    <Property Name="BookingHalls_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHalls_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_PercentTax" Type="Double" />
+    <Property Name="BookingHalls_Services_Quantity" Type="Double" />
+    <Property Name="BookingHalls_Services_CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHalls_CodeHall" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingHalls_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers">
+    <Key>
+      <PropertyRef Name="BookingHs_ID" />
+      <PropertyRef Name="BookingHs_IDCustomer" />
+      <PropertyRef Name="BookingHs_IDSystemUser" />
+      <PropertyRef Name="BookingHs_IDCustomerGroup" />
+    </Key>
+    <Property Name="BookingHs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHs_CustomerType" Type="Int32" />
+    <Property Name="BookingHs_BookingType" Type="Int32" />
+    <Property Name="BookingHs_Note" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_PayMenthod" Type="Int32" />
+    <Property Name="BookingHs_StatusPay" Type="Int32" />
+    <Property Name="BookingHs_BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHs_ExchangeRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHs_Status" Type="Int32" />
+    <Property Name="BookingHs_Type" Type="Int32" />
+    <Property Name="BookingHs_Disable" Type="Boolean" />
+    <Property Name="BookingHs_Level" Type="Int32" />
+    <Property Name="BookingHs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_DatePay" Type="DateTime" Precision="0" />
+    <Property Name="BookingHs_IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_ID" Type="Int32" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Type" Type="Int32" />
+    <Property Name="Companies_ID" Type="Int32" />
+    <Property Name="Companies_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Companies_Type" Type="Int32" />
+    <Property Name="Companies_Status" Type="Int32" />
+    <Property Name="CustomerGroups_ID" Type="Int32" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+    <Property Name="CustomerGroups_Status" Type="Int32" />
+    <Property Name="Customers_Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Citizen" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups">
+    <Key>
+      <PropertyRef Name="BookingRs_Level" />
+      <PropertyRef Name="BookingRooms_CheckInPlan" />
+      <PropertyRef Name="BookingRooms_CheckInActual" />
+      <PropertyRef Name="BookingRooms_CheckOutPlan" />
+      <PropertyRef Name="BookingRooms_CheckOutActual" />
+      <PropertyRef Name="Rooms_Sku" />
+      <PropertyRef Name="Rooms_Status" />
+      <PropertyRef Name="Rooms_Code" />
+      <PropertyRef Name="BookingRooms_ID" />
+      <PropertyRef Name="BookingRs_ID" />
+      <PropertyRef Name="CustomerGroups_ID" />
+      <PropertyRef Name="Customers_ID" />
+      <PropertyRef Name="Rooms_ID" />
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="BookingRooms_IDBookingR" />
+      <PropertyRef Name="CustomerGroups_IDCompany" />
+    </Key>
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_BookingType" Type="Int32" />
+    <Property Name="BookingRs_Status" Type="Int32" />
+    <Property Name="BookingRs_Type" Type="Int32" />
+    <Property Name="BookingRs_Disable" Type="Boolean" />
+    <Property Name="BookingRs_Level" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_CheckInPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckInActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_Status" Type="Int32" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+    <Property Name="CustomerGroups_Status" Type="Int32" />
+    <Property Name="CustomerGroups_Disable" Type="Boolean" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Customers_Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Status" Type="Int32" />
+    <Property Name="Customers_Type" Type="Int32" />
+    <Property Name="Customers_Disable" Type="Boolean" />
+    <Property Name="Customers_Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Citizen" Type="Int32" />
+    <Property Name="Rooms_Sku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rooms_Bed1" Type="Int32" />
+    <Property Name="Rooms_Bed2" Type="Int32" />
+    <Property Name="Rooms_Type" Type="Int32" />
+    <Property Name="Rooms_Status" Type="Int32" Nullable="false" />
+    <Property Name="Rooms_Disable" Type="Boolean" />
+    <Property Name="Rooms_Code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_PayMethod" Type="Int32" />
+    <Property Name="BookingRs_StatusPay" Type="Int32" />
+    <Property Name="BookingRs_BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_ID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerGroups_ID" Type="Int32" Nullable="false" />
+    <Property Name="Customers_ID" Type="Int32" Nullable="false" />
+    <Property Name="Rooms_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Birthday" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Gender" Type="Int32" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_Disable" Type="Boolean" />
+    <Property Name="BookingRooms_IDBookingR" Type="Int32" Nullable="false" />
+    <Property Name="CustomerGroups_IDCompany" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_Type" Type="Int32" />
+    <Property Name="BookingRooms_AddTimeStart" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookingRooms_AddTimeEnd" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers">
+    <Key>
+      <PropertyRef Name="BookingRs_ID" />
+      <PropertyRef Name="BookingRs_IDCustomer" />
+      <PropertyRef Name="BookingRs_IDSystemUser" />
+      <PropertyRef Name="BookingRs_Level" />
+      <PropertyRef Name="BookingRs_DatePay" />
+      <PropertyRef Name="BookingRs_DateEdit" />
+      <PropertyRef Name="BookingRs_IDCustomerGroup" />
+    </Key>
+    <Property Name="BookingRs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_BookingType" Type="Int32" />
+    <Property Name="BookingRs_Note" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_PayMenthod" Type="Int32" />
+    <Property Name="BookingRs_StatusPay" Type="Int32" />
+    <Property Name="BookingRs_BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRs_ExchangeRate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRs_Status" Type="Int32" />
+    <Property Name="BookingRs_Type" Type="Int32" />
+    <Property Name="BookingRs_Disable" Type="Boolean" />
+    <Property Name="BookingRs_Level" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_DatePay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRs_DateEdit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRs_IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_ID" Type="Int32" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Type" Type="Int32" />
+    <Property Name="Companies_ID" Type="Int32" />
+    <Property Name="Companies_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Companies_Type" Type="Int32" />
+    <Property Name="Companies_Status" Type="Int32" />
+    <Property Name="CustomerGroups_ID" Type="Int32" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+    <Property Name="CustomerGroups_Status" Type="Int32" />
+    <Property Name="Customers_Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Citizen" Type="Int32" />
+    <Property Name="BookingRs_BookingHs_IDBookingH" Type="Int32" />
+    <Property Name="BookingHs_Status" Type="Int32" />
+    <Property Name="BookingHs_StatusPay" Type="Int32" />
+    <Property Name="BookingHs_Type" Type="Int32" />
+    <Property Name="BookingHs_Disable" Type="Boolean" />
+    <Property Name="BookingHs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rooms_Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms">
+    <Key>
+      <PropertyRef Name="BookingRs_IDCustomer" />
+      <PropertyRef Name="BookingRs_IDCustomerGroup" />
+      <PropertyRef Name="Rooms_Sku" />
+      <PropertyRef Name="BookingRooms_CheckInPlan" />
+      <PropertyRef Name="BookingRooms_CheckOutPlan" />
+    </Key>
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="Rooms_Sku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_BookingRoomMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_CheckInPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutPlan" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups">
+    <Key>
+      <PropertyRef Name="BookingRooms_IDBookingR" />
+      <PropertyRef Name="BookingRooms_Services_IDBookingRoom" />
+      <PropertyRef Name="ServiceGroups_ID" />
+      <PropertyRef Name="Services_ID" />
+      <PropertyRef Name="BookingRooms_Services_ID" />
+    </Key>
+    <Property Name="BookingRooms_IDBookingR" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_Services_IDBookingRoom" Type="Int32" Nullable="false" />
+    <Property Name="ServiceGroups_ID" Type="Int32" Nullable="false" />
+    <Property Name="Services_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_Services_ID" Type="Int32" Nullable="false" />
+    <Property Name="Services_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Services_CostRef" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Services_Unit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Services_Status" Type="Int32" />
+    <Property Name="Services_Type" Type="Int32" />
+    <Property Name="Services_Disable" Type="Boolean" />
+    <Property Name="ServiceGroups_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceGroups_Type" Type="Int32" />
+    <Property Name="ServiceGroups_Disable" Type="Boolean" />
+    <Property Name="BookingRooms_Services_Info" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_Type" Type="Int32" />
+    <Property Name="BookingRooms_Services_Status" Type="Int32" />
+    <Property Name="BookingRooms_Services_Disable" Type="Boolean" />
+    <Property Name="BookingRooms_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_PercentTax" Type="Double" />
+    <Property Name="BookingRooms_Services_Quantity" Type="Double" />
+    <Property Name="BookingRooms_Services_CostRef_Services" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingRooms_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_AcceptDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw__CertificatesInfo__SystemUsers_Certificates">
+    <Key>
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="Certificates_ID" />
+    </Key>
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_UserGroup" Type="Int32" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Birthday" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SystemUsers_Gender" Type="Int32" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_Disable" Type="Boolean" />
+    <Property Name="Certificates_ID" Type="Int32" Nullable="false" />
+    <Property Name="Certificates_Certificates" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Certificates_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="SystemUsers_Certificates_ExpirationDate" Type="DateTime" Precision="3" />
+    <Property Name="SystemUsers_Certificates_Organization" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Certificates_Organization" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Certificates__Type" Type="Int32" />
+    <Property Name="SystemUsers_Certificates_Level" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Certificates_TrainingType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw__ContractsInfo__SystemUsers_Contracts_Allowances">
+    <Key>
+      <PropertyRef Name="Allowances_ID" />
+      <PropertyRef Name="Contracts_ID" />
+      <PropertyRef Name="Contracts_IDSystemUser" />
+      <PropertyRef Name="Contracts_Allowances_ID" />
+      <PropertyRef Name="Contracts_Allowances_CreatedDate" />
+      <PropertyRef Name="Contracts_Allowances_IDAllowance" />
+      <PropertyRef Name="Contracts_Allowances_IDContract" />
+      <PropertyRef Name="SystemUsers_ID" />
+    </Key>
+    <Property Name="Allowances_ID" Type="Int32" Nullable="false" />
+    <Property Name="Allowances_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Allowances_ContractType" Type="Int32" />
+    <Property Name="Allowances_SalaryPlus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Allowances_Type" Type="Int32" />
+    <Property Name="Allowances_Status" Type="Int32" />
+    <Property Name="Allowances_Disable" Type="Boolean" />
+    <Property Name="Contracts_ID" Type="Int32" Nullable="false" />
+    <Property Name="Contracts_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Contracts_ContractDate" Type="DateTime" Precision="3" />
+    <Property Name="Contracts_NumberContract" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Contracts_NumberTemplateContact" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Contracts_IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="Contracts_Company" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Contracts_StatutoryRepresent" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Contracts_StatutoryRepresentGender" Type="Int32" />
+    <Property Name="Contracts_StatutoryRepresentIdentifier" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Contracts_ContractType" Type="Int32" />
+    <Property Name="Contracts_FromDate" Type="DateTime" Precision="0" />
+    <Property Name="Contracts_ToDate" Type="DateTime" Precision="0" />
+    <Property Name="Contracts_SkuTableSalary" Type="Int32" />
+    <Property Name="Contracts_Coefficent" Type="Double" />
+    <Property Name="Contracts_SalaryNet" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Contracts_SalaryCross" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Contracts_Type" Type="Int32" />
+    <Property Name="Contracts_Status" Type="Int32" />
+    <Property Name="Contracts_Disable" Type="Boolean" />
+    <Property Name="Contracts_Allowances_ID" Type="Int32" Nullable="false" />
+    <Property Name="Contracts_Allowances_RealSalaryPlus" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Contracts_Allowances_CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Contracts_Allowances_ApplyDate" Type="DateTime" Precision="3" />
+    <Property Name="Contracts_Allowances_Type" Type="Int32" />
+    <Property Name="Contracts_Allowances_Status" Type="Int32" />
+    <Property Name="Contracts_Allowances_Disable" Type="Boolean" />
+    <Property Name="Contracts_Allowances_IDAllowance" Type="Int32" Nullable="false" />
+    <Property Name="Contracts_Allowances_IDContract" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_UserGroup" Type="Int32" />
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Disable" Type="Boolean" />
+    <Property Name="SystemUsers_Identifier1CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier2CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier3CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Birthday" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Gender" Type="Int32" />
+    <Property Name="SystemUsers_PlaceOfIssue1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_PlaceOfIssue2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_PlaceOfIssue3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw__PaymentInfo__BookingRs_BookingRooms_Customers">
+    <Key>
+      <PropertyRef Name="BookingRs_ID" />
+      <PropertyRef Name="BookingRooms_ID" />
+      <PropertyRef Name="BookingRooms_CheckInPlan" />
+      <PropertyRef Name="BookingRooms_CheckInActual" />
+      <PropertyRef Name="BookingRooms_CheckOutPlan" />
+      <PropertyRef Name="BookingRooms_CheckOutActual" />
+      <PropertyRef Name="BookingRs_Level" />
+    </Key>
+    <Property Name="BookingRs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_ID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerGroups_ID" Type="Int32" />
+    <Property Name="Customers_ID" Type="Int32" />
+    <Property Name="CustomerGroups_IDCompany" Type="Int32" />
+    <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_PercentTax" Type="Double" />
+    <Property Name="BookingRooms_CheckInPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckInActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_BookingStatus" Type="Int32" />
+    <Property Name="BookingRooms_Status" Type="Int32" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_BookingType" Type="Int32" />
+    <Property Name="BookingRs_PayMenthod" Type="Int32" />
+    <Property Name="BookingRs_StatusPay" Type="Int32" />
+    <Property Name="BookingRs_BookingMonye" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRs_Status" Type="Int32" />
+    <Property Name="BookingRs_Type" Type="Int32" />
+    <Property Name="BookingRs_Level" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_Disable" Type="Boolean" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw__PermitInfo__SystemUsers_Permits_PermitDetails">
+    <Key>
+      <PropertyRef Name="Permits_SystemUsers_ID" />
+      <PropertyRef Name="Permits_ID" />
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="PermitDetails_ID" />
+      <PropertyRef Name="Permits_Name" />
+    </Key>
+    <Property Name="Permits_SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="Permits_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="PermitDetails_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_UserGroup" Type="Int32" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Birthday" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_IDRefAnotherSystem" Type="Int32" />
+    <Property Name="SystemUsers_IDRefMailSystem" Type="Int32" />
+    <Property Name="SystemUsers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Permits_SystemUsers_IsView" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsUpdate" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsInsert" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsDelete" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsSpecial" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Permits_SystemUsers_Type" Type="Int32" />
+    <Property Name="Permits_SystemUsers_Status" Type="Int32" />
+    <Property Name="Permits_SystemUsers_Disable" Type="Boolean" />
+    <Property Name="Permits_IsContent" Type="Boolean" />
+    <Property Name="Permits_IsAdmin" Type="Boolean" />
+    <Property Name="Permits_IsPartner" Type="Boolean" />
+    <Property Name="Permits_Name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Permits_Type" Type="Int32" />
+    <Property Name="Permits_Status" Type="Int32" />
+    <Property Name="Permits_Disable" Type="Boolean" />
+    <Property Name="PermitDetails_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PermitDetails_PageURL" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="PermitDetails_Type" Type="Int32" />
+    <Property Name="PermitDetails_Status" Type="Int32" />
+    <Property Name="PermitDetails_Disable" Type="Boolean" />
+    <Property Name="Permits_SystemKey" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw__SearchCustomer__Companies_CustomerGroups_Customers">
+    <Key>
+      <PropertyRef Name="Companies_ID" />
+      <PropertyRef Name="CustomerGroups_ID" />
+      <PropertyRef Name="Customers_ID" />
+    </Key>
+    <Property Name="Companies_ID" Type="Int32" Nullable="false" />
+    <Property Name="Companies_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Companies_Type" Type="Int32" />
+    <Property Name="CustomerGroups_ID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerGroups_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerGroups_Type" Type="Int32" />
+    <Property Name="Customers_ID" Type="Int32" Nullable="false" />
+    <Property Name="Customers_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Nationality" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Customers_Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Status" Type="Int32" />
+    <Property Name="Customers_Type" Type="Int32" />
+    <Property Name="Customers_Disable" Type="Boolean" />
+    <Property Name="Customers_Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Customers_Citizen" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw__ServicesInfo__Services_ServiceGroups">
+    <Key>
+      <PropertyRef Name="Services_ID" />
+      <PropertyRef Name="ServiceGroups_ID" />
+    </Key>
+    <Property Name="Services_ID" Type="Int32" Nullable="false" />
+    <Property Name="Services_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Services_CostRef" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Services_Unit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Services_Status" Type="Int32" />
+    <Property Name="Services_Type" Type="Int32" />
+    <Property Name="Services_Disable" Type="Boolean" />
+    <Property Name="ServiceGroups_ID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceGroups_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceGroups_Type" Type="Int32" />
+    <Property Name="ServiceGroups_Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="vw__SystemUsersInfo__SystemUsers_Divisions">
+    <Key>
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="SystemUsers_Divisions_ID" />
+      <PropertyRef Name="Divisions_ID" />
+      <PropertyRef Name="SystemUsers_Divisions_AvaiableDate" />
+      <PropertyRef Name="SystemUsers_Divisions_CreatedDate" />
+      <PropertyRef Name="SystemUsers_Divisions_Status" />
+      <PropertyRef Name="SystemUsers_Divisions_Disable" />
+      <PropertyRef Name="SystemUsers_Divisions_Type" />
+    </Key>
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Divisions_ID" Type="Int32" Nullable="false" />
+    <Property Name="Divisions_ID" Type="Int32" Nullable="false" />
+    <Property Name="Divisions_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Divisions_Type" Type="Int32" />
+    <Property Name="Divisions_Status" Type="Int32" />
+    <Property Name="Divisions_Disable" Type="Boolean" />
+    <Property Name="SystemUsers_UserGroup" Type="Int32" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Birthday" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Identifier3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_Divisions_AvaiableDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SystemUsers_Divisions_CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SystemUsers_Divisions_Status" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Divisions_Disable" Type="Boolean" Nullable="false" />
+    <Property Name="SystemUsers_Divisions_Type" Type="Int32" Nullable="false" />
+    <Property Name="SystemUserExts_ID" Type="Int32" />
+    <Property Name="SystemUserExts_BirthPlace" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUserExts_Hometown" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUserExts_Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUserExts_InsuranceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUserExts_YearJob" Type="DateTime" Precision="0" />
+    <Property Name="SystemUserExts_YearPayroll" Type="DateTime" Precision="0" />
+    <Property Name="SystemUserExts_YearUnemploymentInsurance" Type="DateTime" Precision="0" />
+    <Property Name="SystemUserExts_DifferenceContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Divisions_ExpireDate" Type="DateTime" Precision="3" />
+    <Property Name="SystemUsers_Gender" Type="Int32" />
+    <Property Name="SystemUsers_Disable" Type="Boolean" />
+    <Property Name="SystemUsers_Identifier1CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier2CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_Identifier3CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SystemUsers_PlaceOfIssue1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_PlaceOfIssue2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_PlaceOfIssue3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SystemUsers_Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_QueryDataPayment">
+    <Key>
+      <PropertyRef Name="BookingRs_ID" />
+      <PropertyRef Name="BookingRooms_ID" />
+      <PropertyRef Name="BookingRs_IDCustomer" />
+      <PropertyRef Name="BookingRooms_CheckInActual" />
+      <PropertyRef Name="BookingRooms_CheckOutActual" />
+    </Key>
+    <Property Name="BookingRs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingHalls_ID" Type="Int32" />
+    <Property Name="BookingHs_ID" Type="Int32" />
+    <Property Name="BookingRooms_Services_Status" Type="Int32" />
+    <Property Name="BookingHalls_Services_Status" Type="Int32" />
+    <Property Name="BookingRooms_Services_IDService" Type="Int32" />
+    <Property Name="Services_Name_Room" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_IDService" Type="Int32" />
+    <Property Name="Services_Name_Hall" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Services_IDServiceGroups_Room" Type="Int32" />
+    <Property Name="Services_Type_Room" Type="Int32" />
+    <Property Name="Services_Type_Hall" Type="Int32" />
+    <Property Name="Services_IDServiceGroups_Hall" Type="Int32" />
+    <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rooms_IDLang" Type="Int32" />
+    <Property Name="Halls_IDLang" Type="Int32" />
+    <Property Name="Halls_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_PercentTax" Type="Double" />
+    <Property Name="BookingRooms_Services_Quantity" Type="Double" />
+    <Property Name="BookingRooms_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingRooms_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_Disable" Type="Boolean" />
+    <Property Name="BookingHalls_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingHalls_Services_Quantity" Type="Double" />
+    <Property Name="BookingHalls_Services_PercentTax" Type="Double" />
+    <Property Name="BookingHalls_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHalls_Services_Disable" Type="Boolean" />
+    <Property Name="BookingHalls_Services_Type" Type="Int32" />
+    <Property Name="BookingHalls_Services_ID" Type="Int32" />
+    <Property Name="BookingRooms_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_Type" Type="Int32" />
+    <Property Name="BookingRooms_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Status" Type="Int32" />
+    <Property Name="BookingHalls_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingRs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingRs_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_CheckInActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_Status" Type="Int32" />
+    <Property Name="BookingRooms_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingHs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingHs_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_Status" Type="Int32" />
+    <Property Name="BookingHs_Status" Type="Int32" />
+    <Property Name="BookingRs_PayMenthod" Type="Int32" />
+    <Property Name="BookingHalls_Date" Type="DateTime" Precision="0" />
+    <Property Name="BookingHalls_LunarDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="vw_Support1_DataPayment">
+    <Key>
+      <PropertyRef Name="BookingRs_ID" />
+      <PropertyRef Name="BookingRooms_ID" />
+      <PropertyRef Name="BookingRs_IDCustomer" />
+      <PropertyRef Name="BookingRs_IDSystemUser" />
+      <PropertyRef Name="BookingRs_Level" />
+      <PropertyRef Name="BookingRs_DatePay" />
+      <PropertyRef Name="BookingRs_DateEdit" />
+      <PropertyRef Name="BookingRs_IDCustomerGroup" />
+      <PropertyRef Name="BookingRooms_CheckInPlan" />
+      <PropertyRef Name="BookingRooms_CheckInActual" />
+      <PropertyRef Name="BookingRooms_CheckOutPlan" />
+      <PropertyRef Name="BookingRooms_CheckOutActual" />
+    </Key>
+    <Property Name="BookingRs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingRooms_Services_IDService" Type="Int32" />
+    <Property Name="BookingRs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRs_CustomerType" Type="Int32" />
+    <Property Name="BookingRs_BookingType" Type="Int32" />
+    <Property Name="BookingRs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_PayMenthod" Type="Int32" />
+    <Property Name="BookingRs_StatusPay" Type="Int32" />
+    <Property Name="BookingRs_BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRs_Status" Type="Int32" />
+    <Property Name="BookingRs_Type" Type="Int32" />
+    <Property Name="BookingRs_Disable" Type="Boolean" />
+    <Property Name="BookingRs_Level" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_DatePay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRs_DateEdit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRs_IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="BookingRs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRs_InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingRs_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_CodeRoom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_PercentTax" Type="Double" />
+    <Property Name="BookingRooms_CheckInPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckInActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutPlan" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_CheckOutActual" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BookingRooms_BookingStatus" Type="Int32" />
+    <Property Name="BookingRooms_Status" Type="Int32" />
+    <Property Name="BookingRooms_CostPendingRoom" Type="Double" />
+    <Property Name="BookingRooms_TimeInUse" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookingRooms_Type" Type="Int32" />
+    <Property Name="BookingRooms_Disable" Type="Boolean" />
+    <Property Name="BookingRooms_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingRooms_PriceType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_AddTimeStart" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookingRooms_AddTimeEnd" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BookingRooms_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_Type" Type="Int32" />
+    <Property Name="BookingRooms_Services_Status" Type="Int32" />
+    <Property Name="BookingRooms_Services_Disable" Type="Boolean" />
+    <Property Name="BookingRooms_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingRooms_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_PercentTax" Type="Double" />
+    <Property Name="BookingRooms_Services_Quantity" Type="Double" />
+    <Property Name="BookingRooms_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingRooms_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRooms_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingRooms_Services_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="Services_Name_Room" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Services_IDServiceGroups_Room" Type="Int32" />
+    <Property Name="Services_Type_Room" Type="Int32" />
+    <Property Name="Rooms_IDLang" Type="Int32" />
+    <Property Name="Rooms_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_Support2_DataPayment">
+    <Key>
+      <PropertyRef Name="BookingHs_ID" />
+      <PropertyRef Name="BookingHs_IDCustomer" />
+      <PropertyRef Name="BookingHs_IDCustomerGroup" />
+      <PropertyRef Name="BookingHalls_ID" />
+    </Key>
+    <Property Name="BookingHs_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHs_CustomerType" Type="Int32" />
+    <Property Name="BookingHs_BookingType" Type="Int32" />
+    <Property Name="BookingHs_PayMenthod" Type="Int32" />
+    <Property Name="BookingHs_StatusPay" Type="Int32" />
+    <Property Name="BookingHs_BookingMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHs_Status" Type="Int32" />
+    <Property Name="BookingHs_Type" Type="Int32" />
+    <Property Name="BookingHs_Disable" Type="Boolean" />
+    <Property Name="BookingHs_Level" Type="Int32" />
+    <Property Name="BookingHs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_IDCustomer" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_IDCustomerGroup" Type="Int32" Nullable="false" />
+    <Property Name="BookingHs_DatePay" Type="DateTime" Precision="0" />
+    <Property Name="BookingHs_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHs_InvoiceDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingHs_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_ID" Type="Int32" Nullable="false" />
+    <Property Name="BookingHalls_CodeHall" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHalls_PercentTax" Type="Double" />
+    <Property Name="BookingHalls_Date" Type="DateTime" Precision="0" />
+    <Property Name="BookingHalls_LunarDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingHalls_BookingStatus" Type="Int32" />
+    <Property Name="BookingHalls_StartTime" Type="Time" Precision="7" />
+    <Property Name="BookingHalls_EndTime" Type="Time" Precision="7" />
+    <Property Name="BookingHalls_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingHalls_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Status" Type="Int32" />
+    <Property Name="BookingHalls_Services_ID" Type="Int32" />
+    <Property Name="BookingHalls_Services_Type" Type="Int32" />
+    <Property Name="BookingHalls_Services_Status" Type="Int32" />
+    <Property Name="BookingHalls_Services_Disable" Type="Boolean" />
+    <Property Name="BookingHalls_Services_IDService" Type="Int32" />
+    <Property Name="BookingHalls_Services_Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BookingHalls_Services_Date" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_PercentTax" Type="Double" />
+    <Property Name="BookingHalls_Services_Quantity" Type="Double" />
+    <Property Name="BookingHalls_Services_IndexSubPayment" Type="Int32" />
+    <Property Name="BookingHalls_Services_AcceptDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingHalls_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BookingHalls_Services_InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="Services_Name_Hall" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Services_Status_Hall" Type="Int32" />
+    <Property Name="Services_Type_Hall" Type="Int32" />
+    <Property Name="Services_IDServiceGroups_Hall" Type="Int32" />
+    <Property Name="Halls_Sku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Halls_IDLang" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="sp_BookingExt_GetAllBooking_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Type" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="BookingMoney" Nullable="true" Precision="19" />
+    <Property Type="DateTime" Name="DatePay" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InvoiceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="StatusPay" Nullable="true" />
+    <Property Type="Int32" Name="PayMenthod" Nullable="true" />
+    <Property Type="String" Name="Companies_Name" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Customers_Type" Nullable="true" />
+    <Property Type="Decimal" Name="RoomsInvoiceNotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="RoomsInvoiceTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms1_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms1_Tax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms2_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms2_Tax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms3_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceRooms3_Tax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="HallsInvoiceNotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="HallsInvoiceTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls1_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls1_Tax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls2_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls2_Tax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls3_NotTax" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="ServiceHalls3_Tax" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRooms_CheckConflict_CheckTimeError_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Error" Nullable="false" MaxLength="45" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRooms_CheckConflict_Status678Now_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRooms_CheckConflict_StatusError_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="24" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRooms_Select_ByTime_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IDBookingR" Nullable="false" />
+    <Property Type="String" Name="CodeRoom" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="19" />
+    <Property Type="Double" Name="PercentTax" Nullable="true" />
+    <Property Type="Decimal" Name="CostRef_Rooms" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="CheckInPlan" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutPlan" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutActual" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="BookingStatus" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsAllDayEvent" Nullable="true" />
+    <Property Type="Boolean" Name="Color" Nullable="true" />
+    <Property Type="Boolean" Name="IsRecurring" Nullable="true" />
+    <Property Type="Boolean" Name="IsEditable" Nullable="true" />
+    <Property Type="String" Name="AdditionalColumn1" Nullable="true" MaxLength="255" />
+    <Property Type="Double" Name="CostPendingRoom" Nullable="true" />
+    <Property Type="Decimal" Name="TimeInUse" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="Int32" Name="IndexSubPayment" Nullable="true" />
+    <Property Type="String" Name="PriceType" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="AddTimeStart" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AddTimeEnd" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="AcceptDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InvoiceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="InvoiceDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result">
+    <Property Type="String" Name="CodeRoom" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="34" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRs_CheckConflict_Level_CustomerType_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="35" />
+  </ComplexType>
+  <ComplexType Name="sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result">
+    <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+    <Property Type="DateTime" Name="BookingRs_CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BookingRs_CustomerType" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_BookingType" Nullable="true" />
+    <Property Type="String" Name="BookingRs_Note" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BookingRs_IDCustomer" Nullable="false" />
+    <Property Type="Int32" Name="BookingRs_IDSystemUser" Nullable="false" />
+    <Property Type="Int32" Name="BookingRs_PayMenthod" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_StatusPay" Nullable="true" />
+    <Property Type="Decimal" Name="BookingRs_BookingMoney" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="BookingRs_ExchangeRate" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="BookingRs_Status" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_Type" Nullable="true" />
+    <Property Type="Boolean" Name="BookingRs_Disable" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_Level" Nullable="false" />
+    <Property Type="String" Name="BookingRs_Subject" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BookingRs_Description" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="BookingRs_DatePay" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="BookingRs_DateEdit" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="BookingRs_IDCustomerGroup" Nullable="false" />
+    <Property Type="String" Name="SystemUsers_Username" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Customers_ID" Nullable="true" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Identifier1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Identifier2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Identifier3" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Customers_Type" Nullable="true" />
+    <Property Type="Int32" Name="Companies_ID" Nullable="true" />
+    <Property Type="String" Name="Companies_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Companies_Type" Nullable="true" />
+    <Property Type="Int32" Name="Companies_Status" Nullable="true" />
+    <Property Type="Int32" Name="CustomerGroups_ID" Nullable="true" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="CustomerGroups_Type" Nullable="true" />
+    <Property Type="Int32" Name="CustomerGroups_Status" Nullable="true" />
+    <Property Type="String" Name="Customers_Gender" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Customers_Citizen" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_BookingHs_IDBookingH" Nullable="true" />
+    <Property Type="Int32" Name="BookingHs_Status" Nullable="true" />
+    <Property Type="Int32" Name="BookingHs_StatusPay" Nullable="true" />
+    <Property Type="Int32" Name="BookingHs_Type" Nullable="true" />
+    <Property Type="Boolean" Name="BookingHs_Disable" Nullable="true" />
+    <Property Type="String" Name="BookingHs_Subject" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BookingRs_InvoiceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="BookingRs_InvoiceDate" Nullable="true" />
+    <Property Type="String" Name="Rooms_Sku" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Rooms_Code" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_Contracts_GetCurrentHaveNotAllowances_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ContractDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NumberContract" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="NumberTemplateContract" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="IDSystemUser" Nullable="false" />
+    <Property Type="String" Name="Company" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="StatutoryRepresent" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="StatutoryRepresentGender" Nullable="true" />
+    <Property Type="String" Name="StatutoryRepresentIdentifier" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="ContractType" Nullable="true" />
+    <Property Type="DateTime" Name="FromDate" Nullable="true" />
+    <Property Type="DateTime" Name="ToDate" Nullable="true" />
+    <Property Type="Int32" Name="SkuTableSalary" Nullable="true" />
+    <Property Type="Double" Name="Coefficent" Nullable="true" />
+    <Property Type="Decimal" Name="SalaryNet" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="SalaryCross" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_Get_Status_ListRooms_In_Month_Result">
+    <Property Type="Int32" Name="DayIndex" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_ID" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_CustomerType" Nullable="true" />
+    <Property Type="Int32" Name="BookingRs_PayMethod" Nullable="true" />
+    <Property Type="String" Name="Rooms_Sku" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Rooms_Code" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingRooms_ID" Nullable="true" />
+    <Property Type="DateTime" Name="BookingRooms_CheckInActual" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="BookingRooms_CheckOutActual" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BookingRooms_Type" Nullable="true" />
+    <Property Type="Int32" Name="BookingRooms_Status" Nullable="true" />
+    <Property Type="Decimal" Name="BookingRooms_AddTimeStart" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="BookingRooms_AddTimeEnd" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Company_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Company_Type" Nullable="true" />
+    <Property Type="Int32" Name="Company_ID" Nullable="true" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CustomerGroups_Type" Nullable="true" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="NumberCustomer" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="NumTableMax" Nullable="true" />
+    <Property Type="Int32" Name="NumTableStandard" Nullable="true" />
+    <Property Type="Decimal" Name="CostRef" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingHalls_ID" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
+    <Property Type="Time" Name="EndTime" Nullable="true" />
+    <Property Type="Time" Name="StartTime" Nullable="true" />
+    <Property Type="DateTime" Name="LunarDate" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="TableOrPerson" Nullable="true" />
+    <Property Type="Int32" Name="Unit" Nullable="true" />
+    <Property Type="Boolean" Name="Color" Nullable="true" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Address" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Customers_Nationality" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingHalls_Status" Nullable="true" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingHs_ID" Nullable="true" />
+    <Property Type="String" Name="BookingHs_Subject" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingHs_CustomerType" Nullable="true" />
+    <Property Type="Decimal" Name="BookingHs_BookingMoney" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Companies_Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_HallExt_GetStatusBookingHalls_ByRankTime_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="NumTableMax" Nullable="true" />
+    <Property Type="Int32" Name="NumTableStandard" Nullable="true" />
+    <Property Type="Decimal" Name="CostRef" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingHalls_ID" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
+    <Property Type="Time" Name="EndTime" Nullable="true" />
+    <Property Type="Time" Name="StartTime" Nullable="true" />
+    <Property Type="DateTime" Name="LunarDate" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="TableOrPerson" Nullable="true" />
+    <Property Type="Int32" Name="Unit" Nullable="true" />
+    <Property Type="Boolean" Name="Color" Nullable="true" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Address" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Customers_Nationality" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingHalls_Status" Nullable="true" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingHs_ID" Nullable="true" />
+    <Property Type="String" Name="BookingHs_Subject" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingHs_CustomerType" Nullable="true" />
+    <Property Type="Decimal" Name="BookingHs_BookingMoney" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Companies_Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_PaymentExt_GetAllData_Result">
+    <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+    <Property Type="String" Name="ObjectType" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="SkuObject" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDService" Nullable="true" />
+    <Property Type="String" Name="Services_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Double" Name="QualityServices" Nullable="true" />
+    <Property Type="Decimal" Name="Services_Cost" Nullable="true" Precision="19" />
+    <Property Type="Double" Name="Services_PercentTax" Nullable="true" />
+    <Property Type="DateTime" Name="Service_DateUse" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Service_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="Object_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="BillH_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="BillR_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="Services_SubPayment" Nullable="true" />
+    <Property Type="Int32" Name="Object_SubPayment" Nullable="true" />
+    <Property Type="Int32" Name="Bill_SubPayment" Nullable="true" />
+    <Property Type="DateTime" Name="Time1" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Time2" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_PaymentExt_GetAllData_1_Result">
+    <Property Type="Int32" Name="BookingRs_ID" Nullable="false" />
+    <Property Type="String" Name="ObjectType" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="SkuObject" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDService" Nullable="true" />
+    <Property Type="String" Name="Services_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Double" Name="QualityServices" Nullable="true" />
+    <Property Type="Decimal" Name="Services_Cost" Nullable="true" Precision="19" />
+    <Property Type="Double" Name="Services_PercentTax" Nullable="true" />
+    <Property Type="DateTime" Name="Service_DateUse" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Service_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="Object_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="BillH_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="BillR_PaymentStatus" Nullable="true" />
+    <Property Type="Int32" Name="Services_SubPayment" Nullable="true" />
+    <Property Type="Int32" Name="Object_SubPayment" Nullable="true" />
+    <Property Type="Int32" Name="Bill_SubPayment" Nullable="true" />
+    <Property Type="DateTime" Name="Time1" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Time2" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Bed1" Nullable="true" />
+    <Property Type="Int32" Name="Bed2" Nullable="true" />
+    <Property Type="Decimal" Name="CostRef" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Sku" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="BookingRooms_ID" Nullable="false" />
+    <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="CheckInPlan" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutActual" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutPlan" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Color" Nullable="true" />
+    <Property Type="Int32" Name="Customers_ID" Nullable="true" />
+    <Property Type="String" Name="Customers_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Customers_Address" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Customers_Nationality" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BookingRooms_Status" Nullable="true" />
+    <Property Type="Int32" Name="CustomerGroups_ID" Nullable="true" />
+    <Property Type="String" Name="CustomerGroups_Name" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingRs_ID" Nullable="true" />
+    <Property Type="String" Name="BookingRs_Subject" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="BookingRs_CustomerType" Nullable="true" />
+    <Property Type="Decimal" Name="BookingRs_BookingMoney" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="Companies_ID" Nullable="true" />
+    <Property Type="String" Name="Companies_Name" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_Rooms_GetAvailable_ByTime_ByLang_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Sku" Nullable="false" MaxLength="50" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="Bed1" Nullable="true" />
+    <Property Type="Int32" Name="Bed2" Nullable="true" />
+    <Property Type="String" Name="Intro" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Info" Nullable="true" MaxLength="255" />
+    <Property Type="Decimal" Name="CostRef" Nullable="true" Precision="19" />
+    <Property Type="String" Name="CostUnit" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="IDLang" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RoomsExt_CalculationEfficiency_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IDBookingR" Nullable="false" />
+    <Property Type="String" Name="CodeRoom" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutActual" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="TypeRoomEfficiency" Nullable="false" />
+    <Property Type="Int32" Name="RankTime" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RoomsExt_CalculationRevenue_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IDBookingR" Nullable="false" />
+    <Property Type="String" Name="CodeRoom" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutActual" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckInPlan" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CheckOutPlan" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="TimeInUse" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Double" Name="PercentTax" Nullable="true" />
+    <Property Type="Double" Name="CostPendingRoom" Nullable="true" />
+    <Property Type="Int32" Name="TypeCalculationRevenue" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_SystemUsers_GetCurrentInDivision_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="UserGroup" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" />
+    <Property Type="String" Name="Identifier1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Identifier2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Identifier3" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="Gender" Nullable="true" />
+    <Property Type="Int32" Name="IDRefMailSystem" Nullable="true" />
+    <Property Type="Int32" Name="IDRefAnotherSystem" Nullable="true" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier1CreatedDate" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier2CreatedDate" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier3CreatedDate" Nullable="true" />
+    <Property Type="String" Name="PlaceOfIssue1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlaceOfIssue2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlaceOfIssue3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_SystemUsers_GetCurrentNotInDivision_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="UserGroup" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" />
+    <Property Type="String" Name="Identifier1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Identifier2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Identifier3" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="Image" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="Gender" Nullable="true" />
+    <Property Type="Int32" Name="IDRefMailSystem" Nullable="true" />
+    <Property Type="Int32" Name="IDRefAnotherSystem" Nullable="true" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Boolean" Name="Disable" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier1CreatedDate" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier2CreatedDate" Nullable="true" />
+    <Property Type="DateTime" Name="Identifier3CreatedDate" Nullable="true" />
+    <Property Type="String" Name="PlaceOfIssue1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlaceOfIssue2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlaceOfIssue3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,2177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="DatabaseDA">
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="Model.Companies">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="TaxNumberCode" ColumnName="TaxNumberCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="Model.Configs">
+        <MappingFragment StoreEntitySet="Configs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccessKey" ColumnName="AccessKey" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerGroups">
+      <EntityTypeMapping TypeName="Model.CustomerGroups">
+        <MappingFragment StoreEntitySet="CustomerGroups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCompany" ColumnName="IDCompany" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerGroups_Customers">
+      <EntityTypeMapping TypeName="Model.CustomerGroups_Customers">
+        <MappingFragment StoreEntitySet="CustomerGroups_Customers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDCustomerGroup" ColumnName="IDCustomerGroup" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Model.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Identifier1" ColumnName="Identifier1" />
+          <ScalarProperty Name="Identifier2" ColumnName="Identifier2" />
+          <ScalarProperty Name="Identifier3" ColumnName="Identifier3" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Citizen" ColumnName="Citizen" />
+          <ScalarProperty Name="Identifier1CreatedDate" ColumnName="Identifier1CreatedDate" />
+          <ScalarProperty Name="Identifier2CreatedDate" ColumnName="Identifier2CreatedDate" />
+          <ScalarProperty Name="Identifier3CreatedDate" ColumnName="Identifier3CreatedDate" />
+          <ScalarProperty Name="PlaceOfIssue1" ColumnName="PlaceOfIssue1" />
+          <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
+          <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitDetails">
+      <EntityTypeMapping TypeName="Model.PermitDetails">
+        <MappingFragment StoreEntitySet="PermitDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPermit" ColumnName="IDPermit" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PageURL" ColumnName="PageURL" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits">
+      <EntityTypeMapping TypeName="Model.Permits">
+        <MappingFragment StoreEntitySet="Permits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsContent" ColumnName="IsContent" />
+          <ScalarProperty Name="IsPartner" ColumnName="IsPartner" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="SystemKey" ColumnName="SystemKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits_SystemUsers">
+      <EntityTypeMapping TypeName="Model.Permits_SystemUsers">
+        <MappingFragment StoreEntitySet="Permits_SystemUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPermit" ColumnName="IDPermit" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="IsUpdate" ColumnName="IsUpdate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="IsInsert" ColumnName="IsInsert" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceGroups">
+      <EntityTypeMapping TypeName="Model.ServiceGroups">
+        <MappingFragment StoreEntitySet="ServiceGroups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="Model.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDServiceGroups" ColumnName="IDServiceGroups" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers">
+      <EntityTypeMapping TypeName="Model.SystemUsers">
+        <MappingFragment StoreEntitySet="SystemUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Identifier1" ColumnName="Identifier1" />
+          <ScalarProperty Name="Identifier2" ColumnName="Identifier2" />
+          <ScalarProperty Name="Identifier3" ColumnName="Identifier3" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IDRefMailSystem" ColumnName="IDRefMailSystem" />
+          <ScalarProperty Name="IDRefAnotherSystem" ColumnName="IDRefAnotherSystem" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Identifier1CreatedDate" ColumnName="Identifier1CreatedDate" />
+          <ScalarProperty Name="Identifier2CreatedDate" ColumnName="Identifier2CreatedDate" />
+          <ScalarProperty Name="Identifier3CreatedDate" ColumnName="Identifier3CreatedDate" />
+          <ScalarProperty Name="PlaceOfIssue1" ColumnName="PlaceOfIssue1" />
+          <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
+          <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits_SystemUsers1">
+      <EntityTypeMapping TypeName="Model.Permits_SystemUsers1">
+        <MappingFragment StoreEntitySet="Permits_SystemUsers1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPermit" ColumnName="IDPermit" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="IsUpdate" ColumnName="IsUpdate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="IsInsert" ColumnName="IsInsert" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUserExts">
+      <EntityTypeMapping TypeName="Model.SystemUserExts">
+        <MappingFragment StoreEntitySet="SystemUserExts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Hometown" ColumnName="Hometown" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="InsuranceNumber" ColumnName="InsuranceNumber" />
+          <ScalarProperty Name="YearJob" ColumnName="YearJob" />
+          <ScalarProperty Name="YearDepartment" ColumnName="YearDepartment" />
+          <ScalarProperty Name="YearPayroll" ColumnName="YearPayroll" />
+          <ScalarProperty Name="YearUnemploymentInsurance" ColumnName="YearUnemploymentInsurance" />
+          <ScalarProperty Name="DifferenceContact" ColumnName="DifferenceContact" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="Recruitment" ColumnName="Recruitment" />
+          <ScalarProperty Name="PermanentResidence" ColumnName="PermanentResidence" />
+          <ScalarProperty Name="CommunistPartyDate" ColumnName="CommunistPartyDate" />
+          <ScalarProperty Name="YouthUnionDate" ColumnName="YouthUnionDate" />
+          <ScalarProperty Name="EnlistmentDate" ColumnName="EnlistmentDate" />
+          <ScalarProperty Name="DemobilizedDate" ColumnName="DemobilizedDate" />
+          <ScalarProperty Name="MartyrsFamily" ColumnName="MartyrsFamily" />
+          <ScalarProperty Name="WoundedFamily" ColumnName="WoundedFamily" />
+          <ScalarProperty Name="LaborFamily" ColumnName="LaborFamily" />
+          <ScalarProperty Name="HightestAppellation" ColumnName="HightestAppellation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingHalls">
+      <EntityTypeMapping TypeName="Model.BookingHalls">
+        <MappingFragment StoreEntitySet="BookingHalls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeHall" ColumnName="CodeHall" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostRef_Halls" ColumnName="CostRef_Halls" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="LunarDate" ColumnName="LunarDate" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="TableOrPerson" ColumnName="TableOrPerson" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IsAllDayEvent" ColumnName="IsAllDayEvent" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IsRecurring" ColumnName="IsRecurring" />
+          <ScalarProperty Name="IsEditable" ColumnName="IsEditable" />
+          <ScalarProperty Name="AdditionalColumn1" ColumnName="AdditionalColumn1" />
+          <ScalarProperty Name="IDBookingH" ColumnName="IDBookingH" />
+          <ScalarProperty Name="IndexSubPayment" ColumnName="IndexSubPayment" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingHalls_Services">
+      <EntityTypeMapping TypeName="Model.BookingHalls_Services">
+        <MappingFragment StoreEntitySet="BookingHalls_Services">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDBookingHall" ColumnName="IDBookingHall" />
+          <ScalarProperty Name="IDService" ColumnName="IDService" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostRef_Services" ColumnName="CostRef_Services" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IndexSubPayment" ColumnName="IndexSubPayment" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingHs">
+      <EntityTypeMapping TypeName="Model.BookingHs">
+        <MappingFragment StoreEntitySet="BookingHs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IDGuest" ColumnName="IDGuest" />
+          <ScalarProperty Name="PayMenthod" ColumnName="PayMenthod" />
+          <ScalarProperty Name="StatusPay" ColumnName="StatusPay" />
+          <ScalarProperty Name="BookingMoney" ColumnName="BookingMoney" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="IDCustomerGroup" ColumnName="IDCustomerGroup" />
+          <ScalarProperty Name="DatePay" ColumnName="DatePay" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Foods">
+      <EntityTypeMapping TypeName="Model.Foods">
+        <MappingFragment StoreEntitySet="Foods">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name1" ColumnName="Name1" />
+          <ScalarProperty Name="Name2" ColumnName="Name2" />
+          <ScalarProperty Name="Name3" ColumnName="Name3" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guests">
+      <EntityTypeMapping TypeName="Model.Guests">
+        <MappingFragment StoreEntitySet="Guests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Halls">
+      <EntityTypeMapping TypeName="Model.Halls">
+        <MappingFragment StoreEntitySet="Halls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="NumTableStandard" ColumnName="NumTableStandard" />
+          <ScalarProperty Name="NumTableMax" ColumnName="NumTableMax" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="CostUnit" ColumnName="CostUnit" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="Model.Menus">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Issue" ColumnName="Issue" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDBookingHall" ColumnName="IDBookingHall" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus_Foods">
+      <EntityTypeMapping TypeName="Model.Menus_Foods">
+        <MappingFragment StoreEntitySet="Menus_Foods">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDFood" ColumnName="IDFood" />
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Allowances">
+      <EntityTypeMapping TypeName="Model.Allowances">
+        <MappingFragment StoreEntitySet="Allowances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="SalaryPlus" ColumnName="SalaryPlus" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlternateMissions">
+      <EntityTypeMapping TypeName="Model.AlternateMissions">
+        <MappingFragment StoreEntitySet="AlternateMissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DecisionDate" ColumnName="DecisionDate" />
+          <ScalarProperty Name="NumberDecision" ColumnName="NumberDecision" />
+          <ScalarProperty Name="DecisionLevel" ColumnName="DecisionLevel" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditHistories">
+      <EntityTypeMapping TypeName="Model.AuditHistories">
+        <MappingFragment StoreEntitySet="AuditHistories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalculatorSalaries">
+      <EntityTypeMapping TypeName="Model.CalculatorSalaries">
+        <MappingFragment StoreEntitySet="CalculatorSalaries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SkuTableSalary" ColumnName="SkuTableSalary" />
+          <ScalarProperty Name="Coefficent" ColumnName="Coefficent" />
+          <ScalarProperty Name="SalaryNet" ColumnName="SalaryNet" />
+          <ScalarProperty Name="SalaryCross" ColumnName="SalaryCross" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificates">
+      <EntityTypeMapping TypeName="Model.Certificates">
+        <MappingFragment StoreEntitySet="Certificates">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Certificate" ColumnName="Certificate" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="Model.Contracts">
+        <MappingFragment StoreEntitySet="Contracts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="NumberContract" ColumnName="NumberContract" />
+          <ScalarProperty Name="NumberTemplateContract" ColumnName="NumberTemplateContract" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="StatutoryRepresent" ColumnName="StatutoryRepresent" />
+          <ScalarProperty Name="StatutoryRepresentGender" ColumnName="StatutoryRepresentGender" />
+          <ScalarProperty Name="StatutoryRepresentIdentifier" ColumnName="StatutoryRepresentIdentifier" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="SkuTableSalary" ColumnName="SkuTableSalary" />
+          <ScalarProperty Name="Coefficent" ColumnName="Coefficent" />
+          <ScalarProperty Name="SalaryNet" ColumnName="SalaryNet" />
+          <ScalarProperty Name="SalaryCross" ColumnName="SalaryCross" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts_Allowances">
+      <EntityTypeMapping TypeName="Model.Contracts_Allowances">
+        <MappingFragment StoreEntitySet="Contracts_Allowances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RealSalaryPlus" ColumnName="RealSalaryPlus" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDAllowance" ColumnName="IDAllowance" />
+          <ScalarProperty Name="IDContract" ColumnName="IDContract" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="Model.Designations">
+        <MappingFragment StoreEntitySet="Designations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SignedBy" ColumnName="SignedBy" />
+          <ScalarProperty Name="DesignationsCode" ColumnName="DesignationsCode" />
+          <ScalarProperty Name="SignedDate" ColumnName="SignedDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Divisions">
+      <EntityTypeMapping TypeName="Model.Divisions">
+        <MappingFragment StoreEntitySet="Divisions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentSystemUsers">
+      <EntityTypeMapping TypeName="Model.DocumentSystemUsers">
+        <MappingFragment StoreEntitySet="DocumentSystemUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamilyMembers">
+      <EntityTypeMapping TypeName="Model.FamilyMembers">
+        <MappingFragment StoreEntitySet="FamilyMembers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RelationType" ColumnName="RelationType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupTableSalaries">
+      <EntityTypeMapping TypeName="Model.GroupTableSalaries">
+        <MappingFragment StoreEntitySet="GroupTableSalaries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RewardAndPunishments">
+      <EntityTypeMapping TypeName="Model.RewardAndPunishments">
+        <MappingFragment StoreEntitySet="RewardAndPunishments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DecisionDate" ColumnName="DecisionDate" />
+          <ScalarProperty Name="NumberDecision" ColumnName="NumberDecision" />
+          <ScalarProperty Name="DecisionLevel" ColumnName="DecisionLevel" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUserExts1">
+      <EntityTypeMapping TypeName="Model.SystemUserExts1">
+        <MappingFragment StoreEntitySet="SystemUserExts1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Hometown" ColumnName="Hometown" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="InsuranceNumber" ColumnName="InsuranceNumber" />
+          <ScalarProperty Name="YearJob" ColumnName="YearJob" />
+          <ScalarProperty Name="YearDepartment" ColumnName="YearDepartment" />
+          <ScalarProperty Name="YearPayroll" ColumnName="YearPayroll" />
+          <ScalarProperty Name="YearUnemploymentInsurance" ColumnName="YearUnemploymentInsurance" />
+          <ScalarProperty Name="DifferenceContact" ColumnName="DifferenceContact" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="Recruitment" ColumnName="Recruitment" />
+          <ScalarProperty Name="PermanentResidence" ColumnName="PermanentResidence" />
+          <ScalarProperty Name="CommunistPartyDate" ColumnName="CommunistPartyDate" />
+          <ScalarProperty Name="YouthUnionDate" ColumnName="YouthUnionDate" />
+          <ScalarProperty Name="EnlistmentDate" ColumnName="EnlistmentDate" />
+          <ScalarProperty Name="DemobilizedDate" ColumnName="DemobilizedDate" />
+          <ScalarProperty Name="MartyrsFamily" ColumnName="MartyrsFamily" />
+          <ScalarProperty Name="WoundedFamily" ColumnName="WoundedFamily" />
+          <ScalarProperty Name="LaborFamily" ColumnName="LaborFamily" />
+          <ScalarProperty Name="HightestAppellation" ColumnName="HightestAppellation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers_Certificates">
+      <EntityTypeMapping TypeName="Model.SystemUsers_Certificates">
+        <MappingFragment StoreEntitySet="SystemUsers_Certificates">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="IDCertificate" ColumnName="IDCertificate" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="TrainingType" ColumnName="TrainingType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers_Divisions">
+      <EntityTypeMapping TypeName="Model.SystemUsers_Divisions">
+        <MappingFragment StoreEntitySet="SystemUsers_Divisions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AvaiableDate" ColumnName="AvaiableDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="IDDivision" ColumnName="IDDivision" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableSalaries">
+      <EntityTypeMapping TypeName="Model.TableSalaries">
+        <MappingFragment StoreEntitySet="TableSalaries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDGroupTableSalary" ColumnName="IDGroupTableSalary" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="NumCoefficents" ColumnName="NumCoefficents" />
+          <ScalarProperty Name="Coe1" ColumnName="Coe1" />
+          <ScalarProperty Name="Jump1" ColumnName="Jump1" />
+          <ScalarProperty Name="Coe2" ColumnName="Coe2" />
+          <ScalarProperty Name="Jump2" ColumnName="Jump2" />
+          <ScalarProperty Name="Coe3" ColumnName="Coe3" />
+          <ScalarProperty Name="Jump3" ColumnName="Jump3" />
+          <ScalarProperty Name="Coe4" ColumnName="Coe4" />
+          <ScalarProperty Name="Jump4" ColumnName="Jump4" />
+          <ScalarProperty Name="Coe5" ColumnName="Coe5" />
+          <ScalarProperty Name="Jump5" ColumnName="Jump5" />
+          <ScalarProperty Name="Coe6" ColumnName="Coe6" />
+          <ScalarProperty Name="Jump6" ColumnName="Jump6" />
+          <ScalarProperty Name="Coe7" ColumnName="Coe7" />
+          <ScalarProperty Name="Jump7" ColumnName="Jump7" />
+          <ScalarProperty Name="Coe8" ColumnName="Coe8" />
+          <ScalarProperty Name="Jump8" ColumnName="Jump8" />
+          <ScalarProperty Name="Coe9" ColumnName="Coe9" />
+          <ScalarProperty Name="Jump9" ColumnName="Jump9" />
+          <ScalarProperty Name="Coe10" ColumnName="Coe10" />
+          <ScalarProperty Name="Jump10" ColumnName="Jump10" />
+          <ScalarProperty Name="Coe11" ColumnName="Coe11" />
+          <ScalarProperty Name="Jump11" ColumnName="Jump11" />
+          <ScalarProperty Name="Coe12" ColumnName="Coe12" />
+          <ScalarProperty Name="Jump12" ColumnName="Jump12" />
+          <ScalarProperty Name="Coe13" ColumnName="Coe13" />
+          <ScalarProperty Name="Jump13" ColumnName="Jump13" />
+          <ScalarProperty Name="Coe14" ColumnName="Coe14" />
+          <ScalarProperty Name="Jump14" ColumnName="Jump14" />
+          <ScalarProperty Name="Coe15" ColumnName="Coe15" />
+          <ScalarProperty Name="Jump15" ColumnName="Jump15" />
+          <ScalarProperty Name="Coe16" ColumnName="Coe16" />
+          <ScalarProperty Name="Jump16" ColumnName="Jump16" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingRooms">
+      <EntityTypeMapping TypeName="Model.BookingRooms">
+        <MappingFragment StoreEntitySet="BookingRooms">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostRef_Rooms" ColumnName="CostRef_Rooms" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CheckInPlan" ColumnName="CheckInPlan" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="CheckOutPlan" ColumnName="CheckOutPlan" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IsAllDayEvent" ColumnName="IsAllDayEvent" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IsRecurring" ColumnName="IsRecurring" />
+          <ScalarProperty Name="IsEditable" ColumnName="IsEditable" />
+          <ScalarProperty Name="AdditionalColumn1" ColumnName="AdditionalColumn1" />
+          <ScalarProperty Name="CostPendingRoom" ColumnName="CostPendingRoom" />
+          <ScalarProperty Name="TimeInUse" ColumnName="TimeInUse" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IndexSubPayment" ColumnName="IndexSubPayment" />
+          <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+          <ScalarProperty Name="AddTimeStart" ColumnName="AddTimeStart" />
+          <ScalarProperty Name="AddTimeEnd" ColumnName="AddTimeEnd" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingRooms_Services">
+      <EntityTypeMapping TypeName="Model.BookingRooms_Services">
+        <MappingFragment StoreEntitySet="BookingRooms_Services">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDBookingRoom" ColumnName="IDBookingRoom" />
+          <ScalarProperty Name="IDService" ColumnName="IDService" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostRef_Services" ColumnName="CostRef_Services" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IndexSubPayment" ColumnName="IndexSubPayment" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingRoomsMembers">
+      <EntityTypeMapping TypeName="Model.BookingRoomsMembers">
+        <MappingFragment StoreEntitySet="BookingRoomsMembers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingRoom" ColumnName="IDBookingRoom" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="PurposeComeVietnam" ColumnName="PurposeComeVietnam" />
+          <ScalarProperty Name="DateEnterCountry" ColumnName="DateEnterCountry" />
+          <ScalarProperty Name="EnterGate" ColumnName="EnterGate" />
+          <ScalarProperty Name="TemporaryResidenceDate" ColumnName="TemporaryResidenceDate" />
+          <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="LimitDateEnterCountry" ColumnName="LimitDateEnterCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingRs">
+      <EntityTypeMapping TypeName="Model.BookingRs">
+        <MappingFragment StoreEntitySet="BookingRs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="PayMenthod" ColumnName="PayMenthod" />
+          <ScalarProperty Name="StatusPay" ColumnName="StatusPay" />
+          <ScalarProperty Name="BookingMoney" ColumnName="BookingMoney" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DatePay" ColumnName="DatePay" />
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="IDCustomerGroup" ColumnName="IDCustomerGroup" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingRs_BookingHs">
+      <EntityTypeMapping TypeName="Model.BookingRs_BookingHs">
+        <MappingFragment StoreEntitySet="BookingRs_BookingHs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="IDBookingH" ColumnName="IDBookingH" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Extension1" ColumnName="Extension1" />
+          <ScalarProperty Name="Extension2" ColumnName="Extension2" />
+          <ScalarProperty Name="Extension3" ColumnName="Extension3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckPoints">
+      <EntityTypeMapping TypeName="Model.CheckPoints">
+        <MappingFragment StoreEntitySet="CheckPoints">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtraCosts">
+      <EntityTypeMapping TypeName="Model.ExtraCosts">
+        <MappingFragment StoreEntitySet="ExtraCosts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+          <ScalarProperty Name="NumberPeople" ColumnName="NumberPeople" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="ExtraValue" ColumnName="ExtraValue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment">
+      <EntityTypeMapping TypeName="Model.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="IDBookingRoom" ColumnName="IDBookingRoom" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="NameCustomer" ColumnName="NameCustomer" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="NameSystemUser" ColumnName="NameSystemUser" />
+          <ScalarProperty Name="IDCustomerGroup" ColumnName="IDCustomerGroup" />
+          <ScalarProperty Name="NameCustomerGroup" ColumnName="NameCustomerGroup" />
+          <ScalarProperty Name="IDCompany" ColumnName="IDCompany" />
+          <ScalarProperty Name="NameCompany" ColumnName="NameCompany" />
+          <ScalarProperty Name="IDService" ColumnName="IDService" />
+          <ScalarProperty Name="NameService" ColumnName="NameService" />
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="CreatedDate_BookingR" ColumnName="CreatedDate_BookingR" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+          <ScalarProperty Name="PayMenthod" ColumnName="PayMenthod" />
+          <ScalarProperty Name="StatusPay" ColumnName="StatusPay" />
+          <ScalarProperty Name="BookingMoney" ColumnName="BookingMoney" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="Status_BookingR" ColumnName="Status_BookingR" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Cost_BookingRoom" ColumnName="Cost_BookingRoom" />
+          <ScalarProperty Name="PercentTax_BookingRoom" ColumnName="PercentTax_BookingRoom" />
+          <ScalarProperty Name="CostRef_Rooms" ColumnName="CostRef_Rooms" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="Status_BookingRoom" ColumnName="Status_BookingRoom" />
+          <ScalarProperty Name="TimeInUse" ColumnName="TimeInUse" />
+          <ScalarProperty Name="CostTotal_BookingRoom" ColumnName="CostTotal_BookingRoom" />
+          <ScalarProperty Name="Cost_Services" ColumnName="Cost_Services" />
+          <ScalarProperty Name="DateUseServices" ColumnName="DateUseServices" />
+          <ScalarProperty Name="PercentTax_Services" ColumnName="PercentTax_Services" />
+          <ScalarProperty Name="CostRef_Services" ColumnName="CostRef_Services" />
+          <ScalarProperty Name="Quantity_Services" ColumnName="Quantity_Services" />
+          <ScalarProperty Name="Status_Services" ColumnName="Status_Services" />
+          <ScalarProperty Name="CostTotal_Services" ColumnName="CostTotal_Services" />
+          <ScalarProperty Name="IndexSubRooms" ColumnName="IndexSubRooms" />
+          <ScalarProperty Name="IndexSubServices" ColumnName="IndexSubServices" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="Model.Rooms">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Bed1" ColumnName="Bed1" />
+          <ScalarProperty Name="Bed2" ColumnName="Bed2" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="CostUnit" ColumnName="CostUnit" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+      <EntityTypeMapping TypeName="Model.vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
+        <MappingFragment StoreEntitySet="vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups">
+          <ScalarProperty Name="BookingHalls_IDBookingH" ColumnName="BookingHalls_IDBookingH" />
+          <ScalarProperty Name="BookingHalls_Services_IDBookingHall" ColumnName="BookingHalls_Services_IDBookingHall" />
+          <ScalarProperty Name="ServiceGroups_ID" ColumnName="ServiceGroups_ID" />
+          <ScalarProperty Name="Services_ID" ColumnName="Services_ID" />
+          <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="Services_CostRef" ColumnName="Services_CostRef" />
+          <ScalarProperty Name="Services_Unit" ColumnName="Services_Unit" />
+          <ScalarProperty Name="Services_Status" ColumnName="Services_Status" />
+          <ScalarProperty Name="Services_Type" ColumnName="Services_Type" />
+          <ScalarProperty Name="Services_Disable" ColumnName="Services_Disable" />
+          <ScalarProperty Name="ServiceGroups_Name" ColumnName="ServiceGroups_Name" />
+          <ScalarProperty Name="ServiceGroups_Type" ColumnName="ServiceGroups_Type" />
+          <ScalarProperty Name="ServiceGroups_Disable" ColumnName="ServiceGroups_Disable" />
+          <ScalarProperty Name="BookingHalls_Services_Info" ColumnName="BookingHalls_Services_Info" />
+          <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+          <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+          <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+          <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+          <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+          <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+          <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+          <ScalarProperty Name="BookingHalls_Services_CostRef_Services" ColumnName="BookingHalls_Services_CostRef_Services" />
+          <ScalarProperty Name="BookingHalls_CodeHall" ColumnName="BookingHalls_CodeHall" />
+          <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers">
+      <EntityTypeMapping TypeName="Model.vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers">
+        <MappingFragment StoreEntitySet="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers">
+          <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+          <ScalarProperty Name="BookingHs_CreatedDate" ColumnName="BookingHs_CreatedDate" />
+          <ScalarProperty Name="BookingHs_CustomerType" ColumnName="BookingHs_CustomerType" />
+          <ScalarProperty Name="BookingHs_BookingType" ColumnName="BookingHs_BookingType" />
+          <ScalarProperty Name="BookingHs_Note" ColumnName="BookingHs_Note" />
+          <ScalarProperty Name="BookingHs_IDCustomer" ColumnName="BookingHs_IDCustomer" />
+          <ScalarProperty Name="BookingHs_IDSystemUser" ColumnName="BookingHs_IDSystemUser" />
+          <ScalarProperty Name="BookingHs_PayMenthod" ColumnName="BookingHs_PayMenthod" />
+          <ScalarProperty Name="BookingHs_StatusPay" ColumnName="BookingHs_StatusPay" />
+          <ScalarProperty Name="BookingHs_BookingMoney" ColumnName="BookingHs_BookingMoney" />
+          <ScalarProperty Name="BookingHs_ExchangeRate" ColumnName="BookingHs_ExchangeRate" />
+          <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+          <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
+          <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
+          <ScalarProperty Name="BookingHs_Level" ColumnName="BookingHs_Level" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingHs_Description" ColumnName="BookingHs_Description" />
+          <ScalarProperty Name="BookingHs_DatePay" ColumnName="BookingHs_DatePay" />
+          <ScalarProperty Name="BookingHs_IDCustomerGroup" ColumnName="BookingHs_IDCustomerGroup" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="Companies_ID" ColumnName="Companies_ID" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+          <ScalarProperty Name="Companies_Type" ColumnName="Companies_Type" />
+          <ScalarProperty Name="Companies_Status" ColumnName="Companies_Status" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="CustomerGroups_Status" ColumnName="CustomerGroups_Status" />
+          <ScalarProperty Name="Customers_Gender" ColumnName="Customers_Gender" />
+          <ScalarProperty Name="Customers_Citizen" ColumnName="Customers_Citizen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups">
+      <EntityTypeMapping TypeName="Model.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups">
+        <MappingFragment StoreEntitySet="vw_[BookingRInfo]_BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups">
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+          <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+          <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRooms_CheckInPlan" ColumnName="BookingRooms_CheckInPlan" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutPlan" ColumnName="BookingRooms_CheckOutPlan" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="CustomerGroups_Status" ColumnName="CustomerGroups_Status" />
+          <ScalarProperty Name="CustomerGroups_Disable" ColumnName="CustomerGroups_Disable" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="Customers_Birthday" ColumnName="Customers_Birthday" />
+          <ScalarProperty Name="Customers_Email" ColumnName="Customers_Email" />
+          <ScalarProperty Name="Customers_Address" ColumnName="Customers_Address" />
+          <ScalarProperty Name="Customers_Status" ColumnName="Customers_Status" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="Customers_Disable" ColumnName="Customers_Disable" />
+          <ScalarProperty Name="Customers_Gender" ColumnName="Customers_Gender" />
+          <ScalarProperty Name="Customers_Citizen" ColumnName="Customers_Citizen" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_Bed1" ColumnName="Rooms_Bed1" />
+          <ScalarProperty Name="Rooms_Bed2" ColumnName="Rooms_Bed2" />
+          <ScalarProperty Name="Rooms_Type" ColumnName="Rooms_Type" />
+          <ScalarProperty Name="Rooms_Status" ColumnName="Rooms_Status" />
+          <ScalarProperty Name="Rooms_Disable" ColumnName="Rooms_Disable" />
+          <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
+          <ScalarProperty Name="BookingRs_PayMethod" ColumnName="BookingRs_PayMethod" />
+          <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+          <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Rooms_ID" ColumnName="Rooms_ID" />
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_Name" ColumnName="SystemUsers_Name" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+          <ScalarProperty Name="SystemUsers_Birthday" ColumnName="SystemUsers_Birthday" />
+          <ScalarProperty Name="SystemUsers_Identifier1" ColumnName="SystemUsers_Identifier1" />
+          <ScalarProperty Name="SystemUsers_Identifier2" ColumnName="SystemUsers_Identifier2" />
+          <ScalarProperty Name="SystemUsers_Identifier3" ColumnName="SystemUsers_Identifier3" />
+          <ScalarProperty Name="SystemUsers_Gender" ColumnName="SystemUsers_Gender" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_Disable" ColumnName="SystemUsers_Disable" />
+          <ScalarProperty Name="BookingRooms_IDBookingR" ColumnName="BookingRooms_IDBookingR" />
+          <ScalarProperty Name="CustomerGroups_IDCompany" ColumnName="CustomerGroups_IDCompany" />
+          <ScalarProperty Name="BookingRooms_Type" ColumnName="BookingRooms_Type" />
+          <ScalarProperty Name="BookingRooms_AddTimeStart" ColumnName="BookingRooms_AddTimeStart" />
+          <ScalarProperty Name="BookingRooms_AddTimeEnd" ColumnName="BookingRooms_AddTimeEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers">
+      <EntityTypeMapping TypeName="Model.vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers">
+        <MappingFragment StoreEntitySet="vw_[BookingRInfo]_BookingRs_Customers_Companies_SystemUsers">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+          <ScalarProperty Name="BookingRs_Note" ColumnName="BookingRs_Note" />
+          <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+          <ScalarProperty Name="BookingRs_IDSystemUser" ColumnName="BookingRs_IDSystemUser" />
+          <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+          <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+          <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+          <ScalarProperty Name="BookingRs_ExchangeRate" ColumnName="BookingRs_ExchangeRate" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+          <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+          <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRs_Description" ColumnName="BookingRs_Description" />
+          <ScalarProperty Name="BookingRs_DatePay" ColumnName="BookingRs_DatePay" />
+          <ScalarProperty Name="BookingRs_DateEdit" ColumnName="BookingRs_DateEdit" />
+          <ScalarProperty Name="BookingRs_IDCustomerGroup" ColumnName="BookingRs_IDCustomerGroup" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="Companies_ID" ColumnName="Companies_ID" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+          <ScalarProperty Name="Companies_Type" ColumnName="Companies_Type" />
+          <ScalarProperty Name="Companies_Status" ColumnName="Companies_Status" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="CustomerGroups_Status" ColumnName="CustomerGroups_Status" />
+          <ScalarProperty Name="Customers_Gender" ColumnName="Customers_Gender" />
+          <ScalarProperty Name="Customers_Citizen" ColumnName="Customers_Citizen" />
+          <ScalarProperty Name="BookingRs_BookingHs_IDBookingH" ColumnName="BookingRs_BookingHs_IDBookingH" />
+          <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+          <ScalarProperty Name="BookingHs_StatusPay" ColumnName="BookingHs_StatusPay" />
+          <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
+          <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+          <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms">
+      <EntityTypeMapping TypeName="Model.vw__BookingRoomInfo__BookingRs_BookingRooms_Rooms">
+        <MappingFragment StoreEntitySet="vw_[BookingRoomInfo]_BookingRs_BookingRooms_Rooms">
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+          <ScalarProperty Name="BookingRs_IDCustomerGroup" ColumnName="BookingRs_IDCustomerGroup" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="BookingRs_BookingRoomMoney" ColumnName="BookingRs_BookingRoomMoney" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRooms_CheckInPlan" ColumnName="BookingRooms_CheckInPlan" />
+          <ScalarProperty Name="BookingRooms_CheckOutPlan" ColumnName="BookingRooms_CheckOutPlan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups">
+      <EntityTypeMapping TypeName="Model.vw__BookingRooms_ServicesInfo__BookingRooms_BookingRoomsServices_Services_ServiceGroups">
+        <MappingFragment StoreEntitySet="vw_[BookingRooms_ServicesInfo]_BookingRooms_BookingRoomsServices_Services_ServiceGroups">
+          <ScalarProperty Name="BookingRooms_IDBookingR" ColumnName="BookingRooms_IDBookingR" />
+          <ScalarProperty Name="BookingRooms_Services_IDBookingRoom" ColumnName="BookingRooms_Services_IDBookingRoom" />
+          <ScalarProperty Name="ServiceGroups_ID" ColumnName="ServiceGroups_ID" />
+          <ScalarProperty Name="Services_ID" ColumnName="Services_ID" />
+          <ScalarProperty Name="BookingRooms_Services_ID" ColumnName="BookingRooms_Services_ID" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="Services_CostRef" ColumnName="Services_CostRef" />
+          <ScalarProperty Name="Services_Unit" ColumnName="Services_Unit" />
+          <ScalarProperty Name="Services_Status" ColumnName="Services_Status" />
+          <ScalarProperty Name="Services_Type" ColumnName="Services_Type" />
+          <ScalarProperty Name="Services_Disable" ColumnName="Services_Disable" />
+          <ScalarProperty Name="ServiceGroups_Name" ColumnName="ServiceGroups_Name" />
+          <ScalarProperty Name="ServiceGroups_Type" ColumnName="ServiceGroups_Type" />
+          <ScalarProperty Name="ServiceGroups_Disable" ColumnName="ServiceGroups_Disable" />
+          <ScalarProperty Name="BookingRooms_Services_Info" ColumnName="BookingRooms_Services_Info" />
+          <ScalarProperty Name="BookingRooms_Services_Type" ColumnName="BookingRooms_Services_Type" />
+          <ScalarProperty Name="BookingRooms_Services_Status" ColumnName="BookingRooms_Services_Status" />
+          <ScalarProperty Name="BookingRooms_Services_Disable" ColumnName="BookingRooms_Services_Disable" />
+          <ScalarProperty Name="BookingRooms_Services_Cost" ColumnName="BookingRooms_Services_Cost" />
+          <ScalarProperty Name="BookingRooms_Services_Date" ColumnName="BookingRooms_Services_Date" />
+          <ScalarProperty Name="BookingRooms_Services_PercentTax" ColumnName="BookingRooms_Services_PercentTax" />
+          <ScalarProperty Name="BookingRooms_Services_Quantity" ColumnName="BookingRooms_Services_Quantity" />
+          <ScalarProperty Name="BookingRooms_Services_CostRef_Services" ColumnName="BookingRooms_Services_CostRef_Services" />
+          <ScalarProperty Name="BookingRooms_CodeRoom" ColumnName="BookingRooms_CodeRoom" />
+          <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__CertificatesInfo__SystemUsers_Certificates">
+      <EntityTypeMapping TypeName="Model.vw__CertificatesInfo__SystemUsers_Certificates">
+        <MappingFragment StoreEntitySet="vw_[CertificatesInfo]_SystemUsers_Certificates">
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+          <ScalarProperty Name="SystemUsers_UserGroup" ColumnName="SystemUsers_UserGroup" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_Name" ColumnName="SystemUsers_Name" />
+          <ScalarProperty Name="SystemUsers_Birthday" ColumnName="SystemUsers_Birthday" />
+          <ScalarProperty Name="SystemUsers_Image" ColumnName="SystemUsers_Image" />
+          <ScalarProperty Name="SystemUsers_Gender" ColumnName="SystemUsers_Gender" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_Disable" ColumnName="SystemUsers_Disable" />
+          <ScalarProperty Name="Certificates_ID" ColumnName="Certificates_ID" />
+          <ScalarProperty Name="Certificates_Certificates" ColumnName="Certificates-Certificates" />
+          <ScalarProperty Name="SystemUsers_Certificates_CreatedDate" ColumnName="SystemUsers_Certificates_CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Certificates_ExpirationDate" ColumnName="SystemUsers_Certificates_ExpirationDate" />
+          <ScalarProperty Name="SystemUsers_Certificates_Organization" ColumnName="SystemUsers_Certificates_Organization" />
+          <ScalarProperty Name="Certificates_Organization" ColumnName="Certificates_Organization" />
+          <ScalarProperty Name="Certificates__Type" ColumnName="Certificates _Type" />
+          <ScalarProperty Name="SystemUsers_Certificates_Level" ColumnName="SystemUsers_Certificates_Level" />
+          <ScalarProperty Name="SystemUsers_Certificates_TrainingType" ColumnName="SystemUsers_Certificates_TrainingType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__ContractsInfo__SystemUsers_Contracts_Allowances">
+      <EntityTypeMapping TypeName="Model.vw__ContractsInfo__SystemUsers_Contracts_Allowances">
+        <MappingFragment StoreEntitySet="vw_[ContractsInfo]_SystemUsers_Contracts_Allowances">
+          <ScalarProperty Name="Allowances_ID" ColumnName="Allowances_ID" />
+          <ScalarProperty Name="Allowances_CreateDate" ColumnName="Allowances_CreateDate" />
+          <ScalarProperty Name="Allowances_ContractType" ColumnName="Allowances_ContractType" />
+          <ScalarProperty Name="Allowances_SalaryPlus" ColumnName="Allowances_SalaryPlus" />
+          <ScalarProperty Name="Allowances_Type" ColumnName="Allowances_Type" />
+          <ScalarProperty Name="Allowances_Status" ColumnName="Allowances_Status" />
+          <ScalarProperty Name="Allowances_Disable" ColumnName="Allowances_Disable" />
+          <ScalarProperty Name="Contracts_ID" ColumnName="Contracts_ID" />
+          <ScalarProperty Name="Contracts_CreatedDate" ColumnName="Contracts_CreatedDate" />
+          <ScalarProperty Name="Contracts_ContractDate" ColumnName="Contracts_ContractDate" />
+          <ScalarProperty Name="Contracts_NumberContract" ColumnName="Contracts_NumberContract" />
+          <ScalarProperty Name="Contracts_NumberTemplateContact" ColumnName="Contracts_NumberTemplateContact" />
+          <ScalarProperty Name="Contracts_IDSystemUser" ColumnName="Contracts_IDSystemUser" />
+          <ScalarProperty Name="Contracts_Company" ColumnName="Contracts_Company" />
+          <ScalarProperty Name="Contracts_StatutoryRepresent" ColumnName="Contracts_StatutoryRepresent" />
+          <ScalarProperty Name="Contracts_StatutoryRepresentGender" ColumnName="Contracts_StatutoryRepresentGender" />
+          <ScalarProperty Name="Contracts_StatutoryRepresentIdentifier" ColumnName="Contracts_StatutoryRepresentIdentifier" />
+          <ScalarProperty Name="Contracts_ContractType" ColumnName="Contracts_ContractType" />
+          <ScalarProperty Name="Contracts_FromDate" ColumnName="Contracts_FromDate" />
+          <ScalarProperty Name="Contracts_ToDate" ColumnName="Contracts_ToDate" />
+          <ScalarProperty Name="Contracts_SkuTableSalary" ColumnName="Contracts_SkuTableSalary" />
+          <ScalarProperty Name="Contracts_Coefficent" ColumnName="Contracts_Coefficent" />
+          <ScalarProperty Name="Contracts_SalaryNet" ColumnName="Contracts_SalaryNet" />
+          <ScalarProperty Name="Contracts_SalaryCross" ColumnName="Contracts_SalaryCross" />
+          <ScalarProperty Name="Contracts_Type" ColumnName="Contracts_Type" />
+          <ScalarProperty Name="Contracts_Status" ColumnName="Contracts_Status" />
+          <ScalarProperty Name="Contracts_Disable" ColumnName="Contracts_Disable" />
+          <ScalarProperty Name="Contracts_Allowances_ID" ColumnName="Contracts_Allowances_ID" />
+          <ScalarProperty Name="Contracts_Allowances_RealSalaryPlus" ColumnName="Contracts_Allowances_RealSalaryPlus" />
+          <ScalarProperty Name="Contracts_Allowances_CreatedDate" ColumnName="Contracts_Allowances_CreatedDate" />
+          <ScalarProperty Name="Contracts_Allowances_ApplyDate" ColumnName="Contracts_Allowances_ApplyDate" />
+          <ScalarProperty Name="Contracts_Allowances_Type" ColumnName="Contracts_Allowances_Type" />
+          <ScalarProperty Name="Contracts_Allowances_Status" ColumnName="Contracts_Allowances_Status" />
+          <ScalarProperty Name="Contracts_Allowances_Disable" ColumnName="Contracts_Allowances_Disable" />
+          <ScalarProperty Name="Contracts_Allowances_IDAllowance" ColumnName="Contracts_Allowances_IDAllowance" />
+          <ScalarProperty Name="Contracts_Allowances_IDContract" ColumnName="Contracts_Allowances_IDContract" />
+          <ScalarProperty Name="SystemUsers_UserGroup" ColumnName="SystemUsers_UserGroup" />
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_Name" ColumnName="SystemUsers_Name" />
+          <ScalarProperty Name="SystemUsers_Image" ColumnName="SystemUsers_Image" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Disable" ColumnName="SystemUsers_Disable" />
+          <ScalarProperty Name="SystemUsers_Identifier1CreatedDate" ColumnName="SystemUsers_Identifier1CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Identifier2CreatedDate" ColumnName="SystemUsers_Identifier2CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Identifier3CreatedDate" ColumnName="SystemUsers_Identifier3CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Identifier1" ColumnName="SystemUsers_Identifier1" />
+          <ScalarProperty Name="SystemUsers_Identifier2" ColumnName="SystemUsers_Identifier2" />
+          <ScalarProperty Name="SystemUsers_Identifier3" ColumnName="SystemUsers_Identifier3" />
+          <ScalarProperty Name="SystemUsers_Birthday" ColumnName="SystemUsers_Birthday" />
+          <ScalarProperty Name="SystemUsers_Gender" ColumnName="SystemUsers_Gender" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue1" ColumnName="SystemUsers_PlaceOfIssue1" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue2" ColumnName="SystemUsers_PlaceOfIssue2" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue3" ColumnName="SystemUsers_PlaceOfIssue3" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__PaymentInfo__BookingRs_BookingRooms_Customers">
+      <EntityTypeMapping TypeName="Model.vw__PaymentInfo__BookingRs_BookingRooms_Customers">
+        <MappingFragment StoreEntitySet="vw_[PaymentInfo]_BookingRs_BookingRooms_Customers">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="CustomerGroups_IDCompany" ColumnName="CustomerGroups_IDCompany" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="BookingRooms_CodeRoom" ColumnName="BookingRooms_CodeRoom" />
+          <ScalarProperty Name="BookingRooms_Cost" ColumnName="BookingRooms_Cost" />
+          <ScalarProperty Name="BookingRooms_PercentTax" ColumnName="BookingRooms_PercentTax" />
+          <ScalarProperty Name="BookingRooms_CheckInPlan" ColumnName="BookingRooms_CheckInPlan" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutPlan" ColumnName="BookingRooms_CheckOutPlan" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_BookingStatus" ColumnName="BookingRooms_BookingStatus" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+          <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+          <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+          <ScalarProperty Name="BookingRs_BookingMonye" ColumnName="BookingRs_BookingMonye" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+          <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__PermitInfo__SystemUsers_Permits_PermitDetails">
+      <EntityTypeMapping TypeName="Model.vw__PermitInfo__SystemUsers_Permits_PermitDetails">
+        <MappingFragment StoreEntitySet="vw_[PermitInfo]_SystemUsers_Permits_PermitDetails">
+          <ScalarProperty Name="Permits_SystemUsers_ID" ColumnName="Permits_SystemUsers_ID" />
+          <ScalarProperty Name="Permits_ID" ColumnName="Permits_ID" />
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="PermitDetails_ID" ColumnName="PermitDetails_ID" />
+          <ScalarProperty Name="SystemUsers_UserGroup" ColumnName="SystemUsers_UserGroup" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+          <ScalarProperty Name="SystemUsers_Name" ColumnName="SystemUsers_Name" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_Password" ColumnName="SystemUsers_Password" />
+          <ScalarProperty Name="SystemUsers_Birthday" ColumnName="SystemUsers_Birthday" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_IDRefAnotherSystem" ColumnName="SystemUsers_IDRefAnotherSystem" />
+          <ScalarProperty Name="SystemUsers_IDRefMailSystem" ColumnName="SystemUsers_IDRefMailSystem" />
+          <ScalarProperty Name="SystemUsers_Identifier1" ColumnName="SystemUsers_Identifier1" />
+          <ScalarProperty Name="SystemUsers_Identifier2" ColumnName="SystemUsers_Identifier2" />
+          <ScalarProperty Name="SystemUsers_Identifier3" ColumnName="SystemUsers_Identifier3" />
+          <ScalarProperty Name="SystemUsers_Image" ColumnName="SystemUsers_Image" />
+          <ScalarProperty Name="Permits_SystemUsers_IsView" ColumnName="Permits_SystemUsers_IsView" />
+          <ScalarProperty Name="Permits_SystemUsers_IsUpdate" ColumnName="Permits_SystemUsers_IsUpdate" />
+          <ScalarProperty Name="Permits_SystemUsers_IsInsert" ColumnName="Permits_SystemUsers_IsInsert" />
+          <ScalarProperty Name="Permits_SystemUsers_IsDelete" ColumnName="Permits_SystemUsers_IsDelete" />
+          <ScalarProperty Name="Permits_SystemUsers_IsSpecial" ColumnName="Permits_SystemUsers_IsSpecial" />
+          <ScalarProperty Name="Permits_SystemUsers_Description" ColumnName="Permits_SystemUsers_Description" />
+          <ScalarProperty Name="Permits_SystemUsers_Type" ColumnName="Permits_SystemUsers_Type" />
+          <ScalarProperty Name="Permits_SystemUsers_Status" ColumnName="Permits_SystemUsers_Status" />
+          <ScalarProperty Name="Permits_SystemUsers_Disable" ColumnName="Permits_SystemUsers_Disable" />
+          <ScalarProperty Name="Permits_IsContent" ColumnName="Permits_IsContent" />
+          <ScalarProperty Name="Permits_IsAdmin" ColumnName="Permits_IsAdmin" />
+          <ScalarProperty Name="Permits_IsPartner" ColumnName="Permits_IsPartner" />
+          <ScalarProperty Name="Permits_Name" ColumnName="Permits_Name" />
+          <ScalarProperty Name="Permits_Type" ColumnName="Permits_Type" />
+          <ScalarProperty Name="Permits_Status" ColumnName="Permits_Status" />
+          <ScalarProperty Name="Permits_Disable" ColumnName="Permits_Disable" />
+          <ScalarProperty Name="PermitDetails_Name" ColumnName="PermitDetails_Name" />
+          <ScalarProperty Name="PermitDetails_PageURL" ColumnName="PermitDetails_PageURL" />
+          <ScalarProperty Name="PermitDetails_Type" ColumnName="PermitDetails_Type" />
+          <ScalarProperty Name="PermitDetails_Status" ColumnName="PermitDetails_Status" />
+          <ScalarProperty Name="PermitDetails_Disable" ColumnName="PermitDetails_Disable" />
+          <ScalarProperty Name="Permits_SystemKey" ColumnName="Permits_SystemKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__SearchCustomer__Companies_CustomerGroups_Customers">
+      <EntityTypeMapping TypeName="Model.vw__SearchCustomer__Companies_CustomerGroups_Customers">
+        <MappingFragment StoreEntitySet="vw_[SearchCustomer]_Companies_CustomerGroups_Customers">
+          <ScalarProperty Name="Companies_ID" ColumnName="Companies_ID" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+          <ScalarProperty Name="Companies_Type" ColumnName="Companies_Type" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="Customers_Birthday" ColumnName="Customers_Birthday" />
+          <ScalarProperty Name="Customers_Tel" ColumnName="Customers_Tel" />
+          <ScalarProperty Name="Customers_Address" ColumnName="Customers_Address" />
+          <ScalarProperty Name="Customers_Email" ColumnName="Customers_Email" />
+          <ScalarProperty Name="Customers_Status" ColumnName="Customers_Status" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="Customers_Disable" ColumnName="Customers_Disable" />
+          <ScalarProperty Name="Customers_Gender" ColumnName="Customers_Gender" />
+          <ScalarProperty Name="Customers_Citizen" ColumnName="Customers_Citizen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__ServicesInfo__Services_ServiceGroups">
+      <EntityTypeMapping TypeName="Model.vw__ServicesInfo__Services_ServiceGroups">
+        <MappingFragment StoreEntitySet="vw_[ServicesInfo]_Services_ServiceGroups">
+          <ScalarProperty Name="Services_ID" ColumnName="Services_ID" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="Services_CostRef" ColumnName="Services_CostRef" />
+          <ScalarProperty Name="Services_Unit" ColumnName="Services_Unit" />
+          <ScalarProperty Name="Services_Status" ColumnName="Services_Status" />
+          <ScalarProperty Name="Services_Type" ColumnName="Services_Type" />
+          <ScalarProperty Name="Services_Disable" ColumnName="Services_Disable" />
+          <ScalarProperty Name="ServiceGroups_ID" ColumnName="ServiceGroups_ID" />
+          <ScalarProperty Name="ServiceGroups_Name" ColumnName="ServiceGroups_Name" />
+          <ScalarProperty Name="ServiceGroups_Type" ColumnName="ServiceGroups_Type" />
+          <ScalarProperty Name="ServiceGroups_Disable" ColumnName="ServiceGroups_Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw__SystemUsersInfo__SystemUsers_Divisions">
+      <EntityTypeMapping TypeName="Model.vw__SystemUsersInfo__SystemUsers_Divisions">
+        <MappingFragment StoreEntitySet="vw_[SystemUsersInfo]_SystemUsers_Divisions">
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="SystemUsers_Divisions_ID" ColumnName="SystemUsers_Divisions_ID" />
+          <ScalarProperty Name="Divisions_ID" ColumnName="Divisions_ID" />
+          <ScalarProperty Name="Divisions_Name" ColumnName="Divisions_Name" />
+          <ScalarProperty Name="Divisions_Type" ColumnName="Divisions_Type" />
+          <ScalarProperty Name="Divisions_Status" ColumnName="Divisions_Status" />
+          <ScalarProperty Name="Divisions_Disable" ColumnName="Divisions_Disable" />
+          <ScalarProperty Name="SystemUsers_UserGroup" ColumnName="SystemUsers_UserGroup" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+          <ScalarProperty Name="SystemUsers_Name" ColumnName="SystemUsers_Name" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_Birthday" ColumnName="SystemUsers_Birthday" />
+          <ScalarProperty Name="SystemUsers_Identifier1" ColumnName="SystemUsers_Identifier1" />
+          <ScalarProperty Name="SystemUsers_Identifier2" ColumnName="SystemUsers_Identifier2" />
+          <ScalarProperty Name="SystemUsers_Identifier3" ColumnName="SystemUsers_Identifier3" />
+          <ScalarProperty Name="SystemUsers_Image" ColumnName="SystemUsers_Image" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_Divisions_AvaiableDate" ColumnName="SystemUsers_Divisions_AvaiableDate" />
+          <ScalarProperty Name="SystemUsers_Divisions_CreatedDate" ColumnName="SystemUsers_Divisions_CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Divisions_Status" ColumnName="SystemUsers_Divisions_Status" />
+          <ScalarProperty Name="SystemUsers_Divisions_Disable" ColumnName="SystemUsers_Divisions_Disable" />
+          <ScalarProperty Name="SystemUsers_Divisions_Type" ColumnName="SystemUsers_Divisions_Type" />
+          <ScalarProperty Name="SystemUserExts_ID" ColumnName="SystemUserExts_ID" />
+          <ScalarProperty Name="SystemUserExts_BirthPlace" ColumnName="SystemUserExts_BirthPlace" />
+          <ScalarProperty Name="SystemUserExts_Hometown" ColumnName="SystemUserExts_Hometown" />
+          <ScalarProperty Name="SystemUserExts_Address" ColumnName="SystemUserExts_Address" />
+          <ScalarProperty Name="SystemUserExts_InsuranceNumber" ColumnName="SystemUserExts_InsuranceNumber" />
+          <ScalarProperty Name="SystemUserExts_YearJob" ColumnName="SystemUserExts_YearJob" />
+          <ScalarProperty Name="SystemUserExts_YearPayroll" ColumnName="SystemUserExts_YearPayroll" />
+          <ScalarProperty Name="SystemUserExts_YearUnemploymentInsurance" ColumnName="SystemUserExts_YearUnemploymentInsurance" />
+          <ScalarProperty Name="SystemUserExts_DifferenceContact" ColumnName="SystemUserExts_DifferenceContact" />
+          <ScalarProperty Name="SystemUsers_Divisions_ExpireDate" ColumnName="SystemUsers_Divisions_ExpireDate" />
+          <ScalarProperty Name="SystemUsers_Gender" ColumnName="SystemUsers_Gender" />
+          <ScalarProperty Name="SystemUsers_Disable" ColumnName="SystemUsers_Disable" />
+          <ScalarProperty Name="SystemUsers_Identifier1CreatedDate" ColumnName="SystemUsers_Identifier1CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Identifier2CreatedDate" ColumnName="SystemUsers_Identifier2CreatedDate" />
+          <ScalarProperty Name="SystemUsers_Identifier3CreatedDate" ColumnName="SystemUsers_Identifier3CreatedDate" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue1" ColumnName="SystemUsers_PlaceOfIssue1" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue2" ColumnName="SystemUsers_PlaceOfIssue2" />
+          <ScalarProperty Name="SystemUsers_PlaceOfIssue3" ColumnName="SystemUsers_PlaceOfIssue3" />
+          <ScalarProperty Name="SystemUsers_Phone" ColumnName="SystemUsers_Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_QueryDataPayment">
+      <EntityTypeMapping TypeName="Model.vw_QueryDataPayment">
+        <MappingFragment StoreEntitySet="vw_QueryDataPayment">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+          <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+          <ScalarProperty Name="BookingRooms_Services_Status" ColumnName="BookingRooms_Services_Status" />
+          <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+          <ScalarProperty Name="BookingRooms_Services_IDService" ColumnName="BookingRooms_Services_IDService" />
+          <ScalarProperty Name="Services_Name_Room" ColumnName="Services_Name_Room" />
+          <ScalarProperty Name="BookingHalls_Services_IDService" ColumnName="BookingHalls_Services_IDService" />
+          <ScalarProperty Name="Services_Name_Hall" ColumnName="Services_Name_Hall" />
+          <ScalarProperty Name="BookingHs_CreatedDate" ColumnName="BookingHs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="Services_IDServiceGroups_Room" ColumnName="Services_IDServiceGroups_Room" />
+          <ScalarProperty Name="Services_Type_Room" ColumnName="Services_Type_Room" />
+          <ScalarProperty Name="Services_Type_Hall" ColumnName="Services_Type_Hall" />
+          <ScalarProperty Name="Services_IDServiceGroups_Hall" ColumnName="Services_IDServiceGroups_Hall" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_IDLang" ColumnName="Rooms_IDLang" />
+          <ScalarProperty Name="Halls_IDLang" ColumnName="Halls_IDLang" />
+          <ScalarProperty Name="Halls_Sku" ColumnName="Halls_Sku" />
+          <ScalarProperty Name="BookingRooms_Services_Cost" ColumnName="BookingRooms_Services_Cost" />
+          <ScalarProperty Name="BookingRooms_Services_Date" ColumnName="BookingRooms_Services_Date" />
+          <ScalarProperty Name="BookingRooms_Services_PercentTax" ColumnName="BookingRooms_Services_PercentTax" />
+          <ScalarProperty Name="BookingRooms_Services_Quantity" ColumnName="BookingRooms_Services_Quantity" />
+          <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+          <ScalarProperty Name="BookingRooms_Services_Disable" ColumnName="BookingRooms_Services_Disable" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+          <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+          <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+          <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+          <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+          <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+          <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+          <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+          <ScalarProperty Name="BookingRooms_AcceptDate" ColumnName="BookingRooms_AcceptDate" />
+          <ScalarProperty Name="BookingRooms_InvoiceNumber" ColumnName="BookingRooms_InvoiceNumber" />
+          <ScalarProperty Name="BookingRooms_Services_Type" ColumnName="BookingRooms_Services_Type" />
+          <ScalarProperty Name="BookingRooms_InvoiceDate" ColumnName="BookingRooms_InvoiceDate" />
+          <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+          <ScalarProperty Name="BookingHalls_InvoiceDate" ColumnName="BookingHalls_InvoiceDate" />
+          <ScalarProperty Name="BookingHalls_InvoiceNumber" ColumnName="BookingHalls_InvoiceNumber" />
+          <ScalarProperty Name="BookingHalls_AcceptDate" ColumnName="BookingHalls_AcceptDate" />
+          <ScalarProperty Name="BookingHalls_IndexSubPayment" ColumnName="BookingHalls_IndexSubPayment" />
+          <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+          <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+          <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+          <ScalarProperty Name="BookingRs_AcceptDate" ColumnName="BookingRs_AcceptDate" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="BookingRooms_IndexSubPayment" ColumnName="BookingRooms_IndexSubPayment" />
+          <ScalarProperty Name="BookingHs_InvoiceNumber" ColumnName="BookingHs_InvoiceNumber" />
+          <ScalarProperty Name="BookingHs_InvoiceDate" ColumnName="BookingHs_InvoiceDate" />
+          <ScalarProperty Name="BookingHs_AcceptDate" ColumnName="BookingHs_AcceptDate" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+          <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+          <ScalarProperty Name="BookingHalls_Date" ColumnName="BookingHalls_Date" />
+          <ScalarProperty Name="BookingHalls_LunarDate" ColumnName="BookingHalls_LunarDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Support1_DataPayment">
+      <EntityTypeMapping TypeName="Model.vw_Support1_DataPayment">
+        <MappingFragment StoreEntitySet="vw_Support1_DataPayment">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="BookingRooms_Services_IDService" ColumnName="BookingRooms_Services_IDService" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+          <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+          <ScalarProperty Name="BookingRs_IDSystemUser" ColumnName="BookingRs_IDSystemUser" />
+          <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+          <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+          <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+          <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+          <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRs_DatePay" ColumnName="BookingRs_DatePay" />
+          <ScalarProperty Name="BookingRs_DateEdit" ColumnName="BookingRs_DateEdit" />
+          <ScalarProperty Name="BookingRs_IDCustomerGroup" ColumnName="BookingRs_IDCustomerGroup" />
+          <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+          <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+          <ScalarProperty Name="BookingRs_AcceptDate" ColumnName="BookingRs_AcceptDate" />
+          <ScalarProperty Name="BookingRooms_CodeRoom" ColumnName="BookingRooms_CodeRoom" />
+          <ScalarProperty Name="BookingRooms_Cost" ColumnName="BookingRooms_Cost" />
+          <ScalarProperty Name="BookingRooms_PercentTax" ColumnName="BookingRooms_PercentTax" />
+          <ScalarProperty Name="BookingRooms_CheckInPlan" ColumnName="BookingRooms_CheckInPlan" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutPlan" ColumnName="BookingRooms_CheckOutPlan" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_BookingStatus" ColumnName="BookingRooms_BookingStatus" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="BookingRooms_CostPendingRoom" ColumnName="BookingRooms_CostPendingRoom" />
+          <ScalarProperty Name="BookingRooms_TimeInUse" ColumnName="BookingRooms_TimeInUse" />
+          <ScalarProperty Name="BookingRooms_Type" ColumnName="BookingRooms_Type" />
+          <ScalarProperty Name="BookingRooms_Disable" ColumnName="BookingRooms_Disable" />
+          <ScalarProperty Name="BookingRooms_IndexSubPayment" ColumnName="BookingRooms_IndexSubPayment" />
+          <ScalarProperty Name="BookingRooms_PriceType" ColumnName="BookingRooms_PriceType" />
+          <ScalarProperty Name="BookingRooms_AddTimeStart" ColumnName="BookingRooms_AddTimeStart" />
+          <ScalarProperty Name="BookingRooms_AddTimeEnd" ColumnName="BookingRooms_AddTimeEnd" />
+          <ScalarProperty Name="BookingRooms_AcceptDate" ColumnName="BookingRooms_AcceptDate" />
+          <ScalarProperty Name="BookingRooms_InvoiceNumber" ColumnName="BookingRooms_InvoiceNumber" />
+          <ScalarProperty Name="BookingRooms_InvoiceDate" ColumnName="BookingRooms_InvoiceDate" />
+          <ScalarProperty Name="BookingRooms_Services_Type" ColumnName="BookingRooms_Services_Type" />
+          <ScalarProperty Name="BookingRooms_Services_Status" ColumnName="BookingRooms_Services_Status" />
+          <ScalarProperty Name="BookingRooms_Services_Disable" ColumnName="BookingRooms_Services_Disable" />
+          <ScalarProperty Name="BookingRooms_Services_Cost" ColumnName="BookingRooms_Services_Cost" />
+          <ScalarProperty Name="BookingRooms_Services_Date" ColumnName="BookingRooms_Services_Date" />
+          <ScalarProperty Name="BookingRooms_Services_PercentTax" ColumnName="BookingRooms_Services_PercentTax" />
+          <ScalarProperty Name="BookingRooms_Services_Quantity" ColumnName="BookingRooms_Services_Quantity" />
+          <ScalarProperty Name="BookingRooms_Services_IndexSubPayment" ColumnName="BookingRooms_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
+          <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+          <ScalarProperty Name="Services_Name_Room" ColumnName="Services_Name_Room" />
+          <ScalarProperty Name="Services_IDServiceGroups_Room" ColumnName="Services_IDServiceGroups_Room" />
+          <ScalarProperty Name="Services_Type_Room" ColumnName="Services_Type_Room" />
+          <ScalarProperty Name="Rooms_IDLang" ColumnName="Rooms_IDLang" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Support2_DataPayment">
+      <EntityTypeMapping TypeName="Model.vw_Support2_DataPayment">
+        <MappingFragment StoreEntitySet="vw_Support2_DataPayment">
+          <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+          <ScalarProperty Name="BookingHs_CreatedDate" ColumnName="BookingHs_CreatedDate" />
+          <ScalarProperty Name="BookingHs_CustomerType" ColumnName="BookingHs_CustomerType" />
+          <ScalarProperty Name="BookingHs_BookingType" ColumnName="BookingHs_BookingType" />
+          <ScalarProperty Name="BookingHs_PayMenthod" ColumnName="BookingHs_PayMenthod" />
+          <ScalarProperty Name="BookingHs_StatusPay" ColumnName="BookingHs_StatusPay" />
+          <ScalarProperty Name="BookingHs_BookingMoney" ColumnName="BookingHs_BookingMoney" />
+          <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+          <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
+          <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
+          <ScalarProperty Name="BookingHs_Level" ColumnName="BookingHs_Level" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingHs_IDCustomer" ColumnName="BookingHs_IDCustomer" />
+          <ScalarProperty Name="BookingHs_IDCustomerGroup" ColumnName="BookingHs_IDCustomerGroup" />
+          <ScalarProperty Name="BookingHs_DatePay" ColumnName="BookingHs_DatePay" />
+          <ScalarProperty Name="BookingHs_InvoiceNumber" ColumnName="BookingHs_InvoiceNumber" />
+          <ScalarProperty Name="BookingHs_InvoiceDate" ColumnName="BookingHs_InvoiceDate" />
+          <ScalarProperty Name="BookingHs_AcceptDate" ColumnName="BookingHs_AcceptDate" />
+          <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+          <ScalarProperty Name="BookingHalls_CodeHall" ColumnName="BookingHalls_CodeHall" />
+          <ScalarProperty Name="BookingHalls_Cost" ColumnName="BookingHalls_Cost" />
+          <ScalarProperty Name="BookingHalls_PercentTax" ColumnName="BookingHalls_PercentTax" />
+          <ScalarProperty Name="BookingHalls_Date" ColumnName="BookingHalls_Date" />
+          <ScalarProperty Name="BookingHalls_LunarDate" ColumnName="BookingHalls_LunarDate" />
+          <ScalarProperty Name="BookingHalls_BookingStatus" ColumnName="BookingHalls_BookingStatus" />
+          <ScalarProperty Name="BookingHalls_StartTime" ColumnName="BookingHalls_StartTime" />
+          <ScalarProperty Name="BookingHalls_EndTime" ColumnName="BookingHalls_EndTime" />
+          <ScalarProperty Name="BookingHalls_IndexSubPayment" ColumnName="BookingHalls_IndexSubPayment" />
+          <ScalarProperty Name="BookingHalls_InvoiceDate" ColumnName="BookingHalls_InvoiceDate" />
+          <ScalarProperty Name="BookingHalls_InvoiceNumber" ColumnName="BookingHalls_InvoiceNumber" />
+          <ScalarProperty Name="BookingHalls_AcceptDate" ColumnName="BookingHalls_AcceptDate" />
+          <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+          <ScalarProperty Name="BookingHalls_Services_ID" ColumnName="BookingHalls_Services_ID" />
+          <ScalarProperty Name="BookingHalls_Services_Type" ColumnName="BookingHalls_Services_Type" />
+          <ScalarProperty Name="BookingHalls_Services_Status" ColumnName="BookingHalls_Services_Status" />
+          <ScalarProperty Name="BookingHalls_Services_Disable" ColumnName="BookingHalls_Services_Disable" />
+          <ScalarProperty Name="BookingHalls_Services_IDService" ColumnName="BookingHalls_Services_IDService" />
+          <ScalarProperty Name="BookingHalls_Services_Cost" ColumnName="BookingHalls_Services_Cost" />
+          <ScalarProperty Name="BookingHalls_Services_Date" ColumnName="BookingHalls_Services_Date" />
+          <ScalarProperty Name="BookingHalls_Services_PercentTax" ColumnName="BookingHalls_Services_PercentTax" />
+          <ScalarProperty Name="BookingHalls_Services_Quantity" ColumnName="BookingHalls_Services_Quantity" />
+          <ScalarProperty Name="BookingHalls_Services_IndexSubPayment" ColumnName="BookingHalls_Services_IndexSubPayment" />
+          <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
+          <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
+          <ScalarProperty Name="Services_Name_Hall" ColumnName="Services_Name_Hall" />
+          <ScalarProperty Name="Services_Status_Hall" ColumnName="Services_Status_Hall" />
+          <ScalarProperty Name="Services_Type_Hall" ColumnName="Services_Type_Hall" />
+          <ScalarProperty Name="Services_IDServiceGroups_Hall" ColumnName="Services_IDServiceGroups_Hall" />
+          <ScalarProperty Name="Halls_Sku" ColumnName="Halls_Sku" />
+          <ScalarProperty Name="Halls_IDLang" ColumnName="Halls_IDLang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Model.Store.f_split" FunctionImportName="f_split">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.f_split_Result">
+          <ScalarProperty Name="val" ColumnName="val" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Model.Store.Get_Status_Room_In_Date" FunctionImportName="Get_Status_Room_In_Date">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.Get_Status_Room_In_Date_Result">
+          <ScalarProperty Name="DayIndex" ColumnName="DayIndex" />
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_PayMethod" ColumnName="BookingRs_PayMethod" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_Type" ColumnName="BookingRooms_Type" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="BookingRooms_AddTimeStart" ColumnName="BookingRooms_AddTimeStart" />
+          <ScalarProperty Name="BookingRooms_AddTimeEnd" ColumnName="BookingRooms_AddTimeEnd" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Company_Type" ColumnName="Company_Type" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="NumberCustomer" ColumnName="NumberCustomer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_BookingExt_GetAllBooking" FunctionName="Model.Store.sp_BookingExt_GetAllBooking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingExt_GetAllBooking_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="BookingMoney" ColumnName="BookingMoney" />
+          <ScalarProperty Name="DatePay" ColumnName="DatePay" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="StatusPay" ColumnName="StatusPay" />
+          <ScalarProperty Name="PayMenthod" ColumnName="PayMenthod" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="RoomsInvoiceNotTax" ColumnName="RoomsInvoiceNotTax" />
+          <ScalarProperty Name="RoomsInvoiceTax" ColumnName="RoomsInvoiceTax" />
+          <ScalarProperty Name="ServiceRooms1_NotTax" ColumnName="ServiceRooms1_NotTax" />
+          <ScalarProperty Name="ServiceRooms1_Tax" ColumnName="ServiceRooms1_Tax" />
+          <ScalarProperty Name="ServiceRooms2_NotTax" ColumnName="ServiceRooms2_NotTax" />
+          <ScalarProperty Name="ServiceRooms2_Tax" ColumnName="ServiceRooms2_Tax" />
+          <ScalarProperty Name="ServiceRooms3_NotTax" ColumnName="ServiceRooms3_NotTax" />
+          <ScalarProperty Name="ServiceRooms3_Tax" ColumnName="ServiceRooms3_Tax" />
+          <ScalarProperty Name="HallsInvoiceNotTax" ColumnName="HallsInvoiceNotTax" />
+          <ScalarProperty Name="HallsInvoiceTax" ColumnName="HallsInvoiceTax" />
+          <ScalarProperty Name="ServiceHalls1_NotTax" ColumnName="ServiceHalls1_NotTax" />
+          <ScalarProperty Name="ServiceHalls1_Tax" ColumnName="ServiceHalls1_Tax" />
+          <ScalarProperty Name="ServiceHalls2_NotTax" ColumnName="ServiceHalls2_NotTax" />
+          <ScalarProperty Name="ServiceHalls2_Tax" ColumnName="ServiceHalls2_Tax" />
+          <ScalarProperty Name="ServiceHalls3_NotTax" ColumnName="ServiceHalls3_NotTax" />
+          <ScalarProperty Name="ServiceHalls3_Tax" ColumnName="ServiceHalls3_Tax" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRooms_CheckConflict_CheckTimeError" FunctionName="Model.Store.sp_BookingRooms_CheckConflict_CheckTimeError">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRooms_CheckConflict_CheckTimeError_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRooms_CheckConflict_Status678Now" FunctionName="Model.Store.sp_BookingRooms_CheckConflict_Status678Now">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRooms_CheckConflict_Status678Now_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRooms_CheckConflict_StatusError" FunctionName="Model.Store.sp_BookingRooms_CheckConflict_StatusError">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRooms_CheckConflict_StatusError_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRooms_Select_ByTime" FunctionName="Model.Store.sp_BookingRooms_Select_ByTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRooms_Select_ByTime_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostRef_Rooms" ColumnName="CostRef_Rooms" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CheckInPlan" ColumnName="CheckInPlan" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="CheckOutPlan" ColumnName="CheckOutPlan" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IsAllDayEvent" ColumnName="IsAllDayEvent" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="IsRecurring" ColumnName="IsRecurring" />
+          <ScalarProperty Name="IsEditable" ColumnName="IsEditable" />
+          <ScalarProperty Name="AdditionalColumn1" ColumnName="AdditionalColumn1" />
+          <ScalarProperty Name="CostPendingRoom" ColumnName="CostPendingRoom" />
+          <ScalarProperty Name="TimeInUse" ColumnName="TimeInUse" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IndexSubPayment" ColumnName="IndexSubPayment" />
+          <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+          <ScalarProperty Name="AddTimeStart" ColumnName="AddTimeStart" />
+          <ScalarProperty Name="AddTimeEnd" ColumnName="AddTimeEnd" />
+          <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus" FunctionName="Model.Store.sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result">
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRs_CheckConflict_Level_CustomerType" FunctionName="Model.Store.sp_BookingRs_CheckConflict_Level_CustomerType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRs_CheckConflict_Level_CustomerType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay" FunctionName="Model.Store.sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRs_CreatedDate" ColumnName="BookingRs_CreatedDate" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_BookingType" ColumnName="BookingRs_BookingType" />
+          <ScalarProperty Name="BookingRs_Note" ColumnName="BookingRs_Note" />
+          <ScalarProperty Name="BookingRs_IDCustomer" ColumnName="BookingRs_IDCustomer" />
+          <ScalarProperty Name="BookingRs_IDSystemUser" ColumnName="BookingRs_IDSystemUser" />
+          <ScalarProperty Name="BookingRs_PayMenthod" ColumnName="BookingRs_PayMenthod" />
+          <ScalarProperty Name="BookingRs_StatusPay" ColumnName="BookingRs_StatusPay" />
+          <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+          <ScalarProperty Name="BookingRs_ExchangeRate" ColumnName="BookingRs_ExchangeRate" />
+          <ScalarProperty Name="BookingRs_Status" ColumnName="BookingRs_Status" />
+          <ScalarProperty Name="BookingRs_Type" ColumnName="BookingRs_Type" />
+          <ScalarProperty Name="BookingRs_Disable" ColumnName="BookingRs_Disable" />
+          <ScalarProperty Name="BookingRs_Level" ColumnName="BookingRs_Level" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRs_Description" ColumnName="BookingRs_Description" />
+          <ScalarProperty Name="BookingRs_DatePay" ColumnName="BookingRs_DatePay" />
+          <ScalarProperty Name="BookingRs_DateEdit" ColumnName="BookingRs_DateEdit" />
+          <ScalarProperty Name="BookingRs_IDCustomerGroup" ColumnName="BookingRs_IDCustomerGroup" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Identifier1" ColumnName="Customers_Identifier1" />
+          <ScalarProperty Name="Customers_Identifier2" ColumnName="Customers_Identifier2" />
+          <ScalarProperty Name="Customers_Identifier3" ColumnName="Customers_Identifier3" />
+          <ScalarProperty Name="Customers_Type" ColumnName="Customers_Type" />
+          <ScalarProperty Name="Companies_ID" ColumnName="Companies_ID" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+          <ScalarProperty Name="Companies_Type" ColumnName="Companies_Type" />
+          <ScalarProperty Name="Companies_Status" ColumnName="Companies_Status" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="CustomerGroups_Status" ColumnName="CustomerGroups_Status" />
+          <ScalarProperty Name="Customers_Gender" ColumnName="Customers_Gender" />
+          <ScalarProperty Name="Customers_Citizen" ColumnName="Customers_Citizen" />
+          <ScalarProperty Name="BookingRs_BookingHs_IDBookingH" ColumnName="BookingRs_BookingHs_IDBookingH" />
+          <ScalarProperty Name="BookingHs_Status" ColumnName="BookingHs_Status" />
+          <ScalarProperty Name="BookingHs_StatusPay" ColumnName="BookingHs_StatusPay" />
+          <ScalarProperty Name="BookingHs_Type" ColumnName="BookingHs_Type" />
+          <ScalarProperty Name="BookingHs_Disable" ColumnName="BookingHs_Disable" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingRs_InvoiceNumber" ColumnName="BookingRs_InvoiceNumber" />
+          <ScalarProperty Name="BookingRs_InvoiceDate" ColumnName="BookingRs_InvoiceDate" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Contracts_GetCurrentHaveNotAllowances" FunctionName="Model.Store.sp_Contracts_GetCurrentHaveNotAllowances">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_Contracts_GetCurrentHaveNotAllowances_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="NumberContract" ColumnName="NumberContract" />
+          <ScalarProperty Name="NumberTemplateContract" ColumnName="NumberTemplateContract" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="StatutoryRepresent" ColumnName="StatutoryRepresent" />
+          <ScalarProperty Name="StatutoryRepresentGender" ColumnName="StatutoryRepresentGender" />
+          <ScalarProperty Name="StatutoryRepresentIdentifier" ColumnName="StatutoryRepresentIdentifier" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="SkuTableSalary" ColumnName="SkuTableSalary" />
+          <ScalarProperty Name="Coefficent" ColumnName="Coefficent" />
+          <ScalarProperty Name="SalaryNet" ColumnName="SalaryNet" />
+          <ScalarProperty Name="SalaryCross" ColumnName="SalaryCross" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Get_Status_ListRooms_In_Month" FunctionName="Model.Store.sp_Get_Status_ListRooms_In_Month">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_Get_Status_ListRooms_In_Month_Result">
+          <ScalarProperty Name="DayIndex" ColumnName="DayIndex" />
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_PayMethod" ColumnName="BookingRs_PayMethod" />
+          <ScalarProperty Name="Rooms_Sku" ColumnName="Rooms_Sku" />
+          <ScalarProperty Name="Rooms_Code" ColumnName="Rooms_Code" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="BookingRooms_CheckInActual" ColumnName="BookingRooms_CheckInActual" />
+          <ScalarProperty Name="BookingRooms_CheckOutActual" ColumnName="BookingRooms_CheckOutActual" />
+          <ScalarProperty Name="BookingRooms_Type" ColumnName="BookingRooms_Type" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="BookingRooms_AddTimeStart" ColumnName="BookingRooms_AddTimeStart" />
+          <ScalarProperty Name="BookingRooms_AddTimeEnd" ColumnName="BookingRooms_AddTimeEnd" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Company_Type" ColumnName="Company_Type" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="CustomerGroups_Type" ColumnName="CustomerGroups_Type" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="NumberCustomer" ColumnName="NumberCustomer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime" FunctionName="Model.Store.sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="NumTableMax" ColumnName="NumTableMax" />
+          <ScalarProperty Name="NumTableStandard" ColumnName="NumTableStandard" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="LunarDate" ColumnName="LunarDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="TableOrPerson" ColumnName="TableOrPerson" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Tel" ColumnName="Customers_Tel" />
+          <ScalarProperty Name="Customers_Address" ColumnName="Customers_Address" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingHs_CustomerType" ColumnName="BookingHs_CustomerType" />
+          <ScalarProperty Name="BookingHs_BookingMoney" ColumnName="BookingHs_BookingMoney" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HallExt_GetStatusBookingHalls_ByRankTime" FunctionName="Model.Store.sp_HallExt_GetStatusBookingHalls_ByRankTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_HallExt_GetStatusBookingHalls_ByRankTime_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="NumTableMax" ColumnName="NumTableMax" />
+          <ScalarProperty Name="NumTableStandard" ColumnName="NumTableStandard" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BookingHalls_ID" ColumnName="BookingHalls_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="LunarDate" ColumnName="LunarDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="TableOrPerson" ColumnName="TableOrPerson" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Tel" ColumnName="Customers_Tel" />
+          <ScalarProperty Name="Customers_Address" ColumnName="Customers_Address" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="BookingHalls_Status" ColumnName="BookingHalls_Status" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="BookingHs_ID" ColumnName="BookingHs_ID" />
+          <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+          <ScalarProperty Name="BookingHs_CustomerType" ColumnName="BookingHs_CustomerType" />
+          <ScalarProperty Name="BookingHs_BookingMoney" ColumnName="BookingHs_BookingMoney" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_PaymentExt_GetAllData" FunctionName="Model.Store.sp_PaymentExt_GetAllData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_PaymentExt_GetAllData_Result">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+          <ScalarProperty Name="SkuObject" ColumnName="SkuObject" />
+          <ScalarProperty Name="IDService" ColumnName="IDService" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="QualityServices" ColumnName="QualityServices" />
+          <ScalarProperty Name="Services_Cost" ColumnName="Services_Cost" />
+          <ScalarProperty Name="Services_PercentTax" ColumnName="Services_PercentTax" />
+          <ScalarProperty Name="Service_DateUse" ColumnName="Service_DateUse" />
+          <ScalarProperty Name="Service_PaymentStatus" ColumnName="Service_PaymentStatus" />
+          <ScalarProperty Name="Object_PaymentStatus" ColumnName="Object_PaymentStatus" />
+          <ScalarProperty Name="BillH_PaymentStatus" ColumnName="BillH_PaymentStatus" />
+          <ScalarProperty Name="BillR_PaymentStatus" ColumnName="BillR_PaymentStatus" />
+          <ScalarProperty Name="Services_SubPayment" ColumnName="Services_SubPayment" />
+          <ScalarProperty Name="Object_SubPayment" ColumnName="Object_SubPayment" />
+          <ScalarProperty Name="Bill_SubPayment" ColumnName="Bill_SubPayment" />
+          <ScalarProperty Name="Time1" ColumnName="Time1" />
+          <ScalarProperty Name="Time2" ColumnName="Time2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_PaymentExt_GetAllData_1" FunctionName="Model.Store.sp_PaymentExt_GetAllData_1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_PaymentExt_GetAllData_1_Result">
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+          <ScalarProperty Name="SkuObject" ColumnName="SkuObject" />
+          <ScalarProperty Name="IDService" ColumnName="IDService" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="QualityServices" ColumnName="QualityServices" />
+          <ScalarProperty Name="Services_Cost" ColumnName="Services_Cost" />
+          <ScalarProperty Name="Services_PercentTax" ColumnName="Services_PercentTax" />
+          <ScalarProperty Name="Service_DateUse" ColumnName="Service_DateUse" />
+          <ScalarProperty Name="Service_PaymentStatus" ColumnName="Service_PaymentStatus" />
+          <ScalarProperty Name="Object_PaymentStatus" ColumnName="Object_PaymentStatus" />
+          <ScalarProperty Name="BillH_PaymentStatus" ColumnName="BillH_PaymentStatus" />
+          <ScalarProperty Name="BillR_PaymentStatus" ColumnName="BillR_PaymentStatus" />
+          <ScalarProperty Name="Services_SubPayment" ColumnName="Services_SubPayment" />
+          <ScalarProperty Name="Object_SubPayment" ColumnName="Object_SubPayment" />
+          <ScalarProperty Name="Bill_SubPayment" ColumnName="Bill_SubPayment" />
+          <ScalarProperty Name="Time1" ColumnName="Time1" />
+          <ScalarProperty Name="Time2" ColumnName="Time2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime" FunctionName="Model.Store.sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Bed1" ColumnName="Bed1" />
+          <ScalarProperty Name="Bed2" ColumnName="Bed2" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CheckInPlan" ColumnName="CheckInPlan" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="CheckOutPlan" ColumnName="CheckOutPlan" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Customers_ID" ColumnName="Customers_ID" />
+          <ScalarProperty Name="Customers_Name" ColumnName="Customers_Name" />
+          <ScalarProperty Name="Customers_Tel" ColumnName="Customers_Tel" />
+          <ScalarProperty Name="Customers_Address" ColumnName="Customers_Address" />
+          <ScalarProperty Name="Customers_Nationality" ColumnName="Customers_Nationality" />
+          <ScalarProperty Name="BookingRooms_Status" ColumnName="BookingRooms_Status" />
+          <ScalarProperty Name="CustomerGroups_ID" ColumnName="CustomerGroups_ID" />
+          <ScalarProperty Name="CustomerGroups_Name" ColumnName="CustomerGroups_Name" />
+          <ScalarProperty Name="BookingRs_ID" ColumnName="BookingRs_ID" />
+          <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
+          <ScalarProperty Name="BookingRs_CustomerType" ColumnName="BookingRs_CustomerType" />
+          <ScalarProperty Name="BookingRs_BookingMoney" ColumnName="BookingRs_BookingMoney" />
+          <ScalarProperty Name="Companies_ID" ColumnName="Companies_ID" />
+          <ScalarProperty Name="Companies_Name" ColumnName="Companies_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Rooms_GetAvailable_ByTime_ByLang" FunctionName="Model.Store.sp_Rooms_GetAvailable_ByTime_ByLang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_Rooms_GetAvailable_ByTime_ByLang_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Bed1" ColumnName="Bed1" />
+          <ScalarProperty Name="Bed2" ColumnName="Bed2" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="CostRef" ColumnName="CostRef" />
+          <ScalarProperty Name="CostUnit" ColumnName="CostUnit" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RoomsExt_CalculationEfficiency" FunctionName="Model.Store.sp_RoomsExt_CalculationEfficiency">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_RoomsExt_CalculationEfficiency_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="TypeRoomEfficiency" ColumnName="TypeRoomEfficiency" />
+          <ScalarProperty Name="RankTime" ColumnName="RankTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RoomsExt_CalculationRevenue" FunctionName="Model.Store.sp_RoomsExt_CalculationRevenue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_RoomsExt_CalculationRevenue_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDBookingR" ColumnName="IDBookingR" />
+          <ScalarProperty Name="CodeRoom" ColumnName="CodeRoom" />
+          <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
+          <ScalarProperty Name="CheckOutActual" ColumnName="CheckOutActual" />
+          <ScalarProperty Name="CheckInPlan" ColumnName="CheckInPlan" />
+          <ScalarProperty Name="CheckOutPlan" ColumnName="CheckOutPlan" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="TimeInUse" ColumnName="TimeInUse" />
+          <ScalarProperty Name="PercentTax" ColumnName="PercentTax" />
+          <ScalarProperty Name="CostPendingRoom" ColumnName="CostPendingRoom" />
+          <ScalarProperty Name="TypeCalculationRevenue" ColumnName="TypeCalculationRevenue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Save_bookingroom_service" FunctionName="Model.Store.sp_Save_bookingroom_service" />
+    <FunctionImportMapping FunctionImportName="sp_SystemUsers_GetCurrentInDivision" FunctionName="Model.Store.sp_SystemUsers_GetCurrentInDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_SystemUsers_GetCurrentInDivision_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Identifier1" ColumnName="Identifier1" />
+          <ScalarProperty Name="Identifier2" ColumnName="Identifier2" />
+          <ScalarProperty Name="Identifier3" ColumnName="Identifier3" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IDRefMailSystem" ColumnName="IDRefMailSystem" />
+          <ScalarProperty Name="IDRefAnotherSystem" ColumnName="IDRefAnotherSystem" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Identifier1CreatedDate" ColumnName="Identifier1CreatedDate" />
+          <ScalarProperty Name="Identifier2CreatedDate" ColumnName="Identifier2CreatedDate" />
+          <ScalarProperty Name="Identifier3CreatedDate" ColumnName="Identifier3CreatedDate" />
+          <ScalarProperty Name="PlaceOfIssue1" ColumnName="PlaceOfIssue1" />
+          <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
+          <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SystemUsers_GetCurrentNotInDivision" FunctionName="Model.Store.sp_SystemUsers_GetCurrentNotInDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_SystemUsers_GetCurrentNotInDivision_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Identifier1" ColumnName="Identifier1" />
+          <ScalarProperty Name="Identifier2" ColumnName="Identifier2" />
+          <ScalarProperty Name="Identifier3" ColumnName="Identifier3" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IDRefMailSystem" ColumnName="IDRefMailSystem" />
+          <ScalarProperty Name="IDRefAnotherSystem" ColumnName="IDRefAnotherSystem" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Identifier1CreatedDate" ColumnName="Identifier1CreatedDate" />
+          <ScalarProperty Name="Identifier2CreatedDate" ColumnName="Identifier2CreatedDate" />
+          <ScalarProperty Name="Identifier3CreatedDate" ColumnName="Identifier3CreatedDate" />
+          <ScalarProperty Name="PlaceOfIssue1" ColumnName="PlaceOfIssue1" />
+          <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
+          <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Model.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

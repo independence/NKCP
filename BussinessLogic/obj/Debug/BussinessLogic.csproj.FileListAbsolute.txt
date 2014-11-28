@@ -1,0 +1,3 @@
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.Properties.Resources.resources
+D:\Picker_28_11_2014_ProjectGoverment\BussinessLogic\obj\Debug\BussinessLogic.csproj.GenerateResource.Cache

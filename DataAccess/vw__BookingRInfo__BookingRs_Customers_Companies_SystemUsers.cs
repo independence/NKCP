@@ -57,5 +57,9 @@ namespace DataAccess
         public Nullable<int> BookingHs_Type { get; set; }
         public Nullable<bool> BookingHs_Disable { get; set; }
         public string BookingHs_Subject { get; set; }
+        public string BookingRs_InvoiceNumber { get; set; }
+        public Nullable<System.DateTime> BookingRs_InvoiceDate { get; set; }
+        public string Rooms_Sku { get; set; }
+        public string Rooms_Code { get; set; }
     }
 }

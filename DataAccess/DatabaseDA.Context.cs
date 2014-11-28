@@ -40,6 +40,7 @@ namespace DataAccess
         public DbSet<Services> Services { get; set; }
         public DbSet<SystemUsers> SystemUsers { get; set; }
         public DbSet<Permits_SystemUsers1> Permits_SystemUsers1 { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<SystemUserExts> SystemUserExts { get; set; }
         public DbSet<BookingHalls> BookingHalls { get; set; }
         public DbSet<BookingHalls_Services> BookingHalls_Services { get; set; }
@@ -75,6 +76,7 @@ namespace DataAccess
         public DbSet<ExtraCosts> ExtraCosts { get; set; }
         public DbSet<Payment> Payment { get; set; }
         public DbSet<Rooms> Rooms { get; set; }
+        public DbSet<vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups> vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups { get; set; }
         public DbSet<vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers> vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers { get; set; }
         public DbSet<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups { get; set; }
         public DbSet<vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers> vw__BookingRInfo__BookingRs_Customers_Companies_SystemUsers { get; set; }
@@ -87,6 +89,23 @@ namespace DataAccess
         public DbSet<vw__SearchCustomer__Companies_CustomerGroups_Customers> vw__SearchCustomer__Companies_CustomerGroups_Customers { get; set; }
         public DbSet<vw__ServicesInfo__Services_ServiceGroups> vw__ServicesInfo__Services_ServiceGroups { get; set; }
         public DbSet<vw__SystemUsersInfo__SystemUsers_Divisions> vw__SystemUsersInfo__SystemUsers_Divisions { get; set; }
+        public DbSet<vw_QueryDataPayment> vw_QueryDataPayment { get; set; }
+        public DbSet<vw_Support1_DataPayment> vw_Support1_DataPayment { get; set; }
+        public DbSet<vw_Support2_DataPayment> vw_Support2_DataPayment { get; set; }
+    
+        [EdmFunction("DatabaseDA", "f_split")]
+        public virtual IQueryable<f_split_Result> f_split(string param, string delimiter)
+        {
+            var paramParameter = param != null ?
+                new ObjectParameter("param", param) :
+                new ObjectParameter("param", typeof(string));
+    
+            var delimiterParameter = delimiter != null ?
+                new ObjectParameter("delimiter", delimiter) :
+                new ObjectParameter("delimiter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<f_split_Result>("[DatabaseDA].[f_split](@param, @delimiter)", paramParameter, delimiterParameter);
+        }
     
         [EdmFunction("DatabaseDA", "Get_Status_Room_In_Date")]
         public virtual IQueryable<Get_Status_Room_In_Date_Result> Get_Status_Room_In_Date(Nullable<System.DateTime> checkDate)
@@ -96,6 +115,27 @@ namespace DataAccess
                 new ObjectParameter("CheckDate", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<Get_Status_Room_In_Date_Result>("[DatabaseDA].[Get_Status_Room_In_Date](@CheckDate)", checkDateParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
         }
     
         public virtual ObjectResult<sp_BookingExt_GetAllBooking_Result> sp_BookingExt_GetAllBooking(Nullable<System.DateTime> from, Nullable<System.DateTime> to)
@@ -149,7 +189,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_BookingRs_CheckConflict_Level_CustomerType_Result>("sp_BookingRs_CheckConflict_Level_CustomerType");
         }
     
-        public virtual ObjectResult<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(Nullable<System.DateTime> from, Nullable<System.DateTime> to, Nullable<int> customerType, Nullable<int> listStatus)
+        public virtual ObjectResult<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result> sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay(Nullable<System.DateTime> from, Nullable<System.DateTime> to, Nullable<int> customerType, string listStatus)
         {
             var fromParameter = from.HasValue ?
                 new ObjectParameter("From", from) :
@@ -163,9 +203,9 @@ namespace DataAccess
                 new ObjectParameter("CustomerType", customerType) :
                 new ObjectParameter("CustomerType", typeof(int));
     
-            var listStatusParameter = listStatus.HasValue ?
+            var listStatusParameter = listStatus != null ?
                 new ObjectParameter("ListStatus", listStatus) :
-                new ObjectParameter("ListStatus", typeof(int));
+                new ObjectParameter("ListStatus", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay_Result>("sp_BookingRsExt_GetInfo_ByTime_ByCustomerType_ByStatusPay", fromParameter, toParameter, customerTypeParameter, listStatusParameter);
         }
@@ -177,6 +217,40 @@ namespace DataAccess
                 new ObjectParameter("IDAllowance", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Contracts_GetCurrentHaveNotAllowances_Result>("sp_Contracts_GetCurrentHaveNotAllowances", iDAllowanceParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
         }
     
         public virtual ObjectResult<sp_Get_Status_ListRooms_In_Month_Result> sp_Get_Status_ListRooms_In_Month(Nullable<System.DateTime> checkpoint)
@@ -220,6 +294,59 @@ namespace DataAccess
                 new ObjectParameter("IsLunarDate", typeof(bool));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_HallExt_GetStatusBookingHalls_ByRankTime_Result>("sp_HallExt_GetStatusBookingHalls_ByRankTime", fromParameter, toParameter, isLunarDateParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_PaymentExt_GetAllData_Result> sp_PaymentExt_GetAllData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_Result>("sp_PaymentExt_GetAllData");
+        }
+    
+        public virtual ObjectResult<sp_PaymentExt_GetAllData_1_Result> sp_PaymentExt_GetAllData_1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PaymentExt_GetAllData_1_Result>("sp_PaymentExt_GetAllData_1");
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
         }
     
         public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime(Nullable<int> iDRoom, Nullable<System.DateTime> now)
@@ -286,6 +413,75 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomsExt_CalculationRevenue_Result>("sp_RoomsExt_CalculationRevenue", codeRoomParameter, startTimeParameter, endTimeParameter);
         }
     
+        public virtual ObjectResult<Nullable<bool>> sp_Save_bookingroom_service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<int> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate)
+        {
+            var iDParameter = iD.HasValue ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(int));
+    
+            var infoParameter = info != null ?
+                new ObjectParameter("Info", info) :
+                new ObjectParameter("Info", typeof(string));
+    
+            var typeParameter = type.HasValue ?
+                new ObjectParameter("Type", type) :
+                new ObjectParameter("Type", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            var disableParameter = disable.HasValue ?
+                new ObjectParameter("Disable", disable) :
+                new ObjectParameter("Disable", typeof(int));
+    
+            var iDBookingRoomParameter = iDBookingRoom.HasValue ?
+                new ObjectParameter("IDBookingRoom", iDBookingRoom) :
+                new ObjectParameter("IDBookingRoom", typeof(int));
+    
+            var iDServiceParameter = iDService.HasValue ?
+                new ObjectParameter("IDService", iDService) :
+                new ObjectParameter("IDService", typeof(int));
+    
+            var costParameter = cost.HasValue ?
+                new ObjectParameter("Cost", cost) :
+                new ObjectParameter("Cost", typeof(decimal));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            var percentTaxParameter = percentTax.HasValue ?
+                new ObjectParameter("PercentTax", percentTax) :
+                new ObjectParameter("PercentTax", typeof(double));
+    
+            var costRef_ServicesParameter = costRef_Services.HasValue ?
+                new ObjectParameter("CostRef_Services", costRef_Services) :
+                new ObjectParameter("CostRef_Services", typeof(decimal));
+    
+            var quantityParameter = quantity.HasValue ?
+                new ObjectParameter("Quantity", quantity) :
+                new ObjectParameter("Quantity", typeof(double));
+    
+            var indexSubPaymentParameter = indexSubPayment.HasValue ?
+                new ObjectParameter("IndexSubPayment", indexSubPayment) :
+                new ObjectParameter("IndexSubPayment", typeof(int));
+    
+            var invoiceDateParameter = invoiceDate.HasValue ?
+                new ObjectParameter("InvoiceDate", invoiceDate) :
+                new ObjectParameter("InvoiceDate", typeof(System.DateTime));
+    
+            var invoiceNumberParameter = invoiceNumber != null ?
+                new ObjectParameter("InvoiceNumber", invoiceNumber) :
+                new ObjectParameter("InvoiceNumber", typeof(string));
+    
+            var acceptDateParameter = acceptDate.HasValue ?
+                new ObjectParameter("AcceptDate", acceptDate) :
+                new ObjectParameter("AcceptDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_Save_bookingroom_service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
+        }
+    
         public virtual ObjectResult<sp_SystemUsers_GetCurrentInDivision_Result> sp_SystemUsers_GetCurrentInDivision(Nullable<int> iDDivision)
         {
             var iDDivisionParameter = iDDivision.HasValue ?
@@ -302,6 +498,11 @@ namespace DataAccess
                 new ObjectParameter("IDDivision", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SystemUsers_GetCurrentNotInDivision_Result>("sp_SystemUsers_GetCurrentNotInDivision", iDDivisionParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     }
 }

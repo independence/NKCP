@@ -1,0 +1,9 @@
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\Entity.dll
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\Entity.pdb
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\DataAccess.dll
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\EntityFramework.dll
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Picker_28_11_2014_ProjectGoverment\Entity\bin\Debug\DataAccess.pdb
+D:\Picker_28_11_2014_ProjectGoverment\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+D:\Picker_28_11_2014_ProjectGoverment\Entity\obj\Debug\Entity.dll
+D:\Picker_28_11_2014_ProjectGoverment\Entity\obj\Debug\Entity.pdb
