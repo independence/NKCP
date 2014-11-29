@@ -184,7 +184,11 @@ namespace RoomManager
                 lueNationality.Properties.ValueMember = "Code";
                 lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
 
-
+                if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
+                {
+                    RoomsBO aRoomsBO = new RoomsBO();
+                    lblRoomSku.Text = "Phòng số :" + aRoomsBO.Select_ByCodeRoom(this.aCurrent_CodeRoom, 1).Sku;
+                }
             }
             catch (Exception ex)
             {

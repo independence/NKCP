@@ -187,6 +187,7 @@ namespace RoomManager
                 lblBookingMoney_BookingR.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
                 //so tien con lai can thanh toan
                 lblTotalMoney_BookingR.Text = String.Format("{0:0,0}", (Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney));
+                
                 string TotalMoney_BookingRString = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(StringUtility.ConvertDecimalToString((Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()) + Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms())) - Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney)));
 
                 lblTotalMoney_BookingRString.Text = "(" + TotalMoney_BookingRString + ")";

@@ -36,7 +36,7 @@ namespace RoomManager
             this.customerType = customerType;
         }
         //Hiennv  25/11/2014
-        public frmTsk_CheckIn(frmMain afrmMain,string codeRoom,int customerType)
+        public frmTsk_CheckIn(frmMain afrmMain, string codeRoom, int customerType)
         {
             InitializeComponent();
             this.afrmMain = afrmMain;
@@ -78,8 +78,8 @@ namespace RoomManager
 
                 dgvSelectedRooms.DataSource = this.LoadListSelectRooms(dtpFrom.DateTime, dtpTo.DateTime);
                 dgvSelectedRooms.RefreshDataSource();
-                
-                
+
+
                 this.LoadAllListCustomers();
 
                 lueIDCompanies.Properties.DataSource = this.LoadListCompaniesByType(this.customerType);
@@ -104,6 +104,11 @@ namespace RoomManager
                 lueNationality.Properties.ValueMember = "Code";
                 lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
 
+                if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
+                {
+                    RoomsBO aRoomsBO = new RoomsBO();
+                    lblRoomSku.Text = "Phòng số :" + aRoomsBO.Select_ByCodeRoom(this.aCurrent_CodeRoom, 1).Sku;
+                }
 
             }
             catch (Exception ex)
@@ -198,7 +203,7 @@ namespace RoomManager
             {
                 if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
                 {
-                    
+
                     List<RoomMemberEN> aListRoomMemberEN = this.aListAvaiableRooms.Where(p => p.RoomCode == this.aCurrent_CodeRoom).ToList();
                     if (aListRoomMemberEN.Count > 0)
                     {
@@ -677,7 +682,7 @@ namespace RoomManager
         {
             try
             {
-                if(String.IsNullOrEmpty(txtNames.Text))
+                if (String.IsNullOrEmpty(txtNames.Text))
                 {
                     txtNames.Focus();
                     MessageBox.Show("Vui lòng nhập tên khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

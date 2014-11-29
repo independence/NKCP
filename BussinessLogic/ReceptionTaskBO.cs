@@ -912,34 +912,28 @@ namespace BussinessLogic
                 List<BookingRooms> aListBookingRooms = aListBookingRoomTemp.Where(br => br.IDBookingR == aListTemp[i].BookingRs_ID && br.CodeRoom == aListTemp[i].Rooms_Code).ToList();
                 if (aListBookingRooms.Count > 0)
                 {
-                    DateTime checkOut = DateTime.Now;
                     switch (aListBookingRooms[0].Status)
                     {
                         case 3:
                             aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check in";
-                            checkOut = aListBookingRooms[0].CheckOutPlan;
                             break;
                         case 5:
                             aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Pending";
-                            checkOut = aListBookingRooms[0].CheckOutActual;
                             break;
                         case 7:
                             aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã check out nhưng chưa thanh toán";
-                            checkOut = aListBookingRooms[0].CheckOutActual;
                             break;
                         case 8:
                             aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Đã thanh toán";
-                            checkOut = aListBookingRooms[0].CheckOutActual;
                             break;
                         default:
                             aBookingRStatusPayViewEN.BookingRoomStatusPayDisplay = "Chưa xác định";
-                            checkOut = aListBookingRooms[0].CheckOutPlan;
                             break;
                     }
                     aBookingRStatusPayViewEN.IDBookingRoom = aListBookingRooms[0].ID;
                     aBookingRStatusPayViewEN.BookingRooms_CodeRoom = aListBookingRooms[0].CodeRoom;
                     aBookingRStatusPayViewEN.CheckInActual = aListBookingRooms[0].CheckInActual;
-                    aBookingRStatusPayViewEN.CheckOut = checkOut;
+                    aBookingRStatusPayViewEN.CheckOut = aListBookingRooms[0].CheckOutPlan;
                 }
 
                 switch (aBookingRStatusPayViewEN.StatusPay)
@@ -3579,6 +3573,16 @@ namespace BussinessLogic
                         if (aListCustomers.Count > 0)
                         {
                             IDCustomer = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID;
+                            
+                            aCustomers = aListCustomers[0];
+                            aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
+                            aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
+                            aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
+                            aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
+                            aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomersBO.Update(aCustomers);
+
                         }
                         else
                         {
@@ -4077,6 +4081,14 @@ namespace BussinessLogic
                         if (aListCustomers.Count > 0)
                         {
                             IDCustomer = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].ID;
+                            aCustomers = aListCustomers[0];
+                            aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
+                            aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
+                            aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
+                            aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
+                            aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomersBO.Update(aCustomers);
                         }
                         else
                         {

@@ -33,6 +33,9 @@ namespace Entity
         public decimal? TotalMoney { get; set; }
         public decimal? TotalMoneyBeforeTax { get; set; }
         public bool IsPaid { get; set; }
+
+
+
         public decimal? GetMoneyService()
         {
             double? Quantity;

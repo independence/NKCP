@@ -10,6 +10,8 @@ using DataAccess;
 using DevExpress.XtraRichEdit.API.Word;
 
 using System.Linq;
+using System.Globalization;
+using Library;
 
 
 namespace RoomManager
@@ -17,6 +19,11 @@ namespace RoomManager
     public partial class frmRpt_SplitPayment_BookingRs : XtraReport
     {
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
+        List<ServiceGroupEN> aListServicesGroupEN = new List<ServiceGroupEN>();
+        List<ServiceUsedEN> aListServiceUsed = new List<ServiceUsedEN>();
+        List<int> aListIDServicesGroup = new List<int>();
+
+
         private int IndexSub = 0;
         public frmRpt_SplitPayment_BookingRs(NewPaymentEN aNewPaymentEN,int IndexSub)
         {
@@ -25,14 +32,12 @@ namespace RoomManager
             this.IndexSub = IndexSub;
             try
             {
-
-
                 lblNumberVote.Text = Convert.ToString(this.aNewPaymentEN.IDBookingR);
                 lblIIDBookingR.Text = Convert.ToString(this.aNewPaymentEN.IDBookingR);
-                lblNameCustomer.Text = this.aNewPaymentEN.NameCustomer;
-                lblGroup.Text = this.aNewPaymentEN.NameCustomerGroup;
-                lblCompany.Text = this.aNewPaymentEN.NameCompany;
-                lblTaxNumberCode.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
+                lblNameCustomer.Text = aNewPaymentEN.NameCustomer;
+                lblGroup.Text = aNewPaymentEN.NameCustomerGroup;
+                lblCompany.Text =aNewPaymentEN.NameCompany;
+                lblTaxNumberCode.Text =aNewPaymentEN.TaxNumberCodeCompany;
 
                 int day = DateTime.Now.Day;
                 int month = DateTime.Now.Month;
@@ -40,18 +45,48 @@ namespace RoomManager
                 lblDayMonthYear.Text = "Hà nội , ngày " + day.ToString() + " tháng " + month.ToString() + " năm " + year.ToString();
 
                 //------------- Phong ------------------------
-
                 List<BookingRoomUsedEN> aListBookingRoomUsedEN = new List<BookingRoomUsedEN>();
-                aListBookingRoomUsedEN = this.aNewPaymentEN.aListBookingRoomUsed.Where(r => r.IndexSubPayment == this.IndexSub).OrderBy(r => r.RoomSku).ToList();
-                aListBookingRoomUsedEN.Count();
-                List<ServiceUsedEN> aListServicesEN = new List<ServiceUsedEN>();
-                aListServicesEN = this.aNewPaymentEN.GetAllServiceUsedInRoom().Where(r => r.IndexSubPayment == this.IndexSub).OrderBy(r => r.Sku).ToList();
+                aListBookingRoomUsedEN = aNewPaymentEN.aListBookingRoomUsed.Where(r => r.IndexSubPayment == this.IndexSub).OrderBy(r => r.RoomSku).ToList();
 
+
+                aListServiceUsed = aNewPaymentEN.GetAllServiceUsedInRoom().Where(r => r.IndexSubPayment == this.IndexSub).OrderBy(r => r.Sku).ToList();
+                //Lấy List< IDServiceGroup>
+                List<int> aTemp = new List<int>();
+                int IDServiceGroup;
+                foreach (ServiceUsedEN item in aListServiceUsed)
+                {
+                    IDServiceGroup = new int();
+
+                    IDServiceGroup = item.IDServiceGroup;
+                    aTemp.Add(IDServiceGroup);
+                }
+                aListIDServicesGroup = aTemp.Distinct().ToList();
+
+                ServiceGroupEN aServicesGroupEN;
+                ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+
+
+                foreach (int item in aListIDServicesGroup)
+                {
+                    aServicesGroupEN = new ServiceGroupEN();
+                    aServicesGroupEN.IDServiceGroup = item;
+                    aServicesGroupEN.TotalMoneyBeforeTax = this.GetTotalMoneyServiceGroupBeforeTax(item);
+                    aServicesGroupEN.DisplayMoneyTax = aNewPaymentEN.GetMoneyTax(this.GetTotalMoneyServiceGroupBeforeTax(item), 10);
+                    aServicesGroupEN.TotalMoneyAfterTax = this.GetTotalMoneyServiceGroupAfterTax(item);
+                    aServicesGroupEN.ServiceGroupName = aServiceGroupsBO.Sel_ByID(item).Name;
+                    aListServicesGroupEN.Add(aServicesGroupEN);
+                }
+                
                 decimal? sumMoneyRoomBeforeTax = aListBookingRoomUsedEN.Sum(r => r.MoneyRoomBeforeTax);
-
+                decimal? SumMoneyTaxRoom = aListBookingRoomUsedEN.Sum(r => r.DisplayMoneyTaxRoom);
                 decimal? sumMoneyRoomBehindTax = aListBookingRoomUsedEN.Sum(r => r.MoneyRoom);
-                decimal? sumMoneyServiceRoomBehindTax = aListServicesEN.Sum(s => s.TotalMoney);
-                decimal? sumMoneyServiceRoomBeforeTax = aListServicesEN.Sum(s => s.TotalMoneyBeforeTax);
+
+
+                decimal? sumMoneyServiceRoomBeforeTax = aListServicesGroupEN.Sum(s => s.TotalMoneyBeforeTax);
+                decimal? sumMoneyTaxServices = aListServicesGroupEN.Sum(s => s.DisplayMoneyTax);
+                decimal? sumMoneyServiceRoomBehindTax = aListServicesGroupEN.Sum(s => s.TotalMoneyAfterTax);
+
+
 
                 decimal? BookingMoneyR = 0;         
 
@@ -62,40 +97,47 @@ namespace RoomManager
                 colCheckOut.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckOutActual", "{0:dd-MM-yyyy HH:mm}");
                 colBookingRoomCost.DataBindings.Add("Text", this.DetailReport.DataSource, "Cost", "{0:0,0.##}");
                 colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "DateUsed", "{0:0,0.##}");
-                colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "PercentTax");
-                colPaymentMoneyaRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
                 colMoneyRoomBeforeTax.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoomBeforeTax", "{0:0,0}");
+                colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "DisplayMoneyTaxRoom", "{0:0,0}");
+                colPaymentMoneyaRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
 
                 //tong tien phong truoc thue
-                lblSumMoneyRoomsBeforeTax.Text = String.Format("{0:0,0} (VND)", sumMoneyRoomBeforeTax);
+                lblSumMoneyRoomsBeforeTax.Text = String.Format("{0:0,0}", sumMoneyRoomBeforeTax);
+                //Tien thue phong 
+                lblSumMoneyRoomTax.Text = String.Format("{0:0,0}", SumMoneyTaxRoom);
                 //tong tien phong sau thue
-                lblSumMoneyRoomsBehindTax.Text = String.Format("{0:0,0} (VND)", sumMoneyRoomBehindTax);
+                lblSumMoneyRoomsBehindTax.Text = String.Format("{0:0,0}", sumMoneyRoomBehindTax);
 
                 //danh sach dich vu
-                this.DetailReport2.DataSource = aListServicesEN;
-                colNameSku.DataBindings.Add("Text", this.DetailReport2.DataSource, "Sku");
-                colNamService.DataBindings.Add("Text", this.DetailReport2.DataSource, "NameService");
-                colDateUse.DataBindings.Add("Text", this.DetailReport2.DataSource, "DateUsed", "{0:dd-MM-yyyy}");
-                colQuantity.DataBindings.Add("Text", this.DetailReport2.DataSource, "Quantity");
-                colBookingRooms_ServicesCost.DataBindings.Add("Text", this.DetailReport2.DataSource, "Cost", "{0:0,0}");
-                colPercentTaxService.DataBindings.Add("Text", this.DetailReport2.DataSource, "Tax");
-                colPaymentMoneyService.DataBindings.Add("Text", this.DetailReport2.DataSource, "TotalMoney", "{0:0,0}");
+                this.DetailReport2.DataSource = aListServicesGroupEN;
+                colNamService.DataBindings.Add("Text", this.DetailReport2.DataSource, "ServiceGroupName");
+                colTotalMoneyBeforeTax.DataBindings.Add("Text", this.DetailReport2.DataSource, "TotalMoneyBeforeTax", "{0:0,0}");
+                colPercentTaxService.DataBindings.Add("Text", this.DetailReport2.DataSource, "DisplayMoneyTax", "{0:0,0}");
+                colTotalMoneyServiceAfterTax.DataBindings.Add("Text", this.DetailReport2.DataSource, "TotalMoneyAfterTax", "{0:0,0}");
 
                 //tong tien dich vu truoc thue
-                lblSumMoneyService_BookingRBeforeTax.Text = String.Format("{0:0,0} (VND)", sumMoneyServiceRoomBeforeTax);
-
+                lblSumMoneyService_BookingRBeforeTax.Text = String.Format("{0:0,0}", sumMoneyServiceRoomBeforeTax);
+                //Tien thue dich vu
+                lblSumMoneyServiceTax.Text = String.Format("{0:0,0}", sumMoneyTaxServices);
                 //tong tien dich vu sau thue
-                lblSumMoneyService_BookingRBehindTax.Text = String.Format("{0:0,0} (VND)", sumMoneyServiceRoomBehindTax);
+                lblSumMoneyService_BookingRBehindTax.Text = String.Format("{0:0,0}", sumMoneyServiceRoomBehindTax);
 
 
                 //tong tien thanh toan truoc thue
-                lblTotalMoneyBookingRBeforeTax.Text = String.Format("{0:0,0} (VND)", (sumMoneyRoomBeforeTax + sumMoneyServiceRoomBeforeTax));
+                lblTotalMoneyBookingRBeforeTax.Text = String.Format("{0:0,0}", (sumMoneyRoomBeforeTax + sumMoneyServiceRoomBeforeTax));
+                //Tong tien thue
+                lblTotalMoneyTax.Text = String.Format("{0:0,0}", (SumMoneyTaxRoom + sumMoneyTaxServices));
                 //tong tien thanh toan sau thue
-                lblTotalMoneyBookingRBehindTax.Text = String.Format("{0:0,0} (VND)", (sumMoneyRoomBehindTax + sumMoneyServiceRoomBehindTax));
+                lblTotalMoneyBookingRBehindTax.Text = String.Format("{0:0,0}", (sumMoneyRoomBehindTax + sumMoneyServiceRoomBehindTax));
                 //So tien ung truoc
-                lblBookingMoney_BookingR.Text = String.Format("{0:0,0} (VND)", BookingMoneyR);
+                lblBookingMoney_BookingR.Text = String.Format("{0:0,0}", BookingMoneyR);
                 //so tien con lai can thanh toan
-                lblTotalMoney_BookingR.Text = String.Format("{0:0,0} (VND)", ((sumMoneyRoomBehindTax + sumMoneyServiceRoomBehindTax) - BookingMoneyR));
+                lblTotalMoney_BookingR.Text = String.Format("{0:0,0}", ((sumMoneyRoomBehindTax + sumMoneyServiceRoomBehindTax) - BookingMoneyR));
+
+
+                string TotalMoney_BookingRString = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(StringUtility.ConvertDecimalToString(Convert.ToDecimal((sumMoneyRoomBehindTax + sumMoneyServiceRoomBehindTax) - BookingMoneyR)));
+                lblTotalMoney_BookingRString.Text = "(" + TotalMoney_BookingRString + ")";
+
 
 
             }
@@ -104,6 +146,27 @@ namespace RoomManager
                 ex.ToString();
             }
         }
-
+        public decimal? GetTotalMoneyServiceGroupBeforeTax(int IDServiceGroup)
+        {
+            decimal? TotalMoneyServiceGroupBeforeTax = 0;
+            List<ServiceUsedEN> aTemp = aListServiceUsed.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
+            foreach (ServiceUsedEN item in aTemp)
+            {
+                decimal? cost = item.GetMoneyServiceBeforeTax();
+                TotalMoneyServiceGroupBeforeTax = TotalMoneyServiceGroupBeforeTax + cost;
+            }
+            return TotalMoneyServiceGroupBeforeTax;
+        }
+        public decimal? GetTotalMoneyServiceGroupAfterTax(int IDServiceGroup)
+        {
+            decimal? TotalMoneyServiceGroupAfterTax = 0;
+            List<ServiceUsedEN> aTemp = aListServiceUsed.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
+            foreach (ServiceUsedEN item in aTemp)
+            {
+                decimal? cost = item.GetMoneyService();
+                TotalMoneyServiceGroupAfterTax = TotalMoneyServiceGroupAfterTax + cost;
+            }
+            return TotalMoneyServiceGroupAfterTax;
+        }
     }
 }
