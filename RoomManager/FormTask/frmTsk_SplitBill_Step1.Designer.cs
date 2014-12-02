@@ -84,6 +84,10 @@
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtAddSubPaymentH = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab)).BeginInit();
             this.xtraTab.SuspendLayout();
@@ -206,8 +210,9 @@
             // 
             // viewServicesRoom
             // 
-            this.viewServicesRoom.ColumnPanelRowHeight = 30;
+            this.viewServicesRoom.ColumnPanelRowHeight = 40;
             this.viewServicesRoom.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn28,
             this.gridColumn3,
             this.colDate,
             this.gridColumn2,
@@ -239,7 +244,7 @@
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
-            this.gridColumn3.Width = 90;
+            this.gridColumn3.Width = 80;
             // 
             // colDate
             // 
@@ -262,7 +267,7 @@
             this.colDate.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 1;
-            this.colDate.Width = 100;
+            this.colDate.Width = 89;
             // 
             // gridColumn2
             // 
@@ -281,7 +286,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 150;
+            this.gridColumn2.Width = 134;
             // 
             // colCost
             // 
@@ -300,7 +305,7 @@
             this.colCost.OptionsColumn.AllowFocus = false;
             this.colCost.Visible = true;
             this.colCost.VisibleIndex = 3;
-            this.colCost.Width = 150;
+            this.colCost.Width = 134;
             // 
             // colQuantity
             // 
@@ -320,7 +325,7 @@
             this.colQuantity.OptionsColumn.AllowFocus = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 4;
-            this.colQuantity.Width = 100;
+            this.colQuantity.Width = 89;
             // 
             // colPercentTax
             // 
@@ -338,8 +343,8 @@
             this.colPercentTax.OptionsColumn.AllowEdit = false;
             this.colPercentTax.OptionsColumn.AllowFocus = false;
             this.colPercentTax.Visible = true;
-            this.colPercentTax.VisibleIndex = 5;
-            this.colPercentTax.Width = 100;
+            this.colPercentTax.VisibleIndex = 6;
+            this.colPercentTax.Width = 93;
             // 
             // gridColumn4
             // 
@@ -357,8 +362,8 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 6;
-            this.gridColumn4.Width = 150;
+            this.gridColumn4.VisibleIndex = 7;
+            this.gridColumn4.Width = 141;
             // 
             // colChooseService
             // 
@@ -373,7 +378,7 @@
             this.colChooseService.FieldName = "IndexSubPayment";
             this.colChooseService.Name = "colChooseService";
             this.colChooseService.Visible = true;
-            this.colChooseService.VisibleIndex = 7;
+            this.colChooseService.VisibleIndex = 8;
             this.colChooseService.Width = 100;
             // 
             // txtAddToSubPaymentServicesR
@@ -415,7 +420,7 @@
             // 
             // viewRooms
             // 
-            this.viewRooms.ColumnPanelRowHeight = 30;
+            this.viewRooms.ColumnPanelRowHeight = 40;
             this.viewRooms.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn6,
             this.gridColumn9,
@@ -424,7 +429,8 @@
             this.gridColumn1,
             this.gridColumn8,
             this.gridColumn5,
-            this.colChooseRooms});
+            this.colChooseRooms,
+            this.gridColumn25});
             this.viewRooms.GridControl = this.dgvRooms;
             this.viewRooms.Name = "viewRooms";
             this.viewRooms.OptionsView.EnableAppearanceEvenRow = true;
@@ -447,7 +453,7 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 0;
-            this.gridColumn6.Width = 90;
+            this.gridColumn6.Width = 81;
             // 
             // gridColumn9
             // 
@@ -467,7 +473,7 @@
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 1;
-            this.gridColumn9.Width = 100;
+            this.gridColumn9.Width = 90;
             // 
             // gridColumn10
             // 
@@ -486,7 +492,7 @@
             this.gridColumn10.OptionsColumn.AllowFocus = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 2;
-            this.gridColumn10.Width = 140;
+            this.gridColumn10.Width = 127;
             // 
             // gridColumn7
             // 
@@ -505,7 +511,7 @@
             this.gridColumn7.OptionsColumn.AllowFocus = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 141;
+            this.gridColumn7.Width = 128;
             // 
             // gridColumn1
             // 
@@ -524,7 +530,7 @@
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 4;
-            this.gridColumn1.Width = 92;
+            this.gridColumn1.Width = 83;
             // 
             // gridColumn8
             // 
@@ -542,8 +548,8 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 5;
-            this.gridColumn8.Width = 92;
+            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.Width = 87;
             // 
             // gridColumn5
             // 
@@ -561,8 +567,8 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 149;
+            this.gridColumn5.VisibleIndex = 7;
+            this.gridColumn5.Width = 141;
             // 
             // colChooseRooms
             // 
@@ -577,8 +583,8 @@
             this.colChooseRooms.FieldName = "IndexSubPayment";
             this.colChooseRooms.Name = "colChooseRooms";
             this.colChooseRooms.Visible = true;
-            this.colChooseRooms.VisibleIndex = 7;
-            this.colChooseRooms.Width = 104;
+            this.colChooseRooms.VisibleIndex = 8;
+            this.colChooseRooms.Width = 111;
             // 
             // txtAddToSubPaymentR
             // 
@@ -638,7 +644,7 @@
             // 
             // viewServicesHall
             // 
-            this.viewServicesHall.ColumnPanelRowHeight = 30;
+            this.viewServicesHall.ColumnPanelRowHeight = 40;
             this.viewServicesHall.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn17,
             this.gridColumn18,
@@ -647,7 +653,8 @@
             this.gridColumn21,
             this.gridColumn22,
             this.gridColumn23,
-            this.gridColumn24});
+            this.gridColumn24,
+            this.gridColumn27});
             this.viewServicesHall.GridControl = this.dgvServicesHall;
             this.viewServicesHall.Name = "viewServicesHall";
             this.viewServicesHall.OptionsView.EnableAppearanceEvenRow = true;
@@ -671,7 +678,7 @@
             this.gridColumn17.OptionsColumn.AllowFocus = false;
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 0;
-            this.gridColumn17.Width = 90;
+            this.gridColumn17.Width = 80;
             // 
             // gridColumn18
             // 
@@ -694,7 +701,7 @@
             this.gridColumn18.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 1;
-            this.gridColumn18.Width = 100;
+            this.gridColumn18.Width = 89;
             // 
             // gridColumn19
             // 
@@ -713,7 +720,7 @@
             this.gridColumn19.OptionsColumn.ReadOnly = true;
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 2;
-            this.gridColumn19.Width = 150;
+            this.gridColumn19.Width = 134;
             // 
             // gridColumn20
             // 
@@ -732,7 +739,7 @@
             this.gridColumn20.OptionsColumn.AllowFocus = false;
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 3;
-            this.gridColumn20.Width = 150;
+            this.gridColumn20.Width = 134;
             // 
             // gridColumn21
             // 
@@ -752,7 +759,7 @@
             this.gridColumn21.OptionsColumn.AllowFocus = false;
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 4;
-            this.gridColumn21.Width = 100;
+            this.gridColumn21.Width = 89;
             // 
             // gridColumn22
             // 
@@ -770,8 +777,8 @@
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.OptionsColumn.AllowFocus = false;
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 5;
-            this.gridColumn22.Width = 100;
+            this.gridColumn22.VisibleIndex = 6;
+            this.gridColumn22.Width = 94;
             // 
             // gridColumn23
             // 
@@ -789,8 +796,8 @@
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.OptionsColumn.AllowFocus = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 6;
-            this.gridColumn23.Width = 150;
+            this.gridColumn23.VisibleIndex = 7;
+            this.gridColumn23.Width = 141;
             // 
             // gridColumn24
             // 
@@ -805,7 +812,7 @@
             this.gridColumn24.FieldName = "IndexSubPayment";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 7;
+            this.gridColumn24.VisibleIndex = 8;
             this.gridColumn24.Width = 100;
             // 
             // txtChooseService
@@ -846,14 +853,15 @@
             // 
             // viewHalls
             // 
-            this.viewHalls.ColumnPanelRowHeight = 30;
+            this.viewHalls.ColumnPanelRowHeight = 40;
             this.viewHalls.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
             this.gridColumn15,
-            this.gridColumn16});
+            this.gridColumn16,
+            this.gridColumn26});
             this.viewHalls.GridControl = this.dgvHalls;
             this.viewHalls.Name = "viewHalls";
             this.viewHalls.OptionsView.EnableAppearanceEvenRow = true;
@@ -876,7 +884,7 @@
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 0;
-            this.gridColumn11.Width = 185;
+            this.gridColumn11.Width = 170;
             // 
             // gridColumn12
             // 
@@ -896,7 +904,7 @@
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 1;
-            this.gridColumn12.Width = 165;
+            this.gridColumn12.Width = 152;
             // 
             // gridColumn13
             // 
@@ -915,7 +923,7 @@
             this.gridColumn13.OptionsColumn.AllowFocus = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 2;
-            this.gridColumn13.Width = 188;
+            this.gridColumn13.Width = 173;
             // 
             // gridColumn14
             // 
@@ -933,8 +941,8 @@
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.OptionsColumn.AllowFocus = false;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 3;
-            this.gridColumn14.Width = 102;
+            this.gridColumn14.VisibleIndex = 4;
+            this.gridColumn14.Width = 99;
             // 
             // gridColumn15
             // 
@@ -952,8 +960,8 @@
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.OptionsColumn.AllowFocus = false;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 4;
-            this.gridColumn15.Width = 146;
+            this.gridColumn15.VisibleIndex = 5;
+            this.gridColumn15.Width = 142;
             // 
             // gridColumn16
             // 
@@ -968,8 +976,8 @@
             this.gridColumn16.FieldName = "IndexSubHalls";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 5;
-            this.gridColumn16.Width = 108;
+            this.gridColumn16.VisibleIndex = 6;
+            this.gridColumn16.Width = 109;
             // 
             // txtAddSubPaymentH
             // 
@@ -979,6 +987,62 @@
             this.txtAddSubPaymentH.MaxLength = 2;
             this.txtAddSubPaymentH.Name = "txtAddSubPaymentH";
             this.txtAddSubPaymentH.EditValueChanged += new System.EventHandler(this.txtAddSubPaymentH_EditValueChanged);
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn25.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn25.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn25.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn25.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn25.Caption = "Thanh toán";
+            this.gridColumn25.FieldName = "IsPaid";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 5;
+            this.gridColumn25.Width = 46;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn26.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn26.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn26.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn26.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn26.Caption = "Thanh toán";
+            this.gridColumn26.FieldName = "IsPaid";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 3;
+            this.gridColumn26.Width = 49;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn27.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn27.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn27.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn27.Caption = "Thanh toán";
+            this.gridColumn27.FieldName = "IsPaid";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 5;
+            this.gridColumn27.Width = 49;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn28.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn28.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn28.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn28.Caption = "Thanh toán";
+            this.gridColumn28.FieldName = "IsPaid";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 5;
+            this.gridColumn28.Width = 50;
             // 
             // frmTsk_SplitBill_Step1
             // 
@@ -1081,5 +1145,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtChooseService;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
     }
 }

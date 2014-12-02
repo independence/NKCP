@@ -3147,7 +3147,7 @@ namespace BussinessLogic
                 if (aListBookingRooms.Count < 1)
                 {
                     aBookingRs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingR);
-                    aBookingRs.PayMenthod = aNewPaymentEN.PayMenthod;
+                    aBookingRs.PayMenthod = aNewPaymentEN.PayMenthodR;
                     aBookingRs.StatusPay = 3;
                     aBookingRs.Status = 8;
                     aBookingRs.DatePay = DateTime.Now;
@@ -3185,7 +3185,7 @@ namespace BussinessLogic
                 if (aListBookingHalls.Count < 1)
                 {
                     aBookingHs.ID = Convert.ToInt32(aNewPaymentEN.IDBookingH);
-                    aBookingHs.PayMenthod = aNewPaymentEN.PayMenthod;
+                    aBookingHs.PayMenthod = aNewPaymentEN.PayMenthodH;
                     aBookingHs.StatusPay = 3;
                     aBookingHs.Status = 8;
                     aBookingHs.DatePay = DateTime.Now;
@@ -3225,6 +3225,7 @@ namespace BussinessLogic
                     {
                         aServiceUsedEN.Sku = aListRoomTemp.Where(r => r.Code == aListTemp[i].BookingRooms_CodeRoom).ToList()[0].Sku;
                     }
+                    aServiceUsedEN.StatusPay = aListTemp[i].BookingRooms_Services_Status;
                     aServiceUsedEN.NameService = aListTemp[i].Services_Name;
                     aServiceUsedEN.Quantity = aListTemp[i].BookingRooms_Services_Quantity;
                     aServiceUsedEN.Cost = aListTemp[i].BookingRooms_Services_Cost;

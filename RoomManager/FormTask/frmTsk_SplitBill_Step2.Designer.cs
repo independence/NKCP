@@ -59,14 +59,16 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpInvoiceDate = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lueIndexSub = new DevExpress.XtraEditors.LookUpEdit();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtInvoiceNumber = new DevExpress.XtraEditors.TextEdit();
             this.dtpAcceptDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpInvoiceDate = new DevExpress.XtraEditors.DateEdit();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.lueIndexSub = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrintSplitBill = new DevExpress.XtraEditors.SimpleButton();
             this.btnPayment = new DevExpress.XtraEditors.SimpleButton();
@@ -96,8 +98,6 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtAddSubPaymentH = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
@@ -114,12 +114,14 @@
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIndexSub.Properties)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpAcceptDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpAcceptDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIndexSub.Properties)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -138,8 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddSubPaymentH)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridColumn5
@@ -578,46 +578,28 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(928, 74);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // dtpInvoiceDate
+            // tableLayoutPanel6
             // 
-            this.dtpInvoiceDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtpInvoiceDate.EditValue = null;
-            this.dtpInvoiceDate.Location = new System.Drawing.Point(341, 5);
-            this.dtpInvoiceDate.Name = "dtpInvoiceDate";
-            this.dtpInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpInvoiceDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpInvoiceDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
-            this.dtpInvoiceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpInvoiceDate.Size = new System.Drawing.Size(111, 20);
-            this.dtpInvoiceDate.TabIndex = 7;
-            this.dtpInvoiceDate.EditValueChanged += new System.EventHandler(this.dtpInvoiceDate_EditValueChanged);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(6, 7);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(160, 17);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Chọn phiếu thanh toán";
-            // 
-            // lueIndexSub
-            // 
-            this.lueIndexSub.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueIndexSub.Location = new System.Drawing.Point(175, 5);
-            this.lueIndexSub.Name = "lueIndexSub";
-            this.lueIndexSub.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIndexSub.Properties.NullText = "";
-            this.lueIndexSub.Properties.NullValuePrompt = "Chọn lựa";
-            this.lueIndexSub.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lueIndexSub.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueIndexSub.Size = new System.Drawing.Size(62, 20);
-            this.lueIndexSub.TabIndex = 3;
-            this.lueIndexSub.EditValueChanged += new System.EventHandler(this.lueIndexSub_EditValueChanged);
+            this.tableLayoutPanel6.ColumnCount = 6;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.978308F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.20824F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.79826F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.79826F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.5705F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.08026F));
+            this.tableLayoutPanel6.Controls.Add(this.labelControl2, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtInvoiceNumber, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.dtpAcceptDate, 5, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelControl4, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.labelControl3, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.dtpInvoiceDate, 3, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 40);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(922, 31);
+            this.tableLayoutPanel6.TabIndex = 10;
             // 
             // labelControl2
             // 
@@ -628,26 +610,6 @@
             this.labelControl2.Size = new System.Drawing.Size(79, 17);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Số hóa đơn";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(463, 7);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(144, 17);
-            this.labelControl4.TabIndex = 8;
-            this.labelControl4.Text = "Ngày ghi nhận h.đơn";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(235, 7);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(88, 16);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Ngày hóa đơn";
             // 
             // txtInvoiceNumber
             // 
@@ -673,6 +635,82 @@
             this.dtpAcceptDate.Size = new System.Drawing.Size(123, 20);
             this.dtpAcceptDate.TabIndex = 9;
             this.dtpAcceptDate.EditValueChanged += new System.EventHandler(this.dtpAcceptDate_EditValueChanged);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Location = new System.Drawing.Point(463, 7);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(144, 17);
+            this.labelControl4.TabIndex = 8;
+            this.labelControl4.Text = "Ngày ghi nhận h.đơn";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Location = new System.Drawing.Point(235, 7);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(88, 16);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Ngày hóa đơn";
+            // 
+            // dtpInvoiceDate
+            // 
+            this.dtpInvoiceDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpInvoiceDate.EditValue = null;
+            this.dtpInvoiceDate.Location = new System.Drawing.Point(341, 5);
+            this.dtpInvoiceDate.Name = "dtpInvoiceDate";
+            this.dtpInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpInvoiceDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpInvoiceDate.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
+            this.dtpInvoiceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.dtpInvoiceDate.Size = new System.Drawing.Size(111, 20);
+            this.dtpInvoiceDate.TabIndex = 7;
+            this.dtpInvoiceDate.EditValueChanged += new System.EventHandler(this.dtpInvoiceDate_EditValueChanged);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.20824F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.79176F));
+            this.tableLayoutPanel7.Controls.Add(this.lueIndexSub, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.labelControl1, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(922, 31);
+            this.tableLayoutPanel7.TabIndex = 11;
+            // 
+            // lueIndexSub
+            // 
+            this.lueIndexSub.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lueIndexSub.Location = new System.Drawing.Point(134, 5);
+            this.lueIndexSub.Name = "lueIndexSub";
+            this.lueIndexSub.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIndexSub.Properties.NullText = "";
+            this.lueIndexSub.Properties.NullValuePrompt = "Chọn lựa";
+            this.lueIndexSub.Properties.NullValuePromptShowForEmptyValue = true;
+            this.lueIndexSub.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lueIndexSub.Size = new System.Drawing.Size(62, 20);
+            this.lueIndexSub.TabIndex = 3;
+            this.lueIndexSub.EditValueChanged += new System.EventHandler(this.lueIndexSub_EditValueChanged);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Location = new System.Drawing.Point(6, 7);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(119, 17);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "Phiếu thanh toán";
             // 
             // tableLayoutPanel3
             // 
@@ -1117,44 +1155,6 @@
             this.txtAddSubPaymentH.MaxLength = 2;
             this.txtAddSubPaymentH.Name = "txtAddSubPaymentH";
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 6;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.978308F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.20824F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.79826F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.79826F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.5705F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.08026F));
-            this.tableLayoutPanel6.Controls.Add(this.labelControl2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.txtInvoiceNumber, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dtpAcceptDate, 5, 0);
-            this.tableLayoutPanel6.Controls.Add(this.labelControl4, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.labelControl3, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dtpInvoiceDate, 3, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 40);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(922, 31);
-            this.tableLayoutPanel6.TabIndex = 10;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.6551F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.3449F));
-            this.tableLayoutPanel7.Controls.Add(this.lueIndexSub, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.labelControl1, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(922, 31);
-            this.tableLayoutPanel7.TabIndex = 11;
-            // 
             // frmTsk_SplitBill_Step2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1182,12 +1182,16 @@
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIndexSub.Properties)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpAcceptDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpAcceptDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpInvoiceDate.Properties)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIndexSub.Properties)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
@@ -1206,10 +1210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddSubPaymentH)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
             this.ResumeLayout(false);
 
         }

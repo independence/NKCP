@@ -43,13 +43,13 @@ namespace RoomManager
             InitializeComponent();
             this.afrmMain = afrmMain;
         }
-         public frmTsk_BookingHall_Customer_New(int IDBookingR,int IDCompany,int IDCustomer)
+         public frmTsk_BookingHall_Customer_New(int? IDBookingR,int? IDCompany,int? IDCustomer)
         {
             InitializeComponent();
-            this.IDBookingR = IDBookingR;
-            this.IDCompany = IDCompany;
+            this.IDBookingR = Convert.ToInt32(IDBookingR);
+            this.IDCompany = Convert.ToInt32(IDCompany);
             
-            this.IDCustomer = IDCustomer;
+            this.IDCustomer = Convert.ToInt32(IDCustomer);
         }
 
 

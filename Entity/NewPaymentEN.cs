@@ -18,7 +18,9 @@ namespace Entity
        public Nullable<DateTime> CreatedDate_BookingR { get; set; }
        public Nullable<DateTime> CreatedDate_BookingH { get; set; }
        public int? CustomerType { get; set; }
-       public int? PayMenthod { get; set; }
+       public int? PayMenthodR { get; set; }
+       public int? PayMenthodH { get; set; }
+
        public int? StatusPay { get; set; }
        public decimal? BookingHMoney { get; set; }
        public decimal? BookingRMoney { get; set; }
@@ -551,7 +553,7 @@ namespace Entity
                        aTemp.AcceptDate = this.AcceptDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));
                        aTemp.InvoiceDate = this.InvoiceDate.GetValueOrDefault(Convert.ToDateTime("01/01/1900"));                      
                        aTemp.BookingMoney = this.BookingRMoney;
-                       aTemp.PayMenthod = this.PayMenthod;
+                       aTemp.PayMenthod = this.PayMenthodR;
 
                        aDatabaseDA.BookingRs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
@@ -561,7 +563,7 @@ namespace Entity
                        item.Save();
                    }
                }
-               else if (IDBookingH != null)
+               if (IDBookingH != null)
                {
 
                    BookingHs aTemp = aDatabaseDA.BookingHs.Where(a => a.ID == IDBookingH).ToList()[0];
@@ -574,7 +576,7 @@ namespace Entity
                        aTemp.InvoiceNumber = this.InvoiceNumber;
                        aTemp.AcceptDate = this.AcceptDate;
                        aTemp.InvoiceDate = this.InvoiceDate;
-                       aTemp.PayMenthod = this.PayMenthod;
+                       aTemp.PayMenthod = this.PayMenthodH;
                        aDatabaseDA.BookingHs.AddOrUpdate(aTemp);
                        aDatabaseDA.SaveChanges();
                    }

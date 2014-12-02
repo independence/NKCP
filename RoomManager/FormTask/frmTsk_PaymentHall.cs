@@ -147,7 +147,7 @@ namespace RoomManager
             luePayMethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
             luePayMethod.Properties.DisplayMember = "Name";
             luePayMethod.Properties.ValueMember = "ID";
-            luePayMethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthod)).ID;
+            luePayMethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthodH)).ID;
             // Danh sách các hội trường
             dgvHalls.DataSource = this.aNewPaymentEN.aListBookingHallUsed;
             dgvHalls.RefreshDataSource();

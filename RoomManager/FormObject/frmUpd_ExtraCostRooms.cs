@@ -61,6 +61,7 @@ namespace RoomManager
             {
                 ExtraCostBO aExtraCostBO = new ExtraCostBO();
                 ExtraCosts aExtraCosts = new ExtraCosts();
+                aExtraCosts.ID = this.ID;
                 aExtraCosts.Sku = txtSku.Text;
                 aExtraCosts.CustomerType = lueCustomerType.EditValue.ToString();
                 aExtraCosts.NumberPeople = Convert.ToInt32(txtNumberPepole.EditValue);

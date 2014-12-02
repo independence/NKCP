@@ -187,7 +187,7 @@ namespace RoomManager
                 }
                 else if (this.Datasource.BookingRs_CustomerType == 3)
                 {
-                    frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = new frmTsk_BookingHall_Customer(this.Datasource.BookingRs_ID, this.Datasource.Companies_ID, this.Datasource.CustomerGroups_ID, this.Datasource.Customers_ID);
+                    frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer = new frmTsk_BookingHall_Customer_New(this.Datasource.BookingRs_ID, this.Datasource.Companies_ID, this.Datasource.Customers_ID);
                     afrmTsk_BookingHall_Customer.Show();
                     this.Parent.Dispose();
                 }

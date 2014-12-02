@@ -28,10 +28,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_Payment_Step2));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,7 +99,6 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnPayment = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEnableEdit = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
@@ -134,6 +133,7 @@
             this.txtBookingRMoney = new DevExpress.XtraEditors.TextEdit();
             this.lblTotalMoneyR = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalMoneyRooms1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnEnableEdit = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -204,7 +204,6 @@
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrintBookingH = new DevExpress.XtraEditors.SimpleButton();
             this.btnPaymentHall = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPrepay = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
@@ -929,7 +928,7 @@
             // 
             this.btnSelectCustomer.AutoHeight = false;
             this.btnSelectCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnSelectCustomer.Name = "btnSelectCustomer";
             this.btnSelectCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1308,12 +1307,11 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 4;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.61649F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.01434F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.83512F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.58064F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.73118F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.89247F));
             this.tableLayoutPanel8.Controls.Add(this.btnPrint, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnPayment, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnEnableEdit, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(299, 32);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -1343,27 +1341,13 @@
             this.btnPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.Appearance.Options.UseFont = true;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
-            this.btnPayment.Location = new System.Drawing.Point(322, 12);
+            this.btnPayment.Location = new System.Drawing.Point(311, 12);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(118, 25);
+            this.btnPayment.Size = new System.Drawing.Size(129, 25);
             this.btnPayment.TabIndex = 75;
-            this.btnPayment.Text = "Thanh toán lẻ";
+            this.btnPayment.Text = "Thanh toán phòng";
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // btnEnableEdit
-            // 
-            this.btnEnableEdit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnEnableEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnEnableEdit.Appearance.Options.UseFont = true;
-            this.btnEnableEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEnableEdit.Image")));
-            this.btnEnableEdit.Location = new System.Drawing.Point(190, 13);
-            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
-            this.btnEnableEdit.Name = "btnEnableEdit";
-            this.btnEnableEdit.Size = new System.Drawing.Size(107, 24);
-            this.btnEnableEdit.TabIndex = 77;
-            this.btnEnableEdit.Text = "Sửa hóa đơn";
-            this.btnEnableEdit.Click += new System.EventHandler(this.btnEnableEdit_Click);
             // 
             // tableLayoutPanel10
             // 
@@ -1699,7 +1683,7 @@
             // 
             this.btnDetailRooms.AutoHeight = false;
             this.btnDetailRooms.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnDetailRooms.Name = "btnDetailRooms";
             this.btnDetailRooms.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetailRooms.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetailRooms_ButtonClick);
@@ -1829,6 +1813,21 @@
             this.lblTotalMoneyRooms1.Size = new System.Drawing.Size(7, 16);
             this.lblTotalMoneyRooms1.TabIndex = 27;
             this.lblTotalMoneyRooms1.Text = "0";
+            // 
+            // btnEnableEdit
+            // 
+            this.btnEnableEdit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnEnableEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEnableEdit.Appearance.Options.UseFont = true;
+            this.btnEnableEdit.Enabled = false;
+            this.btnEnableEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEnableEdit.Image")));
+            this.btnEnableEdit.Location = new System.Drawing.Point(9, 10);
+            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnEnableEdit.Name = "btnEnableEdit";
+            this.btnEnableEdit.Size = new System.Drawing.Size(107, 24);
+            this.btnEnableEdit.TabIndex = 77;
+            this.btnEnableEdit.Text = "Sửa hóa đơn";
+            this.btnEnableEdit.Click += new System.EventHandler(this.btnEnableEdit_Click);
             // 
             // xtraTabControl1
             // 
@@ -2365,7 +2364,7 @@
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -2703,7 +2702,7 @@
             this.tableLayoutPanel32.ColumnCount = 2;
             this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel32.Controls.Add(this.lueBookingH_PayMethod, 0, 0);
+            this.tableLayoutPanel32.Controls.Add(this.lueBookingH_PayMethod, 1, 0);
             this.tableLayoutPanel32.Controls.Add(this.labelControl31, 0, 0);
             this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel32.Location = new System.Drawing.Point(0, 0);
@@ -2717,7 +2716,7 @@
             // lueBookingH_PayMethod
             // 
             this.lueBookingH_PayMethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueBookingH_PayMethod.Location = new System.Drawing.Point(3, 4);
+            this.lueBookingH_PayMethod.Location = new System.Drawing.Point(151, 4);
             this.lueBookingH_PayMethod.Name = "lueBookingH_PayMethod";
             this.lueBookingH_PayMethod.Properties.Appearance.Options.UseTextOptions = true;
             this.lueBookingH_PayMethod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -2728,12 +2727,13 @@
             this.lueBookingH_PayMethod.Properties.NullText = "Chọn lựa";
             this.lueBookingH_PayMethod.Size = new System.Drawing.Size(137, 20);
             this.lueBookingH_PayMethod.TabIndex = 142;
+            this.lueBookingH_PayMethod.EditValueChanged += new System.EventHandler(this.lueBookingH_PayMethod_EditValueChanged);
             // 
             // labelControl31
             // 
             this.labelControl31.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl31.Location = new System.Drawing.Point(171, 7);
+            this.labelControl31.Location = new System.Drawing.Point(23, 7);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(122, 13);
             this.labelControl31.TabIndex = 141;
@@ -2778,12 +2778,11 @@
             // 
             this.tableLayoutPanel34.ColumnCount = 4;
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.31942F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.3049F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.77495F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.94918F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.13067F));
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.41924F));
             this.tableLayoutPanel34.Controls.Add(this.btnPrintBookingH, 3, 0);
             this.tableLayoutPanel34.Controls.Add(this.btnPaymentHall, 2, 0);
-            this.tableLayoutPanel34.Controls.Add(this.btnPrepay, 1, 0);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel34.Location = new System.Drawing.Point(296, 28);
             this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(0);
@@ -2813,27 +2812,13 @@
             this.btnPaymentHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentHall.Appearance.Options.UseFont = true;
             this.btnPaymentHall.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentHall.Image")));
-            this.btnPaymentHall.Location = new System.Drawing.Point(320, 9);
+            this.btnPaymentHall.Location = new System.Drawing.Point(291, 9);
             this.btnPaymentHall.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.btnPaymentHall.Name = "btnPaymentHall";
-            this.btnPaymentHall.Size = new System.Drawing.Size(117, 25);
+            this.btnPaymentHall.Size = new System.Drawing.Size(146, 25);
             this.btnPaymentHall.TabIndex = 148;
-            this.btnPaymentHall.Text = "Thanh toán lẻ";
+            this.btnPaymentHall.Text = "Thanh toán h.trường";
             this.btnPaymentHall.Click += new System.EventHandler(this.btnPaymentHall_Click);
-            // 
-            // btnPrepay
-            // 
-            this.btnPrepay.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPrepay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrepay.Appearance.Options.UseFont = true;
-            this.btnPrepay.Image = ((System.Drawing.Image)(resources.GetObject("btnPrepay.Image")));
-            this.btnPrepay.Location = new System.Drawing.Point(183, 9);
-            this.btnPrepay.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
-            this.btnPrepay.Name = "btnPrepay";
-            this.btnPrepay.Size = new System.Drawing.Size(123, 25);
-            this.btnPrepay.TabIndex = 147;
-            this.btnPrepay.Text = "Tạm thanh toán";
-            this.btnPrepay.Click += new System.EventHandler(this.btnPrepay_Click);
             // 
             // tableLayoutPanel35
             // 
@@ -3154,7 +3139,7 @@
             // 
             this.btnEditBookingHall.AutoHeight = false;
             this.btnEditBookingHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnEditBookingHall.Name = "btnEditBookingHall";
             this.btnEditBookingHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditBookingHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditBookingHall_ButtonClick);
@@ -3430,15 +3415,17 @@
             // 
             // tableLayoutPanel40
             // 
-            this.tableLayoutPanel40.ColumnCount = 4;
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.04878F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.46342F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.46342F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.86179F));
-            this.tableLayoutPanel40.Controls.Add(this.btnSave, 0, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnPrintPaymentTotal, 3, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnPaymentTotal, 2, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnSplitBill, 1, 0);
+            this.tableLayoutPanel40.ColumnCount = 5;
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.24183F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.95425F));
+            this.tableLayoutPanel40.Controls.Add(this.btnSave, 1, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnPrintPaymentTotal, 4, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnEnableEdit, 0, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnPaymentTotal, 3, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnSplitBill, 2, 0);
             this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel40.Location = new System.Drawing.Point(612, 0);
             this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(0);
@@ -3454,7 +3441,7 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(129, 10);
+            this.btnSave.Location = new System.Drawing.Point(140, 10);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 25);
@@ -3496,10 +3483,10 @@
             this.btnSplitBill.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSplitBill.Appearance.Options.UseFont = true;
             this.btnSplitBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSplitBill.Image")));
-            this.btnSplitBill.Location = new System.Drawing.Point(236, 10);
+            this.btnSplitBill.Location = new System.Drawing.Point(247, 10);
             this.btnSplitBill.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.btnSplitBill.Name = "btnSplitBill";
-            this.btnSplitBill.Size = new System.Drawing.Size(122, 25);
+            this.btnSplitBill.Size = new System.Drawing.Size(113, 25);
             this.btnSplitBill.TabIndex = 163;
             this.btnSplitBill.Text = "Tách phiếu thu";
             this.btnSplitBill.Click += new System.EventHandler(this.btnSplitBill_Click);
@@ -3799,7 +3786,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
         private DevExpress.XtraEditors.SimpleButton btnPrintBookingH;
         private DevExpress.XtraEditors.SimpleButton btnPaymentHall;
-        private DevExpress.XtraEditors.SimpleButton btnPrepay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
         private DevExpress.XtraEditors.LabelControl labelControl34;

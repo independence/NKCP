@@ -113,8 +113,8 @@ namespace RoomManager
         {
             try
             {
-                dtpAcceptDate.Reset();
-                dtpInvoiceDate.Reset();
+                dtpAcceptDate.EditValue = null;
+                dtpInvoiceDate.EditValue = null;
                 txtInvoiceNumber.ResetText();
                 int indexSub = Convert.ToInt32(lueIndexSub.Text);
 
@@ -221,35 +221,44 @@ namespace RoomManager
 
         private void dtpInvoiceDate_EditValueChanged(object sender, EventArgs e)
         {
-            DateTime aTemp = dtpInvoiceDate.DateTime;
-            dtpAcceptDate.DateTime = aTemp;
-            if (aListRooms.Count > 0)
+
+            if (dtpInvoiceDate.EditValue == null)
             {
-                foreach (BookingRoomUsedEN aBookingRoom in aListRooms)
-                {
-                    aBookingRoom.InvoiceDate = aTemp;
-                    
-                }
+                dtpAcceptDate.EditValue = null;
+
             }
-            else if (aListHalls.Count > 0)
+            else
             {
-                foreach (BookingHallUsedEN aBookingHall in aListHalls)
+                DateTime aTemp = dtpInvoiceDate.DateTime;
+                dtpAcceptDate.DateTime = aTemp;
+                if (aListRooms.Count > 0)
                 {
-                    aBookingHall.InvoiceDate = aTemp;
+                    foreach (BookingRoomUsedEN aBookingRoom in aListRooms)
+                    {
+                        aBookingRoom.InvoiceDate = aTemp;
+
+                    }
                 }
-            }
-            else if (aListServicesH.Count > 0)
-            {
-                foreach (ServiceUsedEN aServiceH in aListServicesH)
+                else if (aListHalls.Count > 0)
                 {
-                    aServiceH.InvoiceDate = aTemp;
+                    foreach (BookingHallUsedEN aBookingHall in aListHalls)
+                    {
+                        aBookingHall.InvoiceDate = aTemp;
+                    }
                 }
-            }
-            else if (aListServicesR.Count > 0)
-            {
-                foreach (ServiceUsedEN aServiceR in aListServicesR)
+                else if (aListServicesH.Count > 0)
                 {
-                    aServiceR.InvoiceDate = aTemp;
+                    foreach (ServiceUsedEN aServiceH in aListServicesH)
+                    {
+                        aServiceH.InvoiceDate = aTemp;
+                    }
+                }
+                else if (aListServicesR.Count > 0)
+                {
+                    foreach (ServiceUsedEN aServiceR in aListServicesR)
+                    {
+                        aServiceR.InvoiceDate = aTemp;
+                    }
                 }
             }
         }

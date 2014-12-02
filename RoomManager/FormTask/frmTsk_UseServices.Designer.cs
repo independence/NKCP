@@ -281,9 +281,9 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(5, 454);
+            this.btnSave.Location = new System.Drawing.Point(5, 446);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 25);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

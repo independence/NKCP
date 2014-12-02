@@ -472,7 +472,7 @@ namespace RoomManager
                         aNewPaymentEN.AddressCompany = aCompanies.Address;
                     }
                 }
-                aNewPaymentEN.PayMenthod = aBookingRs.PayMenthod;
+                aNewPaymentEN.PayMenthodR = aBookingRs.PayMenthod;
                 aNewPaymentEN.CreatedDate_BookingR = aBookingRs.CreatedDate;
                 aNewPaymentEN.CustomerType = aBookingRs.CustomerType;
                 aNewPaymentEN.Status_BookingR = aBookingRs.Status;
@@ -527,7 +527,14 @@ namespace RoomManager
                         {
                             cost = item.Cost;
                         }
-                        aBookingRoomUsedEN.ListServiceUsed = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(item.ID);
+                        List<ServiceUsedEN> aListServiceRTemp = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(item.ID);
+                        foreach (ServiceUsedEN aTemp in aListServiceRTemp)
+                        {
+                            aTemp.TotalMoney = aTemp.GetMoneyService();
+                            aTemp.TotalMoneyBeforeTax = aTemp.GetMoneyServiceBeforeTax();
+                            aTemp.IsPaid = aTemp.IsPaidService();
+                            aBookingRoomUsedEN.ListServiceUsed.Add(aTemp);
+                        }
                         aBookingRoomUsedEN.ListCustomer = aCustomersBO.SelectListCustomer_ByIDBookingRoom(item.ID);
                         aBookingRoomUsedEN.Cost = cost + Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(aRooms.Sku, aBookingRoomUsedEN.PriceType, aBookingRoomUsedEN.ListCustomer.Count).ExtraValue);
                 
@@ -545,6 +552,7 @@ namespace RoomManager
                 if (aBookingHs != null)
                 {
                     aNewPaymentEN.IDBookingH = aBookingHs.ID;
+                    aNewPaymentEN.PayMenthodH = aBookingHs.PayMenthod;
                     aNewPaymentEN.CreatedDate_BookingH = aBookingHs.CreatedDate;
                     aNewPaymentEN.CustomerType = aBookingHs.CustomerType;
                     aNewPaymentEN.Status_BookingH = aBookingHs.Status;
@@ -669,7 +677,7 @@ namespace RoomManager
             lueBookingR_Paymethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
             lueBookingR_Paymethod.Properties.DisplayMember = "Name";
             lueBookingR_Paymethod.Properties.ValueMember = "ID";
-            lueBookingR_Paymethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthod)).ID;
+            lueBookingR_Paymethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthodR)).ID;
 
             // Thong tin gia tiền, đặt trước
             lblTotalMoneyRooms1.Text = String.Format("{0:0,0}", this.aNewPaymentEN.GetMoneyRooms());
@@ -766,7 +774,7 @@ namespace RoomManager
                 lueBookingH_PayMethod.Properties.DataSource = CORE.CONSTANTS.ListPayMethods;
                 lueBookingH_PayMethod.Properties.DisplayMember = "Name";
                 lueBookingH_PayMethod.Properties.ValueMember = "ID";
-                lueBookingH_PayMethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthod)).ID;
+                lueBookingH_PayMethod.EditValue = CORE.CONSTANTS.SelectedPayMethod(Convert.ToInt32(this.aNewPaymentEN.PayMenthodH)).ID;
                 // Danh sách các hội trường
                 dgvHalls.DataSource = this.aNewPaymentEN.aListBookingHallUsed;
                 dgvHalls.RefreshDataSource();
@@ -844,7 +852,6 @@ namespace RoomManager
             }
             else
             {
-                btnPrepay.Enabled = false;
                 btnPaymentHall.Enabled = false;
                 btnPrintBookingH.Enabled = false;
                 txtTaxNumberCodeH.Enabled = false;
@@ -1004,7 +1011,7 @@ namespace RoomManager
                 //cbbPriceType.SelectedIndex = 0;
                 this.CurrentIDBookingRoom = Convert.ToInt32(viewRooms.GetFocusedRowCellValue("ID"));
                 this.CodeRoom = viewRooms.GetFocusedRowCellValue("CodeRoom").ToString();
-
+                cbbPriceType.Text = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].PriceType;
               this.LoadData();
                
             }
@@ -1272,7 +1279,8 @@ namespace RoomManager
             List<Customers> aListCustomers = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
             int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();
             decimal? CostRoom = aRoomsBO.Select_ByIDBookingRoom(this.CurrentIDBookingRoom).CostRef;
-            this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(lblSkuRooms.Text,cbbPriceType.Text,aListCustomers.Count).ExtraValue);
+            string RoomSku = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].RoomSku;
+            this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(RoomSku, cbbPriceType.Text, aListCustomers.Count).ExtraValue);
                 
             txtBookingRoomsCost.Text = Convert.ToString(CostRoom + this.ExtraMoneyRoom);
             this.aNewPaymentEN.ChangePriceType(this.CurrentIDBookingRoom, cbbPriceType.Text);
@@ -1908,9 +1916,21 @@ namespace RoomManager
 
         private void lueBookingR_Paymethod_EditValueChanged(object sender, EventArgs e)
         {
-            lueBookingH_PayMethod.EditValue = lueBookingR_Paymethod.EditValue;
-            this.aNewPaymentEN.PayMenthod = Convert.ToInt32(lueBookingR_Paymethod.EditValue);
+            this.aNewPaymentEN.PayMenthodR = Convert.ToInt32(lueBookingR_Paymethod.EditValue);
         }
+
+        private void lueBookingH_PayMethod_EditValueChanged(object sender, EventArgs e)
+        {
+            this.aNewPaymentEN.PayMenthodH = Convert.ToInt32(lueBookingH_PayMethod.EditValue);
+        }
+
+       
+
+       
+
+      
+
+        
 
     
        

@@ -86,7 +86,7 @@ namespace RoomManager
         #region Customer
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = new frmTsk_BookingHall_Customer(this);
+            frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer = new frmTsk_BookingHall_Customer_New(this);
             afrmTsk_BookingHall_Customer.Show();
         }
 
