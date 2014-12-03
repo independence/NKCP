@@ -81,9 +81,9 @@ namespace RoomManager
 
                 colSkuRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "RoomSku");
                 colCheckIn.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckInActual", "{0:dd-MM-yyyy HH:mm}");
-                colCheckOut.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckOutActual", "{0:dd-{0:0,0}MM-yyyy HH:mm}");
-                colBookingRoomCost.DataBindings.Add("Text", this.DetailReport.DataSource, "Cost", "{0:0,0.##}");
-                colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "DateUsed", "{0:0,0.##}");
+                colCheckOut.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckOutActual", "{0:dd-MM-yyyy HH:mm}");
+                colBookingRoomCost.DataBindings.Add("Text", this.DetailReport.DataSource, "Cost", "{0:0,0}");
+                colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "DateUsed", "{0:0,0}");
                 colMoneyRoomBeforeTax.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoomBeforeTax", "{0:0,0}");
                 colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "DisplayMoneyTaxRoom", "{0:0,0}");
                 colPaymentMoneyRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
@@ -209,10 +209,10 @@ namespace RoomManager
                 colTotalMoneyServiceHallAfterTax.DataBindings.Add("Text", this.DetailReportService.DataSource, "TotalMoneyAfterTax", "{0:0,0}");
 
                 XRSummary aXRSummaryDisplayMoneyServiceHallTax = new XRSummary();
-                aXRSummaryDisplayMoneyTax.Func = SummaryFunc.Sum;
-                aXRSummaryDisplayMoneyTax.Running = SummaryRunning.Group;
-                aXRSummaryDisplayMoneyTax.IgnoreNullValues = true;
-                aXRSummaryDisplayMoneyTax.FormatString = "{0:0,0}";
+                aXRSummaryDisplayMoneyServiceHallTax.Func = SummaryFunc.Sum;
+                aXRSummaryDisplayMoneyServiceHallTax.Running = SummaryRunning.Group;
+                aXRSummaryDisplayMoneyServiceHallTax.IgnoreNullValues = true;
+                aXRSummaryDisplayMoneyServiceHallTax.FormatString = "{0:0,0}";
                 lblSumMoneyServiceHallsTax.DataBindings.AddRange(new XRBinding[] { new XRBinding("Text", this.DetailReportService.DataSource, "DisplayMoneyTax", "{0:0,0}") });
                 lblSumMoneyServiceHallsTax.Summary = aXRSummaryDisplayMoneyServiceHallTax;
 
