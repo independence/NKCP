@@ -155,6 +155,7 @@ namespace RoomManager
                 {
                     if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList().Count > 0)
                     {
+
                         aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList()[0].ListServiceUsed.Clear();
                         aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList()[0].ListServiceUsed = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(IDBookingRooms);
                              

@@ -3270,10 +3270,16 @@ namespace BussinessLogic
                                           Cost = aBookingHalls_Services.Cost,
                                           CostRef_Service = aBookingHalls_Services.CostRef_Services,
                                           Tax = aBookingHalls_Services.PercentTax,
+                                          
                                       }
 
                     ).Distinct().ToList();
-
+                foreach (ServiceUsedEN aServiceUsedEN in aListServiceUsedEN)
+                {
+                    aServiceUsedEN.TotalMoney = aServiceUsedEN.GetMoneyService();
+                    aServiceUsedEN.TotalMoneyBeforeTax = aServiceUsedEN.GetMoneyServiceBeforeTax();
+                    aServiceUsedEN.IsPaid = aServiceUsedEN.IsPaidService();
+                }
                 return aListServiceUsedEN;
             }
             catch (Exception ex)
@@ -3341,7 +3347,7 @@ namespace BussinessLogic
                     aBookingHall.IDBookingH = IDBookingH;
                     aBookingHall.CodeHall = aNewBookingHEN.aListBookingHallUsed[i].CodeHall;
                     aBookingHall.Cost = aNewBookingHEN.aListBookingHallUsed[i].Cost;
-                    aBookingHall.PercentTax = aNewBookingHEN.aListBookingHallUsed[i].PercentTax;
+                    aBookingHall.PercentTax = 10; //Để tạm thuế = 10%
                     aBookingHall.CostRef_Halls = aNewBookingHEN.aListBookingHallUsed[i].CostRef_Halls;
                     aBookingHall.Date = aNewBookingHEN.aListBookingHallUsed[i].Date;
                     aBookingHall.LunarDate = aNewBookingHEN.aListBookingHallUsed[i].LunarDate;

@@ -288,6 +288,7 @@ namespace RoomManager
                     aNewBookingHallEN.CodeHall = grvAvailableHalls.GetFocusedRowCellValue("Code").ToString();
                     aNewBookingHallEN.HallSku = grvAvailableHalls.GetFocusedRowCellValue("Sku").ToString();
                     aNewBookingHallEN.CostRef_Halls = Convert.ToDecimal(grvAvailableHalls.GetFocusedRowCellValue("CostRef"));
+                    aNewBookingHallEN.Cost = Convert.ToDecimal(grvAvailableHalls.GetFocusedRowCellValue("CostRef"));
                     aNewBookingHallEN.HallType = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("Type"));
                     aNewBookingHallEN.DisplayHallType = CORE.CONSTANTS.SelectedHallType(Convert.ToInt32(aNewBookingHallEN.HallType)).Name;
                     aNewBookingHallEN.TableOrPerson = Convert.ToInt32(grvAvailableHalls.GetFocusedRowCellValue("TableOrPerson"));
@@ -771,6 +772,11 @@ namespace RoomManager
         {
             try
             {
+                if (Convert.ToInt32(lueHalls.EditValue) == 0)
+                {
+                    MessageBox.Show("Chọn hội trường trước khi tạo thực đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
                 if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name == "")
                 {
                     this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name = txtMenusName.Text;
@@ -839,6 +845,7 @@ namespace RoomManager
         private void lueHalls_EditValueChanged(object sender, EventArgs e)
         {
             this.CurrentCodeHall = lueHalls.EditValue.ToString();
+            
             if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList().Count > 0)
             {
                 if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN.Count > 0)
@@ -850,6 +857,7 @@ namespace RoomManager
                 else
                 {
                     MenusEN aMenusEN = new MenusEN();
+                    txtMenusName.Text = "Thực đơn " + lueHalls.Text;
                     aMenusEN.Name = txtMenusName.Text;
                     this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].InsertMenu(aMenusEN);
                     dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;

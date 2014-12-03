@@ -541,7 +541,7 @@ namespace RoomManager
                         aBookingRoomUsedEN.TotalMoney = aBookingRoomUsedEN.GetMoneyRoom();
                         aBookingRoomUsedEN.MoneyRoomBeforeTax = aBookingRoomUsedEN.GetOnlyMoneyRoomBeforeTax();
                         //Hiennv 
-                        aBookingRoomUsedEN.DisplayMoneyTaxRoom = aBookingRoomUsedEN.GetOnlyMoneyRoomBeforeTax() * 10 / 100;
+                        aBookingRoomUsedEN.DisplayMoneyTaxRoom = aBookingRoomUsedEN.GetOnlyMoneyRoomBeforeTax() * (Convert.ToDecimal(aBookingRoomUsedEN.PercentTax)/100);
                         
                         aBookingRoomUsedEN.MoneyRoom = aBookingRoomUsedEN.GetOnlyMoneyRoom();
                         aBookingRoomUsedEN.IsPaid = aBookingRoomUsedEN.IsPaidRoom();
@@ -581,6 +581,8 @@ namespace RoomManager
                             aBookingHallUsedEN.LevelBookingH = aBookingHs.Level;
                             aBookingHallUsedEN.aListMenuEN = aReceptionTaskBO.GetListMenus_ByIDBookingHall(item.ID);
                             aBookingHallUsedEN.IsPaid = aBookingHallUsedEN.IsPaidHall();
+                            aBookingHallUsedEN.DisplayMoneyTaxHall = aBookingHallUsedEN.GetOnlyMoneyHallBeforeTax() * (Convert.ToDecimal(aBookingHallUsedEN.PercentTax) / 100);
+
                             List<ServiceUsedEN> aListServiceTemp = aReceptionTaskBO.GetListServiceUsedInHall_ByIDBookingHall(item.ID);
                             foreach (ServiceUsedEN aTemp in aListServiceTemp)
                             {

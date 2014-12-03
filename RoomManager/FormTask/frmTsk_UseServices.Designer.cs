@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_UseServices));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtPercenTax = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -67,8 +67,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lbCurrentRoom = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.dgvServices = new DevExpress.XtraGrid.GridControl();
             this.viewServices = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,10 +94,6 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).BeginInit();
@@ -138,6 +132,7 @@
             this.splitContainerControl1.Panel1.Controls.Add(this.panelControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.panelControl4);
+            this.splitContainerControl1.Panel2.Controls.Add(this.btnSave);
             this.splitContainerControl1.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(947, 517);
@@ -149,22 +144,20 @@
             // 
             this.panelControl2.Controls.Add(this.dgvRooms);
             this.panelControl2.Cursor = System.Windows.Forms.Cursors.No;
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 36);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(295, 481);
+            this.panelControl2.Size = new System.Drawing.Size(295, 440);
             this.panelControl2.TabIndex = 3;
             // 
             // dgvRooms
             // 
             this.dgvRooms.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.Location = new System.Drawing.Point(2, 2);
             this.dgvRooms.MainView = this.viewRooms;
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.bnListService});
-            this.dgvRooms.Size = new System.Drawing.Size(291, 477);
+            this.dgvRooms.Size = new System.Drawing.Size(291, 438);
             this.dgvRooms.TabIndex = 0;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRooms});
@@ -246,7 +239,7 @@
             // 
             this.bnListService.AutoHeight = false;
             this.bnListService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnListService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnListService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.bnListService.Name = "bnListService";
             this.bnListService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -261,16 +254,15 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.labelControl4);
-            this.panelControl4.Controls.Add(this.btnSave);
             this.panelControl4.Controls.Add(this.dgvRoom_Services);
             this.panelControl4.Location = new System.Drawing.Point(0, 36);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(664, 481);
+            this.panelControl4.Size = new System.Drawing.Size(649, 440);
             this.panelControl4.TabIndex = 1;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(350, 458);
+            this.labelControl4.Location = new System.Drawing.Point(342, 418);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(110, 13);
             this.labelControl4.TabIndex = 2;
@@ -281,16 +273,16 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(5, 446);
+            this.btnSave.Location = new System.Drawing.Point(547, 483);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 25);
+            this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgvRoom_Services
             // 
-            this.dgvRoom_Services.Location = new System.Drawing.Point(-1, -1);
+            this.dgvRoom_Services.Location = new System.Drawing.Point(0, -1);
             this.dgvRoom_Services.MainView = this.viewRoom_Services;
             this.dgvRoom_Services.Name = "dgvRoom_Services";
             this.dgvRoom_Services.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -298,7 +290,7 @@
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit3,
             this.btnDelete});
-            this.dgvRoom_Services.Size = new System.Drawing.Size(642, 477);
+            this.dgvRoom_Services.Size = new System.Drawing.Size(649, 441);
             this.dgvRoom_Services.TabIndex = 0;
             this.dgvRoom_Services.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewRoom_Services});
@@ -528,7 +520,7 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);
@@ -590,33 +582,14 @@
             this.lbCurrentRoom.TabIndex = 0;
             this.lbCurrentRoom.Text = "Phòng số :";
             // 
-            // panelControl5
-            // 
-            this.panelControl5.Controls.Add(this.panelControl7);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(953, 0);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(297, 517);
-            this.panelControl5.TabIndex = 2;
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.Controls.Add(this.dgvServices);
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl7.Location = new System.Drawing.Point(2, 2);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(293, 513);
-            this.panelControl7.TabIndex = 1;
-            // 
             // dgvServices
             // 
-            this.dgvServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServices.Location = new System.Drawing.Point(2, 2);
+            this.dgvServices.Location = new System.Drawing.Point(953, 0);
             this.dgvServices.MainView = this.viewServices;
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.bnAddService});
-            this.dgvServices.Size = new System.Drawing.Size(289, 509);
+            this.dgvServices.Size = new System.Drawing.Size(297, 476);
             this.dgvServices.TabIndex = 0;
             this.dgvServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewServices});
@@ -655,7 +628,7 @@
             // 
             this.bnAddService.AutoHeight = false;
             this.bnAddService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.bnAddService.Name = "bnAddService";
             this.bnAddService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.bnAddService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAddService_ButtonClick);
@@ -682,7 +655,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 517);
-            this.Controls.Add(this.panelControl5);
+            this.Controls.Add(this.dgvServices);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -716,10 +689,6 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
-            this.panelControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).EndInit();
@@ -745,9 +714,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn Unit;
         private DevExpress.XtraGrid.Columns.GridColumn CostRef;
         private DevExpress.XtraGrid.Columns.GridColumn Cost;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraGrid.Columns.GridColumn VAT;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraGrid.GridControl dgvServices;
         private DevExpress.XtraGrid.Views.Grid.GridView viewServices;
         private DevExpress.XtraGrid.Columns.GridColumn NameService;

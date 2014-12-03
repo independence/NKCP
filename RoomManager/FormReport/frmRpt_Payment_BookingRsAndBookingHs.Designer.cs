@@ -63,7 +63,7 @@
             this.colBookingRoomCost = new DevExpress.XtraReports.UI.XRTableCell();
             this.colMoneyRoomBeforeTax = new DevExpress.XtraReports.UI.XRTableCell();
             this.colPercentTaxRoom = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colPaymentMoneyaRoom = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colPaymentMoneyRoom = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -85,10 +85,10 @@
             this.Detail2 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.colNamService = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colPercentTaxService = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colNamServiceRoom = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colTotalMoneyServiceRoomBeforeTax = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colPercentTaxServiceRoom = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colTotalMoneyServiceRoomAfterTax = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader3 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -98,19 +98,9 @@
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.GroupFooter2 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.lblTotalMoney_BookingRString = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblSumMoneyService_BookingRBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblSumMoneyServiceTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblSumMoneyService_BookingRBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyBookingRBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyBookingRBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblBookingMoney_BookingR = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoney_BookingR = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceRoomsBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceRoomsTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceRoomsAfterTax = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -128,7 +118,6 @@
             this.colSkuHall = new DevExpress.XtraReports.UI.XRTableCell();
             this.colCreateDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.colBookingHallCost = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colMoneyHallBeforeTax = new DevExpress.XtraReports.UI.XRTableCell();
             this.colPercentTax = new DevExpress.XtraReports.UI.XRTableCell();
             this.colPaymentMoneyHall = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader2 = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -137,59 +126,48 @@
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
-            this.ReportFooter1 = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.lblTotalMoneyHallBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyHallBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
+            this.GroupFooter3 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyHallsTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyHallsBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyHallsAfterTax = new DevExpress.XtraReports.UI.XRLabel();
             this.DetailReportService = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Detail4 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable8 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow10 = new DevExpress.XtraReports.UI.XRTableRow();
             this.colService_Sku = new DevExpress.XtraReports.UI.XRTableCell();
             this.colNamServiceHall = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colTotalMoneyBeforeTax = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colTotalMoneyServiceAfterTax = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colTotalMoneyServiceHallBeforeTax = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colPercentTaxServiceHall = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colTotalMoneyServiceHallAfterTax = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader5 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable7 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.colMoneyService = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportFooter3 = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.lblTotalMoneyBookigRAndBookingH = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblBookingmoney_BookingRAndBookingH = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel54 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblMoneyBookingRAndBookingHBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblMoneyBookingRAndBookingHBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalBookingH = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyBookingHBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyBookingHBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel46 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblBookingMoney_BookingH = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel50 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLine6 = new DevExpress.XtraReports.UI.XRLine();
-            this.lblTotalMoneyService_BookingHBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblTotalMoneyServices_BookingHBehindTax = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTotalMoney = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblBookingMoney = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTotalMoneyAfterTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTotalMoneyTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTotalMoneyBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTotalMoneyString = new DevExpress.XtraReports.UI.XRLabel();
+            this.GroupFooter4 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceHallsAfterTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceHallsTax = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblSumMoneyServiceHallsBeforeTax = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tblRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -555,7 +533,7 @@
             this.colBookingRoomCost,
             this.colMoneyRoomBeforeTax,
             this.colPercentTaxRoom,
-            this.colPaymentMoneyaRoom});
+            this.colPaymentMoneyRoom});
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 1D;
             // 
@@ -611,12 +589,12 @@
             this.colPercentTaxRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colPercentTaxRoom.Weight = 0.30667339670037352D;
             // 
-            // colPaymentMoneyaRoom
+            // colPaymentMoneyRoom
             // 
-            this.colPaymentMoneyaRoom.Name = "colPaymentMoneyaRoom";
-            this.colPaymentMoneyaRoom.StylePriority.UseTextAlignment = false;
-            this.colPaymentMoneyaRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.colPaymentMoneyaRoom.Weight = 0.37414213106547045D;
+            this.colPaymentMoneyRoom.Name = "colPaymentMoneyRoom";
+            this.colPaymentMoneyRoom.StylePriority.UseTextAlignment = false;
+            this.colPaymentMoneyRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colPaymentMoneyRoom.Weight = 0.37414213106547045D;
             // 
             // ReportHeader1
             // 
@@ -668,7 +646,7 @@
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseBorders = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "Phòng";
+            this.xrTableCell1.Text = "P";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell1.Weight = 0.16808229745226977D;
             // 
@@ -724,7 +702,7 @@
             // 
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
-            this.xrTableCell5.Text = "Trước thuế(vnđ)";
+            this.xrTableCell5.Text = "Trước thuế";
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell5.Weight = 0.44821945863252455D;
             // 
@@ -732,7 +710,7 @@
             // 
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
-            this.xrTableCell14.Text = "Thuế (vnđ)";
+            this.xrTableCell14.Text = "Thuế ";
             this.xrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell14.Weight = 0.37351620139173425D;
             // 
@@ -744,7 +722,7 @@
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseBorders = false;
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
-            this.xrTableCell3.Text = "Thành tiền(vnđ)";
+            this.xrTableCell3.Text = "Thành tiền";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell3.Weight = 0.45569043738895454D;
             // 
@@ -780,7 +758,7 @@
             this.lblSumMoneyRoomsBehindTax.BorderColor = System.Drawing.Color.Gray;
             this.lblSumMoneyRoomsBehindTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblSumMoneyRoomsBehindTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyRoomsBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(630.522F, 0F);
+            this.lblSumMoneyRoomsBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(629.522F, 0F);
             this.lblSumMoneyRoomsBehindTax.Name = "lblSumMoneyRoomsBehindTax";
             this.lblSumMoneyRoomsBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblSumMoneyRoomsBehindTax.SizeF = new System.Drawing.SizeF(121.9781F, 35F);
@@ -789,7 +767,7 @@
             this.lblSumMoneyRoomsBehindTax.StylePriority.UseBorders = false;
             this.lblSumMoneyRoomsBehindTax.StylePriority.UseFont = false;
             this.lblSumMoneyRoomsBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyRoomsBehindTax.Text = "0(VND)";
+            this.lblSumMoneyRoomsBehindTax.Text = "0";
             this.lblSumMoneyRoomsBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // lblSumMoneyRoomsBeforeTax
@@ -798,16 +776,16 @@
             this.lblSumMoneyRoomsBeforeTax.BorderColor = System.Drawing.Color.Gray;
             this.lblSumMoneyRoomsBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblSumMoneyRoomsBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyRoomsBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(410.4998F, 0F);
+            this.lblSumMoneyRoomsBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(409.9997F, 0F);
             this.lblSumMoneyRoomsBeforeTax.Name = "lblSumMoneyRoomsBeforeTax";
             this.lblSumMoneyRoomsBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSumMoneyRoomsBeforeTax.SizeF = new System.Drawing.SizeF(120F, 35F);
+            this.lblSumMoneyRoomsBeforeTax.SizeF = new System.Drawing.SizeF(119.5F, 35F);
             this.lblSumMoneyRoomsBeforeTax.StylePriority.UseBackColor = false;
             this.lblSumMoneyRoomsBeforeTax.StylePriority.UseBorderColor = false;
             this.lblSumMoneyRoomsBeforeTax.StylePriority.UseBorders = false;
             this.lblSumMoneyRoomsBeforeTax.StylePriority.UseFont = false;
             this.lblSumMoneyRoomsBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyRoomsBeforeTax.Text = "0(VND)";
+            this.lblSumMoneyRoomsBeforeTax.Text = "0";
             this.lblSumMoneyRoomsBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // lblSumMoneyRoomTax
@@ -816,7 +794,7 @@
             this.lblSumMoneyRoomTax.BorderColor = System.Drawing.Color.Gray;
             this.lblSumMoneyRoomTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblSumMoneyRoomTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyRoomTax.LocationFloat = new DevExpress.Utils.PointFloat(530.4999F, 0F);
+            this.lblSumMoneyRoomTax.LocationFloat = new DevExpress.Utils.PointFloat(529.4999F, 0F);
             this.lblSumMoneyRoomTax.Name = "lblSumMoneyRoomTax";
             this.lblSumMoneyRoomTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblSumMoneyRoomTax.SizeF = new System.Drawing.SizeF(100F, 35F);
@@ -825,7 +803,7 @@
             this.lblSumMoneyRoomTax.StylePriority.UseBorders = false;
             this.lblSumMoneyRoomTax.StylePriority.UseFont = false;
             this.lblSumMoneyRoomTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyRoomTax.Text = "0(VND)";
+            this.lblSumMoneyRoomTax.Text = "0";
             this.lblSumMoneyRoomTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel23
@@ -835,7 +813,7 @@
             this.xrLabel23.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel23.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0.4999084F, 0F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel23.SizeF = new System.Drawing.SizeF(410F, 35F);
@@ -891,57 +869,57 @@
             // xrTableRow6
             // 
             this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.colNamService,
-            this.xrTableCell19,
-            this.colPercentTaxService,
-            this.xrTableCell20});
+            this.colNamServiceRoom,
+            this.colTotalMoneyServiceRoomBeforeTax,
+            this.colPercentTaxServiceRoom,
+            this.colTotalMoneyServiceRoomAfterTax});
             this.xrTableRow6.Name = "xrTableRow6";
             this.xrTableRow6.Weight = 1D;
             // 
-            // colNamService
+            // colNamServiceRoom
             // 
-            this.colNamService.BorderColor = System.Drawing.Color.Gray;
-            this.colNamService.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.colNamServiceRoom.BorderColor = System.Drawing.Color.Gray;
+            this.colNamServiceRoom.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colNamService.Name = "colNamService";
-            this.colNamService.StylePriority.UseBorderColor = false;
-            this.colNamService.StylePriority.UseBorders = false;
-            this.colNamService.StylePriority.UseTextAlignment = false;
-            this.colNamService.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colNamService.Weight = 1.6428179948198D;
+            this.colNamServiceRoom.Name = "colNamServiceRoom";
+            this.colNamServiceRoom.StylePriority.UseBorderColor = false;
+            this.colNamServiceRoom.StylePriority.UseBorders = false;
+            this.colNamServiceRoom.StylePriority.UseTextAlignment = false;
+            this.colNamServiceRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.colNamServiceRoom.Weight = 1.6428179948198D;
             // 
-            // xrTableCell19
+            // colTotalMoneyServiceRoomBeforeTax
             // 
-            this.xrTableCell19.BorderColor = System.Drawing.Color.Gray;
-            this.xrTableCell19.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.colTotalMoneyServiceRoomBeforeTax.BorderColor = System.Drawing.Color.Gray;
+            this.colTotalMoneyServiceRoomBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell19.Name = "xrTableCell19";
-            this.xrTableCell19.StylePriority.UseBorderColor = false;
-            this.xrTableCell19.StylePriority.UseBorders = false;
-            this.xrTableCell19.StylePriority.UseTextAlignment = false;
-            this.xrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell19.Weight = 0.48082477869835716D;
+            this.colTotalMoneyServiceRoomBeforeTax.Name = "colTotalMoneyServiceRoomBeforeTax";
+            this.colTotalMoneyServiceRoomBeforeTax.StylePriority.UseBorderColor = false;
+            this.colTotalMoneyServiceRoomBeforeTax.StylePriority.UseBorders = false;
+            this.colTotalMoneyServiceRoomBeforeTax.StylePriority.UseTextAlignment = false;
+            this.colTotalMoneyServiceRoomBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colTotalMoneyServiceRoomBeforeTax.Weight = 0.48082477869835716D;
             // 
-            // colPercentTaxService
+            // colPercentTaxServiceRoom
             // 
-            this.colPercentTaxService.Name = "colPercentTaxService";
-            this.colPercentTaxService.StylePriority.UseTextAlignment = false;
-            this.colPercentTaxService.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.colPercentTaxService.Weight = 0.40068731501207716D;
+            this.colPercentTaxServiceRoom.Name = "colPercentTaxServiceRoom";
+            this.colPercentTaxServiceRoom.StylePriority.UseTextAlignment = false;
+            this.colPercentTaxServiceRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colPercentTaxServiceRoom.Weight = 0.40068731501207716D;
             // 
-            // xrTableCell20
+            // colTotalMoneyServiceRoomAfterTax
             // 
-            this.xrTableCell20.BorderColor = System.Drawing.Color.Gray;
-            this.xrTableCell20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTableCell20.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.colTotalMoneyServiceRoomAfterTax.BorderColor = System.Drawing.Color.Gray;
+            this.colTotalMoneyServiceRoomAfterTax.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.colTotalMoneyServiceRoomAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell20.Name = "xrTableCell20";
-            this.xrTableCell20.StylePriority.UseBorderColor = false;
-            this.xrTableCell20.StylePriority.UseBorderDashStyle = false;
-            this.xrTableCell20.StylePriority.UseBorders = false;
-            this.xrTableCell20.StylePriority.UseTextAlignment = false;
-            this.xrTableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell20.Weight = 0.48883854607389227D;
+            this.colTotalMoneyServiceRoomAfterTax.Name = "colTotalMoneyServiceRoomAfterTax";
+            this.colTotalMoneyServiceRoomAfterTax.StylePriority.UseBorderColor = false;
+            this.colTotalMoneyServiceRoomAfterTax.StylePriority.UseBorderDashStyle = false;
+            this.colTotalMoneyServiceRoomAfterTax.StylePriority.UseBorders = false;
+            this.colTotalMoneyServiceRoomAfterTax.StylePriority.UseTextAlignment = false;
+            this.colTotalMoneyServiceRoomAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colTotalMoneyServiceRoomAfterTax.Weight = 0.48883854607389227D;
             // 
             // ReportHeader3
             // 
@@ -1001,7 +979,7 @@
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseBorders = false;
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
-            this.xrTableCell10.Text = "Trước thuế(vnđ)";
+            this.xrTableCell10.Text = "Trước thuế";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell10.Weight = 0.44821945922688972D;
             // 
@@ -1009,7 +987,7 @@
             // 
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
-            this.xrTableCell6.Text = "Thuế(vnđ)";
+            this.xrTableCell6.Text = "Thuế";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell6.Weight = 0.37351621421833481D;
             // 
@@ -1021,7 +999,7 @@
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.StylePriority.UseBorders = false;
             this.xrTableCell18.StylePriority.UseTextAlignment = false;
-            this.xrTableCell18.Text = "Thành tiền(vnđ)";
+            this.xrTableCell18.Text = "Thành tiền";
             this.xrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell18.Weight = 0.45569056241864248D;
             // 
@@ -1042,263 +1020,66 @@
             // GroupFooter2
             // 
             this.GroupFooter2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblTotalMoney_BookingRString,
-            this.lblSumMoneyService_BookingRBeforeTax,
-            this.lblSumMoneyServiceTax,
-            this.lblSumMoneyService_BookingRBehindTax,
-            this.xrLabel3,
-            this.lblTotalMoneyBookingRBeforeTax,
-            this.lblTotalMoneyTax,
-            this.lblTotalMoneyBookingRBehindTax,
-            this.xrLabel13,
-            this.lblBookingMoney_BookingR,
-            this.xrLabel19,
-            this.lblTotalMoney_BookingR,
-            this.xrLabel9,
+            this.lblSumMoneyServiceRoomsBeforeTax,
+            this.lblSumMoneyServiceRoomsTax,
+            this.lblSumMoneyServiceRoomsAfterTax,
             this.xrLabel17});
-            this.GroupFooter2.HeightF = 257.0833F;
+            this.GroupFooter2.HeightF = 49.79165F;
             this.GroupFooter2.Name = "GroupFooter2";
             // 
-            // lblTotalMoney_BookingRString
+            // lblSumMoneyServiceRoomsBeforeTax
             // 
-            this.lblTotalMoney_BookingRString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotalMoney_BookingRString.BorderColor = System.Drawing.Color.Gray;
-            this.lblTotalMoney_BookingRString.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoney_BookingRString.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoney_BookingRString.LocationFloat = new DevExpress.Utils.PointFloat(410.9998F, 165.2084F);
-            this.lblTotalMoney_BookingRString.Name = "lblTotalMoney_BookingRString";
-            this.lblTotalMoney_BookingRString.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoney_BookingRString.SizeF = new System.Drawing.SizeF(341.98F, 35F);
-            this.lblTotalMoney_BookingRString.StylePriority.UseBackColor = false;
-            this.lblTotalMoney_BookingRString.StylePriority.UseBorderColor = false;
-            this.lblTotalMoney_BookingRString.StylePriority.UseBorders = false;
-            this.lblTotalMoney_BookingRString.StylePriority.UseFont = false;
-            this.lblTotalMoney_BookingRString.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoney_BookingRString.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyServiceRoomsBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceRoomsBeforeTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceRoomsBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceRoomsBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceRoomsBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(409.9998F, 0F);
+            this.lblSumMoneyServiceRoomsBeforeTax.Name = "lblSumMoneyServiceRoomsBeforeTax";
+            this.lblSumMoneyServiceRoomsBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceRoomsBeforeTax.SizeF = new System.Drawing.SizeF(120F, 35F);
+            this.lblSumMoneyServiceRoomsBeforeTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceRoomsBeforeTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceRoomsBeforeTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceRoomsBeforeTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceRoomsBeforeTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceRoomsBeforeTax.Text = "0";
+            this.lblSumMoneyServiceRoomsBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // lblSumMoneyService_BookingRBeforeTax
+            // lblSumMoneyServiceRoomsTax
             // 
-            this.lblSumMoneyService_BookingRBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSumMoneyService_BookingRBeforeTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblSumMoneyService_BookingRBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblSumMoneyService_BookingRBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyService_BookingRBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(410.9998F, 0F);
-            this.lblSumMoneyService_BookingRBeforeTax.Name = "lblSumMoneyService_BookingRBeforeTax";
-            this.lblSumMoneyService_BookingRBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSumMoneyService_BookingRBeforeTax.SizeF = new System.Drawing.SizeF(120F, 35F);
-            this.lblSumMoneyService_BookingRBeforeTax.StylePriority.UseBackColor = false;
-            this.lblSumMoneyService_BookingRBeforeTax.StylePriority.UseBorderColor = false;
-            this.lblSumMoneyService_BookingRBeforeTax.StylePriority.UseBorders = false;
-            this.lblSumMoneyService_BookingRBeforeTax.StylePriority.UseFont = false;
-            this.lblSumMoneyService_BookingRBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyService_BookingRBeforeTax.Text = "0(VND)";
-            this.lblSumMoneyService_BookingRBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.lblSumMoneyServiceRoomsTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceRoomsTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceRoomsTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceRoomsTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceRoomsTax.LocationFloat = new DevExpress.Utils.PointFloat(529.9999F, 0F);
+            this.lblSumMoneyServiceRoomsTax.Name = "lblSumMoneyServiceRoomsTax";
+            this.lblSumMoneyServiceRoomsTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceRoomsTax.SizeF = new System.Drawing.SizeF(100F, 35F);
+            this.lblSumMoneyServiceRoomsTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceRoomsTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceRoomsTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceRoomsTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceRoomsTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceRoomsTax.Text = "0";
+            this.lblSumMoneyServiceRoomsTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // lblSumMoneyServiceTax
+            // lblSumMoneyServiceRoomsAfterTax
             // 
-            this.lblSumMoneyServiceTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSumMoneyServiceTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblSumMoneyServiceTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblSumMoneyServiceTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyServiceTax.LocationFloat = new DevExpress.Utils.PointFloat(530.9999F, 0F);
-            this.lblSumMoneyServiceTax.Name = "lblSumMoneyServiceTax";
-            this.lblSumMoneyServiceTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSumMoneyServiceTax.SizeF = new System.Drawing.SizeF(100F, 35F);
-            this.lblSumMoneyServiceTax.StylePriority.UseBackColor = false;
-            this.lblSumMoneyServiceTax.StylePriority.UseBorderColor = false;
-            this.lblSumMoneyServiceTax.StylePriority.UseBorders = false;
-            this.lblSumMoneyServiceTax.StylePriority.UseFont = false;
-            this.lblSumMoneyServiceTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyServiceTax.Text = "0(VND)";
-            this.lblSumMoneyServiceTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // lblSumMoneyService_BookingRBehindTax
-            // 
-            this.lblSumMoneyService_BookingRBehindTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSumMoneyService_BookingRBehindTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblSumMoneyService_BookingRBehindTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblSumMoneyService_BookingRBehindTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSumMoneyService_BookingRBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(630.9999F, 0F);
-            this.lblSumMoneyService_BookingRBehindTax.Name = "lblSumMoneyService_BookingRBehindTax";
-            this.lblSumMoneyService_BookingRBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSumMoneyService_BookingRBehindTax.SizeF = new System.Drawing.SizeF(122F, 35F);
-            this.lblSumMoneyService_BookingRBehindTax.StylePriority.UseBackColor = false;
-            this.lblSumMoneyService_BookingRBehindTax.StylePriority.UseBorderColor = false;
-            this.lblSumMoneyService_BookingRBehindTax.StylePriority.UseBorders = false;
-            this.lblSumMoneyService_BookingRBehindTax.StylePriority.UseFont = false;
-            this.lblSumMoneyService_BookingRBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblSumMoneyService_BookingRBehindTax.Text = "0(VND)";
-            this.lblSumMoneyService_BookingRBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xrLabel3.BorderColor = System.Drawing.Color.Gray;
-            this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0.9998004F, 60.20839F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(410F, 35F);
-            this.xrLabel3.StylePriority.UseBackColor = false;
-            this.xrLabel3.StylePriority.UseBorderColor = false;
-            this.xrLabel3.StylePriority.UseBorders = false;
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "Tổng số tiền thanh toán";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblTotalMoneyBookingRBeforeTax
-            // 
-            this.lblTotalMoneyBookingRBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotalMoneyBookingRBeforeTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblTotalMoneyBookingRBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyBookingRBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoneyBookingRBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(410.9996F, 60.20839F);
-            this.lblTotalMoneyBookingRBeforeTax.Name = "lblTotalMoneyBookingRBeforeTax";
-            this.lblTotalMoneyBookingRBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyBookingRBeforeTax.SizeF = new System.Drawing.SizeF(120.0001F, 35F);
-            this.lblTotalMoneyBookingRBeforeTax.StylePriority.UseBackColor = false;
-            this.lblTotalMoneyBookingRBeforeTax.StylePriority.UseBorderColor = false;
-            this.lblTotalMoneyBookingRBeforeTax.StylePriority.UseBorders = false;
-            this.lblTotalMoneyBookingRBeforeTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyBookingRBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyBookingRBeforeTax.Text = "0(VND)";
-            this.lblTotalMoneyBookingRBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // lblTotalMoneyTax
-            // 
-            this.lblTotalMoneyTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotalMoneyTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblTotalMoneyTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoneyTax.LocationFloat = new DevExpress.Utils.PointFloat(530.9997F, 60.20839F);
-            this.lblTotalMoneyTax.Name = "lblTotalMoneyTax";
-            this.lblTotalMoneyTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyTax.SizeF = new System.Drawing.SizeF(100F, 35F);
-            this.lblTotalMoneyTax.StylePriority.UseBackColor = false;
-            this.lblTotalMoneyTax.StylePriority.UseBorderColor = false;
-            this.lblTotalMoneyTax.StylePriority.UseBorders = false;
-            this.lblTotalMoneyTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyTax.Text = "0(VND)";
-            this.lblTotalMoneyTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // lblTotalMoneyBookingRBehindTax
-            // 
-            this.lblTotalMoneyBookingRBehindTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotalMoneyBookingRBehindTax.BorderColor = System.Drawing.Color.Gray;
-            this.lblTotalMoneyBookingRBehindTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyBookingRBehindTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoneyBookingRBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(630.9999F, 60.20839F);
-            this.lblTotalMoneyBookingRBehindTax.Name = "lblTotalMoneyBookingRBehindTax";
-            this.lblTotalMoneyBookingRBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyBookingRBehindTax.SizeF = new System.Drawing.SizeF(122F, 35F);
-            this.lblTotalMoneyBookingRBehindTax.StylePriority.UseBackColor = false;
-            this.lblTotalMoneyBookingRBehindTax.StylePriority.UseBorderColor = false;
-            this.lblTotalMoneyBookingRBehindTax.StylePriority.UseBorders = false;
-            this.lblTotalMoneyBookingRBehindTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyBookingRBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyBookingRBehindTax.Text = "0(VND)";
-            this.lblTotalMoneyBookingRBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xrLabel13.BorderColor = System.Drawing.Color.Gray;
-            this.xrLabel13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(0.9998004F, 95.20836F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(630F, 35F);
-            this.xrLabel13.StylePriority.UseBackColor = false;
-            this.xrLabel13.StylePriority.UseBorderColor = false;
-            this.xrLabel13.StylePriority.UseBorders = false;
-            this.xrLabel13.StylePriority.UseFont = false;
-            this.xrLabel13.StylePriority.UseTextAlignment = false;
-            this.xrLabel13.Text = "Số tiền ứng trước";
-            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblBookingMoney_BookingR
-            // 
-            this.lblBookingMoney_BookingR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblBookingMoney_BookingR.BorderColor = System.Drawing.Color.Gray;
-            this.lblBookingMoney_BookingR.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblBookingMoney_BookingR.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBookingMoney_BookingR.LocationFloat = new DevExpress.Utils.PointFloat(630.9999F, 95.20842F);
-            this.lblBookingMoney_BookingR.Name = "lblBookingMoney_BookingR";
-            this.lblBookingMoney_BookingR.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblBookingMoney_BookingR.SizeF = new System.Drawing.SizeF(122F, 35F);
-            this.lblBookingMoney_BookingR.StylePriority.UseBackColor = false;
-            this.lblBookingMoney_BookingR.StylePriority.UseBorderColor = false;
-            this.lblBookingMoney_BookingR.StylePriority.UseBorders = false;
-            this.lblBookingMoney_BookingR.StylePriority.UseFont = false;
-            this.lblBookingMoney_BookingR.StylePriority.UseTextAlignment = false;
-            this.lblBookingMoney_BookingR.Text = "0(VND)";
-            this.lblBookingMoney_BookingR.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // xrLabel19
-            // 
-            this.xrLabel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xrLabel19.BorderColor = System.Drawing.Color.Gray;
-            this.xrLabel19.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(0.9998004F, 130.2083F);
-            this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(630F, 35.00002F);
-            this.xrLabel19.StylePriority.UseBackColor = false;
-            this.xrLabel19.StylePriority.UseBorderColor = false;
-            this.xrLabel19.StylePriority.UseBorders = false;
-            this.xrLabel19.StylePriority.UseFont = false;
-            this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "Số tiền còn phải trả";
-            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblTotalMoney_BookingR
-            // 
-            this.lblTotalMoney_BookingR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotalMoney_BookingR.BorderColor = System.Drawing.Color.Gray;
-            this.lblTotalMoney_BookingR.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoney_BookingR.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTotalMoney_BookingR.LocationFloat = new DevExpress.Utils.PointFloat(630.9999F, 130.2085F);
-            this.lblTotalMoney_BookingR.Name = "lblTotalMoney_BookingR";
-            this.lblTotalMoney_BookingR.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoney_BookingR.SizeF = new System.Drawing.SizeF(122F, 35.00002F);
-            this.lblTotalMoney_BookingR.StylePriority.UseBackColor = false;
-            this.lblTotalMoney_BookingR.StylePriority.UseBorderColor = false;
-            this.lblTotalMoney_BookingR.StylePriority.UseBorders = false;
-            this.lblTotalMoney_BookingR.StylePriority.UseFont = false;
-            this.lblTotalMoney_BookingR.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoney_BookingR.Text = "0(VND)";
-            this.lblTotalMoney_BookingR.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // xrLabel9
-            // 
-            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.xrLabel9.BorderColor = System.Drawing.Color.Gray;
-            this.xrLabel9.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0.9998004F, 165.2083F);
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(410F, 35F);
-            this.xrLabel9.StylePriority.UseBackColor = false;
-            this.xrLabel9.StylePriority.UseBorderColor = false;
-            this.xrLabel9.StylePriority.UseBorders = false;
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "Số tiền bằng chữ";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyServiceRoomsAfterTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceRoomsAfterTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceRoomsAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceRoomsAfterTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceRoomsAfterTax.LocationFloat = new DevExpress.Utils.PointFloat(629.9999F, 0F);
+            this.lblSumMoneyServiceRoomsAfterTax.Name = "lblSumMoneyServiceRoomsAfterTax";
+            this.lblSumMoneyServiceRoomsAfterTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceRoomsAfterTax.SizeF = new System.Drawing.SizeF(122F, 35F);
+            this.lblSumMoneyServiceRoomsAfterTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceRoomsAfterTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceRoomsAfterTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceRoomsAfterTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceRoomsAfterTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceRoomsAfterTax.Text = "0";
+            this.lblSumMoneyServiceRoomsAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel17
             // 
@@ -1307,7 +1088,7 @@
             this.xrLabel17.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0.9998004F, 0F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(410F, 35F);
@@ -1442,7 +1223,7 @@
             this.DetailReportHall.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail1,
             this.ReportHeader2,
-            this.ReportFooter1});
+            this.GroupFooter3});
             this.DetailReportHall.Level = 2;
             this.DetailReportHall.Name = "DetailReportHall";
             // 
@@ -1465,7 +1246,7 @@
             this.tblHall.Name = "tblHall";
             this.tblHall.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.tblHall.SizeF = new System.Drawing.SizeF(749.9999F, 35F);
+            this.tblHall.SizeF = new System.Drawing.SizeF(751.5001F, 35F);
             this.tblHall.StylePriority.UseBackColor = false;
             this.tblHall.StylePriority.UseBorderColor = false;
             this.tblHall.StylePriority.UseBorderDashStyle = false;
@@ -1478,7 +1259,6 @@
             this.colSkuHall,
             this.colCreateDate,
             this.colBookingHallCost,
-            this.colMoneyHallBeforeTax,
             this.colPercentTax,
             this.colPaymentMoneyHall});
             this.xrTableRow4.Name = "xrTableRow4";
@@ -1499,35 +1279,28 @@
             this.colCreateDate.Name = "colCreateDate";
             this.colCreateDate.StylePriority.UseTextAlignment = false;
             this.colCreateDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colCreateDate.Weight = 0.43321122683942703D;
+            this.colCreateDate.Weight = 0.73646611796797268D;
             // 
             // colBookingHallCost
             // 
             this.colBookingHallCost.Name = "colBookingHallCost";
             this.colBookingHallCost.StylePriority.UseTextAlignment = false;
             this.colBookingHallCost.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colBookingHallCost.Weight = 0.18499084245092057D;
-            // 
-            // colMoneyHallBeforeTax
-            // 
-            this.colMoneyHallBeforeTax.Name = "colMoneyHallBeforeTax";
-            this.colMoneyHallBeforeTax.StylePriority.UseTextAlignment = false;
-            this.colMoneyHallBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colMoneyHallBeforeTax.Weight = 0.472358917004851D;
+            this.colBookingHallCost.Weight = 0.36794303048122134D;
             // 
             // colPercentTax
             // 
             this.colPercentTax.Name = "colPercentTax";
             this.colPercentTax.StylePriority.UseTextAlignment = false;
             this.colPercentTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colPercentTax.Weight = 0.20012944800777693D;
+            this.colPercentTax.Weight = 0.30797061929626568D;
             // 
             // colPaymentMoneyHall
             // 
             this.colPaymentMoneyHall.Name = "colPaymentMoneyHall";
             this.colPaymentMoneyHall.StylePriority.UseTextAlignment = false;
             this.colPaymentMoneyHall.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colPaymentMoneyHall.Weight = 0.49264299779260695D;
+            this.colPaymentMoneyHall.Weight = 0.37557275864178913D;
             // 
             // ReportHeader2
             // 
@@ -1550,7 +1323,7 @@
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(750F, 40F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(752.0002F, 40F);
             this.xrTable3.StylePriority.UseBackColor = false;
             this.xrTable3.StylePriority.UseBorderColor = false;
             this.xrTable3.StylePriority.UseBorders = false;
@@ -1563,7 +1336,6 @@
             this.xrTableCell8,
             this.xrTableCell9,
             this.xrTableCell11,
-            this.xrTableCell15,
             this.xrTableCell16,
             this.xrTableCell17});
             this.xrTableRow3.Name = "xrTableRow3";
@@ -1591,7 +1363,7 @@
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
             this.xrTableCell9.Text = "Ngày tạo";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell9.Weight = 0.564568344083521D;
+            this.xrTableCell9.Weight = 0.95977649715055091D;
             // 
             // xrTableCell11
             // 
@@ -1601,25 +1373,17 @@
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.StylePriority.UseBorders = false;
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
-            this.xrTableCell11.Text = "Giá  (VNĐ)";
+            this.xrTableCell11.Text = "Giá  ";
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell11.Weight = 0.24943380035188678D;
-            // 
-            // xrTableCell15
-            // 
-            this.xrTableCell15.Name = "xrTableCell15";
-            this.xrTableCell15.StylePriority.UseTextAlignment = false;
-            this.xrTableCell15.Text = "Tiền hội trường trước thuế";
-            this.xrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell15.Weight = 0.61558624909435744D;
+            this.xrTableCell11.Weight = 0.47950820047974591D;
             // 
             // xrTableCell16
             // 
             this.xrTableCell16.Name = "xrTableCell16";
             this.xrTableCell16.StylePriority.UseTextAlignment = false;
-            this.xrTableCell16.Text = "Thuế (%)";
+            this.xrTableCell16.Text = "Thuế";
             this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell16.Weight = 0.25246170720837752D;
+            this.xrTableCell16.Weight = 0.40135279044808464D;
             // 
             // xrTableCell17
             // 
@@ -1629,9 +1393,9 @@
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.StylePriority.UseBorders = false;
             this.xrTableCell17.StylePriority.UseTextAlignment = false;
-            this.xrTableCell17.Text = "Thành tiền  (VNĐ)";
+            this.xrTableCell17.Text = "Thành tiền";
             this.xrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell17.Weight = 0.64202119855259632D;
+            this.xrTableCell17.Weight = 0.49145981046571441D;
             // 
             // xrLabel25
             // 
@@ -1645,68 +1409,96 @@
             this.xrLabel25.Text = "Danh sách hội trường";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // ReportFooter1
+            // GroupFooter3
             // 
-            this.ReportFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblTotalMoneyHallBeforeTax,
-            this.xrLabel38,
-            this.lblTotalMoneyHallBehindTax,
-            this.xrLabel28});
-            this.ReportFooter1.HeightF = 60F;
-            this.ReportFooter1.Name = "ReportFooter1";
+            this.GroupFooter3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel8,
+            this.lblSumMoneyHallsTax,
+            this.lblSumMoneyHallsBeforeTax,
+            this.lblSumMoneyHallsAfterTax});
+            this.GroupFooter3.HeightF = 70F;
+            this.GroupFooter3.Name = "GroupFooter3";
             // 
-            // lblTotalMoneyHallBeforeTax
+            // xrLabel8
             // 
-            this.lblTotalMoneyHallBeforeTax.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
-            this.lblTotalMoneyHallBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(230F, 0F);
-            this.lblTotalMoneyHallBeforeTax.Name = "lblTotalMoneyHallBeforeTax";
-            this.lblTotalMoneyHallBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyHallBeforeTax.SizeF = new System.Drawing.SizeF(190F, 30F);
-            this.lblTotalMoneyHallBeforeTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyHallBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyHallBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel8.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel8.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0.4999081F, 0F);
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(409.4998F, 35F);
+            this.xrLabel8.StylePriority.UseBackColor = false;
+            this.xrLabel8.StylePriority.UseBorderColor = false;
+            this.xrLabel8.StylePriority.UseBorders = false;
+            this.xrLabel8.StylePriority.UseFont = false;
+            this.xrLabel8.StylePriority.UseTextAlignment = false;
+            this.xrLabel8.Text = "Tổng tiền hội trường";
+            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel38
+            // lblSumMoneyHallsTax
             // 
-            this.xrLabel38.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel38.Name = "xrLabel38";
-            this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel38.SizeF = new System.Drawing.SizeF(230F, 30F);
-            this.xrLabel38.StylePriority.UseFont = false;
-            this.xrLabel38.StylePriority.UseTextAlignment = false;
-            this.xrLabel38.Text = "Tổng tiền hội trường trước thuế:";
-            this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyHallsTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyHallsTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyHallsTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyHallsTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyHallsTax.LocationFloat = new DevExpress.Utils.PointFloat(529.4998F, 0F);
+            this.lblSumMoneyHallsTax.Name = "lblSumMoneyHallsTax";
+            this.lblSumMoneyHallsTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyHallsTax.SizeF = new System.Drawing.SizeF(100.0001F, 35F);
+            this.lblSumMoneyHallsTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyHallsTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyHallsTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyHallsTax.StylePriority.UseFont = false;
+            this.lblSumMoneyHallsTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyHallsTax.Text = "0";
+            this.lblSumMoneyHallsTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // lblTotalMoneyHallBehindTax
+            // lblSumMoneyHallsBeforeTax
             // 
-            this.lblTotalMoneyHallBehindTax.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic);
-            this.lblTotalMoneyHallBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(230F, 30F);
-            this.lblTotalMoneyHallBehindTax.Name = "lblTotalMoneyHallBehindTax";
-            this.lblTotalMoneyHallBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyHallBehindTax.SizeF = new System.Drawing.SizeF(190F, 30F);
-            this.lblTotalMoneyHallBehindTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyHallBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyHallBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyHallsBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyHallsBeforeTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyHallsBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyHallsBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyHallsBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(409.9997F, 0F);
+            this.lblSumMoneyHallsBeforeTax.Name = "lblSumMoneyHallsBeforeTax";
+            this.lblSumMoneyHallsBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyHallsBeforeTax.SizeF = new System.Drawing.SizeF(119.5F, 35F);
+            this.lblSumMoneyHallsBeforeTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyHallsBeforeTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyHallsBeforeTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyHallsBeforeTax.StylePriority.UseFont = false;
+            this.lblSumMoneyHallsBeforeTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyHallsBeforeTax.Text = "0";
+            this.lblSumMoneyHallsBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel28
+            // lblSumMoneyHallsAfterTax
             // 
-            this.xrLabel28.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
-            this.xrLabel28.Name = "xrLabel28";
-            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel28.SizeF = new System.Drawing.SizeF(230F, 30F);
-            this.xrLabel28.StylePriority.UseFont = false;
-            this.xrLabel28.StylePriority.UseTextAlignment = false;
-            this.xrLabel28.Text = "Tổng tiền hội trường sau thuế:";
-            this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyHallsAfterTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyHallsAfterTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyHallsAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyHallsAfterTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyHallsAfterTax.LocationFloat = new DevExpress.Utils.PointFloat(629.522F, 0F);
+            this.lblSumMoneyHallsAfterTax.Name = "lblSumMoneyHallsAfterTax";
+            this.lblSumMoneyHallsAfterTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyHallsAfterTax.SizeF = new System.Drawing.SizeF(122.9781F, 35F);
+            this.lblSumMoneyHallsAfterTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyHallsAfterTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyHallsAfterTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyHallsAfterTax.StylePriority.UseFont = false;
+            this.lblSumMoneyHallsAfterTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyHallsAfterTax.Text = "0";
+            this.lblSumMoneyHallsAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // DetailReportService
             // 
             this.DetailReportService.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail4,
             this.ReportHeader5,
-            this.ReportFooter3});
+            this.ReportFooter3,
+            this.GroupFooter4});
             this.DetailReportService.Level = 3;
             this.DetailReportService.Name = "DetailReportService";
             // 
@@ -1729,7 +1521,7 @@
             this.xrTable8.Name = "xrTable8";
             this.xrTable8.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow10});
-            this.xrTable8.SizeF = new System.Drawing.SizeF(750F, 40F);
+            this.xrTable8.SizeF = new System.Drawing.SizeF(752.0002F, 40F);
             this.xrTable8.StylePriority.UseBackColor = false;
             this.xrTable8.StylePriority.UseBorderColor = false;
             this.xrTable8.StylePriority.UseBorderDashStyle = false;
@@ -1743,8 +1535,9 @@
             this.xrTableRow10.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.colService_Sku,
             this.colNamServiceHall,
-            this.colTotalMoneyBeforeTax,
-            this.colTotalMoneyServiceAfterTax});
+            this.colTotalMoneyServiceHallBeforeTax,
+            this.colPercentTaxServiceHall,
+            this.colTotalMoneyServiceHallAfterTax});
             this.xrTableRow10.Name = "xrTableRow10";
             this.xrTableRow10.Weight = 1D;
             // 
@@ -1766,27 +1559,32 @@
             this.colNamServiceHall.StylePriority.UseBorders = false;
             this.colNamServiceHall.StylePriority.UseTextAlignment = false;
             this.colNamServiceHall.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colNamServiceHall.Weight = 0.659297741605017D;
+            this.colNamServiceHall.Weight = 1.0712615321135632D;
             // 
-            // colTotalMoneyBeforeTax
+            // colTotalMoneyServiceHallBeforeTax
             // 
-            this.colTotalMoneyBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.colTotalMoneyServiceHallBeforeTax.Name = "colTotalMoneyServiceHallBeforeTax";
+            this.colTotalMoneyServiceHallBeforeTax.Weight = 0.44941490019089064D;
+            // 
+            // colPercentTaxServiceHall
+            // 
+            this.colPercentTaxServiceHall.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTotalMoneyBeforeTax.Name = "colTotalMoneyBeforeTax";
-            this.colTotalMoneyBeforeTax.StylePriority.UseBorders = false;
-            this.colTotalMoneyBeforeTax.StylePriority.UseTextAlignment = false;
-            this.colTotalMoneyBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colTotalMoneyBeforeTax.Weight = 0.86215849671944933D;
+            this.colPercentTaxServiceHall.Name = "colPercentTaxServiceHall";
+            this.colPercentTaxServiceHall.StylePriority.UseBorders = false;
+            this.colPercentTaxServiceHall.StylePriority.UseTextAlignment = false;
+            this.colPercentTaxServiceHall.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.colPercentTaxServiceHall.Weight = 0.37451209151018361D;
             // 
-            // colTotalMoneyServiceAfterTax
+            // colTotalMoneyServiceHallAfterTax
             // 
-            this.colTotalMoneyServiceAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.colTotalMoneyServiceHallAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTotalMoneyServiceAfterTax.Name = "colTotalMoneyServiceAfterTax";
-            this.colTotalMoneyServiceAfterTax.StylePriority.UseBorders = false;
-            this.colTotalMoneyServiceAfterTax.StylePriority.UseTextAlignment = false;
-            this.colTotalMoneyServiceAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colTotalMoneyServiceAfterTax.Weight = 0.823146973386968D;
+            this.colTotalMoneyServiceHallAfterTax.Name = "colTotalMoneyServiceHallAfterTax";
+            this.colTotalMoneyServiceHallAfterTax.StylePriority.UseBorders = false;
+            this.colTotalMoneyServiceHallAfterTax.StylePriority.UseTextAlignment = false;
+            this.colTotalMoneyServiceHallAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.colTotalMoneyServiceHallAfterTax.Weight = 0.45690562022979514D;
             // 
             // ReportHeader5
             // 
@@ -1821,7 +1619,7 @@
             this.xrTable7.Name = "xrTable7";
             this.xrTable7.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow9});
-            this.xrTable7.SizeF = new System.Drawing.SizeF(750F, 40F);
+            this.xrTable7.SizeF = new System.Drawing.SizeF(752.0002F, 40F);
             this.xrTable7.StylePriority.UseBackColor = false;
             this.xrTable7.StylePriority.UseBorderColor = false;
             this.xrTable7.StylePriority.UseBorderDashStyle = false;
@@ -1833,6 +1631,7 @@
             this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell22,
             this.xrTableCell23,
+            this.xrTableCell21,
             this.xrTableCell27,
             this.colMoneyService});
             this.xrTableRow9.Name = "xrTableRow9";
@@ -1856,7 +1655,15 @@
             this.xrTableCell23.StylePriority.UseTextAlignment = false;
             this.xrTableCell23.Text = "Tên dịch vụ";
             this.xrTableCell23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell23.Weight = 0.659297741605017D;
+            this.xrTableCell23.Weight = 1.0712602749005447D;
+            // 
+            // xrTableCell21
+            // 
+            this.xrTableCell21.Name = "xrTableCell21";
+            this.xrTableCell21.StylePriority.UseTextAlignment = false;
+            this.xrTableCell21.Text = "Trước thuế";
+            this.xrTableCell21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell21.Weight = 0.44754188137740963D;
             // 
             // xrTableCell27
             // 
@@ -1866,9 +1673,9 @@
             this.xrTableCell27.Name = "xrTableCell27";
             this.xrTableCell27.StylePriority.UseBorders = false;
             this.xrTableCell27.StylePriority.UseTextAlignment = false;
-            this.xrTableCell27.Text = "Thuế (%)";
+            this.xrTableCell27.Text = "Thuế ";
             this.xrTableCell27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell27.Weight = 0.86215849671944933D;
+            this.xrTableCell27.Weight = 0.3745962104903352D;
             // 
             // colMoneyService
             // 
@@ -1880,440 +1687,295 @@
             this.colMoneyService.StylePriority.UseTextAlignment = false;
             this.colMoneyService.Text = "Thành tiền";
             this.colMoneyService.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colMoneyService.Weight = 0.823146973386968D;
+            this.colMoneyService.Weight = 0.4586957772761433D;
             // 
             // ReportFooter3
             // 
             this.ReportFooter3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblTotalMoneyBookigRAndBookingH,
-            this.xrLabel56,
-            this.lblBookingmoney_BookingRAndBookingH,
-            this.xrLabel54,
-            this.xrLabel53,
-            this.xrLabel52,
-            this.lblMoneyBookingRAndBookingHBehindTax,
-            this.xrLabel45,
-            this.lblMoneyBookingRAndBookingHBeforeTax,
-            this.xrLabel35,
-            this.xrLabel34,
-            this.xrLabel33,
-            this.lblTotalBookingH,
-            this.lblTotalMoneyBookingHBeforeTax,
-            this.xrLabel44,
-            this.lblTotalMoneyBookingHBehindTax,
-            this.xrLabel46,
-            this.xrLabel47,
-            this.xrLabel48,
-            this.lblBookingMoney_BookingH,
-            this.xrLabel50,
-            this.xrLabel51,
-            this.xrLine6,
-            this.lblTotalMoneyService_BookingHBeforeTax,
-            this.xrLabel36,
-            this.lblTotalMoneyServices_BookingHBehindTax,
-            this.xrLabel32});
+            this.xrLabel9,
+            this.lblTotalMoney,
+            this.xrLabel19,
+            this.lblBookingMoney,
+            this.xrLabel13,
+            this.lblTotalMoneyAfterTax,
+            this.lblTotalMoneyTax,
+            this.lblTotalMoneyBeforeTax,
+            this.xrLabel3,
+            this.lblTotalMoneyString});
             this.ReportFooter3.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.ReportFooter3.HeightF = 400F;
+            this.ReportFooter3.HeightF = 200F;
             this.ReportFooter3.Name = "ReportFooter3";
             this.ReportFooter3.StylePriority.UseFont = false;
             // 
-            // lblTotalMoneyBookigRAndBookingH
+            // xrLabel9
             // 
-            this.lblTotalMoneyBookigRAndBookingH.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel9.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel9.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 114.9998F);
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(170.8113F, 35F);
+            this.xrLabel9.StylePriority.UseBackColor = false;
+            this.xrLabel9.StylePriority.UseBorderColor = false;
+            this.xrLabel9.StylePriority.UseBorders = false;
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.StylePriority.UseTextAlignment = false;
+            this.xrLabel9.Text = "Số tiền bằng chữ";
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lblTotalMoney
+            // 
+            this.lblTotalMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTotalMoney.BorderColor = System.Drawing.Color.Gray;
+            this.lblTotalMoney.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyBookigRAndBookingH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTotalMoneyBookigRAndBookingH.LocationFloat = new DevExpress.Utils.PointFloat(481.1684F, 314.8333F);
-            this.lblTotalMoneyBookigRAndBookingH.Name = "lblTotalMoneyBookigRAndBookingH";
-            this.lblTotalMoneyBookigRAndBookingH.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyBookigRAndBookingH.SizeF = new System.Drawing.SizeF(268.8316F, 24.58334F);
-            this.lblTotalMoneyBookigRAndBookingH.StylePriority.UseBorders = false;
-            this.lblTotalMoneyBookigRAndBookingH.StylePriority.UseFont = false;
-            this.lblTotalMoneyBookigRAndBookingH.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyBookigRAndBookingH.Text = "0(VND)";
-            this.lblTotalMoneyBookigRAndBookingH.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblTotalMoney.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblTotalMoney.LocationFloat = new DevExpress.Utils.PointFloat(610.9182F, 80.00005F);
+            this.lblTotalMoney.Name = "lblTotalMoney";
+            this.lblTotalMoney.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTotalMoney.SizeF = new System.Drawing.SizeF(141.0819F, 35.00002F);
+            this.lblTotalMoney.StylePriority.UseBackColor = false;
+            this.lblTotalMoney.StylePriority.UseBorderColor = false;
+            this.lblTotalMoney.StylePriority.UseBorders = false;
+            this.lblTotalMoney.StylePriority.UseFont = false;
+            this.lblTotalMoney.StylePriority.UseTextAlignment = false;
+            this.lblTotalMoney.Text = "0";
+            this.lblTotalMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel56
+            // xrLabel19
             // 
-            this.xrLabel56.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel56.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrLabel56.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(481.1684F, 290.2499F);
-            this.xrLabel56.Name = "xrLabel56";
-            this.xrLabel56.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel56.SizeF = new System.Drawing.SizeF(268.8316F, 24.58337F);
-            this.xrLabel56.StylePriority.UseBackColor = false;
-            this.xrLabel56.StylePriority.UseBorders = false;
-            this.xrLabel56.StylePriority.UseFont = false;
-            this.xrLabel56.StylePriority.UseTextAlignment = false;
-            this.xrLabel56.Text = "Thành tiền";
-            this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel19.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel19.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(0F, 79.99979F);
+            this.xrLabel19.Name = "xrLabel19";
+            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(610.9183F, 35.00002F);
+            this.xrLabel19.StylePriority.UseBackColor = false;
+            this.xrLabel19.StylePriority.UseBorderColor = false;
+            this.xrLabel19.StylePriority.UseBorders = false;
+            this.xrLabel19.StylePriority.UseFont = false;
+            this.xrLabel19.StylePriority.UseTextAlignment = false;
+            this.xrLabel19.Text = "Số tiền còn phải trả";
+            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // lblBookingmoney_BookingRAndBookingH
+            // lblBookingMoney
             // 
-            this.lblBookingmoney_BookingRAndBookingH.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblBookingmoney_BookingRAndBookingH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBookingmoney_BookingRAndBookingH.LocationFloat = new DevExpress.Utils.PointFloat(348.5749F, 314.8333F);
-            this.lblBookingmoney_BookingRAndBookingH.Name = "lblBookingmoney_BookingRAndBookingH";
-            this.lblBookingmoney_BookingRAndBookingH.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblBookingmoney_BookingRAndBookingH.SizeF = new System.Drawing.SizeF(132.5936F, 24.58334F);
-            this.lblBookingmoney_BookingRAndBookingH.StylePriority.UseBorders = false;
-            this.lblBookingmoney_BookingRAndBookingH.StylePriority.UseFont = false;
-            this.lblBookingmoney_BookingRAndBookingH.StylePriority.UseTextAlignment = false;
-            this.lblBookingmoney_BookingRAndBookingH.Text = "0(VND)";
-            this.lblBookingmoney_BookingRAndBookingH.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel54
-            // 
-            this.xrLabel54.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel54.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.lblBookingMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblBookingMoney.BorderColor = System.Drawing.Color.Gray;
+            this.lblBookingMoney.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel54.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(348.575F, 290.2499F);
-            this.xrLabel54.Name = "xrLabel54";
-            this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel54.SizeF = new System.Drawing.SizeF(132.5934F, 24.58335F);
-            this.xrLabel54.StylePriority.UseBackColor = false;
-            this.xrLabel54.StylePriority.UseBorders = false;
-            this.xrLabel54.StylePriority.UseFont = false;
-            this.xrLabel54.StylePriority.UseTextAlignment = false;
-            this.xrLabel54.Text = "Số tiền ứng trước";
-            this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblBookingMoney.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblBookingMoney.LocationFloat = new DevExpress.Utils.PointFloat(610.9182F, 44.99995F);
+            this.lblBookingMoney.Name = "lblBookingMoney";
+            this.lblBookingMoney.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblBookingMoney.SizeF = new System.Drawing.SizeF(141.0819F, 35F);
+            this.lblBookingMoney.StylePriority.UseBackColor = false;
+            this.lblBookingMoney.StylePriority.UseBorderColor = false;
+            this.lblBookingMoney.StylePriority.UseBorders = false;
+            this.lblBookingMoney.StylePriority.UseFont = false;
+            this.lblBookingMoney.StylePriority.UseTextAlignment = false;
+            this.lblBookingMoney.Text = "0";
+            this.lblBookingMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel53
+            // xrLabel13
             // 
-            this.xrLabel53.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel53.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel53.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(311.5089F, 314.8332F);
-            this.xrLabel53.Name = "xrLabel53";
-            this.xrLabel53.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel53.SizeF = new System.Drawing.SizeF(37.06595F, 24.58336F);
-            this.xrLabel53.StylePriority.UseBackColor = false;
-            this.xrLabel53.StylePriority.UseBorders = false;
-            this.xrLabel53.StylePriority.UseFont = false;
-            this.xrLabel53.StylePriority.UseTextAlignment = false;
-            this.xrLabel53.Text = "__";
-            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel13.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(0F, 44.99982F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(610.9183F, 35F);
+            this.xrLabel13.StylePriority.UseBackColor = false;
+            this.xrLabel13.StylePriority.UseBorderColor = false;
+            this.xrLabel13.StylePriority.UseBorders = false;
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
+            this.xrLabel13.Text = "Số tiền ứng trước";
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrLabel52
+            // lblTotalMoneyAfterTax
             // 
-            this.xrLabel52.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel52.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.lblTotalMoneyAfterTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTotalMoneyAfterTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblTotalMoneyAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel52.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(311.5091F, 290.2499F);
-            this.xrLabel52.Name = "xrLabel52";
-            this.xrLabel52.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel52.SizeF = new System.Drawing.SizeF(37.06595F, 24.58336F);
-            this.xrLabel52.StylePriority.UseBackColor = false;
-            this.xrLabel52.StylePriority.UseBorders = false;
-            this.xrLabel52.StylePriority.UseFont = false;
-            this.xrLabel52.StylePriority.UseTextAlignment = false;
-            this.xrLabel52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblTotalMoneyAfterTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalMoneyAfterTax.LocationFloat = new DevExpress.Utils.PointFloat(610.9183F, 9.999974F);
+            this.lblTotalMoneyAfterTax.Name = "lblTotalMoneyAfterTax";
+            this.lblTotalMoneyAfterTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTotalMoneyAfterTax.SizeF = new System.Drawing.SizeF(141.0818F, 35F);
+            this.lblTotalMoneyAfterTax.StylePriority.UseBackColor = false;
+            this.lblTotalMoneyAfterTax.StylePriority.UseBorderColor = false;
+            this.lblTotalMoneyAfterTax.StylePriority.UseBorders = false;
+            this.lblTotalMoneyAfterTax.StylePriority.UseFont = false;
+            this.lblTotalMoneyAfterTax.StylePriority.UseTextAlignment = false;
+            this.lblTotalMoneyAfterTax.Text = "0";
+            this.lblTotalMoneyAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // lblMoneyBookingRAndBookingHBehindTax
+            // lblTotalMoneyTax
             // 
-            this.lblMoneyBookingRAndBookingHBehindTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblMoneyBookingRAndBookingHBehindTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMoneyBookingRAndBookingHBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(155.7545F, 314.8333F);
-            this.lblMoneyBookingRAndBookingHBehindTax.Name = "lblMoneyBookingRAndBookingHBehindTax";
-            this.lblMoneyBookingRAndBookingHBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblMoneyBookingRAndBookingHBehindTax.SizeF = new System.Drawing.SizeF(155.7545F, 24.58334F);
-            this.lblMoneyBookingRAndBookingHBehindTax.StylePriority.UseBorders = false;
-            this.lblMoneyBookingRAndBookingHBehindTax.StylePriority.UseFont = false;
-            this.lblMoneyBookingRAndBookingHBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblMoneyBookingRAndBookingHBehindTax.Text = "0(VND)";
-            this.lblMoneyBookingRAndBookingHBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblTotalMoneyTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTotalMoneyTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblTotalMoneyTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblTotalMoneyTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalMoneyTax.LocationFloat = new DevExpress.Utils.PointFloat(488.3333F, 9.999974F);
+            this.lblTotalMoneyTax.Name = "lblTotalMoneyTax";
+            this.lblTotalMoneyTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTotalMoneyTax.SizeF = new System.Drawing.SizeF(122.5851F, 35F);
+            this.lblTotalMoneyTax.StylePriority.UseBackColor = false;
+            this.lblTotalMoneyTax.StylePriority.UseBorderColor = false;
+            this.lblTotalMoneyTax.StylePriority.UseBorders = false;
+            this.lblTotalMoneyTax.StylePriority.UseFont = false;
+            this.lblTotalMoneyTax.StylePriority.UseTextAlignment = false;
+            this.lblTotalMoneyTax.Text = "0";
+            this.lblTotalMoneyTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel45
+            // lblTotalMoneyBeforeTax
             // 
-            this.xrLabel45.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel45.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.lblTotalMoneyBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTotalMoneyBeforeTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblTotalMoneyBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel45.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(155.7545F, 290.2499F);
-            this.xrLabel45.Name = "xrLabel45";
-            this.xrLabel45.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel45.SizeF = new System.Drawing.SizeF(155.7545F, 24.58336F);
-            this.xrLabel45.StylePriority.UseBackColor = false;
-            this.xrLabel45.StylePriority.UseBorders = false;
-            this.xrLabel45.StylePriority.UseFont = false;
-            this.xrLabel45.StylePriority.UseTextAlignment = false;
-            this.xrLabel45.Text = "Tổng tiền sau thuế";
-            this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblTotalMoneyBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalMoneyBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(357.9164F, 9.999974F);
+            this.lblTotalMoneyBeforeTax.Name = "lblTotalMoneyBeforeTax";
+            this.lblTotalMoneyBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTotalMoneyBeforeTax.SizeF = new System.Drawing.SizeF(130.4168F, 35F);
+            this.lblTotalMoneyBeforeTax.StylePriority.UseBackColor = false;
+            this.lblTotalMoneyBeforeTax.StylePriority.UseBorderColor = false;
+            this.lblTotalMoneyBeforeTax.StylePriority.UseBorders = false;
+            this.lblTotalMoneyBeforeTax.StylePriority.UseFont = false;
+            this.lblTotalMoneyBeforeTax.StylePriority.UseTextAlignment = false;
+            this.lblTotalMoneyBeforeTax.Text = "0";
+            this.lblTotalMoneyBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // lblMoneyBookingRAndBookingHBeforeTax
+            // xrLabel3
             // 
-            this.lblMoneyBookingRAndBookingHBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblMoneyBookingRAndBookingHBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMoneyBookingRAndBookingHBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(0F, 314.8332F);
-            this.lblMoneyBookingRAndBookingHBeforeTax.Name = "lblMoneyBookingRAndBookingHBeforeTax";
-            this.lblMoneyBookingRAndBookingHBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblMoneyBookingRAndBookingHBeforeTax.SizeF = new System.Drawing.SizeF(155.7545F, 24.58334F);
-            this.lblMoneyBookingRAndBookingHBeforeTax.StylePriority.UseBorders = false;
-            this.lblMoneyBookingRAndBookingHBeforeTax.StylePriority.UseFont = false;
-            this.lblMoneyBookingRAndBookingHBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblMoneyBookingRAndBookingHBeforeTax.Text = "0(VND)";
-            this.lblMoneyBookingRAndBookingHBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel35
-            // 
-            this.xrLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel35.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.xrLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel3.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel35.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(0F, 290.2499F);
-            this.xrLabel35.Name = "xrLabel35";
-            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel35.SizeF = new System.Drawing.SizeF(155.7545F, 24.58336F);
-            this.xrLabel35.StylePriority.UseBackColor = false;
-            this.xrLabel35.StylePriority.UseBorders = false;
-            this.xrLabel35.StylePriority.UseFont = false;
-            this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.Text = "Tổng tiền trước thuế";
-            this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.999974F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(357.9164F, 35F);
+            this.xrLabel3.StylePriority.UseBackColor = false;
+            this.xrLabel3.StylePriority.UseBorderColor = false;
+            this.xrLabel3.StylePriority.UseBorders = false;
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "Tổng số tiền thanh toán";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrLabel34
+            // lblTotalMoneyString
             // 
-            this.xrLabel34.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(3.178914E-05F, 249.8332F);
-            this.xrLabel34.Name = "xrLabel34";
-            this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel34.SizeF = new System.Drawing.SizeF(250F, 30.00002F);
-            this.xrLabel34.StylePriority.UseFont = false;
-            this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.Text = "Tổng tiền thanh toán :";
-            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel33
-            // 
-            this.xrLabel33.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(3.178914E-05F, 99.83317F);
-            this.xrLabel33.Name = "xrLabel33";
-            this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel33.SizeF = new System.Drawing.SizeF(370F, 30.00001F);
-            this.xrLabel33.StylePriority.UseFont = false;
-            this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.Text = "Tổng tiền thanh toán cho hội trường :";
-            this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblTotalBookingH
-            // 
-            this.lblTotalBookingH.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.lblTotalMoneyString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTotalMoneyString.BorderColor = System.Drawing.Color.Gray;
+            this.lblTotalMoneyString.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalBookingH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTotalBookingH.LocationFloat = new DevExpress.Utils.PointFloat(481.1911F, 182.5417F);
-            this.lblTotalBookingH.Name = "lblTotalBookingH";
-            this.lblTotalBookingH.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalBookingH.SizeF = new System.Drawing.SizeF(268.8089F, 24.58334F);
-            this.lblTotalBookingH.StylePriority.UseBorders = false;
-            this.lblTotalBookingH.StylePriority.UseFont = false;
-            this.lblTotalBookingH.StylePriority.UseTextAlignment = false;
-            this.lblTotalBookingH.Text = "0(VND)";
-            this.lblTotalBookingH.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblTotalMoneyString.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalMoneyString.LocationFloat = new DevExpress.Utils.PointFloat(170.8113F, 114.9999F);
+            this.lblTotalMoneyString.Name = "lblTotalMoneyString";
+            this.lblTotalMoneyString.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTotalMoneyString.SizeF = new System.Drawing.SizeF(581.1686F, 35.00001F);
+            this.lblTotalMoneyString.StylePriority.UseBackColor = false;
+            this.lblTotalMoneyString.StylePriority.UseBorderColor = false;
+            this.lblTotalMoneyString.StylePriority.UseBorders = false;
+            this.lblTotalMoneyString.StylePriority.UseFont = false;
+            this.lblTotalMoneyString.StylePriority.UseTextAlignment = false;
+            this.lblTotalMoneyString.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // lblTotalMoneyBookingHBeforeTax
+            // GroupFooter4
             // 
-            this.lblTotalMoneyBookingHBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyBookingHBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoneyBookingHBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(0.02260208F, 182.5415F);
-            this.lblTotalMoneyBookingHBeforeTax.Name = "lblTotalMoneyBookingHBeforeTax";
-            this.lblTotalMoneyBookingHBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyBookingHBeforeTax.SizeF = new System.Drawing.SizeF(155.7545F, 24.58334F);
-            this.lblTotalMoneyBookingHBeforeTax.StylePriority.UseBorders = false;
-            this.lblTotalMoneyBookingHBeforeTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyBookingHBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyBookingHBeforeTax.Text = "0(VND)";
-            this.lblTotalMoneyBookingHBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.GroupFooter4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel16,
+            this.lblSumMoneyServiceHallsAfterTax,
+            this.lblSumMoneyServiceHallsTax,
+            this.lblSumMoneyServiceHallsBeforeTax});
+            this.GroupFooter4.HeightF = 63.75001F;
+            this.GroupFooter4.Name = "GroupFooter4";
             // 
-            // xrLabel44
+            // xrLabel16
             // 
-            this.xrLabel44.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel44.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            this.xrLabel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.xrLabel16.BorderColor = System.Drawing.Color.Gray;
+            this.xrLabel16.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel44.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(155.7772F, 157.9582F);
-            this.xrLabel44.Name = "xrLabel44";
-            this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel44.SizeF = new System.Drawing.SizeF(155.7545F, 24.58336F);
-            this.xrLabel44.StylePriority.UseBackColor = false;
-            this.xrLabel44.StylePriority.UseBorders = false;
-            this.xrLabel44.StylePriority.UseFont = false;
-            this.xrLabel44.StylePriority.UseTextAlignment = false;
-            this.xrLabel44.Text = "Tổng tiền sau thuế";
-            this.xrLabel44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(409.9997F, 35F);
+            this.xrLabel16.StylePriority.UseBackColor = false;
+            this.xrLabel16.StylePriority.UseBorderColor = false;
+            this.xrLabel16.StylePriority.UseBorders = false;
+            this.xrLabel16.StylePriority.UseFont = false;
+            this.xrLabel16.StylePriority.UseTextAlignment = false;
+            this.xrLabel16.Text = "Tổng tiền dịch vụ";
+            this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // lblTotalMoneyBookingHBehindTax
+            // lblSumMoneyServiceHallsAfterTax
             // 
-            this.lblTotalMoneyBookingHBehindTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblTotalMoneyBookingHBehindTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoneyBookingHBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(155.7771F, 182.5417F);
-            this.lblTotalMoneyBookingHBehindTax.Name = "lblTotalMoneyBookingHBehindTax";
-            this.lblTotalMoneyBookingHBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyBookingHBehindTax.SizeF = new System.Drawing.SizeF(155.7545F, 24.58334F);
-            this.lblTotalMoneyBookingHBehindTax.StylePriority.UseBorders = false;
-            this.lblTotalMoneyBookingHBehindTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyBookingHBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyBookingHBehindTax.Text = "0(VND)";
-            this.lblTotalMoneyBookingHBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblSumMoneyServiceHallsAfterTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceHallsAfterTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceHallsAfterTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceHallsAfterTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceHallsAfterTax.LocationFloat = new DevExpress.Utils.PointFloat(629.522F, 0F);
+            this.lblSumMoneyServiceHallsAfterTax.Name = "lblSumMoneyServiceHallsAfterTax";
+            this.lblSumMoneyServiceHallsAfterTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceHallsAfterTax.SizeF = new System.Drawing.SizeF(122.478F, 35F);
+            this.lblSumMoneyServiceHallsAfterTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceHallsAfterTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceHallsAfterTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceHallsAfterTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceHallsAfterTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceHallsAfterTax.Text = "0";
+            this.lblSumMoneyServiceHallsAfterTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel46
+            // lblSumMoneyServiceHallsTax
             // 
-            this.xrLabel46.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel46.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel46.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(311.5318F, 157.9582F);
-            this.xrLabel46.Name = "xrLabel46";
-            this.xrLabel46.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel46.SizeF = new System.Drawing.SizeF(37.06595F, 24.58336F);
-            this.xrLabel46.StylePriority.UseBackColor = false;
-            this.xrLabel46.StylePriority.UseBorders = false;
-            this.xrLabel46.StylePriority.UseFont = false;
-            this.xrLabel46.StylePriority.UseTextAlignment = false;
-            this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblSumMoneyServiceHallsTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceHallsTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceHallsTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceHallsTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceHallsTax.LocationFloat = new DevExpress.Utils.PointFloat(529.4996F, 0F);
+            this.lblSumMoneyServiceHallsTax.Name = "lblSumMoneyServiceHallsTax";
+            this.lblSumMoneyServiceHallsTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceHallsTax.SizeF = new System.Drawing.SizeF(100.0002F, 35F);
+            this.lblSumMoneyServiceHallsTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceHallsTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceHallsTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceHallsTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceHallsTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceHallsTax.Text = "0";
+            this.lblSumMoneyServiceHallsTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
-            // xrLabel47
+            // lblSumMoneyServiceHallsBeforeTax
             // 
-            this.xrLabel47.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel47.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel47.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(311.5316F, 182.5415F);
-            this.xrLabel47.Name = "xrLabel47";
-            this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel47.SizeF = new System.Drawing.SizeF(37.06595F, 24.58336F);
-            this.xrLabel47.StylePriority.UseBackColor = false;
-            this.xrLabel47.StylePriority.UseBorders = false;
-            this.xrLabel47.StylePriority.UseFont = false;
-            this.xrLabel47.StylePriority.UseTextAlignment = false;
-            this.xrLabel47.Text = "__";
-            this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrLabel48
-            // 
-            this.xrLabel48.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel48.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel48.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(348.5977F, 157.9582F);
-            this.xrLabel48.Name = "xrLabel48";
-            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel48.SizeF = new System.Drawing.SizeF(132.5934F, 24.58335F);
-            this.xrLabel48.StylePriority.UseBackColor = false;
-            this.xrLabel48.StylePriority.UseBorders = false;
-            this.xrLabel48.StylePriority.UseFont = false;
-            this.xrLabel48.StylePriority.UseTextAlignment = false;
-            this.xrLabel48.Text = "Số tiền ứng trước";
-            this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // lblBookingMoney_BookingH
-            // 
-            this.lblBookingMoney_BookingH.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.lblBookingMoney_BookingH.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBookingMoney_BookingH.LocationFloat = new DevExpress.Utils.PointFloat(348.5976F, 182.5417F);
-            this.lblBookingMoney_BookingH.Name = "lblBookingMoney_BookingH";
-            this.lblBookingMoney_BookingH.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblBookingMoney_BookingH.SizeF = new System.Drawing.SizeF(132.5936F, 24.58334F);
-            this.lblBookingMoney_BookingH.StylePriority.UseBorders = false;
-            this.lblBookingMoney_BookingH.StylePriority.UseFont = false;
-            this.lblBookingMoney_BookingH.StylePriority.UseTextAlignment = false;
-            this.lblBookingMoney_BookingH.Text = "0(VND)";
-            this.lblBookingMoney_BookingH.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel50
-            // 
-            this.xrLabel50.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel50.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrLabel50.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(481.1911F, 157.9582F);
-            this.xrLabel50.Name = "xrLabel50";
-            this.xrLabel50.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel50.SizeF = new System.Drawing.SizeF(268.8088F, 24.58336F);
-            this.xrLabel50.StylePriority.UseBackColor = false;
-            this.xrLabel50.StylePriority.UseBorders = false;
-            this.xrLabel50.StylePriority.UseFont = false;
-            this.xrLabel50.StylePriority.UseTextAlignment = false;
-            this.xrLabel50.Text = "Thành tiền";
-            this.xrLabel50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel51
-            // 
-            this.xrLabel51.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel51.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel51.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(0.02266566F, 157.9582F);
-            this.xrLabel51.Name = "xrLabel51";
-            this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel51.SizeF = new System.Drawing.SizeF(155.7545F, 24.58336F);
-            this.xrLabel51.StylePriority.UseBackColor = false;
-            this.xrLabel51.StylePriority.UseBorders = false;
-            this.xrLabel51.StylePriority.UseFont = false;
-            this.xrLabel51.StylePriority.UseTextAlignment = false;
-            this.xrLabel51.Text = "Tổng tiền trước thuế";
-            this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLine6
-            // 
-            this.xrLine6.BackColor = System.Drawing.Color.Transparent;
-            this.xrLine6.ForeColor = System.Drawing.Color.Gray;
-            this.xrLine6.LocationFloat = new DevExpress.Utils.PointFloat(0.02215703F, 225F);
-            this.xrLine6.Name = "xrLine6";
-            this.xrLine6.SizeF = new System.Drawing.SizeF(749.9777F, 5.708317F);
-            this.xrLine6.StylePriority.UseBackColor = false;
-            this.xrLine6.StylePriority.UseForeColor = false;
-            // 
-            // lblTotalMoneyService_BookingHBeforeTax
-            // 
-            this.lblTotalMoneyService_BookingHBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTotalMoneyService_BookingHBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(200F, 0F);
-            this.lblTotalMoneyService_BookingHBeforeTax.Name = "lblTotalMoneyService_BookingHBeforeTax";
-            this.lblTotalMoneyService_BookingHBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyService_BookingHBeforeTax.SizeF = new System.Drawing.SizeF(170F, 30F);
-            this.lblTotalMoneyService_BookingHBeforeTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyService_BookingHBeforeTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyService_BookingHBeforeTax.Text = "0(VND)";
-            this.lblTotalMoneyService_BookingHBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel36
-            // 
-            this.xrLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel36.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel36.Name = "xrLabel36";
-            this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel36.SizeF = new System.Drawing.SizeF(200F, 30F);
-            this.xrLabel36.StylePriority.UseBackColor = false;
-            this.xrLabel36.StylePriority.UseFont = false;
-            this.xrLabel36.StylePriority.UseTextAlignment = false;
-            this.xrLabel36.Text = "Tổng tiền dịch vụ trước thuế:";
-            this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblTotalMoneyServices_BookingHBehindTax
-            // 
-            this.lblTotalMoneyServices_BookingHBehindTax.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTotalMoneyServices_BookingHBehindTax.LocationFloat = new DevExpress.Utils.PointFloat(200F, 30F);
-            this.lblTotalMoneyServices_BookingHBehindTax.Name = "lblTotalMoneyServices_BookingHBehindTax";
-            this.lblTotalMoneyServices_BookingHBehindTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotalMoneyServices_BookingHBehindTax.SizeF = new System.Drawing.SizeF(170F, 30F);
-            this.lblTotalMoneyServices_BookingHBehindTax.StylePriority.UseFont = false;
-            this.lblTotalMoneyServices_BookingHBehindTax.StylePriority.UseTextAlignment = false;
-            this.lblTotalMoneyServices_BookingHBehindTax.Text = "0(VND)";
-            this.lblTotalMoneyServices_BookingHBehindTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel32
-            // 
-            this.xrLabel32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
-            this.xrLabel32.Name = "xrLabel32";
-            this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel32.SizeF = new System.Drawing.SizeF(200F, 30F);
-            this.xrLabel32.StylePriority.UseFont = false;
-            this.xrLabel32.StylePriority.UseTextAlignment = false;
-            this.xrLabel32.Text = "Tổng tiền dịch vụ sau thuế:";
-            this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblSumMoneyServiceHallsBeforeTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSumMoneyServiceHallsBeforeTax.BorderColor = System.Drawing.Color.Gray;
+            this.lblSumMoneyServiceHallsBeforeTax.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.lblSumMoneyServiceHallsBeforeTax.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSumMoneyServiceHallsBeforeTax.LocationFloat = new DevExpress.Utils.PointFloat(409.9997F, 0F);
+            this.lblSumMoneyServiceHallsBeforeTax.Name = "lblSumMoneyServiceHallsBeforeTax";
+            this.lblSumMoneyServiceHallsBeforeTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSumMoneyServiceHallsBeforeTax.SizeF = new System.Drawing.SizeF(119.4999F, 35F);
+            this.lblSumMoneyServiceHallsBeforeTax.StylePriority.UseBackColor = false;
+            this.lblSumMoneyServiceHallsBeforeTax.StylePriority.UseBorderColor = false;
+            this.lblSumMoneyServiceHallsBeforeTax.StylePriority.UseBorders = false;
+            this.lblSumMoneyServiceHallsBeforeTax.StylePriority.UseFont = false;
+            this.lblSumMoneyServiceHallsBeforeTax.StylePriority.UseTextAlignment = false;
+            this.lblSumMoneyServiceHallsBeforeTax.Text = "0";
+            this.lblSumMoneyServiceHallsBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // frmRpt_Payment_BookingRsAndBookingHs
             // 
@@ -2379,9 +2041,6 @@
         private DevExpress.XtraReports.UI.DetailReportBand DetailReportService;
         private DevExpress.XtraReports.UI.DetailBand Detail4;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader2;
-        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter1;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyHallBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader5;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
@@ -2395,46 +2054,16 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow10;
         private DevExpress.XtraReports.UI.XRTableCell colService_Sku;
         private DevExpress.XtraReports.UI.XRTableCell colNamServiceHall;
-        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyBeforeTax;
-        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyServiceAfterTax;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyServices_BookingHBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel32;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyService_BookingHBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel36;
-        private DevExpress.XtraReports.UI.XRLine xrLine6;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyHallBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel38;
+        private DevExpress.XtraReports.UI.XRTableCell colPercentTaxServiceHall;
+        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyServiceHallAfterTax;
         private DevExpress.XtraReports.UI.XRLabel xrLabel42;
         private DevExpress.XtraReports.UI.XRLabel lblDayMonthYear;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalBookingH;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBookingHBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel44;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBookingHBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel46;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel47;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel48;
-        private DevExpress.XtraReports.UI.XRLabel lblBookingMoney_BookingH;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel50;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel51;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBookigRAndBookingH;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel56;
-        private DevExpress.XtraReports.UI.XRLabel lblBookingmoney_BookingRAndBookingH;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel54;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel52;
-        private DevExpress.XtraReports.UI.XRLabel lblMoneyBookingRAndBookingHBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel45;
-        private DevExpress.XtraReports.UI.XRLabel lblMoneyBookingRAndBookingHBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel35;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel34;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel33;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell15;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
@@ -2443,7 +2072,6 @@
         private DevExpress.XtraReports.UI.XRTableCell colSkuHall;
         private DevExpress.XtraReports.UI.XRTableCell colCreateDate;
         private DevExpress.XtraReports.UI.XRTableCell colBookingHallCost;
-        private DevExpress.XtraReports.UI.XRTableCell colMoneyHallBeforeTax;
         private DevExpress.XtraReports.UI.XRTableCell colPercentTax;
         private DevExpress.XtraReports.UI.XRTableCell colPaymentMoneyHall;
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
@@ -2471,7 +2099,7 @@
         private DevExpress.XtraReports.UI.XRTableCell colBookingRoomCost;
         private DevExpress.XtraReports.UI.XRTableCell colMoneyRoomBeforeTax;
         private DevExpress.XtraReports.UI.XRTableCell colPercentTaxRoom;
-        private DevExpress.XtraReports.UI.XRTableCell colPaymentMoneyaRoom;
+        private DevExpress.XtraReports.UI.XRTableCell colPaymentMoneyRoom;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel41;
@@ -2479,31 +2107,43 @@
         private DevExpress.XtraReports.UI.XRLabel lblSumMoneyRoomsBeforeTax;
         private DevExpress.XtraReports.UI.XRLabel lblSumMoneyRoomTax;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoney_BookingRString;
-        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyService_BookingRBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceTax;
-        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyService_BookingRBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBookingRBeforeTax;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyTax;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBookingRBehindTax;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
-        private DevExpress.XtraReports.UI.XRLabel lblBookingMoney_BookingR;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel19;
-        private DevExpress.XtraReports.UI.XRLabel lblTotalMoney_BookingR;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceRoomsBeforeTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceRoomsTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceRoomsAfterTax;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRTable xrTable5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
-        private DevExpress.XtraReports.UI.XRTableCell colNamService;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
-        private DevExpress.XtraReports.UI.XRTableCell colPercentTaxService;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
+        private DevExpress.XtraReports.UI.XRTableCell colNamServiceRoom;
+        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyServiceRoomBeforeTax;
+        private DevExpress.XtraReports.UI.XRTableCell colPercentTaxServiceRoom;
+        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyServiceRoomAfterTax;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
+        private DevExpress.XtraReports.UI.XRTableCell colTotalMoneyServiceHallBeforeTax;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell21;
+        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyHallsTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyHallsBeforeTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyHallsAfterTax;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRLabel lblTotalMoney;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel19;
+        private DevExpress.XtraReports.UI.XRLabel lblBookingMoney;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyAfterTax;
+        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyTax;
+        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyBeforeTax;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel lblTotalMoneyString;
+        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter4;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceHallsAfterTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceHallsTax;
+        private DevExpress.XtraReports.UI.XRLabel lblSumMoneyServiceHallsBeforeTax;
     }
 }

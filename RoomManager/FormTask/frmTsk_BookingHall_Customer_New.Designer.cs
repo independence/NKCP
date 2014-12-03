@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_BookingHall_Customer_New));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBook = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
@@ -111,14 +110,12 @@
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSelectFoods = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.dgvSelectFoods = new DevExpress.XtraGrid.GridControl();
             this.viewSelectFoods = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnUnSelectFoods = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -130,6 +127,7 @@
             this.btnAddGuest = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.txtMenusName = new DevExpress.XtraEditors.TextEdit();
+            this.btnBook = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -192,12 +190,12 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.xtraTabControl1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1086, 596);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1086, 569);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -208,41 +206,26 @@
             this.xtraTabPage1.Controls.Add(this.tableLayoutPanel1);
             this.xtraTabPage1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1080, 568);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1080, 541);
             this.xtraTabPage1.Text = "Thông tin đặt tiệc";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnBook, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.97153F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.6548F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.26846F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.536913F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 568);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.93838F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.62678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.43485F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 541);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // btnBook
-            // 
-            this.btnBook.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnBook.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBook.Appearance.Options.UseFont = true;
-            this.btnBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBook.Image")));
-            this.btnBook.Location = new System.Drawing.Point(960, 538);
-            this.btnBook.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(110, 27);
-            this.btnBook.TabIndex = 59;
-            this.btnBook.Text = "Đặt tiệc";
-            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -258,7 +241,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1074, 95);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1074, 96);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -274,7 +257,7 @@
             this.tableLayoutPanel5.Controls.Add(this.comboBoxEdit1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnSearchHall, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtBookingMoney, 4, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 65);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 67);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -372,7 +355,7 @@
             this.tableLayoutPanel4.Controls.Add(this.txtPhoneNumber, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSearchCustomer, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtCustomerName, 3, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 34);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 35);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -522,7 +505,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.groupBox3, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 104);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 105);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -599,7 +582,7 @@
             // 
             this.btnUnSelect.AutoHeight = false;
             this.btnUnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
             this.btnUnSelect.Name = "btnUnSelect";
             this.btnUnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelect_ButtonClick);
@@ -651,7 +634,7 @@
             this.gridColumn11.ColumnEdit = this.txtCost;
             this.gridColumn11.DisplayFormat.FormatString = "n0";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn11.FieldName = "Cost";
+            this.gridColumn11.FieldName = "CostRef_Halls";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 5;
@@ -721,7 +704,7 @@
             // 
             this.cbbTablePerson.AutoHeight = false;
             this.cbbTablePerson.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "TableOrPerson", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
             this.cbbTablePerson.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.cbbTablePerson.HideSelection = false;
             this.cbbTablePerson.Items.AddRange(new object[] {
@@ -806,7 +789,7 @@
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gridColumn2.Caption = "Số bàn";
-            this.gridColumn2.FieldName = "StartTime";
+            this.gridColumn2.FieldName = "NumTableStandard";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
@@ -823,6 +806,8 @@
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gridColumn3.Caption = "Giá";
+            this.gridColumn3.DisplayFormat.FormatString = "n0";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "CostRef";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -851,7 +836,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelect_ButtonClick);
@@ -864,11 +849,11 @@
             this.tableLayoutPanel7.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.groupBox4, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 311);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 313);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1074, 221);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1074, 225);
             this.tableLayoutPanel7.TabIndex = 47;
             // 
             // groupBox1
@@ -878,7 +863,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 215);
+            this.groupBox1.Size = new System.Drawing.Size(479, 219);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách dịch vụ";
@@ -888,7 +873,7 @@
             this.btnAddService.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnAddService.Appearance.Options.UseFont = true;
             this.btnAddService.Image = ((System.Drawing.Image)(resources.GetObject("btnAddService.Image")));
-            this.btnAddService.Location = new System.Drawing.Point(388, 9);
+            this.btnAddService.Location = new System.Drawing.Point(387, 9);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(89, 28);
             this.btnAddService.TabIndex = 3;
@@ -897,15 +882,16 @@
             // 
             // dgvService
             // 
+            this.dgvService.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvService.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.dgvService.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dgvService.Location = new System.Drawing.Point(3, 34);
+            this.dgvService.Location = new System.Drawing.Point(3, 38);
             this.dgvService.MainView = this.grvService;
             this.dgvService.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.dgvService.Name = "dgvService";
             this.dgvService.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectService});
-            this.dgvService.Size = new System.Drawing.Size(476, 186);
+            this.dgvService.Size = new System.Drawing.Size(473, 178);
             this.dgvService.TabIndex = 2;
             this.dgvService.UseEmbeddedNavigator = true;
             this.dgvService.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -964,7 +950,7 @@
             // 
             this.btnSelectService.AutoHeight = false;
             this.btnSelectService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnSelectService.Name = "btnSelectService";
             this.btnSelectService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectService_ButtonClick);
@@ -978,8 +964,11 @@
             this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn7.Caption = "Giá";
+            this.gridColumn7.DisplayFormat.FormatString = "n0";
+            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "CostRef";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
             this.gridColumn7.Width = 186;
@@ -995,6 +984,7 @@
             this.gridColumn8.Caption = "ĐV";
             this.gridColumn8.FieldName = "Unit";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
             this.gridColumn8.Width = 109;
@@ -1005,7 +995,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(488, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(583, 215);
+            this.groupBox4.Size = new System.Drawing.Size(583, 219);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dịch vụ trong hội trường";
@@ -1022,7 +1012,7 @@
             this.btnCancel,
             this.txtQuantity,
             this.repositoryItemTextEdit1});
-            this.dgvServiceInHall.Size = new System.Drawing.Size(577, 195);
+            this.dgvServiceInHall.Size = new System.Drawing.Size(577, 199);
             this.dgvServiceInHall.TabIndex = 2;
             this.dgvServiceInHall.UseEmbeddedNavigator = true;
             this.dgvServiceInHall.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1160,7 +1150,7 @@
             // 
             this.btnCancel.AutoHeight = false;
             this.btnCancel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject14, "", null, null, true)});
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCancel.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCancel_ButtonClick);
@@ -1169,7 +1159,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.tableLayoutPanel8);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1080, 568);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1080, 541);
             this.xtraTabPage2.Text = "Các thông tin khác";
             // 
             // tableLayoutPanel8
@@ -1189,7 +1179,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.32394F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1080, 568);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1080, 541);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // tableLayoutPanel10
@@ -1198,12 +1188,12 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 104);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 101);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 461F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1074, 461);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 437F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1074, 437);
             this.tableLayoutPanel10.TabIndex = 21;
             // 
             // tableLayoutPanel11
@@ -1219,7 +1209,7 @@
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1068, 455);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1068, 431);
             this.tableLayoutPanel11.TabIndex = 10;
             // 
             // dgvAvailableFoods
@@ -1230,7 +1220,7 @@
             this.dgvAvailableFoods.Name = "dgvAvailableFoods";
             this.dgvAvailableFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectFoods});
-            this.dgvAvailableFoods.Size = new System.Drawing.Size(517, 449);
+            this.dgvAvailableFoods.Size = new System.Drawing.Size(517, 425);
             this.dgvAvailableFoods.TabIndex = 11;
             this.dgvAvailableFoods.UseEmbeddedNavigator = true;
             this.dgvAvailableFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1244,7 +1234,6 @@
             this.gridColumn21,
             this.gridColumn22,
             this.gridColumn23,
-            this.gridColumn24,
             this.gridColumn25});
             this.viewAvailableFoods.GridControl = this.dgvAvailableFoods;
             this.viewAvailableFoods.Name = "viewAvailableFoods";
@@ -1267,7 +1256,7 @@
             this.gridColumn20.OptionsColumn.AllowFocus = false;
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 0;
-            this.gridColumn20.Width = 107;
+            this.gridColumn20.Width = 110;
             // 
             // gridColumn21
             // 
@@ -1282,7 +1271,7 @@
             this.gridColumn21.OptionsColumn.AllowFocus = false;
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 1;
-            this.gridColumn21.Width = 107;
+            this.gridColumn21.Width = 110;
             // 
             // gridColumn22
             // 
@@ -1297,7 +1286,7 @@
             this.gridColumn22.OptionsColumn.AllowFocus = false;
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 2;
-            this.gridColumn22.Width = 107;
+            this.gridColumn22.Width = 118;
             // 
             // gridColumn23
             // 
@@ -1312,24 +1301,7 @@
             this.gridColumn23.OptionsColumn.AllowFocus = false;
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 3;
-            this.gridColumn23.Width = 126;
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn24.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn24.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridColumn24.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn24.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn24.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn24.Caption = "Ảnh";
-            this.gridColumn24.FieldName = "Image1";
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.OptionsColumn.AllowEdit = false;
-            this.gridColumn24.OptionsColumn.AllowFocus = false;
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 4;
-            this.gridColumn24.Width = 72;
+            this.gridColumn23.Width = 124;
             // 
             // gridColumn25
             // 
@@ -1341,14 +1313,14 @@
             this.gridColumn25.ColumnEdit = this.btnSelectFoods;
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 5;
-            this.gridColumn25.Width = 50;
+            this.gridColumn25.VisibleIndex = 4;
+            this.gridColumn25.Width = 53;
             // 
             // btnSelectFoods
             // 
             this.btnSelectFoods.AutoHeight = false;
             this.btnSelectFoods.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btnSelectFoods.Name = "btnSelectFoods";
             this.btnSelectFoods.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectFoods.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectFoods_ButtonClick);
@@ -1361,7 +1333,7 @@
             this.dgvSelectFoods.Name = "dgvSelectFoods";
             this.dgvSelectFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelectFoods});
-            this.dgvSelectFoods.Size = new System.Drawing.Size(518, 449);
+            this.dgvSelectFoods.Size = new System.Drawing.Size(518, 425);
             this.dgvSelectFoods.TabIndex = 12;
             this.dgvSelectFoods.UseEmbeddedNavigator = true;
             this.dgvSelectFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1372,7 +1344,6 @@
             this.viewSelectFoods.ColumnPanelRowHeight = 35;
             this.viewSelectFoods.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn26,
-            this.gridColumn27,
             this.gridColumn28,
             this.gridColumn29,
             this.gridColumn30,
@@ -1401,27 +1372,10 @@
             // 
             this.btnUnSelectFoods.AutoHeight = false;
             this.btnUnSelectFoods.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelectFoods.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnUnSelectFoods.Name = "btnUnSelectFoods";
             this.btnUnSelectFoods.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelectFoods.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelectFoods_ButtonClick);
-            // 
-            // gridColumn27
-            // 
-            this.gridColumn27.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn27.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn27.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridColumn27.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn27.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn27.Caption = "Ảnh";
-            this.gridColumn27.FieldName = "Image1";
-            this.gridColumn27.Name = "gridColumn27";
-            this.gridColumn27.OptionsColumn.AllowEdit = false;
-            this.gridColumn27.OptionsColumn.AllowFocus = false;
-            this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 1;
-            this.gridColumn27.Width = 68;
             // 
             // gridColumn28
             // 
@@ -1435,7 +1389,7 @@
             this.gridColumn28.OptionsColumn.AllowEdit = false;
             this.gridColumn28.OptionsColumn.AllowFocus = false;
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 2;
+            this.gridColumn28.VisibleIndex = 1;
             this.gridColumn28.Width = 112;
             // 
             // gridColumn29
@@ -1450,7 +1404,7 @@
             this.gridColumn29.OptionsColumn.AllowEdit = false;
             this.gridColumn29.OptionsColumn.AllowFocus = false;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 3;
+            this.gridColumn29.VisibleIndex = 2;
             this.gridColumn29.Width = 112;
             // 
             // gridColumn30
@@ -1465,7 +1419,7 @@
             this.gridColumn30.OptionsColumn.AllowEdit = false;
             this.gridColumn30.OptionsColumn.AllowFocus = false;
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 4;
+            this.gridColumn30.VisibleIndex = 3;
             this.gridColumn30.Width = 112;
             // 
             // gridColumn31
@@ -1480,13 +1434,13 @@
             this.gridColumn31.OptionsColumn.AllowEdit = false;
             this.gridColumn31.OptionsColumn.AllowFocus = false;
             this.gridColumn31.Visible = true;
-            this.gridColumn31.VisibleIndex = 5;
+            this.gridColumn31.VisibleIndex = 4;
             this.gridColumn31.Width = 118;
             // 
             // lueHalls
             // 
             this.lueHalls.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueHalls.Location = new System.Drawing.Point(9, 38);
+            this.lueHalls.Location = new System.Drawing.Point(9, 36);
             this.lueHalls.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
             this.lueHalls.Name = "lueHalls";
             this.lueHalls.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1514,7 +1468,7 @@
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(368, 25);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(368, 24);
             this.tableLayoutPanel9.TabIndex = 19;
             // 
             // lueGuest
@@ -1544,7 +1498,7 @@
             this.btnSearchGuest.Location = new System.Drawing.Point(337, 3);
             this.btnSearchGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnSearchGuest.Name = "btnSearchGuest";
-            this.btnSearchGuest.Size = new System.Drawing.Size(24, 19);
+            this.btnSearchGuest.Size = new System.Drawing.Size(24, 18);
             this.btnSearchGuest.TabIndex = 21;
             this.btnSearchGuest.Click += new System.EventHandler(this.btnSearchGuest_Click);
             // 
@@ -1557,7 +1511,7 @@
             this.btnAddGuest.Location = new System.Drawing.Point(300, 3);
             this.btnAddGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
             this.btnAddGuest.Name = "btnAddGuest";
-            this.btnAddGuest.Size = new System.Drawing.Size(25, 19);
+            this.btnAddGuest.Size = new System.Drawing.Size(25, 18);
             this.btnAddGuest.TabIndex = 20;
             this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
@@ -1570,7 +1524,7 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.Controls.Add(this.txtMenusName, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 69);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
@@ -1590,12 +1544,28 @@
             this.txtMenusName.TabIndex = 4;
             this.txtMenusName.Leave += new System.EventHandler(this.txtMenusName_Leave);
             // 
+            // btnBook
+            // 
+            this.btnBook.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBook.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.Appearance.Options.UseFont = true;
+            this.btnBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBook.Image")));
+            this.btnBook.Location = new System.Drawing.Point(961, 569);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(110, 25);
+            this.btnBook.TabIndex = 59;
+            this.btnBook.Text = "Đặt tiệc";
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
+            // 
             // frmTsk_BookingHall_Customer_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 596);
+            this.Controls.Add(this.btnBook);
             this.Controls.Add(this.xtraTabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "frmTsk_BookingHall_Customer_New";
             this.Text = "Đặt tiệc mới";
@@ -1743,14 +1713,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSelectFoods;
         private DevExpress.XtraGrid.GridControl dgvSelectFoods;
         private DevExpress.XtraGrid.Views.Grid.GridView viewSelectFoods;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnUnSelectFoods;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
