@@ -186,15 +186,15 @@ namespace RoomManager
                     {
                         aReceptionTaskBO.SplitPaymentRoom(this.aNewPaymentEN, this.aListRooms);
                     }
-                    else if (this.aListHalls.Count > 0)
+                    if (this.aListHalls.Count > 0)
                     {
                         aReceptionTaskBO.SplitPaymentHall(this.aNewPaymentEN, this.aListHalls);
                     }
-                    else if (this.aListServicesR.Count > 0)
+                    if (this.aListServicesR.Count > 0)
                     {
                         aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesR, 1); //1 - trạng thái thanh toán set cho dịch vụ phòng
                     }
-                    else if (this.aListServicesH.Count > 0)
+                    if (this.aListServicesH.Count > 0)
                     {
                         aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesH, 2); //2 - trạng thái thanh toán set cho dịch vụ phòng
                     }

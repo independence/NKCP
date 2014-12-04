@@ -63,6 +63,7 @@ namespace RoomManager
         {
             try
             {
+                this.aNewPaymentEN.Save();
                 frmTsk_SplitBill_Step2 afrmTsk_SplitBill_Step2 = new frmTsk_SplitBill_Step2(this,this.aNewPaymentEN);
                 afrmTsk_SplitBill_Step2.Show();
             }
@@ -124,9 +125,9 @@ namespace RoomManager
             {
                 MessageBox.Show("frmTsk_SplitBill_Step1.txtAddSubPaymentH_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        //Hiennv
-        private void txtAddToSubPaymentServicesH_EditValueChanged(object sender, EventArgs e)
+        }      
+
+        private void txtChooseService_EditValueChanged(object sender, EventArgs e)
         {
             try
             {

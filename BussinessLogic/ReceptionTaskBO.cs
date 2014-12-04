@@ -3270,6 +3270,7 @@ namespace BussinessLogic
                                           Cost = aBookingHalls_Services.Cost,
                                           CostRef_Service = aBookingHalls_Services.CostRef_Services,
                                           Tax = aBookingHalls_Services.PercentTax,
+                                          StatusPay = aBookingHalls_Services.Status,
                                           
                                       }
 

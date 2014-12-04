@@ -37,6 +37,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dgvServicesRoom = new DevExpress.XtraGrid.GridControl();
             this.viewServicesRoom = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +60,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colChooseRooms = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtAddToSubPaymentR = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
@@ -73,6 +75,7 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtChooseService = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dgvHalls = new DevExpress.XtraGrid.GridControl();
@@ -84,10 +87,7 @@
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtAddSubPaymentH = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTab)).BeginInit();
             this.xtraTab.SuspendLayout();
@@ -228,6 +228,20 @@
             this.viewServicesRoom.OptionsView.ShowGroupPanel = false;
             this.viewServicesRoom.OptionsView.ShowIndicator = false;
             this.viewServicesRoom.RowHeight = 25;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn28.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn28.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn28.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn28.Caption = "Thanh toán";
+            this.gridColumn28.FieldName = "IsPaid";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 5;
+            this.gridColumn28.Width = 50;
             // 
             // gridColumn3
             // 
@@ -595,6 +609,20 @@
             this.txtAddToSubPaymentR.Name = "txtAddToSubPaymentR";
             this.txtAddToSubPaymentR.EditValueChanged += new System.EventHandler(this.txtAddToSubPaymentR_EditValueChanged);
             // 
+            // gridColumn25
+            // 
+            this.gridColumn25.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn25.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn25.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn25.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn25.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn25.Caption = "Thanh toán";
+            this.gridColumn25.FieldName = "IsPaid";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 5;
+            this.gridColumn25.Width = 46;
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.tableLayoutPanel3);
@@ -822,6 +850,21 @@
             this.txtChooseService.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtChooseService.MaxLength = 2;
             this.txtChooseService.Name = "txtChooseService";
+            this.txtChooseService.EditValueChanged += new System.EventHandler(this.txtChooseService_EditValueChanged);
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.gridColumn27.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn27.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn27.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridColumn27.Caption = "Thanh toán";
+            this.gridColumn27.FieldName = "IsPaid";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 5;
+            this.gridColumn27.Width = 49;
             // 
             // gridView2
             // 
@@ -988,20 +1031,6 @@
             this.txtAddSubPaymentH.Name = "txtAddSubPaymentH";
             this.txtAddSubPaymentH.EditValueChanged += new System.EventHandler(this.txtAddSubPaymentH_EditValueChanged);
             // 
-            // gridColumn25
-            // 
-            this.gridColumn25.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridColumn25.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn25.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn25.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn25.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn25.Caption = "Thanh toán";
-            this.gridColumn25.FieldName = "IsPaid";
-            this.gridColumn25.Name = "gridColumn25";
-            this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 5;
-            this.gridColumn25.Width = 46;
-            // 
             // gridColumn26
             // 
             this.gridColumn26.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -1015,34 +1044,6 @@
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 3;
             this.gridColumn26.Width = 49;
-            // 
-            // gridColumn27
-            // 
-            this.gridColumn27.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridColumn27.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn27.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn27.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn27.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn27.Caption = "Thanh toán";
-            this.gridColumn27.FieldName = "IsPaid";
-            this.gridColumn27.Name = "gridColumn27";
-            this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 5;
-            this.gridColumn27.Width = 49;
-            // 
-            // gridColumn28
-            // 
-            this.gridColumn28.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.gridColumn28.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn28.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn28.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn28.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn28.Caption = "Thanh toán";
-            this.gridColumn28.FieldName = "IsPaid";
-            this.gridColumn28.Name = "gridColumn28";
-            this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 5;
-            this.gridColumn28.Width = 50;
             // 
             // frmTsk_SplitBill_Step1
             // 
