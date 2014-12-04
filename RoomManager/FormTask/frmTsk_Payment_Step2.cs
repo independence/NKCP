@@ -522,10 +522,13 @@ namespace RoomManager
                         if (item.Cost == null || item.Cost == 0)
                         {
                             cost = item.CostRef_Rooms;
+                            aBookingRoomUsedEN.Cost = cost + Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(aRooms.Sku, aBookingRoomUsedEN.PriceType, aBookingRoomUsedEN.ListCustomer.Count).ExtraValue);
+
                         }
                         else
                         {
                             cost = item.Cost;
+                            aBookingRoomUsedEN.Cost = cost;
                         }
                         List<ServiceUsedEN> aListServiceRTemp = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(item.ID);
                         foreach (ServiceUsedEN aTemp in aListServiceRTemp)
@@ -536,7 +539,6 @@ namespace RoomManager
                             aBookingRoomUsedEN.ListServiceUsed.Add(aTemp);
                         }
                         aBookingRoomUsedEN.ListCustomer = aCustomersBO.SelectListCustomer_ByIDBookingRoom(item.ID);
-                        aBookingRoomUsedEN.Cost = cost + Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(aRooms.Sku, aBookingRoomUsedEN.PriceType, aBookingRoomUsedEN.ListCustomer.Count).ExtraValue);
                 
                         aBookingRoomUsedEN.TotalMoney = aBookingRoomUsedEN.GetMoneyRoom();
                         aBookingRoomUsedEN.MoneyRoomBeforeTax = aBookingRoomUsedEN.GetOnlyMoneyRoomBeforeTax();
@@ -1006,15 +1008,17 @@ namespace RoomManager
                 txtBookingRoomsCost.Enabled = true;
                 chkCheckIn.Enabled = true;
                 chkCheckOut.Enabled = true;
-                btnAddService.Enabled = true;
-               
+                btnAddService.Enabled = true;               
                 cbbPriceType.Properties.ReadOnly = false;
-                this.ExtraMoneyRoom = 0;               
-                //cbbPriceType.SelectedIndex = 0;
+                           
+                
+                this.ExtraMoneyRoom = 0;
                 this.CurrentIDBookingRoom = Convert.ToInt32(viewRooms.GetFocusedRowCellValue("ID"));
                 this.CodeRoom = viewRooms.GetFocusedRowCellValue("CodeRoom").ToString();
+
                 cbbPriceType.Text = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].PriceType;
-              this.LoadData();
+                  
+                this.LoadData();
                
             }
             catch (Exception ex)
@@ -1121,6 +1125,7 @@ namespace RoomManager
 
                 string input = txtBookingRoomsCost.Text;
                 decimal cost;
+                
                 if (string.IsNullOrEmpty(input) == true)
                 {
                     cost = 0;
@@ -1128,8 +1133,7 @@ namespace RoomManager
                 else
                 {
                     cost = Convert.ToDecimal(input);
-                }
-
+                }                
                 this.aNewPaymentEN.ChangeCostRoom(this.CurrentIDBookingRoom, cost);
                 this.LoadData();             
 
@@ -1196,8 +1200,23 @@ namespace RoomManager
                 {
                     if (dtpCheckInActual.DateTime < dtpCheckOutActual.DateTime)
                     {
-                       
-                        this.aNewPaymentEN.ChangeCheckOutActual(this.CurrentIDBookingRoom, DateTime.ParseExact(dtpCheckOutActual.Text, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));                                        
+                        if (this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList().Count > 0)
+                        {
+                            BookingRoomUsedEN aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0];
+                            if (aTemp.Status == 8 || aTemp.Status == 7)
+                            {
+                              
+                                    this.aNewPaymentEN.ChangeCheckOutActual(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
+                                
+                            }
+                            else
+                            {
+                               
+
+                                    this.aNewPaymentEN.ChangeCheckOutPlan(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
+                                
+                            }
+                        }
                     }
                     else
                     {
@@ -1276,17 +1295,22 @@ namespace RoomManager
             BookingRsBO aBookingRsBO = new BookingRsBO();
             ExtraCostBO aExtraCostBO = new ExtraCostBO();
             RoomsBO aRoomsBO = new RoomsBO();
-            
-            
-            List<Customers> aListCustomers = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
-            int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();
-            decimal? CostRoom = aRoomsBO.Select_ByIDBookingRoom(this.CurrentIDBookingRoom).CostRef;
-            string RoomSku = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].RoomSku;
-            this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(RoomSku, cbbPriceType.Text, aListCustomers.Count).ExtraValue);
-                
-            txtBookingRoomsCost.Text = Convert.ToString(CostRoom + this.ExtraMoneyRoom);
-            this.aNewPaymentEN.ChangePriceType(this.CurrentIDBookingRoom, cbbPriceType.Text);
-            
+
+            if (txtBookingRoomsCost.Text == "")
+            {
+                txtBookingRoomsCost.Text = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].Cost.ToString();
+            }
+            else
+            {
+                List<Customers> aListCustomers = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
+                int CustomerType = aBookingRsBO.Select_ByID(this.IDBookingR).CustomerType.GetValueOrDefault();
+                decimal? CostRoom = aRoomsBO.Select_ByIDBookingRoom(this.CurrentIDBookingRoom).CostRef;
+                string RoomSku = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].RoomSku;
+                this.ExtraMoneyRoom = Convert.ToDecimal(aExtraCostBO.Select_BySku_ByPriceType_ByNumberPeople(RoomSku, cbbPriceType.Text, aListCustomers.Count).ExtraValue);
+
+                txtBookingRoomsCost.Text = Convert.ToString(CostRoom + this.ExtraMoneyRoom);
+                this.aNewPaymentEN.ChangePriceType(this.CurrentIDBookingRoom, cbbPriceType.Text);
+            }
         }
 
         private void btnAddService_Click(object sender, EventArgs e)

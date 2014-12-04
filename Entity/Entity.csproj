@@ -59,6 +59,7 @@
     <Compile Include="BookingHEN.cs" />
     <Compile Include="BookingRoomEN.cs" />
     <Compile Include="BookingRoomUsedEN.cs" />
+    <Compile Include="BookingRoom_ServiceEN.cs" />
     <Compile Include="BookingRsEN.cs" />
     <Compile Include="BookingRStatusPayViewEN.cs" />
     <Compile Include="CalculatorSalaryEN.cs" />

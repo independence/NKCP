@@ -24,14 +24,17 @@ namespace RoomManager
         List<Services> aListService = new List<Services>();
         List<RoomExtStatusEN> aListRoomExtStatus = new List<RoomExtStatusEN>();
         NewPaymentEN aNewPayment = new NewPaymentEN();
-        List<int> aListIDBookingRooms_Servicers = new List<int>();
+        List<int> aListIDBookingRoom_Servicers = new List<int>();
+
+        List<BookingRoom_ServiceEN> aListSelected = new List<BookingRoom_ServiceEN>();
+        List<BookingRooms_Services> aListRemove = new List<BookingRooms_Services>();
 
 
         private frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = null;
       
         string CodeCurrentRoom = string.Empty;
         int IDBookingRs = 0;
-        int IDBookingRooms = 0;
+        int IDBookingRoom = 0;
 
 
 
@@ -41,26 +44,68 @@ namespace RoomManager
         }
 
         //NgocBM
-        public frmTsk_UseServices(string CodeRoom, int IDBookingRs, int IDBookingRooms)
+        public frmTsk_UseServices(string CodeRoom, int IDBookingRs, int IDBookingRoom)
         {
             InitializeComponent();
             this.CodeCurrentRoom = CodeRoom;
             this.IDBookingRs = IDBookingRs;
-            this.IDBookingRooms = IDBookingRooms;
+            this.IDBookingRoom = IDBookingRoom;
         }
 
         // Truyền thêm đối số NewPayment để khi thêm dịch vụ từ form Payment sẽ load lại số dịch vụ đã thêm, các thông số còn lại vẫn để nguyên vì chưa chỉnh sửa hết được)
-        public frmTsk_UseServices(frmTsk_Payment_Step2 afrmTsk_Payment_Step2, string CodeRoom, int IDBookingRs, int IDBookingRooms, NewPaymentEN aNewPayment)
+        public frmTsk_UseServices(frmTsk_Payment_Step2 afrmTsk_Payment_Step2, string CodeRoom, int IDBookingRs, int IDBookingRoom, NewPaymentEN aNewPayment)
         {
             InitializeComponent();
             this.afrmTsk_Payment_Step2 = afrmTsk_Payment_Step2;
             this.CodeCurrentRoom = CodeRoom;
             this.IDBookingRs = IDBookingRs;
-            this.IDBookingRooms = IDBookingRooms;
+            this.IDBookingRoom = IDBookingRoom;
             this.aNewPayment = aNewPayment;
         }
 
+        //NgocBM
+        private void frmTsk_UseServices_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.afrmTsk_Payment_Step2 != null)
+                {
+                    this.Reload();
+                    this.LoadServicesInRoom();
+                }
+                else
+                {
+                    dtpDate.EditValue = DateTime.Now;
+                    ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+                    RoomsBO aRoomsBO = new RoomsBO();
+                    ServicesBO aServicesBO = new ServicesBO();
 
+                    if (this.afrmTsk_Payment_Step2 != null)
+                    {
+                        this.aListRoomExtStatus = aReceptionTaskBO.GetInformationRoom_ByCodeRoomAndIDBookingRoom(this.IDBookingRoom, this.CodeCurrentRoom);
+                    }
+                    else
+                    {
+                        this.aListRoomExtStatus = aRoomsBO.GetListUsingRooms_ByCode(DateTime.Now, this.CodeCurrentRoom);
+                    }
+
+                    dgvRooms.DataSource = this.aListRoomExtStatus;
+
+                    this.aListService = aServicesBO.Select_ServiceForRooms();
+                    dgvServices.DataSource = this.aListService;
+
+                    List<string> aListCode = this.aListRoomExtStatus.Select(p => p.Code).ToList();
+                    this.alistRoomServiceInfo = LoadDataRoomServiceInfo(DateTime.Now, aListCode);
+
+                    this.LoadDataRoom_Services();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_UseServices.frmTsk_UseServices_Load\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         //hàm tính tiền 
         decimal PayService(GridView view, int RowIndex)
         {
@@ -78,96 +123,70 @@ namespace RoomManager
 
         private void gridView2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            viewRoom_Services.UpdateCurrentRow();
+            grvRoom_Services.UpdateCurrentRow();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+       
+        #region New
+        public void Reload()
         {
+            BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+            RoomsBO aRoomsBO = new RoomsBO();
 
-            BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
-            BookingRooms_Services aBookingRooms_Services;
-            int count = 0;
+            List<BookingRoomsEN> aListBookingRoom = new List<BookingRoomsEN>();
+            BookingRoomsEN aBookingRoomsEN = new BookingRoomsEN();
+            BookingRooms aBookingRooms = aBookingRoomsBO.Select_ByID(IDBookingRoom);
+            aBookingRoomsEN.SetValue(aBookingRooms);
+            aBookingRoomsEN.ID = aBookingRooms.ID;
+            aBookingRoomsEN.RoomSku = aRoomsBO.Select_ByCodeRoom(aBookingRooms.CodeRoom, 1).Sku;
+            aListBookingRoom.Add(aBookingRoomsEN);
+            dgvRooms.DataSource = aListBookingRoom;
+            dgvRooms.RefreshDataSource();
 
-            for (int i = 0; i < this.alistRoomServiceInfo.Count; i++)
+            ServicesBO aServicesBO = new ServicesBO();
+            aListService = aServicesBO.Select_ByType(1);
+            dgvServices.DataSource = aListService;
+            dgvServices.RefreshDataSource();
+
+
+        }
+        private void LoadServicesInRoom()
+        {
+            try
             {
-                try
+                ServicesBO aServicesBO = new ServicesBO();
+                BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
+                List<BookingRooms_Services> aListTemp = aBookingRooms_ServicesBO.Select_ByIDBookingRooms(this.IDBookingRoom);
+                BookingRoom_ServiceEN aBookingRoom_ServiceEN;
+
+                for (int i = 0; i < aListTemp.Count; i++)
                 {
-                    aBookingRooms_Services = new BookingRooms_Services();
-                    aBookingRooms_Services.CostRef_Services = this.alistRoomServiceInfo[i].CostRef;
-                    aBookingRooms_Services.Cost = this.alistRoomServiceInfo[i].Cost;
-                    if (this.alistRoomServiceInfo[i].ID > 0)
-                    {
-                        aBookingRooms_Services.ID = this.alistRoomServiceInfo[i].ID;
-                    }
-                    
-                    aBookingRooms_Services.IDService = this.alistRoomServiceInfo[i].IDService;
-                    aBookingRooms_Services.PercentTax = this.alistRoomServiceInfo[i].PercentTax;
-                    aBookingRooms_Services.Quantity = this.alistRoomServiceInfo[i].Quantity;
-                    aBookingRooms_Services.IDBookingRoom = this.alistRoomServiceInfo[i].IDBookingRooms;
-                    aBookingRooms_Services.Status = this.alistRoomServiceInfo[i].Status;
-                    if (aBookingRooms_Services.ID > 0)  // Gán mặc định trong cấu tử
-                    {
-                        aBookingRooms_Services.Date = this.alistRoomServiceInfo[i].Date;
-                        aBookingRooms_ServicesBO.Update(aBookingRooms_Services);
-                        count = 1;
-                    }
-                    else
-                    {
-                        aBookingRooms_Services.Date = dtpDate.DateTime;
-                        aBookingRooms_ServicesBO.Insert(aBookingRooms_Services);
-                        count = 1;
-                    }
+                    aBookingRoom_ServiceEN = new BookingRoom_ServiceEN();
+                    aBookingRoom_ServiceEN.ID = aListTemp[i].ID;
+                    aBookingRoom_ServiceEN.Info = aListTemp[i].Info;
+                    aBookingRoom_ServiceEN.Type = aListTemp[i].Type;
+                    aBookingRoom_ServiceEN.Status = aListTemp[i].Status;
+                    aBookingRoom_ServiceEN.Disable = aListTemp[i].Disable;
+                    aBookingRoom_ServiceEN.IDBookingRoom = aListTemp[i].IDBookingRoom;
+                    aBookingRoom_ServiceEN.IDService = aListTemp[i].IDService;
+                    aBookingRoom_ServiceEN.Service_Name = aServicesBO.Select_ByID(aListTemp[i].IDService).Name;
+                    aBookingRoom_ServiceEN.Service_Unit = aServicesBO.Select_ByID(aListTemp[i].IDService).Unit;
+                    aBookingRoom_ServiceEN.Cost = aListTemp[i].Cost == null ? aListTemp[i].CostRef_Services : aListTemp[i].Cost;
+                    aBookingRoom_ServiceEN.CostRef_Services = aListTemp[i].CostRef_Services;
+                    aBookingRoom_ServiceEN.Date = aListTemp[i].Date;
+                    aBookingRoom_ServiceEN.PercentTax = aListTemp[i].PercentTax;
+                    aBookingRoom_ServiceEN.Quantity = aListTemp[i].Quantity;
+                    aListSelected.Add(aBookingRoom_ServiceEN);
                 }
-                catch (Exception ex)
-                {
-                    count = 0;
-                    MessageBox.Show("frmTsk_UseServices.btnSave_Click\n" + ex.Message.ToString());
-                    break;
-                }
+                dgvRoom_Services.DataSource = aListSelected;
+                dgvRoom_Services.RefreshDataSource();
             }
-
-            if (this.alistRoomServiceInfo.Count <= 0)
+            catch (Exception ex)
             {
-                count = 1;
-            }
+                MessageBox.Show("frmIns_BookingRooms_Services.grvRooms_RowClick\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-            //dung de xoa cac dich vu ma khong su dung nua
-            foreach (int IDBookingRooms_Services in this.aListIDBookingRooms_Servicers)
-            {
-                try
-                {
-                    aBookingRooms_ServicesBO.Delete(IDBookingRooms_Services);
-                    count = 1;
-                }
-                catch (Exception ex)
-                {
-                    count = 0;
-                    MessageBox.Show("frmTsk_UseServices.btnSave_Click\n" + ex.Message.ToString());
-                    break;
-                }
-            }
-
-
-            if (count > 0)
-            {
-                if(this.afrmTsk_Payment_Step2 !=null)
-                {
-                    if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList().Count > 0)
-                    {
-
-                        aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList()[0].ListServiceUsed.Clear();
-                        aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList()[0].ListServiceUsed = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(IDBookingRooms);
-                             
-                    }
-                    this.afrmTsk_Payment_Step2.Reload(this.aNewPayment);
-                }
-                MessageBox.Show("Thực hiện thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
             }
         }
-
-        //------------------------------------------------------------------------------
         private void btnAddService_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (String.IsNullOrEmpty(this.CodeCurrentRoom) == true)
@@ -176,47 +195,100 @@ namespace RoomManager
             }
             else
             {
-                int ServiceID = int.Parse(viewServices.GetFocusedRowCellValue("ID").ToString());
-                Services aService = aListService.Where(p => p.ID == ServiceID).ToList()[0];
-                this.AddServiceToRoom(aService, this.CodeCurrentRoom, this.IDBookingRooms, this.IDBookingRs);
+                BookingRoom_ServiceEN aBookingRoom_ServiceEN = new BookingRoom_ServiceEN();
+                int IDService = int.Parse(grvServices.GetFocusedRowCellValue("ID").ToString());
+                aBookingRoom_ServiceEN.IDService = IDService;
+                aBookingRoom_ServiceEN.IDBookingRoom = this.IDBookingRoom;
+                aBookingRoom_ServiceEN.Service_Name = grvServices.GetFocusedRowCellValue("Name").ToString();
+                aBookingRoom_ServiceEN.Cost = Convert.ToDecimal(grvServices.GetFocusedRowCellValue("CostRef"));
+                aBookingRoom_ServiceEN.CostRef_Services = Convert.ToDecimal(grvServices.GetFocusedRowCellValue("CostRef"));
+                aBookingRoom_ServiceEN.Service_Unit = grvServices.GetFocusedRowCellValue("Unit").ToString();
+
+                this.aListSelected.Insert(0, aBookingRoom_ServiceEN);
+                dgvRoom_Services.DataSource = aListSelected;
+                dgvRoom_Services.RefreshDataSource();
             }
         }
 
-        //NgocBM
-        private void frmTsk_UseServices_Load(object sender, EventArgs e)
+        private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             try
             {
-                dtpDate.EditValue = DateTime.Now;
-                ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
-                RoomsBO aRoomsBO = new RoomsBO();
-                ServicesBO aServicesBO = new ServicesBO();
-
-                if (this.afrmTsk_Payment_Step2 != null)
+                int IDService = Convert.ToInt32(grvRoom_Services.GetFocusedRowCellValue("IDService"));
+                List<BookingRoom_ServiceEN> aListTemp = aListSelected.Where(a => a.IDService == IDService).ToList();
+                if (aListTemp.Count > 0)
                 {
-                    this.aListRoomExtStatus = aReceptionTaskBO.GetInformationRoom_ByCodeRoomAndIDBookingRoom(this.IDBookingRooms, this.CodeCurrentRoom);
+                    aListSelected.Remove(aListTemp[0]);
                 }
-                else
-                {
-                    this.aListRoomExtStatus = aRoomsBO.GetListUsingRooms_ByCode(DateTime.Now, this.CodeCurrentRoom);
+                BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
+                BookingRooms_Services aTemp = aBookingRooms_ServicesBO.Select_ByIDBookingRoom_ByIDService(IDBookingRoom, IDService);
+                if (aTemp != null)
+                {                   
+                    this.aListRemove.Add(aTemp);
                 }
-                
-                dgvRooms.DataSource = this.aListRoomExtStatus;
-
-                this.aListService = aServicesBO.Select_ServiceForRooms();
-                dgvServices.DataSource = this.aListService;
-
-                List<string> aListCode = this.aListRoomExtStatus.Select(p => p.Code).ToList();
-                this.alistRoomServiceInfo = LoadDataRoomServiceInfo(DateTime.Now, aListCode);
-
-                this.LoadDataRoom_Services();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("frmTsk_UseServices.frmTsk_UseServices_Load\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("frmTsk_UseServices.btnDelete_ButtonClick\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+             BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
+            BookingRooms_Services aBookingRooms_Services;
+            for (int i = 0; i < aListSelected.Count; i++)
+            {
+                aBookingRooms_Services = aBookingRooms_ServicesBO.Select_ByID(aListSelected[i].ID);
+                if (aBookingRooms_Services != null)
+                {
+                    aBookingRooms_Services.Cost = aListSelected[i].Cost;
+                    aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
+                    aBookingRooms_ServicesBO.Update(aBookingRooms_Services);
+                }
+                else
+                {
+                    aBookingRooms_Services = new BookingRooms_Services();
+                    aBookingRooms_Services.Info = "";
+                    aBookingRooms_Services.Type = 1;
+                    aBookingRooms_Services.Status = 1;
+                    aBookingRooms_Services.Disable = false;
+                    aBookingRooms_Services.IDBookingRoom = this.IDBookingRoom;
+                    aBookingRooms_Services.IDService = aListSelected[i].IDService;
+                    aBookingRooms_Services.Cost = aListSelected[i].Cost;
+                    aBookingRooms_Services.Date = DateTime.Now;
+                    aBookingRooms_Services.CostRef_Services = aListSelected[i].CostRef_Services;
+                    aBookingRooms_Services.PercentTax = 10;// de mac dinh
+                    aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
+                    aBookingRooms_ServicesBO.Insert(aBookingRooms_Services);
+                }
+            }
+            foreach (BookingRooms_Services items in this.aListRemove)
+            {
+                aBookingRooms_ServicesBO.Delete(items.IDService, items.IDBookingRoom,Convert.ToDateTime(items.Date));
             }
 
-        }
+            if (this.afrmTsk_Payment_Step2 != null)
+            {
+                if (aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+                {
+                    aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].ListServiceUsed.Clear();
+                    aNewPayment.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].ListServiceUsed = aReceptionTaskBO.GetListServiceUsedInRoom_ByIDBookingRoom(IDBookingRoom);
+
+                }
+                this.afrmTsk_Payment_Step2.Reload(this.aNewPayment);
+            }
+
+            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
+            }
+        
+
+      
+        #endregion
+      
+      
         //hiennv
         private void LoadDataRoom_Services()
         {
@@ -238,14 +310,12 @@ namespace RoomManager
         }
 
 
-
-
         private void gridView1_RowClick(object sender, RowClickEventArgs e)
         {
             try
             {
                 this.CodeCurrentRoom = viewRooms.GetRowCellValue(e.RowHandle, "Code").ToString();
-                this.IDBookingRooms = this.aListRoomExtStatus.Where(p => p.Code == CodeCurrentRoom).Select(p => p.BookingRooms_ID).ToList()[0];
+                this.IDBookingRoom = this.aListRoomExtStatus.Where(p => p.Code == CodeCurrentRoom).Select(p => p.BookingRooms_ID).ToList()[0];
                 this.IDBookingRs = this.aListRoomExtStatus.Where(p => p.Code == CodeCurrentRoom).Select(p => p.BookingRs_ID).ToList()[0].GetValueOrDefault();
 
                 this.LoadDataServiceInUseForEachRoom(this.CodeCurrentRoom);
@@ -294,7 +364,7 @@ namespace RoomManager
             }
         }
 
-        public void AddServiceToRoom(Services Service, string CodeRoom, int IDBookingRooms, int IDBookingRs)
+        public void AddServiceToRoom(Services Service, string CodeRoom, int IDBookingRoom, int IDBookingRs)
         {
             try
             {
@@ -320,7 +390,7 @@ namespace RoomManager
                 Item.Date = DateTime.Now;
                 //Item.Cost = Item.CostRef * decimal.Parse(Item.Quantity.ToString()) + (Item.CostRef * decimal.Parse((Item.Quantity * Item.PercentTax).ToString())) / 100;
                 Item.Cost = Item.CostRef;
-                Item.IDBookingRooms = IDBookingRooms;
+                Item.IDBookingRooms = IDBookingRoom;
                 Item.IDBookingRs = IDBookingRs;
 
                 this.alistRoomServiceInfo.Add(Item);
@@ -331,36 +401,8 @@ namespace RoomManager
                 MessageBox.Show("frmTsk_UseServices.AddServiceToRoom\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //hiennv
-        private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            try
-            {
-                int IDBookingRooms = Convert.ToInt32(viewRoom_Services.GetFocusedRowCellValue("IDBookingRooms"));
-                int IDService = Convert.ToInt32(viewRoom_Services.GetFocusedRowCellValue("IDService"));
-                int IDBookingRooms_Service = Convert.ToInt32(viewRoom_Services.GetFocusedRowCellValue("ID"));
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa ???", "Câu hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (DialogResult.Yes == result)
-                {
-                    if (this.alistRoomServiceInfo.Where(rs => rs.IDBookingRooms == IDBookingRooms && rs.IDService == IDService).ToList().Count > 0)
-                    {
-                        RoomServiceInfoEN aRoomServiceInfoEN = new RoomServiceInfoEN();
-                        aRoomServiceInfoEN = this.alistRoomServiceInfo.Where(rs => rs.IDBookingRooms == IDBookingRooms && rs.IDService == IDService).ToList()[0];
-                        this.alistRoomServiceInfo.Remove(aRoomServiceInfoEN);
-                        this.LoadDataRoom_Services();
-                    }
-                    if (IDBookingRooms_Service > 0)
-                    {
-                        this.aListIDBookingRooms_Servicers.Add(IDBookingRooms_Service);
-                    }
-                    MessageBox.Show("Bạn đã thực hiện thành công thành công .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("frmTsk_UseServices.btnDelete_ButtonClick\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+      
+       
     }
 
 }

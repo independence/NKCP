@@ -293,6 +293,15 @@ namespace Entity
                }
            }
        }
+       public void ChangeCostRefRoom(int IDBookingRoom, decimal CostRef)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+
+               this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].CostRef_Rooms = CostRef;
+           }
+
+       }
        public void ChangeCostRoom(int IDBookingRoom, decimal Cost)
        {
            if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
@@ -322,6 +331,13 @@ namespace Entity
            if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
            {
                this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].CheckOutActual = CheckOutActual;
+           }
+       }
+       public void ChangeCheckOutPlan(int IDBookingRoom, DateTime CheckOutPlan)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].CheckOutPlan = CheckOutPlan;
            }
        }
        public void ChangeTimeInUsed(int IDBookingRoom, decimal TimeUsed)

@@ -57,8 +57,7 @@ namespace RoomManager
             this.IDBookingHall = IDBookingHall;
             this.aNewPayment = aNewPayment;
         }
-
-
+        
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             frmIns_Services afrmIns_Services = new frmIns_Services(this);

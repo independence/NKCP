@@ -498,7 +498,7 @@
             // 
             // cbbPriceType
             // 
-            this.cbbPriceType.EditValue = "G1";
+            this.cbbPriceType.EditValue = "";
             this.cbbPriceType.Location = new System.Drawing.Point(722, 3);
             this.cbbPriceType.Name = "cbbPriceType";
             this.cbbPriceType.Properties.Appearance.Options.UseTextOptions = true;

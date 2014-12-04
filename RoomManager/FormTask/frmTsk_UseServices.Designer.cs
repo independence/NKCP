@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_UseServices));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtPercenTax = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -46,9 +46,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.dgvRoom_Services = new DevExpress.XtraGrid.GridControl();
-            this.viewRoom_Services = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grvRoom_Services = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Date = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ServiceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,13 +61,14 @@
             this.Sum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.dtpDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lbCurrentRoom = new DevExpress.XtraEditors.LabelControl();
             this.dgvServices = new DevExpress.XtraGrid.GridControl();
-            this.viewServices = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grvServices = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bnAddService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.NameService = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom_Services)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewRoom_Services)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvRoom_Services)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -95,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,7 +239,7 @@
             // 
             this.bnListService.AutoHeight = false;
             this.bnListService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnListService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnListService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.bnListService.Name = "bnListService";
             this.bnListService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -268,22 +268,10 @@
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Tổng Tiền các dịch vụ :";
             // 
-            // btnSave
-            // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(547, 483);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Cập nhật";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // dgvRoom_Services
             // 
             this.dgvRoom_Services.Location = new System.Drawing.Point(0, -1);
-            this.dgvRoom_Services.MainView = this.viewRoom_Services;
+            this.dgvRoom_Services.MainView = this.grvRoom_Services;
             this.dgvRoom_Services.Name = "dgvRoom_Services";
             this.dgvRoom_Services.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
@@ -293,12 +281,12 @@
             this.dgvRoom_Services.Size = new System.Drawing.Size(649, 441);
             this.dgvRoom_Services.TabIndex = 0;
             this.dgvRoom_Services.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.viewRoom_Services});
+            this.grvRoom_Services});
             // 
-            // viewRoom_Services
+            // grvRoom_Services
             // 
-            this.viewRoom_Services.ColumnPanelRowHeight = 40;
-            this.viewRoom_Services.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvRoom_Services.ColumnPanelRowHeight = 40;
+            this.grvRoom_Services.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Date,
             this.ServiceName,
             this.Quantity,
@@ -308,21 +296,21 @@
             this.VAT,
             this.Sum,
             this.gridColumn1});
-            this.viewRoom_Services.GridControl = this.dgvRoom_Services;
-            this.viewRoom_Services.GroupFormat = "Numeric \"{0:0,0}\"";
-            this.viewRoom_Services.GroupPanelText = "GroupPanel Text";
-            this.viewRoom_Services.Name = "viewRoom_Services";
-            this.viewRoom_Services.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.viewRoom_Services.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.viewRoom_Services.OptionsMenu.ShowGroupSummaryEditorItem = true;
-            this.viewRoom_Services.OptionsView.EnableAppearanceOddRow = true;
-            this.viewRoom_Services.OptionsView.ShowFooter = true;
-            this.viewRoom_Services.OptionsView.ShowGroupPanel = false;
-            this.viewRoom_Services.OptionsView.ShowIndicator = false;
-            this.viewRoom_Services.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
-            this.viewRoom_Services.RowHeight = 25;
-            this.viewRoom_Services.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView2_CellValueChanged);
-            this.viewRoom_Services.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView2_CustomUnboundColumnData);
+            this.grvRoom_Services.GridControl = this.dgvRoom_Services;
+            this.grvRoom_Services.GroupFormat = "Numeric \"{0:0,0}\"";
+            this.grvRoom_Services.GroupPanelText = "GroupPanel Text";
+            this.grvRoom_Services.Name = "grvRoom_Services";
+            this.grvRoom_Services.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.grvRoom_Services.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
+            this.grvRoom_Services.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.grvRoom_Services.OptionsView.EnableAppearanceOddRow = true;
+            this.grvRoom_Services.OptionsView.ShowFooter = true;
+            this.grvRoom_Services.OptionsView.ShowGroupPanel = false;
+            this.grvRoom_Services.OptionsView.ShowIndicator = false;
+            this.grvRoom_Services.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
+            this.grvRoom_Services.RowHeight = 25;
+            this.grvRoom_Services.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView2_CellValueChanged);
+            this.grvRoom_Services.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView2_CustomUnboundColumnData);
             // 
             // Date
             // 
@@ -520,10 +508,22 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(547, 483);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 30);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Cập nhật";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panelControl3
             // 
@@ -585,29 +585,29 @@
             // dgvServices
             // 
             this.dgvServices.Location = new System.Drawing.Point(953, 0);
-            this.dgvServices.MainView = this.viewServices;
+            this.dgvServices.MainView = this.grvServices;
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.bnAddService});
             this.dgvServices.Size = new System.Drawing.Size(297, 476);
             this.dgvServices.TabIndex = 0;
             this.dgvServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.viewServices});
+            this.grvServices});
             // 
-            // viewServices
+            // grvServices
             // 
-            this.viewServices.ColumnPanelRowHeight = 35;
-            this.viewServices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvServices.ColumnPanelRowHeight = 35;
+            this.grvServices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn10,
             this.NameService});
-            this.viewServices.GridControl = this.dgvServices;
-            this.viewServices.Name = "viewServices";
-            this.viewServices.OptionsFind.AlwaysVisible = true;
-            this.viewServices.OptionsView.EnableAppearanceOddRow = true;
-            this.viewServices.OptionsView.ShowFooter = true;
-            this.viewServices.OptionsView.ShowGroupPanel = false;
-            this.viewServices.OptionsView.ShowIndicator = false;
-            this.viewServices.RowHeight = 25;
+            this.grvServices.GridControl = this.dgvServices;
+            this.grvServices.Name = "grvServices";
+            this.grvServices.OptionsFind.AlwaysVisible = true;
+            this.grvServices.OptionsView.EnableAppearanceOddRow = true;
+            this.grvServices.OptionsView.ShowFooter = true;
+            this.grvServices.OptionsView.ShowGroupPanel = false;
+            this.grvServices.OptionsView.ShowIndicator = false;
+            this.grvServices.RowHeight = 25;
             // 
             // gridColumn10
             // 
@@ -628,7 +628,7 @@
             // 
             this.bnAddService.AutoHeight = false;
             this.bnAddService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.bnAddService.Name = "bnAddService";
             this.bnAddService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.bnAddService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAddService_ButtonClick);
@@ -679,7 +679,7 @@
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom_Services)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewRoom_Services)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvRoom_Services)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
@@ -690,7 +690,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnAddService)).EndInit();
             this.ResumeLayout(false);
 
@@ -703,7 +703,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.GridControl dgvRoom_Services;
-        private DevExpress.XtraGrid.Views.Grid.GridView viewRoom_Services;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvRoom_Services;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.Columns.GridColumn Date;
         private DevExpress.XtraGrid.Columns.GridColumn ServiceName;
@@ -716,7 +716,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn Cost;
         private DevExpress.XtraGrid.Columns.GridColumn VAT;
         private DevExpress.XtraGrid.GridControl dgvServices;
-        private DevExpress.XtraGrid.Views.Grid.GridView viewServices;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvServices;
         private DevExpress.XtraGrid.Columns.GridColumn NameService;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnAddService;

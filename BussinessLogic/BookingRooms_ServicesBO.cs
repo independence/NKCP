@@ -39,6 +39,26 @@ namespace BussinessLogic
                 throw new Exception("BookingRooms_ServicesBO.Select_ByIDBookingRoom:" + ex.ToString());
             }
         }
+        //Select by IDBookingRoom và IDService
+        public BookingRooms_Services Select_ByIDBookingRoom_ByIDService(int IDBookingRoom,int IDService)
+        {
+            try
+            {
+                if (aDatabaseDA.BookingRooms_Services.Where(b => b.IDBookingRoom == IDBookingRoom).Where(a => a.IDService == IDService).ToList().Count > 0)
+                {
+                    return aDatabaseDA.BookingRooms_Services.Where(b => b.IDBookingRoom == IDBookingRoom).Where(a => a.IDService == IDService).ToList()[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("BookingRooms_ServicesBO.Select_ByIDBookingRoom:" + ex.ToString());
+            }
+        }
         //select By ID
         public BookingRooms_Services Select_ByID(int ID)
         {
@@ -107,7 +127,28 @@ namespace BussinessLogic
             }
         }
 
-  
+        public int Delete(int IDService, int IDBookingRoom, DateTime DateUsed)
+        {
+            try
+            {
+
+                List<BookingRooms_Services> aBookingRooms_Services = aDatabaseDA.BookingRooms_Services.Where(c => c.IDService == IDService).Where(c => c.IDBookingRoom == IDBookingRoom).Where(c=>c.Date == DateUsed).ToList();
+                if (aBookingRooms_Services.Count > 0)
+                {
+                    aDatabaseDA.BookingRooms_Services.Remove(aBookingRooms_Services[0]);
+                    return aDatabaseDA.SaveChanges();
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception("BookingRooms_ServicesBO.Delete:" + ex.ToString());
+            }
+        } 
         public List<RoomServiceInfoEN> Select_Service_ByCodeRoom_ByStatus(string Code, DateTime now,int Status)
         {
             try

@@ -9,15 +9,18 @@ using Entity;
 using DataAccess;
 using DevExpress.XtraRichEdit.API.Word;
 using System.Linq;
+using System.Globalization;
 
 namespace RoomManager
 {
     public partial class frmRpt_PaymentBookingHs : DevExpress.XtraReports.UI.XtraReport
     {
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
-        List<ServiceGroupEN> aListServicesGroupEN = new List<ServiceGroupEN>();
-        List<ServiceUsedEN> aListServiceUsed = new List<ServiceUsedEN>();
-        List<int> aListIDServicesGroup = new List<int>();
+        List<ServiceGroupEN> aListServicesGroupHallEN = new List<ServiceGroupEN>();      
+        List<ServiceUsedEN> aListServiceUsedHall = new List<ServiceUsedEN>();       
+        List<int> aListIDServicesGroupHall = new List<int>();
+        ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+
 
         public frmRpt_PaymentBookingHs(NewPaymentEN aNewPaymentEN)
         {
@@ -32,75 +35,104 @@ namespace RoomManager
                 lblNameCustomer.Text = this.aNewPaymentEN.NameCustomer;
                 lblGroup.Text = this.aNewPaymentEN.NameCustomerGroup;
                 lblCompany.Text = this.aNewPaymentEN.NameCompany;
-                lblTaxNumberCode.Text = this.aNewPaymentEN.AddressCompany;
+                lblTaxNumberCode.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
 
                 int day = DateTime.Now.Day;
                 int month = DateTime.Now.Month;
                 int year = DateTime.Now.Year;
                 lblDayMonthYear.Text = "Hà nội , ngày " + day.ToString() + " tháng " + month.ToString() + " năm " + year.ToString();
 
-                aListServiceUsed = this.aNewPaymentEN.GetAllServiceUsedInRoom();
+                #region Truyền thông tin hội trường
+                aListServiceUsedHall = this.aNewPaymentEN.GetAllServiceUsedInHall();
                 //Lấy List< IDServiceGroup>
-                List<int> aTemp = new List<int>();
-                int IDServiceGroup;
-                foreach (ServiceUsedEN item in aListServiceUsed)
+                List<int> aTemp1 = new List<int>();
+                int IDServiceGroupHall;
+                foreach (ServiceUsedEN item in aListServiceUsedHall)
                 {
-                    IDServiceGroup = new int();
-                    IDServiceGroup = item.IDServiceGroup;
-                    aTemp.Add(IDServiceGroup);
+                    IDServiceGroupHall = new int();
+                    IDServiceGroupHall = item.IDServiceGroup;
+                    aTemp1.Add(IDServiceGroupHall);
                 }
-                aListIDServicesGroup = aTemp.Distinct().ToList();
+                aListIDServicesGroupHall = aTemp1.Distinct().ToList();
 
 
-                ServiceGroupEN aServicesGroupEN;
-                ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
-
-                foreach (int item in aListIDServicesGroup)
+                ServiceGroupEN aServicesGroupHallEN;
+                foreach (int item in aListIDServicesGroupHall)
                 {
-                    aServicesGroupEN = new ServiceGroupEN();
-                    aServicesGroupEN.IDServiceGroup = item;
-                    aServicesGroupEN.TotalMoneyBeforeTax = this.GetTotalMoneyServiceGroupBeforeTax(item);
-                    aServicesGroupEN.TotalMoneyAfterTax = this.GetTotalMoneyServiceGroupAfterTax(item);
-                    aServicesGroupEN.ServiceGroupName = aServiceGroupsBO.Sel_ByID(item).Name;
-                    aListServicesGroupEN.Add(aServicesGroupEN);
+                    aServicesGroupHallEN = new ServiceGroupEN();
+                    aServicesGroupHallEN.IDServiceGroup = item;
+                    aServicesGroupHallEN.TotalMoneyBeforeTax = this.GetTotalMoneyServiceGroupHallBeforeTax(item);
+                    aServicesGroupHallEN.TotalMoneyAfterTax = this.GetTotalMoneyServiceGroupHallAfterTax(item);
+                    aServicesGroupHallEN.DisplayMoneyTax = aNewPaymentEN.GetMoneyTax(this.GetTotalMoneyServiceGroupHallBeforeTax(item), 10);
+                    aServicesGroupHallEN.ServiceGroupName = aServiceGroupsBO.Sel_ByID(item).Name;
+                    aListServicesGroupHallEN.Add(aServicesGroupHallEN);
                 }
 
                 //danh sach hoi truong
-                this.DetailReportHall.DataSource = this.aNewPaymentEN.aListBookingHallUsed;
+                this.DetailReportHall.DataSource = aNewPaymentEN.aListBookingHallUsed;
                 colSkuHall.DataBindings.Add("Text", this.DetailReportHall.DataSource, "HallSku");
                 colCreateDate.DataBindings.Add("Text", this.DetailReportHall.DataSource, "Date", "{0:dd/MM/yyyy}");
                 colBookingHallCost.DataBindings.Add("Text", this.DetailReportHall.DataSource, "Cost", "{0:0,0}");
-                colPercentTax.DataBindings.Add("Text", this.DetailReportHall.DataSource, "PercentTax");
+                colPercentTax.DataBindings.Add("Text", this.DetailReportHall.DataSource, "DisplayMoneyTaxHall", "{0:0,0}");
                 colPaymentMoneyHall.DataBindings.Add("Text", this.DetailReportHall.DataSource, "MoneyHall", "{0:0,0}");
-                colMoneyHallBeforeTax.DataBindings.Add("Text", this.DetailReportHall.DataSource, "MoneyHallBeforeTax", "{0:0,0}");
-                
+
+                XRSummary aXRSummaryDisplayMoneyTaxHall = new XRSummary();
+                aXRSummaryDisplayMoneyTaxHall.Func = SummaryFunc.Sum;
+                aXRSummaryDisplayMoneyTaxHall.Running = SummaryRunning.Group;
+                aXRSummaryDisplayMoneyTaxHall.IgnoreNullValues = true;
+                aXRSummaryDisplayMoneyTaxHall.FormatString = "{0:0,0}";
+                XRBinding aXRBindingDisplayMoneyTaxHall = new XRBinding("Text", this.DetailReportHall.DataSource, "DisplayMoneyTaxHall", "{0:0,0}");
+                XRBinding[] listXRBindingDisplayMoneyTaxHall = new XRBinding[] { aXRBindingDisplayMoneyTaxHall };
+                lblSumMoneyHallsTax.DataBindings.AddRange(listXRBindingDisplayMoneyTaxHall);
+                lblSumMoneyHallsTax.Summary = aXRSummaryDisplayMoneyTaxHall;
+
                 //danh sach dich vu su dung
-                this.DetailReportService.DataSource = aListServicesGroupEN;
-                colNamService.DataBindings.Add("Text", this.DetailReportService.DataSource, "ServiceGroupName");
-                colTotalMoneyBeforeTax.DataBindings.Add("Text", this.DetailReportService.DataSource, "TotalMoneyBeforeTax", "{0:0,0}");
-                colTotalMoneyServiceAfterTax.DataBindings.Add("Text", this.DetailReportService.DataSource, "TotalMoneyAfterTax", "{0:0,0}");
+                this.DetailReportService.DataSource = aListServicesGroupHallEN;
+                colNamServiceHall.DataBindings.Add("Text", this.DetailReportService.DataSource, "ServiceGroupName");
+                colTotalMoneyServiceHallBeforeTax.DataBindings.Add("Text", this.DetailReportService.DataSource, "TotalMoneyBeforeTax", "{0:0,0}");
+                colPercentTaxServiceHall.DataBindings.Add("Text", this.DetailReportService.DataSource, "DisplayMoneyTax", "{0:0,0}");
+
+                colTotalMoneyServiceHallAfterTax.DataBindings.Add("Text", this.DetailReportService.DataSource, "TotalMoneyAfterTax", "{0:0,0}");
+
+                XRSummary aXRSummaryDisplayMoneyServiceHallTax = new XRSummary();
+                aXRSummaryDisplayMoneyServiceHallTax.Func = SummaryFunc.Sum;
+                aXRSummaryDisplayMoneyServiceHallTax.Running = SummaryRunning.Group;
+                aXRSummaryDisplayMoneyServiceHallTax.IgnoreNullValues = true;
+                aXRSummaryDisplayMoneyServiceHallTax.FormatString = "{0:0,0}";
+                lblSumMoneyServiceHallsTax.DataBindings.AddRange(new XRBinding[] { new XRBinding("Text", this.DetailReportService.DataSource, "DisplayMoneyTax", "{0:0,0}") });
+                lblSumMoneyServiceHallsTax.Summary = aXRSummaryDisplayMoneyServiceHallTax;
 
                 //tong tien hoi truong truoc thue
-                lblTotalMoneyHallBeforeTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetOnlyMoneyHallsBeforeTax()));
+                lblSumMoneyHallsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetOnlyMoneyHallsBeforeTax()));
                 //tong tien hoi truong sau thue
-                lblTotalMoneyHallBehindTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetOnlyMoneyHalls()));
+                lblSumMoneyHallsAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetOnlyMoneyHalls()));
 
                 //tong tien dich vu hoi truong truoc thue
-                lblTotalMoneyService_BookingHBeforeTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHallsBeforeTax()));
+                lblSumMoneyServiceHallsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHallsBeforeTax()));
                 //tong tien dich vu hoi truong sau thue
-                lblTotalMoneyServices_BookingHBehindTax.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHalls()));
+                lblSumMoneyServiceHallsAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHalls()));
+                     
 
+                //Tong tien hoa don can thanh toan
+                decimal? beforTax =  Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHallsBeforeTax());
+                decimal? afterTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHalls()) ;
+                decimal? bookingMoney = Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney);
 
-                //tong tien bookingh
+                
+                //tong tien thanh toan truoc thue
+                lblTotalMoneyBeforeTax.Text = String.Format("{0:0,0}", beforTax);
+                //tien thue
+                lblTotalMoneyTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(beforTax, 10)));
+                //tong tien thanh toan sau thue
+                lblTotalMoneyAfterTax.Text = String.Format("{0:0,0}", afterTax);
+                //So tien ung truoc
+                lblBookingMoney.Text = String.Format("{0:0,0}", bookingMoney);
+                //so tien con lai can thanh toan
+                lblTotalMoney.Text = String.Format("{0:0,0}", afterTax - bookingMoney);
+                string TotalMoney_BookingHString = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Library.StringUtility.ConvertDecimalToString(Convert.ToDecimal(afterTax - bookingMoney)));
 
-                decimal? moneyBookingHBeforeTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHallsBeforeTax());
-                decimal? moneyBookingHBehindTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHalls());
-                lblTotalMoneyBookingHBeforeTax.Text = String.Format("{0:0,0} (VND)", moneyBookingHBeforeTax);
-                lblTotalMoneyBookingHBehindTax.Text = String.Format("{0:0,0} (VND)", moneyBookingHBehindTax);
-                lblBookingMoney_BookingH.Text = String.Format("{0:0,0} (VND)", Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney));
-                lblTotalBookingH.Text = String.Format("{0:0,0} (VND)", (moneyBookingHBehindTax - Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney)));
-
-
+                lblTotalMoneyString.Text = "(" + TotalMoney_BookingHString + ")";
+                #endregion
             }
             catch (Exception ex)
             {
@@ -108,10 +140,10 @@ namespace RoomManager
             }
 
         }
-        public decimal? GetTotalMoneyServiceGroupBeforeTax(int IDServiceGroup)
+        public decimal? GetTotalMoneyServiceGroupHallBeforeTax(int IDServiceGroup)
         {
             decimal? TotalMoneyServiceGroupBeforeTax = 0;
-            List<ServiceUsedEN> aTemp = aListServiceUsed.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
+            List<ServiceUsedEN> aTemp = aListServiceUsedHall.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
             foreach (ServiceUsedEN item in aTemp)
             {
                 decimal? cost = item.GetMoneyServiceBeforeTax();
@@ -119,10 +151,10 @@ namespace RoomManager
             }
             return TotalMoneyServiceGroupBeforeTax;
         }
-        public decimal? GetTotalMoneyServiceGroupAfterTax(int IDServiceGroup)
+        public decimal? GetTotalMoneyServiceGroupHallAfterTax(int IDServiceGroup)
         {
             decimal? TotalMoneyServiceGroupAfterTax = 0;
-            List<ServiceUsedEN> aTemp = aListServiceUsed.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
+            List<ServiceUsedEN> aTemp = aListServiceUsedHall.Where(a => a.IDServiceGroup == IDServiceGroup).ToList();
             foreach (ServiceUsedEN item in aTemp)
             {
                 decimal? cost = item.GetMoneyService();

@@ -225,28 +225,12 @@ namespace RoomManager
                 lblSumMoneyServiceHallsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHallsBeforeTax()));
                 //tong tien dich vu hoi truong sau thue
                 lblSumMoneyServiceHallsAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInHalls()));
-
-
-                //tong tien bookingh
-
-                decimal? moneyBookingHBeforeTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHallsBeforeTax());
-                decimal? moneyBookingHBehindTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHalls());
-                //lblTotalMoneyBookingHBeforeTax.Text = String.Format("{0:0,0}", moneyBookingHBeforeTax);
-                //lblTotalMoneyBookingHBehindTax.Text = String.Format("{0:0,0}", moneyBookingHBehindTax);
-                //lblBookingMoney_BookingH.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney));
-                //lblTotalBookingH.Text = String.Format("{0:0,0}", (moneyBookingHBehindTax - Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney)));
-
-
-
+                               
                 //Tong tien hoa don can thanh toan
                 decimal? beforTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()) + Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHallsBeforeTax());
                 decimal? afterTax = Convert.ToDecimal(this.aNewPaymentEN.GetMoneyHalls()) + Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms());
                 decimal? bookingMoney = Convert.ToDecimal(this.aNewPaymentEN.BookingHMoney) + Convert.ToDecimal(this.aNewPaymentEN.BookingRMoney);
-
-                //lblMoneyBookingRAndBookingHBeforeTax.Text = String.Format("{0:0,0}", beforTax);
-                //lblMoneyBookingRAndBookingHBehindTax.Text = String.Format("{0:0,0}", behindTax);
-                //lblBookingmoney_BookingRAndBookingH.Text = String.Format("{0:0,0}", bookingMoney);
-                //lblTotalMoneyBookigRAndBookingH.Text = String.Format("{0:0,0}", (behindTax - bookingMoney));
+                              
                 //tong tien thanh toan truoc thue
                 lblTotalMoneyBeforeTax.Text = String.Format("{0:0,0}", beforTax);
                 //tien thue
